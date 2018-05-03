@@ -1,0 +1,224 @@
+;/*****************************************************************************
+;*  Copyright Statement:
+;*  --------------------
+;*  This software is protected by Copyright and the information contained
+;*  herein is confidential. The software may not be copied and the information
+;*  contained herein may not be used or disclosed except with the written
+;*  permission of MediaTek Inc. (C) 2011
+;*
+;*  BY OPENING THIS FILE, BUYER HEREBY UNEQUIVOCALLY ACKNOWLEDGES AND AGREES
+;*  THAT THE SOFTWARE/FIRMWARE AND ITS DOCUMENTATIONS ("MEDIATEK SOFTWARE")
+;*  RECEIVED FROM MEDIATEK AND/OR ITS REPRESENTATIVES ARE PROVIDED TO BUYER ON
+;*  AN "AS-IS" BASIS ONLY. MEDIATEK EXPRESSLY DISCLAIMS ANY AND ALL WARRANTIES,
+;*  EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF
+;*  MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR NONINFRINGEMENT.
+;*  NEITHER DOES MEDIATEK PROVIDE ANY WARRANTY WHATSOEVER WITH RESPECT TO THE
+;*  SOFTWARE OF ANY THIRD PARTY WHICH MAY BE USED BY, INCORPORATED IN, OR
+;*  SUPPLIED WITH THE MEDIATEK SOFTWARE, AND BUYER AGREES TO LOOK ONLY TO SUCH
+;*  THIRD PARTY FOR ANY WARRANTY CLAIM RELATING THERETO. MEDIATEK SHALL ALSO
+;*  NOT BE RESPONSIBLE FOR ANY MEDIATEK SOFTWARE RELEASES MADE TO BUYER'S
+;*  SPECIFICATION OR TO CONFORM TO A PARTICULAR STANDARD OR OPEN FORUM.
+;*
+;*  BUYER'S SOLE AND EXCLUSIVE REMEDY AND MEDIATEK'S ENTIRE AND CUMULATIVE
+;*  LIABILITY WITH RESPECT TO THE MEDIATEK SOFTWARE RELEASED HEREUNDER WILL BE,
+;*  AT MEDIATEK'S OPTION, TO REVISE OR REPLACE THE MEDIATEK SOFTWARE AT ISSUE,
+;*  OR REFUND ANY SOFTWARE LICENSE FEES OR SERVICE CHARGE PAID BY BUYER TO
+;*  MEDIATEK FOR SUCH MEDIATEK SOFTWARE AT ISSUE. 
+;*
+;*  THE TRANSACTION CONTEMPLATED HEREUNDER SHALL BE CONSTRUED IN ACCORDANCE
+;*  WITH THE LAWS OF THE STATE OF CALIFORNIA, USA, EXCLUDING ITS CONFLICT OF
+;*  LAWS PRINCIPLES.  ANY DISPUTES, CONTROVERSIES OR CLAIMS ARISING THEREOF AND
+;*  RELATED THERETO SHALL BE SETTLED BY ARBITRATION IN SAN FRANCISCO, CA, UNDER
+;*  THE RULES OF THE INTERNATIONAL CHAMBER OF COMMERCE (ICC).
+;*
+;*****************************************************************************/
+;
+;    
+
+; usb2ser.inf
+;
+
+[Version] 
+Signature = "$Windows NT$" 
+Class=Ports
+ClassGUID={4D36E978-E325-11CE-BFC1-08002BE10318}
+Provider=%MEDIATEK%
+DriverVer=12/10/2012,1.0.1250.0                                                   
+
+CatalogFile=usb2ser.cat
+
+[Manufacturer]
+%MEDIATEK%=DeviceList,NTx86,NTamd64
+
+[DeviceList]                    
+%DEV_SINGLE%    = DriverInstall ,USB\VID_0E8D&PID_0003
+%DEV_COM_MOD%   = DriverInstall ,USB\VID_0E8D&PID_0023&MI_00
+%DEV_COM_DBG%   = DriverInstall ,USB\VID_0E8D&PID_0023&MI_02
+%DEV_COM_DBG%   = DriverInstall ,USB\VID_0E8D&PID_0033&MI_02
+%DEV_SINGLE%    = DriverInstall ,USB\VID_0E8D&PID_00A0
+%DEV_COM_APP%   = DriverInstall ,USB\VID_0E8D&PID_00A1&MI_01
+%DEV_COM_DBG%   = DriverInstall ,USB\VID_0E8D&PID_00A1&MI_02
+%DEV_COM_APP%   = DriverInstall ,USB\VID_0E8D&PID_00A2&MI_01
+%VCOM_PRELODER% = DriverInstall ,USB\VID_0E8D&PID_2000
+%VCOM_SP_DA%    = DriverInstall ,USB\VID_0E8D&PID_2001
+%DEV_COM_APP%   = DriverInstall ,USB\VID_0E8D&PID_00A4&MI_02
+%DEV_COM_SP%    = DriverInstall ,USB\VID_0E8D&PID_00A4&MI_03
+%DEV_COM_DBG%   = DriverInstall ,USB\VID_0E8D&PID_00A4&MI_04
+%DEV_COM_APP%   = DriverInstall ,USB\VID_0E8D&PID_00A5&MI_03
+%DEV_COM_SP%    = DriverInstall ,USB\VID_0E8D&PID_00A5&MI_04
+%DEV_COM_DBG%   = DriverInstall ,USB\VID_0E8D&PID_00A5&MI_05
+%DEV_COM_DBG%	= DriverInstall ,USB\VID_0E8D&PID_7101&REV_0001&MI_00
+%DEV_COM_APP%  	= DriverInstall ,USB\VID_0E8D&PID_7102&REV_0001&MI_02
+%DEV_COM_DBG%	= DriverInstall ,USB\VID_0E8D&PID_7102&REV_0001&MI_04
+%DEV_COM_APP%  	= DriverInstall ,USB\VID_0E8D&PID_7103&MI_02
+%DEV_COM_DBG%	= DriverInstall ,USB\VID_0E8D&PID_7103&MI_03
+%DEV_COM_APP%  	= DriverInstall ,USB\VID_0E8D&PID_7106&MI_02
+%DEV_COM_DBG%	= DriverInstall ,USB\VID_0E8D&PID_7106&MI_04
+%DEV_COM_APP%   = DriverInstall ,USB\VID_0E8D&PID_00A7&MI_03
+%DEV_COM_SP%    = DriverInstall ,USB\VID_0E8D&PID_00A7&MI_04
+%DEV_COM_DBG%   = DriverInstall ,USB\VID_0E8D&PID_00A7&MI_05
+
+[DeviceList.NTx86]                    
+%DEV_SINGLE%    = DriverInstall ,USB\VID_0E8D&PID_0003
+%DEV_COM_MOD%   = DriverInstall ,USB\VID_0E8D&PID_0023&MI_00
+%DEV_COM_DBG%   = DriverInstall ,USB\VID_0E8D&PID_0023&MI_02
+%DEV_COM_DBG%   = DriverInstall ,USB\VID_0E8D&PID_0033&MI_02
+%DEV_SINGLE%    = DriverInstall ,USB\VID_0E8D&PID_00A0
+%DEV_COM_APP%   = DriverInstall ,USB\VID_0E8D&PID_00A1&MI_01
+%DEV_COM_DBG%   = DriverInstall ,USB\VID_0E8D&PID_00A1&MI_02
+%DEV_COM_APP%   = DriverInstall ,USB\VID_0E8D&PID_00A2&MI_01
+%VCOM_PRELODER% = DriverInstall ,USB\VID_0E8D&PID_2000
+%VCOM_SP_DA%    = DriverInstall ,USB\VID_0E8D&PID_2001
+%DEV_COM_APP%   = DriverInstall ,USB\VID_0E8D&PID_00A4&MI_02
+%DEV_COM_SP%    = DriverInstall ,USB\VID_0E8D&PID_00A4&MI_03
+%DEV_COM_DBG%   = DriverInstall ,USB\VID_0E8D&PID_00A4&MI_04
+%DEV_COM_APP%   = DriverInstall ,USB\VID_0E8D&PID_00A5&MI_03
+%DEV_COM_SP%    = DriverInstall ,USB\VID_0E8D&PID_00A5&MI_04
+%DEV_COM_DBG%   = DriverInstall ,USB\VID_0E8D&PID_00A5&MI_05
+%DEV_COM_DBG%	= DriverInstall ,USB\VID_0E8D&PID_7101&REV_0001&MI_00
+%DEV_COM_APP%	= DriverInstall ,USB\VID_0E8D&PID_7102&REV_0001&MI_02
+%DEV_COM_DBG%	= DriverInstall ,USB\VID_0E8D&PID_7102&REV_0001&MI_04
+%DEV_COM_APP%  	= DriverInstall ,USB\VID_0E8D&PID_7103&MI_02
+%DEV_COM_DBG%	= DriverInstall ,USB\VID_0E8D&PID_7103&MI_03
+%DEV_COM_APP%  	= DriverInstall ,USB\VID_0E8D&PID_7106&MI_02
+%DEV_COM_DBG%	= DriverInstall ,USB\VID_0E8D&PID_7106&MI_04
+%DEV_COM_APP%   = DriverInstall ,USB\VID_0E8D&PID_00A7&MI_03
+%DEV_COM_SP%    = DriverInstall ,USB\VID_0E8D&PID_00A7&MI_04
+%DEV_COM_DBG%   = DriverInstall ,USB\VID_0E8D&PID_00A7&MI_05
+
+[DeviceList.NTamd64]                    
+%DEV_SINGLE%    = DriverInstall ,USB\VID_0E8D&PID_0003
+%DEV_COM_MOD%   = DriverInstall ,USB\VID_0E8D&PID_0023&MI_00
+%DEV_COM_DBG%   = DriverInstall ,USB\VID_0E8D&PID_0023&MI_02
+%DEV_COM_DBG%   = DriverInstall ,USB\VID_0E8D&PID_0033&MI_02
+%DEV_SINGLE%    = DriverInstall ,USB\VID_0E8D&PID_00A0
+%DEV_COM_APP%   = DriverInstall ,USB\VID_0E8D&PID_00A1&MI_01
+%DEV_COM_DBG%   = DriverInstall ,USB\VID_0E8D&PID_00A1&MI_02
+%DEV_COM_APP%   = DriverInstall ,USB\VID_0E8D&PID_00A2&MI_01
+%VCOM_PRELODER% = DriverInstall ,USB\VID_0E8D&PID_2000
+%VCOM_SP_DA%    = DriverInstall ,USB\VID_0E8D&PID_2001
+%DEV_COM_APP%   = DriverInstall ,USB\VID_0E8D&PID_00A4&MI_02
+%DEV_COM_SP%    = DriverInstall ,USB\VID_0E8D&PID_00A4&MI_03
+%DEV_COM_DBG%   = DriverInstall ,USB\VID_0E8D&PID_00A4&MI_04
+%DEV_COM_APP%   = DriverInstall ,USB\VID_0E8D&PID_00A5&MI_03
+%DEV_COM_SP%    = DriverInstall ,USB\VID_0E8D&PID_00A5&MI_04
+%DEV_COM_DBG%   = DriverInstall ,USB\VID_0E8D&PID_00A5&MI_05
+%DEV_COM_DBG%	= DriverInstall ,USB\VID_0E8D&PID_7101&REV_0001&MI_00
+%DEV_COM_APP%	= DriverInstall ,USB\VID_0E8D&PID_7102&REV_0001&MI_02
+%DEV_COM_DBG%	= DriverInstall ,USB\VID_0E8D&PID_7102&REV_0001&MI_04
+%DEV_COM_APP%  	= DriverInstall ,USB\VID_0E8D&PID_7103&MI_02
+%DEV_COM_DBG%	= DriverInstall ,USB\VID_0E8D&PID_7103&MI_03
+%DEV_COM_APP%  	= DriverInstall ,USB\VID_0E8D&PID_7106&MI_02
+%DEV_COM_DBG%	= DriverInstall ,USB\VID_0E8D&PID_7106&MI_04
+%DEV_COM_APP%   = DriverInstall ,USB\VID_0E8D&PID_00A7&MI_03
+%DEV_COM_SP%    = DriverInstall ,USB\VID_0E8D&PID_00A7&MI_04
+%DEV_COM_DBG%   = DriverInstall ,USB\VID_0E8D&PID_00A7&MI_05
+              
+[DestinationDirs]
+DefaultDestDir=12
+CoInstaller_CopyFiles= 11   
+
+[SourceDisksFiles.x86]                 
+usb2ser.sys	= 1,.\x86
+WdfCoinstaller01005.dll	= 1,.\x86
+
+[SourceDisksFiles.amd64]                 
+usb2ser.sys	= 1,.\x64
+WdfCoinstaller01005.dll	= 1,.\x64
+
+[SourceDisksNames]           
+1=%INST_DISK_NAME% 
+   
+[DriverInstall.NT]
+CopyFiles=DriverCopyFiles
+AddReg=DriverAddReg
+
+[DriverInstall.NTamd64]
+CopyFiles=DriverCopyFiles
+AddReg=DriverAddReg
+
+[DriverAddReg]
+HKR,,NTMPDriver,,usb2ser.sys 
+HKR,,Installer32,,"MsPorts.Dll,PortsClassInstaller"
+HKR,,EnumPropPages32,,"MsPorts.dll,SerialPortPropPageProvider" 
+
+[DriverCopyFiles]
+usb2ser.sys,,,2                                                         
+
+[DriverInstall.NT.Services]
+AddService=wdf_usb,2,DriverService   
+
+[DriverInstall.NTamd64.Services]
+AddService=wdf_usb,2,DriverService
+ 
+[DriverService]
+ServiceType=1          
+StartType=3                            
+ErrorControl=1                        
+ServiceBinary=%12%\usb2ser.sys                      
+
+[DriverInstall.NT.HW]
+AddReg=DriverHwAddReg
+
+[DriverInstall.NTamd64.HW]
+AddReg=DriverHwAddReg
+
+[DriverHwAddReg]
+HKR,,DriverInfo,,"USB to Com Port registry key"
+HKR,,Security,,"D:P(A;;GA;;;SY)(A;;GRGWGX;;;BA)(A;;GRGWGX;;;WD)(A;;GRGWGX;;;RC)"
+
+[DriverInstall.NT.CoInstallers]
+AddReg=CoInstaller_AddReg         
+CopyFiles=CoInstaller_CopyFiles
+
+[DriverInstall.NTamd64.CoInstallers]
+AddReg=CoInstaller_AddReg
+CopyFiles=CoInstaller_CopyFiles
+
+[CoInstaller_CopyFiles]
+WdfCoinstaller01005.dll
+
+[CoInstaller_AddReg]
+HKR,,CoInstallers32,0x00010000, "WdfCoinstaller01005.dll,WdfCoInstaller"
+
+[DriverInstall.NT.Wdf]
+KmdfService = wdf_usb, wdf_usb_wdfsect
+
+[DriverInstall.NTamd64.Wdf]
+KmdfService = wdf_usb, wdf_usb_wdfsect
+
+[wdf_usb_wdfsect]
+KmdfLibraryVersion = 1.5
+
+;---------------------------------------------------------------;
+
+[Strings]
+MEDIATEK      	= "MediaTek"
+DEV_SINGLE    	= "USB Single Port"
+DEV_COM_MOD   	= "USB Modem Port"
+DEV_COM_DBG   	= "USB Debug Port"
+DEV_COM_APP   	= "USB Application Port"
+VCOM_PRELODER 	= "PreLoader USB VCOM (Android)"
+VCOM_SP_DA    	= "DA USB VCOM Port"
+INST_DISK_NAME	= "CD Disk"
+DEV_COM_SP		= "USB Speech Port"
