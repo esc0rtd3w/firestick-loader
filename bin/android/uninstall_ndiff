@@ -1,0 +1,49 @@
+#!/usr/bin/env python
+import errno, os, os.path, sys
+
+print 'Uninstall ndiff'
+
+answer = raw_input('Are you sure that you want to uninstall '
+    'ndiff (yes/no) ')
+
+if answer != 'yes' and answer != 'y':
+    print 'Not uninstalling.'
+    sys.exit(0)
+
+INSTALLED_FILES = (
+    u'/sdcard/opt/nmap-7.12/lib/python2.7/site-packages/ndiff.py',
+    u'/sdcard/opt/nmap-7.12/lib/python2.7/site-packages/ndiff.pyc',
+    '/sdcard/opt/nmap-7.12/bin/ndiff',
+    u'/sdcard/opt/nmap-7.12/share/man/man1/ndiff.1',
+    u'/sdcard/opt/nmap-7.12/lib/python2.7/site-packages/ndiff',
+    '/sdcard/opt/nmap-7.12/bin/uninstall_ndiff',
+)
+
+# Split the list into lists of files and directories.
+files = []
+dirs = []
+for path in INSTALLED_FILES:
+    if os.path.isfile(path) or os.path.islink(path):
+        files.append(path)
+    elif os.path.isdir(path):
+        dirs.append(path)
+# Delete the files.
+for file in files:
+    print "Removing '%s'." % file
+    try:
+        os.remove(file)
+    except OSError, e:
+        print >> sys.stderr, '  Error: %s.' % str(e)
+# Delete the directories. First reverse-sort the normalized paths by
+# length so that child directories are deleted before their parents.
+dirs = [os.path.normpath(dir) for dir in dirs]
+dirs.sort(key = len, reverse = True)
+for dir in dirs:
+    try:
+        print "Removing the directory '%s'." % dir
+        os.rmdir(dir)
+    except OSError, e:
+        if e.errno == errno.ENOTEMPTY:
+            print "Directory '%s' not empty; not removing." % dir
+        else:
+            print >> sys.stderr, str(e)
