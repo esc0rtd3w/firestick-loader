@@ -1,0 +1,1541 @@
+Currently running services:
+  AdvertisingIdManagerService
+  AmazonHdmiService
+  AmazonMtpObserverService
+  AmazonWifiService
+  DockObserver
+  FireTvLedManagerService
+  PackageRecencyFilterConfigService
+  SurfaceFlinger
+  WifiControllerService
+  accessibility
+  account
+  activity
+  alarm
+  amazon_input
+  amazonactivitymanager
+  amazondevicepolicymanager
+  amazondropbox
+  amazonlibrary
+  amazonpackagemanager
+  amazontracingservice
+  amazonusermanagerservice
+  amazonwindowmanager
+  android.security.keystore
+  appops
+  appwidget
+  assetatlas
+  audio
+  battery
+  batteryproperties
+  batterystats
+  bluetooth_manager
+  broadcom.tvservice
+  chronos
+  clipboard
+  commontime_management
+  connectivity
+  consumer_ir
+  content
+  country_detector
+  cpuinfo
+  crlsetmanager
+  dbinfo
+  device_policy
+  deviceinfo
+  devicestoragemonitor
+  diskstats
+  display
+  display.qservice
+  dreams
+  drm.drmManager
+  dropbox
+  entropy
+  ethernet
+  filelinkerservice
+  fingerprint
+  fosdebug
+  gamecontrollerservice
+  gfxinfo
+  hardware
+  imms
+  input
+  input_method
+  jobscheduler
+  launcherapps
+  location
+  lock_settings
+  marketplace
+  media.audio_flinger
+  media.audio_policy
+  media.camera
+  media.player
+  media.sound_trigger_hw
+  media_projection
+  media_router
+  media_session
+  meminfo
+  mount
+  mousemodeservice
+  netpolicy
+  netstats
+  network_management
+  network_score
+  notification
+  package
+  permission
+  power
+  print
+  processinfo
+  procstats
+  restrictions
+  rttmanager
+  samplingprofiler
+  scheduling_policy
+  search
+  sensorservice
+  serial
+  servicediscovery
+  statusbar
+  telephony.registry
+  textservices
+  trust
+  tv_input
+  uimode
+  updatelock
+  usagestats
+  usb
+  user
+  vibrator
+  webviewupdate
+  wifi
+  wifip2p
+  wifiscanner
+  window
+-------------------------------------------------------------------------------
+DUMP OF SERVICE AdvertisingIdManagerService:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE AmazonHdmiService:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE AmazonMtpObserverService:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE AmazonWifiService:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE DockObserver:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE FireTvLedManagerService:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE PackageRecencyFilterConfigService:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE SurfaceFlinger:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE WifiControllerService:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE accessibility:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE account:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE activity:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE alarm:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE amazon_input:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE amazonactivitymanager:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE amazondevicepolicymanager:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE amazondropbox:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE amazonlibrary:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE amazonpackagemanager:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE amazontracingservice:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE amazonusermanagerservice:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE amazonwindowmanager:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE android.security.keystore:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE appops:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE appwidget:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE assetatlas:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE audio:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE battery:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE batteryproperties:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE batterystats:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE bluetooth_manager:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE broadcom.tvservice:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE chronos:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE clipboard:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE commontime_management:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE connectivity:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE consumer_ir:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE content:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE country_detector:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE cpuinfo:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE crlsetmanager:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE dbinfo:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE device_policy:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE deviceinfo:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE devicestoragemonitor:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE diskstats:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE display:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE display.qservice:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE dreams:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE drm.drmManager:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE dropbox:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE entropy:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE ethernet:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE filelinkerservice:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE fingerprint:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE fosdebug:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE gamecontrollerservice:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE gfxinfo:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE hardware:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE imms:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE input:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE input_method:
+Input method client state for android.view.inputmethod.InputMethodManager@af140c9:
+  mService=com.android.internal.view.IInputMethodManager$Stub$Proxy@eec03ce
+  mMainLooper=Looper (main, tid 1) {2fa92ef}
+  mIInputContext=android.view.inputmethod.InputMethodManager$ControlledInputConnectionWrapper@314f91fc
+  mActive=true mHasBeenInactive=false mBindSequence=51 mCurId=com.amazon.tv.ime/.FireTVIME
+  mCurMethod=com.android.internal.view.IInputMethodSession$Stub$Proxy@22442085
+  mCurRootView=com.android.internal.policy.impl.PhoneWindow$DecorView{4c88eda V.E..... R....... 0,0-1920,1080}
+  mServedView=com.amazon.tv.view.ListViewPlus{3b876f0b VFED..C. .F...... 0,60-479,480 #102000a android:id/list}
+  mNextServedView=com.amazon.tv.view.ListViewPlus{3b876f0b VFED..C. .F...... 0,60-479,480 #102000a android:id/list}
+  mServedConnecting=false
+  mCurrentTextBoxAttribute:
+    inputType=0x0 imeOptions=0x0 privateImeOptions=null
+    actionLabel=null actionId=0
+    initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0
+    hintText=null label=null
+    packageName=com.amazon.tv.settings fieldId=16908298 fieldName=null
+    extras=null
+  mServedInputConnection=null
+  mCompletions=null
+  mCursorRect=Rect(0, 0 - 0, 0)
+  mCursorSelStart=0 mCursorSelEnd=0 mCursorCandStart=0 mCursorCandEnd=0
+  mNextUserActionNotificationSequenceNumber=1 mLastSentUserActionNotificationSequenceNumber=-1
+Input method service state for com.amazon.tv.ime.FireTVIME@24c99a14:
+  mWindowCreated=false mWindowAdded=false
+  mWindowVisible=false mWindowWasVisible=false mInShowWindow=false
+  Configuration={1.0 ?mcc?mnc en_US ldltr sw540dp w960dp h515dp 320dpi lrg long land television -touch -keyb/v/h dpad/v s.5}
+  mToken=android.os.BinderProxy@3c242f16
+  mInputBinding=InputBinding{android.os.BinderProxy@22c4f097 / uid 1000 / pid 3439}
+  mInputConnection=com.android.internal.view.InputConnectionWrapper@3af2a284
+  mStartedInputConnection=null
+  mInputStarted=true mInputViewStarted=false mCandidatesViewStarted=false
+  mInputEditorInfo:
+    inputType=0x0 imeOptions=0x0 privateImeOptions=noMicrophoneKey,nm
+    actionLabel=null actionId=0
+    initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0
+    hintText=null label=null
+    packageName=com.amazon.tv.settings fieldId=16908298 fieldName=null
+    extras=null
+  mShowInputRequested=false mLastShowInputRequested=false mShowInputForced=false mShowInputFlags=0x0
+  mCandidatesVisibility=4 mFullscreenApplied=false mIsFullscreen=false mExtractViewHidden=false
+  mExtractedText: null
+  mExtractedToken=0
+  mIsInputViewShown=false mStatusIcon=0
+Last computed insets:
+  contentTopInsets=0 visibleTopInsets=0 touchableInsets=0 touchableRegion=SkRegion()
+-------------------------------------------------------------------------------
+DUMP OF SERVICE jobscheduler:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE launcherapps:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE location:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE lock_settings:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE marketplace:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE media.audio_flinger:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE media.audio_policy:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE media.camera:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE media.player:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE media.sound_trigger_hw:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE media_projection:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE media_router:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE media_session:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE meminfo:
+                   Pss      Pss   Shared  Private   Shared  Private  Swapped     Heap     Heap     Heap
+                 Total    Clean    Dirty    Dirty    Clean    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap        0        0        0        0        0        0        0    11292    10422      869
+  Dalvik Heap     8032        0     3416     7872        0        0      948     9606     7971     1635
+ Dalvik Other    11177        0      112    11144        0        0     4832                           
+        Stack       32        0        0       32        0        0        0                           
+    Other dev        5        0       40        0        0        4        0                           
+     .so mmap      685       48      628      148     5992       48     1184                           
+    .jar mmap        0        0        0        0        8        0        0                           
+    .apk mmap      291      144        0        0      924      144        0                           
+    .ttf mmap       30       16        0        0       40       16        0                           
+    .dex mmap      963      868        0        0     1596      868        0                           
+    .oat mmap     1493      428        0        0    11804      428        0                           
+    .art mmap     1260       52     1320      892     5884       52       96                           
+   Other mmap       42        0        0        8      272        4        0                           
+      Unknown     7521        0     2652     7404       32        0      740                           
+        TOTAL    31531     1556     8168    27500    26552     1564     7800    20898    18393     2504
+ 
+ Dalvik Details
+        .Heap     6799        0      360     6772        0        0        0                           
+         .LOS       94        0      280       84        0        0      488                           
+          .GC    11149        0      108    11116        0        0     4832                           
+      .Zygote      351        0     2772      228        0        0      460                           
+   .NonMoving      788        0        4      788        0        0        0                           
+ .IndirectRef       28        0        4       28        0        0        0                           
+ 
+ Objects
+               Views:      613         ViewRootImpl:        2
+         AppContexts:        6           Activities:        4
+              Assets:        2        AssetManagers:        2
+       Local Binders:       20        Proxy Binders:       37
+       Parcel memory:        8         Parcel count:       35
+    Death Recipients:        3      OpenSSL Sockets:        0
+ 
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
+ 
+                   Pss      Pss   Shared  Private   Shared  Private  Swapped     Heap     Heap     Heap
+                 Total    Clean    Dirty    Dirty    Clean    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap        0        0        0        0        0        0        0     4440     3231     1208
+  Dalvik Heap     2005        0     3400     1912        0        0     1056     3837     3661      176
+ Dalvik Other      283        0       88      280        0        0     4832                           
+        Stack       20        0        4       20        0        0        0                           
+    Other dev        4        0       36        0        0        4        0                           
+     .so mmap      139        4      628       24     3172        4     1244                           
+    .jar mmap        0        0        0        0        4        0        0                           
+    .dex mmap      396      292        0        0     1556      292        0                           
+    .oat mmap      399       20        0        0     8480       20        0                           
+    .art mmap      654        0     1576      388     5960        0      112                           
+   Other mmap        9        0        0        8       64        0        4                           
+      Unknown     2405        0     1644     2380       12        0      816                           
+        TOTAL     6314      316     7376     5012    19248      320     8064     8277     6892     1384
+ 
+ Dalvik Details
+        .Heap     1517        0      280     1512        0        0       96                           
+         .LOS        8        0      256        8        0        0      500                           
+          .GC      239        0       84      236        0        0     4832                           
+      .Zygote      224        0     2864      136        0        0      460                           
+   .NonMoving      256        0        0      256        0        0        0                           
+ .IndirectRef       44        0        4       44        0        0        0                           
+ 
+ Objects
+               Views:        0         ViewRootImpl:        0
+         AppContexts:        3           Activities:        0
+              Assets:        2        AssetManagers:        2
+       Local Binders:        9        Proxy Binders:       16
+       Parcel memory:        6         Parcel count:       26
+    Death Recipients:        0      OpenSSL Sockets:        0
+ 
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
+ 
+                   Pss      Pss   Shared  Private   Shared  Private  Swapped     Heap     Heap     Heap
+                 Total    Clean    Dirty    Dirty    Clean    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap        0        0        0        0        0        0        0     5512     4452     1059
+  Dalvik Heap     9920        0     3264     9832        0        0      948    19713    18149     1564
+ Dalvik Other      436        0      104      432        0        0     4832                           
+        Stack       24        0        0       24        0        0        0                           
+    Other dev        5        0       40        0        0        4        0                           
+     .so mmap      932      368      628      184     4948      368     1216                           
+    .jar mmap        1        0        0        0       12        0        0                           
+    .apk mmap      716       48        0        0     1532       48        0                           
+    .dex mmap     2717     2088        0        0     3432     2088        0                           
+    .oat mmap      843       36        0        0    11156       36        0                           
+    .art mmap     1128        0     1364      836     6000        0      104                           
+   Other mmap      228        0        0       12      248      204        0                           
+      Unknown     3770        0     1576     3752       28        0      716                           
+        TOTAL    20720     2540     6976    15072    27356     2748     7816    25225    22601     2623
+ 
+ Dalvik Details
+        .Heap     7339        0      244     7336        0        0        0                           
+         .LOS       56        0      256       56        0        0      488                           
+          .GC      292        0       64      288        0        0     4832                           
+      .Zygote      321        0     2764      236        0        0      460                           
+   .NonMoving     2204        0        0     2204        0        0        0                           
+ .IndirectRef      144        0       40      144        0        0        0                           
+ 
+ Objects
+               Views:        0         ViewRootImpl:        0
+         AppContexts:        6           Activities:        0
+              Assets:        3        AssetManagers:        3
+       Local Binders:       39        Proxy Binders:       34
+       Parcel memory:       12         Parcel count:       50
+    Death Recipients:       11      OpenSSL Sockets:        0
+ 
+ SQL
+         MEMORY_USED:      684
+  PAGECACHE_OVERFLOW:      177          MALLOC_SIZE:       62
+ 
+ DATABASES
+      pgsz     dbsz   Lookaside(b)          cache  Dbname
+         4       92             48         8/25/9  /data/securedStorageLocation/com.amazon.avod/global/databases/downloads
+         4       92            173         8/23/9  /data/securedStorageLocation/com.amazon.avod/global/databases/downloads (1)
+         4      168             20         3/16/2  /data/data/com.amazon.avod/files/databases/event
+         4      168             17         0/15/1  /data/data/com.amazon.avod/files/databases/event (1)
+         4       24             22         2/19/3  /data/data/com.amazon.avod/files/databases/bookmark
+         4       24             30         1/16/2  /data/data/com.amazon.avod/files/databases/bookmark (1)
+                   Pss      Pss   Shared  Private   Shared  Private  Swapped     Heap     Heap     Heap
+                 Total    Clean    Dirty    Dirty    Clean    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap        0        0        0        0        0        0        0     8772     6691     2080
+  Dalvik Heap     3578        0     3200     3416        0        0      952     6791     5299     1492
+ Dalvik Other     5583        0       80     5576        0        0     5008                           
+        Stack       28        0        0       28        0        0        0                           
+    Other dev        5        0       40        0        0        4        0                           
+     .so mmap      558        4      628      104     6168        4     1248                           
+    .jar mmap        0        0        0        0        8        0        0                           
+    .apk mmap      156       12        0        0     1012       12        0                           
+    .ttf mmap        1        0        0        0        8        0        0                           
+    .dex mmap      520      172        0        0     2316      172        0                           
+    .oat mmap      843       16        0        0    11060       16        0                           
+    .art mmap     1041        0     1404      760     5880        0      100                           
+   Other mmap       17        0        0        8      236        0        0                           
+      Unknown     5171        0     2740     5088       36        8     1088                           
+        TOTAL    17501      204     8092    14980    26724      216     8396    15563    11990     3572
+ 
+ Dalvik Details
+        .Heap     2562        0      160     2536        0        0        0                           
+         .LOS       21        0      260       20        0        0      488                           
+          .GC     5533        0       60     5528        0        0     5008                           
+      .Zygote      355        0     2780      220        0        0      460                           
+   .NonMoving      640        0        0      640        0        0        4                           
+ .IndirectRef       50        0       20       48        0        0        0                           
+ 
+ Objects
+               Views:       69         ViewRootImpl:        3
+         AppContexts:        5           Activities:        3
+              Assets:        2        AssetManagers:        2
+       Local Binders:       31        Proxy Binders:       33
+       Parcel memory:        8         Parcel count:       34
+    Death Recipients:        5      OpenSSL Sockets:        0
+ 
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:       62
+ 
+                   Pss      Pss   Shared  Private   Shared  Private  Swapped     Heap     Heap     Heap
+                 Total    Clean    Dirty    Dirty    Clean    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap        0        0        0        0        0        0        0     3648     3287      360
+  Dalvik Heap     1916        0     3200     1792        0       32      948     4865     3802     1063
+ Dalvik Other      149        0       80      132        0        0     4856                           
+        Stack       16        0        4       16        0        0        4                           
+    Other dev        4        0       36        0        0        4        0                           
+     .so mmap      176       16      616       32     3532       16     1236                           
+    .jar mmap        0        0        0        0        8        0        0                           
+    .apk mmap       58        0        0        0      408        0        0                           
+    .dex mmap      272        0        0        0     2044        0        0                           
+    .oat mmap      329        0        0        0     8280        0        0                           
+    .art mmap      665       48     1544      356     5936       48      120                           
+   Other mmap       15        0        0        8      172        0        4                           
+      Unknown     1284        0     1628     1196       12       68     1012                           
+        TOTAL     4884       64     7108     3532    20392      168     8180     8513     7089     1423
+ 
+ Dalvik Details
+        .Heap     1331        0      108     1328        0        0        0                           
+         .LOS       12        0      256       12        0        0      488                           
+          .GC      121        0       64      104        0        0     4836                           
+      .Zygote      253        0     2836      132        0       32      460                           
+   .NonMoving      320        0        0      320        0        0        0                           
+ .IndirectRef       28        0       16       28        0        0       20                           
+ 
+ Objects
+               Views:        0         ViewRootImpl:        0
+         AppContexts:        3           Activities:        0
+              Assets:        2        AssetManagers:        2
+       Local Binders:       12        Proxy Binders:       20
+       Parcel memory:        4         Parcel count:       18
+    Death Recipients:        2      OpenSSL Sockets:        0
+ 
+ SQL
+         MEMORY_USED:      169
+  PAGECACHE_OVERFLOW:       24          MALLOC_SIZE:       62
+ 
+ DATABASES
+      pgsz     dbsz   Lookaside(b)          cache  Dbname
+         4     3048             17         0/13/1  /data/data/com.amazon.tv.launcher/databases/mbcache.db
+         4     3048             17         0/13/1  /data/data/com.amazon.tv.launcher/databases/mbcache.db (1)
+                   Pss      Pss   Shared  Private   Shared  Private  Swapped     Heap     Heap     Heap
+                 Total    Clean    Dirty    Dirty    Clean    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap        0        0        0        0        0        0        0     3556     3246      309
+  Dalvik Heap     1481        0     3176     1376        0       16      948     4211     3312      899
+ Dalvik Other      188        0       20      188        0        0     4848                           
+        Stack       16        0        4       16        0        0        4                           
+    Other dev        4        0       32        0        0        4        0                           
+     .so mmap      160        4      624       32     3452        4     1240                           
+    .jar mmap        0        0        0        0        8        0        0                           
+    .apk mmap       10        0        0        0      216        0        0                           
+    .dex mmap      161       24        0        0     1548       24        0                           
+    .oat mmap      302        0        0        0     7896        0        0                           
+    .art mmap      603        8     1600      324     5956        8      108                           
+   Other mmap       15        0        0        8      172        0        4                           
+      Unknown     1183        0     1700     1148       12       12      940                           
+        TOTAL     4123       36     7156     3092    19260       68     8092     7767     6558     1208
+ 
+ Dalvik Details
+        .Heap     1007        0      116     1004        0        0        0                           
+         .LOS       12        0      256       12        0        0      488                           
+          .GC      152        0        8      152        0        0     4836                           
+      .Zygote      282        0     2804      180        0       16      460                           
+   .NonMoving      180        0        0      180        0        0        0                           
+ .IndirectRef       36        0       12       36        0        0       12                           
+ 
+ Objects
+               Views:        0         ViewRootImpl:        0
+         AppContexts:        3           Activities:        0
+              Assets:        2        AssetManagers:        2
+       Local Binders:        7        Proxy Binders:       17
+       Parcel memory:        4         Parcel count:       16
+    Death Recipients:        2      OpenSSL Sockets:        0
+ 
+ SQL
+         MEMORY_USED:      169
+  PAGECACHE_OVERFLOW:       24          MALLOC_SIZE:       62
+ 
+ DATABASES
+      pgsz     dbsz   Lookaside(b)          cache  Dbname
+         4       24             17         0/13/1  /data/data/com.amazon.kso.blackbird/databases/blackbird.db
+         4       24             17         0/13/1  /data/data/com.amazon.kso.blackbird/databases/blackbird.db (1)
+                   Pss      Pss   Shared  Private   Shared  Private  Swapped     Heap     Heap     Heap
+                 Total    Clean    Dirty    Dirty    Clean    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap        0        0        0        0        0        0        0     3456     3355      100
+  Dalvik Heap     2802        0     3140     2712        0        0      948     4400     3973      427
+ Dalvik Other      413        0       56      408        0        0     4840                           
+        Stack       20        0        4       20        0        0        0                           
+    Other dev        4        0       36        0        0        4        0                           
+     .so mmap      122        0      632       36     2808        0     1236                           
+    .jar mmap        0        0        0        0        4        0        0                           
+    .apk mmap        4        0        0        0       24        0        0                           
+    .dex mmap      286      220        0        0     1316      220        0                           
+    .oat mmap      480       76        0        0     8064       76        0                           
+    .art mmap      646        0     1548      392     5940        0      104                           
+   Other mmap        9        0        0        8       56        0        4                           
+      Unknown     1394        0     1628     1376       12        0      796                           
+        TOTAL     6180      296     7044     4952    18224      300     7928     7856     7328      527
+ 
+ Dalvik Details
+        .Heap     2424        0        0     2424        0        0        0                           
+         .LOS        0        0      256        0        0        0      488                           
+          .GC      297        0       52      292        0        0     4836                           
+      .Zygote      206        0     2884      116        0        0      460                           
+   .NonMoving      172        0        0      172        0        0        0                           
+ .IndirectRef      116        0        4      116        0        0        4                           
+ 
+ Objects
+               Views:        0         ViewRootImpl:        0
+         AppContexts:      286           Activities:        0
+              Assets:        2        AssetManagers:        2
+       Local Binders:      363        Proxy Binders:      306
+       Parcel memory:       10         Parcel count:       40
+    Death Recipients:        2      OpenSSL Sockets:        0
+ 
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
+ 
+                   Pss      Pss   Shared  Private   Shared  Private  Swapped     Heap     Heap     Heap
+                 Total    Clean    Dirty    Dirty    Clean    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap        0        0        0        0        0        0        0     3388     3189      198
+  Dalvik Heap     1878        0     3132     1788        0        0      948     3582     3355      227
+ Dalvik Other      328        0       60      312        0        0     4832                           
+        Stack       16        0        4       16        0        0        4                           
+    Other dev        4        0       36        0        0        4        0                           
+     .so mmap      153        4      620       40     3224        4     1236                           
+    .apk mmap       10        0        0        0      216        0        0                           
+    .dex mmap      202      200        0        0       56      200        0                           
+    .oat mmap      455       64        0        0     7660       64        0                           
+    .art mmap      693        0     1496      440     5932        0      108                           
+   Other mmap       15        0        0        8      164        0        4                           
+      Unknown     1187        0     1636     1160       12        4      852                           
+        TOTAL     4941      268     6984     3764    17264      276     7984     6970     6544      425
+ 
+ Dalvik Details
+        .Heap     1556        0        0     1556        0        0        0                           
+         .LOS        0        0      256        0        0        0      488                           
+          .GC      272        0       56      256        0        0     4832                           
+      .Zygote      214        0     2876      124        0        0      460                           
+   .NonMoving      108        0        0      108        0        0        0                           
+ .IndirectRef       56        0        4       56        0        0        0                           
+ 
+ Objects
+               Views:        0         ViewRootImpl:        0
+         AppContexts:        2           Activities:        0
+              Assets:        2        AssetManagers:        2
+       Local Binders:       13        Proxy Binders:       16
+       Parcel memory:        5         Parcel count:       21
+    Death Recipients:        3      OpenSSL Sockets:        0
+ 
+ SQL
+         MEMORY_USED:      101
+  PAGECACHE_OVERFLOW:       20          MALLOC_SIZE:       62
+ 
+ DATABASES
+      pgsz     dbsz   Lookaside(b)          cache  Dbname
+         4       16             51  30432/15239/5  /data/data/com.amazon.device.controllermanager/databases/devices
+                   Pss      Pss   Shared  Private   Shared  Private  Swapped     Heap     Heap     Heap
+                 Total    Clean    Dirty    Dirty    Clean    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap        0        0        0        0        0        0        0     4300     4003      296
+  Dalvik Heap     3245        0     3120     3156        0        0      988     5056     4900      156
+ Dalvik Other      518        0       28      516        0        0     4832                           
+        Stack       16        0        0       16        0        0       12                           
+    Other dev        5        0       40        0        0        4        0                           
+     .so mmap      595      396      632       56     2964      396     1256                           
+    .apk mmap        2        0        0        0       40        0        0                           
+    .dex mmap      536      536        0        0        0      536        0                           
+    .oat mmap      346       28        0        0     6976       28        0                           
+    .art mmap      702        0     1512      448     5912        0      112                           
+   Other mmap       10        0        0        8      120        0        0                           
+      Unknown     2192        0     1664     2156       32        4      916                           
+        TOTAL     8167      960     6996     6356    16044      968     8116     9356     8903      452
+ 
+ Dalvik Details
+        .Heap     2694        0       68     2692        0        0       40                           
+         .LOS        8        0      256        8        0        0      488                           
+          .GC      478        0       24      476        0        0     4832                           
+      .Zygote      291        0     2796      204        0        0      460                           
+   .NonMoving      252        0        0      252        0        0        0                           
+ .IndirectRef       40        0        4       40        0        0        0                           
+ 
+ Objects
+               Views:        0         ViewRootImpl:        0
+         AppContexts:        6           Activities:        0
+              Assets:        2        AssetManagers:        2
+       Local Binders:       13        Proxy Binders:       25
+       Parcel memory:        7         Parcel count:       30
+    Death Recipients:        1      OpenSSL Sockets:        0
+ 
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
+ 
+                   Pss      Pss   Shared  Private   Shared  Private  Swapped     Heap     Heap     Heap
+                 Total    Clean    Dirty    Dirty    Clean    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap        0        0        0        0        0        0        0     4152     3939      212
+  Dalvik Heap     4482        0     3192     4392        0        0     1000     7786     6471     1315
+ Dalvik Other      266        0       48      264        0        0     5048                           
+        Stack       20        0        4       20        0        0        0                           
+       Cursor        4        0        0        4        0        0        0                           
+    Other dev        9        0       40        0        0        8        0                           
+     .so mmap      240        0      632       44     4080        0     1228                           
+    .jar mmap        0        0        0        0        8        0        0                           
+    .apk mmap       28        0        0        0      408        0        0                           
+    .dex mmap     1446     1300        0        0     1700     1300        0                           
+    .oat mmap      528        0        0        0     9872        0        0                           
+    .art mmap      784        0     1496      520     5968        0      108                           
+   Other mmap       15        0        0        8      172        0        4                           
+      Unknown     1936        0     1612     1900        8       16     1024                           
+        TOTAL     9758     1300     7024     7152    22216     1324     8412    11938    10410     1527
+ 
+ Dalvik Details
+        .Heap     3327        0      132     3324        0        0        0                           
+         .LOS      120        0      256      120        0        0      540                           
+          .GC      218        0       32      216        0        0     5000                           
+      .Zygote      283        0     2804      196        0        0      460                           
+   .NonMoving      752        0        0      752        0        0        0                           
+ .IndirectRef       48        0       16       48        0        0       48                           
+ 
+ Objects
+               Views:        1         ViewRootImpl:        0
+         AppContexts:        2           Activities:        0
+              Assets:        2        AssetManagers:        2
+       Local Binders:       23        Proxy Binders:       21
+       Parcel memory:        9         Parcel count:       36
+    Death Recipients:        1      OpenSSL Sockets:        0
+ 
+ SQL
+         MEMORY_USED:      606
+  PAGECACHE_OVERFLOW:      215          MALLOC_SIZE:       62
+ 
+ DATABASES
+      pgsz     dbsz   Lookaside(b)          cache  Dbname
+         4       16             53         6/17/3  /data/user/0/com.amazon.venezia/databases/installQueue
+         4       20             32         2/17/3  /data/user/0/com.amazon.venezia/databases/downloadQueue
+         4       24             33        23/18/4  /data/user/0/com.amazon.venezia/databases/AppManager.db
+         4      392             72        17/18/4  /data/user/0/com.amazon.venezia/databases/locker.db
+         4       28             17         0/15/1  /data/user/0/com.amazon.venezia/databases/images.db
+                   Pss      Pss   Shared  Private   Shared  Private  Swapped     Heap     Heap     Heap
+                 Total    Clean    Dirty    Dirty    Clean    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap        0        0        0        0        0        0        0     3552     3217      334
+  Dalvik Heap     3030        0     3000     2944        8        0      940     6201     4744     1457
+ Dalvik Other      180        0       60      168        0        0     4832                           
+        Stack       20        0        4       20        0        0        0                           
+    Other dev        5        0       40        0        0        4        0                           
+     .so mmap      191        0      612       68     3272        0     1220                           
+    .jar mmap        1        0        0        0       12        0        0                           
+    .apk mmap       49        0        0        0      148        0        0                           
+    .dex mmap      623       12        0        0     2912       12        0                           
+    .oat mmap      620        0        0        0     9908        0        0                           
+    .art mmap      922        4     1396      652     6072        4      104                           
+   Other mmap       15        0        0        8       92        0        4                           
+      Unknown     1641        0     1484     1620        0        4      764                           
+        TOTAL     7297       16     6596     5480    22424       24     7864     9753     7961     1791
+ 
+ Dalvik Details
+        .Heap     1992        0        0     1992        0        0        0                           
+         .LOS      148        0      256      144        8        0      480                           
+          .GC      140        0       56      128        0        0     4832                           
+      .Zygote      338        0     2744      256        0        0      460                           
+   .NonMoving      552        0        0      552        0        0        0                           
+ .IndirectRef       40        0        4       40        0        0        0                           
+ 
+ Objects
+               Views:        0         ViewRootImpl:        0
+         AppContexts:        3           Activities:        0
+              Assets:        2        AssetManagers:        2
+       Local Binders:       11        Proxy Binders:       29
+       Parcel memory:        4         Parcel count:       18
+    Death Recipients:        1      OpenSSL Sockets:        0
+ 
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
+ 
+                   Pss      Pss   Shared  Private   Shared  Private  Swapped     Heap     Heap     Heap
+                 Total    Clean    Dirty    Dirty    Clean    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap        0        0        0        0        0        0        0     8756     7368     1387
+  Dalvik Heap     5853        0     2680     5780        8        0      940     8847     7227     1620
+ Dalvik Other      477        0       60      460        0        0     4832                           
+        Stack       28        0        0       28        0        0        0                           
+    Other dev        5        0       40        0        0        4        0                           
+     .so mmap      905      112      600      204     6816      112     1188                           
+    .jar mmap        1        0        0        0       12        0        0                           
+    .apk mmap      130        0        0        0      904        0        0                           
+    .ttf mmap       12        0        0        0       24        0        0                           
+    .dex mmap     1938     1284        0        0     3060     1284        0                           
+    .oat mmap     1806      584        0        0    13048      584        0                           
+    .art mmap     1303        8     1228     1016     6192        8       84                           
+   Other mmap      109        0        0        8      308       64        0                           
+      Unknown     6702        0     1412     6684       20        0      700                           
+        TOTAL    19269     1988     6020    14180    30392     2056     7744    17603    14595     3007
+ 
+ Dalvik Details
+        .Heap     4216        0        0     4216        0        0        0                           
+         .LOS      184        0      256      180        8        0      480                           
+          .GC      413        0       56      396        0        0     4832                           
+      .Zygote      645        0     2424      576        0        0      460                           
+   .NonMoving      808        0        0      808        0        0        0                           
+ .IndirectRef       64        0        4       64        0        0        0                           
+ 
+ Objects
+               Views:       13         ViewRootImpl:        0
+         AppContexts:        3           Activities:        0
+              Assets:        2        AssetManagers:        2
+       Local Binders:       24        Proxy Binders:       30
+       Parcel memory:       10         Parcel count:       40
+    Death Recipients:        1      OpenSSL Sockets:        0
+ 
+ SQL
+         MEMORY_USED:      629
+  PAGECACHE_OVERFLOW:      165          MALLOC_SIZE:       62
+ 
+ DATABASES
+      pgsz     dbsz   Lookaside(b)          cache  Dbname
+         4       32             22         1/16/2  /data/data/com.amazon.bueller.photos/databases/mixtape_accounts.db
+         4      220             53        35/20/8  /data/data/com.amazon.bueller.photos/databases/amzn1.account.AGAH6V5GLZH4BYE47APBT2NVFQSQ.mixtape.db
+         4      220            121        27/20/8  /data/data/com.amazon.bueller.photos/databases/amzn1.account.AGAH6V5GLZH4BYE47APBT2NVFQSQ.mixtape.db (1)
+         4       40             21       97/112/2  /data/data/com.amazon.bueller.photos/databases/DiskCache.db
+         4       40             54       488/15/3  /data/data/com.amazon.bueller.photos/databases/DiskCache.db (1)
+                   Pss      Pss   Shared  Private   Shared  Private  Swapped     Heap     Heap     Heap
+                 Total    Clean    Dirty    Dirty    Clean    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap        0        0        0        0        0        0        0     3316     3027      288
+  Dalvik Heap     1405        0     3200     1312        0        0      948     3372     3127      245
+ Dalvik Other      192        0      196      184        0        0     4832                           
+        Stack       20        0        4       20        0        0        0                           
+    Other dev        4        0       32        0        0        4        0                           
+     .so mmap      141        4      636       48     2824        4     1228                           
+    .dex mmap       28       28        0        0        0       28        0                           
+    .oat mmap      290        4        0        0     6300        4        0                           
+    .art mmap      675        0     1516      416     5940        0      104                           
+   Other mmap       10        0        0        8      104        0        4                           
+      Unknown     1126        0     1716     1096       32        0      724                           
+        TOTAL     3891       36     7300     3084    15200       40     7840     6688     6154      533
+ 
+ Dalvik Details
+        .Heap     1136        0       68     1136        0        0        0                           
+         .LOS        8        0      256        8        0        0      488                           
+          .GC      156        0      192      148        0        0     4832                           
+      .Zygote      217        0     2876      124        0        0      460                           
+   .NonMoving       44        0        0       44        0        0        0                           
+ .IndirectRef       36        0        4       36        0        0        0                           
+ 
+ Objects
+               Views:        0         ViewRootImpl:        0
+         AppContexts:        3           Activities:        0
+              Assets:        2        AssetManagers:        2
+       Local Binders:        3        Proxy Binders:       12
+       Parcel memory:        5         Parcel count:       20
+    Death Recipients:        0      OpenSSL Sockets:        0
+ 
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
+ 
+                   Pss      Pss   Shared  Private   Shared  Private  Swapped     Heap     Heap     Heap
+                 Total    Clean    Dirty    Dirty    Clean    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap        0        0        0        0        0        0        0     4320     3635      684
+  Dalvik Heap     3842        0     3124     3752        0        0      948     5849     5290      559
+ Dalvik Other      283        0       76      272        0        4     4932                           
+        Stack       20        0        4       20        0        0        0                           
+    Other dev        5        0       40        0        0        4        0                           
+     .so mmap      194        8      624       36     3696        8     1236                           
+    .jar mmap        0        0        0        0        4        0        0                           
+    .apk mmap      759       36        0        0     1692       36        0                           
+    .dex mmap      792      324        0        0     2792      324        0                           
+    .oat mmap      569       32        0        0     9696       32        0                           
+    .art mmap      875        0     1448      616     5956        0      120                           
+   Other mmap       15        0        0        8      172        0        4                           
+      Unknown     1821        0     1620     1800       12        4     1428                           
+        TOTAL     9175      400     6936     6504    24020      412     8668    10169     8925     1243
+ 
+ Dalvik Details
+        .Heap     2883        0       68     2880        0        0        0                           
+         .LOS       16        0      256       16        0        0      488                           
+          .GC      199        0       64      188        0        4     4836                           
+      .Zygote      287        0     2800      200        0        0      460                           
+   .NonMoving      656        0        0      656        0        0        0                           
+ .IndirectRef       84        0       12       84        0        0       96                           
+ 
+ Objects
+               Views:        0         ViewRootImpl:        0
+         AppContexts:        4           Activities:        0
+              Assets:        2        AssetManagers:        2
+       Local Binders:       26        Proxy Binders:       50
+       Parcel memory:       11         Parcel count:       46
+    Death Recipients:        3      OpenSSL Sockets:        1
+ 
+ SQL
+         MEMORY_USED:      179
+  PAGECACHE_OVERFLOW:       32          MALLOC_SIZE:       62
+ 
+ DATABASES
+      pgsz     dbsz   Lookaside(b)          cache  Dbname
+         4       20             25         2/21/3  /data/user/0/com.amazon.whisperlink.core.android/databases/knownDeviceData.db
+         4       20             17         0/15/1  /data/user/0/com.amazon.whisperlink.core.android/databases/hashservices.db
+                   Pss      Pss   Shared  Private   Shared  Private  Swapped     Heap     Heap     Heap
+                 Total    Clean    Dirty    Dirty    Clean    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap        0        0        0        0        0        0        0     4188     3900      287
+  Dalvik Heap     3965        0     3312     3872        0        0      948     6616     5913      703
+ Dalvik Other      282        0       44      280        0        0     4832                           
+        Stack       20        0        4       20        0        0        0                           
+    Other dev        5        0       40        0        0        4        0                           
+     .so mmap      196       16      628       52     3364       16     1224                           
+    .jar mmap        6        4        0        0       12        4        0                           
+    .apk mmap       38       28        0        0      216       28        0                           
+    .dex mmap      393       28        0        0     2220       28        0                           
+    .oat mmap      492       36        0        0     8976       36        0                           
+    .art mmap      813        4     1516      548     5932        4      104                           
+   Other mmap       69        0        0        8      240       36        4                           
+      Unknown     2095        0     1616     2080       12        0      776                           
+        TOTAL     8374      116     7160     6860    20972      156     7888    10804     9813      990
+ 
+ Dalvik Details
+        .Heap     3107        0      204     3104        0        0        0                           
+         .LOS       32        0      256       32        0        0      488                           
+          .GC      222        0       28      220        0        0     4832                           
+      .Zygote      238        0     2852      148        0        0      460                           
+   .NonMoving      588        0        0      588        0        0        0                           
+ .IndirectRef       60        0       16       60        0        0        0                           
+ 
+ Objects
+               Views:        0         ViewRootImpl:        0
+         AppContexts:        2           Activities:        0
+              Assets:        2        AssetManagers:        2
+       Local Binders:        9        Proxy Binders:       18
+       Parcel memory:        3         Parcel count:       14
+    Death Recipients:        1      OpenSSL Sockets:        0
+ 
+ SQL
+         MEMORY_USED:      588
+  PAGECACHE_OVERFLOW:      121          MALLOC_SIZE:       62
+ 
+ DATABASES
+      pgsz     dbsz   Lookaside(b)          cache  Dbname
+         4       24             17         0/14/1  /data/data/com.amazon.kindle.cms/databases/cms_shared.db
+         4       24             22         1/14/2  /data/data/com.amazon.kindle.cms/databases/cms_shared.db (2)
+         1      123             87        89/94/8  /data/data/com.amazon.kindle.cms/databases/cms.db
+         1      123             28        22/41/3  /data/data/com.amazon.kindle.cms/databases/cms.db (3)
+         1      123             61        65/24/6  /data/data/com.amazon.kindle.cms/databases/cms.db (2)
+                   Pss      Pss   Shared  Private   Shared  Private  Swapped     Heap     Heap     Heap
+                 Total    Clean    Dirty    Dirty    Clean    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap        0        0        0        0        0        0        0     3416     3120      295
+  Dalvik Heap     1018        0     3140      916        0        0      948     3451     2682      769
+ Dalvik Other      158        0       76      144        0        0     4832                           
+        Stack       20        0        4       20        0        0        0                           
+    Other dev        4        0       36        0        0        4        0                           
+     .so mmap      151        0      628       48     3120        0     1224                           
+    .apk mmap       46       36        0        0      216       36        0                           
+    .dex mmap        8        4        0        0        8        4        0                           
+    .oat mmap      282       12        0        0     6740       12        0                           
+    .art mmap      656        0     1552      388     5976        0      104                           
+   Other mmap       15        0        0        8      164        0        4                           
+      Unknown     1201        0     1708     1180       12        0      772                           
+        TOTAL     3559       52     7144     2704    16236       56     7884     6867     5802     1064
+ 
+ Dalvik Details
+        .Heap      716        0       16      716        0        0        0                           
+         .LOS       12        0      256       12        0        0      488                           
+          .GC      106        0       64       92        0        0     4832                           
+      .Zygote      234        0     2868      132        0        0      460                           
+   .NonMoving       56        0        0       56        0        0        0                           
+ .IndirectRef       52        0       12       52        0        0        0                           
+ 
+ Objects
+               Views:        0         ViewRootImpl:        0
+         AppContexts:        2           Activities:        0
+              Assets:        2        AssetManagers:        2
+       Local Binders:        5        Proxy Binders:       14
+       Parcel memory:        5         Parcel count:       20
+    Death Recipients:        0      OpenSSL Sockets:        0
+ 
+ SQL
+         MEMORY_USED:      102
+  PAGECACHE_OVERFLOW:       24          MALLOC_SIZE:       62
+ 
+ DATABASES
+      pgsz     dbsz   Lookaside(b)          cache  Dbname
+         4       36             40        33/18/4  /data/data/com.android.documentsui/databases/recents.db
+                   Pss      Pss   Shared  Private   Shared  Private  Swapped     Heap     Heap     Heap
+                 Total    Clean    Dirty    Dirty    Clean    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap        0        0        0        0        0        0        0     3428     2980      447
+  Dalvik Heap      651        0     3152      544        0        0      948     3260     2469      791
+ Dalvik Other      131        0       76      112        0        0     4832                           
+        Stack       20        0        4       20        0        0        0                           
+    Other dev        4        0       36        0        0        4        0                           
+     .so mmap      137        0      632       40     2888        0     1232                           
+    .apk mmap       22       12        0        0      216       12        0                           
+    .dex mmap        8        4        0        0        8        4        0                           
+    .oat mmap      244        0        0        0     6156        0        0                           
+    .art mmap      585        0     1592      324     5960        0      104                           
+   Other mmap       15        0        0        8      164        0        4                           
+      Unknown     1175        0     1724     1144       12        0      776                           
+        TOTAL     2992       16     7216     2192    15404       20     7896     6688     5449     1238
+ 
+ Dalvik Details
+        .Heap      384        0        8      384        0        0        0                           
+         .LOS        8        0      256        8        0        0      488                           
+          .GC      103        0       64       84        0        0     4832                           
+      .Zygote      219        0     2888      112        0        0      460                           
+   .NonMoving       40        0        0       40        0        0        0                           
+ .IndirectRef       28        0       12       28        0        0        0                           
+ 
+ Objects
+               Views:        0         ViewRootImpl:        0
+         AppContexts:        2           Activities:        0
+              Assets:        2        AssetManagers:        2
+       Local Binders:        2        Proxy Binders:       11
+       Parcel memory:        2         Parcel count:       10
+    Death Recipients:        0      OpenSSL Sockets:        0
+ 
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:       62
+ 
+                   Pss      Pss   Shared  Private   Shared  Private  Swapped     Heap     Heap     Heap
+                 Total    Clean    Dirty    Dirty    Clean    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap        0        0        0        0        0        0        0     4464     3141     1322
+  Dalvik Heap     2183        0     3264     2068        0        0      948     5080     3998     1082
+ Dalvik Other      221        0       76      192        0        0     4832                           
+        Stack       20        0        4       20        0        0        0                           
+    Other dev        5        0       40        0        0        4        0                           
+     .so mmap      177        0      636       40     3212        0     1228                           
+    .jar mmap        0        0        0        0        4        0        0                           
+    .apk mmap       16       16        0        0        0       16        0                           
+    .dex mmap      675      148        0        0     2644      148        0                           
+    .oat mmap      493        0        0        0     8976        0        0                           
+    .art mmap      793        0     1508      536     5984        0      104                           
+   Other mmap        9        0        0        8       64        0        4                           
+      Unknown     2305        0     1716     2268       12        0      768                           
+        TOTAL     6897      164     7244     5132    20896      168     7884     9544     7139     2404
+ 
+ Dalvik Details
+        .Heap     1503        0      208     1496        0        0        0                           
+         .LOS        8        0      256        8        0        0      488                           
+          .GC      157        0       64      128        0        0     4832                           
+      .Zygote      308        0     2800      200        0        0      460                           
+   .NonMoving      364        0        0      364        0        0        0                           
+ .IndirectRef       64        0       12       64        0        0        0                           
+ 
+ Objects
+               Views:        0         ViewRootImpl:        0
+         AppContexts:        3           Activities:        0
+              Assets:        2        AssetManagers:        2
+       Local Binders:        7        Proxy Binders:       17
+       Parcel memory:        5         Parcel count:       20
+    Death Recipients:        3      OpenSSL Sockets:        0
+ 
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
+ 
+                   Pss      Pss   Shared  Private   Shared  Private  Swapped     Heap     Heap     Heap
+                 Total    Clean    Dirty    Dirty    Clean    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap        0        0        0        0        0        0        0     3380     3008      371
+  Dalvik Heap      865        0     3232      776        0        0      948     3743     2864      879
+ Dalvik Other      173        0       20      172        0        0     4832                           
+        Stack       20        0        4       20        0        0        0                           
+    Other dev        4        0       36        0        0        4        0                           
+     .so mmap      110        0      636       36     2472        0     1232                           
+    .jar mmap        1        0        0        0       12        0        0                           
+    .apk mmap      100      100        0        0        0      100        0                           
+    .dex mmap      119        4        0        0     1072        4        0                           
+    .oat mmap      204        0        0        0     5992        0        0                           
+    .art mmap      563        0     1604      304     5936        0      104                           
+   Other mmap        9        0        0        8       56        0        4                           
+      Unknown     1130        0     1728     1092       12        0      776                           
+        TOTAL     3298      104     7260     2408    15552      108     7896     7123     5872     1250
+ 
+ Dalvik Details
+        .Heap      555        0      144      552        0        0        0                           
+         .LOS        8        0      256        8        0        0      488                           
+          .GC      145        0        8      144        0        0     4832                           
+      .Zygote      254        0     2832      168        0        0      460                           
+   .NonMoving       48        0        0       48        0        0        0                           
+ .IndirectRef       28        0       12       28        0        0        0                           
+ 
+ Objects
+               Views:        0         ViewRootImpl:        0
+         AppContexts:        2           Activities:        0
+              Assets:        2        AssetManagers:        2
+       Local Binders:        4        Proxy Binders:       12
+       Parcel memory:        2         Parcel count:       10
+    Death Recipients:        0      OpenSSL Sockets:        0
+ 
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
+ 
+                   Pss      Pss   Shared  Private   Shared  Private  Swapped     Heap     Heap     Heap
+                 Total    Clean    Dirty    Dirty    Clean    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap        0        0        0        0        0        0        0     3420     3149      270
+  Dalvik Heap      957        0     3168      844        0        0      948     3407     2789      618
+ Dalvik Other      162        0       72      136        0        0     4832                           
+        Stack       20        0        4       20        0        0        0                           
+    Other dev        4        0       36        0        0        4        0                           
+     .so mmap      151        0      628       48     3100        0     1228                           
+    .jar mmap        0        0        0        0        4        0        0                           
+    .apk mmap       18        8        0        0      216        8        0                           
+    .dex mmap       33        4        0        0      512        4        0                           
+    .oat mmap      230        0        0        0     6384        0        0                           
+    .art mmap      575        0     1592      320     5932        0      104                           
+   Other mmap      147        0        0        8      164      132        4                           
+      Unknown     1231        0     1652     1208       12        0      776                           
+        TOTAL     3528       12     7152     2584    16324      148     7892     6827     5938      888
+ 
+ Dalvik Details
+        .Heap      660        0       32      660        0        0        0                           
+         .LOS       16        0      256       16        0        0      488                           
+          .GC      134        0       60      108        0        0     4832                           
+      .Zygote      233        0     2880      120        0        0      460                           
+   .NonMoving       48        0        0       48        0        0        0                           
+ .IndirectRef       28        0       12       28        0        0        0                           
+ 
+ Objects
+               Views:        0         ViewRootImpl:        0
+         AppContexts:        2           Activities:        0
+              Assets:        2        AssetManagers:        2
+       Local Binders:        3        Proxy Binders:       12
+       Parcel memory:        2         Parcel count:       10
+    Death Recipients:        0      OpenSSL Sockets:        0
+ 
+ SQL
+         MEMORY_USED:      113
+  PAGECACHE_OVERFLOW:       16          MALLOC_SIZE:       62
+ 
+ DATABASES
+      pgsz     dbsz   Lookaside(b)          cache  Dbname
+         4       96            143         8/21/7  /data/data/com.amazon.identity.auth.device.authorization/databases/MAPDataStore.db
+                   Pss      Pss   Shared  Private   Shared  Private  Swapped     Heap     Heap     Heap
+                 Total    Clean    Dirty    Dirty    Clean    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap        0        0        0        0        0        0        0     3544     3121      422
+  Dalvik Heap     1679        0     3136     1588        0        0      948     3777     3388      389
+ Dalvik Other      225        0       20      224        0        0     4832                           
+        Stack       20        0        4       20        0        0        0                           
+    Other dev        4        0       36        0        0        4        0                           
+     .so mmap      162        0      628       48     3200        0     1228                           
+    .jar mmap        2        0        0        0        8        0        0                           
+    .apk mmap       18        8        0        0      216        8        0                           
+    .dex mmap       64        4        0        0     1168        4        0                           
+    .oat mmap      329        8        0        0     7864        8        0                           
+    .art mmap      608        0     1592      352     5936        0      104                           
+   Other mmap       15        0        0        8      172        0        4                           
+      Unknown     1398        0     1632     1380       12        0      776                           
+        TOTAL     4524       20     7048     3620    18576       24     7892     7321     6509      811
+ 
+ Dalvik Details
+        .Heap     1260        0       56     1256        0        0        0                           
+         .LOS       12        0      256       12        0        0      488                           
+          .GC      185        0        8      184        0        0     4832                           
+      .Zygote      263        0     2824      176        0        0      460                           
+   .NonMoving      144        0        0      144        0        0        0                           
+ .IndirectRef       40        0       12       40        0        0        0                           
+ 
+ Objects
+               Views:        0         ViewRootImpl:        0
+         AppContexts:        2           Activities:        0
+              Assets:        2        AssetManagers:        2
+       Local Binders:        8        Proxy Binders:       16
+       Parcel memory:        3         Parcel count:       12
+    Death Recipients:        1      OpenSSL Sockets:        0
+ 
+ SQL
+         MEMORY_USED:       90
+  PAGECACHE_OVERFLOW:       16          MALLOC_SIZE:       62
+ 
+ DATABASES
+      pgsz     dbsz   Lookaside(b)          cache  Dbname
+         4       20             25         1/16/2  /data/data/com.amazon.sync.service/databases/syncattributes.db
+                   Pss      Pss   Shared  Private   Shared  Private  Swapped     Heap     Heap     Heap
+                 Total    Clean    Dirty    Dirty    Clean    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap        0        0        0        0        0        0        0     6588     4931     1656
+  Dalvik Heap     2508        0     3196     2356        0        0      948     5566     4305     1261
+ Dalvik Other      167        0       76      156        0        0     4868                           
+        Stack       20        0        0       20        0        0        8                           
+    Other dev        5        0       40        0        0        4        0                           
+     .so mmap      479        0      624      100     5268        0     1260                           
+    .jar mmap        0        0        0        0        8        0        0                           
+    .apk mmap      112        0        0        0      876        0        0                           
+    .dex mmap      322       28        0        0     2088       28        0                           
+    .oat mmap      584        4        0        0     9780        4        0                           
+    .art mmap      872        0     1484      608     5852        0      116                           
+   Other mmap       10        0        0        8      128        0        0                           
+      Unknown     2978        0     2296     2920       36        4     1436                           
+        TOTAL     8057       32     7716     6168    24036       40     8636    12154     9236     2917
+ 
+ Dalvik Details
+        .Heap     1696        0      160     1672        0        0        0                           
+         .LOS        8        0      256        8        0        0      488                           
+          .GC      127        0       64      116        0        0     4836                           
+      .Zygote      348        0     2780      220        0        0      460                           
+   .NonMoving      456        0        0      456        0        0        0                           
+ .IndirectRef       40        0       12       40        0        0       32                           
+ 
+ Objects
+               Views:       12         ViewRootImpl:        1
+         AppContexts:        3           Activities:        0
+              Assets:        2        AssetManagers:        2
+       Local Binders:       18        Proxy Binders:       27
+       Parcel memory:        7         Parcel count:       28
+    Death Recipients:        2      OpenSSL Sockets:        0
+ 
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
+ 
+                   Pss      Pss   Shared  Private   Shared  Private  Swapped     Heap     Heap     Heap
+                 Total    Clean    Dirty    Dirty    Clean    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap        0        0        0        0        0        0        0     3372     3191      180
+  Dalvik Heap     3093        0     3460     2928        0       60     1040     5096     4676      420
+ Dalvik Other      167        0      112      152        0        0     4832                           
+        Stack       20        0        4       16        0        4        0                           
+    Other dev        4        0       36        0        0        4        0                           
+     .so mmap      140        0      636       28     3172        0     1240                           
+    .jar mmap        0        0        0        0        4        0        0                           
+    .apk mmap        2        0        0        0       40        0        0                           
+    .dex mmap      685      320        0        0     2152      320        0                           
+    .oat mmap      563        4        0        0     9616        4        0                           
+    .art mmap      794       44     1536      484     5956       44      108                           
+   Other mmap        9        0        0        8       64        0        4                           
+      Unknown     1264        0     1664     1224       12        8      832                           
+        TOTAL     6741      368     7448     4840    21016      444     8056     8468     7867      600
+ 
+ Dalvik Details
+        .Heap     2161        0      360     2112        0       36       72                           
+         .LOS       12        0      256        8        0        4      508                           
+          .GC      135        0      108      120        0        0     4832                           
+      .Zygote      248        0     2844      144        0       12      460                           
+   .NonMoving      672        0        0      664        0        8        0                           
+ .IndirectRef       32        0        4       32        0        0        0                           
+ 
+ Objects
+               Views:        0         ViewRootImpl:        0
+         AppContexts:        5           Activities:        0
+              Assets:        2        AssetManagers:        2
+       Local Binders:       21        Proxy Binders:       30
+       Parcel memory:        9         Parcel count:       36
+    Death Recipients:       10      OpenSSL Sockets:        0
+ 
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
+ 
+                   Pss      Pss   Shared  Private   Shared  Private  Swapped     Heap     Heap     Heap
+                 Total    Clean    Dirty    Dirty    Clean    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap        0        0        0        0        0        0        0     3408     3110      297
+  Dalvik Heap     2319        0     3284     2196        0        0     1120     4124     3936      188
+ Dalvik Other      161        0      224      140        0        0     4832                           
+        Stack       16        0        4       16        0        0        4                           
+    Other dev        5        0       40        0        0        4        0                           
+     .so mmap      205        4      632       36     3800        4     1236                           
+    .apk mmap       13        0        0        0      256        0        0                           
+    .dex mmap      787      776        0        0      248      776        0                           
+    .oat mmap      668       80        0        0     9716       80        0                           
+    .art mmap      804        4     1476      540     5988        4      140                           
+   Other mmap       15        0        0        8      172        0        4                           
+      Unknown     1297        0     1628     1276       12        0      860                           
+        TOTAL     6290      864     7288     4212    20192      868     8196     7532     7046      485
+ 
+ Dalvik Details
+        .Heap     1719        0      212     1692        0        0      148                           
+         .LOS       12        0      256       12        0        0      508                           
+          .GC      133        0      220      112        0        0     4832                           
+      .Zygote      276        0     2816      180        0        0      464                           
+   .NonMoving      312        0        0      312        0        0        0                           
+ .IndirectRef       28        0        4       28        0        0        0                           
+ 
+ Objects
+               Views:        0         ViewRootImpl:        0
+         AppContexts:        3           Activities:        0
+              Assets:        2        AssetManagers:        2
+       Local Binders:       15        Proxy Binders:       22
+       Parcel memory:        7         Parcel count:       28
+    Death Recipients:        2      OpenSSL Sockets:        0
+ 
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:       62
+ 
+                   Pss      Pss   Shared  Private   Shared  Private  Swapped     Heap     Heap     Heap
+                 Total    Clean    Dirty    Dirty    Clean    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap        0        0        0        0        0        0        0     3484     3265      218
+  Dalvik Heap      760        0     3124      652        0       24     1476     3032     2895      137
+ Dalvik Other      223        0       40      216        0        4     4876                           
+        Stack       16        0        4       16        0        0        4                           
+    Other dev        4        0       32        0        0        4        0                           
+     .so mmap      135        8      628       40     2812        8     1244                           
+    .jar mmap        0        0        0        0        4        0        0                           
+    .apk mmap        2        0        0        0       40        0        0                           
+    .dex mmap      315      260        0        0     1220      260        0                           
+    .oat mmap      263        0        0        0     7184        0        0                           
+    .art mmap      471       12     1592      204     5920       12      224                           
+   Other mmap       26        0        0       24      104        0        4                           
+      Unknown     1212        0     1676     1156       36       20      912                           
+        TOTAL     3427      280     7096     2308    17320      332     8740     6516     6160      355
+ 
+ Dalvik Details
+        .Heap      540        0       92      520        0       20      336                           
+         .LOS        0        0      256        0        0        0      496                           
+          .GC      215        0       36      208        0        4     4876                           
+      .Zygote      176        0     2776       88        0        4      592                           
+   .NonMoving       44        0        0       44        0        0       52                           
+ .IndirectRef        8        0        4        8        0        0        0                           
+ 
+ Objects
+               Views:        0         ViewRootImpl:        0
+         AppContexts:        3           Activities:        0
+              Assets:        2        AssetManagers:        2
+       Local Binders:        5        Proxy Binders:       15
+       Parcel memory:        5         Parcel count:       20
+    Death Recipients:        1      OpenSSL Sockets:        0
+ 
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
+ 
+                   Pss      Pss   Shared  Private   Shared  Private  Swapped     Heap     Heap     Heap
+                 Total    Clean    Dirty    Dirty    Clean    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap        0        0        0        0        0        0        0     5840     5814       25
+  Dalvik Heap     1706        0     3116     1608        0        8     4660     8725     7385     1340
+ Dalvik Other      136        0       28      132        0        0     5132                           
+        Stack       24        0        0       24        0        0       12                           
+    Other dev        4        0       32        0        0        4        0                           
+     .so mmap      302        4      624       28     4512        4     1360                           
+    .jar mmap        0        0        0        0        4        0        0                           
+    .apk mmap       64        0        0        0      684        0        0                           
+    .dex mmap      112       36        0        0     1424       36        0                           
+    .oat mmap      436        0        0        0     8856        0        0                           
+    .art mmap      549       12     1536      284     5792       12      292                           
+   Other mmap       13        0        0        8      172        0        0                           
+      Unknown      822        0     1972      740       12        4     3468                           
+        TOTAL     4168       52     7308     2824    21456       68    14924    14565    13199     1365
+ 
+ Dalvik Details
+        .Heap     1376        0       52     1376        0        0     2088                           
+         .LOS        8        0      256        8        0        0     1680                           
+          .GC      108        0       24      104        0        0     5096                           
+      .Zygote      186        0     2808       92        0        4      556                           
+   .NonMoving      136        0        0      132        0        4      336                           
+ .IndirectRef       28        0        4       28        0        0       36                           
+ 
+ Objects
+               Views:      232         ViewRootImpl:        0
+         AppContexts:        3           Activities:        0
+              Assets:        4        AssetManagers:        4
+       Local Binders:        9        Proxy Binders:       19
+       Parcel memory:        5         Parcel count:       20
+    Death Recipients:        3      OpenSSL Sockets:        0
+ 
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
+ 
+ 
+ Asset Allocations
+    zip:/system/priv-app/com.amazon.vizzini/com.amazon.vizzini.apk:/assets/fonts/AmazonEmber-Light.ttf: 67K
+    zip:/system/priv-app/com.amazon.vizzini/com.amazon.vizzini.apk:/assets/fonts/AmazonEmber-Regular.ttf: 55K
+                   Pss      Pss   Shared  Private   Shared  Private  Swapped     Heap     Heap     Heap
+                 Total    Clean    Dirty    Dirty    Clean    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap        0        0        0        0        0        0        0     3276     3036      239
+  Dalvik Heap     1107        0     3224     1008        0        0      952     3043     2834      209
+ Dalvik Other      151        0      204      136        0        0     4832                           
+        Stack       20        0        4       20        0        0        0                           
+    Other dev        4        0       32        0        0        4        0                           
+     .so mmap      108        0      632       24     2752        0     1248                           
+    .apk mmap        2        0        0        0       40        0        0                           
+    .dex mmap      174      168        0        0      224      168        0                           
+    .oat mmap      276        0        0        0     7124        0        0                           
+    .art mmap      655        0     1540      396     5920        0      124                           
+   Other mmap        9        0        0        8       56        0        4                           
+      Unknown      953        0     1592      892       12       32     1012                           
+        TOTAL     3459      168     7228     2484    16128      204     8172     6319     5870      448
+ 
+ Dalvik Details
+        .Heap      772        0       96      768        0        0        4                           
+         .LOS        8        0      256        8        0        0      488                           
+          .GC      123        0      200      108        0        0     4832                           
+      .Zygote      223        0     2872      128        0        0      460                           
+   .NonMoving      104        0        0      104        0        0        0                           
+ .IndirectRef       28        0        4       28        0        0        0                           
+ 
+ Objects
+               Views:        0         ViewRootImpl:        0
+         AppContexts:        3           Activities:        0
+              Assets:        2        AssetManagers:        2
+       Local Binders:        6        Proxy Binders:       15
+       Parcel memory:        3         Parcel count:       14
+    Death Recipients:        1      OpenSSL Sockets:        0
+ 
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
+ 
+                   Pss      Pss   Shared  Private   Shared  Private  Swapped     Heap     Heap     Heap
+                 Total    Clean    Dirty    Dirty    Clean    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap        0        0        0        0        0        0        0     3616     3256      359
+  Dalvik Heap      805        0     3136      668        0       12     2368     5092     3998     1094
+ Dalvik Other       94        0       28       88        0        0     6716                           
+        Stack       20        0        4       20        0        0        0                           
+    Other dev        4        0       36        0        0        4        0                           
+     .so mmap      226        0      628       36     3648        0     1240                           
+    .jar mmap        0        0        0        0        4        0        0                           
+    .apk mmap       62        0        0        0      604        0        0                           
+    .dex mmap      109       52        0        0     1224       52        0                           
+    .oat mmap      439       52        0        0     8196       52        0                           
+    .art mmap      617       32     1504      316     5864       32      284                           
+   Other mmap        9        0        0        8       64        0        4                           
+      Unknown      847        0     1496      808        4       16     1512                           
+        TOTAL     3232      136     6832     1944    19608      168    12124     8708     7254     1453
+ 
+ Dalvik Details
+        .Heap      444        0       36      432        0       12     1084                           
+         .LOS       12        0      256       12        0        0      488                           
+          .GC       66        0       24       60        0        0     6696                           
+      .Zygote      233        0     2844      108        0        0      508                           
+   .NonMoving      116        0        0      116        0        0      288                           
+ .IndirectRef       28        0        4       28        0        0       20                           
+ 
+ Objects
+               Views:        9         ViewRootImpl:        0
+         AppContexts:        3           Activities:        0
+              Assets:        2        AssetManagers:        2
+       Local Binders:       12        Proxy Binders:       21
+       Parcel memory:        3         Parcel count:       14
+    Death Recipients:        1      OpenSSL Sockets:        0
+ 
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
+ 
+                   Pss      Pss   Shared  Private   Shared  Private  Swapped     Heap     Heap     Heap
+                 Total    Clean    Dirty    Dirty    Clean    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap        0        0        0        0        0        0        0     3436     3310      125
+  Dalvik Heap     1564        0     3120     1384        0       44      948     3295     2999      296
+ Dalvik Other      300        0       52      292        0        0     4832                           
+        Stack       20        0        4       20        0        0        0                           
+    Other dev        5        0       40        0        0        4        0                           
+     .so mmap      166        4      624       40     3296        4     1236                           
+    .apk mmap       28        0        0        0      408        0        0                           
+    .dex mmap      235      228        0        0      148      228        0                           
+    .oat mmap      465       24        0        0     8496       24        0                           
+    .art mmap      846       24     1420      560     5904       24      108                           
+   Other mmap       15        0        0        8      172        0        4                           
+      Unknown     1258        0     1632     1212       16       20      888                           
+        TOTAL     4902      280     6892     3516    18440      348     8016     6731     6309      421
+ 
+ Dalvik Details
+        .Heap     1048        0       36     1036        0       12        0                           
+         .LOS        4        0      256        4        0        0      488                           
+          .GC      268        0       48      260        0        0     4832                           
+      .Zygote      308        0     2828      168        0        4      460                           
+   .NonMoving      204        0        0      176        0       28        0                           
+ .IndirectRef       32        0        4       32        0        0        0                           
+ 
+ Objects
+               Views:        0         ViewRootImpl:        0
+         AppContexts:       10           Activities:        0
+              Assets:        5        AssetManagers:        5
+       Local Binders:       16        Proxy Binders:       30
+       Parcel memory:        7         Parcel count:       30
+    Death Recipients:        4      OpenSSL Sockets:        0
+ 
+ SQL
+         MEMORY_USED:      201
+  PAGECACHE_OVERFLOW:       95          MALLOC_SIZE:       62
+ 
+ DATABASES
+      pgsz     dbsz   Lookaside(b)          cache  Dbname
+         4      100            102       27/40/25  /data/data/com.amazon.device.sale.service/databases/sale.db
+-------------------------------------------------------------------------------
+DUMP OF SERVICE mount:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE mousemodeservice:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE netpolicy:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE netstats:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE network_management:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE network_score:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE notification:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE package:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE permission:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE power:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE print:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE processinfo:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE procstats:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE restrictions:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE rttmanager:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE samplingprofiler:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE scheduling_policy:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE search:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE sensorservice:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE serial:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE servicediscovery:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE statusbar:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE telephony.registry:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE textservices:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE trust:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE tv_input:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE uimode:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE updatelock:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE usagestats:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE usb:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE user:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE vibrator:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE webviewupdate:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE wifi:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE wifip2p:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE wifiscanner:
+-------------------------------------------------------------------------------
+DUMP OF SERVICE window:

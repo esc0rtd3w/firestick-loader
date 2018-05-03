@@ -1,0 +1,45 @@
+Input method client state for android.view.inputmethod.InputMethodManager@af140c9:
+  mService=com.android.internal.view.IInputMethodManager$Stub$Proxy@eec03ce
+  mMainLooper=Looper (main, tid 1) {2fa92ef}
+  mIInputContext=android.view.inputmethod.InputMethodManager$ControlledInputConnectionWrapper@314f91fc
+  mActive=true mHasBeenInactive=false mBindSequence=51 mCurId=com.amazon.tv.ime/.FireTVIME
+  mCurMethod=com.android.internal.view.IInputMethodSession$Stub$Proxy@22442085
+  mCurRootView=com.android.internal.policy.impl.PhoneWindow$DecorView{4c88eda V.E..... R....... 0,0-1920,1080}
+  mServedView=com.amazon.tv.view.ListViewPlus{3b876f0b VFED..C. .F...... 0,60-479,480 #102000a android:id/list}
+  mNextServedView=com.amazon.tv.view.ListViewPlus{3b876f0b VFED..C. .F...... 0,60-479,480 #102000a android:id/list}
+  mServedConnecting=false
+  mCurrentTextBoxAttribute:
+    inputType=0x0 imeOptions=0x0 privateImeOptions=null
+    actionLabel=null actionId=0
+    initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0
+    hintText=null label=null
+    packageName=com.amazon.tv.settings fieldId=16908298 fieldName=null
+    extras=null
+  mServedInputConnection=null
+  mCompletions=null
+  mCursorRect=Rect(0, 0 - 0, 0)
+  mCursorSelStart=0 mCursorSelEnd=0 mCursorCandStart=0 mCursorCandEnd=0
+  mNextUserActionNotificationSequenceNumber=1 mLastSentUserActionNotificationSequenceNumber=-1
+Input method service state for com.amazon.tv.ime.FireTVIME@24c99a14:
+  mWindowCreated=false mWindowAdded=false
+  mWindowVisible=false mWindowWasVisible=false mInShowWindow=false
+  Configuration={1.0 ?mcc?mnc en_US ldltr sw540dp w960dp h515dp 320dpi lrg long land television -touch -keyb/v/h dpad/v s.5}
+  mToken=android.os.BinderProxy@3c242f16
+  mInputBinding=InputBinding{android.os.BinderProxy@22c4f097 / uid 1000 / pid 3439}
+  mInputConnection=com.android.internal.view.InputConnectionWrapper@3af2a284
+  mStartedInputConnection=null
+  mInputStarted=true mInputViewStarted=false mCandidatesViewStarted=false
+  mInputEditorInfo:
+    inputType=0x0 imeOptions=0x0 privateImeOptions=noMicrophoneKey,nm
+    actionLabel=null actionId=0
+    initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0
+    hintText=null label=null
+    packageName=com.amazon.tv.settings fieldId=16908298 fieldName=null
+    extras=null
+  mShowInputRequested=false mLastShowInputRequested=false mShowInputForced=false mShowInputFlags=0x0
+  mCandidatesVisibility=4 mFullscreenApplied=false mIsFullscreen=false mExtractViewHidden=false
+  mExtractedText: null
+  mExtractedToken=0
+  mIsInputViewShown=false mStatusIcon=0
+Last computed insets:
+  contentTopInsets=0 visibleTopInsets=0 touchableInsets=0 touchableRegion=SkRegion()

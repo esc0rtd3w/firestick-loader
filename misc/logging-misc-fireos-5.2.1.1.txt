@@ -1,0 +1,9 @@
+
+Intercepts Home Key
+
+FireTVKeyPolicyManager
+
+
+Holding SELECT + DPAD_DOWN (Prepare Developer Options Hidden Window)
+
+D/FireTVKeyPolicyManager(  990): start Control Panel...

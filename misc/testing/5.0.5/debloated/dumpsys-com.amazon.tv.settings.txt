@@ -1,0 +1,170 @@
+      Action: "com.amazon.tv.settings.BACKUP_AND_RESET_SETTINGS_FROM_REMOTE"
+      Action: "com.amazon.tv.settings.BACKUP_AND_RESET_CANCELED"
+  * ReceiverList{35ff1cdc 2179 com.amazon.tv.settings/1000/u0 remote:1c97fd4f}
+    app=2179:com.amazon.tv.settings/1000 pid=2179 uid=1000 user=0
+      Path: "PatternMatcher{LITERAL: /values/com.amazon.tv.settings}"
+      Path: "PatternMatcher{PREFIX: /values/com.amazon.tv.settings/}"
+  * ReceiverList{5011f6b 2179 com.amazon.tv.settings/1000/u0 remote:2c1344ba}
+    app=2179:com.amazon.tv.settings/1000 pid=2179 uid=1000 user=0
+  * ReceiverList{ca4c29 2179 com.amazon.tv.settings/1000/u0 remote:27d255b0}
+    app=2179:com.amazon.tv.settings/1000 pid=2179 uid=1000 user=0
+          BroadcastFilter{30cf2ac8 u0 ReceiverList{5011f6b 2179 com.amazon.tv.settings/1000/u0 remote:2c1344ba}}
+          BroadcastFilter{269281e5 u0 ReceiverList{35ff1cdc 2179 com.amazon.tv.settings/1000/u0 remote:1c97fd4f}}
+          BroadcastFilter{a0d1bae u0 ReceiverList{ca4c29 2179 com.amazon.tv.settings/1000/u0 remote:27d255b0}}
+        com.amazon.tv.settings.BACKUP_AND_RESET_SETTINGS_FROM_REMOTE:
+        com.amazon.tv.settings.BACKUP_AND_RESET_CANCELED:
+    Receiver #1: onRecDuration=- BroadcastFilter{2f48f940 u0 ReceiverList{4fbcc3 2179 com.amazon.tv.settings/1000/u0 remote:11f2072}}
+    Receiver #1: onRecDuration=- BroadcastFilter{2f48f940 u0 ReceiverList{4fbcc3 2179 com.amazon.tv.settings/1000/u0 remote:11f2072}}
+    Receiver #1: onRecDuration=- BroadcastFilter{2f48f940 u0 ReceiverList{4fbcc3 2179 com.amazon.tv.settings/1000/u0 remote:11f2072}}
+    Receiver #1: onRecDuration=- BroadcastFilter{2f48f940 u0 ReceiverList{4fbcc3 2179 com.amazon.tv.settings/1000/u0 remote:11f2072}}
+    Receiver #1: onRecDuration=- BroadcastFilter{2f48f940 u0 ReceiverList{4fbcc3 2179 com.amazon.tv.settings/1000/u0 remote:11f2072}}
+    Receiver #1: onRecDuration=- BroadcastFilter{b102b74 u0 ReceiverList{30904747 2179 com.amazon.tv.settings/1000/u0 remote:1b20f286}}
+    Receiver #1: onRecDuration=- BroadcastFilter{b102b74 u0 ReceiverList{30904747 2179 com.amazon.tv.settings/1000/u0 remote:1b20f286}}
+    Receiver #1: onRecDuration=- BroadcastFilter{2f48f940 u0 ReceiverList{4fbcc3 2179 com.amazon.tv.settings/1000/u0 remote:11f2072}}
+      -> 2179:com.amazon.tv.settings/1000 s1/1 u0/0 +25m2s746ms
+  * Recent #3: TaskRecord{20b21fd8 #245 A=com.amazon.tv.settings U=0 sz=0}
+    affinity=com.amazon.tv.settings
+    intent={act=android.settings.WIRELESS_SETTINGS flg=0x10800000 cmp=com.amazon.tv.settings/.wifi.BuellerNetworkSettingsActivity}
+    realActivity=com.amazon.tv.settings/.wifi.BuellerNetworkSettingsActivity
+  *APP* UID 1000 ProcessRecord{6b99352 2179:com.amazon.tv.settings/1000}
+    class=com.amazon.tv.settings.SettingsApplication
+    dir=/system/priv-app/com.amazon.tv.settings/com.amazon.tv.settings.apk publicDir=/system/priv-app/com.amazon.tv.settings/com.amazon.tv.settings.apk data=/data/data/com.amazon.tv.settings
+    packageList={com.amazon.tv.settings}
+      - 2457427e/com.android.providers.settings/.SettingsProvider->2179:com.amazon.tv.settings/1000 s1/1 u0/0 +25m2s755ms
+      - ReceiverList{ca4c29 2179 com.amazon.tv.settings/1000/u0 remote:27d255b0}
+      - ReceiverList{5011f6b 2179 com.amazon.tv.settings/1000/u0 remote:2c1344ba}
+      - ReceiverList{35ff1cdc 2179 com.amazon.tv.settings/1000/u0 remote:1c97fd4f}
+    Proc # 8: cch+2 B/ /CE trm: 0 2179:com.amazon.tv.settings/1000 (forced-bg)
+    PID #2179: ProcessRecord{6b99352 2179:com.amazon.tv.settings/1000}
+      com.amazon.tv.settings
+      com.amazon.tv.settings
+      com.amazon.tv.settings
+  Package name: com.amazon.tv.settings
+    Package com.amazon.tv.settings:
+  0% 2179/com.amazon.tv.settings: 0% user + 0% kernel / faults: 7766 minor
+** Database info for pid 2179 [com.amazon.tv.settings] **
+** Graphics info for pid 2179 [com.amazon.tv.settings] **
+** MEMINFO in pid 2179 [com.amazon.tv.settings] **
+    14758 kB: com.amazon.tv.settings (pid 2179)
+               14758 kB: com.amazon.tv.settings (pid 2179)
+        25436e56 com.amazon.tv.settings/.tv.BuellerApplicationDetailSettingsActivity
+        113a51cf com.amazon.tv.settings/.wifi.BuellerNetworkSettingsActivity
+        2fdc175c com.amazon.tv.settings/.hud.HudActivity
+        7c14d48 com.amazon.tv.settings/.tv.devices.BuellerRemoteSettingsActivity
+        8a07e1 com.amazon.tv.settings/.tv.BuellerAccountSettingsActivity
+        113a51cf com.amazon.tv.settings/.wifi.BuellerNetworkSettingsActivity
+        3f41f5f4 com.amazon.tv.settings/.tv.FactoryResetActivity
+        36be411d com.amazon.tv.settings/.tv.BuellerSystemSettingsActivity
+        46bf92 com.amazon.tv.settings/.tv.BuellerApplicationsSettingsActivity
+        19777e54 com.amazon.tv.settings/.tv.BuellerControllersSettingsActivity
+        95691fd com.amazon.tv.settings/.tv.devices.BuellerInputDeviceDiscoveryActivity
+        184a2943 com.amazon.tv.settings/.tv.BuellerDevelopmentSettingsActivity
+        1cf82bc0 com.amazon.tv.settings/.tv.AllApplicationsSettingsActivity
+        1cf82bc0 com.amazon.tv.settings/.tv.AllApplicationsSettingsActivity
+        184a2943 com.amazon.tv.settings/.tv.BuellerDevelopmentSettingsActivity
+        2f77883e com.amazon.tv.settings/.tv.BuellerUninstallApplicationActivity
+      com.amazon.tv.settings.action.SHOW_BLACK_CURTAIN:
+        3f5c169f com.amazon.tv.settings/.blackcurtain.BlackCurtainActivity
+        113a51cf com.amazon.tv.settings/.wifi.BuellerNetworkSettingsActivity
+        271443ec com.amazon.tv.settings/.tv.AmazonAccountSettingsActivity
+        4db03b5 com.amazon.tv.settings/.tv.BuellerDateTimeSettingsActivity
+        113a51cf com.amazon.tv.settings/.wifi.BuellerNetworkSettingsActivity
+        1f5fea4a com.amazon.tv.settings/.tv.devices.AboutRemoteDeviceSettingsActivity
+        1cf82bc0 com.amazon.tv.settings/.tv.AllApplicationsSettingsActivity
+        3bf7b2d8 com.amazon.tv.settings/.tv.BuellerTimeZoneSettingsActivity
+        aba6116 com.amazon.tv.settings/.tv.BuellerAboutSettingsActivity
+        7f43a97 com.amazon.tv.settings/.tv.ThingsToTrySettingsActivity
+        1cf82bc0 com.amazon.tv.settings/.tv.AllApplicationsSettingsActivity
+        aba6116 com.amazon.tv.settings/.tv.BuellerAboutSettingsActivity
+        3d4f46d com.amazon.tv.settings/.tv.BuellerAudioSettingsActivity
+        8a07e1 com.amazon.tv.settings/.tv.BuellerAccountSettingsActivity
+        3d7378a2 com.amazon.tv.settings/.tv.BuellerVideoResolutionActivity
+        113a51cf com.amazon.tv.settings/.wifi.BuellerNetworkSettingsActivity
+        113a51cf com.amazon.tv.settings/.wifi.BuellerNetworkSettingsActivity
+        837e933 com.amazon.tv.settings/.tv.usb.SettingsExternalStorageActivity
+        23b47cee com.amazon.tv.settings/.tv.devices.BuellerRemoteDiscoveryActivity
+        3ffde58f com.amazon.tv.settings/.tv.ApplicationsFilterActivity
+        113a51cf com.amazon.tv.settings/.wifi.BuellerNetworkSettingsActivity
+        36a6801c com.amazon.tv.settings/.blackcurtain.AdultContentPrefsActivity
+        25436e56 com.amazon.tv.settings/.tv.BuellerApplicationDetailSettingsActivity
+        19a98208 com.amazon.tv.settings/.tv.devices.BuellerGamepadSettingsActivity
+        113a51cf com.amazon.tv.settings/.wifi.BuellerNetworkSettingsActivity
+        2bab3bc6 com.amazon.tv.settings/.tv.BuellerVideoOverscanActivity
+        542f787 com.amazon.tv.settings/.tv.BuellerLanguageSettingsActivity
+        36a8d2dd com.amazon.tv.settings/.tv.BuellerDolbySettingsActivity
+        37cd8523 com.amazon.tv.settings/.wifi.BuellerWifiWpsSettingsActivity
+        37cd8523 com.amazon.tv.settings/.wifi.BuellerWifiWpsSettingsActivity
+        19777e54 com.amazon.tv.settings/.tv.BuellerControllersSettingsActivity
+        3d248a20 com.amazon.tv.settings/.tv.BuellerDisplayAndSoundsSettingsActivity
+        1f64bfd9 com.amazon.tv.settings/.tv.devices.BuellerInputDeviceSettingsActivity
+        b2ffd9e com.amazon.tv.settings/.tv.AlexaSettingsActivity
+        28e9507f com.amazon.tv.settings/.tv.devices.BuellerGamepadDiscoveryActivity
+        318284c com.amazon.tv.settings/.tv.BuellerVideoSettingsActivity
+        113a51cf com.amazon.tv.settings/.wifi.BuellerNetworkSettingsActivity
+        24588095 com.amazon.tv.settings/.tv.BuellerClearUserApplicationDataActivity
+        5b41526 com.amazon.tv.settings/.tv.usb.MediaMountReceiver (7 filters)
+        d82c567 com.amazon.tv.settings/.tv.usb.AppScanReceiver
+        5b41526 com.amazon.tv.settings/.tv.usb.MediaMountReceiver
+        a5721f8 com.amazon.tv.settings/.PCONPermissionsReceiver
+        3afb127 com.amazon.tv.settings/.SettingsApplication$UserLocationChangedReceiver
+        26dc38c3 com.amazon.tv.settings/.hud.HomeLongPressReceiver
+        d82c567 com.amazon.tv.settings/.tv.usb.AppScanReceiver
+  Permission [com.amazon.tv.settings.RECEIVE_PACKAGE_MOVED_LOCATION_PERMISSION] (9ffd5b9):
+    sourcePackage=com.amazon.tv.settings
+    packageSetting=PackageSetting{12ee450 com.amazon.tv.settings/1000}
+    perm=Permission{3b228dfe com.amazon.tv.settings.RECEIVE_PACKAGE_MOVED_LOCATION_PERMISSION}
+    sourcePackage=com.amazon.tv.settings
+    packageSetting=PackageSetting{12ee450 com.amazon.tv.settings/1000}
+    sourcePackage=com.amazon.tv.settings
+    packageSetting=PackageSetting{12ee450 com.amazon.tv.settings/1000}
+    sourcePackage=com.amazon.tv.settings
+    packageSetting=PackageSetting{12ee450 com.amazon.tv.settings/1000}
+    sourcePackage=com.amazon.tv.settings
+    packageSetting=PackageSetting{12ee450 com.amazon.tv.settings/1000}
+  com.amazon.tv.settings/.auth.BuellerSettingsMAPInformationProvider:
+    Provider{919e246 com.amazon.tv.settings/.auth.BuellerSettingsMAPInformationProvider}
+    Provider{919e246 com.amazon.tv.settings/.auth.BuellerSettingsMAPInformationProvider}
+      applicationInfo=ApplicationInfo{37802994 com.amazon.tv.settings}
+  [com.amazon.tv.settings]
+  Package [com.amazon.tv.settings] (12ee450):
+    pkg=Package{12dbf47 com.amazon.tv.settings}
+    codePath=/system/priv-app/com.amazon.tv.settings
+    resourcePath=/system/priv-app/com.amazon.tv.settings
+    legacyNativeLibraryDir=/system/priv-app/com.amazon.tv.settings/lib
+    applicationInfo=ApplicationInfo{37802994 com.amazon.tv.settings}
+    dataDir=/data/data/com.amazon.tv.settings
+      com.amazon.tv.settings.auth.BuellerSettingsMAPInformationProvider
+      com.amazon.tv.settings.tv.BuellerAccountSettingsActivity
+      com.amazon.tv.settings.PCONPermissionsReceiver
+      com.amazon.tv.settings.blackcurtain.BlackCurtainActivity
+      com.amazon.tv.settings.tv.AmazonAccountSettingsActivity
+      com.amazon.tv.settings.tv.AlexaSettingsActivity
+      com.amazon.tv.settings.blackcurtain.AdultContentPrefsActivity
+      com.amazon.tv.settings.tv.ThingsToTrySettingsActivity
+1/1/70 7:00 PM: New decl Package{3db8821a com.amazon.tv.settings} of permission  amazon.permission.APPLICATION_SETTINGS is system; overriding android.amazon.perm
+1/1/70 7:00 PM: New decl Package{3db8821a com.amazon.tv.settings} of permission  com.amazon.tv.permission.LAUNCHER_SETTINGS is system; overriding android.amazon.perm
+1/1/70 7:00 PM: New decl Package{3db8821a com.amazon.tv.settings} of permission  amazon.permission.BLACKLISTED_IN_APPS_SETTINGS is system; overriding android.amazon.perm
+1/1/70 7:00 PM: New decl Package{3db8821a com.amazon.tv.settings} of permission  com.amazon.tv.settings.RECEIVE_PACKAGE_MOVED_LOCATION_PERMISSION is system; overriding android.amazon.perm
+1/1/70 7:00 PM: New decl Package{3db8821a com.amazon.tv.settings} of permission  com.amazon.bueller.notification.CancelAll is system; overriding android.amazon.perm
+  * com.amazon.tv.settings / 1000 / v537000910:
+  * com.amazon.tv.settings / 1000 / v537000910:
+  * com.amazon.tv.settings / 1000 / v537000910:
+      Process com.amazon.tv.settings (unique, 3 entries):
+        myID=12d6c245 mCommonProcess=12d6c245 mPackage=com.amazon.tv.settings
+  * com.amazon.tv.settings / 1000 / v537000910:
+  * com.amazon.tv.settings / 1000 / v537000910:
+      Process com.amazon.tv.settings (unique, 9 entries):
+        myID=2e62b3d0 mCommonProcess=2e62b3d0 mPackage=com.amazon.tv.settings
+  * com.amazon.tv.settings / 1000 / v537000910:
+  * com.amazon.tv.settings / 1000 / v537000910:
+      Process com.amazon.tv.settings (unique, 9 entries):
+        myID=38519465 mCommonProcess=38519465 mPackage=com.amazon.tv.settings
+  * com.amazon.tv.settings / 1000 / v537000910:
+      package=com.amazon.tv.settings totalTime="01:42" lastTime="9/5/2016, 9:17 PM" 
+      time="9/5/2016, 9:15 PM" type=MOVE_TO_FOREGROUND package=com.amazon.tv.settings class=com.amazon.tv.settings.wifi.BuellerNetworkSettingsActivity 
+      time="9/5/2016, 9:16 PM" type=MOVE_TO_BACKGROUND package=com.amazon.tv.settings class=com.amazon.tv.settings.wifi.BuellerNetworkSettingsActivity 
+      time="9/5/2016, 9:16 PM" type=MOVE_TO_FOREGROUND package=com.amazon.tv.settings class=com.amazon.tv.settings.wifi.BuellerNetworkSettingsActivity 
+      time="9/5/2016, 9:17 PM" type=MOVE_TO_BACKGROUND package=com.amazon.tv.settings class=com.amazon.tv.settings.wifi.BuellerNetworkSettingsActivity 
+      package=com.amazon.tv.settings totalTime="01:42" lastTime="9/5/2016, 9:17 PM" 
+      package=com.amazon.tv.settings totalTime="01:42" lastTime="9/5/2016, 9:17 PM" 
+      package=com.amazon.tv.settings totalTime="01:42" lastTime="9/5/2016, 9:17 PM" 

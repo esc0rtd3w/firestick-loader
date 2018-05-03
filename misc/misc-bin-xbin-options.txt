@@ -1,0 +1,10 @@
+/system/xbin/tvservice
+
+-o Power Off HDMI
+-p Power On HDMI
+-s State
+
+
+
+
+
