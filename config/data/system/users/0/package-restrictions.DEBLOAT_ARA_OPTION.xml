@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<package-restrictions>
+    <pkg name="com.amazon.dcp.contracts.library" enabled="2" enabledCaller="shell:0" />
+    <pkg name="com.amazon.metrics.api" enabled="2" enabledCaller="shell:0" />
+    <pkg name="com.amazon.dp.logger" enabled="2" enabledCaller="shell:0" />
+    <pkg name="com.amazon.client.metrics.api" enabled="2" enabledCaller="shell:0" />
+    <pkg name="com.amazon.kindleautomatictimezone">
+        <disabled-components>
+            <item name="com.amazon.kindleautomatictimezone.ForgetNetworkBroadcastReceiver" />
+            <item name="com.amazon.kindleautomatictimezone.WifiStateChangeBroadcastReciever" />
+        </disabled-components>
+    </pkg>
+    <pkg name="com.amazon.tv.fw.metrics" enabled="2" enabledCaller="shell:0" />
+    <pkg name="com.amazon.tv.settings">
+        <disabled-components>
+            <item name="com.amazon.tv.settings.auth.BuellerSettingsMAPInformationProvider" />
+            <item name="com.amazon.tv.settings.tv.BuellerAccountSettingsActivity" />
+            <item name="com.amazon.tv.settings.PCONPermissionsReceiver" />
+            <item name="com.amazon.tv.settings.blackcurtain.BlackCurtainActivity" />
+            <item name="com.amazon.tv.settings.tv.AmazonAccountSettingsActivity" />
+            <item name="com.amazon.tv.settings.tv.AlexaSettingsActivity" />
+            <item name="com.amazon.tv.settings.blackcurtain.AdultContentPrefsActivity" />
+            <item name="com.amazon.tv.settings.tv.ThingsToTrySettingsActivity" />
+        </disabled-components>
+    </pkg>
+    <pkg name="com.amazon.client.metrics" enabled="2" enabledCaller="shell:0" />
+    <pkg name="com.amazon.device.settings.sdk.internal.library" enabled="2" enabledCaller="shell:0" />
+    <pkg name="com.amazon.whisperlink.core.android">
+        <enabled-components>
+            <item name="com.amazon.identity.auth.device.storage.LambortishClock$ChangeTimestampsBroadcastReceiver" />
+        </enabled-components>
+        <disabled-components>
+            <item name="com.amazon.identity.auth.accounts.SessionUserChangedToAccountForPackageChangedAdpater" />
+        </disabled-components>
+    </pkg>
+    <pkg name="com.amazon.tv.launcher">
+        <disabled-components>
+            <item name="com.amazon.tv.launcher.ui.ItemLoadingActivity" />
+            <item name="com.amazon.tv.launcher.ui.ReleaseNotesActivity" />
+            <item name="com.amazon.tv.mediabrowse.service.MediaBrowseServiceImpl" />
+            <item name="com.amazon.tv.launcher.util.LauncherPreloaderReceiver" />
+            <item name="com.amazon.tv.launcher.ui.purchase.VideoItemPurchaseActivity" />
+            <item name="com.amazon.tv.launcher.parentalcontrols.PCONPermissionsReceiver" />
+            <item name="com.amazon.tv.launcher.content.ComradeReceiver" />
+            <item name="com.amazon.tv.launcher.ui.Channel1DActivity" />
+            <item name="com.amazon.tv.launcher.ui.TVActivity" />
+            <item name="com.amazon.tv.launcher.primefreetrial.PrimeFreeTrialActivity" />
+            <item name="com.amazon.tv.launcher.util.CategorySearchReceiver" />
+            <item name="com.amazon.tv.launcher.ui.HomeActivity" />
+            <item name="com.amazon.tv.launcher.ui.purchase.OffDeviceSubscriptionActivity" />
+            <item name="com.amazon.tv.launcher.ui.SearchMenuActivity" />
+            <item name="com.amazon.tv.launcher.ads.AdRefreshReceiver" />
+            <item name="com.amazon.tv.launcher.ui.YoursToWatchActivity" />
+            <item name="com.amazon.tv.launcher.ui.MoviesActivity" />
+            <item name="com.amazon.tv.launcher.demo.DemoPackageAddedReceiver" />
+        </disabled-components>
+    </pkg>
+    <pkg name="com.amazon.device.settings" enabled="2" enabledCaller="shell:0" />
+    <pkg name="com.amazon.connectivitydiag" enabled="2" enabledCaller="shell:0" />
+    <preferred-activities />
+    <persistent-preferred-activities />
+    <crossProfile-intent-filters />
+</package-restrictions>

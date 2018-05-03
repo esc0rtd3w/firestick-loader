@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<map>
+    <long name="last_check_competitor_risk_time" value="86769000" />
+    <int name="KWorkStatusMCount" value="1" />
+    <long name="FlagsForMlSwitcher" value="1" />
+    <string name="VcFtShow">146</string>
+    <boolean name="IsUpdateV3GuidAndProfile" value="true" />
+    <boolean name="NeedEnterGuideView" value="false" />
+    <boolean name="hasReportUserAreaProperty" value="true" />
+    <int name="KuSilentUpdateCount" value="0" />
+    <boolean name="HasShowOtherStateOnMain" value="true" />
+    <long name="LastExamCureTime" value="86786037" />
+    <int name="KSuMode" value="493" />
+    <int name="KuCurrentBuildNo" value="273" />
+    <long name="KStatusReportTime" value="86494648" />
+    <long name="LastIRM" value="86771810" />
+    <long name="app_dist_examination_last_request_cloud" value="86809915" />
+    <int name="is_need_show_update_guide_view" value="273" />
+    <boolean name="IsSurvivalMode" value="false" />
+    <boolean name="490_3" value="false" />
+    <string name="InstallRecoveryLocation">/system/bin/install-recovery.sh</string>
+    <int name="KStatusReportSuReplaceCount" value="0" />
+    <int name="ApkLastUpdateTime" value="273" />
+    <int name="AutoReplacementFlag" value="1" />
+    <string name="482_2"></string>
+    <int name="KWorkStatus" value="3" />
+    <long name="LastCheckRootEnvTime" value="86773137" />
+</map>

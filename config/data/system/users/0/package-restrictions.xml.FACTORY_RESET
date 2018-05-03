@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<package-restrictions>
+    <pkg name="com.amazon.kindleautomatictimezone">
+        <disabled-components>
+            <item name="com.amazon.kindleautomatictimezone.ForgetNetworkBroadcastReceiver" />
+            <item name="com.amazon.kindleautomatictimezone.WifiStateChangeBroadcastReciever" />
+        </disabled-components>
+    </pkg>
+    <pkg name="com.amazon.whisperlink.core.android">
+        <enabled-components>
+            <item name="com.amazon.identity.auth.device.storage.LambortishClock$ChangeTimestampsBroadcastReceiver" />
+        </enabled-components>
+        <disabled-components>
+            <item name="com.amazon.identity.auth.accounts.SessionUserChangedToAccountForPackageChangedAdpater" />
+        </disabled-components>
+    </pkg>
+    <pkg name="com.amazon.tv.launcher">
+        <disabled-components>
+            <item name="com.amazon.tv.launcher.ui.ReleaseNotesActivity" />
+        </disabled-components>
+    </pkg>
+    <preferred-activities />
+    <persistent-preferred-activities />
+    <crossProfile-intent-filters />
+</package-restrictions>

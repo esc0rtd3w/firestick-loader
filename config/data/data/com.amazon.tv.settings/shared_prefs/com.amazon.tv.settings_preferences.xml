@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<map>
+    <string name="countryOfResidence">US</string>
+    <boolean name="whisperplay_settings_key" value="false" />
+    <boolean name="enable_unknown_sources_key" value="true" />
+    <boolean name="enable_adb_key" value="true" />
+    <boolean name="notifications_settings_key" value="false" />
+    <boolean name="report_usage" value="false" />
+    <string name="preferredMarketplace">ATVPDKIKX0DER</string>
+</map>
