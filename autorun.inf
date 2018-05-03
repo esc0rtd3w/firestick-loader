@@ -1,0 +1,28 @@
+[autorun]
+open=autorun.cmd
+icon=autorun.ico
+label=Firestick Loader by esc0rtd3w
+
+shell\MainMenu\command=autorun.cmd
+shell\MainMenu=&Open Main Menu
+
+shell\MainMenu\command=root-stick.cmd
+shell\MainMenu=&Auto Root and Downgrade FireTV Stick
+
+shell\MainMenu\command=root-tv.cmd
+shell\MainMenu=&Auto Root and Downgrade FireTV
+
+shell\InstallAppsManual\command=install-full-manual.cmd
+shell\InstallAppsManual=&Install Apps Manual
+
+shell\InstallAppsAuto\command=install-full-auto.cmd
+shell\InstallAppsAuto=&Install Apps Auto
+
+shell\InstallAppsAutoNoSports\command=install-full-auto-no-sports.cmd
+shell\InstallAppsAutoNoSports=&Install Apps Auto No Sports
+
+shell\InstallAppsAutoLite\command=install-lite-auto.cmd
+shell\InstallAppsAutoLite=&Install Apps Auto Lite
+
+shell\InstallAppsAutoLiteNoSports\command=install-lite-auto-no-sports.cmd
+shell\InstallAppsAutoLiteNoSports=&Install Apps Auto Lite No Sports
