@@ -1,0 +1,7 @@
+PLACE A ZIP FILE CALLED "snes.zip" INTO THIS FOLDER
+
+DO NOT INCLUDE A PATH
+
+EXAMPLE GOOD: GameName.smc
+
+EXAMPLE BAD: /snes/GameName.smc

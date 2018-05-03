@@ -1,0 +1,11 @@
+PLACE A ZIP FILE CALLED "gbx.zip" INTO THIS FOLDER
+
+DO NOT INCLUDE A PATH
+
+EXAMPLE GOOD: GameName.gb
+EXAMPLE GOOD: GameName.gbc
+EXAMPLE GOOD: GameName.gba
+
+EXAMPLE BAD: /gb/GameName.gb
+EXAMPLE BAD: /gbc/GameName.gbc
+EXAMPLE BAD: /gba/GameName.gba

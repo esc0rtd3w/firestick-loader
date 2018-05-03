@@ -1,0 +1,7 @@
+PLACE A ZIP FILE CALLED "intv.zip" INTO THIS FOLDER
+
+DO NOT INCLUDE A PATH
+
+EXAMPLE GOOD: GameName.int
+
+EXAMPLE BAD: /intv/GameName.int

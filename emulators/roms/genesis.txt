@@ -1,0 +1,7 @@
+PLACE A ZIP FILE CALLED "genesis.zip" INTO THIS FOLDER
+
+DO NOT INCLUDE A PATH
+
+EXAMPLE GOOD: GameName.bin
+
+EXAMPLE BAD: /genesis/GameName.bin
