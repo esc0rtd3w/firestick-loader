@@ -45,8 +45,14 @@ echo.
 echo.
 %push% "apps\google\arm\xposed-v89-sdk22-arm.zip" /sdcard/
 ::%push% "apps\google\arm64\xposed-v89-sdk22-arm64.zip" /sdcard/
-%push% "apps\google\arm\open_gapps-arm-5.1-pico-20180427.zip" /sdcard/
-::%push% "apps\google\arm64\open_gapps-arm64-5.1-pico-20180423.zip" /sdcard/
+
+md "%temp%\firestick-loader\apps\google\arm\"
+%extractRAR% "%~dp0apps\google\arm\open_gapps-arm-5.1-pico-20180427.split" "%temp%\firestick-loader\apps\google\arm"
+%push% "%temp%\firestick-loader\apps\google\arm\open_gapps-arm-5.1-pico-20180427.zip" /sdcard/
+
+::md "%temp%\firestick-loader\apps\google\arm64\"
+::%extractRAR% "%~dp0apps\google\arm64\open_gapps-arm64-5.1-pico-20180423.split" "%temp%\firestick-loader\apps\google\arm64"
+::%push% "%temp%\firestick-loader\apps\google\arm64\open_gapps-arm64-5.1-pico-20180423.zip" /sdcard/
 
 echo.
 echo.
