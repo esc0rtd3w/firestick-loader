@@ -1,0 +1,66 @@
+<profiles>
+    <lastloaded>0</lastloaded>
+    <useloginscreen>false</useloginscreen>
+    <autologin>0</autologin>
+    <nextIdProfile>3</nextIdProfile>
+    <profile>
+        <id>0</id>
+        <name>Master User</name>
+        <directory pathversion="1">special://masterprofile/</directory>
+        <thumbnail pathversion="1">special://home/addons/skin.xonfluence/media/profiles/master_user_profile_thumb.jpg</thumbnail>
+        <hasdatabases>true</hasdatabases>
+        <canwritedatabases>true</canwritedatabases>
+        <hassources>true</hassources>
+        <canwritesources>true</canwritesources>
+        <lockaddonmanager>false</lockaddonmanager>
+        <locksettings>0</locksettings>
+        <lockfiles>false</lockfiles>
+        <lockmusic>false</lockmusic>
+        <lockvideo>false</lockvideo>
+        <lockpictures>false</lockpictures>
+        <lockprograms>false</lockprograms>
+        <lockmode>0</lockmode>
+        <lockcode>-</lockcode>
+        <lastdate>04/30/2017 - 6:31 PM</lastdate>
+    </profile>
+    <profile>
+        <id>1</id>
+        <name>Adults Only</name>
+        <directory pathversion="1">profiles/Adults Only/</directory>
+        <thumbnail pathversion="1">special://home/addons/skin.xonfluence/media/profiles/adults_only_profile_thumb.jpg</thumbnail>
+        <hasdatabases>true</hasdatabases>
+        <canwritedatabases>true</canwritedatabases>
+        <hassources>true</hassources>
+        <canwritesources>true</canwritesources>
+        <lockaddonmanager>false</lockaddonmanager>
+        <locksettings>0</locksettings>
+        <lockfiles>false</lockfiles>
+        <lockmusic>false</lockmusic>
+        <lockvideo>false</lockvideo>
+        <lockpictures>false</lockpictures>
+        <lockprograms>false</lockprograms>
+        <lockmode>0</lockmode>
+        <lockcode>-</lockcode>
+        <lastdate>04/30/2017 - 6:30 PM</lastdate>
+    </profile>
+    <profile>
+        <id>2</id>
+        <name>Maintenance</name>
+        <directory pathversion="1">profiles/Maintenance/</directory>
+        <thumbnail pathversion="1">special://home/addons/skin.xonfluence/media/profiles/maintenance_profile_thumb.jpg</thumbnail>
+        <hasdatabases>true</hasdatabases>
+        <canwritedatabases>true</canwritedatabases>
+        <hassources>true</hassources>
+        <canwritesources>true</canwritesources>
+        <lockaddonmanager>false</lockaddonmanager>
+        <locksettings>0</locksettings>
+        <lockfiles>false</lockfiles>
+        <lockmusic>false</lockmusic>
+        <lockvideo>false</lockvideo>
+        <lockpictures>false</lockpictures>
+        <lockprograms>false</lockprograms>
+        <lockmode>0</lockmode>
+        <lockcode>-</lockcode>
+        <lastdate>04/30/2017 - 6:30 PM</lastdate>
+    </profile>
+</profiles>

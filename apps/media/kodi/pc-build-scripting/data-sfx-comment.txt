@@ -1,0 +1,13 @@
+;The comment below contains SFX script commands
+
+Path=%AppData%\Kodi
+Silent=2
+Overwrite=1
+Title=Kodi Data Installer
+Text
+{
+Copies Custom Kodi Data
+
+
+esc0rtd3w 2017
+}
