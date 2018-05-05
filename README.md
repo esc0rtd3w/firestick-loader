@@ -66,7 +66,7 @@
 
 ***Known Issues:***
 
-- Currently Does Not Have Rooting Support For FireOS 5.2.1.1 - 5.2.4.0.
+- Currently Does Not Have Rooting Support For FireOS 5.2.1.1 - 5.2.6.2.
 
 - If KingRoot is left installed, Kodi will have playback issues (Unknown Reason. Use "unroot" option to remove KingRoot after all root required actions are taken).
 <br/><br/>
