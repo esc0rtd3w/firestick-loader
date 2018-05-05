@@ -184,19 +184,19 @@ pm disable com.amazon.advertisingidsettings
 #pm disable com.amazon.tz.webcryptotzservice
 
 # FireOS 5.2.6.2
-# pm disable com.amazon.alexashopping
-# pm disable com.amazon.cardinal
-# pm disable com.amazon.device.settings
-# pm disable com.amazon.ftv.glorialist
-# pm disable com.amazon.ssdpservice
-# pm disable com.amazon.ssmsys
-# pm disable com.amazon.tv.livetv
-# pm disable com.amazon.tv.notificationcenter
-# pm disable com.amazon.tv.ottssocompanionapp
-# pm disable com.amazon.tv.ottssolib
-# pm disable com.amazon.webview.awvdeploymentservice
-# pm disable com.amazon.whisperplay.service.install
-# pm disable com.amazon.wifilocker
-# pm disable com.amazon.amazonvideo.livingroom
+pm disable com.amazon.alexashopping
+pm disable com.amazon.cardinal
+pm disable com.amazon.device.settings
+pm disable com.amazon.ftv.glorialist
+pm disable com.amazon.ssdpservice
+pm disable com.amazon.ssmsys
+pm disable com.amazon.tv.livetv
+pm disable com.amazon.tv.notificationcenter
+pm disable com.amazon.tv.ottssocompanionapp
+pm disable com.amazon.tv.ottssolib
+pm disable com.amazon.webview.awvdeploymentservice
+pm disable com.amazon.whisperplay.service.install
+pm disable com.amazon.wifilocker
+pm disable com.amazon.amazonvideo.livingroom
 
 
