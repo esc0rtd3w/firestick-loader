@@ -1,22 +1,13 @@
-#REPO HAS BEEN REBASED WITH 5.2.6.2 SUPPORT AS OF 20180502
+### REPO HAS BEEN REBASED WITH 5.2.6.2 SUPPORT AS OF 20180502
 
-#FirePwn
-####Amazon FireTV Stick Loader
+FirePwn
+Amazon FireTV Stick Loader
 
-###FREE YOUR FIRESTICK!!!
+FREE YOUR FIRESTICK!!!
 
-####firepwn.com
+firepwn.com
 
 <br/>
-
-####Debloated, Removed OTA, Rooted 5.0.5 System TWRP Backup File:
-[LINK SOON!]
-
-####Debloated, Removed OTA, Rooted 5.2.1.1 System TWRP Backup File:
-[LINK SOON!]
-
-####Debloated, Removed OTA, Rooted 5.2.6.2 System TWRP Backup File:
-[LINK SOON!]
 
 <br/>
 
@@ -79,10 +70,10 @@
 - Menu Has TWRP Installation Support (thanks to rbox)
 
     * Debloated, Removed OTA, Rooted 5.0.5 System TWRP Backup File:
-      https://mega.nz/#!mJ5WzY4J!7iCB3QcxJbGOVOdIfRzb2g4-alg4eriJxKyYrhEer5Y
+      [LINK SOON!]
 
     * Debloated, Removed OTA, Rooted 5.2.1.1 System TWRP Backup File:
-      https://mega.nz/#!bEpTmJyA!Ilsk4cBQ7aUZW4q2eLPfFLEsy5HRjWU89k6YXN7pd1E
+      [LINK SOON!]
 
 
 - If FireOS 5.2.1.0 Is Detected At Launch, The Update Protection Script Will Automatically Run
@@ -403,4 +394,4 @@
 
 <br/><br/><br/><br/>
 
-***esc0rtd3w 2017 / firepwn.com***
+***esc0rtd3w 2018 / firepwn.com***
