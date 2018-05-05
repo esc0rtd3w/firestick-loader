@@ -10,10 +10,13 @@
 <br/>
 
 ####Debloated, Removed OTA, Rooted 5.0.5 System TWRP Backup File:
-https://mega.nz/#!mJ5WzY4J!7iCB3QcxJbGOVOdIfRzb2g4-alg4eriJxKyYrhEer5Y
+[LINK SOON!]
 
 ####Debloated, Removed OTA, Rooted 5.2.1.1 System TWRP Backup File:
-https://mega.nz/#!bEpTmJyA!Ilsk4cBQ7aUZW4q2eLPfFLEsy5HRjWU89k6YXN7pd1E
+[LINK SOON!]
+
+####Debloated, Removed OTA, Rooted 5.2.6.2 System TWRP Backup File:
+[LINK SOON!]
 
 <br/>
 
