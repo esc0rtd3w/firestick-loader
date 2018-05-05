@@ -361,7 +361,6 @@ rm -r /data/data/com.amazon.whisperplay.service.install
 rm -r /data/data/com.amazon.wifilocker
 rm -r /data/data/com.amazon.amazonvideo.livingroom
 rm -r /data/data/logan
-rm -r /data/data/DeviceSoftwareOTAContracts
 rm -r /data/data/CredentialLockerAndroid-tablet-release
 rm -r /data/data/LogManager-logd
 rm -r /data/data/SsdpService

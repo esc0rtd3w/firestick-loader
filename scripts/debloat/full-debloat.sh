@@ -369,7 +369,6 @@ rm -r /system/priv-app/TvProvider
 # rm -r /system/priv-app/com.amazon.wifilocker
 # rm -r /system/priv-app/com.amazon.amazonvideo.livingroom
 # rm -r /system/priv-app/logan
-# rm -r /system/priv-app/DeviceSoftwareOTAContracts
 # rm -r /system/priv-app/CredentialLockerAndroid-tablet-release
 # rm -r /system/priv-app/LogManager-logd
 # rm -r /system/priv-app/SsdpService
@@ -561,7 +560,6 @@ rm -r /data/data/TvProvider
 # rm -r /data/data/com.amazon.wifilocker
 # rm -r /data/data/com.amazon.amazonvideo.livingroom
 # rm -r /data/data/logan
-# rm -r /data/data/DeviceSoftwareOTAContracts
 # rm -r /data/data/CredentialLockerAndroid-tablet-release
 # rm -r /data/data/LogManager-logd
 # rm -r /data/data/SsdpService
