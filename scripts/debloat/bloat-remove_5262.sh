@@ -153,28 +153,28 @@ rm -r /system/priv-app/Logan
 rm -r /system/priv-app/TvProvider
 
 # FireOS 5.2.6.2
-# rm -r /system/priv-app/com.amazon.alexashopping
-# rm -r /system/priv-app/com.amazon.cardinal
+rm -r /system/priv-app/com.amazon.alexashopping
+rm -r /system/priv-app/com.amazon.cardinal
 #rm -r /system/priv-app/com.amazon.device.settings
-# rm -r /system/priv-app/com.amazon.malcolm
-# rm -r /system/priv-app/com.amazon.ftv.glorialist
-# rm -r /system/priv-app/com.amazon.ssdpservice
-# rm -r /system/priv-app/com.amazon.ssmsys
-# rm -r /system/priv-app/com.amazon.tv.livetv
-# rm -r /system/priv-app/com.amazon.tv.notificationcenter
-# rm -r /system/priv-app/com.amazon.tv.ottssocompanionapp
-# rm -r /system/priv-app/com.amazon.tv.ottssolib
-# rm -r /system/priv-app/com.amazon.webview.awvdeploymentservice
-# rm -r /system/priv-app/com.amazon.whisperplay.service.install
-# rm -r /system/priv-app/com.amazon.wifilocker
-# rm -r /system/priv-app/com.amazon.amazonvideo.livingroom
-# rm -r /system/priv-app/logan
-# rm -r /system/priv-app/DeviceSoftwareOTAContracts
-# rm -r /system/priv-app/CredentialLockerAndroid-tablet-release
-# rm -r /system/priv-app/LogManager-logd
-# rm -r /system/priv-app/SsdpService
-# rm -r /system/priv-app/SystemStatusMonitorSys
-# rm -r /system/priv-app/com.amazon.kor.demo
+rm -r /system/priv-app/com.amazon.malcolm
+rm -r /system/priv-app/com.amazon.ftv.glorialist
+rm -r /system/priv-app/com.amazon.ssdpservice
+rm -r /system/priv-app/com.amazon.ssmsys
+rm -r /system/priv-app/com.amazon.tv.livetv
+rm -r /system/priv-app/com.amazon.tv.notificationcenter
+rm -r /system/priv-app/com.amazon.tv.ottssocompanionapp
+rm -r /system/priv-app/com.amazon.tv.ottssolib
+rm -r /system/priv-app/com.amazon.webview.awvdeploymentservice
+rm -r /system/priv-app/com.amazon.whisperplay.service.install
+rm -r /system/priv-app/com.amazon.wifilocker
+rm -r /system/priv-app/com.amazon.amazonvideo.livingroom
+rm -r /system/priv-app/logan
+rm -r /system/priv-app/DeviceSoftwareOTAContracts
+rm -r /system/priv-app/CredentialLockerAndroid-tablet-release
+rm -r /system/priv-app/LogManager-logd
+rm -r /system/priv-app/SsdpService
+rm -r /system/priv-app/SystemStatusMonitorSys
+rm -r /system/priv-app/com.amazon.kor.demo
 
 
 
@@ -345,28 +345,28 @@ rm -r /data/data/Logan
 rm -r /data/data/TvProvider
 
 # FireOS 5.2.6.2
-# rm -r /data/data/com.amazon.alexashopping
-# rm -r /data/data/com.amazon.cardinal
-# rm -r /data/data/com.amazon.device.settings
-# rm -r /data/data/com.amazon.ftv.glorialist
-# rm -r /data/data/com.amazon.malcolm
-# rm -r /data/data/com.amazon.ssdpservice
-# rm -r /data/data/com.amazon.ssmsys
-# rm -r /data/data/com.amazon.tv.livetv
-# rm -r /data/data/com.amazon.tv.notificationcenter
-# rm -r /data/data/com.amazon.tv.ottssocompanionapp
-# rm -r /data/data/com.amazon.tv.ottssolib
-# rm -r /data/data/com.amazon.webview.awvdeploymentservice
-# rm -r /data/data/com.amazon.whisperplay.service.install
-# rm -r /data/data/com.amazon.wifilocker
-# rm -r /data/data/com.amazon.amazonvideo.livingroom
-# rm -r /data/data/logan
-# rm -r /data/data/DeviceSoftwareOTAContracts
-# rm -r /data/data/CredentialLockerAndroid-tablet-release
-# rm -r /data/data/LogManager-logd
-# rm -r /data/data/SsdpService
-# rm -r /data/data/SystemStatusMonitorSys
-# rm -r /data/data/com.amazon.kor.demo
+rm -r /data/data/com.amazon.alexashopping
+rm -r /data/data/com.amazon.cardinal
+rm -r /data/data/com.amazon.device.settings
+rm -r /data/data/com.amazon.ftv.glorialist
+rm -r /data/data/com.amazon.malcolm
+rm -r /data/data/com.amazon.ssdpservice
+rm -r /data/data/com.amazon.ssmsys
+rm -r /data/data/com.amazon.tv.livetv
+rm -r /data/data/com.amazon.tv.notificationcenter
+rm -r /data/data/com.amazon.tv.ottssocompanionapp
+rm -r /data/data/com.amazon.tv.ottssolib
+rm -r /data/data/com.amazon.webview.awvdeploymentservice
+rm -r /data/data/com.amazon.whisperplay.service.install
+rm -r /data/data/com.amazon.wifilocker
+rm -r /data/data/com.amazon.amazonvideo.livingroom
+rm -r /data/data/logan
+rm -r /data/data/DeviceSoftwareOTAContracts
+rm -r /data/data/CredentialLockerAndroid-tablet-release
+rm -r /data/data/LogManager-logd
+rm -r /data/data/SsdpService
+rm -r /data/data/SystemStatusMonitorSys
+rm -r /data/data/com.amazon.kor.demo
 
 
 
