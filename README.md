@@ -70,10 +70,10 @@ firepwn.com
 - Menu Has TWRP Installation Support (thanks to rbox)
 
     * Debloated, Removed OTA, Rooted 5.0.5 System TWRP Backup File:
-      [LINK SOON!]
+      http://www.mediafire.com/file/9xn7y6c2ts18od2/debloated-5.0.5.zip
 
     * Debloated, Removed OTA, Rooted 5.2.1.1 System TWRP Backup File:
-      [LINK SOON!]
+      http://www.mediafire.com/file/cm0e05k276gu1a9/debloated-5.2.1.1.zip
 
 
 - If FireOS 5.2.1.0 Is Detected At Launch, The Update Protection Script Will Automatically Run
