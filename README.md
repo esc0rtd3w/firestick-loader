@@ -1,4 +1,4 @@
-### REPO HAS BEEN REBASED WITH 5.2.6.2 SUPPORT AS OF 20180502
+### Newest Detected Version: 5.2.6.3
 
 FirePwn
 Amazon FireTV Stick Loader
