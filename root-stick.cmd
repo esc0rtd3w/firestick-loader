@@ -79,6 +79,7 @@ set uninstall=%adb% uninstall
 set push=%adb% push
 set pull=%adb% pull
 set shell=%adb% shell
+set adbwait=%adb% wait-for-device
 
 set tap=%adb% shell input tap
 set swipe=%shell% input swipe
@@ -612,6 +613,12 @@ set rootableColor=0c
 set rootableText=NOT EXPLOITABLE
 )
 
+if %fireOsVersion%==5.2.6.3 (
+set rootable=0
+set rootableColor=0c
+set rootableText=NOT EXPLOITABLE
+)
+
 :: Check For Pre-FireOS Builds (4.2.2 KitKat)
 if %fireOsVersion%==0.0.0.0 (
 %shell% "cat /system/build.prop | grep JDQ39 | grep ro.build.id>/sdcard/fireos-version.txt"
@@ -737,6 +744,10 @@ if %fireOsVersion%==5.2.6.2 (
 %msgbox% "This device has version %fireOsVersion% installed.\n\n\n*** THIS VERSION IS CURRENTLY NOT EXPLOITABLE ***" "FirePwn Loader"
 )
 
+if %fireOsVersion%==5.2.6.3 (
+%msgbox% "This device has version %fireOsVersion% installed.\n\n\n*** THIS VERSION IS CURRENTLY NOT EXPLOITABLE ***" "FirePwn Loader"
+)
+
 
 :: Begin Main Menu
 cls
@@ -772,7 +783,7 @@ echo Press T to install TWRP and pre-rooted rom (thanks to rbox) (TR copy rom)
 echo.
 ::echo Press S to issue an "su" request (also use SA to auto accept request)
 ::echo.
-echo Press G to install Google Play Store (*root required*)
+echo Press G to install Google Play Store (WIP) (*root required*)
 echo.
 echo.
 ::echo Press P to replace kingroot with SuperSU (Not Working Correctly!)
@@ -1369,8 +1380,6 @@ set twrpVersion=5.0.5
 
 cls
 %_color% 0e
-echo Choose a pre-rooted stock ROM to copy to device and press ENTER:
-echo.
 echo Default Version: 5.0.5
 echo.
 echo.
@@ -1385,6 +1394,9 @@ echo 4) 5.2.6.0
 echo.
 echo 5) 5.2.6.2
 echo.
+echo.
+%_color% 0e
+echo Choose a pre-rooted stock ROM to copy to device and press ENTER:
 echo.
 set /p twrpChoice=
 
@@ -1509,6 +1521,7 @@ if %doLaunchTWRPInstaller%==1 %shell% "su -c sh /data/media/0/montoya_recovery_v
 :adbMouse
 :: Trying to issue ADB Mouse command
 ::%shell% mouse
+%adbwait%
 %runShellNoTerminateAndWait% %shell%
 
 %_color% 0b
@@ -1779,7 +1792,6 @@ if %suType%==supersu (
 	%keyArrowDown%
 	%sleep% 1
 	%keyArrowRight%
-	%keyArrowRight%
 	%sleep% 1
 	%keyEnter%
 
@@ -1925,6 +1937,22 @@ if %fireOsVersion%==5.2.1.1 set rootableText=NOT EXPLOITABLE
 if %fireOsVersion%==5.2.4.0 set rootable=0
 if %fireOsVersion%==5.2.4.0 set rootableColor=0c
 if %fireOsVersion%==5.2.4.0 set rootableText=NOT EXPLOITABLE
+
+if %fireOsVersion%==5.2.4.1 set rootable=0
+if %fireOsVersion%==5.2.4.1 set rootableColor=0c
+if %fireOsVersion%==5.2.4.1 set rootableText=NOT EXPLOITABLE
+
+if %fireOsVersion%==5.2.6.0 set rootable=0
+if %fireOsVersion%==5.2.6.0 set rootableColor=0c
+if %fireOsVersion%==5.2.6.0 set rootableText=NOT EXPLOITABLE
+
+if %fireOsVersion%==5.2.6.2 set rootable=0
+if %fireOsVersion%==5.2.6.2 set rootableColor=0c
+if %fireOsVersion%==5.2.6.2 set rootableText=NOT EXPLOITABLE
+
+if %fireOsVersion%==5.2.6.3 set rootable=0
+if %fireOsVersion%==5.2.6.3 set rootableColor=0c
+if %fireOsVersion%==5.2.6.3 set rootableText=NOT EXPLOITABLE
 
 del /f /s /q "%temp%\fireos-version.txt"
 
