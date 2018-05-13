@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<map>
+    <boolean name="CmsSharedPrefs.SHARED_PREFS_NOTIFIED_FTUE_END" value="true" />
+    <string name="CmsPublisherSyncService.SHARED_PREFS_FTUE_SYNC_STATE">COMPLETE</string>
+</map>

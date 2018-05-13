@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<map>
+    <boolean name="is_asset_downloaded_and_extracted" value="false" />
+    <string name="downloaded_asset_scene_name_key">FRV_US_stick</string>
+</map>

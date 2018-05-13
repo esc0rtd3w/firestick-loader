@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<map>
+    <boolean name="homeActivityResumed" value="true" />
+    <boolean name="oobeLockerSyncReceivedKey" value="true" />
+    <boolean name="oobeNotificationFirstSent" value="true" />
+</map>
