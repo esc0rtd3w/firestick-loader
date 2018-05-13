@@ -215,6 +215,28 @@ echo.
 %install% "apps\utilities\zipsigner.apk"
 
 
+cls
+%_color% 0e
+set appName=ProxyDroid
+set apk=
+echo.
+echo.
+echo Installing %appName%...
+echo.
+%install% "apps\proxy\proxydroid.apk"
+
+
+cls
+%_color% 0e
+set appName=Proxy Settings
+set apk=
+echo.
+echo.
+echo Installing %appName%...
+echo.
+%install% "apps\proxy\proxysettings.apk"
+
+
 
 goto end
 
