@@ -1,0 +1,41 @@
+{
+    "packages": [
+        "com.sega.sonic4ep2",
+        "com.retrobomb.expendablerearmed",
+        "com.sega.sonic4epi",
+        "com.sega.jetsetradioasia",
+        "tunein.player",
+        "com.gameloft.android.AMAZ.GloftA7AS",
+        "com.FDGEntertainment.BeyondYnth",
+        "com.gameresort.sz2amazon",
+        "com.inxile.BardTale",
+        "beril.mootor.gmc",
+        "com.gotv.crackle.handset",
+        "com.pandora.android.gtv",
+        "com.revision3.android.revision3",
+        "com.showtime.showtimeanytime",
+        "com.vevo.vevoamazontv",
+        "com.southwindsgames.ac",
+        "com.southwindsgames.am2m",
+        "com.bigfishgames.depthsofbetrayalamznfree",
+        "com.zynga.livepoker",
+        "com.naturalmotion.myhorse",
+        "com.mediocre.sprinkle.amazon",
+        "jp.co.sega.vtc.OneApk",
+        "com.sanriodigital.amazon.helloKittyGarden",
+        "com.gosub60.BigWinSlots",
+        "com.hulu.plus",
+        "com.espn.gtv",
+        "com.clearchannel.iheartradio.tv",
+        "com.bloomberg.btva",
+        "com.liquidentertainment.papergalaxydeluxe",
+        "se.fatshark.hamiltonfree",
+        "air.com.kickbackgames.meleeman",
+        "air.com.kickbackgames.recursion",
+        "com.amazon.avidity.yolanda",
+        "com.vectorunit.redvixen"
+    ],
+    "patterns": [
+        "com\.amazon\.*"
+    ]
+}
