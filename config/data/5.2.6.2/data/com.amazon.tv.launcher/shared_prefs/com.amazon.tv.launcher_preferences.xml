@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<map>
+    <boolean name="isReleaseNotesFirstRun" value="false" />
+    <string name="countryOfResidence">US</string>
+    <long name="homeActivityResumedBroadcastLastSentToAppstoreMillis" value="26370" />
+    <long name="tipLastShownDate" value="14" />
+    <long name="tvCardLibrarySchemaVersion" value="17" />
+    <string name="lastReleaseNotesBuildNumber">587700720</string>
+    <string name="lastBuildNumber">54.5.8.7_user_587700720</string>
+    <long name="NextUpNextSyncTimeInMillis" value="1526197701067" />
+    <int name="lastLauncherVersionCode" value="600300310" />
+    <long name="numberOfTipsShown" value="1" />
+    <string name="preferredMarketplace">ATVPDKIKX0DER</string>
+</map>
