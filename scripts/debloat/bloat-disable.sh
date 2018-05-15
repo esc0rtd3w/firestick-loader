@@ -199,4 +199,6 @@ pm disable com.amazon.advertisingidsettings
 # pm disable com.amazon.wifilocker
 # pm disable com.amazon.amazonvideo.livingroom
 
+#pm disable com.amazon.device.software.ota.handler.OtaTaskHandler
+
 
