@@ -1102,14 +1102,15 @@ echo 1) Block OTA Updates (Installs Custom System APK Using Janus Vulnerability)
 ::echo 1) Patch Downgrade Process For Use Without Root *ROOT REQUIRED*
 ::echo 1) Fix Connectivity To Android FireTV Remote App
 echo.
-::%_color% 05
+echo.
+%_color% 05
 echo 2) Launch Android Event Keymap (Press Keys and Send Text Over ADB)
 echo.
 ::%_color% 09
 ::echo 3) Remove Boot Animation (Leaves Stock FIRE Text)
 echo 3) Replace Boot Animation (Replaces Stock Boot Animation)
 echo 4) Restore Boot Animation (Restores Stock Boot Animation)
-echo.
+::echo.
 ::echo 6) Replace Boot Fallback Images (Replaces Stock FIRE Text)
 ::echo 7) Restore Boot Fallback Images (Restores framework-res.apk)
 echo.
@@ -1305,7 +1306,7 @@ goto twrpMenu
 
 %installOverwrite% "apps\janus\DeviceSoftwareOTA_blocked.apk"
 
-goto twrpMenu
+goto reset
 
 
 :hotspot
