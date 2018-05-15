@@ -1,0 +1,15 @@
+01-01 19:30:39.109 1080-1101/? W/ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.sendBroadcast:1434 com.amazon.policy.keypolicymanager.FireTVKeyPolicyManager.handleHomeKey:1455 com.amazon.policy.keypolicymanager.FireTVKeyPolicyManager.handleHomeCustom:1847 com.android.internal.policy.impl.PhoneWindowManager.handleShortPressOnHome:1225 com.android.internal.policy.impl.PhoneWindowManager.access$1500:171 
+01-01 19:30:39.110 1080-1101/? W/ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.sendBroadcast:1434 com.amazon.policy.keypolicymanager.FireTVKeyPolicyManager.handleHomeKey:1455 com.amazon.policy.keypolicymanager.FireTVKeyPolicyManager.handleHomeCustom:1847 com.android.internal.policy.impl.PhoneWindowManager.handleShortPressOnHome:1225 com.android.internal.policy.impl.PhoneWindowManager.access$1500:171 
+01-01 19:30:39.110 1080-1101/? I/FireTVKeyPolicyManager: Sending onetouchplay on homekey press
+01-01 19:30:39.110 1080-1101/? D/CustomHomeButtonHandler: getCustomHomeReceiver: package: 'com.amazon.tv.launcher'
+    doesPackageHandleHome: 'com.amazon.tv.launcher' = false
+01-01 19:30:39.111 1080-1097/? W/BroadcastQueue: Permission Denial: receiving Intent { act=android.intent.action.CLOSE_SYSTEM_DIALOGS flg=0x50000010 (has extras) } to ProcessRecord{3a58f94c 6645:com.firepwn.home.montoya/u0a18} (pid=6645, uid=10018) requires android.permission.DISABLE_KEYGUARD due to sender null (uid 1000)
+01-01 19:30:39.113 1080-1101/? I/ActivityManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10200000 cmp=com.amazon.tv.launcher/.ui.HomeActivity_vNext} from uid 1000 on display 0
+01-01 19:30:39.114 1440-1440/? I/Vizzini:HomeListener: action: android.intent.action.CLOSE_SYSTEM_DIALOGS,reason: homekey
+01-01 19:30:39.117 1483-1483/? I/HomeActivity_vNext: Received a Home Intent
+01-01 19:30:39.117 1483-1483/? I/HomeActivity_vNext: Processing user Home key press
+01-01 19:30:39.205 6946-6960/? D/NC:NotificationCard: building card data p=com.firepwn.home.montoya, time=88078376
+01-01 19:30:39.205 6946-6960/? D/SaleClient: Cursor index = 0 package name = com.firepwn.home.montoya
+    small icon uri = /storage/emulated/0/Pictures/SaleImageCache/9102295b-1472-4a62-ad5c-69a63c41953e/smallicon , large icon uri = null
+    contentIntent for 9102295b-1472-4a62-ad5c-69a63c41953e is PendingIntent{38212a59: android.os.BinderProxy@1adc561e}
+    did not find deleteIntent for 9102295b-1472-4a62-ad5c-69a63c41953e
