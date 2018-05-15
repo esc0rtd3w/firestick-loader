@@ -75,6 +75,7 @@ set appName=0
 set choice=2
 
 set install=%adb% install
+set installOverwrite=%adb% install -r -t -d
 set uninstall=%adb% uninstall
 set push=%adb% push
 set pull=%adb% pull
@@ -167,6 +168,7 @@ set kill=taskkill /f /im
 
 :: Settings -> Main
 set showSettingsMain=%amStart% com.amazon.tv.launcher/.ui.SettingsActivity
+set showSettingsMainNew=%amStart% com.amazon.device.settings/.SettingsProvider
 
 :: Settings -> Display & Sounds
 set showSettingsDisplay=%amStart% com.amazon.tv.settings/.tv.BuellerDisplayAndSoundsSettingsActivity
@@ -233,6 +235,17 @@ set voicePromptOpen=%shell% am start -a com.amazon.intent.action.SEARCH -n com.a
 set amazonLauncherHome=%shell% am start -a com.amazon.device.intent.category.LAUNCHER_MENU com.amazon.tv.launcher/.ui.HomeActivity
 
 set amazonLauncherDeviceActivity=%shell% am start -a com.amazon.device.settings.action.DEVICE -n com.amazon.tv.settings/.tv.device.DeviceActivity
+
+
+
+::set amazonLauncherDeviceActivity=%shell% am start -a com.amazon.device.settings.action.DEVICE -n com.amazon.tv.launcher/.ui.HomeActivity_vNext
+
+::RecoverySystemWrapper.smali
+::DeviceSoftwareOTA_blocked\com\amazon\android\os
+:: invoke-static {v1, v2}, Landroid/os/RecoverySystem;->installPackage(Landroid/content/Context;Ljava/io/File;)V
+
+::ComradeActionHandler
+::const-string v0, "^(com\\.amazon(?!\\.(webapps|rialto\\.cordova\\.webapp)\\.)|amazon|android|king|kingo|kingroot|kinguser|tencent).*"
 
 
 :: Launch Different Apps
@@ -1085,7 +1098,8 @@ echo.
 echo.
 echo.
 %_color% 0b
-echo 1) Patch Downgrade Process For Use Without Root *ROOT REQUIRED*
+echo 1) Block OTA Updates (Installs Custom System APK Using Janus Vulnerability)
+::echo 1) Patch Downgrade Process For Use Without Root *ROOT REQUIRED*
 ::echo 1) Fix Connectivity To Android FireTV Remote App
 echo.
 ::%_color% 05
@@ -1149,7 +1163,8 @@ echo.
 set /p fchoice=
 
 ::if %fchoice%==1 goto fixRemote
-if %fchoice%==1 goto cacheFix
+::if %fchoice%==1 goto cacheFix
+if %fchoice%==1 goto blockOTA
 if %fchoice%==2 goto eventmap
 ::if %fchoice%==3 goto bootanimRemove
 if %fchoice%==3 goto bootanimReplace
@@ -1278,9 +1293,17 @@ goto fixesMenu
 
 goto reset
 
+
 :onlyRom
 
 set doLaunchTWRPInstaller=0
+
+goto twrpMenu
+
+
+:blockOTA
+
+%installOverwrite% "apps\janus\DeviceSoftwareOTA_blocked.apk"
 
 goto twrpMenu
 
