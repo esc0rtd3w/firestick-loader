@@ -1102,10 +1102,10 @@ echo 1) Block OTA Updates (Installs Custom System APK Using Janus Vulnerability)
 ::echo 1) Patch Downgrade Process For Use Without Root *ROOT REQUIRED*
 ::echo 1) Fix Connectivity To Android FireTV Remote App
 echo.
-echo.
-%_color% 05
 echo 2) Launch Android Event Keymap (Press Keys and Send Text Over ADB)
 echo.
+echo.
+%_color% 05
 ::%_color% 09
 ::echo 3) Remove Boot Animation (Leaves Stock FIRE Text)
 echo 3) Replace Boot Animation (Replaces Stock Boot Animation)
