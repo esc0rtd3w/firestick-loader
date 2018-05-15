@@ -238,7 +238,7 @@ set amazonLauncherDeviceActivity=%shell% am start -a com.amazon.device.settings.
 
 
 
-::set amazonLauncherDeviceActivity=%shell% am start -a com.amazon.device.settings.action.DEVICE -n com.amazon.tv.launcher/.ui.HomeActivity_vNext
+::set amazonLauncherDeviceActivityNew=%shell% am start -a com.amazon.device.settings.action.DEVICE -n com.amazon.tv.launcher/.ui.HomeActivity_vNext
 
 ::RecoverySystemWrapper.smali
 ::DeviceSoftwareOTA_blocked\com\amazon\android\os
