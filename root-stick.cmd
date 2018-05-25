@@ -194,6 +194,7 @@ set showSettingsApplications=%amStart% com.amazon.tv.settings/.tv.BuellerApplica
 set showSettingsApplicationsManage=%amStart% com.amazon.tv.settings/.tv.AllApplicationsSettingsActivity
 
 :: Settings -> System
+::set showSettingsSystemMain=%amStart% android.settings.SETTINGS
 set showSettingsSystemMain=%amStart% com.amazon.tv.settings/.tv.BuellerSystemSettingsActivity
 set showSettingsSystemDeveloper=%amStart% com.amazon.tv.settings/.tv.BuellerDevelopmentSettingsActivity
 set showSettingsSystemFactoryReset=%amStart% com.amazon.tv.settings/.tv.FactoryResetActivity
@@ -620,6 +621,12 @@ set rootableColor=0c
 set rootableText=NOT EXPLOITABLE
 )
 
+if %fireOsVersion%==5.2.6.1 (
+set rootable=0
+set rootableColor=0c
+set rootableText=NOT EXPLOITABLE
+)
+
 if %fireOsVersion%==5.2.6.2 (
 set rootable=0
 set rootableColor=0c
@@ -750,6 +757,10 @@ if %fireOsVersion%==5.2.4.1 (
 )
 
 if %fireOsVersion%==5.2.6.0 (
+%msgbox% "This device has version %fireOsVersion% installed.\n\n\n*** THIS VERSION IS CURRENTLY NOT EXPLOITABLE ***" "FirePwn Loader"
+)
+
+if %fireOsVersion%==5.2.6.1 (
 %msgbox% "This device has version %fireOsVersion% installed.\n\n\n*** THIS VERSION IS CURRENTLY NOT EXPLOITABLE ***" "FirePwn Loader"
 )
 
