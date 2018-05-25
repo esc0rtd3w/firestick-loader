@@ -168,7 +168,7 @@ echo.
 echo.
 echo Installing %appName%...
 echo.
-%install% "apps\testing\link2sd.apk"
+::%install% "apps\testing\link2sd.apk"
 
 
 cls
@@ -212,7 +212,7 @@ echo.
 echo.
 echo Installing %appName%...
 echo.
-%install% "apps\utilities\zipsigner.apk"
+::%install% "apps\utilities\zipsigner.apk"
 
 
 cls
@@ -223,7 +223,7 @@ echo.
 echo.
 echo Installing %appName%...
 echo.
-%install% "apps\proxy\proxydroid.apk"
+::%install% "apps\proxy\proxydroid.apk"
 
 
 cls
@@ -235,6 +235,28 @@ echo.
 echo Installing %appName%...
 echo.
 %install% "apps\proxy\proxysettings.apk"
+
+
+cls
+%_color% 0e
+set appName=APK Analyzer
+set apk=
+echo.
+echo.
+echo Installing %appName%...
+echo.
+%install% "apps\proxy\apk-analyzer.apk"
+
+
+cls
+%_color% 0e
+set appName=Quick App Manager
+set apk=
+echo.
+echo.
+echo Installing %appName%...
+echo.
+%install% "apps\proxy\quick-app-manager.apk"
 
 
 
