@@ -6,7 +6,8 @@ set adb="..\..\bin\adb.exe"
 set shell=%adb% shell
 
 
-:loop
+cls
+echo Settings^: user_setup_complete 1
 
 %shell% settings --user 0 put secure user_setup_complete 1
 
