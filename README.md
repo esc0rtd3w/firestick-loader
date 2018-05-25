@@ -1,3 +1,7 @@
+### THIS REPO IS QUITE LARGE AT AROUND 6.7GB COMPLETE
+<br/>
+<br/>
+
 ### Newest Detected Version: 5.2.6.3
 
 FirePwn
@@ -11,11 +15,11 @@ firepwn.com
 
 <br/>
 
-####Scripting To Root, Unroot, Downgrade, Load Apps and Tons More Options For The Amazon FireStick
+Scripting To Root, Unroot, Downgrade, Load Apps and Tons More Options For The Amazon FireStick
 
 <br/>
 
-##\*\*\* IF YOU WANT TO RETAIN ABILITY TO REMOVE AMAZON BLOAT DO NOT UPDATE TO 5.2.1.1 FireOS OR NEWER \*\*\*
+\*\*\* IF YOU WANT TO RETAIN ABILITY TO REMOVE AMAZON BLOAT DO NOT UPDATE TO 5.2.1.1 FireOS OR NEWER \*\*\*
 
 
 ### To Block The FireOS 5.2.1.1 Update, While Still On 5.2.1.0, Take One or More of The Following Actions:
