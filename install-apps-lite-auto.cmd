@@ -68,6 +68,15 @@ echo.
 %install% "apps\home\FirePwnHome.apk"
 %push% "apps\home\sdcard\FirePwnHomeBackup.zip" /sdcard/
 
+::cls
+::%_color% 0e
+::set appName=FirePwn Home Debug
+::set apk=
+:;echo Installing %appName%...
+::echo.
+::%install% "apps\home\FirePwnHomeDebug.apk"
+::%push% "apps\home\sdcard\FirePwnHomeBackup.zip" /sdcard/
+
 
 cls
 %_color% 0e

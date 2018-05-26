@@ -82,6 +82,33 @@ if %choice%==1 (
 
 cls
 %_color% 0e
+set appName=FirePwn Home Debug
+set apk=
+echo Install %appName%?
+echo.
+echo 1) Yes   2) No
+echo.
+echo.
+%_color% 0b
+echo Requirements: NONE
+echo.
+echo Info: Home Replacement App
+echo.
+set /p choice=
+
+
+if %choice%==1 (
+		echo.
+		echo.
+		echo Installing %appName%...
+		echo.
+
+		%install% "apps\home\FirePwnHomeDebug.apk"
+		%push% "apps\home\sdcard\FirePwnHomeBackup.zip" /sdcard/
+)
+
+cls
+%_color% 0e
 set appName=FireStarter
 set apk=
 echo Install %appName%?
