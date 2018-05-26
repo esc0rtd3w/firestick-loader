@@ -2,7 +2,7 @@
 
 color 0b
 
-set adb="..\..\bin\adb.exe"
+set adb="..\..\..\bin\adb.exe"
 set shell=%adb% shell
 
 
