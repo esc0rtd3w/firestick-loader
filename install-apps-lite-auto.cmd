@@ -384,9 +384,9 @@ echo.
 echo.
 echo Installing %appName%...
 echo.
-%extractRAR% "%~dp0apps\media\popcorntime.apk.split" "%temp%\firestick-loader\apps\media"
+%extractRAR% "%~dp0apps\media\popcorntime-new.apk.split" "%temp%\firestick-loader\apps\media"
 %sleep% 3
-%install% "%temp%\firestick-loader\apps\media\popcorntime.apk"
+%install% "%temp%\firestick-loader\apps\media\popcorntime-new.apk"
 
 
 ::cls

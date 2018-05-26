@@ -1198,6 +1198,32 @@ echo.
 
 cls
 %_color% 0e
+set appName=Popcorn Time New
+set apk=
+echo Install %appName%?
+echo.
+echo 1) Yes   2) No
+echo.
+echo.
+%_color% 0b
+echo Requirements: MOUSE/KEYBOARD
+echo.
+echo Info: Movies and TV Shows Streaming App
+echo.
+set /p choice=
+if %choice%==1 (
+echo.
+echo.
+echo Installing %appName%...
+echo.
+%extractRAR% "%~dp0apps\media\popcorntime-new.apk.split" "%temp%\firestick-loader\apps\media"
+%sleep% 3
+%install% "%temp%\firestick-loader\apps\media\popcorntime-new.apk"
+)
+
+
+cls
+%_color% 0e
 set appName=Popcorn Time io Edition
 set apk=
 echo Install %appName%?
