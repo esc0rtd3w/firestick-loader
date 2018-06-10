@@ -198,6 +198,7 @@ set showSettingsApplicationsManage=%amStart% com.amazon.tv.settings/.tv.AllAppli
 set showSettingsSystemMain=%amStart% com.amazon.tv.settings/.tv.BuellerSystemSettingsActivity
 set showSettingsSystemDeveloper=%amStart% com.amazon.tv.settings/.tv.BuellerDevelopmentSettingsActivity
 set showSettingsSystemFactoryReset=%amStart% com.amazon.tv.settings/.tv.FactoryResetActivity
+set showSettingsSystemFactoryResetNew=%amStart% com.amazon.tv.settings/com.amazon.tv.settings.tv.FactoryResetActivity
 set showSettingsSystemFactoryReset=%amStart% com.amazon.tv.settings.tv.FactoryResetService.masterClear
 ::set showSettingsSystemFactoryResetNow=%amStart% com.amazon.tv.settings/.tv.FactoryResetActivity
 
