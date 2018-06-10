@@ -1,12 +1,7 @@
 @echo off
 
-:reset
-
-title Android Show APK Activities  [esc0rtd3w 2016]
-
-::mode con lines=36
-
 color 0e
+
 
 set runShellNoTerminateAndWait=cmd /k
 set runShellNoTerminate=start cmd /k
@@ -22,7 +17,7 @@ set extractZIP="%~dp0bin\unzip.exe" -o
 
 set teamviewer="%~dp0bin\teamviewer.exe"
 
-set sleep="%~dp0bin\wait.exe"
+set sleep="..\..\bin\wait.exe"
 set rm=rmdir /s /q
 
 set adb="..\..\bin\adb.exe"
@@ -55,52 +50,36 @@ set keyArrowRight=%shell% input keyevent 22
 set keyBack=%shell% input keyevent 3
 set keyHome=%shell% input keyevent 4
 
-set bloatAction=disable
 
 
-set sdcard=sdcard
-::set sdcard=external_sd
-::set sdcard=extSdCard
-
-set fireOsVersion=0.0.0.0
-
-set buildDotProp=/system/build.prop
-
-set rootable=0
-set rootableText=NOT EXPLOITABLE
-set firstCheck=0
-set firstTimeRootAttempt=1
-
-
-set mountRW=%shell% "su -c mount -o rw,remount /system"
-set mountRO=%shell% "su -c mount -o ro,remount /system"
-
-set kill=%shell% am kill
-
-:: Must use double quotes after process/package for Super Kill
-set killSuper=%shell% "su -c am kill
-
-:: Must use double quotes after process/package for Super Kill
-set rmSuper=%shell% "su -c rm
-
-:: Super Shell
-set shellSuper=%shell% "su -c
-
-
-
-::%shellSuper% dumpsys package"
-%shell% dumpsys package
-
+cls
+echo *** THIS WILL ACTUALLY FACTORY RESET THE CONNECTED FIRESTICK! ***
+echo.
+echo.
+echo.
+echo CLOSE THIS WINDOW IF YOU DO NOT WANT TO CONTINUE!
+echo.
+echo.
 
 pause
 
+
+%shell% am start -a android.intent.action.MAIN -n com.amazon.tv.settings/com.amazon.tv.settings.tv.FactoryResetActivity
+
+%sleep% 3
+
+%keyArrowLeft%
+
+%sleep% 1
+
+%keyEnter%
+
+goto end
 
 
 
 
 :end
-
-%adbKill%
 
 
 

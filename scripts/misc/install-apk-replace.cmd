@@ -14,10 +14,7 @@ set install=%adb% install
 
 cls
 
-
 %install% -r -t -d %apk%
-
-
 
 
 
