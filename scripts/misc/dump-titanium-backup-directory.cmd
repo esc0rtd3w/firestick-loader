@@ -20,7 +20,7 @@ mkdir "%temp%\firestick-loader\TitaniumBackup"
 
 start "" explorer "%temp%\firestick-loader\backups\TitaniumBackup"
 
-pause
+::pause
 
 :end
 
