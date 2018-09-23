@@ -437,6 +437,31 @@ echo.
 %install% "apps\media\kokotime.apk"
 )
 
+
+cls
+%_color% 0e
+set appName=TeaTV
+set apk=
+echo Install %appName%?
+echo.
+echo 1) Yes   2) No
+echo.
+echo.
+%_color% 0b
+echo Requirements: NONE
+echo.
+echo Info: Movie/Video App
+echo.
+set /p choice=
+if %choice%==1 (
+echo.
+echo.
+echo Installing %appName%...
+echo.
+
+%install% "apps\media\teatv.apk"
+)
+
 cls
 %_color% 0e
 set appName=TubiTV
