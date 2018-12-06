@@ -640,6 +640,24 @@ set rootableColor=0c
 set rootableText=NOT EXPLOITABLE
 )
 
+if %fireOsVersion%==5.2.6.6 (
+set rootable=0
+set rootableColor=0c
+set rootableText=NOT EXPLOITABLE
+)
+
+if %fireOsVersion% gtr 5.2.6.6 (
+set rootable=0
+set rootableColor=0c
+set rootableText=NOT EXPLOITABLE
+)
+
+if %fireOsVersion% gtr 5.2.6.7 (
+set rootable=0
+set rootableColor=0c
+set rootableText=NOT EXPLOITABLE
+)
+
 :: Check For Pre-FireOS Builds (4.2.2 KitKat)
 if %fireOsVersion%==0.0.0.0 (
 %shell% "cat /system/build.prop | grep JDQ39 | grep ro.build.id>/sdcard/fireos-version.txt"
@@ -770,6 +788,18 @@ if %fireOsVersion%==5.2.6.2 (
 )
 
 if %fireOsVersion%==5.2.6.3 (
+%msgbox% "This device has version %fireOsVersion% installed.\n\n\n*** THIS VERSION IS CURRENTLY NOT EXPLOITABLE ***" "FirePwn Loader"
+)
+
+if %fireOsVersion%==5.2.6.6 (
+%msgbox% "This device has version %fireOsVersion% installed.\n\n\n*** THIS VERSION IS CURRENTLY NOT EXPLOITABLE ***" "FirePwn Loader"
+)
+
+if %fireOsVersion% gtr 5.2.6.6 (
+%msgbox% "This device has version %fireOsVersion% installed.\n\n\n*** THIS VERSION IS CURRENTLY NOT EXPLOITABLE ***" "FirePwn Loader"
+)
+
+if %fireOsVersion% gtr 5.2.6.7 (
 %msgbox% "This device has version %fireOsVersion% installed.\n\n\n*** THIS VERSION IS CURRENTLY NOT EXPLOITABLE ***" "FirePwn Loader"
 )
 
