@@ -646,7 +646,13 @@ set rootableColor=0c
 set rootableText=NOT EXPLOITABLE
 )
 
-if %fireOsVersion% gtr 5.2.6.6 (
+if %fireOsVersion%==5.2.6.6 (
+set rootable=0
+set rootableColor=0c
+set rootableText=NOT EXPLOITABLE
+)
+
+if %fireOsVersion%==5.2.6.7 (
 set rootable=0
 set rootableColor=0c
 set rootableText=NOT EXPLOITABLE
