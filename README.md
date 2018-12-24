@@ -1,8 +1,8 @@
-### THIS REPO IS QUITE LARGE AT AROUND 6.7GB COMPLETE
+### THIS REPO IS QUITE LARGE AT AROUND 8.1GB COMPLETE
 <br/>
 <br/>
 
-### Newest Detected Version: 5.2.6.3
+### Newest Detected Version: 5.2.6.7
 
 FirePwn
 Amazon FireTV Stick Loader
