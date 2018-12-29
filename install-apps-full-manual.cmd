@@ -1319,9 +1319,33 @@ echo.
 )
 
 
+::cls
+::%_color% 0e
+::set appName=NewPipe Youtube Client
+::set apk=
+::echo Install %appName%?
+::echo.
+::echo 1) Yes   2) No
+::echo.
+::echo.
+::%_color% 0b
+::echo Requirements: NONE
+::echo.
+::echo Info: YouTube Player
+::echo.
+::set /p choice=
+::if %choice%==1 (
+::echo.
+::echo.
+::echo Installing %appName%...
+::echo.
+::%install% "apps\media\newpipe.apk"
+::)
+
+
 cls
 %_color% 0e
-set appName=NewPipe Youtube Client
+set appName=Youtube
 set apk=
 echo Install %appName%?
 echo.
@@ -1331,7 +1355,7 @@ echo.
 %_color% 0b
 echo Requirements: NONE
 echo.
-echo Info: YouTube Player
+echo Info: YouTube Player No Play Store
 echo.
 set /p choice=
 if %choice%==1 (
@@ -1339,7 +1363,7 @@ echo.
 echo.
 echo Installing %appName%...
 echo.
-%install% "apps\media\newpipe.apk"
+%install% "apps\media\youtube.apk"
 )
 
 
@@ -1364,6 +1388,30 @@ echo.
 echo Installing %appName%...
 echo.
 %install% "apps\media\usound.apk"
+)
+
+
+cls
+%_color% 0e
+set appName=Opera Mini Legacy
+set apk=
+echo Install %appName%?
+echo.
+echo 1) Yes   2) No
+echo.
+echo.
+%_color% 0b
+echo Requirements: NONE
+echo.
+echo Info: Lightweight Web Browser w Firestick Remote Mouse Support
+echo.
+set /p choice=
+if %choice%==1 (
+echo.
+echo.
+echo Installing %appName%...
+echo.
+%install% "apps\web\opera-legacy.apk"
 )
 
 
