@@ -3725,7 +3725,7 @@ echo.
 if %rebootAfterClearCache%==0 (
 	
 	cls
-	echo Clearing Device Caches....
+	echo Not Clearing Device Caches....
 	echo.
 	echo.
 	echo.
@@ -3759,7 +3759,7 @@ if %fullAutoMode%==1 (
 	echo.
 	echo.
 	echo.
-	echo *** THE DEVICE SHOULD BE REBOOTED WHEN FINISHED TO REBUILD DALVIK CACHES ***
+	echo *** THE DEVICE WILL REBOOT WHEN FINISHED TO REBUILD DALVIK CACHES ***
 )
 %_color% 0e
 echo.
