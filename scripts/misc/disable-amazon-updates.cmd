@@ -40,4 +40,8 @@ echo Disabling Amazon Updates....
 echo.
 echo.
 
+%adb% shell pm disable com.amazon.dcp
 %adb% shell pm disable com.amazon.device.software.ota
+%adb% shell pm disable com.amazon.device.software.ota.override
+%adb% shell pm disable com.amazon.settings.systemupdates/.OTAEventReceiver
+%adb% shell pm disable com.amazon.tv.forcedotaupdater

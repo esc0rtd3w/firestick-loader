@@ -36,9 +36,12 @@ set sdcard=sdcard
 
 
 cls
-echo Disabling Amazon Update Services....
+echo Disabling Amazon Updates....
 echo.
 echo.
 
-%shell% "su -c pm disable com.amazon.device.software.ota"
 %shell% "su -c pm disable com.amazon.dcp"
+%shell% "su -c pm disable com.amazon.device.software.ota"
+%shell% "su -c pm disable com.amazon.device.software.ota.override"
+%shell% "su -c pm disable com.amazon.settings.systemupdates/.OTAEventReceiver"
+%shell% "su -c pm disable com.amazon.tv.forcedotaupdater"
