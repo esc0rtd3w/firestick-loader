@@ -10,3 +10,4 @@ echo ""
 pm disable com.amazon.device.software.ota
 pm disable com.amazon.device.software.ota.override
 pm disable com.amazon.settings.systemupdates/.OTAEventReceiver
+pm disable com.amazon.tv.forcedotaupdater
