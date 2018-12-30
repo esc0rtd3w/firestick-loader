@@ -337,6 +337,7 @@ Scripting To Root, Unroot, Downgrade, Load Apps and Tons More Options For The Am
 <br/><br/>
 
 ***Preview of Default Kodi Build***
+Source: https://github.com/esc0rtd3w/firestick-loader-kodi-data
 ######\*\* Heavily Modified, Originally Based Off Titanium Build \*\*######
 
 ![Kodi Preview 1](https://github.com/esc0rtd3w/firestick-loader/blob/master/misc/preview/kodi/main-menu.jpg)
