@@ -1453,15 +1453,17 @@ if not exist "%temp%\firestick-loader\roms\stick" md  "%temp%\firestick-loader\r
 
 set twrpChoice=1
 set twrpVersion=5.0.5
+set romRevision=r1
 
 cls
 %_color% 0e
-echo Default Version: 5.0.5
+echo Current Selected Version: %twrpVersion%
 echo.
 echo.
-%_color% 0b
+%_color% 0a
 echo 1) 5.0.5
 echo.
+%_color% 0b
 echo 2) 5.2.1.1
 echo.
 echo 3) 5.2.4.1
@@ -1470,32 +1472,43 @@ echo 4) 5.2.6.0
 echo.
 echo 5) 5.2.6.2
 echo.
+echo 6) 5.2.6.3
+echo.
+echo 7) 5.2.6.6
+echo.
+echo 8) 5.2.6.7
+echo.
 echo.
 %_color% 0e
 echo Choose a pre-rooted stock ROM to copy to device and press ENTER:
 echo.
 set /p twrpChoice=
 
-if %twrpChoice% gtr 5 goto twrpMenu
+if %twrpChoice% gtr 8 goto twrpMenu
 
 if %twrpChoice%==1 set twrpVersion=5.0.5
-if %twrpChoice%==1 goto trwp505
+if %twrpChoice%==1 set romRevision=r1
 if %twrpChoice%==2 set twrpVersion=5.2.1.1
-if %twrpChoice%==2 goto trwp5211
+if %twrpChoice%==2 set romRevision=r1
 if %twrpChoice%==3 set twrpVersion=5.2.4.1
-if %twrpChoice%==3 goto trwp5241
+if %twrpChoice%==3 set romRevision=r2
 if %twrpChoice%==4 set twrpVersion=5.2.6.0
-if %twrpChoice%==4 goto trwp5260
+if %twrpChoice%==4 set romRevision=r1
 if %twrpChoice%==5 set twrpVersion=5.2.6.2
-if %twrpChoice%==5 goto trwp5262
+if %twrpChoice%==5 set romRevision=r1
+if %twrpChoice%==6 set twrpVersion=5.2.6.3
+if %twrpChoice%==6 set romRevision=r1
+if %twrpChoice%==7 set twrpVersion=5.2.6.6
+if %twrpChoice%==7 set romRevision=r1
+if %twrpChoice%==8 set twrpVersion=5.2.6.7
+if %twrpChoice%==8 set romRevision=r1
 
-:: Default choice safety net
-goto trwp505
+goto trwpRom
 
 
-:trwp505
+:trwpRom
 cls
-echo Copying Pre-Rooted 5.0.5 Rom To Device....
+echo Copying Pre-Rooted %twrpVersion% Rom To Device....
 echo.
 echo.
 echo Thanks to rbox!
@@ -1504,72 +1517,8 @@ echo /fire-tv/development/firetv-stick-montoya-twrp-recovery-t3521805
 echo.
 echo.
 
-%extractRAR% "%~dp0roms\stick\5.0.5\5.0.5-stock-rooted.split" "%temp%\firestick-loader\roms\stick"
-%push% "%temp%\firestick-loader\roms\stick\montoya-5.0.5-rooted_r1.zip" /%sdcard%/
-goto twrpGo
-
-
-:trwp5211
-cls
-echo Copying Pre-Rooted 5.2.1.1 Rom To Device....
-echo.
-echo.
-echo Thanks to rbox!
-echo forum.xda-developers.com
-echo /fire-tv/development/firetv-stick-montoya-twrp-recovery-t3521805
-echo.
-echo.
-::pause
-%extractRAR% "%~dp0roms\stick\5.2.1.1\5.2.1.1-stock-rooted.split" "%temp%\firestick-loader\roms\stick"
-%push% "%temp%\firestick-loader\roms\stick\montoya-5.2.1.1-rooted_r1.zip" /%sdcard%/
-goto twrpGo
-
-
-:trwp5241
-cls
-echo Copying Pre-Rooted 5.2.4.1 Rom To Device....
-echo.
-echo.
-echo Thanks to rbox!
-echo forum.xda-developers.com
-echo /fire-tv/development/firetv-stick-montoya-twrp-recovery-t3521805
-echo.
-echo.
-::pause
-%extractRAR% "%~dp0roms\stick\5.2.4.1\5.2.4.1-stock-rooted.split" "%temp%\firestick-loader\roms\stick"
-%push% "%temp%\firestick-loader\roms\stick\montoya-5.2.4.1-rooted_r2.zip" /%sdcard%/
-goto twrpGo
-
-
-:trwp5260
-cls
-echo Copying Pre-Rooted 5.2.6.0 Rom To Device....
-echo.
-echo.
-echo Thanks to rbox!
-echo forum.xda-developers.com
-echo /fire-tv/development/firetv-stick-montoya-twrp-recovery-t3521805
-echo.
-echo.
-::pause
-%extractRAR% "%~dp0roms\stick\5.2.6.0\5.2.6.0-stock-rooted.split" "%temp%\firestick-loader\roms\stick"
-%push% "%temp%\firestick-loader\roms\stick\montoya-5.2.6.0-rooted_r1.zip" /%sdcard%/
-goto twrpGo
-
-
-:trwp5262
-cls
-echo Copying Pre-Rooted 5.2.6.2 Rom To Device....
-echo.
-echo.
-echo Thanks to rbox!
-echo forum.xda-developers.com
-echo /fire-tv/development/firetv-stick-montoya-twrp-recovery-t3521805
-echo.
-echo.
-::pause
-%extractRAR% "%~dp0roms\stick\5.2.6.2\5.2.6.2-stock-rooted.split" "%temp%\firestick-loader\roms\stick"
-%push% "%temp%\firestick-loader\roms\stick\montoya-5.2.6.2-rooted_r1.zip" /%sdcard%/
+%extractRAR% "%~dp0roms\stick\%twrpVersion%\%twrpVersion%-stock-rooted.split" "%temp%\firestick-loader\roms\stick"
+%push% "%temp%\firestick-loader\roms\stick\montoya-%twrpVersion%-rooted_%romRevision%.zip" /%sdcard%/
 goto twrpGo
 
 
