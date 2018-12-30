@@ -801,10 +801,6 @@ if %fireOsVersion%==5.2.6.6 (
 %msgbox% "This device has version %fireOsVersion% installed.\n\n\n*** THIS VERSION IS CURRENTLY NOT EXPLOITABLE ***" "FirePwn Loader"
 )
 
-if %fireOsVersion%==5.2.6.6 (
-%msgbox% "This device has version %fireOsVersion% installed.\n\n\n*** THIS VERSION IS CURRENTLY NOT EXPLOITABLE ***" "FirePwn Loader"
-)
-
 if %fireOsVersion%==5.2.6.7 (
 %msgbox% "This device has version %fireOsVersion% installed.\n\n\n*** THIS VERSION IS CURRENTLY NOT EXPLOITABLE ***" "FirePwn Loader"
 )
