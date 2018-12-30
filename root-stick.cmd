@@ -3751,6 +3751,16 @@ if %rebootAfterBloatRemoval%==1 (
 	echo.
 	echo *** THE DEVICE WILL REBOOT WHEN FINISHED TO REBUILD DALVIK CACHES ***
 )
+
+if %fullAutoMode%==1 (
+	
+	cls
+	echo Clearing Device Caches....
+	echo.
+	echo.
+	echo.
+	echo *** THE DEVICE SHOULD BE REBOOTED WHEN FINISHED TO REBUILD DALVIK CACHES ***
+)
 %_color% 0e
 echo.
 echo.
