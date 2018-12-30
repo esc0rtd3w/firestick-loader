@@ -184,6 +184,7 @@ rm -r /system/priv-app/com.amazon.firehomestarter/
 rm -r /system/priv-app/com.amazon.franktvinput/
 #rm -r /system/priv-app/com.amazon.gloria.graphiq/
 rm -r /system/priv-app/com.amazon.hedwig/
+rm -r /system/priv-app/com.amazon.tv.legal.notices/
 #rm -r /system/priv-app/com.amazon.net.smartconnect/
 rm -r /system/priv-app/com.amazon.tmm.tutorial/
 rm -r /system/priv-app/com.amazon.tv.forcedotaupdater/
@@ -388,6 +389,7 @@ rm -r /data/data/com.amazon.firehomestarter/
 rm -r /data/data/com.amazon.franktvinput/
 #rm -r /data/data/com.amazon.gloria.graphiq/
 rm -r /data/data/com.amazon.hedwig/
+rm -r /data/data/com.amazon.tv.legal.notices/
 #rm -r /data/data/com.amazon.net.smartconnect/
 rm -r /data/data/com.amazon.tmm.tutorial/
 rm -r /data/data/com.amazon.tv.forcedotaupdater/
