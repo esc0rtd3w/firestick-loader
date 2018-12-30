@@ -375,6 +375,19 @@ rm -r /system/priv-app/TvProvider
 # rm -r /system/priv-app/SystemStatusMonitorSys
 # rm -r /system/priv-app/com.amazon.kor.demo
 
+# FireOS 5.2.6.7
+# rm -r /system/priv-app/com.amazon.aca/
+# rm -r /system/priv-app/com.amazon.amazonvideo.livingroom/
+# rm -r /system/priv-app/com.amazon.aria/
+# rm -r /system/priv-app/com.amazon.firehomestarter/
+# rm -r /system/priv-app/com.amazon.franktvinput/
+# rm -r /system/priv-app/com.amazon.gloria.graphiq/
+# rm -r /system/priv-app/com.amazon.hedwig/
+# rm -r /system/priv-app/com.amazon.net.smartconnect/
+# rm -r /system/priv-app/com.amazon.tmm.tutorial/
+# rm -r /system/priv-app/com.amazon.tv.forcedotaupdater/
+# rm -r /system/priv-app/TIFObserverService/
+
 
 
 # Other System Apps
@@ -566,6 +579,18 @@ rm -r /data/data/TvProvider
 # rm -r /data/data/SystemStatusMonitorSys
 # rm -r /data/data/com.amazon.kor.demo
 
+# FireOS 5.2.6.7
+# rm -r /data/data/com.amazon.aca/
+# rm -r /data/data/com.amazon.amazonvideo.livingroom/
+# rm -r /data/data/com.amazon.aria/
+# rm -r /data/data/com.amazon.firehomestarter/
+# rm -r /data/data/com.amazon.franktvinput/
+# rm -r /data/data/com.amazon.gloria.graphiq/
+# rm -r /data/data/com.amazon.hedwig/
+# rm -r /data/data/com.amazon.net.smartconnect/
+# rm -r /data/data/com.amazon.tmm.tutorial/
+# rm -r /data/data/com.amazon.tv.forcedotaupdater/
+# rm -r /data/data/TIFObserverService/
 
 
 
