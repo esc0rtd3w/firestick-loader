@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<map>
+    <string name="countryOfResidence">US</string>
+    <boolean name="enable_adb_key" value="true" />
+    <boolean name="notifications_settings_key" value="false" />
+    <boolean name="enable_unknown_sources_key" value="true" />
+    <string name="preferredMarketplace">ATVPDKIKX0DER</string>
+</map>
