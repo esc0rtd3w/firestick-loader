@@ -1975,6 +1975,14 @@ if %fireOsVersion%==5.2.6.3 set rootable=0
 if %fireOsVersion%==5.2.6.3 set rootableColor=0c
 if %fireOsVersion%==5.2.6.3 set rootableText=NOT EXPLOITABLE
 
+if %fireOsVersion%==5.2.6.6 set rootable=0
+if %fireOsVersion%==5.2.6.6 set rootableColor=0c
+if %fireOsVersion%==5.2.6.6 set rootableText=NOT EXPLOITABLE
+
+if %fireOsVersion%==5.2.6.7 set rootable=0
+if %fireOsVersion%==5.2.6.7 set rootableColor=0c
+if %fireOsVersion%==5.2.6.7 set rootableText=NOT EXPLOITABLE
+
 del /f /s /q "%temp%\fireos-version.txt"
 
 goto menu
