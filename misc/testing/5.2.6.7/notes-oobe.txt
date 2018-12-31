@@ -1,0 +1,3 @@
+
+com.amazon.tv.oobe.action.RESTORE_OOBE
+amazon.tv.oobe.extras.registrationStarted
