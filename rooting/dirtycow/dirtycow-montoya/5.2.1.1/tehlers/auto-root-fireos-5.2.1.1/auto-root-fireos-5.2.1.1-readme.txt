@@ -1,0 +1,35 @@
+Original Source:
+https://forum.xda-developers.com/fire-tv/general/guide-rooted-fire-tv-via-dirtycow-t3489922/post73390569#post73390569
+
+
+
+At first: I used exactly the same implementation of dirtycow. You need to pay attention, that you (in contrast to the other dirtycow implementations) give as arguments "./dirtycow src dst", instead of "./dirtycow dst src".
+
+Second thing is, that it only works for a few bytes, and not always. But since it checks what bytes still actually differ, you can go further with every next round. I wrote something like this:
+
+Code:
+
+exit=1; while [ "$exit" != "0" ]; do ./dirtycow /data/local/tmp/watchdogd_new.txt /system/bin/watchdogd; exit=$?; echo $exit; done
+
+You should first try it with e.g. /system/etc/hosts, exchange "127.0.0.1" with e.g. "127.0.0.2", this should go fast (but does not need to work in the first round).
+
+I may also note that I made the shellscripts always exactly as big as the original binary (and always saved the original binary in /data/local/tmp "cp -a /system/bin/watchdogd /data/local/tmp/" before doing anything). So let's say (this is from current firmware, not 5.2.1.1):
+
+Code:
+
+shell@montoya:/data/local/tmp $ ls -la /system/bin/watchdogd                   
+-rwxr-xr-x root     shell        5288 2017-06-10 01:45 watchdogd
+
+And you now have a shellscript "watchdogd_new.txt" (this is on my computer, "bc" is not part of the firmware; but the rest would also work in the stick):
+
+Code:
+
+> ls -la watchdogd_new.txt
+-rw-r--r-- 1 root root 39 Aug 12 19:29 watchdogd_new.txt
+> echo "5288-39" | bc
+5249
+> i=0; while [ "$i" != "5249" ]; do echo >> watchdogd_new.txt; let i=$i+1; done
+> ls -la watchdogd_new.txt
+-rw-r--r-- 1 root root 5288 Aug 12 19:31 watchdogd_new.txt
+
+And last thing I would like to note: When finally exchanged everything of the binary and you want to reboot. You should first play a video from e.g. Amazon Video and skip around a bit. That has the effect, that the kernel syncs dirty caches to flash, because it needs the memory for playing the video and caching it. Since you poke with dirtycow something in the cache, a "sync" does not synchronize this to disk (or flash in this case).

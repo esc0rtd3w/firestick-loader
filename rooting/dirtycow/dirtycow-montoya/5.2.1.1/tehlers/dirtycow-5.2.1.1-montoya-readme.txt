@@ -1,0 +1,115 @@
+#Original Source:
+#https://forum.xda-developers.com/fire-tv/general/guide-rooted-fire-tv-via-dirtycow-t3489922/post73390569#post73390569
+
+
+#local
+
+# make sure you activated usb debugging in settings, then connect to your firetv
+adb connect 192.168.x.x
+
+# push working files to firetv
+# use attached dirtycow for montoya or compile it yourself, using NDK for armeabi-v7a/android-22:
+# Makefile build section should read: 
+# ndk-build NDK_PROJECT_PATH=. APP_BUILD_SCRIPT=./Android.mk APP_ABI=armeabi-v7a APP_PLATFORM=android-22
+
+adb push /root/su /data/local/tmp
+adb push /root/watchdogd_script /data/local/tmp
+adb push /root/dirtycow /data/local/tmp
+
+adb shell
+
+#-----------
+#aftv
+
+ls -la /system/bin/vcdbg
+# 370380 in my case
+
+ls -la /data/local/tmp/su
+# 75348 in my case
+
+# pad su to the size of vcdbg (size_of_vcdbg-size_of_su = 295032)
+i=0; while [ "$i" != "295032" ]; do echo >> /data/local/tmp/su; let i=$i+1; done
+ls -la /data/local/tmp/su
+
+ls -la /system/bin/watchdogd 
+# 5288 in my case
+
+ls -la /data/local/tmp/watchdogd_script
+# 39 in my case
+
+# pad watchdogd
+i=0; while [ "$i" != "5249" ]; do echo >> /data/local/tmp/watchdogd_script; let i=$i+1; done
+ls -la /data/local/tmp/watchdogd_script
+
+# exchange watchdogd
+exit=1; while [ "$exit" != "0" ]; do /data/local/tmp/dirtycow /data/local/tmp/watchdogd_script /system/bin/watchdogd; exit=$?; echo $exit; done
+
+# exchange vcdbg
+exit=1; while [ "$exit" != "0" ]; do /data/local/tmp/dirtycow /data/local/tmp/su /system/bin/vcdbg; exit=$?; echo $exit; done
+
+# surf around a little, watch videos for the system to dump changes
+
+# make sure the changes were applied (should return "root")
+vcdbg -c id
+
+# reboot the system
+reboot
+
+#reconnect
+adb connect 192.168.x.x
+adb shell
+
+# dump system to shell accessible system.img
+vcdbg -c mkdir /data/tmp
+vcdbg -c chmod 777 /data/tmp
+vcdbg -c dd if=/dev/block/platform/sdhci.1/by-name/system of=/data/tmp/system.img
+vcdbg -c chmod 777 /data/tmp/system.img
+vcdbg -c chmod 777 /data
+cp -a /data/tmp/system.img /data/local/tmp/system.img
+
+#-----------
+#local
+
+# now we pull the system.img to our local system
+cd /root
+adb pull /data/local/tmp/system.img
+# 824180736 bytes in my case
+
+# not sure if all paths correct, writing this down from memory
+cd mount
+mkdir system
+mount ../system.img ./system/
+cd system/xbin
+
+# using existing files to make sure context is correct
+cp -a trapz su
+cp -a trapz supolicy
+cp -a trapz libsupol.so
+cat /root/su/su > su
+cat /root/su/libsupol.so > libsupol.so
+cat /root/su/supolicy > supolicy
+cd ../app
+cp -aR PicoTts SuperSU
+cd SuperSU/
+mv PicoTts.apk SuperSU.apk
+rm -rf arm
+rm -rf lib
+cat /root/su/SuperSU/SuperSU.apk > SuperSU.apk
+cp SuperSU.apk ../
+adb push system.img /data/local/tmp/
+
+#-----------
+#aftv
+
+# cat system.img to root accessible place
+cat /data/local/tmp/system.img | vcdbg -c 'echo "$(cat)" > /data/tmp/system.img'
+# double check file size 
+ls -la /data/tmp/system.img
+# and write back
+vcdbg -c dd if=/data/tmp/system.img of=/dev/block/platform/sdhci.1/by-name/system
+
+# just to make sure, deactivate ota service and remove banner ad while we're here
+adb shell pm hide com.amazon.device.software.ota
+pm uninstall -k --user 0 com.amazon.kso.blackbird
+
+reboot
