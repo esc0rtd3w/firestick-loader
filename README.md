@@ -2,7 +2,7 @@
 <br/>
 <br/>
 
-### Newest Detected Version: 5.2.6.7
+### Newest Detected Version: 5.2.6.8
 
 FirePwn
 Amazon FireTV Stick Loader
