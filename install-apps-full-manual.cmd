@@ -1297,6 +1297,30 @@ echo.
 
 cls
 %_color% 0e
+set appName=Showbox
+set apk=
+echo Install %appName%?
+echo.
+echo 1) Yes   2) No
+echo.
+echo.
+%_color% 0b
+echo Requirements: NONE
+echo.
+echo Info: Movies and TV Shows Streaming App
+echo.
+set /p choice=
+if %choice%==1 (
+echo.
+echo.
+echo Installing %appName%...
+echo.
+%install% "apps\media\showbox.apk"
+)
+
+
+cls
+%_color% 0e
 set appName=VLC TV
 set apk=
 echo Install %appName%?
@@ -1676,6 +1700,30 @@ echo.
 echo Installing %appName%...
 echo.
 %install% "apps\utilities\zipsigner.apk"
+)
+
+
+cls
+%_color% 0e
+set appName=Mouse Toggle
+set apk=
+echo Install %appName%?
+echo.
+echo 1) Yes   2) No
+echo.
+echo.
+%_color% 0b
+echo Requirements: NONE
+echo.
+echo Info: Mouse Emulation Using Remote
+echo.
+set /p choice=
+if %choice%==1 (
+echo.
+echo.
+echo Installing %appName%...
+echo.
+%install% "apps\utilities\mouse-toggle.apk"
 )
 
 
