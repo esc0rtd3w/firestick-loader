@@ -9,6 +9,9 @@
 127.0.0.1 softwareupdates.amazon.com
 127.0.0.1 updates.amazon.com
 
+127.0.0.1 localhost
+::1 localhost
+
 127.0.0.1 view.atdmt.com.39424.9306.302br.net
 127.0.0.1 ad.doubleclick.net.29632.9239.302br.net
 127.0.0.1 ad319m.adk2.co
@@ -367,6 +370,7 @@
 127.0.0.1 ad.doubleclick.net.61101.9330.302br.net
 127.0.0.1 view.atdmt.com.72985.9541.302br.net
 127.0.0.1 datingadnetwork.com
+127.0.0.1 zzhc.vnet.cn
 127.0.0.1 ad.doubleclick.net.43067.9296.302br.net
 127.0.0.1 ad.doubleclick.net.60013.9318.302br.net
 127.0.0.1 oasis.411affiliates.ca
@@ -914,7 +918,6 @@
 127.0.0.1 www.phylesonqjkilk.download
 127.0.0.1 r.aol.com
 127.0.0.1 count708.51yes.com
-127.0.0.1 bombora.com
 127.0.0.1 ads.mediacapital.pt
 127.0.0.1 ad457m.adk2.co
 127.0.0.1 laxpsd.112.2o7.net
@@ -1266,6 +1269,7 @@
 127.0.0.1 flyinads.com
 127.0.0.1 i.appflood.com
 127.0.0.1 weblogger-dynamic-lb.playdom.com
+127.0.0.1 li.gatehousemedia.com
 127.0.0.1 ad.doubleclick.net.25407.9185.302br.net
 127.0.0.1 metrica.yandex.by
 127.0.0.1 counter.awempire.com
@@ -1281,6 +1285,7 @@
 127.0.0.1 bannerpro.tk
 127.0.0.1 view.atdmt.com.33722.9169.302br.net
 127.0.0.1 ad.doubleclick.net.28745.9225.302br.net
+127.0.0.1 tracking.discounts-promo.ga
 127.0.0.1 ad.doubleclick.net.34719.9252.302br.net
 127.0.0.1 ad.doubleclick.net.76598.9450.302br.net
 127.0.0.1 view.atdmt.com.71873.9304.302br.net
@@ -1319,6 +1324,7 @@
 127.0.0.1 ad.doubleclick.net.59565.9318.302br.net
 127.0.0.1 ox-d.jrn.com
 127.0.0.1 sigma51.rtb.appier.net
+127.0.0.1 www.fwdssp.com
 127.0.0.1 logv15.xiti.com
 127.0.0.1 consciouschairs.com
 127.0.0.1 cksocial.hitpointstudios.com
@@ -1923,7 +1929,6 @@
 127.0.0.1 df.telemetry.microsoft.com
 127.0.0.1 view.atdmt.com.46623.9304.302br.net
 127.0.0.1 ad.doubleclick.net.76898.9076.302br.net
-127.0.0.1 ad.slutload.com
 127.0.0.1 fra415.ib.adnxs.com
 127.0.0.1 c4.gostats.pl
 127.0.0.1 s.ad121m.com
@@ -1961,6 +1966,7 @@
 127.0.0.1 view.atdmt.com.55722.9391.302br.net
 127.0.0.1 bs.serving-sys.com.47211.9349.302br.net
 127.0.0.1 banner.clickme.com.br
+127.0.0.1 li.livingsocial.com
 127.0.0.1 syndication.loganmueller.info
 127.0.0.1 ad.doubleclick.net.52032.9382.302br.net
 127.0.0.1 sm4.sitemeter.com
@@ -2454,6 +2460,7 @@
 127.0.0.1 hmz8h.voluumtrk.com
 127.0.0.1 assistonglobal.com
 127.0.0.1 count471.51yes.com
+127.0.0.1 flavordecision.com
 127.0.0.1 ad.doubleclick.net.76542.9544.302br.net
 127.0.0.1 soma.smaato.net
 127.0.0.1 www.ukbanners.com
@@ -2544,6 +2551,7 @@
 127.0.0.1 bannerexchange.cjb.net
 127.0.0.1 srx.es.ebayrtm.com
 127.0.0.1 mi-web14.prod.millennialmedia.com
+127.0.0.1 pixel.mtrcs.samba.tv
 127.0.0.1 log.dmtry.com
 127.0.0.1 users.ero-advertising.com
 127.0.0.1 banners211.hpg.com.br
@@ -2842,6 +2850,7 @@
 127.0.0.1 view.atdmt.com.77609.9661.302br.net
 127.0.0.1 d2uzdrx7k4koxz.cloudfront.net
 127.0.0.1 view.atdmt.com.68578.9549.302br.net
+127.0.0.1 li.mw.drhinternet.net
 127.0.0.1 ad243m.adk2.co
 127.0.0.1 a.sc.freepornvs.com
 127.0.0.1 loga.hit-parade.com
@@ -2932,6 +2941,7 @@
 127.0.0.1 rt01.2cnt.net
 127.0.0.1 ad.doubleclick.net.49039.9359.302br.net
 127.0.0.1 whatinteryield.jmp9.com
+127.0.0.1 evyy.net
 127.0.0.1 dbs.bitterstrawberry.org
 127.0.0.1 count33.51yes.com
 127.0.0.1 wonderlandads.com
@@ -3216,7 +3226,6 @@
 127.0.0.1 a.collective-media.net.43533.9299.302br.net
 127.0.0.1 affiliates.thinkhost.net
 127.0.0.1 ad.doubleclick.net.11953.9037.302br.net
-127.0.0.1 confirmed-profits.com
 127.0.0.1 partners.cltrda.com
 127.0.0.1 208.185.87.22.liveadvert.com
 127.0.0.1 collector-test.staging.mb-internal.com
@@ -3324,7 +3333,6 @@
 127.0.0.1 ads.game.net
 127.0.0.1 c33.smaato.net
 127.0.0.1 hsbolewhzbaffs.review
-127.0.0.1 7f1au20glg.com
 127.0.0.1 bs.serving-sys.com.36750.9282.302br.net
 127.0.0.1 ba965.voluumtrk.com
 127.0.0.1 ad.doubleclick.net.21430.9075.302br.net
@@ -3642,7 +3650,6 @@
 127.0.0.1 www.gigletcirjy.download
 127.0.0.1 fillymedia.go2affise.com
 127.0.0.1 ad.doubleclick.net.69573.9569.302br.net
-127.0.0.1 therichkids.com
 127.0.0.1 www.p.de
 127.0.0.1 ad.doubleclick.net.28828.9214.302br.net
 127.0.0.1 aps.hearstnp.com
@@ -3705,6 +3712,7 @@
 127.0.0.1 ad.doubleclick.net.11824.9034.302br.net
 127.0.0.1 public38.bravenet.com
 127.0.0.1 view.atdmt.com.70910.9519.302br.net
+127.0.0.1 ad.xiaomi.com
 127.0.0.1 v2.visualwebsiteoptimizer.com
 127.0.0.1 servedby.eleavers.com
 127.0.0.1 orw2k.voluumtrk.com
@@ -3728,7 +3736,6 @@
 127.0.0.1 ad475m.adk2.co
 127.0.0.1 doubleclick.net.44824.9338.302br.net
 127.0.0.1 ad.doubleclick.net.51204.9318.302br.net
-127.0.0.1 trafficadept.com
 127.0.0.1 ad.doubleclick.net.75417.9366.302br.net
 127.0.0.1 ad.doubleclick.net.34358.9225.302br.net
 127.0.0.1 view.atdmt.com.10452.9023.302br.net
@@ -3818,7 +3825,6 @@
 127.0.0.1 count711.51yes.com
 127.0.0.1 ad.doubleclick.net.34334.9225.302br.net
 127.0.0.1 ads.parrysound.com
-127.0.0.1 cherrythread.com
 127.0.0.1 cbjs.baidu.com
 127.0.0.1 u099.28.spylog.com
 127.0.0.1 new.gtsads.com
@@ -3832,6 +3838,7 @@
 127.0.0.1 smashsurprise.com
 127.0.0.1 ad.doubleclick.net.65229.9499.302br.net
 127.0.0.1 view.atdmt.com.71374.9489.302br.net
+127.0.0.1 heias.com
 127.0.0.1 view.atdmt.com.73015.9489.302br.net
 127.0.0.1 ad346m.adk2.co
 127.0.0.1 casinorewards.com
@@ -4000,7 +4007,6 @@
 127.0.0.1 view.atdmt.com.318.6000.302br.net
 127.0.0.1 www.e-tracker.de
 127.0.0.1 z5x.net
-127.0.0.1 peacepowder.com
 127.0.0.1 view.atdmt.com.24135.9169.302br.net
 127.0.0.1 www3.mpnrs.com
 127.0.0.1 bs.serving-sys.com.24620.9182.302br.net
@@ -4728,7 +4734,6 @@
 127.0.0.1 ad.doubleclick.net.72733.9454.302br.net
 127.0.0.1 reduxmedia.com
 127.0.0.1 media.hasoffers.com
-127.0.0.1 clients.tbo.com
 127.0.0.1 a.dontibar.com
 127.0.0.1 ad.doubleclick.net.37661.9298.302br.net
 127.0.0.1 openx.tai.pl
@@ -5064,6 +5069,7 @@
 127.0.0.1 www.quantcount.com
 127.0.0.1 ad.doubleclick.net.36373.9279.302br.net
 127.0.0.1 dust.ipfingerprint.com
+127.0.0.1 analytics.posttv.com
 127.0.0.1 rmedia.boston.com
 127.0.0.1 tchibo03.webtrekk.net
 127.0.0.1 ad136.hpg.com.br
@@ -5113,6 +5119,7 @@
 127.0.0.1 ad.doubleclick.net.40911.9313.302br.net
 127.0.0.1 web-jp.ad-v.jp
 127.0.0.1 server-us.imrworldwide.com
+127.0.0.1 justuno.com
 127.0.0.1 ad.doubleclick.net.31401.9240.302br.net
 127.0.0.1 pvcteegjdrecombine.review
 127.0.0.1 ad.doubleclick.net.67573.9336.302br.net
@@ -5441,6 +5448,7 @@
 127.0.0.1 ad.doubleclick.net.56999.9401.302br.net
 127.0.0.1 mpm.payback.de
 127.0.0.1 iptrack02.webtrekk.net
+127.0.0.1 producer.getwisdom.io
 127.0.0.1 offerservice.go2cloud.org
 127.0.0.1 tracking.directadsmedia.com
 127.0.0.1 www.favoritismkwaqmz.download
@@ -5451,7 +5459,6 @@
 127.0.0.1 stx14.sextracker.com
 127.0.0.1 bs.serving-sys.com.36585.9244.302br.net
 127.0.0.1 ad.doubleclick.net.75511.9627.302br.net
-127.0.0.1 superficialsink.com
 127.0.0.1 premiercreditcard.com
 127.0.0.1 ad.doubleclick.net.28754.9225.302br.net
 127.0.0.1 u5303.67.spylog.com
@@ -5568,7 +5575,6 @@
 127.0.0.1 ad.doubleclick.net.76959.9079.302br.net
 127.0.0.1 ad.doubleclick.net.76735.9649.302br.net
 127.0.0.1 track.scanguard.com
-127.0.0.1 ads.aol.com
 127.0.0.1 bekissedxpyno.download
 127.0.0.1 delivery2.trafficjunky.net
 127.0.0.1 ad.doubleclick.net.80987.9584.302br.net
@@ -5695,6 +5701,7 @@
 127.0.0.1 d2vt6q0n0iy66w.cloudfront.net
 127.0.0.1 view.atdmt.com.66839.9517.302br.net
 127.0.0.1 scrooge.theindychannel.com
+127.0.0.1 r.logrocket.io
 127.0.0.1 ad.doubleclick.net.59580.9318.302br.net
 127.0.0.1 count837.51yes.com
 127.0.0.1 ad54.hpg.com.br
@@ -5941,11 +5948,13 @@
 127.0.0.1 ad.doubleclick.net.40806.9314.302br.net
 127.0.0.1 2191.engine.mobileapptracking.com
 127.0.0.1 affrh2014.com
+127.0.0.1 li.azstarnet.com
 127.0.0.1 rlyg7.voluumtrk.com
 127.0.0.1 click.ewebse.com
 127.0.0.1 ad419m.adk2.co
 127.0.0.1 cdn.mobicow.com
 127.0.0.1 www.mediaforce.com
+127.0.0.1 pub.network
 127.0.0.1 bs.serving-sys.com.76262.9639.302br.net
 127.0.0.1 ehg-tigerdirect.hitbox.com
 127.0.0.1 media-servers.net
@@ -6088,6 +6097,7 @@
 127.0.0.1 view.atdmt.com.45262.9342.302br.net
 127.0.0.1 ad.doubleclick.net.59543.9318.302br.net
 127.0.0.1 buyhitscheap.com
+127.0.0.1 optmnstr.com
 127.0.0.1 ad.doubleclick.net.60333.9318.302br.net
 127.0.0.1 ad.doubleclick.net.75164.9336.302br.net
 127.0.0.1 dean.doublepimp.com
@@ -6150,7 +6160,6 @@
 127.0.0.1 ad.doubleclick.net.75306.9625.302br.net
 127.0.0.1 view.atdmt.com.24290.9170.302br.net
 127.0.0.1 view.atdmt.com.46840.9304.302br.net
-127.0.0.1 shockingswing.com
 127.0.0.1 vtrtl.de
 127.0.0.1 www.tzgcxofordid.review
 127.0.0.1 ad.doubleclick.net.74816.9336.302br.net
@@ -6350,7 +6359,6 @@
 127.0.0.1 ad.doubleclick.net.65704.9503.302br.net
 127.0.0.1 ad.doubleclick.net.25432.9185.302br.net
 127.0.0.1 w1.luckyorange.com
-127.0.0.1 affiliates.ultrahosting.com
 127.0.0.1 ad-emea.doubleclick.net.963.9007.302br.net
 127.0.0.1 ad255m.adk2.co
 127.0.0.1 gata.ero-advertising.com
@@ -6453,6 +6461,7 @@
 127.0.0.1 infolinks.com
 127.0.0.1 ad.doubleclick.net.30003.9124.302br.net
 127.0.0.1 ad.doubleclick.net.31941.9226.302br.net
+127.0.0.1 bizible.com
 127.0.0.1 planituk.go2cloud.org
 127.0.0.1 ad.il.doubleclick.net
 127.0.0.1 udmserve.net
@@ -6668,7 +6677,6 @@
 127.0.0.1 ad.valuecommerce.ne.jp
 127.0.0.1 mp.piano-media.com
 127.0.0.1 vsc.send.microad.jp
-127.0.0.1 familiarfloor.com
 127.0.0.1 www.popunder.net
 127.0.0.1 click168.com
 127.0.0.1 view.atdmt.com.26170.9201.302br.net
@@ -7003,6 +7011,7 @@
 127.0.0.1 ad.doubleclick.net.22590.9136.302br.net
 127.0.0.1 checkstat.nl
 127.0.0.1 homesidelendinginc.com
+127.0.0.1 securedopen-bp.com
 127.0.0.1 ad151m.adk2.co
 127.0.0.1 view.atdmt.com.26918.9201.302br.net
 127.0.0.1 view.atdmt.com.24226.9114.302br.net
@@ -7261,6 +7270,7 @@
 127.0.0.1 ad.doubleclick.net.75015.9336.302br.net
 127.0.0.1 ad.doubleclick.net.42609.9325.302br.net
 127.0.0.1 ads11.focalink.com
+127.0.0.1 1rx.io
 127.0.0.1 all4spy.com
 127.0.0.1 dumbfoundrurjldk.download
 127.0.0.1 gqe0d.voluumtrk.com
@@ -7440,7 +7450,6 @@
 127.0.0.1 08.185.87.169.liveadvert.com
 127.0.0.1 view.atdmt.com.27152.9202.302br.net
 127.0.0.1 www.soclock.com
-127.0.0.1 ads.betfair.com.au
 127.0.0.1 ad.aquamediadirect.com
 127.0.0.1 count638.51yes.com
 127.0.0.1 ad.doubleclick.net.59820.9318.302br.net
@@ -7905,6 +7914,7 @@
 127.0.0.1 ad-emea.doubleclick.net.42808.9326.302br.net
 127.0.0.1 ad.doubleclick.net.68533.9499.302br.net
 127.0.0.1 integrate.112.2o7.net
+127.0.0.1 adback.co
 127.0.0.1 ad.doubleclick.net.58072.9418.302br.net
 127.0.0.1 ad.doubleclick.net.35042.9076.302br.net
 127.0.0.1 partners.yobt.tv
@@ -7946,6 +7956,7 @@
 127.0.0.1 startapp.go2cloud.org
 127.0.0.1 view.atdmt.com.26702.9201.302br.net
 127.0.0.1 ad342m.adk2.co
+127.0.0.1 scintillatingscissors.com
 127.0.0.1 ebao.duba.net
 127.0.0.1 view.atdmt.com.38532.9304.302br.net
 127.0.0.1 view.atdmt.com.45231.9342.302br.net
@@ -8179,7 +8190,6 @@
 127.0.0.1 ad.doubleclick.net.50620.9279.302br.net
 127.0.0.1 ad.doubleclick.net.73590.9619.302br.net
 127.0.0.1 bs.serving-sys.com.33507.9243.302br.net
-127.0.0.1 chiefcurrent.com
 127.0.0.1 markedcrayon.com
 127.0.0.1 cp.intl.match.com
 127.0.0.1 ad.doubleclick.net.78350.9671.302br.net
@@ -8205,6 +8215,7 @@
 127.0.0.1 ads2.williamhill.com
 127.0.0.1 ad-emea.doubleclick.net.23180.9162.302br.net
 127.0.0.1 cdn7.deals-discounts-codes.com
+127.0.0.1 smetrics.bestbuy.com
 127.0.0.1 view.atdmt.com.27096.9202.302br.net
 127.0.0.1 ad.doubleclick.net.60632.9439.302br.net
 127.0.0.1 ad.doubleclick.net.29896.9240.302br.net
@@ -8812,6 +8823,7 @@
 127.0.0.1 stat.flashtalking.com
 127.0.0.1 gpaper246.112.2o7.net
 127.0.0.1 08.185.87.181.liveadvert.com
+127.0.0.1 logsss.com
 127.0.0.1 view.atdmt.com.38340.9304.302br.net
 127.0.0.1 ad.doubleclick.net.49209.9363.302br.net
 127.0.0.1 atdmt.com.55788.9391.302br.net
@@ -8869,7 +8881,6 @@
 127.0.0.1 ad.doubleclick.net.80426.9515.302br.net
 127.0.0.1 ads-c.focalink.com
 127.0.0.1 qyrix.go2cloud.org
-127.0.0.1 practicetoothpaste.com
 127.0.0.1 www.abidinglynsygto.download
 127.0.0.1 ad.doubleclick.net.29670.9239.302br.net
 127.0.0.1 ad.doubleclick.net.37034.9291.302br.net
@@ -9043,6 +9054,7 @@
 127.0.0.1 metrics.ryanair.com
 127.0.0.1 bs.serving-sys.com.47009.9349.302br.net
 127.0.0.1 ad.doubleclick.net.42641.9325.302br.net
+127.0.0.1 fanaticalfly.com
 127.0.0.1 www.data-eroadvertising.com
 127.0.0.1 view.atdmt.com.39947.88.302br.net
 127.0.0.1 ad.doubleclick.net.65842.9503.302br.net
@@ -9239,7 +9251,6 @@
 127.0.0.1 ad.doubleclick.net.74766.9336.302br.net
 127.0.0.1 xn--adspace-kvg.ero-advertising.com
 127.0.0.1 ad.doubleclick.net.58994.9318.302br.net
-127.0.0.1 stream4fun.com
 127.0.0.1 count89.51yes.com
 127.0.0.1 nuseek.com
 127.0.0.1 affl.sucuri.net
@@ -9341,7 +9352,6 @@
 127.0.0.1 ad79.paycount.com
 127.0.0.1 t.paypal.com
 127.0.0.1 ad.doubleclick.net.80422.9515.302br.net
-127.0.0.1 neoffic.com
 127.0.0.1 ad-emea.doubleclick.net.979.9007.302br.net
 127.0.0.1 clickhype.com
 127.0.0.1 view.atdmt.com.34519.9251.302br.net
@@ -9769,6 +9779,7 @@
 127.0.0.1 bs.serving-sys.com.20442.9120.302br.net
 127.0.0.1 video.digidip.net
 127.0.0.1 piquantpigs.com
+127.0.0.1 analytics.siliconexpert.com
 127.0.0.1 ad.doubleclick.net.33113.9240.302br.net
 127.0.0.1 count187.51yes.com
 127.0.0.1 www.affiliateshowcase.com
@@ -10125,6 +10136,7 @@
 127.0.0.1 ns1.metacount.com
 127.0.0.1 bs.serving-sys.com.20638.9120.302br.net
 127.0.0.1 bs.serving-sys.com.77565.9244.302br.net
+127.0.0.1 adservice.google.com
 127.0.0.1 ad.doubleclick.net.51833.9086.302br.net
 127.0.0.1 ad.doubleclick.net.69545.9566.302br.net
 127.0.0.1 clickeu.admailtiser.com
@@ -10393,6 +10405,7 @@
 127.0.0.1 ad.doubleclick.net.56360.9078.302br.net
 127.0.0.1 ad177.paycount.com
 127.0.0.1 ad.doubleclick.net.35650.9053.302br.net
+127.0.0.1 resonate.com
 127.0.0.1 ads3.focalink.com
 127.0.0.1 ad.doubleclick.net.42114.9318.302br.net
 127.0.0.1 ifdds.voluumtrk.com
@@ -10442,7 +10455,6 @@
 127.0.0.1 dnxek.voluumtrk.com
 127.0.0.1 secure-ads.pictela.net
 127.0.0.1 ad.doubleclick.net.44420.9336.302br.net
-127.0.0.1 shiveringsail.com
 127.0.0.1 public28.bravenet.com
 127.0.0.1 stage.alphagirlz.mobi
 127.0.0.1 twitter-badges.s3.amazonaws.com
@@ -10957,6 +10969,7 @@
 127.0.0.1 view.atdmt.com.67873.9526.302br.net
 127.0.0.1 fra40.ib.adnxs.com
 127.0.0.1 view.atdmt.com.47723.9304.302br.net
+127.0.0.1 analytics.icons8.com
 127.0.0.1 a.collective-media.net.49497.9362.302br.net
 127.0.0.1 vendiblefqgmayr.download
 127.0.0.1 view.atdmt.com.45358.9342.302br.net
@@ -11033,7 +11046,6 @@
 127.0.0.1 adbuddiz.com
 127.0.0.1 fast.fedex.demdex.net
 127.0.0.1 ad289m.adk2.co
-127.0.0.1 ads.s3.sitepoint.com
 127.0.0.1 view.atdmt.com.38274.9304.302br.net
 127.0.0.1 partner.cynapse.com
 127.0.0.1 ad.pl.doubleclick.net
@@ -11222,6 +11234,7 @@
 127.0.0.1 ad.doubleclick.net.44312.9336.302br.net
 127.0.0.1 ad.doubleclick.net.79352.9678.302br.net
 127.0.0.1 ad.doubleclick.net.74657.9336.302br.net
+127.0.0.1 tracker.bannerflow.com
 127.0.0.1 view.atdmt.com.79871.9491.302br.net
 127.0.0.1 ad.doubleclick.net.72469.9607.302br.net
 127.0.0.1 137.6.87.194.dynamic.dol.ru
@@ -11344,7 +11357,6 @@
 127.0.0.1 itxt3.us.intellitxt.com
 127.0.0.1 emarketing.ljhooker.com
 127.0.0.1 pub25.bravenet.com
-127.0.0.1 7mu36somt5.com
 127.0.0.1 ad.doubleclick.net.66016.9501.302br.net
 127.0.0.1 a.collective-media.net.43531.9299.302br.net
 127.0.0.1 ad.ableclick.com
@@ -11541,7 +11553,6 @@
 127.0.0.1 beta.easyhitcounters.com
 127.0.0.1 www.clicksurecpa.com
 127.0.0.1 advspot.com
-127.0.0.1 interstat.hu
 127.0.0.1 ad.doubleclick.net.34911.9239.302br.net
 127.0.0.1 widgets.mozo.com.au
 127.0.0.1 ad.doubleclick.net.78776.9326.302br.net
@@ -11653,7 +11664,6 @@
 127.0.0.1 view.atdmt.com.72946.9517.302br.net
 127.0.0.1 www.caartoonnetwork.com
 127.0.0.1 mobpartner.com
-127.0.0.1 pop-under.ru
 127.0.0.1 view.atdmt.com.67650.9519.302br.net
 127.0.0.1 atkins.vo.llnwd.net
 127.0.0.1 ad.doubleclick.net.18803.9087.302br.net
@@ -11754,7 +11764,6 @@
 127.0.0.1 u053.48.spylog.com
 127.0.0.1 bs.serving-sys.com.24706.9181.302br.net
 127.0.0.1 bugstest.adition.com
-127.0.0.1 guitarbelieve.com
 127.0.0.1 view.atdmt.com.70914.9519.302br.net
 127.0.0.1 ad.doubleclick.net.12199.9038.302br.net
 127.0.0.1 sengreensbaxsovax.download
@@ -12018,6 +12027,7 @@
 127.0.0.1 banner.ero-advertising.com
 127.0.0.1 ad.doubleclick.net.75376.9088.302br.net
 127.0.0.1 bank-44.ads.mp.mydas.mobi
+127.0.0.1 l1.britannica.com
 127.0.0.1 www.adatom.com
 127.0.0.1 bs.serving-sys.com.47100.9349.302br.net
 127.0.0.1 ad.doubleclick.net.58377.9318.302br.net
@@ -12344,7 +12354,7 @@
 127.0.0.1 tracker.clicktrade.com
 127.0.0.1 track.searchignite.com
 127.0.0.1 ad.doubleclick.net.76032.9635.302br.net
-127.0.0.1 heias.com
+127.0.0.1 emebo.com
 127.0.0.1 secure.xsrving.com
 127.0.0.1 ads16.focalink.com
 127.0.0.1 a2shd.realshieldlinked.com
@@ -12475,6 +12485,7 @@
 127.0.0.1 adqadl.timesink.com
 127.0.0.1 uttermosthobbies.com
 127.0.0.1 videostat.index.hu
+127.0.0.1 analytics.poolshool.com
 127.0.0.1 a.visadd.com
 127.0.0.1 ad.doubleclick.net.61108.9450.302br.net
 127.0.0.1 ad73.paycount.com
@@ -12543,6 +12554,7 @@
 127.0.0.1 gsfr1.voluumtrk.com
 127.0.0.1 i8vnk.voluumtrk.com
 127.0.0.1 ad.doubleclick.net.14489.9070.302br.net
+127.0.0.1 hud8mxdt.computerhelpmirror.top
 127.0.0.1 hitcounter.ru
 127.0.0.1 api.applifier.com
 127.0.0.1 boingdragon.com
@@ -12819,8 +12831,8 @@
 127.0.0.1 adexperts.com
 127.0.0.1 ad244m.adk2.co
 127.0.0.1 clashmobile.com
+127.0.0.1 pxl.iqm.com
 127.0.0.1 banner.linkexchange.net
-127.0.0.1 ads.returnpath.net
 127.0.0.1 www.lexiconsahzdcver.download
 127.0.0.1 ad.doubleclick.net.36404.9077.302br.net
 127.0.0.1 ad.doubleclick.net.65647.9503.302br.net
@@ -13305,6 +13317,7 @@
 127.0.0.1 banners.webmasterplan.com
 127.0.0.1 ad.doubleclick.net.57009.9404.302br.net
 127.0.0.1 adplace.adsame.com
+127.0.0.1 attribution.report
 127.0.0.1 affiliate.fr.espotting.com
 127.0.0.1 view.atdmt.com.45378.9342.302br.net
 127.0.0.1 esomniture.com
@@ -13337,7 +13350,7 @@
 127.0.0.1 www.hyperlinksecure.com
 127.0.0.1 ad.doubleclick.net.23943.9166.302br.net
 127.0.0.1 u011.75.spylog.com
-127.0.0.1 q.stripe.com
+127.0.0.1 tredirect.com
 127.0.0.1 ad138.paycount.com
 127.0.0.1 bs.serving-sys.com.10023.9024.302br.net
 127.0.0.1 cdn.valueclick.net
@@ -13391,7 +13404,6 @@
 127.0.0.1 count578.51yes.com
 127.0.0.1 count138.51yes.com
 127.0.0.1 view.atdmt.com.45256.9342.302br.net
-127.0.0.1 media.richrelevance.com
 127.0.0.1 ads.trafficaces.com
 127.0.0.1 ad.doubleclick.net.79286.9678.302br.net
 127.0.0.1 eu-pn2.adserver.yahoo.com
@@ -13486,6 +13498,7 @@
 127.0.0.1 ad.doubleclick.net.40152.9308.302br.net
 127.0.0.1 media.tipjunkie.com
 127.0.0.1 jbrotrk.com
+127.0.0.1 adserve.io
 127.0.0.1 ad.doubleclick.net.14079.9059.302br.net
 127.0.0.1 pixel.tcog.cp1.news.com.au
 127.0.0.1 ad.doubleclick.net.80977.9689.302br.net
@@ -13522,7 +13535,7 @@
 127.0.0.1 images.bravenet.com
 127.0.0.1 08.185.87.3.liveadvert.com
 127.0.0.1 adserver.bing.com
-127.0.0.1 rapidkittens.com
+127.0.0.1 px.gfycat.com
 127.0.0.1 view.atdmt.com.38940.9304.302br.net
 127.0.0.1 view.atdmt.com.42513.9306.302br.net
 127.0.0.1 wingatemedia.go2cloud.org
@@ -13596,6 +13609,7 @@
 127.0.0.1 mylink-today.com
 127.0.0.1 in.cybererotica.com
 127.0.0.1 ad.doubleclick.net.31045.9240.302br.net
+127.0.0.1 cost2buy.net
 127.0.0.1 faeuz.voluumtrk.com
 127.0.0.1 appdog.com
 127.0.0.1 ad-emea.doubleclick.net.23272.9162.302br.net
@@ -13988,6 +14002,7 @@
 127.0.0.1 www.mbixuxsfeoutfields.review
 127.0.0.1 ignitad.com
 127.0.0.1 pub48.bravenet.com
+127.0.0.1 ads-twitter.com
 127.0.0.1 a722-a332-7273-9e88.reporo.net
 127.0.0.1 www.kdukvh.com
 127.0.0.1 mediciinternet.go2cloud.org
@@ -14163,6 +14178,7 @@
 127.0.0.1 measurementaz.com
 127.0.0.1 ad.doubleclick.net.74658.9336.302br.net
 127.0.0.1 ad.doubleclick.net.33610.9249.302br.net
+127.0.0.1 anstrex.com
 127.0.0.1 w0.extreme-dm.com
 127.0.0.1 bs.serving-sys.com.24720.9181.302br.net
 127.0.0.1 ad.doubleclick.net.56307.9078.302br.net
@@ -14177,6 +14193,7 @@
 127.0.0.1 sync.mathtag.com
 127.0.0.1 nl.adserver.yahoo.com
 127.0.0.1 view.atdmt.com.10216.9002.302br.net
+127.0.0.1 pubmine.com
 127.0.0.1 nxmav.voluumtrk.com
 127.0.0.1 bidsystem.adknowledge.com
 127.0.0.1 www.freecamdollars.com
@@ -14190,6 +14207,7 @@
 127.0.0.1 ads.kelbymediagroup.com
 127.0.0.1 croissed.info
 127.0.0.1 ads.piramit.net
+127.0.0.1 analytics.swiggy.com
 127.0.0.1 acai.go2cloud.org
 127.0.0.1 bugsense.com
 127.0.0.1 clicksales.com
@@ -14398,7 +14416,6 @@
 127.0.0.1 ads4.virtual-nights.com
 127.0.0.1 ad.doubleclick.net.33131.9240.302br.net
 127.0.0.1 ad.doubleclick.net.23738.9164.302br.net
-127.0.0.1 www.mcssl.com
 127.0.0.1 ad.doubleclick.net.60879.9336.302br.net
 127.0.0.1 ad.doubleclick.net.34558.9252.302br.net
 127.0.0.1 ad425m.adk2.co
@@ -14429,6 +14446,7 @@
 127.0.0.1 ad.doubleclick.net.67422.9336.302br.net
 127.0.0.1 view.atdmt.com.67719.9519.302br.net
 127.0.0.1 view.atdmt.com.45340.9342.302br.net
+127.0.0.1 metrics.gfycat.com
 127.0.0.1 view.atdmt.com.38475.9304.302br.net
 127.0.0.1 vad.mainentrypoint.com
 127.0.0.1 15.ptp22.com
@@ -14529,7 +14547,6 @@
 127.0.0.1 sprint.r.delivery.net
 127.0.0.1 ad.doubleclick.net.41296.9317.302br.net
 127.0.0.1 are-ter.com
-127.0.0.1 yabuka.com
 127.0.0.1 ads.realslutparty.com
 127.0.0.1 ad.doubleclick.net.48574.9318.302br.net
 127.0.0.1 public10.bravenet.com
@@ -14621,7 +14638,6 @@
 127.0.0.1 cplpro.go2cloud.org
 127.0.0.1 count202.51yes.com
 127.0.0.1 ad.doubleclick.net.47335.9311.302br.net
-127.0.0.1 shallowschool.com
 127.0.0.1 ad.doubleclick.net.28715.9225.302br.net
 127.0.0.1 ad.doubleclick.net.41559.9317.302br.net
 127.0.0.1 c5dotcom.2cnt.net
@@ -14733,7 +14749,6 @@
 127.0.0.1 6ecdz.voluumtrk.com
 127.0.0.1 ad.doubleclick.net.59320.9318.302br.net
 127.0.0.1 view.atdmt.com.67946.9528.302br.net
-127.0.0.1 www.comunedeicittadini.it
 127.0.0.1 widgettool.net
 127.0.0.1 geo.ziffdavis.com
 127.0.0.1 sls.go2cloud.org
@@ -14986,6 +15001,7 @@
 127.0.0.1 v.wqsph.net
 127.0.0.1 count305.51yes.com
 127.0.0.1 c17.statcounter.com
+127.0.0.1 beemray.com
 127.0.0.1 advertlets.com
 127.0.0.1 mobile-ads.wifog.com
 127.0.0.1 ad.doubleclick.net.40820.9314.302br.net
@@ -15185,7 +15201,6 @@
 127.0.0.1 ad.doubleclick.net.40802.9314.302br.net
 127.0.0.1 view.atdmt.com.46567.9304.302br.net
 127.0.0.1 zs.zeroredirect1.com
-127.0.0.1 provalist.info
 127.0.0.1 ad-emea.doubleclick.net.77931.9501.302br.net
 127.0.0.1 www.fomentingbuutbsdi.download
 127.0.0.1 ad.doubleclick.net.57411.9166.302br.net
@@ -15391,7 +15406,6 @@
 127.0.0.1 ad.doubleclick.net.14066.9059.302br.net
 127.0.0.1 www.onclickmax.com
 127.0.0.1 ads.cnet.com
-127.0.0.1 apusx.com
 127.0.0.1 companiedhhplrdpp.download
 127.0.0.1 trafficmagnet.com
 127.0.0.1 www.inebriatesqmwpaz.download
@@ -15562,6 +15576,7 @@
 127.0.0.1 ad.trafficgate.net
 127.0.0.1 adland.ru
 127.0.0.1 ad.doubleclick.net.26047.9198.302br.net
+127.0.0.1 mltrk.io
 127.0.0.1 ad.doubleclick.net.72836.9613.302br.net
 127.0.0.1 i.txtsrving.info
 127.0.0.1 www.bettraf.com
@@ -15596,7 +15611,6 @@
 127.0.0.1 www.humdrumsqflyl.download
 127.0.0.1 08.185.87.167.liveadvert.com
 127.0.0.1 bxtop.voluumtrk.com
-127.0.0.1 spectacularsnail.com
 127.0.0.1 ad03.paycount.com
 127.0.0.1 affiliates.bigdoggie.net
 127.0.0.1 view.atdmt.com.67901.9526.302br.net
@@ -15683,7 +15697,8 @@
 127.0.0.1 bs.serving-sys.com.42245.9320.302br.net
 127.0.0.1 ad.doubleclick.net.43685.9335.302br.net
 127.0.0.1 ad262m.adk2.co
-127.0.0.1 naganoadigei.com
+127.0.0.1 brealtime.com
+127.0.0.1 xchange.ro
 127.0.0.1 chat.adspaces.ero-advertising.com
 127.0.0.1 logs11.xiti.com
 127.0.0.1 ad.doubleclick.net.34557.9252.302br.net
@@ -15927,6 +15942,7 @@
 127.0.0.1 ct.cnet-ssa.cnet.com
 127.0.0.1 ad2.bannerbank.ru
 127.0.0.1 ad.doubleclick.net.14515.9073.302br.net
+127.0.0.1 webcontentassessor.com
 127.0.0.1 img.prohardver.hu
 127.0.0.1 aff.camplace.com
 127.0.0.1 bhconsulting.go2cloud.org
@@ -15944,7 +15960,6 @@
 127.0.0.1 counter.nope.dk
 127.0.0.1 7vhyc.voluumtrk.com
 127.0.0.1 vikingtrck.com
-127.0.0.1 adlightning.com
 127.0.0.1 ranks.com
 127.0.0.1 ad.ir.ru
 127.0.0.1 ad.doubleclick.net.21712.9075.302br.net
@@ -15955,6 +15970,7 @@
 127.0.0.1 208.185.87.204.liveadvert.com
 127.0.0.1 l3egp.voluumtrk.com
 127.0.0.1 www.bookcorps.com
+127.0.0.1 ads-game-187f4.firebaseapp.com
 127.0.0.1 ad.doubleclick.net.51259.9318.302br.net
 127.0.0.1 x.skimresources.com
 127.0.0.1 ad.doubleclick.net.72474.9607.302br.net
@@ -15979,7 +15995,6 @@
 127.0.0.1 08.185.87.187.liveadvert.com
 127.0.0.1 ad.doubleclick.net.23354.9075.302br.net
 127.0.0.1 ad.doubleclick.net.74870.9336.302br.net
-127.0.0.1 bumpberam.pro
 127.0.0.1 bs.serving-sys.com.76247.9639.302br.net
 127.0.0.1 view.atdmt.com.55992.9391.302br.net
 127.0.0.1 awjul19.radar11ab.co.uk
@@ -16466,7 +16481,6 @@
 127.0.0.1 count670.51yes.com
 127.0.0.1 click.absoluteagency.com
 127.0.0.1 ads222.hpg.com.br
-127.0.0.1 alladvantage.com
 127.0.0.1 trackword.net
 127.0.0.1 www.lacodeworks.com
 127.0.0.1 count619.51yes.com
@@ -16765,10 +16779,8 @@
 127.0.0.1 ad.doubleclick.net.67333.9336.302br.net
 127.0.0.1 3grs6.voluumtrk.com
 127.0.0.1 a.forkitz.com
-127.0.0.1 incrediblesugar.com
 127.0.0.1 delivery.uauniverse.com
 127.0.0.1 7cxcrejm.com
-127.0.0.1 provideplant.com
 127.0.0.1 w55c.net
 127.0.0.1 vwr1.hitbox.com
 127.0.0.1 webpagescripts.net
@@ -16920,6 +16932,7 @@
 127.0.0.1 smssts.3g.cn
 127.0.0.1 mata.ero-advertising.com
 127.0.0.1 1695693.r.msn.com
+127.0.0.1 rayjump.com
 127.0.0.1 static.shiltirs.com
 127.0.0.1 ad.doubleclick.net.33119.9240.302br.net
 127.0.0.1 traveladvertising.com
@@ -17019,7 +17032,6 @@
 127.0.0.1 mobstac.com
 127.0.0.1 ad.doubleclick.net.33607.9249.302br.net
 127.0.0.1 ad.doubleclick.net.78672.9671.302br.net
-127.0.0.1 cowledges.com
 127.0.0.1 adfarm.mediaplex.com.22234.9130.302br.net
 127.0.0.1 geoloc39.geovisite.com
 127.0.0.1 www.alliancesqcqet.download
@@ -17119,6 +17131,7 @@
 127.0.0.1 bank-83.ads.mp.mydas.mobi
 127.0.0.1 fra122.ib.adnxs.com
 127.0.0.1 ad.doubleclick.net.49939.9365.302br.net
+127.0.0.1 googletagservices.com
 127.0.0.1 www.deloton.com
 127.0.0.1 imageceu1.247realmedia.com
 127.0.0.1 counter15.sextracker.be
@@ -17251,6 +17264,7 @@
 127.0.0.1 bs.serving-sys.com.47192.9349.302br.net
 127.0.0.1 sigma73.rtb.appier.net
 127.0.0.1 ad.doubleclick.net.73661.9620.302br.net
+127.0.0.1 t.frtyo.com
 127.0.0.1 ad.doubleclick.net.21562.9075.302br.net
 127.0.0.1 ad.doubleclick.net.34424.9225.302br.net
 127.0.0.1 ad.doubleclick.net.57243.9406.302br.net
@@ -17563,6 +17577,7 @@
 127.0.0.1 counter6.bravenet.com
 127.0.0.1 count856.51yes.com
 127.0.0.1 banners212.hpg.com.br
+127.0.0.1 tracking.ibxlink.com
 127.0.0.1 counter3.sextracker.be
 127.0.0.1 232.6.87.194.dynamic.dol.ru
 127.0.0.1 ad.doubleclick.net.29755.9239.302br.net
@@ -17997,6 +18012,7 @@
 127.0.0.1 ad.doubleclick.net.65086.9496.302br.net
 127.0.0.1 adserver.ads360.com
 127.0.0.1 ukatoe.com
+127.0.0.1 dmp.mall.tv
 127.0.0.1 ad.doubleclick.net.57014.9404.302br.net
 127.0.0.1 ad.doubleclick.net.76174.9635.302br.net
 127.0.0.1 affiliatetrading.go2cloud.org
@@ -18509,7 +18525,6 @@
 127.0.0.1 lb.statsevent.com
 127.0.0.1 ad392m.adk2.co
 127.0.0.1 amtracking.go2cloud.org
-127.0.0.1 tracker.cztorrent.net
 127.0.0.1 w33.hitbox.com
 127.0.0.1 view.atdmt.com.66747.9517.302br.net
 127.0.0.1 a.collective-media.net.68177.9535.302br.net
@@ -19062,6 +19077,7 @@
 127.0.0.1 ad.doubleclick.net.51209.9318.302br.net
 127.0.0.1 performance.affiliaxe.com
 127.0.0.1 ad.doubleclick.net.75963.9632.302br.net
+127.0.0.1 m.yyfymj.com
 127.0.0.1 a.collective-media.net.42476.9289.302br.net
 127.0.0.1 ad.doubleclick.net.75258.9336.302br.net
 127.0.0.1 lcs.livedoor.net
@@ -19101,6 +19117,7 @@
 127.0.0.1 yads.zedo.com
 127.0.0.1 click.livejasmin.com
 127.0.0.1 mvakbserenates.review
+127.0.0.1 cdn.heapanalytics.com
 127.0.0.1 ad.doubleclick.net.22641.9137.302br.net
 127.0.0.1 view.atdmt.com.73091.9615.302br.net
 127.0.0.1 sfgybrfoveracting.review
@@ -19344,7 +19361,7 @@
 127.0.0.1 ad.doubleclick.net.73384.9621.302br.net
 127.0.0.1 mogofinance.go2affise.com
 127.0.0.1 ad.doubleclick.net.74631.9336.302br.net
-127.0.0.1 scintillatingscissors.com
+127.0.0.1 hdscout.com
 127.0.0.1 ad.doubleclick.net.31344.9240.302br.net
 127.0.0.1 sg.geo.p.xpanama.net
 127.0.0.1 view.atdmt.com.67722.9519.302br.net
@@ -19395,8 +19412,6 @@
 127.0.0.1 ad.doubleclick.net.77821.9665.302br.net
 127.0.0.1 ehg-comcast.hitbox.com
 127.0.0.1 ad.doubleclick.net.67263.9336.302br.net
-127.0.0.1 enoratraffic.com
-127.0.0.1 xchange.ro
 127.0.0.1 audit.median.hu
 127.0.0.1 swx.domob.cn
 127.0.0.1 weedoit.fr
@@ -19479,6 +19494,7 @@
 127.0.0.1 geoloc94.geovisite.com
 127.0.0.1 ad.doubleclick.net.49433.9325.302br.net
 127.0.0.1 escati.linkopp.net
+127.0.0.1 go-mpulse.net
 127.0.0.1 ad.doubleclick.net.41784.9317.302br.net
 127.0.0.1 lobstersctero.download
 127.0.0.1 www.drtserver.com
@@ -19585,7 +19601,6 @@
 127.0.0.1 bs.serving-sys.com.47102.9349.302br.net
 127.0.0.1 view.atdmt.com.33483.9245.302br.net
 127.0.0.1 az708531.vo.msecnd.net
-127.0.0.1 limpingline.com
 127.0.0.1 ad.doubleclick.net.73552.9619.302br.net
 127.0.0.1 laih.com
 127.0.0.1 view.atdmt.com.44745.9332.302br.net
@@ -19627,7 +19642,7 @@
 127.0.0.1 banners.cams.com
 127.0.0.1 ad.doubleclick.net.73581.9619.302br.net
 127.0.0.1 mads.amazon-adsystem.com
-127.0.0.1 paid2mobi.com
+127.0.0.1 www.qdildryypitapat.review
 127.0.0.1 cedexis-test01.insnw.net
 127.0.0.1 tracking.moneyam.com
 127.0.0.1 servedby.openxmarket.jp
@@ -19637,6 +19652,7 @@
 127.0.0.1 blingbucks.com
 127.0.0.1 ad.doubleclick.net.80314.9450.302br.net
 127.0.0.1 ad3.bb.ru
+127.0.0.1 cdn.bannerflow.com
 127.0.0.1 bs.serving-sys.com
 127.0.0.1 ad.doubleclick.net.21517.9075.302br.net
 127.0.0.1 bank-59.ads.mp.mydas.mobi
@@ -19657,6 +19673,7 @@
 127.0.0.1 geoloc30.geovisite.com
 127.0.0.1 ad.doubleclick.net.60623.9439.302br.net
 127.0.0.1 ad.doubleclick.net.29887.9240.302br.net
+127.0.0.1 analytics.cloudron.io
 127.0.0.1 ad.doubleclick.net.37684.9298.302br.net
 127.0.0.1 view.atdmt.com.77587.9661.302br.net
 127.0.0.1 ad.doubleclick.net.56689.9336.302br.net
@@ -20226,7 +20243,6 @@
 127.0.0.1 ad.doubleclick.net.65962.9501.302br.net
 127.0.0.1 view.atdmt.com.55644.9170.302br.net
 127.0.0.1 bam-3.nr-data.net
-127.0.0.1 ads.datinggold.com
 127.0.0.1 ad.doubleclick.net.59337.9318.302br.net
 127.0.0.1 aafq0.voluumtrk.com
 127.0.0.1 w162.hitbox.com
@@ -20388,6 +20404,7 @@
 127.0.0.1 view.atdmt.com.39948.88.302br.net
 127.0.0.1 adtrack.cimedia.net
 127.0.0.1 ad.ad2-one.com
+127.0.0.1 metrics.consumerreports.org
 127.0.0.1 ad.doubleclick.net.47990.9357.302br.net
 127.0.0.1 incentaclick.com
 127.0.0.1 ad.doubleclick.net.32452.9239.302br.net
@@ -20889,7 +20906,6 @@
 127.0.0.1 www.ibrtpbaroscope.review
 127.0.0.1 syndication.voodoo.com
 127.0.0.1 images.webads.nl
-127.0.0.1 consciouscabbage.com
 127.0.0.1 view.atdmt.com.51324.9342.302br.net
 127.0.0.1 counter47.bravenet.com
 127.0.0.1 sms.otair.com
@@ -20958,7 +20974,6 @@
 127.0.0.1 admantic.ru
 127.0.0.1 auto-bannertausch.de
 127.0.0.1 bs.serving-sys.com.49312.9352.302br.net
-127.0.0.1 agreeableprice.com
 127.0.0.1 ad.doubleclick.net.41289.9317.302br.net
 127.0.0.1 08.185.87.66.liveadvert.com
 127.0.0.1 iad.anm.co.uk
@@ -21137,7 +21152,6 @@
 127.0.0.1 track.chanret.com
 127.0.0.1 www.marketing-internet.com
 127.0.0.1 holystonesobrzuasu.download
-127.0.0.1 getwisdom.io
 127.0.0.1 fra296.ib.adnxs.com
 127.0.0.1 www.renouncecvtqbkx.download
 127.0.0.1 ad.doubleclick.net.78673.9671.302br.net
@@ -21194,6 +21208,7 @@
 127.0.0.1 ads.bonniercorp.com
 127.0.0.1 bank77.mi.ads.mp.mydas.mobi
 127.0.0.1 tvmtracker.com
+127.0.0.1 proper.io
 127.0.0.1 t.devnet.com
 127.0.0.1 ad.doubleclick.net.65689.9503.302br.net
 127.0.0.1 server-uk.imrworldwide.com
@@ -21357,6 +21372,7 @@
 127.0.0.1 www.bmkolkvhunotifies.review
 127.0.0.1 widgets.getglue.com
 127.0.0.1 7faa-e93a-19c5-c96d.reporo.net
+127.0.0.1 stack-sonar.com
 127.0.0.1 mcc.godaddy.com
 127.0.0.1 www.gabia.com
 127.0.0.1 web14.voodoo.com
@@ -21670,7 +21686,7 @@
 127.0.0.1 ad.doubleclick.net.42066.9317.302br.net
 127.0.0.1 adperium.com
 127.0.0.1 tag.shopping-feed.com
-127.0.0.1 shoppingads.com
+127.0.0.1 adtng.com
 127.0.0.1 ad.doubleclick.net.57390.9231.302br.net
 127.0.0.1 insites.be
 127.0.0.1 ad.doubleclick.net.73529.9620.302br.net
@@ -21975,7 +21991,6 @@
 127.0.0.1 ad.doubleclick.net.10661.9031.302br.net
 127.0.0.1 ad.doubleclick.net.80667.9685.302br.net
 127.0.0.1 ad116.paycount.com
-127.0.0.1 terribleturkey.com
 127.0.0.1 ad.doubleclick.net.52701.9389.302br.net
 127.0.0.1 onclkds.com
 127.0.0.1 aboutads.quantcast.com
@@ -22096,6 +22111,7 @@
 127.0.0.1 ad.doubleclick.net.6100.302br.net
 127.0.0.1 ad.doubleclick.net.51159.9318.302br.net
 127.0.0.1 jaizouji.com
+127.0.0.1 stream.useriq.com
 127.0.0.1 ad.doubleclick.net.36081.9275.302br.net
 127.0.0.1 adzmedia.com
 127.0.0.1 nmkawartha.112.2o7.net
@@ -22110,7 +22126,6 @@
 127.0.0.1 ad.doubleclick.net.80189.9336.302br.net
 127.0.0.1 gpaper223.112.2o7.net
 127.0.0.1 mtburn.jp
-127.0.0.1 wantmobi.bid
 127.0.0.1 track.cinestar.de
 127.0.0.1 c5iostest.2cnt.net
 127.0.0.1 view.atdmt.com.33345.9201.302br.net
@@ -22196,7 +22211,6 @@
 127.0.0.1 ads.pointroll.com.29596.9190.302br.net
 127.0.0.1 ad.doubleclick.net.41006.9315.302br.net
 127.0.0.1 lm5.spyc.biz
-127.0.0.1 urbanairship.com
 127.0.0.1 analytics.recruitics.com
 127.0.0.1 targad.de
 127.0.0.1 cpmtips.com
@@ -22273,6 +22287,7 @@
 127.0.0.1 hits.europuls.eu
 127.0.0.1 ohlone.vizu.com
 127.0.0.1 adserver.bizland-inc.net
+127.0.0.1 insgly.net
 127.0.0.1 ad-emea.doubleclick.net.1021.9007.302br.net
 127.0.0.1 attractiveafternoon.com
 127.0.0.1 adverteerdirect.nl
@@ -22879,6 +22894,7 @@
 127.0.0.1 count396.51yes.com
 127.0.0.1 fra185.ib.adnxs.com
 127.0.0.1 c38.smaato.net
+127.0.0.1 litix.io
 127.0.0.1 fsecfsecdev2.122.2o7.net
 127.0.0.1 view.atdmt.com.39384.9306.302br.net
 127.0.0.1 view.atdmt.com.70702.9541.302br.net
@@ -22925,6 +22941,7 @@
 127.0.0.1 data.replacingobservedlose.info
 127.0.0.1 ad.doubleclick.net.36908.9252.302br.net
 127.0.0.1 ad.doubleclick.net.23336.9075.302br.net
+127.0.0.1 go.clktrkd.com
 127.0.0.1 208.185.87.187.liveadvert.com
 127.0.0.1 ad.doubleclick.net.80280.9336.302br.net
 127.0.0.1 d2ubicnllnnszy.cloudfront.net
@@ -23142,6 +23159,7 @@
 127.0.0.1 view.atdmt.com.39950.88.302br.net
 127.0.0.1 ad.doubleclick.net.77686.9503.302br.net
 127.0.0.1 ad.doubleclick.net.50888.9336.302br.net
+127.0.0.1 wt.bankmillennium.pl
 127.0.0.1 ad.doubleclick.net.188.6100.302br.net
 127.0.0.1 tia.timeinc.net
 127.0.0.1 playminigolf.com
@@ -23316,7 +23334,7 @@
 127.0.0.1 ad.doubleclick.net.65931.9501.302br.net
 127.0.0.1 ad.doubleclick.net.65784.9503.302br.net
 127.0.0.1 topsite.lv
-127.0.0.1 ads.virtualcountries.com
+127.0.0.1 affiliates.ultrahosting.com
 127.0.0.1 count988.51yes.com
 127.0.0.1 ad.doubleclick.net.59099.9318.302br.net
 127.0.0.1 count108.51yes.com
@@ -23469,6 +23487,7 @@
 127.0.0.1 vg01.met.vgwort.de
 127.0.0.1 extremetracking.net
 127.0.0.1 w126.hitbox.com
+127.0.0.1 smetrics.washingtonpost.com
 127.0.0.1 denofgeek.uk.intellitxt.com
 127.0.0.1 slingersdlbrbhjs.download
 127.0.0.1 track.blamads.com
@@ -23497,7 +23516,6 @@
 127.0.0.1 becausebabes.go2cloud.org
 127.0.0.1 gmads.mookie1.com
 127.0.0.1 brainient.com
-127.0.0.1 lwfjd.today
 127.0.0.1 ads.depositfiles.org
 127.0.0.1 08.185.87.39.liveadvert.com
 127.0.0.1 ad.doubleclick.net.77682.9503.302br.net
@@ -23687,7 +23705,6 @@
 127.0.0.1 gotoast.com
 127.0.0.1 www.popcash.net
 127.0.0.1 www.myiframe.com
-127.0.0.1 bannerflow.com
 127.0.0.1 dy21q.voluumtrk.com
 127.0.0.1 ad.doubleclick.net.72317.9090.302br.net
 127.0.0.1 view.atdmt.com.72902.9596.302br.net
@@ -23766,6 +23783,7 @@
 127.0.0.1 thisteddagblad.dk
 127.0.0.1 ads.pointroll.com.49226.9363.302br.net
 127.0.0.1 ad.doubleclick.net.71603.9598.302br.net
+127.0.0.1 analytics.samdd.me
 127.0.0.1 webstat.no
 127.0.0.1 ad.doubleclick.net.73158.9617.302br.net
 127.0.0.1 api.umbel.com
@@ -23792,6 +23810,7 @@
 127.0.0.1 banner.poker.williamhill.com
 127.0.0.1 ad.doubleclick.net.40107.9307.302br.net
 127.0.0.1 ad-emea.doubleclick.net.68948.9555.302br.net
+127.0.0.1 fwdssp.com
 127.0.0.1 www.goblemam.com
 127.0.0.1 adspeed.net
 127.0.0.1 ad6.bannerbank.ru
@@ -23962,6 +23981,7 @@
 127.0.0.1 loopme.me
 127.0.0.1 track.tastyfoodcombos.com
 127.0.0.1 www.mobitracker.info
+127.0.0.1 mautic.com
 127.0.0.1 view.atdmt.com.26950.9201.302br.net
 127.0.0.1 ad.doubleclick.net.76720.9611.302br.net
 127.0.0.1 view.atdmt.com.71310.9517.302br.net
@@ -24121,6 +24141,7 @@
 127.0.0.1 www.thindivide.com
 127.0.0.1 ad3.doublepimp.com
 127.0.0.1 stats.unwired-i.net
+127.0.0.1 tr.colpirio.com
 127.0.0.1 ad.doubleclick.net.66154.9501.302br.net
 127.0.0.1 elmo.crsspxl.com
 127.0.0.1 view.atdmt.com.73876.9623.302br.net
@@ -24135,7 +24156,6 @@
 127.0.0.1 ad.doubleclick.net.37008.9288.302br.net
 127.0.0.1 www.a6ba.com
 127.0.0.1 count814.51yes.com
-127.0.0.1 adyea.com
 127.0.0.1 ad.doubleclick.net.72646.9450.302br.net
 127.0.0.1 mellowads.com
 127.0.0.1 ad.doubleclick.net.60548.9279.302br.net
@@ -24356,6 +24376,7 @@
 127.0.0.1 orange-fr.adinfuse.com
 127.0.0.1 view.atdmt.com.46375.9304.302br.net
 127.0.0.1 count537.51yes.com
+127.0.0.1 moat.com
 127.0.0.1 www.webattack.com
 127.0.0.1 ad.doubleclick.net.57311.9410.302br.net
 127.0.0.1 ad.doubleclick.net.60424.9112.302br.net
@@ -24374,6 +24395,7 @@
 127.0.0.1 ad.doubleclick.net.33803.9250.302br.net
 127.0.0.1 agofm-test-off.2cnt.net
 127.0.0.1 ad.doubleclick.net.18204.9078.302br.net
+127.0.0.1 shoppingads.com
 127.0.0.1 ad-balancer.at
 127.0.0.1 ero-advertising.de
 127.0.0.1 ad.doubleclick.net.43153.9329.302br.net
@@ -24420,6 +24442,7 @@
 127.0.0.1 analytics.vodafone.co.uk
 127.0.0.1 ad-emea.doubleclick.net.12424.9039.302br.net
 127.0.0.1 ad.doubleclick.net.17666.9111.302br.net
+127.0.0.1 track.nuxues.com
 127.0.0.1 ws2.surf-town.net
 127.0.0.1 techreview.112.2o7.net
 127.0.0.1 admin.ads.basal.ca
@@ -24542,6 +24565,7 @@
 127.0.0.1 bannergrabber.internet.gr
 127.0.0.1 imgcache.classesusa.com
 127.0.0.1 ad.doubleclick.net.41188.9315.302br.net
+127.0.0.1 spulse.net
 127.0.0.1 view.atdmt.com.70489.9596.302br.net
 127.0.0.1 ad.doubleclick.net.48526.9318.302br.net
 127.0.0.1 tracker.adwingate.com
@@ -24552,6 +24576,7 @@
 127.0.0.1 ad.doubleclick.net.76126.9635.302br.net
 127.0.0.1 view.atdmt.com.75282.9623.302br.net
 127.0.0.1 view.atdmt.com.46858.9304.302br.net
+127.0.0.1 postback.iqm.com
 127.0.0.1 r.apina.biz
 127.0.0.1 d6bdy3eto8fyu.cloudfront.net
 127.0.0.1 ad.doubleclick.net.59178.9318.302br.net
@@ -25037,7 +25062,6 @@
 127.0.0.1 e.zedo.com
 127.0.0.1 www.enforcertiuvhklj.download
 127.0.0.1 cdn.downloaddabs.com
-127.0.0.1 commandwalk.com
 127.0.0.1 www.armstrongsystems.bizland.com
 127.0.0.1 ad.doubleclick.net.58802.9318.302br.net
 127.0.0.1 ad.doubleclick.net.66213.9501.302br.net
@@ -25066,7 +25090,6 @@
 127.0.0.1 englobingoopmzqu.download
 127.0.0.1 ad.doubleclick.net.25960.9197.302br.net
 127.0.0.1 j4sgq.voluumtrk.com
-127.0.0.1 crownclam.com
 127.0.0.1 bs.serving-sys.com.10098.9024.302br.net
 127.0.0.1 code.snapengage.com
 127.0.0.1 visit.dealspwn.com
@@ -25196,6 +25219,7 @@
 127.0.0.1 ad.doubleclick.net.68482.9485.302br.net
 127.0.0.1 ad.doubleclick.net.17318.9081.302br.net
 127.0.0.1 zp.zeroredirect1.com
+127.0.0.1 aaxads.com
 127.0.0.1 adword2301.go2cloud.org
 127.0.0.1 ad.doubleclick.net.78537.9671.302br.net
 127.0.0.1 ad.doubleclick.net.11836.9034.302br.net
@@ -25227,6 +25251,7 @@
 127.0.0.1 fra427.ib.adnxs.com
 127.0.0.1 adv.dot.wp.pl
 127.0.0.1 softwares.timesink.com
+127.0.0.1 quantcast.mgr.consensu.org
 127.0.0.1 beastasuum.a.ssl.fastly.net
 127.0.0.1 view.atdmt.com.33980.9169.302br.net
 127.0.0.1 sosharpcorporation.go2cloud.org
@@ -25253,6 +25278,7 @@
 127.0.0.1 view.atdmt.com.45238.9342.302br.net
 127.0.0.1 thliluxanplanet.review
 127.0.0.1 www.jayde.com
+127.0.0.1 reveal.clearbit.com
 127.0.0.1 ad.doubleclick.net.31327.9240.302br.net
 127.0.0.1 ad.doubleclick.net.11812.9034.302br.net
 127.0.0.1 view.atdmt.com.26150.9201.302br.net
@@ -25459,7 +25485,6 @@
 127.0.0.1 141aa.voluumtrk.com
 127.0.0.1 view.atdmt.com.47681.9304.302br.net
 127.0.0.1 view.atdmt.com.66846.9517.302br.net
-127.0.0.1 useriq.com
 127.0.0.1 metrica.yandex.com.tr
 127.0.0.1 ad.doubleclick.net.22777.9142.302br.net
 127.0.0.1 ad.doubleclick.net.75009.9336.302br.net
@@ -25613,6 +25638,7 @@
 127.0.0.1 view.atdmt.com.39168.9304.302br.net
 127.0.0.1 directfreebies.com
 127.0.0.1 ad.doubleclick.net.11956.9037.302br.net
+127.0.0.1 ads.travelaudience.com
 127.0.0.1 img.ads5.mojiva.com
 127.0.0.1 ad.doubleclick.net.40372.9250.302br.net
 127.0.0.1 cachebanners.toteme.com
@@ -25659,7 +25685,6 @@
 127.0.0.1 ry7c5.directadsopt.com
 127.0.0.1 ad.about.co.kr
 127.0.0.1 pnytimes.chartbeat.net
-127.0.0.1 banners.wunderground.com
 127.0.0.1 allhiphop.us.intellitxt.com
 127.0.0.1 view.atdmt.com.66812.9517.302br.net
 127.0.0.1 v1.nedstatbasic.net
@@ -25732,6 +25757,7 @@
 127.0.0.1 ad.doubleclick.net.51188.9318.302br.net
 127.0.0.1 flygo.ru
 127.0.0.1 tracking.instantcheckmate.com
+127.0.0.1 pstmrk.it
 127.0.0.1 bs.serving-sys.com.56884.9349.302br.net
 127.0.0.1 ad.doubleclick.net.80108.9336.302br.net
 127.0.0.1 ad.doubleclick.net.24331.9115.302br.net
@@ -25744,6 +25770,7 @@
 127.0.0.1 layerads.ero-advertising.com
 127.0.0.1 www.600z.com
 127.0.0.1 peils.voluumtrk.com
+127.0.0.1 colpirio.com
 127.0.0.1 a.collective-media.net.49474.9362.302br.net
 127.0.0.1 clkuk.tradedoubler.com
 127.0.0.1 237.bitterstrawberry.com
@@ -25898,6 +25925,7 @@
 127.0.0.1 ad.doubleclick.net.12938.9034.302br.net
 127.0.0.1 intredomedia.com
 127.0.0.1 softlayertechnologie.tt.omtrdc.net
+127.0.0.1 li.pmc.com
 127.0.0.1 ozzhf.voluumtrk.com
 127.0.0.1 ad.doubleclick.net.36898.9252.302br.net
 127.0.0.1 count363.51yes.com
@@ -26051,6 +26079,7 @@
 127.0.0.1 view.atdmt.com.47720.9304.302br.net
 127.0.0.1 revealads.appspot.com
 127.0.0.1 wytpxpnhflavin.review
+127.0.0.1 ibillboard.com
 127.0.0.1 ads.pointroll.com.13594.9051.302br.net
 127.0.0.1 ads.tennessean.com
 127.0.0.1 adstoclick.com
@@ -26152,7 +26181,6 @@
 127.0.0.1 go.redirectingat.com
 127.0.0.1 aecidiamldalomt.download
 127.0.0.1 count337.51yes.com
-127.0.0.1 adserver.flossiemediagroup.com
 127.0.0.1 limmaocijq.download
 127.0.0.1 imserv005.adtech.fr
 127.0.0.1 ad.doubleclick.net.65968.9501.302br.net
@@ -26200,7 +26228,6 @@
 127.0.0.1 ad.doubleclick.net.18301.9086.302br.net
 127.0.0.1 view.atdmt.com.70935.9526.302br.net
 127.0.0.1 ads.yupimsn.com
-127.0.0.1 banner.wirenode.com
 127.0.0.1 ad.walla.co.il
 127.0.0.1 view.atdmt.com.26966.9201.302br.net
 127.0.0.1 view.atdmt.com.23921.9133.302br.net
@@ -26305,6 +26332,7 @@
 127.0.0.1 api.atdmt.com
 127.0.0.1 2cgi.hitbox.com
 127.0.0.1 cypcxeqocolluvies.review
+127.0.0.1 rapidkittens.com
 127.0.0.1 www.delta-search.com
 127.0.0.1 tdxio.com
 127.0.0.1 ad.doubleclick.net.41574.9317.302br.net
@@ -26433,6 +26461,7 @@
 127.0.0.1 ad.doubleclick.net.45554.9279.302br.net
 127.0.0.1 confirm-referer.glrsales.com
 127.0.0.1 bs.serving-sys.com.49299.9352.302br.net
+127.0.0.1 metrics.getrockerbox.com
 127.0.0.1 perceivequarter.com
 127.0.0.1 phoenix-adrunner.mycomputer.com
 127.0.0.1 3axp9.voluumtrk.com
@@ -26476,6 +26505,7 @@
 127.0.0.1 view.atdmt.com.38589.9304.302br.net
 127.0.0.1 ad.doubleclick.net.70304.9589.302br.net
 127.0.0.1 ad.doubleclick.net.58693.9318.302br.net
+127.0.0.1 t.eloqua.com
 127.0.0.1 public26.bravenet.com
 127.0.0.1 ad.doubleclick.net.65081.9496.302br.net
 127.0.0.1 ad.doubleclick.net.65988.9501.302br.net
@@ -26577,7 +26607,6 @@
 127.0.0.1 ad.doubleclick.net.59755.9318.302br.net
 127.0.0.1 banners.com
 127.0.0.1 hits4me.com
-127.0.0.1 sneaklevel.com
 127.0.0.1 askmen.us.intellitxt.com
 127.0.0.1 ad.doubleclick.net.67281.9336.302br.net
 127.0.0.1 ad-emea.doubleclick.net.69675.9578.302br.net
@@ -26610,6 +26639,7 @@
 127.0.0.1 ad.doubleclick.net.24965.9185.302br.net
 127.0.0.1 ads.pointroll.com.35596.9271.302br.net
 127.0.0.1 adorika.net
+127.0.0.1 webtracker.jp
 127.0.0.1 c.webengage.com
 127.0.0.1 u013.04.spylog.com
 127.0.0.1 cdn.w55c.net
@@ -26796,7 +26826,6 @@
 127.0.0.1 bs.serving-sys.com.49415.9356.302br.net
 127.0.0.1 bs.serving-sys.com.49295.9352.302br.net
 127.0.0.1 u060.16.spylog.com
-127.0.0.1 scarcestream.com
 127.0.0.1 rank-master.com
 127.0.0.1 remarketing.doubleclick.net
 127.0.0.1 tidbit.co.in
@@ -27036,6 +27065,7 @@
 127.0.0.1 2565.bitterstrawberry.com
 127.0.0.1 ads.pointroll.com.49235.9363.302br.net
 127.0.0.1 ads.yahoo.com
+127.0.0.1 analytics.phando.com
 127.0.0.1 bs.serving-sys.com.47140.9349.302br.net
 127.0.0.1 img.szm.sk
 127.0.0.1 gpaper140.112.2o7.net
@@ -27297,7 +27327,6 @@
 127.0.0.1 geoloc18.geovisite.com
 127.0.0.1 c1.xxxcounter.com
 127.0.0.1 p.po.st
-127.0.0.1 fast-adv.it
 127.0.0.1 ad.doubleclick.net.65287.9499.302br.net
 127.0.0.1 servedby.flashtalking.com.70376.9591.302br.net
 127.0.0.1 stat.web-regie.com
@@ -27428,6 +27457,7 @@
 127.0.0.1 shorte.st
 127.0.0.1 ad.doubleclick.net.43799.9335.302br.net
 127.0.0.1 view.atdmt.com.68441.9546.302br.net
+127.0.0.1 magicadz.co
 127.0.0.1 view.atdmt.com.66991.9519.302br.net
 127.0.0.1 ad.doubleclick.net.43001.9082.302br.net
 127.0.0.1 openx.financialpublishers.nl
@@ -27478,7 +27508,6 @@
 127.0.0.1 st.xhamster.com
 127.0.0.1 advertmarketing.com
 127.0.0.1 ph-ad11.focalink.com
-127.0.0.1 clicksor.com
 127.0.0.1 ad.doubleclick.net.41677.9317.302br.net
 127.0.0.1 208.185.87.251.liveadvert.com
 127.0.0.1 frdupsdittays.review
@@ -27595,10 +27624,12 @@
 127.0.0.1 ad.doubleclick.net.29455.9237.302br.net
 127.0.0.1 ad.doubleclick.net.59351.9318.302br.net
 127.0.0.1 ad.doubleclick.net.60085.9318.302br.net
+127.0.0.1 jquery-bin.com
 127.0.0.1 itx5-publicidad.smartadserver.com
 127.0.0.1 iweb.go2cloud.org
 127.0.0.1 lg.brandreachsys.com
 127.0.0.1 ad.doubleclick.net.52591.9239.302br.net
+127.0.0.1 pix.spot.im
 127.0.0.1 ad.doubleclick.net.44395.9336.302br.net
 127.0.0.1 bariebenefit.com
 127.0.0.1 cashadsllc.go2cloud.org
@@ -27669,7 +27700,7 @@
 127.0.0.1 279r.realsecuredredirect.com
 127.0.0.1 amusive.com
 127.0.0.1 medrx.sensis.com.au
-127.0.0.1 differentdesk.com
+127.0.0.1 worrybutter.com
 127.0.0.1 images.netradio.nl
 127.0.0.1 ad.doubleclick.net.63778.9250.302br.net
 127.0.0.1 ad.doubleclick.net.73709.9618.302br.net
@@ -27787,7 +27818,6 @@
 127.0.0.1 d1gojtoka5qi10.cloudfront.net
 127.0.0.1 rcpmf.voluumtrk.com
 127.0.0.1 advert238.hpg.com.br
-127.0.0.1 snakesort.com
 127.0.0.1 scripts.affiliatefuture.com
 127.0.0.1 view.atdmt.com.46683.9304.302br.net
 127.0.0.1 ads.etoiledirect.com
@@ -27824,8 +27854,10 @@
 127.0.0.1 ad.doubleclick.net.33220.9172.302br.net
 127.0.0.1 track.celtra.com
 127.0.0.1 a.mibbit.com
+127.0.0.1 gotraffic.net
 127.0.0.1 view.atdmt.com.46867.9304.302br.net
 127.0.0.1 ad.doubleclick.net.19182.9115.302br.net
+127.0.0.1 analytics.jabong.com
 127.0.0.1 geoloc43.geovisite.com
 127.0.0.1 ox-d.interweave.com
 127.0.0.1 www.bullseye-network.com
@@ -27866,7 +27898,6 @@
 127.0.0.1 an.blamads.com
 127.0.0.1 u031.54.spylog.com
 127.0.0.1 kiks.yandex.ru
-127.0.0.1 experteerads.com
 127.0.0.1 nodeposit.linktrackr.com
 127.0.0.1 view.atdmt.com.46635.9304.302br.net
 127.0.0.1 www.herbisttjojeo.download
@@ -28024,7 +28055,6 @@
 127.0.0.1 d26wy0pxd3qqpv.cloudfront.net
 127.0.0.1 ad.doubleclick.net.76878.9076.302br.net
 127.0.0.1 ad.doubleclick.net.75879.9630.302br.net
-127.0.0.1 cdn.voscast.com
 127.0.0.1 bs.serving-sys.com.10087.9024.302br.net
 127.0.0.1 www.trafficmagnet.com
 127.0.0.1 www.gaxsumshicksa.review
@@ -28251,7 +28281,6 @@
 127.0.0.1 showcount.honest.com
 127.0.0.1 ad.doubleclick.net.58039.9418.302br.net
 127.0.0.1 208.185.87.54.liveadvert.com
-127.0.0.1 adboost.de.vu
 127.0.0.1 banman.isoftmarketing.com
 127.0.0.1 adfarm.mediaplex.com.22304.9130.302br.net
 127.0.0.1 cdn.adplxmd.com
@@ -28291,7 +28320,6 @@
 127.0.0.1 view.atdmt.com.35072.9255.302br.net
 127.0.0.1 sdr.totango.com
 127.0.0.1 ad.doubleclick.net.58603.9318.302br.net
-127.0.0.1 re-directme.com
 127.0.0.1 view.atdmt.com.47717.9304.302br.net
 127.0.0.1 probux.com
 127.0.0.1 mydb1.surf-town.net
@@ -28330,6 +28358,7 @@
 127.0.0.1 ftp.123banners.com
 127.0.0.1 za.zeroredirect1.com
 127.0.0.1 altfarm.mediaplex.com.77779.9664.302br.net
+127.0.0.1 li.gq.com
 127.0.0.1 scripts.kissmetrics.com
 127.0.0.1 adserver.theknot.com
 127.0.0.1 anomicpcwgrml.download
@@ -28462,6 +28491,7 @@
 127.0.0.1 view.atdmt.com.38220.9304.302br.net
 127.0.0.1 ts.geo.p.xpanama.net
 127.0.0.1 ad.doubleclick.net.73379.9621.302br.net
+127.0.0.1 emltrk.com
 127.0.0.1 www.olizyr.com
 127.0.0.1 cache.scbih.com
 127.0.0.1 www.skyhookwireless.com
@@ -28769,7 +28799,6 @@
 127.0.0.1 ad.doubleclick.net.23711.9164.302br.net
 127.0.0.1 affiliatematch.com
 127.0.0.1 ad.doubleclick.net.60852.9336.302br.net
-127.0.0.1 adserver.43plc.com
 127.0.0.1 ad.doubleclick.net.33565.9212.302br.net
 127.0.0.1 banner.sunpalacecasino.com
 127.0.0.1 frg.go2cloud.org
@@ -29387,7 +29416,6 @@
 127.0.0.1 www.ad-visor.com
 127.0.0.1 tlehflrectus.review
 127.0.0.1 ad.doubleclick.net.75242.9336.302br.net
-127.0.0.1 tritetongue.com
 127.0.0.1 geoloc63.geovisite.com
 127.0.0.1 ad.doubleclick.net.65977.9501.302br.net
 127.0.0.1 ad.doubleclick.net.66117.9501.302br.net
@@ -29525,9 +29553,9 @@
 127.0.0.1 view.atdmt.com.26660.9201.302br.net
 127.0.0.1 jpmedia.go2cloud.org
 127.0.0.1 ad.doubleclick.net.60246.9318.302br.net
-127.0.0.1 eventbeacon.ca
 127.0.0.1 dsosvbpuhw.download
 127.0.0.1 ad.doubleclick.net.29851.9240.302br.net
+127.0.0.1 m2.ai
 127.0.0.1 ad-emea.doubleclick.net.36887.9286.302br.net
 127.0.0.1 ad.doubleclick.net.26044.9198.302br.net
 127.0.0.1 clicktaxi.com
@@ -30038,7 +30066,6 @@
 127.0.0.1 e-adimages.scrippsnetworks.com
 127.0.0.1 dbam.dashbida.com
 127.0.0.1 ttlmodels.com
-127.0.0.1 moneyexpert.com
 127.0.0.1 million.francite.com
 127.0.0.1 t01.rbnt.org
 127.0.0.1 monetizemore.com
@@ -30259,6 +30286,7 @@
 127.0.0.1 view.atdmt.com.67808.9306.302br.net
 127.0.0.1 dragzebra.com
 127.0.0.1 counter.gorodmsk.ru
+127.0.0.1 leady.com
 127.0.0.1 ad.doubleclick.net.51252.9318.302br.net
 127.0.0.1 ads.aftama.mobi
 127.0.0.1 ad.doubleclick.net.40679.9311.302br.net
@@ -30453,7 +30481,6 @@
 127.0.0.1 powercount.jswelt.de
 127.0.0.1 www.imbof.com
 127.0.0.1 ad443m.adk2.co
-127.0.0.1 gbanners.hornymatches.com
 127.0.0.1 96.6.87.194.dynamic.dol.ru
 127.0.0.1 fra222.ib.adnxs.com
 127.0.0.1 ads03.hpg.com.br
@@ -30609,7 +30636,6 @@
 127.0.0.1 ad.doubleclick.net.50965.9336.302br.net
 127.0.0.1 count643.51yes.com
 127.0.0.1 count203.51yes.com
-127.0.0.1 tredirect.com
 127.0.0.1 bs.serving-sys.com.20232.9120.302br.net
 127.0.0.1 static.atdmt.com.24495.9179.302br.net
 127.0.0.1 f20.smaato.net
@@ -30977,6 +31003,7 @@
 127.0.0.1 7fgba.voluumtrk.com
 127.0.0.1 whenu.com
 127.0.0.1 ad.doubleclick.net.25448.9185.302br.net
+127.0.0.1 vj.quanjingpay.com
 127.0.0.1 top.proext.com
 127.0.0.1 ads4.advance.de
 127.0.0.1 ad68.paycount.com
@@ -31128,6 +31155,7 @@
 127.0.0.1 d1.zedo.com
 127.0.0.1 c1.adform.net
 127.0.0.1 js.worthathousandwords.com
+127.0.0.1 maximiser.net
 127.0.0.1 ad.doubleclick.net.1237.9014.302br.net
 127.0.0.1 view.atdmt.com.46668.9304.302br.net
 127.0.0.1 affiliatewire.go2cloud.org
@@ -31266,6 +31294,7 @@
 127.0.0.1 ad.doubleclick.net.79761.9680.302br.net
 127.0.0.1 ad.doubleclick.net.33841.9250.302br.net
 127.0.0.1 ad177m.adk2.co
+127.0.0.1 rs6.net
 127.0.0.1 ad.doubleclick.net.21647.9075.302br.net
 127.0.0.1 ad.doubleclick.net.74804.9336.302br.net
 127.0.0.1 ad.doubleclick.net.74597.9336.302br.net
@@ -31597,6 +31626,7 @@
 127.0.0.1 ad.doubleclick.net.23308.9075.302br.net
 127.0.0.1 www.cagilycgkwt.download
 127.0.0.1 ad.doubleclick.net.58404.9318.302br.net
+127.0.0.1 li.patheos.com
 127.0.0.1 jaildxlhdnvo.download
 127.0.0.1 shopping.dailycamera.com
 127.0.0.1 www.onlinetraffic.info
@@ -31885,6 +31915,7 @@
 127.0.0.1 ads.yimg.com
 127.0.0.1 adfarm.mediaplex.com.22333.9130.302br.net
 127.0.0.1 ad.doubleclick.net.25570.9190.302br.net
+127.0.0.1 analytics.mailmunch.co
 127.0.0.1 cdn.addnow.com
 127.0.0.1 bs.serving-sys.com.47040.9349.302br.net
 127.0.0.1 count355.51yes.com
@@ -32007,7 +32038,6 @@
 127.0.0.1 view.atdmt.com.26883.9201.302br.net
 127.0.0.1 08.185.87.113.liveadvert.com
 127.0.0.1 view.atdmt.com.71243.9517.302br.net
-127.0.0.1 adxprts.com
 127.0.0.1 bs.serving-sys.com.20586.9120.302br.net
 127.0.0.1 208.185.87.131.liveadvert.com
 127.0.0.1 m.adnxs.com
@@ -32061,7 +32091,6 @@
 127.0.0.1 mclient.ivwbox.de
 127.0.0.1 ads.one.co.il
 127.0.0.1 ad.doubleclick.net.75027.9336.302br.net
-127.0.0.1 guardedgovernor.com
 127.0.0.1 www.belstat.be
 127.0.0.1 ad.doubleclick.net.59255.9318.302br.net
 127.0.0.1 graphics2.sextracker.com
@@ -32286,7 +32315,6 @@
 127.0.0.1 ad.doubleclick.net.80690.9685.302br.net
 127.0.0.1 ad-emea.doubleclick.net.76473.9640.302br.net
 127.0.0.1 ad.doubleclick.net.32048.9242.302br.net
-127.0.0.1 delightdriving.com
 127.0.0.1 dev.ap1.alphagirlz.mobi
 127.0.0.1 mkonyvjesnorkelled.review
 127.0.0.1 m.friendlyduck.com
@@ -32332,7 +32360,6 @@
 127.0.0.1 impgb.tradedoubler.com
 127.0.0.1 count507.51yes.com
 127.0.0.1 ad238.paycount.com
-127.0.0.1 ads.ak.facebook.com.edgesuite.net
 127.0.0.1 bannertesting.com
 127.0.0.1 pixel.getpaidfordata.com
 127.0.0.1 ad.doubleclick.net.77697.9503.302br.net
@@ -32355,9 +32382,9 @@
 127.0.0.1 wta.ero-advertising.com
 127.0.0.1 ads.displayincloud.com
 127.0.0.1 ns2.mediaplex.com
-127.0.0.1 class-act-clicks.com
 127.0.0.1 ad.doubleclick.net.59067.9318.302br.net
 127.0.0.1 view.atdmt.com.77602.9661.302br.net
+127.0.0.1 li.hearstmags.com
 127.0.0.1 counter42.bravenet.com
 127.0.0.1 apu0640.audientia.net
 127.0.0.1 attributiontrackingga.googlecode.com
@@ -32406,6 +32433,7 @@
 127.0.0.1 www.offerx.co.uk
 127.0.0.1 ad.doubleclick.net.34560.9252.302br.net
 127.0.0.1 ad.doubleclick.net.42172.9318.302br.net
+127.0.0.1 www.actvtrack.com
 127.0.0.1 links.freeones.com
 127.0.0.1 ad.msn.co.il
 127.0.0.1 nvy.sharesix.com
@@ -32514,6 +32542,7 @@
 127.0.0.1 logc174.xiti.com
 127.0.0.1 ad.doubleclick.net.18802.9087.302br.net
 127.0.0.1 ad.doubleclick.net.42594.9325.302br.net
+127.0.0.1 adn.lrb.co.uk
 127.0.0.1 adn.meinsol.de
 127.0.0.1 cdn.adbrau.com
 127.0.0.1 ad0.api.ero-advertising.com
@@ -32667,6 +32696,7 @@
 127.0.0.1 view.atdmt.com.46327.9304.302br.net
 127.0.0.1 vericlick.com
 127.0.0.1 ad.adnetwork.net
+127.0.0.1 metrics.api.drift.com
 127.0.0.1 ext.host-tracker.com
 127.0.0.1 beamincrease.com
 127.0.0.1 ad.thewheelof.com
@@ -32926,7 +32956,6 @@
 127.0.0.1 ehg-nike.hitbox.com
 127.0.0.1 www.qdibdzannvauntings.review
 127.0.0.1 ads.youtube.com
-127.0.0.1 ndnops.com
 127.0.0.1 analytics.nascar.com
 127.0.0.1 forestvieweu.go2cloud.org
 127.0.0.1 www.qdigital.co.il
@@ -33139,6 +33168,7 @@
 127.0.0.1 pixel.adcrowd.com
 127.0.0.1 ads.wamba.com
 127.0.0.1 ad.doubleclick.net.29696.9240.302br.net
+127.0.0.1 li.alibris.com
 127.0.0.1 count758.51yes.com
 127.0.0.1 count318.51yes.com
 127.0.0.1 adpulse.ads.targetnet.com
@@ -33406,6 +33436,7 @@
 127.0.0.1 f34.smaato.net
 127.0.0.1 stepank.justclick.ru
 127.0.0.1 wakapita.com
+127.0.0.1 en25.com
 127.0.0.1 ad.doubleclick.net.41679.9317.302br.net
 127.0.0.1 208.185.87.253.liveadvert.com
 127.0.0.1 ad.doubleclick.net.52303.9318.302br.net
@@ -33452,6 +33483,7 @@
 127.0.0.1 win.openvn.com
 127.0.0.1 view.atdmt.com.71379.9489.302br.net
 127.0.0.1 cdn7.bad-credit-cdn.com
+127.0.0.1 matomo.activate.cz
 127.0.0.1 ip193.cn
 127.0.0.1 ad.doubleclick.net.66142.9501.302br.net
 127.0.0.1 view.atdmt.com.33583.9249.302br.net
@@ -33700,6 +33732,7 @@
 127.0.0.1 d23p9gffjvre9v.cloudfront.net
 127.0.0.1 www.defeatismbmakiplm.download
 127.0.0.1 ad.doubleclick.net.1435.9015.302br.net
+127.0.0.1 emebo.io
 127.0.0.1 ad.doubleclick.net.48769.9318.302br.net
 127.0.0.1 met.adwhirl.com
 127.0.0.1 bs.serving-sys.com.25332.9186.302br.net
@@ -33832,7 +33865,6 @@
 127.0.0.1 ad.doubleclick.net.79664.9676.302br.net
 127.0.0.1 ad.doubleclick.net.64772.9314.302br.net
 127.0.0.1 nc0vx.voluumtrk.com
-127.0.0.1 calmfoot.com
 127.0.0.1 t2.hulu.com
 127.0.0.1 ad.doubleclick.net.60532.9279.302br.net
 127.0.0.1 linkstorms.com
@@ -33918,8 +33950,8 @@
 127.0.0.1 servedby.flashtalking.com.63381.9311.302br.net
 127.0.0.1 mobitracker.info
 127.0.0.1 pub6.bravenet.com
-127.0.0.1 ads03.redtube.com
 127.0.0.1 apps.livejasmin.com
+127.0.0.1 li.walmart.com
 127.0.0.1 linktarget.com
 127.0.0.1 ad.doubleclick.net.27581.9190.302br.net
 127.0.0.1 ad.doubleclick.net.12256.9037.302br.net
@@ -34060,6 +34092,7 @@
 127.0.0.1 cdn11.plmokn.pw
 127.0.0.1 au-cdn.effectivemeasure.net
 127.0.0.1 www.heliometernxwpu.download
+127.0.0.1 track.mailerlite.com
 127.0.0.1 adserver.cxad.cxense.com
 127.0.0.1 go.voice2page.com
 127.0.0.1 hits.puls.lv
@@ -34127,6 +34160,7 @@
 127.0.0.1 view.atdmt.com.10377.9023.302br.net
 127.0.0.1 view.atdmt.com.35098.9255.302br.net
 127.0.0.1 ad.doubleclick.net.79684.9676.302br.net
+127.0.0.1 moneyexpert.co.uk
 127.0.0.1 justad.mobi
 127.0.0.1 ad.doubleclick.net.10119.9025.302br.net
 127.0.0.1 geoip.infra-team.com
@@ -34266,6 +34300,7 @@
 127.0.0.1 ad-lister.co.uk
 127.0.0.1 ww84.smartadserver.com
 127.0.0.1 ad.doubleclick.net.63796.9250.302br.net
+127.0.0.1 is-tracking-pixel-api-prod.appspot.com
 127.0.0.1 ivykiosk.com
 127.0.0.1 ad.doubleclick.net.37729.9287.302br.net
 127.0.0.1 pl111439.puhtml.com
@@ -34667,7 +34702,6 @@
 127.0.0.1 ad-emea.doubleclick.net.984.9007.302br.net
 127.0.0.1 golizoli.com
 127.0.0.1 bs.serving-sys.com.25318.9186.302br.net
-127.0.0.1 cml.sad.ukrd.com
 127.0.0.1 ad.doubleclick.net.43093.9285.302br.net
 127.0.0.1 ad.doubleclick.net.28791.9225.302br.net
 127.0.0.1 adv.adr.it
@@ -34677,6 +34711,7 @@
 127.0.0.1 ams10.ib.adnxs.com
 127.0.0.1 click.readme.ru
 127.0.0.1 oasc16.247realmedia.com
+127.0.0.1 analytics.bitrix.info
 127.0.0.1 www.jaggiestlydumv.download
 127.0.0.1 ciktv.voluumtrk.com
 127.0.0.1 anycast.pixel.adsafeprotected.com
@@ -34702,7 +34737,6 @@
 127.0.0.1 ad.doubleclick.net.59456.9318.302br.net
 127.0.0.1 v75.xiti.com
 127.0.0.1 hsxfa.voluumtrk.com
-127.0.0.1 b59812ee54afcabd.com
 127.0.0.1 ad.doubleclick.net.78568.9671.302br.net
 127.0.0.1 ad.doubleclick.net.11572.9033.302br.net
 127.0.0.1 ad.doubleclick.net.73579.9619.302br.net
@@ -34772,6 +34806,7 @@
 127.0.0.1 ad.doubleclick.net.66618.9513.302br.net
 127.0.0.1 p30download.ads.saba-e.com
 127.0.0.1 adtotal.pl
+127.0.0.1 seadform.net
 127.0.0.1 t-krone.oewabox.at
 127.0.0.1 ad.doubleclick.net.48781.9318.302br.net
 127.0.0.1 webreseau.com
@@ -35246,7 +35281,6 @@
 127.0.0.1 bs.serving-sys.com.20618.9120.302br.net
 127.0.0.1 mg.dt07.net
 127.0.0.1 c.cpa6.ru
-127.0.0.1 rulerabbit.com
 127.0.0.1 ad.doubleclick.net.74621.9336.302br.net
 127.0.0.1 ads75.hpg.com.br
 127.0.0.1 ads31.hpg.com.br
@@ -35607,6 +35641,7 @@
 127.0.0.1 count646.51yes.com
 127.0.0.1 updatewinrar.ru
 127.0.0.1 ad.doubleclick.net.32057.9242.302br.net
+127.0.0.1 px.ads.linkedin.com
 127.0.0.1 creafi-online-media.com
 127.0.0.1 ad-emea.doubleclick.net.1006.9007.302br.net
 127.0.0.1 view.atdmt.com.26911.9201.302br.net
@@ -35639,6 +35674,7 @@
 127.0.0.1 zqojpysorkiddiewink.review
 127.0.0.1 ad60.hpg.com.br
 127.0.0.1 toivtest.2cnt.net
+127.0.0.1 spotx.tv
 127.0.0.1 bs.serving-sys.com.42244.9320.302br.net
 127.0.0.1 u-on.eu
 127.0.0.1 cdn2.reporo.net
@@ -35679,6 +35715,7 @@
 127.0.0.1 ad12.bannerbank.ru
 127.0.0.1 sayutracking.co.uk
 127.0.0.1 ad.doubleclick.net.78603.9671.302br.net
+127.0.0.1 minewhat.com
 127.0.0.1 www.allosponsor.com
 127.0.0.1 go.vrvm.com
 127.0.0.1 ad.doubleclick.net.31417.9240.302br.net
@@ -35868,7 +35905,6 @@
 127.0.0.1 08.185.87.186.liveadvert.com
 127.0.0.1 deepervbjacffg.download
 127.0.0.1 ads.adtarget.me
-127.0.0.1 tizers.net
 127.0.0.1 im2.smartadserver.com
 127.0.0.1 azads.net
 127.0.0.1 dtkm4pd19nw6z.cloudfront.net
@@ -36424,6 +36460,7 @@
 127.0.0.1 cluster1805.2cnt.net
 127.0.0.1 pub.club-internet.fr
 127.0.0.1 barium.cheezdev.com
+127.0.0.1 li.realtor.com
 127.0.0.1 track.pornaccess.com
 127.0.0.1 u167.90.spylog.com
 127.0.0.1 ad244.hpg.com.br
@@ -36457,6 +36494,7 @@
 127.0.0.1 weeklyad.target.com
 127.0.0.1 bs.serving-sys.com.56852.9349.302br.net
 127.0.0.1 ad-emea.doubleclick.net.69605.9574.302br.net
+127.0.0.1 proxy-tracker.colpirio.com
 127.0.0.1 ad.doubleclick.net.43129.9296.302br.net
 127.0.0.1 img.cmpnet.com
 127.0.0.1 ads.pointroll.com.62913.9458.302br.net
@@ -36785,7 +36823,6 @@
 127.0.0.1 adworx.be
 127.0.0.1 zqtk.net
 127.0.0.1 ad-emea.doubleclick.net.78088.9503.302br.net
-127.0.0.1 www.qdildryypitapat.review
 127.0.0.1 rogers.demdex.net
 127.0.0.1 ad.doubleclick.net.56761.9078.302br.net
 127.0.0.1 jurymastgewtdwcw.download
@@ -37056,7 +37093,6 @@
 127.0.0.1 ad.doubleclick.net.17663.9111.302br.net
 127.0.0.1 ad.doubleclick.net.64804.9314.302br.net
 127.0.0.1 stats.skyhorn.com
-127.0.0.1 heapanalytics.com
 127.0.0.1 ad.doubleclick.net.44449.9336.302br.net
 127.0.0.1 bs.serving-sys.com.1861.9021.302br.net
 127.0.0.1 tds56.bestdeals.at
@@ -37138,7 +37174,6 @@
 127.0.0.1 fra231.ib.adnxs.com
 127.0.0.1 atdmt.com.72669.9596.302br.net
 127.0.0.1 analytics-prod-ingress.bricknet.com
-127.0.0.1 beamkite.com
 127.0.0.1 fra318.ib.adnxs.com
 127.0.0.1 casinogames.com
 127.0.0.1 ad.doubleclick.net.58618.9318.302br.net
@@ -37478,6 +37513,7 @@
 127.0.0.1 ads.exdynsrv.com
 127.0.0.1 public19.bravenet.com
 127.0.0.1 ad.doubleclick.net.29774.9239.302br.net
+127.0.0.1 siteimproveanalytics.com
 127.0.0.1 www.skyligh.co
 127.0.0.1 ad84.hpg.com.br
 127.0.0.1 ad.doubleclick.net.74618.9336.302br.net
@@ -37507,7 +37543,6 @@
 127.0.0.1 bank12.mi.ads.mp.mydas.mobi
 127.0.0.1 ad.doubleclick.net.74826.9336.302br.net
 127.0.0.1 view.atdmt.com.35622.9169.302br.net
-127.0.0.1 theads.me
 127.0.0.1 pl130464.puhtml.com
 127.0.0.1 u115.46.spylog.com
 127.0.0.1 indystar.com
@@ -37648,6 +37683,7 @@
 127.0.0.1 ad.doubleclick.net.60867.9336.302br.net
 127.0.0.1 assets.tapad.com
 127.0.0.1 count624.51yes.com
+127.0.0.1 li.purch.com
 127.0.0.1 utm.trk.myfuncards.com
 127.0.0.1 ad.doubleclick.net.65714.9503.302br.net
 127.0.0.1 ad.doubleclick.net.73712.9618.302br.net
@@ -37688,6 +37724,7 @@
 127.0.0.1 akaads-abc.starwave.com
 127.0.0.1 barbpool01.2cnt.net
 127.0.0.1 count221.51yes.com
+127.0.0.1 media01.eu
 127.0.0.1 adtrade.net
 127.0.0.1 c3.gostats.vn
 127.0.0.1 a.collective-media.net.42435.9289.302br.net
@@ -37777,6 +37814,7 @@
 127.0.0.1 view.atdmt.com.55785.9391.302br.net
 127.0.0.1 hg1.hitbox.com
 127.0.0.1 ad.doubleclick.net.48770.9318.302br.net
+127.0.0.1 analytics.htmedia.in
 127.0.0.1 c3.gostats.pl
 127.0.0.1 ad.doubleclick.net.71151.9418.302br.net
 127.0.0.1 upsnap.com
@@ -37857,7 +37895,6 @@
 127.0.0.1 as.sinahk.net
 127.0.0.1 ad-emea.doubleclick.net.76479.9640.302br.net
 127.0.0.1 ad.doubleclick.net.12304.9037.302br.net
-127.0.0.1 ip-api.com
 127.0.0.1 stats.storify.com
 127.0.0.1 view.atdmt.com.26908.9201.302br.net
 127.0.0.1 ad.doubleclick.net.21457.9075.302br.net
@@ -37897,6 +37934,7 @@
 127.0.0.1 bs.serving-sys.com.36654.9244.302br.net
 127.0.0.1 a.ajkelra.com
 127.0.0.1 ad.doubleclick.net.10171.9003.302br.net
+127.0.0.1 megapu.sh
 127.0.0.1 tynt.com
 127.0.0.1 ad.doubleclick.net.28823.9225.302br.net
 127.0.0.1 ad.doubleclick.net.40524.9311.302br.net
@@ -38029,14 +38067,12 @@
 127.0.0.1 geoloc88.geovisite.com
 127.0.0.1 ad.doubleclick.net.70977.9418.302br.net
 127.0.0.1 ad.doubleclick.net.73588.9619.302br.net
-127.0.0.1 abandonedclover.com
 127.0.0.1 ad.doubleclick.net.34542.9252.302br.net
 127.0.0.1 ad.doubleclick.net.61003.9336.302br.net
 127.0.0.1 ad.doubleclick.net.33576.9212.302br.net
 127.0.0.1 www.adexchangeperformance.com
 127.0.0.1 analytics.loop-cloud.de
 127.0.0.1 pwu0e.voluumtrk.com
-127.0.0.1 iqm.com
 127.0.0.1 ad.doubleclick.net.18450.9085.302br.net
 127.0.0.1 ad.doubleclick.net.65710.9503.302br.net
 127.0.0.1 ads.northjersey.com
@@ -38064,6 +38100,7 @@
 127.0.0.1 ip134.timesink.com
 127.0.0.1 ad.doubleclick.net.79377.9678.302br.net
 127.0.0.1 nbasic.sitestat.com
+127.0.0.1 t.frtyk.com
 127.0.0.1 w175.hitbox.com
 127.0.0.1 w131.hitbox.com
 127.0.0.1 ad.doubleclick.net.45539.9279.302br.net
@@ -38416,6 +38453,7 @@
 127.0.0.1 lc-pay.com
 127.0.0.1 fra79.ib.adnxs.com
 127.0.0.1 ad.doubleclick.net.79929.9681.302br.net
+127.0.0.1 trkn.us
 127.0.0.1 banners141.hpg.com.br
 127.0.0.1 ad.doubleclick.net.39623.9124.302br.net
 127.0.0.1 ad74.hpg.com.br
@@ -38450,6 +38488,7 @@
 127.0.0.1 bs.serving-sys.com.47082.9349.302br.net
 127.0.0.1 q.pni.com
 127.0.0.1 blacklightimages.com
+127.0.0.1 tracker.samplicio.us
 127.0.0.1 kulinar.justclick.ru
 127.0.0.1 gpaper199.112.2o7.net
 127.0.0.1 satyridsochasuzk.download
@@ -38516,6 +38555,7 @@
 127.0.0.1 ad.doubleclick.net.43329.9330.302br.net
 127.0.0.1 view.atdmt.com.66912.9519.302br.net
 127.0.0.1 ad.doubleclick.net.45605.9346.302br.net
+127.0.0.1 smetrics.foxnews.com
 127.0.0.1 count.west263.com
 127.0.0.1 xhr.measurementaz.com
 127.0.0.1 zq.zeroredirect1.com
@@ -38562,10 +38602,8 @@
 127.0.0.1 adserver.adtech.de.62939.9473.302br.net
 127.0.0.1 ad.doubleclick.net.74630.9336.302br.net
 127.0.0.1 81.6.87.194.dynamic.dol.ru
-127.0.0.1 lptag.liveperson.net
 127.0.0.1 6053-4c08-e99b-8d7a.reporo.net
 127.0.0.1 ad.doubleclick.net.58062.9418.302br.net
-127.0.0.1 adoperator.com
 127.0.0.1 view.atdmt.com.22828.9121.302br.net
 127.0.0.1 fairfax.cxsearch.cxense.com
 127.0.0.1 ad.uproar.com
@@ -38626,7 +38664,6 @@
 127.0.0.1 view.atdmt.com.39952.88.302br.net
 127.0.0.1 cdn.adshexa.com
 127.0.0.1 mobileapptracking.com
-127.0.0.1 mcssl.com
 127.0.0.1 ad.doubleclick.net.59504.9318.302br.net
 127.0.0.1 hangmyads.go2cloud.org
 127.0.0.1 ad.way.cz
@@ -38798,6 +38835,7 @@
 127.0.0.1 r.mail.ru
 127.0.0.1 ad.doubleclick.net.60622.9439.302br.net
 127.0.0.1 adnetwork.free-h.fr
+127.0.0.1 navegg.com
 127.0.0.1 ad.doubleclick.net.24786.9176.302br.net
 127.0.0.1 bs.serving-sys.com.36505.9244.302br.net
 127.0.0.1 oas.wuv.de
@@ -39010,6 +39048,7 @@
 127.0.0.1 ad.doubleclick.net.77238.9584.302br.net
 127.0.0.1 view.atdmt.com.68242.9541.302br.net
 127.0.0.1 ads1.advance.de
+127.0.0.1 callrail.com
 127.0.0.1 ap2.alphagirlz.mobi
 127.0.0.1 ad.doubleclick.net.29066.9225.302br.net
 127.0.0.1 fast.monster.demdex.net
@@ -39050,6 +39089,7 @@
 127.0.0.1 ad.doubleclick.net.25651.9190.302br.net
 127.0.0.1 bs.serving-sys.com.46981.9349.302br.net
 127.0.0.1 www.spylog.ru
+127.0.0.1 contextweb.com
 127.0.0.1 rygpq.voluumtrk.com
 127.0.0.1 www.pureadexchange.com
 127.0.0.1 view.atdmt.com.44764.9332.302br.net
@@ -39427,6 +39467,7 @@
 127.0.0.1 de.cb.b0.a1.top.mail.ru
 127.0.0.1 cpmtown.com
 127.0.0.1 banners.spread4u.com
+127.0.0.1 fastly-insights.com
 127.0.0.1 directads.epom.com
 127.0.0.1 ad.doubleclick.net.79937.9336.302br.net
 127.0.0.1 08.185.87.69.liveadvert.com
@@ -39444,6 +39485,7 @@
 127.0.0.1 ad.doubleclick.net.37028.9290.302br.net
 127.0.0.1 ad-emea.doubleclick.net.69618.9574.302br.net
 127.0.0.1 ads.pointroll.com.62926.9458.302br.net
+127.0.0.1 tracker.vgame.us
 127.0.0.1 leadmobi.en.alibaba.com
 127.0.0.1 servedby.flashtalking.com.63364.9124.302br.net
 127.0.0.1 www.yepdigital.adk2x.com
@@ -39461,6 +39503,7 @@
 127.0.0.1 advert39.hpg.com.br
 127.0.0.1 infoproducts.go2cloud.org
 127.0.0.1 ad.doubleclick.net.66120.9501.302br.net
+127.0.0.1 li.onetravel.com
 127.0.0.1 www.rapleaf.com
 127.0.0.1 xhr.forkitz.com
 127.0.0.1 hit7.hotlog.ru
@@ -39838,10 +39881,10 @@
 127.0.0.1 count927.51yes.com
 127.0.0.1 www.cash4files.com
 127.0.0.1 ad.doubleclick.net.34436.9225.302br.net
-127.0.0.1 adboost.net
 127.0.0.1 affiliate.mediaclicktrker.com
 127.0.0.1 08.185.87.41.liveadvert.com
 127.0.0.1 top-fwz1.mail.ru
+127.0.0.1 creep.world
 127.0.0.1 view.atdmt.com.46408.9304.302br.net
 127.0.0.1 ad.doubleclick.net.75148.9336.302br.net
 127.0.0.1 forum-fok.digidip.net
@@ -39864,7 +39907,6 @@
 127.0.0.1 ad.doubleclick.net.58796.9318.302br.net
 127.0.0.1 ad.doubleclick.net.43752.9335.302br.net
 127.0.0.1 remox.com
-127.0.0.1 visitpath.com
 127.0.0.1 adv.webmd.com
 127.0.0.1 aff.attractiontracker.com
 127.0.0.1 ad-emea.doubleclick.net.77877.9501.302br.net
@@ -39939,7 +39981,6 @@
 127.0.0.1 view.atdmt.com.71482.9491.302br.net
 127.0.0.1 ad.doubleclick.net.71694.9176.302br.net
 127.0.0.1 quarterbean.com
-127.0.0.1 veruta.com
 127.0.0.1 ad.doubleclick.net.56998.9401.302br.net
 127.0.0.1 w21.hitbox.com
 127.0.0.1 tom.302br.net
@@ -39963,6 +40004,7 @@
 127.0.0.1 1naf9.voluumtrk.com
 127.0.0.1 b7.sitemeter.com
 127.0.0.1 view.atdmt.com.26876.9201.302br.net
+127.0.0.1 brassrule.com
 127.0.0.1 richstring.com
 127.0.0.1 a.collective-media.net.23425.9163.302br.net
 127.0.0.1 ad.doubleclick.net.80432.9515.302br.net
@@ -40445,6 +40487,7 @@
 127.0.0.1 geoloc100.geovisite.com
 127.0.0.1 ad462m.adk2.co
 127.0.0.1 ad.doubleclick.net.49072.9361.302br.net
+127.0.0.1 tamgrt.com
 127.0.0.1 idgpctip.wemfbox.ch
 127.0.0.1 oas.villagevoice.com
 127.0.0.1 searchramp.com
@@ -40848,7 +40891,7 @@
 127.0.0.1 api.native.ai
 127.0.0.1 clicks.about.com
 127.0.0.1 adman_test.go2cloud.org
-127.0.0.1 www.actvtrack.com
+127.0.0.1 e.8p30k.cn
 127.0.0.1 adsweb.tiscali.de
 127.0.0.1 ad.doubleclick.net.68339.9418.302br.net
 127.0.0.1 click.clickcommander.com
@@ -41097,7 +41140,6 @@
 127.0.0.1 bs.serving-sys.com.20530.9120.302br.net
 127.0.0.1 www.hummumsutjuwal.download
 127.0.0.1 ad.doubleclick.net.24370.9175.302br.net
-127.0.0.1 adnetinteractive.com
 127.0.0.1 ad.doubleclick.net.55826.9376.302br.net
 127.0.0.1 count60.51yes.com
 127.0.0.1 www.tlvmedia.com
@@ -41149,6 +41191,7 @@
 127.0.0.1 krafteurope.112.2o7.net
 127.0.0.1 count728.51yes.com
 127.0.0.1 ad.doubleclick.net.76688.9611.302br.net
+127.0.0.1 aswpapius.com
 127.0.0.1 view.atdmt.com.71278.9517.302br.net
 127.0.0.1 ad.doubleclick.net.23315.9075.302br.net
 127.0.0.1 ad169.hpg.com.br
@@ -41265,6 +41308,7 @@
 127.0.0.1 view.atdmt.com.46558.9304.302br.net
 127.0.0.1 ads14.hpg.com.br
 127.0.0.1 banner.fotor.com
+127.0.0.1 hsadspixel.net
 127.0.0.1 www.addressingbxmqasxix.download
 127.0.0.1 ad.doubleclick.net.48614.9318.302br.net
 127.0.0.1 livere.co.kr
@@ -41363,7 +41407,6 @@
 127.0.0.1 ad.doubleclick.net.64934.9496.302br.net
 127.0.0.1 fra397.ib.adnxs.com
 127.0.0.1 ads.adsfirefly.com
-127.0.0.1 dealcatcher.com
 127.0.0.1 ad.soft365.com
 127.0.0.1 ad.doubleclick.net.29185.9215.302br.net
 127.0.0.1 view.atdmt.com.27282.9202.302br.net
@@ -41550,7 +41593,6 @@
 127.0.0.1 ad.doubleclick.net.59196.9318.302br.net
 127.0.0.1 admin17.testandtarget.omniture.com
 127.0.0.1 stateresolver.link
-127.0.0.1 nedstatpro.net
 127.0.0.1 nb.myspace.com
 127.0.0.1 ssl-vpn.cutterbuck.com
 127.0.0.1 advertiser.adknowledge.com
@@ -41590,7 +41632,6 @@
 127.0.0.1 ad.doubleclick.net.29537.9235.302br.net
 127.0.0.1 ad.doubleclick.net.59286.9318.302br.net
 127.0.0.1 optout.ad3.adfarm1.adition.com
-127.0.0.1 worrybutter.com
 127.0.0.1 ad.doubleclick.net.44537.9336.302br.net
 127.0.0.1 analytics.thingx.tv
 127.0.0.1 www.ad-board.com
@@ -41844,6 +41885,7 @@
 127.0.0.1 cdn1.flash.shareadult.com
 127.0.0.1 ad.doubleclick.net.68545.9499.302br.net
 127.0.0.1 ad.doubleclick.net.78649.9671.302br.net
+127.0.0.1 vivtracking.com
 127.0.0.1 www9.counter.bloke.com
 127.0.0.1 ad.doubleclick.net.69712.9350.302br.net
 127.0.0.1 count199.51yes.com
@@ -41980,7 +42022,6 @@
 127.0.0.1 signup.clicksor.com
 127.0.0.1 ad.doubleclick.net.58726.9318.302br.net
 127.0.0.1 sponsors.webosroundup.com
-127.0.0.1 rapid-cdn.com
 127.0.0.1 ad.doubleclick.net.43622.9333.302br.net
 127.0.0.1 adclick.com
 127.0.0.1 ad.doubleclick.net.50643.9279.302br.net
@@ -42114,6 +42155,7 @@
 127.0.0.1 ampxchange.com
 127.0.0.1 n1.nedstatbasic.net
 127.0.0.1 v6exp3-ds.metric.gstatic.com
+127.0.0.1 zarget.com
 127.0.0.1 ad.doubleclick.net.21822.9126.302br.net
 127.0.0.1 trafficmp.com
 127.0.0.1 collidingsgmwsx.download
@@ -42133,6 +42175,7 @@
 127.0.0.1 ad.doubleclick.net.65974.9501.302br.net
 127.0.0.1 ads.roanoke.com
 127.0.0.1 adparlor.com
+127.0.0.1 rtxplatform.com
 127.0.0.1 ad.doubleclick.net.76723.9611.302br.net
 127.0.0.1 view.atdmt.com.71313.9517.302br.net
 127.0.0.1 ad.doubleclick.net.60747.9336.302br.net
@@ -42239,6 +42282,7 @@
 127.0.0.1 ad4partners.com
 127.0.0.1 ads.flipkart.com
 127.0.0.1 ad.doubleclick.net.79445.9678.302br.net
+127.0.0.1 meta.truemobileclicks.com
 127.0.0.1 view.atdmt.com.24498.91dm.302br.net
 127.0.0.1 theappwarrior.com
 127.0.0.1 count13.51yes.com
@@ -42330,6 +42374,7 @@
 127.0.0.1 ad.doubleclick.net.18167.9077.302br.net
 127.0.0.1 cnzz.com
 127.0.0.1 www.ringmenbnfkg.download
+127.0.0.1 t.hrtya.com
 127.0.0.1 simplistssxshrgh.download
 127.0.0.1 ads.lfstmedia.com
 127.0.0.1 adx.metanetwork.com
@@ -42583,6 +42628,7 @@
 127.0.0.1 180searchassistant.com
 127.0.0.1 theta57.rtb.appier.net
 127.0.0.1 tcr.tynt.com
+127.0.0.1 analytics-production.hapyak.com
 127.0.0.1 a04.korrelate.net
 127.0.0.1 ad.doubleclick.net.60031.9318.302br.net
 127.0.0.1 view.atdmt.com.46650.9304.302br.net
@@ -42620,6 +42666,7 @@
 127.0.0.1 ad.doubleclick.net.12379.9034.302br.net
 127.0.0.1 wm-space.youero.com
 127.0.0.1 pageranktop.com
+127.0.0.1 ads.mail.bg
 127.0.0.1 gpaper137.112.2o7.net
 127.0.0.1 208.185.87.2.liveadvert.com
 127.0.0.1 ad2.doublepimp.com
@@ -42771,7 +42818,6 @@
 127.0.0.1 ad.doubleclick.net.41643.9317.302br.net
 127.0.0.1 reqpostanza.com
 127.0.0.1 ad-emea.doubleclick.net.42843.9326.302br.net
-127.0.0.1 cdn.optimizely.com
 127.0.0.1 u034.40.spylog.com
 127.0.0.1 ad.doubleclick.net.40699.9311.302br.net
 127.0.0.1 ad.doubleclick.net.29138.9225.302br.net
@@ -42853,7 +42899,6 @@
 127.0.0.1 view.atdmt.com.46582.9304.302br.net
 127.0.0.1 view.atdmt.com.70668.9528.302br.net
 127.0.0.1 a.collective-media.net.76227.9289.302br.net
-127.0.0.1 lopsidedspoon.com
 127.0.0.1 www.affiliatetracking.com
 127.0.0.1 view.atdmt.com.35353.9267.302br.net
 127.0.0.1 ad.doubleclick.net.66197.9501.302br.net
@@ -43012,7 +43057,6 @@
 127.0.0.1 logi3.xiti.com
 127.0.0.1 ad-emea.doubleclick.net.69623.9574.302br.net
 127.0.0.1 ad-emea.doubleclick.net.58218.9307.302br.net
-127.0.0.1 simplisticnose.com
 127.0.0.1 ws4.surf-town.net
 127.0.0.1 replay.foreseeresults.com
 127.0.0.1 gzwku.voluumtrk.com
@@ -43041,7 +43085,6 @@
 127.0.0.1 adexm.com
 127.0.0.1 ad.doubleclick.net.76125.9635.302br.net
 127.0.0.1 view.atdmt.com.75281.9623.302br.net
-127.0.0.1 logs.logrocket.com
 127.0.0.1 ad.doubleclick.net.29368.9233.302br.net
 127.0.0.1 websitepromoserver.com
 127.0.0.1 ayuzu.voluumtrk.com
@@ -43395,7 +43438,6 @@
 127.0.0.1 analytics.tribeca.vidavee.com
 127.0.0.1 view.atdmt.com.66819.9517.302br.net
 127.0.0.1 shop.gnezdo.ru
-127.0.0.1 homepageking.de
 127.0.0.1 ad.doubleclick.net.76121.9635.302br.net
 127.0.0.1 ad.doubleclick.net.29364.9233.302br.net
 127.0.0.1 rnd.yxo.ru
@@ -43642,6 +43684,7 @@
 127.0.0.1 bank62.mi.ads.mp.mydas.mobi
 127.0.0.1 kcsbaujgynaecia.review
 127.0.0.1 dcisw.voluumtrk.com
+127.0.0.1 big-bang-ads.com
 127.0.0.1 bullseye.backbeatmedia.com
 127.0.0.1 ad.doubleclick.net.75841.9630.302br.net
 127.0.0.1 sta.ifeng.com
@@ -44042,10 +44085,12 @@
 127.0.0.1 ads29.focalink.com
 127.0.0.1 fz6wh.voluumtrk.com
 127.0.0.1 ad.doubleclick.net.16086.9090.302br.net
+127.0.0.1 semasio.net
 127.0.0.1 ads.pointroll.com.29161.9229.302br.net
 127.0.0.1 z.extreme-dm.com
 127.0.0.1 ad-emea.doubleclick.net.58230.9307.302br.net
 127.0.0.1 ox-d.catholic.org
+127.0.0.1 feynmanhopeful.eu
 127.0.0.1 semrush.com
 127.0.0.1 a3shd.realshieldlinked.com
 127.0.0.1 view.atdmt.com.71267.9517.302br.net
@@ -44178,7 +44223,6 @@
 127.0.0.1 ad.doubleclick.net.22705.9138.302br.net
 127.0.0.1 z7ale.go2cloud.org
 127.0.0.1 content.zemanta.com
-127.0.0.1 shelterstraw.com
 127.0.0.1 34.6.87.194.dynamic.dol.ru
 127.0.0.1 f.staticlp.com
 127.0.0.1 res.lazyswipe.com
@@ -44354,6 +44398,7 @@
 127.0.0.1 softcore.xxxcounter.com
 127.0.0.1 wemfbox.ch
 127.0.0.1 ad.doubleclick.net.31134.9240.302br.net
+127.0.0.1 gml.email
 127.0.0.1 view.atdmt.com.46665.9304.302br.net
 127.0.0.1 2options.go2cloud.org
 127.0.0.1 blogwerk.wemfbox.ch
@@ -44475,7 +44520,6 @@
 127.0.0.1 ad18.focalink.com
 127.0.0.1 a.collective-media.net.42473.9289.302br.net
 127.0.0.1 api.getvero.com
-127.0.0.1 clicmanager.fr
 127.0.0.1 codilladtqjizvrh.download
 127.0.0.1 stats.frankfurterneuepresse.de
 127.0.0.1 ad.ero.be
@@ -44517,6 +44561,7 @@
 127.0.0.1 ad.doubleclick.net.19394.9118.302br.net
 127.0.0.1 ssl-i.2cnt.net
 127.0.0.1 ad.doubleclick.net.23627.9164.302br.net
+127.0.0.1 li.ziffimages.com
 127.0.0.1 ad.doubleclick.net.45557.9279.302br.net
 127.0.0.1 www.webstat.net
 127.0.0.1 ad.doubleclick.net.18700.9076.302br.net
@@ -44631,6 +44676,7 @@
 127.0.0.1 ad.doubleclick.net.32887.9240.302br.net
 127.0.0.1 www7.effectivemeasure.net
 127.0.0.1 imgn.dt07.net
+127.0.0.1 win.iqm.com
 127.0.0.1 view.atdmt.com.26946.9201.302br.net
 127.0.0.1 pclick.yahoo.com
 127.0.0.1 apx.internal-redirect.avazutracking.net
@@ -44653,11 +44699,11 @@
 127.0.0.1 d3tdefw8pwfkbk.cloudfront.net
 127.0.0.1 static.ads.crakmedia.com
 127.0.0.1 ox-d.startribune.servedbyopenx.com
-127.0.0.1 squeamishscarecrow.com
 127.0.0.1 prunemedia.go2affise.com
 127.0.0.1 ad-emea.doubleclick.net.51287.9307.302br.net
 127.0.0.1 ad.amtk-media.com.52674.9302.302br.net
 127.0.0.1 ad.doubleclick.net.60948.9336.302br.net
+127.0.0.1 concernrain.com
 127.0.0.1 ad.doubleclick.net.23344.9075.302br.net
 127.0.0.1 w.cm.ksmobile.com
 127.0.0.1 208.185.87.195.liveadvert.com
@@ -44770,6 +44816,7 @@
 127.0.0.1 www.koocash.com
 127.0.0.1 web16.voodoo.com
 127.0.0.1 ad.doubleclick.net.59295.9318.302br.net
+127.0.0.1 li.dailycaller.com
 127.0.0.1 static.it.groupon-content.net
 127.0.0.1 ad.doubleclick.net.70413.9594.302br.net
 127.0.0.1 perf.mmstat.com
@@ -44918,6 +44965,7 @@
 127.0.0.1 cdn.hyperpromote.com
 127.0.0.1 ad.doubleclick.net.21835.9126.302br.net
 127.0.0.1 de.nedstat.net
+127.0.0.1 simpleanalytics.io
 127.0.0.1 ads.epltalk.com
 127.0.0.1 d3cxv97fi8q177.cloudfront.net
 127.0.0.1 on-js.herokuapp.com
@@ -44987,7 +45035,7 @@
 127.0.0.1 ad.doubleclick.net.12329.9034.302br.net
 127.0.0.1 www.sgiz.mobi
 127.0.0.1 ad.doubleclick.net.23572.9075.302br.net
-127.0.0.1 contextweb.com
+127.0.0.1 ads24h.net
 127.0.0.1 fra88.ib.adnxs.com
 127.0.0.1 ad.sk.doubleclick.net
 127.0.0.1 ad.doubleclick.net.14141.9059.302br.net
@@ -45321,6 +45369,7 @@
 127.0.0.1 www.ferdy.org
 127.0.0.1 ad-emea.doubleclick.net.40003.9307.302br.net
 127.0.0.1 a.myapp.com
+127.0.0.1 srvmath.com
 127.0.0.1 ad.doubleclick.net.28092.9203.302br.net
 127.0.0.1 www.bigad.com.au
 127.0.0.1 ad.doubleclick.net.77477.9632.302br.net
@@ -45425,6 +45474,7 @@
 127.0.0.1 im.ov.yahoo.co.jp
 127.0.0.1 ad.doubleclick.net.74759.9336.302br.net
 127.0.0.1 ad.doubleclick.net.44354.9336.302br.net
+127.0.0.1 analytics.mytvzion.pro
 127.0.0.1 u154.03.spylog.com
 127.0.0.1 ads.lawnsite.com
 127.0.0.1 ad.doubleclick.net.60560.9436.302br.net
@@ -45744,7 +45794,6 @@
 127.0.0.1 4379742.fls.doubleclick.net
 127.0.0.1 ad.doubleclick.net.48471.9318.302br.net
 127.0.0.1 ad.doubleclick.net.14485.9070.302br.net
-127.0.0.1 buysub.com
 127.0.0.1 ehg-adeptscience.hitbox.com
 127.0.0.1 metrics.raptr.com
 127.0.0.1 ad.doubleclick.net.51967.9359.302br.net
@@ -45982,6 +46031,7 @@
 127.0.0.1 www.subfuscsoweaucss.download
 127.0.0.1 nmsacramento.112.2o7.net
 127.0.0.1 dtrck.xyz
+127.0.0.1 ads.gaming1.com
 127.0.0.1 adaction.se
 127.0.0.1 leader.linkexchange.net
 127.0.0.1 ads.rediff.com
@@ -46006,6 +46056,7 @@
 127.0.0.1 ads.ce.cn
 127.0.0.1 z1.zedo.com
 127.0.0.1 enlightenment.secureshoppingbasket.com
+127.0.0.1 voluum.com
 127.0.0.1 api28.webovernet.com
 127.0.0.1 eads.nl
 127.0.0.1 2370.bitterstrawberry.com
@@ -46163,7 +46214,7 @@
 127.0.0.1 q.zeroredirect2.com
 127.0.0.1 view.atdmt.com.55793.9391.302br.net
 127.0.0.1 www.adsview.com
-127.0.0.1 siteimproveanalytics.com
+127.0.0.1 analytics.myfinance.com
 127.0.0.1 adserver.adtech.de.1754.9018.302br.net
 127.0.0.1 view.atdmt.com.70653.9528.302br.net
 127.0.0.1 ehg-nestleusainc.hitbox.com
@@ -46287,6 +46338,7 @@
 127.0.0.1 www.tzpwyoyhfspaed.review
 127.0.0.1 apodemjyoqhwc.download
 127.0.0.1 1fm8o.voluumtrk.com
+127.0.0.1 tagan.adlightning.com
 127.0.0.1 ad.doubleclick.net.57065.9406.302br.net
 127.0.0.1 sm9.sitemeter.com
 127.0.0.1 gae.caspion.com
@@ -46339,6 +46391,7 @@
 127.0.0.1 www.myapp.com
 127.0.0.1 actualdeals.com
 127.0.0.1 adverts.archant.co.uk
+127.0.0.1 tracker.colpirio.com
 127.0.0.1 ad.doubleclick.net.42757.9164.302br.net
 127.0.0.1 ad.doubleclick.net.79305.9678.302br.net
 127.0.0.1 commissionmonster.com
@@ -46357,6 +46410,7 @@
 127.0.0.1 ad.doubleclick.net.33855.9250.302br.net
 127.0.0.1 tags.go2cloud.org
 127.0.0.1 view.atdmt.com.79594.9546.302br.net
+127.0.0.1 firstpromoter.com
 127.0.0.1 adtiger.de
 127.0.0.1 ad.doubleclick.net.16005.9088.302br.net
 127.0.0.1 urbanityadnetwork.com
@@ -46497,6 +46551,7 @@
 127.0.0.1 lego.112.207.net
 127.0.0.1 view.atdmt.com.71858.9304.302br.net
 127.0.0.1 sigma26.rtb.appier.net
+127.0.0.1 track.addevent.com
 127.0.0.1 ad.doubleclick.net.12734.9046.302br.net
 127.0.0.1 imp.constantcontact.com
 127.0.0.1 view.atdmt.com.33346.9201.302br.net
@@ -46654,6 +46709,7 @@
 127.0.0.1 count657.51yes.com
 127.0.0.1 count217.51yes.com
 127.0.0.1 fra399.ib.adnxs.com
+127.0.0.1 dsp.colpirio.com
 127.0.0.1 view.atdmt.com.70493.9596.302br.net
 127.0.0.1 view.atdmt.com.66828.9517.302br.net
 127.0.0.1 ads.toronto.com
@@ -46685,6 +46741,7 @@
 127.0.0.1 ad.doubleclick.net.75162.9336.302br.net
 127.0.0.1 ns1.247media.com
 127.0.0.1 hnbutton.appspot.com
+127.0.0.1 analytics.picsart.com
 127.0.0.1 view.atdmt.com.70877.9519.302br.net
 127.0.0.1 count908.51yes.com
 127.0.0.1 ad.doubleclick.net.66037.9501.302br.net
@@ -46825,7 +46882,6 @@
 127.0.0.1 count42.51yes.com
 127.0.0.1 logv5.xiti.com
 127.0.0.1 www.swellisholupo.download
-127.0.0.1 proranktracker.com
 127.0.0.1 nlrbucstales.review
 127.0.0.1 ad.doubleclick.net.29771.9240.302br.net
 127.0.0.1 ad.doubleclick.net.32206.9242.302br.net
@@ -46913,6 +46969,7 @@
 127.0.0.1 bs.serving-sys.com.11758.9021.302br.net
 127.0.0.1 ad.doubleclick.net.51638.9076.302br.net
 127.0.0.1 admobile.com
+127.0.0.1 krxd.net
 127.0.0.1 gifthulk.go2cloud.org
 127.0.0.1 www.mckygschalalled.review
 127.0.0.1 ad.doubleclick.net.13529.9009.302br.net
@@ -47040,7 +47097,6 @@
 127.0.0.1 www.histriodqxmtbztd.download
 127.0.0.1 www.freddyman.com
 127.0.0.1 owneriq.net
-127.0.0.1 functionalclam.com
 127.0.0.1 naj.sk
 127.0.0.1 hit3.hotlog.ru
 127.0.0.1 oascentral.blogher.org.12475.9030.302br.net
@@ -47073,7 +47129,6 @@
 127.0.0.1 ad128m.adk2.co
 127.0.0.1 ad.doubleclick.net.39638.9124.302br.net
 127.0.0.1 click.plista.com
-127.0.0.1 tracedesire.com
 127.0.0.1 ad.doubleclick.net.24343.9115.302br.net
 127.0.0.1 ad.doubleclick.net.11920.9037.302br.net
 127.0.0.1 bs.serving-sys.com.42229.9320.302br.net
@@ -47210,7 +47265,6 @@
 127.0.0.1 ad.doubleclick.net.50606.9279.302br.net
 127.0.0.1 ad.doubleclick.net.42142.9318.302br.net
 127.0.0.1 ad.doubleclick.net.34470.9250.302br.net
-127.0.0.1 cdn.ywxi.net
 127.0.0.1 safelists.com
 127.0.0.1 bank-6.ads.mp.mydas.mobi
 127.0.0.1 hig.com
@@ -47273,7 +47327,6 @@
 127.0.0.1 ad.doubleclick.net.67485.9336.302br.net
 127.0.0.1 view.atdmt.com.46462.9304.302br.net
 127.0.0.1 ad.doubleclick.net.54763.9199.302br.net
-127.0.0.1 hits4pay.com
 127.0.0.1 adsonar.com
 127.0.0.1 advert36.hpg.com.br
 127.0.0.1 web4.voodoo.com
@@ -47498,6 +47551,7 @@
 127.0.0.1 ad.doubleclick.net.58685.9318.302br.net
 127.0.0.1 stats.harpercollins.com
 127.0.0.1 ss.xxxnavy.com
+127.0.0.1 mintegral.com
 127.0.0.1 ad.doubleclick.net.76607.9648.302br.net
 127.0.0.1 ejyymghi.com
 127.0.0.1 ads.win.rs
@@ -47568,7 +47622,6 @@
 127.0.0.1 ad.doubleclick.net.73394.9621.302br.net
 127.0.0.1 banners.friendfinder.com
 127.0.0.1 ads163.hpg.com.br
-127.0.0.1 puzzlingfall.com
 127.0.0.1 adrecreate.com
 127.0.0.1 bat.adforum.com
 127.0.0.1 www.thrgo.pro
