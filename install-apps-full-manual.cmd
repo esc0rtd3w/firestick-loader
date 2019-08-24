@@ -415,6 +415,31 @@ echo.
 
 cls
 %_color% 0e
+set appName=Cinema HD
+set apk=
+echo Install %appName%?
+echo.
+echo 1) Yes   2) No
+echo.
+echo.
+%_color% 0b
+echo Requirements: NONE
+echo.
+echo Info: Movie/Video App
+echo.
+set /p choice=
+if %choice%==1 (
+echo.
+echo.
+echo Installing %appName%...
+echo.
+
+%install% "apps\media\cinemahd.apk"
+)
+
+
+cls
+%_color% 0e
 set appName=KokoTime
 set apk=
 echo Install %appName%?
@@ -1393,6 +1418,54 @@ echo.
 
 cls
 %_color% 0e
+set appName=Cyberflix
+set apk=
+echo Install %appName%?
+echo.
+echo 1) Yes   2) No
+echo.
+echo.
+%_color% 0b
+echo Requirements: NONE
+echo.
+echo Info: Movie and TV App
+echo.
+set /p choice=
+if %choice%==1 (
+echo.
+echo.
+echo Installing %appName%...
+echo.
+%install% "apps\media\cyberflix.apk"
+)
+
+
+cls
+%_color% 0e
+set appName=Titanium TV
+set apk=
+echo Install %appName%?
+echo.
+echo 1) Yes   2) No
+echo.
+echo.
+%_color% 0b
+echo Requirements: NONE
+echo.
+echo Info: Movie and TV App
+echo.
+set /p choice=
+if %choice%==1 (
+echo.
+echo.
+echo Installing %appName%...
+echo.
+%install% "apps\media\titanium-tv.apk"
+)
+
+
+cls
+%_color% 0e
 set appName=uSound Ares
 set apk=
 echo Install %appName%?
@@ -1460,6 +1533,30 @@ echo.
 echo Installing %appName%...
 echo.
 %install% "apps\web\opera.apk"
+)
+
+
+cls
+%_color% 0e
+set appName=Firefox
+set apk=
+echo Install %appName%?
+echo.
+echo 1) Yes   2) No
+echo.
+echo.
+%_color% 0b
+echo Requirements: NONE
+echo.
+echo Info: Web Browser
+echo.
+set /p choice=
+if %choice%==1 (
+echo.
+echo.
+echo Installing %appName%...
+echo.
+%install% "apps\web\firefox.apk"
 )
 
 
@@ -1724,6 +1821,78 @@ echo.
 echo Installing %appName%...
 echo.
 %install% "apps\utilities\mouse-toggle.apk"
+)
+
+
+cls
+%_color% 0e
+set appName=UFC
+set apk=
+echo Install %appName%?
+echo.
+echo 1) Yes   2) No
+echo.
+echo.
+%_color% 0b
+echo Requirements: NONE
+echo.
+echo Info: Amazon UFC App
+echo.
+set /p choice=
+if %choice%==1 (
+echo.
+echo.
+echo Installing %appName%...
+echo.
+%install% "apps\sports\ufc.apk"
+)
+
+
+cls
+%_color% 0e
+set appName=ESPN
+set apk=
+echo Install %appName%?
+echo.
+echo 1) Yes   2) No
+echo.
+echo.
+%_color% 0b
+echo Requirements: NONE
+echo.
+echo Info: Amazon ESPN App
+echo.
+set /p choice=
+if %choice%==1 (
+echo.
+echo.
+echo Installing %appName%...
+echo.
+%install% "apps\sports\espn.apk"
+)
+
+
+cls
+%_color% 0e
+set appName=Reboot App
+set apk=
+echo Install %appName%?
+echo.
+echo 1) Yes   2) No
+echo.
+echo.
+%_color% 0b
+echo Requirements: NONE
+echo.
+echo Info: *REQUIRES ROOT* Reboot App
+echo.
+set /p choice=
+if %choice%==1 (
+echo.
+echo.
+echo Installing %appName%...
+echo.
+%install% "apps\utilities\reboot.apk"
 )
 
 
