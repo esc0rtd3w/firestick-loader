@@ -11,36 +11,22 @@ color 0e
 set pathBin="%~dp0bin"
 set pathScripts="%~dp0scripts"
 set pathScriptsConfig="%~dp0config\scripts"
+set tempHost=%temp%
 
 :: Config Menu UI
 set configMain="%~dp0config\menu.ini"
 set iniRead="%pathScriptsConfig%\ini-read.cmd"
 set iniWrite="%pathScriptsConfig%\ini-write.cmd"
 
-set twrpActive=0
-
-set doNothing=0
-
-set runShellNoTerminateAndWait=cmd /k
-set runShellNoTerminate=start cmd /k
-set runShellWaitNoTerminate=start /wait cmd /k
-set runShellTerminateAndWait=cmd /c
-set runShellTerminate=start cmd /c
-set runShellWaitTerminate=start /wait cmd /c
-
+:: App EXE Paths
 set _color="%~dp0bin\cocolor.exe"
-
+set sleep="%~dp0bin\wait.exe"
+set msgbox="%~dp0bin\msgbox.exe"
 set extractRAR="%~dp0bin\rar.exe" -y x
 set extractRAR="%~dp0bin\rar.exe" -y x
-
-set checkRoot=call "%~dp0scripts\misc\check-root.cmd"
-
 set teamviewer="%~dp0bin\teamviewer.exe"
-
 set virtualRouterCMD="%~dp0bin\virtualrouter.exe"
 set virtualRouterGUI="%~dp0bin\virtualrouter-gui.exe"
-
-
 set kingrootAPK="%~dp0rooting\king\kingroot.apk"
 set kingrootAPKAlt1="%~dp0rooting\king\kingroot-alt1.apk"
 set kingrootAPKAlt2="%~dp0rooting\king\kingroot-alt2.apk"
@@ -48,32 +34,17 @@ set kingrootPC="%~dp0rooting\king\kingroot-pc.exe"
 set kingrootPCAlt1="%~dp0rooting\king\kingroot-alt1.exe"
 set kingrootPCAlt2="%~dp0rooting\king\kingroot-alt2.exe"
 
-set sleep="%~dp0bin\wait.exe"
-set rm=rmdir /s /q
+:: Screencap Paths
+set capDevice=/sdcard/cap.png
+set capHost="%temp%\cap.png"
 
+:: ADB Main Commands
 set adb="%~dp0bin\adb.exe"
 set adbKill=%adb% kill-server
 set adbStart="%adb% start-server
 set adbWait=%adb% wait-for-device
 
-set msgbox="%~dp0bin\msgbox.exe"
-
-set capDevice=/sdcard/cap.png
-
-set tempHost=%temp%
-set capHost="%temp%\cap.png"
-
-set ssViewer=0
-
-set waitTime=5
-
-set doBlockAdsWithMenuOption=0
-
-set doAcceptSuAfterRequest=0
-
-set appName=0
-set choice=2
-
+:: ADB Common Commands
 set install=%adb% install
 set installOverwrite=%adb% install -r -t -d
 set uninstall=%adb% uninstall
@@ -81,7 +52,15 @@ set push=%adb% push
 set pull=%adb% pull
 set shell=%adb% shell
 set adbwait=%adb% wait-for-device
+set kill=%shell% am kill
 
+:: Must use double quotes after process/package for Super Kill
+set killSuper=%shell% "su -c am kill
+
+:: Must use double quotes after process/package for Super Kill
+set rmSuper=%shell% "su -c rm
+
+:: ADB Touch/Mouse/Keyboard Actions
 set tap=%adb% shell input tap
 set swipe=%shell% input swipe
 set key=%shell% input keyevent
@@ -98,55 +77,77 @@ set keyArrowRight=%shell% input keyevent 22
 set keyBack=%shell% input keyevent 3
 set keyHome=%shell% input keyevent 4
 
+:: Android Common Commands
 set amStart=%shell% am start -a android.intent.action.MAIN -n
+set mountRW=%shell% "su -c mount -o rw,remount /system"
+set mountRO=%shell% "su -c mount -o ro,remount /system"
+set mountRW_TWRP=%shell% "mount -o rw,remount /system"
+set mountRO_TWRP=%shell% "mount -o ro,remount /system"
+set mountRW_TWRP_tank=%shell% "mount -o rw /system"
+set mountRO_TWRP_tank=%shell% "mount -o ro /system"
 
-set bloatAction=disable
+:: CMD Shell Commands
+set runShellNoTerminateAndWait=cmd /k
+set runShellNoTerminate=start cmd /k
+set runShellWaitNoTerminate=start /wait cmd /k
+set runShellTerminateAndWait=cmd /c
+set runShellTerminate=start cmd /c
+set runShellWaitTerminate=start /wait cmd /c
 
-set rebootAfterClearCache=0
-set rebootAfterBloatRemovalChoice=0
+:: Common Scripts
+set checkRoot=call "%~dp0scripts\misc\check-root.cmd"
 
+:: Android Paths
 set sdcard=sdcard
 ::set sdcard=external_sd
 ::set sdcard=extSdCard
-
-set dgNoRoot=0
-
 set bootAnimationPath=%~dp0custom\bootanimation
-
-set fireOsVersion=0.0.0.0
-set checkKitKat=0
-
 set buildDotProp=/system/build.prop
 
+:: Common Amazon Variables
+set fireOsVersion=0.0.0.0
+
+:: Flags
+set bloatAction=disable
+set twrpActive=0
+set doNothing=0
+set choice=2
+set waitTime=5
+set ssViewer=0
+set doBlockAdsWithMenuOption=0
+set doAcceptSuAfterRequest=0
+set appName=0
+set rebootAfterClearCache=0
+set rebootAfterBloatRemovalChoice=0
+set dgNoRoot=0
+set checkKitKat=0
 set rootable=0
 set rootableText=NOT EXPLOITABLE
 set firstCheck=0
 set firstTimeRootAttempt=1
 set rooted=0
-
 set rootFromDG=1
-
 set factoryReset=0
-
-set msgbox=%~dp0bin\msgbox.exe
-
-set busyboxScriptInstall=0
-
-set mountRW=%shell% "su -c mount -o rw,remount /system"
-set mountRO=%shell% "su -c mount -o ro,remount /system"
-
-set kill=%shell% am kill
-
-:: Must use double quotes after process/package for Super Kill
-set killSuper=%shell% "su -c am kill
-
-:: Must use double quotes after process/package for Super Kill
-set rmSuper=%shell% "su -c rm
-
-
 set cleanEntireSdCard=0
-
 set doLaunchTWRPInstaller=1
+set busyboxScriptInstall=0
+set fullAutoMode=0
+set fullAutoModeDG=0
+set doFullAutoMode=0
+set rootAfterInstall=0
+set superSuReinstall=0
+set installFireStopperSetting=0
+set installTerminalSetting=0
+set rebootAfterBloatRemoval=0
+set restoreAmazonFiles=0
+set adbServerAction=0
+set checkFireOsInfoText=0
+set unhideAllOTA=0
+
+:: Amazon APK Patching Flags
+set patchAllSystemAPKs=0
+set patchPhotosAPK=0
+set patchSettingsAPK=0
 
 :: File Commands (Unix-Like)
 set cp=xcopy /e /y
@@ -163,9 +164,7 @@ set rmdir=rd /s /q
 set mkdir=md
 set kill=taskkill /f /im
 
-
-:: Direct Invoking
-
+:: Common Amazon Commands
 :: Settings -> Main
 set showSettingsMain=%amStart% com.amazon.tv.launcher/.ui.SettingsActivity
 set showSettingsMainNew=%amStart% com.amazon.device.settings/.SettingsProvider
@@ -210,37 +209,34 @@ set showSettingsMyAccount=%amStart% com.amazon.tv.settings/.tv.BuellerAccountSet
 
 :: Misc Invokes
 set showDeviceNotifications=%amStart% com.amazon.bueller.notification/com.amazon.bueller.notification.BuellerDeviceService
-
 set deregisterAmazonAccount=%shell% am start -a com.amazon.tv.oobe/.DeregistrationActivity -n com.amazon.tv.oobe/.DeregistrationActivity
 
-
 :: Misc Activities Found
-
 set clearUserAppData=%amStart% com.amazon.tv.settings/.tv.BuellerClearUserApplicationDataActivity
 set showAppFilter=%amStart% com.amazon.tv.settings/.tv.ApplicationsFilterActivity
 set scanForWPS=%amStart% com.amazon.tv.settings/.wifi.BuellerWifiWpsSettingsActivity
-
-
 set showHomeLongPressHUD=%amStart% com.amazon.tv.settings/.hud.HudActivity
-
-:: android.content.ContextWrapper.startService
-
-:: com.amazon.tv.settings.tv.accounts.AccountHelpers.startOOBEDeregistrationForFactoryReset
-
-:: com.amazon.tv.settings.tv.FactoryResetService.deregisterAccount
-
-:: com.amazon.tv.settings.tv.FactoryResetActivity.factoryReset
-
 set voicePromptOpen=%shell% am start -a com.amazon.intent.action.SEARCH -n com.amazon.vizzini/com.amazon.vizzini.vim.VIMOverlayActivity
-::set voicePromptOpen=%amStart% com.amazon.vizzini/.vim.VIMOverlayActivity
-
 set amazonLauncherHome=%shell% am start -a com.amazon.device.intent.category.LAUNCHER_MENU com.amazon.tv.launcher/.ui.HomeActivity
-
 set amazonLauncherDeviceActivity=%shell% am start -a com.amazon.device.settings.action.DEVICE -n com.amazon.tv.settings/.tv.device.DeviceActivity
+set launchScreenSaver=%amStart% com.amazon.bueller.photos/com.amazon.bueller.photos.daydream.ScreenSaverService
+set appLauncher=%amStart% com.amazon.venezia/.grid.AppsGridLauncherActivity
+set removeSuperSU=%uninstall% eu.chainfire.supersu
+set firestopperUpdater=%amStart% de.belu.firestopper.tools.FireStarterUpdater
+set test1=%shell% am start -a android.content.ContextWrapper.startService -n com.amazon.tv.launcher.Navigator.gotoMenu
+set cleanPackages=%shell% "su -c dumpsys package"
+set showFireTvRemotePin=%shell% am start -a com.amazon.storm.lightning.tutorial.authentication.SHOW -n com.amazon.storm.lightning.tutorial/.authentication.JpakePinActivity
 
-
-
+:: com.amazon.bueller.photos/.activity.ElizaVideoPlaybackActivity
+:: com.opera.mini.android/.Browser
+::set suRequest=%amStart% com.android.internal.os.RuntimeInit uid 0
+::set usbPowerWarning=Window{24f60778 u0 com.amazon.tv.settings/com.amazon.tv.settings.tv.BuellerAboutSettingsActivity
 ::set amazonLauncherDeviceActivityNew=%shell% am start -a com.amazon.device.settings.action.DEVICE -n com.amazon.tv.launcher/.ui.HomeActivity_vNext
+:: android.content.ContextWrapper.startService
+:: com.amazon.tv.settings.tv.accounts.AccountHelpers.startOOBEDeregistrationForFactoryReset
+:: com.amazon.tv.settings.tv.FactoryResetService.deregisterAccount
+:: com.amazon.tv.settings.tv.FactoryResetActivity.factoryReset
+::set voicePromptOpen=%amStart% com.amazon.vizzini/.vim.VIMOverlayActivity
 
 ::RecoverySystemWrapper.smali
 ::DeviceSoftwareOTA_blocked\com\amazon\android\os
@@ -248,7 +244,6 @@ set amazonLauncherDeviceActivity=%shell% am start -a com.amazon.device.settings.
 
 ::ComradeActionHandler
 ::const-string v0, "^(com\\.amazon(?!\\.(webapps|rialto\\.cordova\\.webapp)\\.)|amazon|android|king|kingo|kingroot|kinguser|tencent).*"
-
 
 :: Launch Different Apps
 set launchFireStarter=%amStart% de.belu.firestopper/.gui.MainActivity
@@ -268,81 +263,27 @@ set launchRootExplorer=%amStart% com.speedsoftware.rootexplorer/.RootExplorer
 set launchBusybox=%amStart% stericson.busybox/.Activity.MainActivity
 set launchTerminal=%amStart% jackpal.androidterm/.Term
 
-
-::set suRequest=%amStart% com.android.internal.os.RuntimeInit uid 0
-
-::set usbPowerWarning=Window{24f60778 u0 com.amazon.tv.settings/com.amazon.tv.settings.tv.BuellerAboutSettingsActivity
-
-set launchScreenSaver=%amStart% com.amazon.bueller.photos/com.amazon.bueller.photos.daydream.ScreenSaverService
-
-
-set appLauncher=%amStart% com.amazon.venezia/.grid.AppsGridLauncherActivity
-
-set removeSuperSU=%uninstall% eu.chainfire.supersu
-
-
-set firestopperUpdater=%amStart% de.belu.firestopper.tools.FireStarterUpdater
-
-:: com.amazon.bueller.photos/.activity.ElizaVideoPlaybackActivity
-
-:: com.opera.mini.android/.Browser
-
-set test1=%shell% am start -a android.content.ContextWrapper.startService -n com.amazon.tv.launcher.Navigator.gotoMenu
-
-
-
-set cleanPackages=%shell% "su -c dumpsys package"
-
-
-:: Misc
-set showFireTvRemotePin=%shell% am start -a com.amazon.storm.lightning.tutorial.authentication.SHOW -n com.amazon.storm.lightning.tutorial/.authentication.JpakePinActivity
-
-
 :: Downgrade Version Options
 set dgVersion=5.0.5
 ::set dgVersion=5.0.5.1
 ::set dgVersion=5.2.1.0
 
+:: Initial Device Check
 set writeFreeMemFireStick=%shell% "cat proc/meminfo | grep MemAvailable>/sdcard/freeMemory.txt"
 set pullFreeMemFireStick=%pull% /sdcard/freeMemory.txt %temp%
 ::set showFreeMemFireStick=%runShellTerminate% notepad.exe "%temp%\freeMemory.txt"
 ::set /p readFreeMemFireStick=<"%temp%\freeMemory.txt"
-
 set writeFreeStorageDataFireStick=%shell% "df /data/ | grep G>/sdcard/freeStorageData.txt"
 set pullFreeStorageDataFireStick=%pull% /sdcard/freeStorageData.txt %temp%
-
 set writeFreeStorageSystemFireStick=%shell% "df /system/ | grep M>/sdcard/freeStorageSystem.txt"
 set pullFreeStorageSystemFireStick=%pull% /sdcard/freeStorageSystem.txt %temp%
-
-set fullAutoMode=0
-set fullAutoModeDG=0
-
-set doFullAutoMode=0
-
-set rootAfterInstall=0
-
-set superSuReinstall=0
-
-
-set installFireStopperSetting=0
-set installTerminalSetting=0
-
-set rebootAfterBloatRemoval=0
-
-set restoreAmazonFiles=0
-
-set adbServerAction=0
-
-set checkFireOsInfoText=0
-
-set unhideAllOTA=0
 
 :: Default SU Types (kingroot / supersu)
 set suType=kingroot
 ::set suType=supersu
 
+:: Recovery Commands
 set forceRecoveryBoot=%shell% "su -c echo 0>/cache/bootmenu_recovery"
-
 
 :: Setting Default Available Boot Animation Colors
 set bootAnimationBlue="%~dp0bootanimation\stock-blue\bootanimation.zip"
@@ -353,21 +294,11 @@ set bootAnimationPurple="%~dp0bootanimation\stock-purple\bootanimation.zip"
 set bootAnimationRed="%~dp0bootanimation\stock-red\bootanimation.zip"
 set bootAnimationYellow="%~dp0bootanimation\stock-yellow\bootanimation.zip"
 
-
 :: Busybox Commands
-
 ::arp -a -v -i wlan0
 
-
-:: Amazon APK Patching Flags
-set patchAllSystemAPKs=0
-set patchPhotosAPK=0
-set patchSettingsAPK=0
-
-
+:: Set Default Return Value
 set returnTo=menu
-
-
 
 
 :menu
