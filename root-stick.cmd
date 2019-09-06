@@ -3752,6 +3752,9 @@ if %factoryReset%==2 (
 :: If Reboot After Clear Cache Is Set To 0 and Bloat Remove is Set To 1 Then DO Reboot and Clear Reboot Flag
 if %rebootAfterClearCache%==0 (
 	if %rebootAfterBloatRemoval%==1 %adb% reboot
+	cls
+	echo Waiting For Device Reboot To Finish...
+	echo.
 	if %rebootAfterBloatRemoval%==1 %adbWait%
 	if %rebootAfterBloatRemoval%==1 set rebootAfterBloatRemoval=0
 )
@@ -3760,6 +3763,9 @@ if %rebootAfterClearCache%==0 (
 if %rebootAfterClearCache%==1 (
 	if %rebootAfterBloatRemoval%==1 set rebootAfterBloatRemoval=0
 	%adb% reboot
+	cls
+	echo Waiting For Device Reboot To Finish...
+	echo.
 	%adbWait%
 	set rebootAfterClearCache=0
 )
