@@ -183,22 +183,22 @@ pm disable com.amazon.advertisingidsettings
 #pm disable com.amazon.tz.webcryptotzservice
 
 # FireOS 5.2.6.2
-# pm disable com.amazon.alexashopping
-# pm disable com.amazon.cardinal
-# pm disable com.amazon.device.settings
-# pm disable com.amazon.ftv.glorialist
-# pm disable com.amazon.malcolm
-# pm disable com.amazon.ssdpservice
-# pm disable com.amazon.ssmsys
-# pm disable com.amazon.tv.livetv
-# pm disable com.amazon.tv.notificationcenter
-# pm disable com.amazon.tv.ottssocompanionapp
-# pm disable com.amazon.tv.ottssolib
-# pm disable com.amazon.webview.awvdeploymentservice
-# pm disable com.amazon.whisperplay.service.install
-# pm disable com.amazon.wifilocker
-# pm disable com.amazon.amazonvideo.livingroom
-# pm disable com.amazon.kor.demo
+pm disable com.amazon.alexashopping
+pm disable com.amazon.cardinal
+pm disable com.amazon.device.settings
+pm disable com.amazon.ftv.glorialist
+pm disable com.amazon.malcolm
+pm disable com.amazon.ssdpservice
+pm disable com.amazon.ssmsys
+pm disable com.amazon.tv.livetv
+pm disable com.amazon.tv.notificationcenter
+pm disable com.amazon.tv.ottssocompanionapp
+pm disable com.amazon.tv.ottssolib
+pm disable com.amazon.webview.awvdeploymentservice
+pm disable com.amazon.whisperplay.service.install
+pm disable com.amazon.wifilocker
+pm disable com.amazon.amazonvideo.livingroom
+pm disable com.amazon.kor.demo
 
 
 echo "Deleting Amazon Bloat...."
@@ -353,42 +353,27 @@ rm -r /system/priv-app/Logan
 rm -r /system/priv-app/TvProvider
 
 # FireOS 5.2.6.2
-# rm -r /system/priv-app/com.amazon.alexashopping
-# rm -r /system/priv-app/com.amazon.cardinal
+rm -r /system/priv-app/com.amazon.alexashopping
+rm -r /system/priv-app/com.amazon.cardinal
 #rm -r /system/priv-app/com.amazon.device.settings
-# rm -r /system/priv-app/com.amazon.malcolm
-# rm -r /system/priv-app/com.amazon.ftv.glorialist
-# rm -r /system/priv-app/com.amazon.ssdpservice
-# rm -r /system/priv-app/com.amazon.ssmsys
-# rm -r /system/priv-app/com.amazon.tv.livetv
-# rm -r /system/priv-app/com.amazon.tv.notificationcenter
-# rm -r /system/priv-app/com.amazon.tv.ottssocompanionapp
-# rm -r /system/priv-app/com.amazon.tv.ottssolib
-# rm -r /system/priv-app/com.amazon.webview.awvdeploymentservice
-# rm -r /system/priv-app/com.amazon.whisperplay.service.install
-# rm -r /system/priv-app/com.amazon.wifilocker
-# rm -r /system/priv-app/com.amazon.amazonvideo.livingroom
-# rm -r /system/priv-app/logan
-# rm -r /system/priv-app/CredentialLockerAndroid-tablet-release
-# rm -r /system/priv-app/LogManager-logd
-# rm -r /system/priv-app/SsdpService
-# rm -r /system/priv-app/SystemStatusMonitorSys
-# rm -r /system/priv-app/com.amazon.kor.demo
-
-# FireOS 5.2.6.7
-# rm -r /system/priv-app/com.amazon.aca/
-# rm -r /system/priv-app/com.amazon.amazonvideo.livingroom/
-# rm -r /system/priv-app/com.amazon.aria/
-# rm -r /system/priv-app/com.amazon.firehomestarter/
-# rm -r /system/priv-app/com.amazon.franktvinput/
-# rm -r /system/priv-app/com.amazon.gloria.graphiq/
-# rm -r /system/priv-app/com.amazon.hedwig/
-# rm -r /system/priv-app/com.amazon.naatyam/
-# rm -r /system/priv-app/com.amazon.tv.legal.notices/
-# rm -r /system/priv-app/com.amazon.net.smartconnect/
-# rm -r /system/priv-app/com.amazon.tmm.tutorial/
-# rm -r /system/priv-app/com.amazon.tv.forcedotaupdater/
-# rm -r /system/priv-app/TIFObserverService/
+rm -r /system/priv-app/com.amazon.malcolm
+rm -r /system/priv-app/com.amazon.ftv.glorialist
+rm -r /system/priv-app/com.amazon.ssdpservice
+rm -r /system/priv-app/com.amazon.ssmsys
+rm -r /system/priv-app/com.amazon.tv.livetv
+rm -r /system/priv-app/com.amazon.tv.notificationcenter
+rm -r /system/priv-app/com.amazon.tv.ottssocompanionapp
+rm -r /system/priv-app/com.amazon.tv.ottssolib
+rm -r /system/priv-app/com.amazon.webview.awvdeploymentservice
+rm -r /system/priv-app/com.amazon.whisperplay.service.install
+rm -r /system/priv-app/com.amazon.wifilocker
+rm -r /system/priv-app/com.amazon.amazonvideo.livingroom
+rm -r /system/priv-app/logan
+rm -r /system/priv-app/CredentialLockerAndroid-tablet-release
+rm -r /system/priv-app/LogManager-logd
+rm -r /system/priv-app/SsdpService
+rm -r /system/priv-app/SystemStatusMonitorSys
+rm -r /system/priv-app/com.amazon.kor.demo
 
 
 
@@ -559,45 +544,31 @@ rm -r /data/data/Logan
 rm -r /data/data/TvProvider
 
 # FireOS 5.2.6.2
-# rm -r /data/data/com.amazon.alexashopping
-# rm -r /data/data/com.amazon.cardinal
-# rm -r /data/data/com.amazon.device.settings
-# rm -r /data/data/com.amazon.ftv.glorialist
-# rm -r /data/data/com.amazon.malcolm
-# rm -r /data/data/com.amazon.ssdpservice
-# rm -r /data/data/com.amazon.ssmsys
-# rm -r /data/data/com.amazon.tv.livetv
-# rm -r /data/data/com.amazon.tv.notificationcenter
-# rm -r /data/data/com.amazon.tv.ottssocompanionapp
-# rm -r /data/data/com.amazon.tv.ottssolib
-# rm -r /data/data/com.amazon.webview.awvdeploymentservice
-# rm -r /data/data/com.amazon.whisperplay.service.install
-# rm -r /data/data/com.amazon.wifilocker
-# rm -r /data/data/com.amazon.amazonvideo.livingroom
-# rm -r /data/data/logan
-# rm -r /data/data/CredentialLockerAndroid-tablet-release
-# rm -r /data/data/LogManager-logd
-# rm -r /data/data/SsdpService
-# rm -r /data/data/SystemStatusMonitorSys
-# rm -r /data/data/com.amazon.kor.demo
+rm -r /data/data/com.amazon.alexashopping
+rm -r /data/data/com.amazon.cardinal
+rm -r /data/data/com.amazon.device.settings
+rm -r /data/data/com.amazon.ftv.glorialist
+rm -r /data/data/com.amazon.malcolm
+rm -r /data/data/com.amazon.ssdpservice
+rm -r /data/data/com.amazon.ssmsys
+rm -r /data/data/com.amazon.tv.livetv
+rm -r /data/data/com.amazon.tv.notificationcenter
+rm -r /data/data/com.amazon.tv.ottssocompanionapp
+rm -r /data/data/com.amazon.tv.ottssolib
+rm -r /data/data/com.amazon.webview.awvdeploymentservice
+rm -r /data/data/com.amazon.whisperplay.service.install
+rm -r /data/data/com.amazon.wifilocker
+rm -r /data/data/com.amazon.amazonvideo.livingroom
+rm -r /data/data/logan
+rm -r /data/data/CredentialLockerAndroid-tablet-release
+rm -r /data/data/LogManager-logd
+rm -r /data/data/SsdpService
+rm -r /data/data/SystemStatusMonitorSys
+rm -r /data/data/com.amazon.kor.demo
 
 # FireOS 5.2.6.3
 
 
-# FireOS 5.2.6.7
-# rm -r /data/data/com.amazon.aca/
-# rm -r /data/data/com.amazon.amazonvideo.livingroom/
-# rm -r /data/data/com.amazon.aria/
-# rm -r /data/data/com.amazon.firehomestarter/
-# rm -r /data/data/com.amazon.franktvinput/
-# rm -r /data/data/com.amazon.gloria.graphiq/
-# rm -r /data/data/com.amazon.hedwig/
-# rm -r /data/data/com.amazon.naatyam/
-# rm -r /data/data/com.amazon.tv.legal.notices/
-# rm -r /data/data/com.amazon.net.smartconnect/
-# rm -r /data/data/com.amazon.tmm.tutorial/
-# rm -r /data/data/com.amazon.tv.forcedotaupdater/
-# rm -r /data/data/TIFObserverService/
 
 
 
