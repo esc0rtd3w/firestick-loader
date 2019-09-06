@@ -79,6 +79,7 @@ set keyHome=%shell% input keyevent 4
 
 :: Android Common Commands
 set amStart=%shell% am start -a android.intent.action.MAIN -n
+set amView=%shell% am start -a android.intent.action.VIEW -n
 set mountRW=%shell% "su -c mount -o rw,remount /system"
 set mountRO=%shell% "su -c mount -o ro,remount /system"
 set mountRW_TWRP=%shell% "mount -o rw,remount /system"
@@ -262,6 +263,19 @@ set launchOperaMini=%amStart% com.opera.mini.android/.Browser
 set launchRootExplorer=%amStart% com.speedsoftware.rootexplorer/.RootExplorer
 set launchBusybox=%amStart% stericson.busybox/.Activity.MainActivity
 set launchTerminal=%amStart% jackpal.androidterm/.Term
+
+:: 5.2.6.3 Tank Settings
+set tankNotifications=%amStart% com.amazon.tv.notificationcenter/com.amazon.tv.notificationcenter.NotificationCenterActivity
+set tankNetwork=%amStart% com.amazon.tv.settings/com.amazon.tv.settings.tv.network.NetworkActivity
+set tankDisplaySounds=%amStart% com.amazon.tv.settings/com.amazon.tv.settings.tv.display_sounds.DisplayAndSoundsActivity
+set tankApplications=%amStart% com.amazon.tv.settings/com.amazon.tv.settings.tv.applications.ApplicationsActivity
+set tankControllersBT=%amStart% com.amazon.tv.settings/.tv.controllers_bluetooth_devices.ControllersAndBluetoothActivity
+set tankAlexa=%amStart% com.amazon.vizzini/com.amazon.vizzini.setting.AlexaSettingActivity
+set tankPreferences=%amStart% com.amazon.tv.settings/com.amazon.tv.settings.tv.preferences.PreferencesActivity
+set tankDevice=%amStart% com.amazon.tv.settings/com.amazon.tv.settings.tv.device.DeviceActivity
+set tankAccessibility=%amStart% com.amazon.tv.settings/.tv.accessibility.AccessibilityActivity
+set tankHelp=%amStart% com.amazon.tv.csapp/com.amazon.tv.csapp.CSAppActivity
+set tankMyAccount=%amStart% com.amazon.tv.settings/com.amazon.tv.settings.tv.my_account.MyAccountActivity
 
 :: Downgrade Version Options
 set dgVersion=5.0.5
@@ -3735,14 +3749,20 @@ if %factoryReset%==2 (
 	%shell% "su -c sh /data/local/tmp/factory-reset.sh"
 )
 
-::pause
+:: If Reboot After Clear Cache Is Set To 0 and Bloat Remove is Set To 1 Then DO Reboot and Clear Reboot Flag
+if %rebootAfterClearCache%==0 (
+	if %rebootAfterBloatRemoval%==1 %adb% reboot
+	if %rebootAfterBloatRemoval%==1 %adbWait%
+	if %rebootAfterBloatRemoval%==1 set rebootAfterBloatRemoval=0
+)
 
-if %rebootAfterClearCache%==1 %adb% reboot
-if %rebootAfterClearCache%==1 %adbWait%
-
-if %rebootAfterBloatRemoval%==1 %adb% reboot
-if %rebootAfterBloatRemoval%==1 %adbWait%
-
+:: If Reboot After Clear Cache Is Set To 1 and Bloat Remove is Set To 1 Then Clear Duplicate Reboot
+if %rebootAfterClearCache%==1 (
+	if %rebootAfterBloatRemoval%==1 set rebootAfterBloatRemoval=0
+	%adb% reboot
+	%adbWait%
+	set rebootAfterClearCache=0
+)
 
 if %fullAutoMode%==1 (
 
