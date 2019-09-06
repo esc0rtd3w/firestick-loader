@@ -2,7 +2,9 @@
 <br/>
 <br/>
 
-### Newest Detected Version: 5.2.6.8
+### Newest Detected Version: Any
+### Newest Supported/Recommended Montoya Version: 5.2.1.1
+### Newest Supported/Recommended Tank Version: 5.2.6.3
 
 FirePwn
 Amazon FireTV Stick Loader
