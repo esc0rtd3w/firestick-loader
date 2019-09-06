@@ -1,0 +1,63 @@
+
+Settings Panel 5.2.6.3 Tank
+
+Notifications:		com.amazon.tv.notificationcenter/com.amazon.tv.notificationcenter.NotificationCenterActivity
+Network:			com.amazon.tv.settings/com.amazon.tv.settings.tv.network.NetworkActivity
+Display/Sounds:		com.amazon.tv.settings/com.amazon.tv.settings.tv.display_sounds.DisplayAndSoundsActivity
+Applications:		com.amazon.tv.settings/com.amazon.tv.settings.tv.applications.ApplicationsActivity
+Controllers/BT:		com.amazon.tv.settings/.tv.controllers_bluetooth_devices.ControllersAndBluetoothActivity
+Alexa:				com.amazon.vizzini/com.amazon.vizzini.setting.AlexaSettingActivity
+Preferences:		com.amazon.tv.settings/com.amazon.tv.settings.tv.preferences.PreferencesActivity
+Device:				com.amazon.tv.settings/com.amazon.tv.settings.tv.device.DeviceActivity
+Accessibility:		com.amazon.tv.settings/.tv.accessibility.AccessibilityActivity
+Help:				com.amazon.tv.csapp/com.amazon.tv.csapp.CSAppActivity
+My Account:			com.amazon.tv.settings/com.amazon.tv.settings.tv.my_account.MyAccountActivity
+
+
+
+
+
+com.amazon.tv.launcher/com.amazon.tv.launcher.ui.HomeActivity_vNext
+com.amazon.tv.launcher/com.amazon.tv.settings.SettingsApplication
+
+pm disable com.amazon.device.software.ota/.OtaService
+
+com.amazon.tv.oobe/.RegistrationActivity
+com.amazon.tv.oobe/.MargoRegistrationActivity
+com.amazon.tv.oobe/.OOBEActivity
+
+com.amazon.tv.launcher/.ui.DebugActivity
+com.amazon.tv.launcher/.ui.HomeActivity_vNext
+com.amazon.tv.launcher/.ui.ReleaseNotesActivity
+com.amazon.tv.launcher/.ui.UserTipsManager
+com.amazon.tv.launcher/.ui.sceneflow.presenters.model1.SettingsNodePresenter$2@7e34f5b
+
+com.amazon.accessibility/.usageHint.remote
+
+com.amazon.vizzini/.setting.AlexaSettingActivity
+
+com.amazon.device.permission.SEND_OOBE_REGISTRATION
+
+
+pm disable com.amazon.vizzini/.setting.AlexaSettingActivity
+
+com.amazon.tv.settings/.hud.HudActivity
+
+com.amazon.dcp.ota.permission.QUERY_PENDING_UPDATES
+
+
+goToHomeAndStopService
+
+
+
+
+android.intent.extra.KEY_EVENT
+
+
+adb pull /sdcard/Android/data/ru.jSacFYyi.EEOIBZjzv/files/LuckyPatcher/Modified/KFTV.Launcher/KFTV.Launcher.v.6.0.0.6-126.b.600612610.Permissions.Removed.apk "%cd%"
+adb pull /sdcard/Android/data/ru.jSacFYyi.EEOIBZjzv/files/LuckyPatcher/Modified/OOBE/OOBE.v.6.0.0-6119.b.600611910.Permissions.Removed.apk "%cd%"
+
+
+
+
+
