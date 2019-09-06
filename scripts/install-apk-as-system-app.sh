@@ -2,12 +2,26 @@
 
 name="$1"
 
-mount -o rw,remount /system
+case "$name" in
 
-mkdir /system/app/$name/
-chmod 0755 /system/app/$name/
+"")
+	echo "No Package Name! Exiting..."
+	exit
+;;
 
-cp /data/local/tmp/temp.apk /system/app/$name/$name.apk
+*)
+	echo "Installing $name..."
+	
+	mount -o rw,remount /system
 
-#chown 0.0 /system/app/$name/$name.apk
-chmod 0644 /system/app/$name/$name.apk
+	rm -rf /system/app/$name/
+	mkdir /system/app/$name/
+	chmod 0755 /system/app/$name/
+
+	cp /data/local/tmp/temp.apk /system/app/$name/$name.apk
+
+	chown root:root /system/app/$name/$name.apk
+	chmod 0644 /system/app/$name/$name.apk
+;;
+
+esac

@@ -24,7 +24,8 @@ echo.
 
 set /p activity=
 
-%adb% shell "su -c am start -a android.intent.action.MAIN -n %activity%"
+::%adb% shell "su -c am start -a android.intent.action.MAIN -n %activity%"
+%adb% shell "su -c am start -a android.intent.action.VIEW -n %activity%"
 
 %_color% 0b
 

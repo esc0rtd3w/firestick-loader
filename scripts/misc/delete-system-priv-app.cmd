@@ -26,21 +26,10 @@ echo.
 set /p name=
 
 
-cls
-
-cls
-echo Package Name: %name%
-echo.
-echo Drag (or Type) an APK Path and Press ENTER:
-echo.
-echo.
-
-set /p apk=
-
 %push% "%apk%" /data/local/tmp/temp.apk
-%push% "..\install-apk-as-system-priv-app.sh" /data/local/tmp/
-%shell% "su -c chmod 777 /data/local/tmp/install-apk-as-system-priv-app.sh"
-%shell% "su -c sh /data/local/tmp/install-apk-as-system-priv-app.sh %name%"
+%push% "..\delete-system-priv-app.sh" /data/local/tmp/
+%shell% "su -c chmod 777 /data/local/tmp/delete-system-priv-app.sh"
+%shell% "su -c sh /data/local/tmp/delete-system-priv-app.sh %name%"
 
 
 :end

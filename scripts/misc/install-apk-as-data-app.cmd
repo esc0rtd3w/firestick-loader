@@ -14,7 +14,6 @@ set push=%adb% push
 set pull=%adb% pull
 set shell=%adb% shell
 
-
 cls
 set name=0
 
@@ -27,6 +26,7 @@ set /p name=
 
 
 cls
+set apk=0
 
 cls
 echo Package Name: %name%
@@ -38,9 +38,9 @@ echo.
 set /p apk=
 
 %push% "%apk%" /data/local/tmp/temp.apk
-%push% "..\install-apk-as-system-priv-app.sh" /data/local/tmp/
-%shell% "su -c chmod 777 /data/local/tmp/install-apk-as-system-priv-app.sh"
-%shell% "su -c sh /data/local/tmp/install-apk-as-system-priv-app.sh %name%"
+%push% "..\install-apk-as-data-app.sh" /data/local/tmp/
+%shell% "su -c chmod 777 /data/local/tmp/install-apk-as-data-app.sh"
+%shell% "su -c sh /data/local/tmp/install-apk-as-data-app.sh %name%"
 
 
 :end

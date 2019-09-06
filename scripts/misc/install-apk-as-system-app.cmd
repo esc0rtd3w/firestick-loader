@@ -29,6 +29,8 @@ cls
 set apk=0
 
 cls
+echo Package Name: %name%
+echo.
 echo Drag (or Type) an APK Path and Press ENTER:
 echo.
 echo.
@@ -36,8 +38,8 @@ echo.
 set /p apk=
 
 %push% "%apk%" /data/local/tmp/temp.apk
-%push% "%~dp0scripts\install-apk-as-system-app.sh" /data/local/tmp/
-%shell% "su -c chmod 755 /data/local/tmp/install-apk-as-system-app.sh"
+%push% "..\install-apk-as-system-app.sh" /data/local/tmp/
+%shell% "su -c chmod 777 /data/local/tmp/install-apk-as-system-app.sh"
 %shell% "su -c sh /data/local/tmp/install-apk-as-system-app.sh %name%"
 
 
