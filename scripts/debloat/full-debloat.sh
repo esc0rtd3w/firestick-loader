@@ -420,6 +420,9 @@ rm -r /system/priv-app/com.amazon.tv.notificationcenter/
 # DIAL (Discovery-and-Launch) protocol (allow apps to access via second screen)
 rm -r /system/priv-app/DialService/
 
+# Fire Basic Keyboard (Simplified Chinese)
+rm -r /system/app/PinyinIME/
+
 # FireOS 5.2.6.7
 # rm -r /system/priv-app/com.amazon.aca/
 # rm -r /system/priv-app/com.amazon.aria/
@@ -433,7 +436,6 @@ rm -r /system/priv-app/DialService/
 # rm -r /system/priv-app/com.amazon.tmm.tutorial/
 # rm -r /system/priv-app/com.amazon.tv.forcedotaupdater/
 # rm -r /system/priv-app/TIFObserverService/
-
 
 
 # Other System Apps
@@ -635,6 +637,9 @@ rm -r /data/data/com.amazon.ssdpservice/
 rm -r /data/data/com.amazon.tv.notificationcenter/
 
 # FireOS 5.2.6.3
+
+# Fire Basic Keyboard (Simplified Chinese)
+rm -r /data/data/com.android.inputmethod.pinyin/
 
 # Fitbit Support???
 rm -r /data/data/com.amazon.alta.h2clientservice/
