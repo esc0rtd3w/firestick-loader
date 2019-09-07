@@ -73,7 +73,6 @@ set keyArrowUp=%shell% input keyevent 19
 set keyArrowDown=%shell% input keyevent 20
 set keyArrowLeft=%shell% input keyevent 21
 set keyArrowRight=%shell% input keyevent 22
-
 set keyBack=%shell% input keyevent 3
 set keyHome=%shell% input keyevent 4
 
@@ -165,7 +164,7 @@ set rmdir=rd /s /q
 set mkdir=md
 set kill=taskkill /f /im
 
-:: Common Amazon Commands
+:: Common Amazon Commands (Montoya 5.2.1.1 and lower)
 :: Settings -> Main
 set showSettingsMain=%amStart% com.amazon.tv.launcher/.ui.SettingsActivity
 set showSettingsMainNew=%amStart% com.amazon.device.settings/.SettingsProvider
@@ -314,6 +313,8 @@ set bootAnimationYellow="%~dp0bootanimation\stock-yellow\bootanimation.zip"
 :: Set Default Return Value
 set returnTo=menu
 
+set dgchoice=m
+
 
 :menu
 
@@ -367,10 +368,6 @@ for /f "tokens=4 delims= " %%f in ('type "%temp%\freeStorageSystem.txt"') do set
 %adb% shell "rm /sdcard/freeMemory.txt"
 %adb% shell "rm /sdcard/freeStorageData.txt"
 %adb% shell "rm /sdcard/freeStorageSystem.txt"
-
-
-set dgchoice=m
-
 
 
 cls
@@ -706,51 +703,7 @@ if %fireOsVersion%==5.2.1.0 (
 %runShellTerminate% %virtualRouterGUI%
 )
 
-if %fireOsVersion%==5.2.1.1 (
-%msgbox% "This device has version %fireOsVersion% installed.\n\n\n*** THIS VERSION IS CURRENTLY NOT EXPLOITABLE ***" "FirePwn Loader"
-)
-
-if %fireOsVersion%==5.2.1.2 (
-%msgbox% "This device has version %fireOsVersion% installed.\n\n\n*** THIS VERSION IS CURRENTLY NOT EXPLOITABLE ***" "FirePwn Loader"
-)
-
-if %fireOsVersion%==5.2.2.0 (
-%msgbox% "This device has version %fireOsVersion% installed.\n\n\n*** THIS VERSION IS CURRENTLY NOT EXPLOITABLE ***" "FirePwn Loader"
-)
-
-if %fireOsVersion%==5.2.4.0 (
-%msgbox% "This device has version %fireOsVersion% installed.\n\n\n*** THIS VERSION IS CURRENTLY NOT EXPLOITABLE ***" "FirePwn Loader"
-)
-
-if %fireOsVersion%==5.2.4.1 (
-%msgbox% "This device has version %fireOsVersion% installed.\n\n\n*** THIS VERSION IS CURRENTLY NOT EXPLOITABLE ***" "FirePwn Loader"
-)
-
-if %fireOsVersion%==5.2.6.0 (
-%msgbox% "This device has version %fireOsVersion% installed.\n\n\n*** THIS VERSION IS CURRENTLY NOT EXPLOITABLE ***" "FirePwn Loader"
-)
-
-if %fireOsVersion%==5.2.6.1 (
-%msgbox% "This device has version %fireOsVersion% installed.\n\n\n*** THIS VERSION IS CURRENTLY NOT EXPLOITABLE ***" "FirePwn Loader"
-)
-
-if %fireOsVersion%==5.2.6.2 (
-%msgbox% "This device has version %fireOsVersion% installed.\n\n\n*** THIS VERSION IS CURRENTLY NOT EXPLOITABLE ***" "FirePwn Loader"
-)
-
-if %fireOsVersion%==5.2.6.3 (
-%msgbox% "This device has version %fireOsVersion% installed.\n\n\n*** THIS VERSION IS CURRENTLY NOT EXPLOITABLE ***" "FirePwn Loader"
-)
-
-if %fireOsVersion%==5.2.6.6 (
-%msgbox% "This device has version %fireOsVersion% installed.\n\n\n*** THIS VERSION IS CURRENTLY NOT EXPLOITABLE ***" "FirePwn Loader"
-)
-
-if %fireOsVersion%==5.2.6.7 (
-%msgbox% "This device has version %fireOsVersion% installed.\n\n\n*** THIS VERSION IS CURRENTLY NOT EXPLOITABLE ***" "FirePwn Loader"
-)
-
-if %fireOsVersion% gtr 5.2.6.7 (
+if %fireOsVersion% gtr 5.2.1.0 (
 %msgbox% "This device has version %fireOsVersion% installed.\n\n\n*** THIS VERSION IS CURRENTLY NOT EXPLOITABLE ***" "FirePwn Loader"
 )
 
