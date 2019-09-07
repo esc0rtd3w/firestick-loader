@@ -2,7 +2,7 @@
 <br/>
 
 ### Newest Detected Version: Any
-### Newest Supported/Recommended Montoya Version: 5.2.1.1
+### Newest Supported/Recommended Montoya Version: 5.2.1.0 Stock / 5.2.1.1 Pre-Rooted
 ### Newest Supported/Recommended Tank Version: 5.2.6.3
 
 <br/>
