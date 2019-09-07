@@ -1,5 +1,5 @@
 @echo off
-
+color 0e
 
 taskkill /f /im adb.exe
 
@@ -28,6 +28,8 @@ echo.
 set /p apk=
 
 if %apk%==0 goto start
+if %stuck%==1 set twrp=1
+if %stuck%==1 goto twrp
 
 cls
 echo Type 1 and press ENTER if TWRP is Running
@@ -38,6 +40,7 @@ echo.
 
 set /p twrp=
 
+cls
 if %twrp%==1 goto twrp
 
 adb push %apk% /sdcard/FirePwnHome.apk
@@ -62,7 +65,7 @@ adb shell "chmod 0644 /system/app/FirePwnHome/FirePwnHome.apk"
 adb reboot
 
 :end
-
+color 0a
 echo.
 echo Finished! Check For Errors!
 echo.

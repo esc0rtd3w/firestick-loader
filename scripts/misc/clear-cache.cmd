@@ -18,16 +18,23 @@ set sdcard=sdcard
 ::set sdcard=external_sd
 ::set sdcard=extSdCard
 
-set cacheDir=cache
+set cacheDir1=cache
+set cacheDir2=data/dalvik-cache
 
 cls
-echo Cleaning /%cacheDir%/ Partition....
-echo.
+echo Cleaning /%cacheDir1%/
 echo.
 
 %wait% 2
 
-%shell% "su -c rm -rf /%cacheDir%/*"
+%shell% "su -c rm -rf /%cacheDir1%/*"
+
+echo Cleaning /%cacheDir2%/
+echo.
+echo.
+
+%wait% 2
+%shell% "su -c rm -rf /%cacheDir2%/*"
 
 goto end
 
