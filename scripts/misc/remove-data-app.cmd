@@ -38,9 +38,9 @@ if %continue%==0 goto end
 if %continue%==n goto end
 if %continue%==N goto end
 
-%push% "..\remove-data-app.sh" /data/local/tmp/
-%shell% "su -c chmod 777 /data/local/tmp/remove-data-app.sh"
-%shell% "su -c sh /data/local/tmp/remove-data-app.sh %name%"
+
+%shell% "su -c mount -o rw /data"
+%shell% "su -c rm -r /data/app/%name%/"
 
 
 :end

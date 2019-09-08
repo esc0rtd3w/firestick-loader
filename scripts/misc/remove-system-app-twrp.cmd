@@ -38,9 +38,9 @@ if %continue%==0 goto end
 if %continue%==n goto end
 if %continue%==N goto end
 
-%push% "..\remove-system-app-twrp.sh" /data/local/tmp/
-%shell% "chmod 777 /data/local/tmp/remove-system-app-twrp.sh"
-%shell% "sh /data/local/tmp/remove-system-app-twrp.sh %name%"
+
+%shell% "mount -o rw /system"
+%shell% "rm -r /system/app/%name%/"
 
 
 :end

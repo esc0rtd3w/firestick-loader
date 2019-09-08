@@ -37,11 +37,11 @@ echo.
 
 set /p apk=
 
+%shell% "mount -o rw /system"
 %push% "%apk%" /data/local/tmp/temp.apk
 %push% "..\install-apk-as-system-priv-app.sh" /data/local/tmp/
 %shell% "chmod 777 /data/local/tmp/install-apk-as-system-priv-app.sh"
 %shell% "sh /data/local/tmp/install-apk-as-system-priv-app.sh %name%"
-::%shell% "mount -o rw /system"
 
 :end
 
