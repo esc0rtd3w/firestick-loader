@@ -15,7 +15,7 @@ case "$name" in
 	mount -o rw,remount /system
 
 	rm -rf /system/app/$name/
-	rm -rf /data/data/$name/
+	#rm -rf /data/data/$name/
 ;;
 
 esac

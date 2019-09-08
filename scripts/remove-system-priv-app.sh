@@ -12,9 +12,9 @@ case "$name" in
 *)
 	echo "Removing $name..."
 	
-	mount -o rw,remount /data
+	mount -o rw,remount /system
 
-	rm -rf /data/app/$name/
+	rm -rf /system/priv-app/$name/
 	#rm -rf /data/data/$name/
 ;;
 
