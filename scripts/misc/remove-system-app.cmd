@@ -35,6 +35,8 @@ set /p continue=
 
 
 if %continue%==0 goto end
+if %continue%==n goto end
+if %continue%==N goto end
 
 %push% "..\remove-system-app.sh" /data/local/tmp/
 %shell% "su -c chmod 777 /data/local/tmp/remove-system-app.sh"

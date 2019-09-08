@@ -39,8 +39,9 @@ set /p apk=
 
 %push% "%apk%" /data/local/tmp/temp.apk
 %push% "..\install-apk-as-system-app.sh" /data/local/tmp/
-%shell% "su -c chmod 777 /data/local/tmp/install-apk-as-system-app.sh"
-%shell% "su -c sh /data/local/tmp/install-apk-as-system-app.sh %name%"
+%shell% "chmod 777 /data/local/tmp/install-apk-as-system-app.sh"
+%shell% "sh /data/local/tmp/install-apk-as-system-app.sh %name%"
+::%shell% "mount -o rw /system"
 
 
 :end

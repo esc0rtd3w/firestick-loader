@@ -38,9 +38,9 @@ if %continue%==0 goto end
 if %continue%==n goto end
 if %continue%==N goto end
 
-%push% "..\remove-system-priv-app.sh" /data/local/tmp/
-%shell% "su -c chmod 777 /data/local/tmp/remove-system-priv-app.sh"
-%shell% "su -c sh /data/local/tmp/remove-system-priv-app.sh %name%"
+%push% "..\remove-data-app-twrp.sh" /data/local/tmp/
+%shell% "chmod 777 /data/local/tmp/remove-data-app-twrp.sh"
+%shell% "sh /data/local/tmp/remove-data-app-twrp.sh %name%"
 
 
 :end
