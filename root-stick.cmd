@@ -528,82 +528,10 @@ set rootableColor=0a
 set rootableText=EXPLOITABLE
 )
 
-if %fireOsVersion%==5.2.1.1 (
-set rootable=0
-set rootableColor=0c
-set rootableText=NOT EXPLOITABLE
-)
-
-if %fireOsVersion%==5.2.1.2 (
-set rootable=0
-set rootableColor=0c
-set rootableText=NOT EXPLOITABLE
-)
-
-if %fireOsVersion%==5.2.2.0 (
-set rootable=0
-set rootableColor=0c
-set rootableText=NOT EXPLOITABLE
-)
-
-if %fireOsVersion%==5.2.4.0 (
-set rootable=0
-set rootableColor=0c
-set rootableText=NOT EXPLOITABLE
-)
-
-if %fireOsVersion%==5.2.4.1 (
-set rootable=0
-set rootableColor=0c
-set rootableText=NOT EXPLOITABLE
-)
-
-if %fireOsVersion%==5.2.6.0 (
-set rootable=0
-set rootableColor=0c
-set rootableText=NOT EXPLOITABLE
-)
-
-if %fireOsVersion%==5.2.6.1 (
-set rootable=0
-set rootableColor=0c
-set rootableText=NOT EXPLOITABLE
-)
-
-if %fireOsVersion%==5.2.6.2 (
-set rootable=0
-set rootableColor=0c
-set rootableText=NOT EXPLOITABLE
-)
-
-if %fireOsVersion%==5.2.6.3 (
-set rootable=0
-set rootableColor=0c
-set rootableText=NOT EXPLOITABLE
-)
-
-if %fireOsVersion%==5.2.6.6 (
-set rootable=0
-set rootableColor=0c
-set rootableText=NOT EXPLOITABLE
-)
-
-if %fireOsVersion%==5.2.6.6 (
-set rootable=0
-set rootableColor=0c
-set rootableText=NOT EXPLOITABLE
-)
-
-if %fireOsVersion%==5.2.6.7 (
-set rootable=0
-set rootableColor=0c
-set rootableText=NOT EXPLOITABLE
-)
-
-if %fireOsVersion% gtr 5.2.6.7 (
-set rootable=0
-set rootableColor=0c
-set rootableText=NOT EXPLOITABLE
+if %fireOsVersion% gtr 5.2.1.0 (
+set rootable=1
+set rootableColor=0a
+set rootableText=EXPLOITABLE VIA HARDWARE
 )
 
 :: Check For Pre-FireOS Builds (4.2.2 KitKat)
@@ -621,6 +549,12 @@ set fireOsVersion=4.2.2
 set rootable=1
 set rootableColor=0a
 set rootableText=EXPLOITABLE
+)
+
+:: If version is still 0.0.0.0 then maybe we are in TWRP Recovery
+if %fireOsVersion%==0.0.0.0 (
+%shell% "cat /system/build.prop | grep JDQ39 | grep ro.build.id>/sdcard/fireos-version.txt"
+%pull% /sdcard/fireos-version.txt "%temp%"
 )
 
 del /f /s /q "%temp%\fireos-version.txt"
@@ -704,7 +638,7 @@ if %fireOsVersion%==5.2.1.0 (
 )
 
 if %fireOsVersion% gtr 5.2.1.0 (
-%msgbox% "This device has version %fireOsVersion% installed.\n\n\n*** THIS VERSION IS CURRENTLY NOT EXPLOITABLE ***" "FirePwn Loader"
+%msgbox% "This device has version %fireOsVersion% installed.\n\n\n*** THIS VERSION IS CURRENTLY EXPLOITABLE VIA HARDWARE ONLY ***" "FirePwn Loader"
 )
 
 
