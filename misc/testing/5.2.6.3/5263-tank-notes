@@ -15,16 +15,24 @@ My Account:			com.amazon.tv.settings/com.amazon.tv.settings.tv.my_account.MyAcco
 
 
 
-
-
-com.amazon.tv.launcher/com.amazon.tv.launcher.ui.HomeActivity_vNext
-com.amazon.tv.launcher/com.amazon.tv.settings.SettingsApplication
-
-pm disable com.amazon.device.software.ota/.OtaService
-
+OOBE
+com.amazon.device.permission.SEND_OOBE_REGISTRATION
 com.amazon.tv.oobe/.RegistrationActivity
 com.amazon.tv.oobe/.MargoRegistrationActivity
 com.amazon.tv.oobe/.OOBEActivity
+
+com.amazon.device.permission.DEVICE_DISCOVERY
+
+com.amazon.device.controllermanager.DEVICE_ONLINE
+android.bluetooth.adapter.action.DISCOVERY_STARTED
+com.amazon.device.controllermanager.DISCOVERY_STOP
+
+com.amazon.kindleautomatictimezone.START_ATZ_ACTION
+
+com.amazon.tv.launcher/com.amazon.tv.launcher.ui.HomeActivity_vNext
+com.amazon.tv.launcher/com.amazon.tv.settings.SettingsApplication
+com.amazon.device.software.ota/.OtaService
+
 
 com.amazon.tv.launcher/.ui.DebugActivity
 com.amazon.tv.launcher/.ui.HomeActivity_vNext
@@ -36,20 +44,13 @@ com.amazon.accessibility/.usageHint.remote
 
 com.amazon.vizzini/.setting.AlexaSettingActivity
 
-com.amazon.device.permission.SEND_OOBE_REGISTRATION
-
-
 pm disable com.amazon.vizzini/.setting.AlexaSettingActivity
 
 com.amazon.tv.settings/.hud.HudActivity
 
 com.amazon.dcp.ota.permission.QUERY_PENDING_UPDATES
 
-
 goToHomeAndStopService
-
-
-
 
 android.intent.extra.KEY_EVENT
 
