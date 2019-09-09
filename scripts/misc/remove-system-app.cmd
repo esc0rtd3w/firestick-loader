@@ -39,7 +39,7 @@ if %continue%==n goto end
 if %continue%==N goto end
 
 
-%shell% "su -c mount -o rw /system"
+%shell% "su -c mount -o remount,rw /system"
 %shell% "su -c rm -r /system/app/%name%/"
 
 
