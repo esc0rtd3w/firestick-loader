@@ -14,6 +14,18 @@ set push=%adb% push
 set pull=%adb% pull
 set shell=%adb% shell
 
+set name=Magisk-v19.3.zip
+
+
+cls
+echo Type 1 if zip already on device and Press ENTER:
+echo.
+echo Current Filename: %name%
+echo.
+
+set /p installOnly=
+
+if %installOnly%==1 goto install
 
 set src=0
 
@@ -28,6 +40,8 @@ set name=%%~nxa
 )
 
 %push% %src% /sdcard/
+
+:install
 %shell% "twrp install /sdcard/%name%"
 
 
