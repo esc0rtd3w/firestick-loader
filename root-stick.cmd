@@ -700,7 +700,7 @@ echo.
 echo.
 echo Press W to run fixes, tweaks, and misc options
 echo.
-echo Press Z to directly invoke Amazon Settings menu items
+echo Press Z to directly invoke Amazon Settings menu items (ZT for Tank)
 echo.
 echo.
 echo Press X to exit (also use XR to reload main menu)
@@ -799,6 +799,10 @@ if %dgchoice%==P goto superSU
 if %dgchoice%==p goto superSU
 if %dgchoice%==Z goto invoke
 if %dgchoice%==z goto invoke
+if %dgchoice%==ZT goto invokeTank
+if %dgchoice%==Zt goto invokeTank
+if %dgchoice%==zt goto invokeTank
+if %dgchoice%==zT goto invokeTank
 if %dgchoice%==F set factoryReset=1&&goto fReset
 if %dgchoice%==f set factoryReset=1&&goto fReset
 if %dgchoice%==FR set factoryReset=2&&goto fReset
@@ -890,10 +894,71 @@ if %ichoice%==B goto menu
 if %ichoice%==b goto menu
 if %ichoice%==X goto end
 if %ichoice%==x goto end
-if %ichoice%==Y goto invoke
-if %ichoice%==y goto invoke
 
 goto invoke
+
+:invokeTank
+
+%_color% 0e
+
+set ichoice=y
+
+cls
+echo Direct Activity Invoker Menu [FireTV Stick 2]
+echo.
+echo.
+if %rootable%==0 %_color% 0c
+if %rootable%==1 %_color% 0a
+echo Device is currently %rootableText%
+%_color% 0e
+echo.
+echo.
+echo Press 1 to Show Settings -- Notifications
+echo Press 2 to Show Settings -- Network
+echo Press 3 to Show Settings -- Display and Sounds
+echo Press 4 to Show Settings -- Applications
+echo Press 5 to Show Settings -- Controllers and Bluetooth
+echo Press 6 to Show Settings -- Alexa
+echo Press 7 to Show Settings -- Preferences
+echo Press 8 to Show Settings -- Device
+echo Press 9 to Show Settings -- Accessibility
+echo Press H to Show Settings -- Help
+echo Press M to Show Settings -- My Account
+echo.
+echo.
+echo Press Z to open advanced direct activies
+echo.
+echo Press B to go back to previous page
+echo.
+echo Press X to exit
+echo.
+echo.
+echo Make a choice and press ENTER....
+echo.
+
+set /p ichoice=
+
+if %ichoice%==1 %tankNotifications%
+if %ichoice%==2 %tankNetwork%
+if %ichoice%==3 %tankDisplaySounds%
+if %ichoice%==4 %tankApplications%
+if %ichoice%==5 %tankControllersBT%
+if %ichoice%==6 %tankAlexa%
+if %ichoice%==7 %tankPreferences%
+if %ichoice%==8 %tankDevice%
+if %ichoice%==9 %tankAccessibility%
+if %ichoice%==h %tankHelp%
+if %ichoice%==H %tankHelp%
+if %ichoice%==m %tankMyAccount%
+if %ichoice%==M %tankMyAccount%
+if %ichoice%==Z goto advInvoke
+if %ichoice%==z goto advInvoke
+if %ichoice%==B goto menu
+if %ichoice%==b goto menu
+if %ichoice%==X goto end
+if %ichoice%==x goto end
+
+goto invokeTank
 
 
 :advInvoke
