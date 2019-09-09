@@ -1,3 +1,4 @@
 Not Stable: com.amazon.tv.oobe-NoOTA-5.2.6.3 has OTA Page removed
 
-Stable: com.amazon.tv.oobe-Stripped-5.2.6.3 looks for com.awe.dev.pro.tv as its Home Launcher
+Stable: com.amazon.tv.oobe-Stripped-5.2.6.3 looks for com.awe.dev.pro.tv as its Home Launcher (under Utils.smali)
+
