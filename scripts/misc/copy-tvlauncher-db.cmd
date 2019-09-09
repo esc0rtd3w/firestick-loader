@@ -27,8 +27,12 @@ set /p db=
 %push% %db% /data/local/tmp/
 %shell% "su -c mkdir /data/data/"
 %shell% "su -c mkdir /data/data/awe.dev.pro.tv/"
+%shell% "su -c chmod 0755 /data/data/awe.dev.pro.tv/"
 %shell% "su -c mkdir /data/data/awe.dev.pro.tv/databases/"
+%shell% "su -c chmod 0755 /data/data/awe.dev.pro.tv/databases/"
 %shell% "su -c cp /data/local/tmp/tvlauncher_four.db /data/data/awe.dev.pro.tv/databases/tvlauncher_four.db"
+%shell% "su -c chmod 0644 /data/data/awe.dev.pro.tv/databases/tvlauncher_four.db"
+%shell% "su -c chown root:root /data/data/awe.dev.pro.tv/databases/tvlauncher_four.db"
 
 echo.
 echo Success if not output or error!

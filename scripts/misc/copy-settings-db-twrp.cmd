@@ -27,8 +27,12 @@ set /p db=
 %push% %db% /data/local/tmp/
 %shell% "mkdir /data/data/"
 %shell% "mkdir /data/data/com.android.providers.settings/"
+%shell% "chmod 0755 /data/data/com.android.providers.settings/"
 %shell% "mkdir /data/data/com.android.providers.settings/databases/"
+%shell% "chmod 0755 /data/data/com.android.providers.settings/databases/"
 %shell% "cp /data/local/tmp/settings.db /data/data/com.android.providers.settings/databases/settings.db"
+%shell% "chmod 0644 /data/data/com.android.providers.settings/databases/settings.db"
+%shell% "chown root:root /data/data/com.android.providers.settings/databases/settings.db"
 
 echo.
 echo Success if not output or error!

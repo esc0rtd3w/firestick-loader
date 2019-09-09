@@ -27,8 +27,12 @@ set /p db=
 %push% %db% /data/local/tmp/
 %shell% "su -c mkdir /data/data/"
 %shell% "su -c mkdir /data/data/com.android.providers.settings/"
+%shell% "su -c chmod 0755 /data/data/com.android.providers.settings/"
 %shell% "su -c mkdir /data/data/com.android.providers.settings/databases/"
+%shell% "su -c chmod 0755 /data/data/com.android.providers.settings/databases/"
 %shell% "su -c cp /data/local/tmp/settings.db /data/data/com.android.providers.settings/databases/settings.db"
+%shell% "su -c chmod 0644 /data/data/com.android.providers.settings/databases/settings.db"
+%shell% "su -c chown root:root /data/data/com.android.providers.settings/databases/settings.db"
 
 echo.
 echo Success if not output or error!
