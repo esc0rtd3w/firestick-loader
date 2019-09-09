@@ -4,17 +4,12 @@ com.amazon.tv.oobe-NoOTA-5.2.6.3
 - OTA Page Removed from NativePageProvider.smali
 
 
-com.amazon.tv.oobe-Stripped-5.2.6.3-com.awe.dev.pro.tv
+com.amazon.tv.oobe-Stripped-5.2.6.3
 
 - Stable
-- Looks for com.awe.dev.pro.tv as its Home Launcher, Found Under Utils.smali
+- Looks for ca.dstudio.atvlauncher.pro as its Home Launcher, Found Under Utils.smali
 - Only pages that exist are the following:
    - Welcome (to sync remote)
    - Network (to connect wifi)
    - Account (to complete user setup)
 - Once account is setup, the default Home Launcher will be triggered
-
-
-com.amazon.tv.oobe-Stripped-5.2.6.3-net.i.akihiro.halauncher
-
-- Same Stripped Base, except Home Launcher looks for net.i.akihiro.halauncher
