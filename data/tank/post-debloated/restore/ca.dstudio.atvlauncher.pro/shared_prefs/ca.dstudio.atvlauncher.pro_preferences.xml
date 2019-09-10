@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<map>
+    <boolean name="acra.legacyAlreadyConvertedTo4.8.0" value="true" />
+    <boolean name="acra.legacyAlreadyConvertedToJson" value="true" />
+    <int name="acra.lastVersionNr" value="11342386" />
+</map>
