@@ -19,6 +19,7 @@ set sdcard=sdcard
 ::set sdcard=extSdCard
 
 set cacheDir=cache
+set cacheDirSD=sdcard/Android/data/com.amazon.device.software.ota/files
 
 cls
 echo Removing *.bin Updates....
@@ -28,6 +29,7 @@ echo.
 %wait% 2
 
 %shell% "su -c rm -f /%cacheDir%/*.bin"
+%shell% "su -c rm -f /%cacheDirSD%/*.bin"
 
 goto end
 
