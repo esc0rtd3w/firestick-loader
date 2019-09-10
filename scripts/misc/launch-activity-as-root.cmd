@@ -10,10 +10,10 @@ set _color="..\..\bin\cocolor.exe"
 %_color% 0b
 
 cls
-echo Enter Arg1 and Press Enter:
+echo Enter Action and Press Enter:
 echo.
 echo.
-echo Example: de.belu.firestopper
+echo Example: com.amazon.device.settings.action.DISPLAY_AND_SOUNDS
 echo.
 echo.
 echo.
@@ -27,7 +27,7 @@ cls
 echo Enter Activity and Press Enter:
 echo.
 echo.
-echo Example: de.belu.firestopper/.gui.MainActivity
+echo Example: com.amazon.tv.settings/com.amazon.tv.settings.tv.display_sounds.DisplayAndSoundsActivity
 echo.
 echo.
 echo.
