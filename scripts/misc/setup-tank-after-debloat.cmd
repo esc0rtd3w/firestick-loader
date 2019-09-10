@@ -25,6 +25,8 @@ set notifications="..\settings\tank\system\scripts\notifications.sh"
 set preferences="..\settings\tank\system\scripts\preferences.sh"
 
 
+%shell% settings --user 0 put global adb_enabled 1
+
 %shell% "su -c mount -o rw /system"
 
 %push% %accessibility% /data/local/tmp/
