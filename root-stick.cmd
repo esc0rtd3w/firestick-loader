@@ -78,7 +78,10 @@ set keyHome=%shell% input keyevent 4
 
 :: Android Common Commands
 set amStart=%shell% am start -a android.intent.action.MAIN -n
-set amView=%shell% am start -a android.intent.action.VIEW -n
+set amStartRoot=%shell% su -c am start -a android.intent.action.MAIN -n
+set amStartView=%shell% am start -a android.intent.action.VIEW -n
+set amStartViewRoot=%shell% su -c am start -a android.intent.action.VIEW -n
+
 set mountRW=%shell% "su -c mount -o rw,remount /system"
 set mountRO=%shell% "su -c mount -o ro,remount /system"
 set mountRW_TWRP=%shell% "mount -o rw,remount /system"
@@ -264,17 +267,57 @@ set launchBusybox=%amStart% stericson.busybox/.Activity.MainActivity
 set launchTerminal=%amStart% jackpal.androidterm/.Term
 
 :: 5.2.6.3 Tank Settings
+
+:: Actions
+set amStartAccessibility=%shell% am start -a com.amazon.device.settings.action.ACCESSIBILITY -n
+set amStartApplications=%shell% am start -a com.amazon.device.settings.action.APPLICATIONS -n
+set amStartApplicationDev=%shell% am start -a com.amazon.device.settings.action.APPLICATION_DEVELOPMENT_SETTINGS -n
+set amStartApplicationsManage=%shell% am start -a com.amazon.device.settings.action.MANAGE_APPLICATIONS -n
+set amStartApplicationsSettings=%shell% am start -a com.amazon.device.settings.action.APPLICATION_SETTINGS -n
+set amStartControllers=%shell% am start -a com.amazon.device.settings.action.CONTROLLERS -n
+set amStartDevice=%shell% am start -a com.amazon.device.settings.action.DEVICE -n
+set amStartDiscoverInputDevice=%shell% am start -a com.amazon.device.settings.action.DISCOVER_INPUT_DEVICE -n
+set amStartDisplaySounds=%shell% am start -a com.amazon.device.settings.action.DISPLAY_AND_SOUNDS -n
+set amStartHelp=%shell% am start -a com.amazon.device.settings.action.HELP -n
+set amStartHurley=%shell% am start -a com.amazon.device.settings.action.HURLEY -n
+set amStartInputDevices=%shell% am start -a com.amazon.device.settings.action.INPUT_DEVICES -n
+set amStartMyAccount=%shell% am start -a com.amazon.device.settings.action.MY_ACCOUNT -n
+set amStartNotificationSetting=%shell% am start -a com.amazon.device.settings.action.NOTIFICATION_SETTING -n
+set amStartPreferences=%shell% am start -a com.amazon.device.settings.action.PREFERENCES -n
+set amStartShowHud=%shell% am start -a com.amazon.device.settings.action.SHOW_HUD -n
+set amStartVideoSettings=%shell% am start -a com.amazon.device.settings.action.VIDEO_SETTINGS -n
+
+:: Actions Root
+set amStartAccessibilityRoot=%shell% su -c am start -a com.amazon.device.settings.action.ACCESSIBILITY -n
+set amStartApplicationsRoot=%shell% su -c am start -a com.amazon.device.settings.action.APPLICATIONS -n
+set amStartApplicationDevRoot=%shell% su -c am start -a com.amazon.device.settings.action.APPLICATION_DEVELOPMENT_SETTINGS -n
+set amStartApplicationsManageRoot=%shell% su -c am start -a com.amazon.device.settings.action.MANAGE_APPLICATIONS -n
+set amStartApplicationsSettingsRoot=%shell% su -c am start -a com.amazon.device.settings.action.APPLICATION_SETTINGS -n
+set amStartControllersRoot=%shell% su -c am start -a com.amazon.device.settings.action.CONTROLLERS -n
+set amStartDeviceRoot=%shell% su -c am start -a com.amazon.device.settings.action.DEVICE -n
+set amStartDiscoverInputDeviceRoot=%shell% su -c am start -a com.amazon.device.settings.action.DISCOVER_INPUT_DEVICE -n
+set amStartDisplaySoundsRoot=%shell% su -c am start -a com.amazon.device.settings.action.DISPLAY_AND_SOUNDS -n
+set amStartHelpRoot=%shell% su -c am start -a com.amazon.device.settings.action.HELP -n
+set amStartHurleyRoot=%shell% su -c am start -a com.amazon.device.settings.action.HURLEY -n
+set amStartInputDevicesRoot=%shell% su -c am start -a com.amazon.device.settings.action.INPUT_DEVICES -n
+set amStartMyAccountRoot=%shell% su -c am start -a com.amazon.device.settings.action.MY_ACCOUNT -n
+set amStartNotificationSettingRoot=%shell% su -c am start -a com.amazon.device.settings.action.NOTIFICATION_SETTING -n
+set amStartPreferencesRoot=%shell% su -c am start -a com.amazon.device.settings.action.PREFERENCES -n
+set amStartShowHudRoot=%shell% su -c am start -a com.amazon.device.settings.action.SHOW_HUD -n
+set amStartVideoSettingsRoot=%shell% su -c am start -a com.amazon.device.settings.action.VIDEO_SETTINGS -n
+
+:: Activities
 set tankNotifications=%amStart% com.amazon.tv.notificationcenter/com.amazon.tv.notificationcenter.NotificationCenterActivity
 set tankNetwork=%amStart% com.amazon.tv.settings/com.amazon.tv.settings.tv.network.NetworkActivity
-set tankDisplaySounds=%amStart% com.amazon.tv.settings/com.amazon.tv.settings.tv.display_sounds.DisplayAndSoundsActivity
-set tankApplications=%amStart% com.amazon.tv.settings/com.amazon.tv.settings.tv.applications.ApplicationsActivity
+set tankDisplaySounds=%amStartDisplaySoundsRoot% com.amazon.tv.settings/com.amazon.tv.settings.tv.display_sounds.DisplayAndSoundsActivity
+set tankApplications=%amStartApplicationsManageRoot% com.amazon.tv.settings/com.amazon.tv.settings.tv.applications.ApplicationsActivity
 set tankControllersBT=%amStart% com.amazon.tv.settings/.tv.controllers_bluetooth_devices.ControllersAndBluetoothActivity
 set tankAlexa=%amStart% com.amazon.vizzini/com.amazon.vizzini.setting.AlexaSettingActivity
-set tankPreferences=%amStart% com.amazon.tv.settings/com.amazon.tv.settings.tv.preferences.PreferencesActivity
-set tankDevice=%amStart% com.amazon.tv.settings/com.amazon.tv.settings.tv.device.DeviceActivity
-set tankAccessibility=%amStart% com.amazon.tv.settings/.tv.accessibility.AccessibilityActivity
-set tankHelp=%amStart% com.amazon.tv.csapp/com.amazon.tv.csapp.CSAppActivity
-set tankMyAccount=%amStart% com.amazon.tv.settings/com.amazon.tv.settings.tv.my_account.MyAccountActivity
+set tankPreferences=%amStartPreferencesRoot% com.amazon.tv.settings/com.amazon.tv.settings.tv.preferences.PreferencesActivity
+set tankDevice=%amStartDeviceRoot% com.amazon.tv.settings/com.amazon.tv.settings.tv.device.DeviceActivity
+set tankAccessibility=%amStartAccessibilityRoot% com.amazon.tv.settings/.tv.accessibility.AccessibilityActivity
+set tankHelp=%amStartHelpRoot% com.amazon.tv.csapp/com.amazon.tv.csapp.CSAppActivity
+set tankMyAccount=%amStartMyAccountRoot% com.amazon.tv.settings/com.amazon.tv.settings.tv.my_account.MyAccountActivity
 
 :: Downgrade Version Options
 set dgVersion=5.0.5
