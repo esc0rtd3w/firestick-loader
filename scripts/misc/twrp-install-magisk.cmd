@@ -15,7 +15,7 @@ set pull=%adb% pull
 set shell=%adb% shell
 
 set name=Magisk-v19.3.zip
-
+set installOnly=0
 
 cls
 echo Type 1 if zip already on device and Press ENTER:
