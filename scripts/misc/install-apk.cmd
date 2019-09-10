@@ -24,7 +24,7 @@ set /p apk=
 %install% %apk%
 
 
-
+pause
 
 
 :end
