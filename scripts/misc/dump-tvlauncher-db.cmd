@@ -27,8 +27,8 @@ set sdcard=sdcard
 
 if not exist %dumpFolder% mkdir %dumpFolder%
 
-%shell% "su -c cp /data/data/com.awe.dev.pro.tv/databases/tvlauncher_four.db /sdcard/tvlauncher_four.db"
-%pull% /sdcard/tvlauncher_four.db %dumpFolder%
+%shell% "su -c cp /data/data/ca.dstudio.atvlauncher.pro/databases/sections.db /sdcard/sections.db"
+%pull% /sdcard/sections.db %dumpFolder%
 
 start "" explorer %dumpFolder%
 

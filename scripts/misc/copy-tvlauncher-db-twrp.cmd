@@ -26,13 +26,13 @@ set /p db=
 
 %push% %db% /data/local/tmp/
 %shell% "mkdir /data/data/"
-%shell% "mkdir /data/data/awe.dev.pro.tv/"
-%shell% "chmod 0755 /data/data/awe.dev.pro.tv/"
-%shell% "mkdir /data/data/awe.dev.pro.tv/databases/"
-%shell% "chmod 0755 /data/data/awe.dev.pro.tv/databases/"
-%shell% "cp /data/local/tmp/tvlauncher_four.db /data/data/awe.dev.pro.tv/databases/tvlauncher_four.db"
-%shell% "chmod 0644 /data/data/awe.dev.pro.tv/databases/tvlauncher_four.db"
-%shell% "chown root:root /data/data/awe.dev.pro.tv/databases/tvlauncher_four.db"
+%shell% "mkdir /data/data/ca.dstudio.atvlauncher.pro/"
+%shell% "chmod 0755 /data/data/ca.dstudio.atvlauncher.pro/"
+%shell% "mkdir /data/data/ca.dstudio.atvlauncher.pro/databases/"
+%shell% "chmod 0755 /data/data/ca.dstudio.atvlauncher.pro/databases/"
+%shell% "cp /data/local/tmp/sections.db /data/data/ca.dstudio.atvlauncher.pro/databases/sections.db"
+%shell% "chmod 0644 /data/data/ca.dstudio.atvlauncher.pro/databases/sections.db"
+%shell% "chown root:root /data/data/ca.dstudio.atvlauncher.pro/databases/sections.db"
 
 echo.
 echo Success if not output or error!
