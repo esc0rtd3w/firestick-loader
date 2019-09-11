@@ -25,10 +25,13 @@ set notifications="..\settings\tank\system\scripts\notifications.sh"
 set preferences="..\settings\tank\system\scripts\preferences.sh"
 
 
+:: Set ADB Enabled
 %shell% settings --user 0 put global adb_enabled 1
 
+:: Mount System as RW
 %shell% "su -c mount -o rw /system"
 
+:: Push Settings Scripts to Temp
 %push% %accessibility% /data/local/tmp/
 %push% %applications% /data/local/tmp/
 %push% %device% /data/local/tmp/
@@ -39,9 +42,11 @@ set preferences="..\settings\tank\system\scripts\preferences.sh"
 %push% %notifications% /data/local/tmp/
 %push% %preferences% /data/local/tmp/
 
+:: Make and Set Permissions for Settings Scripts Directories
 %shell% "su -c mkdir /system/scripts/"
 %shell% "su -c chmod 0755 /system/scripts/"
 
+:: Copy Scripts From Temp to System
 %shell% "su -c cp /data/local/tmp/accessibility.sh /system/scripts/accessibility.sh"
 %shell% "su -c cp /data/local/tmp/applications.sh /system/scripts/applications.sh"
 %shell% "su -c cp /data/local/tmp/device.sh /system/scripts/device.sh"
@@ -52,21 +57,23 @@ set preferences="..\settings\tank\system\scripts\preferences.sh"
 %shell% "su -c cp /data/local/tmp/notifications.sh /system/scripts/notifications.sh"
 %shell% "su -c cp /data/local/tmp/preferences.sh /system/scripts/preferences.sh"
 
+:: Set Permissions
 %shell% "su -c chmod 0777 /system/scripts/*.sh"
 %shell% "su -c chown root:root /system/scripts/*.sh"
 
+:: Push App Data to sdcard
 %shell% "mkdir /sdcard/restore/"
 %push% "..\..\data\tank\post-debloated\restore\" /sdcard/restore/
 
+:: Copy Data from sdcard to system
 %shell% "su -c mkdir /system/restore/"
 %shell% "su -c chmod 0755 /system/restore/"
 %shell% "su -c cp -r /sdcard/restore/ca.dstudio.atvlauncher.pro/ /system/restore/"
+%shell% "su -c chmod 0660 /data/data/ca.dstudio.atvlauncher.pro/databases/sections.db"
+%shell% "su -c chmod 0660 /data/data/ca.dstudio.atvlauncher.pro/databases/sections.db-shm"
+%shell% "su -c chmod 0660 /data/data/ca.dstudio.atvlauncher.pro/databases/sections.db-wal"
 %shell% "su -c cp -r /sdcard/restore/com.adamioan.scriptrunner/ /system/restore/"
 %shell% "su -c cp -r /sdcard/restore/com.fluxii.android.mousetoggleforfiretv/ /system/restore/"
-
-
-
-
 
 
 echo.
