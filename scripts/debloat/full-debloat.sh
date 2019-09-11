@@ -22,12 +22,10 @@ pm disable com.amazon.bueller.music
 pm disable com.amazon.bueller.notification
 pm disable com.amazon.connectivitydiag
 pm disable com.amazon.device.crashmanager
-pm disable com.amazon.device.logmanager
 pm disable com.amazon.device.messaging
 pm disable com.amazon.device.messaging.sdk.internal.library
 pm disable com.amazon.device.messaging.sdk.library
 pm disable com.amazon.device.settings
-pm disable com.amazon.device.settings.sdk.internal.library
 pm disable com.amazon.device.sync
 pm disable com.amazon.device.sync.sdk.internal
 pm disable com.amazon.devicecontrol
@@ -47,9 +45,6 @@ pm disable com.amazon.sharingservice.android.client.proxy
 pm disable com.amazon.shpm
 pm disable com.amazon.sync.provider.ipc
 pm disable com.amazon.sync.service
-pm disable com.amazon.tcomm
-pm disable com.amazon.tcomm.client
-pm disable com.amazon.tv.fw.metrics
 pm disable com.amazon.tv.legal.notices
 pm disable com.amazon.tv.parentalcontrols
 pm disable com.amazon.tv.support
@@ -58,6 +53,19 @@ pm disable com.amazon.videoads.app
 pm disable com.amazon.visualonawv
 pm disable com.amazon.webview
 pm disable com.svox.pico
+
+# FrameworksMetrics
+pm disable com.amazon.tv.fw.metrics
+
+# Amazon Communication Services Client Library
+pm disable com.amazon.tcomm
+pm disable com.amazon.tcomm.client
+
+# Amazon Device Settings Internal SDK (breaks Device and Applications Settings Activities)
+#pm disable com.amazon.device.settings.sdk.internal.library
+
+# Log Manager
+pm disable com.amazon.device.logmanager
 
 # OTA Related
 pm disable com.amazon.dcp
@@ -72,8 +80,10 @@ pm disable com.amazon.settings.systemupdates
 pm disable com.amazon.tv.launcher
 #pm disable com.amazon.tv.settings
 
+# BuellerDeviceService
+pm disable com.amazon.android.service.networkmonitor
+
 # Removal May Break Some Stock Settings
-#pm disable com.amazon.android.service.networkmonitor
 #pm disable com.amazon.device.controllermanager
 #pm disable com.amazon.device.lowstoragemanager
 #pm disable com.amazon.fireinputdevices
@@ -90,14 +100,19 @@ pm disable com.amazon.tv.launcher
 # Removal Causes Vizzini To Constantly Produce Errors (5.2.6.3 Tank)
 #pm disable com.amazon.communication.discovery
 
-# Breaks Amazon Related Logins???
+# Breaks Amazon Related Logins/Netflix, etc
 #pm disable com.amazon.identity.auth.device.authorization
 
-# Disable Causes Network Errors??? (5.2.6.3 Tank)
+# Breaks Settings UI (5.2.6.3 Tank)
 #pm disable com.amazon.client.metrics
 #pm disable com.amazon.client.metrics.api
+
+# com.amazon.client.metrics.api 2.0
 #pm disable com.amazon.metrics.api
-#pm disable com.amazon.ssm
+
+# System Status Monitor
+pm disable com.amazon.ssm
+pm disable com.amazon.ssmsys
 
 # Help Related
 pm disable com.amazon.tmm.tutorial
@@ -114,7 +129,7 @@ pm disable com.amazon.device.bluetoothdfu
 #pm disable com.android.captiveportallogin
 
 # Amazon Voice Support (Alexa Media Player)
-#pm disable com.amazon.vizzini
+pm disable com.amazon.vizzini
 
 # Amazon Remote Android App
 #pm disable com.amazon.storm.lightning.services
@@ -132,36 +147,36 @@ pm disable com.amazon.device.bluetoothdfu
 #pm disable com.amazon.venezia
 
 # Home may kill enough by itself (untested)
-pm disable com.amazon.tv.launcher/.ui.HomeActivity
+#pm disable com.amazon.tv.launcher/.ui.HomeActivity
 
-pm disable com.amazon.tv.launcher/.ui.ItemLoadingActivity
-pm disable com.amazon.tv.launcher/.ui.purchase.OffDeviceSubscriptionActivity
-pm disable com.amazon.tv.launcher/.ui.Channel1DActivity
-pm disable com.amazon.tv.launcher/.ui.TVActivity
-pm disable com.amazon.tv.launcher/.ui.SearchMenuActivity
-pm disable com.amazon.tv.launcher/.ui.MoviesActivity
-pm disable com.amazon.tv.launcher/.ui.YoursToWatchActivity
-pm disable com.amazon.tv.launcher/.ui.ReleaseNotesActivity
-pm disable com.amazon.tv.launcher/.ui.purchase.VideoItemPurchaseActivity
+#pm disable com.amazon.tv.launcher/.ui.ItemLoadingActivity
+#pm disable com.amazon.tv.launcher/.ui.purchase.OffDeviceSubscriptionActivity
+#pm disable com.amazon.tv.launcher/.ui.Channel1DActivity
+#pm disable com.amazon.tv.launcher/.ui.TVActivity
+#pm disable com.amazon.tv.launcher/.ui.SearchMenuActivity
+#pm disable com.amazon.tv.launcher/.ui.MoviesActivity
+#pm disable com.amazon.tv.launcher/.ui.YoursToWatchActivity
+#pm disable com.amazon.tv.launcher/.ui.ReleaseNotesActivity
+#pm disable com.amazon.tv.launcher/.ui.purchase.VideoItemPurchaseActivity
 #pm disable com.amazon.tv.launcher/.ui.service.LeftNavOverlayService
 
-pm disable com.amazon.tv.launcher/.primefreetrial.PrimeFreeTrialActivity
-pm disable com.amazon.tv.launcher/.content.ComradeReceiver
-pm disable com.amazon.tv.launcher/.demo.DemoPackageAddedReceiver
-pm disable com.amazon.tv.launcher/.ads.AdRefreshReceiver
-pm disable com.amazon.tv.launcher/.util.CategorySearchReceiver
-pm disable com.amazon.tv.launcher/.util.LauncherPreloaderReceiver
-pm disable com.amazon.tv.launcher/.parentalcontrols.PCONPermissionsReceiver
-pm disable com.amazon.tv.launcher/com.amazon.tv.mediabrowse.service.MediaBrowseServiceImpl
+#pm disable com.amazon.tv.launcher/.primefreetrial.PrimeFreeTrialActivity
+#pm disable com.amazon.tv.launcher/.content.ComradeReceiver
+#pm disable com.amazon.tv.launcher/.demo.DemoPackageAddedReceiver
+#pm disable com.amazon.tv.launcher/.ads.AdRefreshReceiver
+#pm disable com.amazon.tv.launcher/.util.CategorySearchReceiver
+#pm disable com.amazon.tv.launcher/.util.LauncherPreloaderReceiver
+#pm disable com.amazon.tv.launcher/.parentalcontrols.PCONPermissionsReceiver
+#pm disable com.amazon.tv.launcher/com.amazon.tv.mediabrowse.service.MediaBrowseServiceImpl
 
-pm disable com.amazon.tv.settings/.blackcurtain.BlackCurtainActivity
-pm disable com.amazon.tv.settings/.blackcurtain.AdultContentPrefsActivity
-pm disable com.amazon.tv.settings/.tv.ThingsToTrySettingsActivity
-pm disable com.amazon.tv.settings/.tv.AmazonAccountSettingsActivity
-pm disable com.amazon.tv.settings/.tv.BuellerAccountSettingsActivity
-pm disable com.amazon.tv.settings/.tv.AlexaSettingsActivity
-pm disable com.amazon.tv.settings/.auth.BuellerSettingsMAPInformationProvider
-pm disable com.amazon.tv.settings/.PCONPermissionsReceiver
+#pm disable com.amazon.tv.settings/.blackcurtain.BlackCurtainActivity
+#pm disable com.amazon.tv.settings/.blackcurtain.AdultContentPrefsActivity
+#pm disable com.amazon.tv.settings/.tv.ThingsToTrySettingsActivity
+#pm disable com.amazon.tv.settings/.tv.AmazonAccountSettingsActivity
+#pm disable com.amazon.tv.settings/.tv.BuellerAccountSettingsActivity
+#pm disable com.amazon.tv.settings/.tv.AlexaSettingsActivity
+#pm disable com.amazon.tv.settings/.auth.BuellerSettingsMAPInformationProvider
+#pm disable com.amazon.tv.settings/.PCONPermissionsReceiver
 
 # App Blacklisting
 #pm disable com.amazon.tv.settings/com.amazon.tv.settings.tv.AppDisableService
@@ -181,6 +196,12 @@ pm disable com.android.documentsui
 # Device Provisioner
 pm disable com.android.managedprovisioning
 
+# VoiceView
+pm disable com.amazon.logan
+
+# USB Tuner
+# pm disable com.amazon.malcolm
+
 # Misc
 #pm disable com.amazon.tv.settings/.tv.ThingsToTrySettingsActivity
 #pm disable com.amazon.tv.settings/.tv.usb.AppScanReceiver
@@ -191,25 +212,29 @@ pm disable com.amazon.tv.nimh
 pm disable com.ivona.tts.oem
 pm disable com.ivona.orchestrator
 pm disable com.amazon.device.sale.service
-pm disable com.amazon.logan
 pm disable com.amazon.advertisingidsettings
 #pm disable com.amazon.tz.webcryptotzservice
 
 # FireOS 5.2.6.2
 pm disable com.amazon.alexashopping
-# pm disable com.amazon.cardinal
 # pm disable com.amazon.device.settings
 # pm disable com.amazon.ftv.glorialist
-# pm disable com.amazon.malcolm
-# pm disable com.amazon.ssmsys
 pm disable com.amazon.tv.livetv
-# pm disable com.amazon.tv.ottssocompanionapp
-# pm disable com.amazon.tv.ottssolib
-# pm disable com.amazon.webview.awvdeploymentservice
 # pm disable com.amazon.whisperplay.service.install
-# pm disable com.amazon.wifilocker
 pm disable com.amazon.amazonvideo.livingroom
 pm disable com.amazon.kor.demo
+
+# com.amazon.webview.awvdeploymentservice Developer Build
+pm disable com.amazon.webview.awvdeploymentservice
+
+# OttSsoLib
+# pm disable com.amazon.tv.ottssolib
+
+# OttSsoCompanionApp
+# pm disable com.amazon.tv.ottssocompanionapp
+
+# WiFi Locker
+pm disable com.amazon.wifilocker
 
 # Amazon Echo???
 pm disable com.amazon.ssdpservice
@@ -227,6 +252,14 @@ pm disable com.amazon.alta.h2clientservice
 # DIAL (Discovery-and-Launch) protocol (allow apps to access via second screen)
 pm disable com.amazon.dialservice
 
+# CustomMediaController
+pm disable com.amazon.cardinal
+
+# TIFObserverService
+pm disable com.amazon.tifobserver
+
+# Amazon WebView Metrics Service
+pm disable com.amazon.webview.metrics.service
 
 echo "Deleting Amazon Bloat...."
 echo ""
@@ -252,7 +285,6 @@ rm -r /system/priv-app/com.amazon.precog/
 rm -r /system/priv-app/com.amazon.securitysyncclient/
 rm -r /system/priv-app/com.amazon.sharingservice.android.client.proxy.release/
 rm -r /system/priv-app/com.amazon.shoptv.client/
-rm -r /system/priv-app/com.amazon.tcomm/
 rm -r /system/priv-app/com.amazon.tv.aiv.support/
 rm -r /system/priv-app/com.amazon.tv.legal.notices/
 rm -r /system/priv-app/com.amazon.tv.parentalcontrols/
@@ -283,6 +315,9 @@ rm -r /system/priv-app/sync-service-fireos-release/
 rm -r /system/priv-app/UnifiedShareActivityChooser/
 rm -r /system/priv-app/WallpaperCropper/
 
+# Amazon Communication Services Client Library
+rm -r /system/priv-app/com.amazon.tcomm/
+
 # Launcher Related
 rm -r /system/priv-app/com.amazon.tv.launcher/
 #rm -r /system/priv-app/com.amazon.tv.settings/
@@ -303,11 +338,14 @@ rm -r /system/priv-app/com.amazon.tmm.tutorial/
 #rm -r /system/priv-app/com.amazon.communication/
 #rm -r /system/priv-app/com.amazon.communication.discovery/
 
-# Breaks Amazon Related Logins???
+# Breaks Amazon Related Logins/Netflix, etc
 #rm -r /system/priv-app/com.amazon.identity.auth.device.authorization/
 
-# Disable Causes Network Errors??? (5.2.6.3 Tank)
-#rm -r /system/priv-app/AmazonNetworkMonitor/
+# Used For Network Status Under Wifi / System Monitor UI and Base
+
+# BuellerDeviceService
+rm -r /system/priv-app/AmazonNetworkMonitor/
+
 #rm -r /system/priv-app/SystemStatusMonitor/
 #rm -r /system/priv-app/SystemStatusMonitorSys
 
@@ -320,19 +358,26 @@ rm -r /system/priv-app/com.amazon.device.bluetoothdfu/
 # Fitbit Support???
 rm -r /system/priv-app/com.amazon.h2clientservice/
 
-# Still Needs Testing
+# FrameworksMetrics
+rm -r /system/priv-app/FrameworksMetrics/
 
+# Breaks Settings UI
+
+# com.amazon.client.metrics.api 2.0
+#rm -r /system/priv-app/com.amazon.metrics.api/
+
+# com.amazon.client.metrics.api 1.2
+#rm -r /system/priv-app/MetricsApi/
+
+# Still Needs Testing
 #rm -r /system/priv-app/com.amazon.dp.logger/
 #rm -r /system/priv-app/com.amazon.fireinputdevices/
 #rm -r /system/priv-app/com.amazon.kindleautomatictimezone/
-#rm -r /system/priv-app/com.amazon.metrics.api/
 #rm -r /system/priv-app/com.amazon.tv.ime/
-#rm -r /system/priv-app/ConnectivityDiag/
 #rm -r /system/priv-app/DefaultContainerService/
 #rm -r /system/priv-app/DownloadProviderUi/
 #rm -r /system/priv-app/ExternalStorageProvider/
 #rm -r /system/priv-app/MediaProvider/
-#rm -r /system/priv-app/MetricsApi/
 #rm -r /system/priv-app/MetricsService/
 #rm -r /system/priv-app/OneTimeInitializer/
 #rm -r /system/priv-app/ProxyHandler/
@@ -340,6 +385,8 @@ rm -r /system/priv-app/com.amazon.h2clientservice/
 #rm -r /system/priv-app/SharedStorageBackup/
 #rm -r /system/priv-app/Shell/
 #rm -r /system/priv-app/VpnDialogs/
+
+rm -r /system/priv-app/ConnectivityDiag/
 
 
 # Other Apps That May Be Wanted/Needed For Different People/Operations
@@ -359,14 +406,21 @@ rm -r /system/priv-app/com.amazon.h2clientservice/
 #rm -r /system/app/CaptivePortalLogin/
 
 # Amazon Voice Support
-#rm -r /system/priv-app/com.amazon.vizzini/
+rm -r /system/priv-app/AlexaMediaPlayer/
 
 # Screen Mirroring Function
 #rm -r /system/priv-app/WhisperCastConnect/
 
+
 # Needed For Amazon Settings UI (Removal Will Break Stock Settings)
+
+# DCP Platform Contracts
 #rm -r /system/priv-app/DeviceSoftwareOTAContracts/
+
+# Amazon Device Settings
 #rm -r /system/priv-app/RemoteSettingsAndroid/
+
+# Amazon Device Settings Internal SDK (breaks Device and Applications Settings Activities)
 #rm -r /system/priv-app/RemoteSettingsInternalSDK/
 
 
@@ -382,6 +436,11 @@ rm -r /system/app/UnifiedSettingsProvider/
 rm -r /system/app/WebCryptoTZService/
 rm -r /system/app/WhiteListedUrlProvider/
 
+# VoiceView
+rm -r /system/priv-app/Logan/
+
+# USB Tuner
+# rm -r /system/priv-app/com.amazon.malcolm/
 
 # FireOS 5.2.1.1
 rm -r /system/priv-app/AdvertisingIdSettings/
@@ -389,27 +448,38 @@ rm -r /system/priv-app/com.amazon.tv.nimh/
 rm -r /system/priv-app/FireTvSaleService/
 rm -r /system/priv-app/IvonaTTS/
 rm -r /system/priv-app/IvonaTtsOrchestrator/
-rm -r /system/priv-app/Logan/
 rm -r /system/priv-app/TvProvider/
 
 # FireOS 5.2.6.2
 rm -r /system/priv-app/com.amazon.alexashopping/
-# rm -r /system/priv-app/com.amazon.cardinal/
 #rm -r /system/priv-app/com.amazon.device.settings/
-# rm -r /system/priv-app/com.amazon.malcolm/
 # rm -r /system/priv-app/com.amazon.ftv.glorialist/
-# rm -r /system/priv-app/com.amazon.ssmsys/
 rm -r /system/priv-app/com.amazon.tv.livetv/
-# rm -r /system/priv-app/com.amazon.tv.ottssocompanionapp/
-# rm -r /system/priv-app/com.amazon.tv.ottssolib/
-# rm -r /system/priv-app/com.amazon.webview.awvdeploymentservice/
 # rm -r /system/priv-app/com.amazon.whisperplay.service.install/
-# rm -r /system/priv-app/com.amazon.wifilocker/
 rm -r /system/priv-app/com.amazon.amazonvideo.livingroom/
-# rm -r /system/priv-app/logan/
-# rm -r /system/priv-app/CredentialLockerAndroid-tablet-release/
-# rm -r /system/priv-app/LogManager-logd/
 rm -r /system/priv-app/com.amazon.kor.demo/
+
+# WiFi Locker
+rm -r /system/priv-app/CredentialLockerAndroid-tablet-release/
+
+# com.amazon.webview.awvdeploymentservice Developer Build
+rm -r /system/priv-app/AwvDeploymentService/
+
+# Amazon WebView Metrics Service
+rm -r /system/priv-app/AwvMetricsService/
+
+# OttSsoLib
+# rm -r /system/priv-app/com.amazon.tv.ottssolib/
+
+# OttSsoCompanionApp
+# rm -r /system/priv-app/com.amazon.tv.ottssocompanionapp/
+
+# Log Manager
+rm -r /system/priv-app/LogManager-logd/
+
+# System Status Monitor
+rm -r /system/priv-app/SystemStatusMonitor/
+rm -r /system/priv-app/com.amazon.ssmsys/
 
 # Amazon Echo???
 rm -r /system/priv-app/SsdpService/
@@ -423,6 +493,9 @@ rm -r /system/priv-app/DialService/
 # Fire Basic Keyboard (Simplified Chinese)
 rm -r /system/app/PinyinIME/
 
+# CustomMediaController
+rm -r /system/priv-app/com.amazon.cardinal/
+
 # FireOS 5.2.6.7
 # rm -r /system/priv-app/com.amazon.aca/
 # rm -r /system/priv-app/com.amazon.aria/
@@ -435,7 +508,7 @@ rm -r /system/app/PinyinIME/
 # rm -r /system/priv-app/com.amazon.net.smartconnect/
 # rm -r /system/priv-app/com.amazon.tmm.tutorial/
 # rm -r /system/priv-app/com.amazon.tv.forcedotaupdater/
-# rm -r /system/priv-app/TIFObserverService/
+rm -r /system/priv-app/TIFObserverService/
 
 
 # Other System Apps
@@ -483,13 +556,15 @@ rm -r /data/data/com.amazon.precog/
 rm -r /data/data/com.amazon.securitysyncclient/
 rm -r /data/data/com.amazon.sharingservice.android.client.proxy.release/
 rm -r /data/data/com.amazon.shoptv.client/
-rm -r /data/data/com.amazon.tcomm/
 rm -r /data/data/com.amazon.tv.aiv.support/
 rm -r /data/data/com.amazon.tv.legal.notices/
 rm -r /data/data/com.amazon.tv.parentalcontrols/
 rm -r /data/data/com.amazon.venezia/
 rm -r /data/data/com.amazon.videoads.app/
 rm -r /data/data/com.amazon.visualonawv/
+
+# Amazon Communication Services Client Library
+rm -r /data/data/com.amazon.tcomm/
 
 # Launcher Related
 rm -r /data/data/com.amazon.tv.launcher/
@@ -499,12 +574,19 @@ rm -r /data/data/com.amazon.tv.launcher/
 rm -r /data/data/com.amazon.tmm.tutorial/
 rm -r /data/data/com.amazon.tv.csapp/
 
+# Breaks Settings UI
+
+# com.amazon.client.metrics.api 2.0
+#rm -r /data/data/com.amazon.metrics.api/
+
+# CustomMediaController
+rm -r /data/data/com.amazon.cardinal/
+
 # Removal May Break Some Stock Settings
 #rm -r /data/data/com.amazon.bueller.photos/
 #rm -r /data/data/com.amazon.dp.logger/
 #rm -r /data/data/com.amazon.fireinputdevices/
 #rm -r /data/data/com.amazon.kindleautomatictimezone/
-#rm -r /data/data/com.amazon.metrics.api/
 #rm -r /data/data/com.amazon.tv.ime/
 
 # Removal Breaks Applications and Signin (5.2.6.3 Tank)
@@ -519,12 +601,14 @@ rm -r /data/data/com.amazon.tv.csapp/
 #rm -r /data/data/com.amazon.identity.auth.device.authorization/
 
 # Disable Causes Network Errors??? (5.2.6.3 Tank)
-#rm -r /data/data/AmazonNetworkMonitor/
+
+# BuellerDeviceService
+rm -r /data/data/AmazonNetworkMonitor/
+
 #rm -r /data/data/SystemStatusMonitor/
 #rm -r /data/data/SystemStatusMonitorSys
 
 
-#rm -r /data/data/ConnectivityDiag/
 rm -r /data/data/ContentSupportProvider/
 rm -r /data/data/CrashManager/
 #rm -r /data/data/DefaultContainerService/
@@ -547,7 +631,6 @@ rm -r /data/data/LogManager/
 rm -r /data/data/ManagedProvisioning/
 rm -r /data/data/marketplace_service_receiver/
 #rm -r /data/data/MediaProvider/
-#rm -r /data/data/MetricsApi/
 #rm -r /data/data/MetricsService/
 #rm -r /data/data/OneTimeInitializer/
 #rm -r /data/data/ProxyHandler/
@@ -560,6 +643,8 @@ rm -r /data/data/sync-service-fireos-release/
 rm -r /data/data/UnifiedShareActivityChooser/
 #rm -r /data/data/VpnDialogs/
 rm -r /data/data/WallpaperCropper/
+
+rm -r /data/data/ConnectivityDiag/
 
 # OTA Related
 rm -r /data/data/DeviceSoftwareOTA/
@@ -577,16 +662,28 @@ rm -r /data/data/SystemUpdatesUI/
 #rm -r /data/data/CaptivePortalLauncher/
 
 # Amazon Voice Support
-#rm -r /data/data/com.amazon.vizzini/
+rm -r /data/data/com.amazon.vizzini/
 
 # Screen Mirroring???
 #rm -r /data/data/WhisperCastConnect/
 
 # Needed For Amazon Settings UI (ONLY FOR /system NOT /data/)
 #rm -r /data/data/DeviceSoftwareOTAContracts/
+
+# Amazon Device Settings
 #rm -r /data/data/RemoteSettingsAndroid/
+
+# Amazon Device Settings Internal SDK (breaks Device and Applications Settings Activities)
 #rm -r /data/data/RemoteSettingsInternalSDK/
 
+# com.amazon.client.metrics.api 1.2
+#rm -r /data/data/MetricsApi/
+
+# VoiceView
+rm -r /data/data/Logan/
+
+# Amazon WebView Metrics Service
+rm -r /data/data/com.amazon.webview.metrics.service/
 
 # From /system/app/
 rm -r /data/data/DeviceControlService/
@@ -597,10 +694,11 @@ rm -r /data/data/UnifiedSettingsProvider/
 rm -r /data/data/WebCryptoTZService/
 rm -r /data/data/WhiteListedUrlProvider/
 
-
 # From /system/framework/
 rm -r /data/data/android.amazon.perm/
 
+# USB Tuner
+# rm -r /data/data/com.amazon.malcolm/
 
 # FireOS 5.2.1.1
 rm -r /data/data/com.amazon.tv.nimh/
@@ -608,7 +706,6 @@ rm -r /data/data/AdvertisingIdSettings/
 rm -r /data/data/FireTvSaleService/
 rm -r /data/data/IvonaTTS/
 rm -r /data/data/IvonaTtsOrchestrator/
-rm -r /data/data/Logan/
 rm -r /data/data/TvProvider/
 
 # FireOS 5.2.6.2
@@ -616,27 +713,32 @@ rm -r /data/data/com.amazon.alexashopping/
 # rm -r /data/data/com.amazon.cardinal/
 # rm -r /data/data/com.amazon.device.settings/
 # rm -r /data/data/com.amazon.ftv.glorialist/
-# rm -r /data/data/com.amazon.malcolm/
-# rm -r /data/data/com.amazon.ssmsys/
 rm -r /data/data/com.amazon.tv.livetv/
-# rm -r /data/data/com.amazon.tv.ottssocompanionapp/
-# rm -r /data/data/com.amazon.tv.ottssolib/
-# rm -r /data/data/com.amazon.webview.awvdeploymentservice/
 # rm -r /data/data/com.amazon.whisperplay.service.install/
-# rm -r /data/data/com.amazon.wifilocker/
 rm -r /data/data/com.amazon.amazonvideo.livingroom/
-# rm -r /data/data/logan/
-# rm -r /data/data/CredentialLockerAndroid-tablet-release/
-# rm -r /data/data/LogManager-logd/
 rm -r /data/data/com.amazon.kor.demo/
+rm -r /data/data/com.amazon.tifobserver/
+
+# WiFi Locker
+rm -r /data/data/CredentialLockerAndroid-tablet-release/
+
+# com.amazon.webview.awvdeploymentservice Developer Build
+rm -r /data/data/com.amazon.webview.awvdeploymentservice/
+
+# OttSsoLib
+# rm -r /data/data/com.amazon.tv.ottssolib/
+
+# OttSsoCompanionApp
+# rm -r /data/data/com.amazon.tv.ottssocompanionapp/
+
+# Log Manager
+rm -r /data/data/LogManager-logd/
 
 # Amazon Echo???
 rm -r /data/data/com.amazon.ssdpservice/
 
 # Settings Notification Center
 rm -r /data/data/com.amazon.tv.notificationcenter/
-
-# FireOS 5.2.6.3
 
 # Fire Basic Keyboard (Simplified Chinese)
 rm -r /data/data/com.android.inputmethod.pinyin/
@@ -647,6 +749,12 @@ rm -r /data/data/com.amazon.alta.h2clientservice/
 # DIAL (Discovery-and-Launch) protocol (allow apps to access via second screen)
 rm -r /data/data/com.amazon.dialservice/
 
+# System Status Monitor
+rm -r /data/data/com.amazon.ssm/
+rm -r /data/data/com.amazon.ssmsys/
+
+# FrameworksMetrics
+rm -r /data/data/com.amazon.tv.fw.metrics/
 
 # FireOS 5.2.6.7
 # rm -r /data/data/com.amazon.aca/

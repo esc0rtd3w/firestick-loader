@@ -17,12 +17,10 @@ pm disable com.amazon.bueller.music
 pm disable com.amazon.bueller.notification
 pm disable com.amazon.connectivitydiag
 pm disable com.amazon.device.crashmanager
-pm disable com.amazon.device.logmanager
 pm disable com.amazon.device.messaging
 pm disable com.amazon.device.messaging.sdk.internal.library
 pm disable com.amazon.device.messaging.sdk.library
 pm disable com.amazon.device.settings
-pm disable com.amazon.device.settings.sdk.internal.library
 pm disable com.amazon.device.sync
 pm disable com.amazon.device.sync.sdk.internal
 pm disable com.amazon.devicecontrol
@@ -42,9 +40,6 @@ pm disable com.amazon.sharingservice.android.client.proxy
 pm disable com.amazon.shpm
 pm disable com.amazon.sync.provider.ipc
 pm disable com.amazon.sync.service
-pm disable com.amazon.tcomm
-pm disable com.amazon.tcomm.client
-pm disable com.amazon.tv.fw.metrics
 pm disable com.amazon.tv.legal.notices
 pm disable com.amazon.tv.parentalcontrols
 pm disable com.amazon.tv.support
@@ -53,6 +48,19 @@ pm disable com.amazon.videoads.app
 pm disable com.amazon.visualonawv
 pm disable com.amazon.webview
 pm disable com.svox.pico
+
+# FrameworksMetrics
+pm disable com.amazon.tv.fw.metrics
+
+# Amazon Communication Services Client Library
+pm disable com.amazon.tcomm
+pm disable com.amazon.tcomm.client
+
+# Amazon Device Settings Internal SDK (breaks Device and Applications Settings Activities)
+#pm disable com.amazon.device.settings.sdk.internal.library
+
+# Log Manager
+pm disable com.amazon.device.logmanager
 
 # OTA Related
 pm disable com.amazon.dcp
@@ -67,8 +75,10 @@ pm disable com.amazon.settings.systemupdates
 pm disable com.amazon.tv.launcher
 #pm disable com.amazon.tv.settings
 
+# BuellerDeviceService
+pm disable com.amazon.android.service.networkmonitor
+
 # Removal May Break Some Stock Settings
-#pm disable com.amazon.android.service.networkmonitor
 #pm disable com.amazon.device.controllermanager
 #pm disable com.amazon.device.lowstoragemanager
 #pm disable com.amazon.fireinputdevices
@@ -85,14 +95,19 @@ pm disable com.amazon.tv.launcher
 # Removal Causes Vizzini To Constantly Produce Errors (5.2.6.3 Tank)
 #pm disable com.amazon.communication.discovery
 
-# Breaks Amazon Related Logins???
+# Breaks Amazon Related Logins/Netflix, etc
 #pm disable com.amazon.identity.auth.device.authorization
 
-# Disable Causes Network Errors??? (5.2.6.3 Tank)
+# Breaks Settings UI (5.2.6.3 Tank)
 #pm disable com.amazon.client.metrics
 #pm disable com.amazon.client.metrics.api
+
+# com.amazon.client.metrics.api 2.0
 #pm disable com.amazon.metrics.api
-#pm disable com.amazon.ssm
+
+# System Status Monitor
+pm disable com.amazon.ssm
+pm disable com.amazon.ssmsys
 
 # Help Related
 pm disable com.amazon.tmm.tutorial
@@ -109,7 +124,7 @@ pm disable com.amazon.device.bluetoothdfu
 #pm disable com.android.captiveportallogin
 
 # Amazon Voice Support (Alexa Media Player)
-#pm disable com.amazon.vizzini
+pm disable com.amazon.vizzini
 
 # Amazon Remote Android App
 #pm disable com.amazon.storm.lightning.services
@@ -127,36 +142,36 @@ pm disable com.amazon.device.bluetoothdfu
 #pm disable com.amazon.venezia
 
 # Home may kill enough by itself (untested)
-pm disable com.amazon.tv.launcher/.ui.HomeActivity
+#pm disable com.amazon.tv.launcher/.ui.HomeActivity
 
-pm disable com.amazon.tv.launcher/.ui.ItemLoadingActivity
-pm disable com.amazon.tv.launcher/.ui.purchase.OffDeviceSubscriptionActivity
-pm disable com.amazon.tv.launcher/.ui.Channel1DActivity
-pm disable com.amazon.tv.launcher/.ui.TVActivity
-pm disable com.amazon.tv.launcher/.ui.SearchMenuActivity
-pm disable com.amazon.tv.launcher/.ui.MoviesActivity
-pm disable com.amazon.tv.launcher/.ui.YoursToWatchActivity
-pm disable com.amazon.tv.launcher/.ui.ReleaseNotesActivity
-pm disable com.amazon.tv.launcher/.ui.purchase.VideoItemPurchaseActivity
+#pm disable com.amazon.tv.launcher/.ui.ItemLoadingActivity
+#pm disable com.amazon.tv.launcher/.ui.purchase.OffDeviceSubscriptionActivity
+#pm disable com.amazon.tv.launcher/.ui.Channel1DActivity
+#pm disable com.amazon.tv.launcher/.ui.TVActivity
+#pm disable com.amazon.tv.launcher/.ui.SearchMenuActivity
+#pm disable com.amazon.tv.launcher/.ui.MoviesActivity
+#pm disable com.amazon.tv.launcher/.ui.YoursToWatchActivity
+#pm disable com.amazon.tv.launcher/.ui.ReleaseNotesActivity
+#pm disable com.amazon.tv.launcher/.ui.purchase.VideoItemPurchaseActivity
 #pm disable com.amazon.tv.launcher/.ui.service.LeftNavOverlayService
 
-pm disable com.amazon.tv.launcher/.primefreetrial.PrimeFreeTrialActivity
-pm disable com.amazon.tv.launcher/.content.ComradeReceiver
-pm disable com.amazon.tv.launcher/.demo.DemoPackageAddedReceiver
-pm disable com.amazon.tv.launcher/.ads.AdRefreshReceiver
-pm disable com.amazon.tv.launcher/.util.CategorySearchReceiver
-pm disable com.amazon.tv.launcher/.util.LauncherPreloaderReceiver
-pm disable com.amazon.tv.launcher/.parentalcontrols.PCONPermissionsReceiver
-pm disable com.amazon.tv.launcher/com.amazon.tv.mediabrowse.service.MediaBrowseServiceImpl
+#pm disable com.amazon.tv.launcher/.primefreetrial.PrimeFreeTrialActivity
+#pm disable com.amazon.tv.launcher/.content.ComradeReceiver
+#pm disable com.amazon.tv.launcher/.demo.DemoPackageAddedReceiver
+#pm disable com.amazon.tv.launcher/.ads.AdRefreshReceiver
+#pm disable com.amazon.tv.launcher/.util.CategorySearchReceiver
+#pm disable com.amazon.tv.launcher/.util.LauncherPreloaderReceiver
+#pm disable com.amazon.tv.launcher/.parentalcontrols.PCONPermissionsReceiver
+#pm disable com.amazon.tv.launcher/com.amazon.tv.mediabrowse.service.MediaBrowseServiceImpl
 
-pm disable com.amazon.tv.settings/.blackcurtain.BlackCurtainActivity
-pm disable com.amazon.tv.settings/.blackcurtain.AdultContentPrefsActivity
-pm disable com.amazon.tv.settings/.tv.ThingsToTrySettingsActivity
-pm disable com.amazon.tv.settings/.tv.AmazonAccountSettingsActivity
-pm disable com.amazon.tv.settings/.tv.BuellerAccountSettingsActivity
-pm disable com.amazon.tv.settings/.tv.AlexaSettingsActivity
-pm disable com.amazon.tv.settings/.auth.BuellerSettingsMAPInformationProvider
-pm disable com.amazon.tv.settings/.PCONPermissionsReceiver
+#pm disable com.amazon.tv.settings/.blackcurtain.BlackCurtainActivity
+#pm disable com.amazon.tv.settings/.blackcurtain.AdultContentPrefsActivity
+#pm disable com.amazon.tv.settings/.tv.ThingsToTrySettingsActivity
+#pm disable com.amazon.tv.settings/.tv.AmazonAccountSettingsActivity
+#pm disable com.amazon.tv.settings/.tv.BuellerAccountSettingsActivity
+#pm disable com.amazon.tv.settings/.tv.AlexaSettingsActivity
+#pm disable com.amazon.tv.settings/.auth.BuellerSettingsMAPInformationProvider
+#pm disable com.amazon.tv.settings/.PCONPermissionsReceiver
 
 # App Blacklisting
 #pm disable com.amazon.tv.settings/com.amazon.tv.settings.tv.AppDisableService
@@ -176,6 +191,12 @@ pm disable com.android.documentsui
 # Device Provisioner
 pm disable com.android.managedprovisioning
 
+# VoiceView
+pm disable com.amazon.logan
+
+# USB Tuner
+# pm disable com.amazon.malcolm
+
 # Misc
 #pm disable com.amazon.tv.settings/.tv.ThingsToTrySettingsActivity
 #pm disable com.amazon.tv.settings/.tv.usb.AppScanReceiver
@@ -186,25 +207,29 @@ pm disable com.amazon.tv.nimh
 pm disable com.ivona.tts.oem
 pm disable com.ivona.orchestrator
 pm disable com.amazon.device.sale.service
-pm disable com.amazon.logan
 pm disable com.amazon.advertisingidsettings
 #pm disable com.amazon.tz.webcryptotzservice
 
 # FireOS 5.2.6.2
 pm disable com.amazon.alexashopping
-# pm disable com.amazon.cardinal
 # pm disable com.amazon.device.settings
 # pm disable com.amazon.ftv.glorialist
-# pm disable com.amazon.malcolm
-# pm disable com.amazon.ssmsys
 pm disable com.amazon.tv.livetv
-# pm disable com.amazon.tv.ottssocompanionapp
-# pm disable com.amazon.tv.ottssolib
-# pm disable com.amazon.webview.awvdeploymentservice
 # pm disable com.amazon.whisperplay.service.install
-# pm disable com.amazon.wifilocker
 pm disable com.amazon.amazonvideo.livingroom
 pm disable com.amazon.kor.demo
+
+# com.amazon.webview.awvdeploymentservice Developer Build
+pm disable com.amazon.webview.awvdeploymentservice
+
+# OttSsoLib
+# pm disable com.amazon.tv.ottssolib
+
+# OttSsoCompanionApp
+# pm disable com.amazon.tv.ottssocompanionapp
+
+# WiFi Locker
+pm disable com.amazon.wifilocker
 
 # Amazon Echo???
 pm disable com.amazon.ssdpservice
@@ -212,12 +237,21 @@ pm disable com.amazon.ssdpservice
 # Settings Notification Center
 pm disable com.amazon.tv.notificationcenter
 
-# DIAL (Discovery-and-Launch) protocol (allow apps to access via second screen)
-pm disable com.amazon.dialservice
-
 # FireOS 5.2.6.3
 # Fire Basic Keyboard (Simplified Chinese)
 pm disable com.android.inputmethod.pinyin
 
 # Fitbit Support???
 pm disable com.amazon.alta.h2clientservice
+
+# DIAL (Discovery-and-Launch) protocol (allow apps to access via second screen)
+pm disable com.amazon.dialservice
+
+# CustomMediaController
+pm disable com.amazon.cardinal
+
+# TIFObserverService
+pm disable com.amazon.tifobserver
+
+# Amazon WebView Metrics Service
+pm disable com.amazon.webview.metrics.service
