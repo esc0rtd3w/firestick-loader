@@ -103,6 +103,10 @@ set preferences="..\settings\tank\system\scripts\preferences.sh"
 %shell% "chmod -R 0777 /data/data/com.adamioan.scriptrunner/"
 %shell% "chmod -R 0777 /data/data/com.fluxii.android.mousetoggleforfiretv/"
 
+:: Install BusyBox
+%push% "..\..\bin\android\busybox" /data/local/tmp/
+%shell% "chmod 0777 /data/local/tmp/busybox"
+%shell% "/data/local/tmp/busybox --install"
 
 echo.
 echo Success if not output or error!
