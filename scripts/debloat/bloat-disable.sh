@@ -101,8 +101,8 @@ pm disable com.amazon.android.service.networkmonitor
 #pm disable com.amazon.metrics.api
 
 # System Status Monitor
-pm disable com.amazon.ssm
-pm disable com.amazon.ssmsys
+#pm disable com.amazon.ssm
+#pm disable com.amazon.ssmsys
 
 # Help Related
 pm disable com.amazon.tmm.tutorial

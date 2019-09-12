@@ -106,8 +106,8 @@ pm disable com.amazon.android.service.networkmonitor
 #pm disable com.amazon.metrics.api
 
 # System Status Monitor
-pm disable com.amazon.ssm
-pm disable com.amazon.ssmsys
+#pm disable com.amazon.ssm
+#pm disable com.amazon.ssmsys
 
 # Help Related
 pm disable com.amazon.tmm.tutorial
@@ -479,8 +479,8 @@ rm -r /system/priv-app/AwvMetricsService/
 rm -r /system/priv-app/LogManager-logd/
 
 # System Status Monitor
-rm -r /system/priv-app/SystemStatusMonitor/
-rm -r /system/priv-app/com.amazon.ssmsys/
+#rm -r /system/priv-app/SystemStatusMonitor/
+#rm -r /system/priv-app/SystemStatusMonitorSys/
 
 # Amazon Echo???
 rm -r /system/priv-app/SsdpService/
@@ -752,8 +752,8 @@ rm -r /data/data/com.amazon.alta.h2clientservice/
 rm -r /data/data/com.amazon.dialservice/
 
 # System Status Monitor
-rm -r /data/data/com.amazon.ssm/
-rm -r /data/data/com.amazon.ssmsys/
+#rm -r /data/data/com.amazon.ssm/
+#rm -r /data/data/com.amazon.ssmsys/
 
 # FrameworksMetrics
 rm -r /data/data/com.amazon.tv.fw.metrics/
