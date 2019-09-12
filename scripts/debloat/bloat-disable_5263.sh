@@ -24,7 +24,6 @@ pm disable com.amazon.device.settings
 pm disable com.amazon.device.sync
 pm disable com.amazon.device.sync.sdk.internal
 pm disable com.amazon.devicecontrol
-pm disable com.amazon.dp.logger
 pm disable com.amazon.kindle.cms
 pm disable com.amazon.kindle.devicecontrols
 pm disable com.amazon.kso.blackbird
@@ -51,10 +50,6 @@ pm disable com.svox.pico
 
 # FrameworksMetrics
 pm disable com.amazon.tv.fw.metrics
-
-# Amazon Communication Services Client Library
-pm disable com.amazon.tcomm
-pm disable com.amazon.tcomm.client
 
 # Amazon Device Settings Internal SDK (breaks Device and Applications Settings Activities)
 #pm disable com.amazon.device.settings.sdk.internal.library
@@ -132,6 +127,12 @@ pm disable com.amazon.vizzini
 #pm disable com.amazon.whisperlink.core.android
 #pm disable com.amazon.whisperplay.contracts
 #pm disable com.amazon.whisperplay.service.install
+
+# Removal of (tcomm/dplogger) breaks Amazon Android FireTV Remote App Connection
+# Amazon Communication Services Client Library
+#pm disable com.amazon.tcomm
+#pm disable com.amazon.tcomm.client
+#pm disable com.amazon.dp.logger
 
 # Screen Mirroring Function
 #pm disable com.amazon.wcast.sink
@@ -213,9 +214,8 @@ pm disable com.amazon.advertisingidsettings
 # FireOS 5.2.6.2
 pm disable com.amazon.alexashopping
 # pm disable com.amazon.device.settings
-# pm disable com.amazon.ftv.glorialist
+pm disable com.amazon.ftv.glorialist
 pm disable com.amazon.tv.livetv
-# pm disable com.amazon.whisperplay.service.install
 pm disable com.amazon.amazonvideo.livingroom
 pm disable com.amazon.kor.demo
 

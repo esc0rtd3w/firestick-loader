@@ -29,7 +29,6 @@ pm disable com.amazon.device.settings
 pm disable com.amazon.device.sync
 pm disable com.amazon.device.sync.sdk.internal
 pm disable com.amazon.devicecontrol
-pm disable com.amazon.dp.logger
 pm disable com.amazon.kindle.cms
 pm disable com.amazon.kindle.devicecontrols
 pm disable com.amazon.kso.blackbird
@@ -56,10 +55,6 @@ pm disable com.svox.pico
 
 # FrameworksMetrics
 pm disable com.amazon.tv.fw.metrics
-
-# Amazon Communication Services Client Library
-pm disable com.amazon.tcomm
-pm disable com.amazon.tcomm.client
 
 # Amazon Device Settings Internal SDK (breaks Device and Applications Settings Activities)
 #pm disable com.amazon.device.settings.sdk.internal.library
@@ -137,6 +132,12 @@ pm disable com.amazon.vizzini
 #pm disable com.amazon.whisperlink.core.android
 #pm disable com.amazon.whisperplay.contracts
 #pm disable com.amazon.whisperplay.service.install
+
+# Removal of (tcomm/dplogger) breaks Amazon Android FireTV Remote App Connection
+# Amazon Communication Services Client Library
+#pm disable com.amazon.tcomm
+#pm disable com.amazon.tcomm.client
+#pm disable com.amazon.dp.logger
 
 # Screen Mirroring Function
 #pm disable com.amazon.wcast.sink
@@ -218,9 +219,8 @@ pm disable com.amazon.advertisingidsettings
 # FireOS 5.2.6.2
 pm disable com.amazon.alexashopping
 # pm disable com.amazon.device.settings
-# pm disable com.amazon.ftv.glorialist
+pm disable com.amazon.ftv.glorialist
 pm disable com.amazon.tv.livetv
-# pm disable com.amazon.whisperplay.service.install
 pm disable com.amazon.amazonvideo.livingroom
 pm disable com.amazon.kor.demo
 
@@ -315,9 +315,6 @@ rm -r /system/priv-app/sync-service-fireos-release/
 rm -r /system/priv-app/UnifiedShareActivityChooser/
 rm -r /system/priv-app/WallpaperCropper/
 
-# Amazon Communication Services Client Library
-rm -r /system/priv-app/com.amazon.tcomm/
-
 # Launcher Related
 rm -r /system/priv-app/com.amazon.tv.launcher/
 #rm -r /system/priv-app/com.amazon.tv.settings/
@@ -370,7 +367,6 @@ rm -r /system/priv-app/FrameworksMetrics/
 #rm -r /system/priv-app/MetricsApi/
 
 # Still Needs Testing
-#rm -r /system/priv-app/com.amazon.dp.logger/
 #rm -r /system/priv-app/com.amazon.fireinputdevices/
 #rm -r /system/priv-app/com.amazon.kindleautomatictimezone/
 #rm -r /system/priv-app/com.amazon.tv.ime/
@@ -400,6 +396,12 @@ rm -r /system/priv-app/ConnectivityDiag/
 #rm -r /system/priv-app/WhisperlinkSdk/
 #rm -r /system/priv-app/WhisperplayCore/
 #rm -r /system/priv-app/WhisperplayInstall/
+
+# Removal of (tcomm/dplogger) breaks Amazon Android FireTV Remote App Connection
+# Amazon Communication Services Client Library
+#rm -r /system/priv-app/com.amazon.tcomm/
+#rm -r /system/priv-app/com.amazon.tcomm.client/
+#rm -r /system/priv-app/com.amazon.dp.logger/
 
 # Captive Portal Launcher
 #rm -r /system/priv-app/CaptivePortalLauncher/
@@ -453,9 +455,8 @@ rm -r /system/priv-app/TvProvider/
 # FireOS 5.2.6.2
 rm -r /system/priv-app/com.amazon.alexashopping/
 #rm -r /system/priv-app/com.amazon.device.settings/
-# rm -r /system/priv-app/com.amazon.ftv.glorialist/
+rm -r /system/priv-app/com.amazon.ftv.glorialist/
 rm -r /system/priv-app/com.amazon.tv.livetv/
-# rm -r /system/priv-app/com.amazon.whisperplay.service.install/
 rm -r /system/priv-app/com.amazon.amazonvideo.livingroom/
 rm -r /system/priv-app/com.amazon.kor.demo/
 
@@ -563,9 +564,6 @@ rm -r /data/data/com.amazon.venezia/
 rm -r /data/data/com.amazon.videoads.app/
 rm -r /data/data/com.amazon.visualonawv/
 
-# Amazon Communication Services Client Library
-rm -r /data/data/com.amazon.tcomm/
-
 # Launcher Related
 rm -r /data/data/com.amazon.tv.launcher/
 #rm -r /data/data/com.amazon.tv.settings/
@@ -584,7 +582,6 @@ rm -r /data/data/com.amazon.cardinal/
 
 # Removal May Break Some Stock Settings
 #rm -r /data/data/com.amazon.bueller.photos/
-#rm -r /data/data/com.amazon.dp.logger/
 #rm -r /data/data/com.amazon.fireinputdevices/
 #rm -r /data/data/com.amazon.kindleautomatictimezone/
 #rm -r /data/data/com.amazon.tv.ime/
@@ -654,9 +651,15 @@ rm -r /data/data/SystemUpdatesUI/
 # Amazon Remote Android App
 #rm -r /data/data/com.amazon.storm.lightning.services/
 #rm -r /data/data/com.amazon.storm.lightning.tutorial/
-#rm -r /data/data/WhisperlinkSdk/
-#rm -r /data/data/WhisperplayCore/
-#rm -r /data/data/WhisperplayInstall
+#rm -r /data/data/com.amazon.whisperplay.contracts/
+#rm -r /data/data/com.amazon.whisperlink.core.android/
+#rm -r /data/data/com.amazon.whisperplay.service.install/
+
+# Removal of (tcomm/dplogger) breaks Amazon Android FireTV Remote App Connection
+# Amazon Communication Services Client Library
+#rm -r /data/data/com.amazon.tcomm/
+#rm -r /data/data/com.amazon.tcomm.client/
+#rm -r /data/data/com.amazon.dp.logger/
 
 # Captive Portal Launcher
 #rm -r /data/data/CaptivePortalLauncher/
@@ -712,9 +715,8 @@ rm -r /data/data/TvProvider/
 rm -r /data/data/com.amazon.alexashopping/
 # rm -r /data/data/com.amazon.cardinal/
 # rm -r /data/data/com.amazon.device.settings/
-# rm -r /data/data/com.amazon.ftv.glorialist/
+rm -r /data/data/com.amazon.ftv.glorialist/
 rm -r /data/data/com.amazon.tv.livetv/
-# rm -r /data/data/com.amazon.whisperplay.service.install/
 rm -r /data/data/com.amazon.amazonvideo.livingroom/
 rm -r /data/data/com.amazon.kor.demo/
 rm -r /data/data/com.amazon.tifobserver/
