@@ -41,7 +41,7 @@ set sdcard=sdcard
 %push% %notifications% /data/local/tmp/
 
 :: Push Restore Home Script to Temp
-%push% "..\restore-home.sh /data/local/tmp/"
+%push% "..\restore-home.sh" /data/local/tmp/
 
 :: Make and Set Permissions for Settings Scripts Directories
 %shell% "su -c mkdir /system/scripts/"
@@ -75,8 +75,21 @@ set sdcard=sdcard
 %shell% "su -c cp -r /sdcard/restore/ca.dstudio.atvlauncher.pro/ /system/restore/"
 %shell% "su -c cp -r /sdcard/restore/com.adamioan.scriptrunner/ /system/restore/"
 %shell% "su -c cp -r /sdcard/restore/com.fluxii.android.mousetoggleforfiretv/ /system/restore/"
+
+:: Push APKs
+%push% "..\..\apps\system\busybox.apk" /data/local/tmp/
+%push% "..\..\apps\utilities\mouse-toggle.apk" /data/local/tmp/
+
+:: Setup APK Directory
 %shell% "su -c mkdir /system/restore/apk/"
 %shell% "su -c chmod 0755 /system/restore/apk/"
+
+:: Copy APKs To System
+%shell% "su -c cp /data/local/tmp/busybox.apk /system/restore/apk/"
+%shell% "su -c cp /data/local/tmp/mouse-toggle.apk /system/restore/apk/"
+
+::%shell% "su -c chmod 0644 -R /system/restore/apk/"
+%shell% "su -c chown root:root -R /system/restore/apk/"
 
 echo.
 echo.
