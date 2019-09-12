@@ -20,6 +20,7 @@ else
 	chown -R system:system /data/data/
 fi
 
+# Copy All Home User Data For Default Setup
 cp -r /system/restore/ca.dstudio.atvlauncher.pro/ /data/data/
 cp -r /system/restore/com.adamioan.scriptrunner/ /data/data/
 cp -r /system/restore/com.fluxii.android.mousetoggleforfiretv/ /data/data/
@@ -29,3 +30,10 @@ chmod 0660 /data/data/ca.dstudio.atvlauncher.pro/databases/sections.db-shm
 chmod 0660 /data/data/ca.dstudio.atvlauncher.pro/databases/sections.db-wal
 chmod -R 0755 /data/data/com.adamioan.scriptrunner/
 chmod -R 0755 /data/data/com.fluxii.android.mousetoggleforfiretv/
+
+
+# Cleanup Extra Crap
+rm -r /system/res/images/*.*
+rm -r /system/res/sound/*.*
+
+
