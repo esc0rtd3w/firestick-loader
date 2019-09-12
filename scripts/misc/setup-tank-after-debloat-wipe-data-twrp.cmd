@@ -32,7 +32,7 @@ set preferences="..\settings\tank\system\scripts\preferences.sh"
 %shell% "mount -o rw /system"
 
 :: Wipe Data and Cache
-::%twrp% wipe data
+%twrp% wipe data
 
 :: Make new /data/data/ directory
 %shell% "mkdir /data/"
@@ -81,7 +81,7 @@ set preferences="..\settings\tank\system\scripts\preferences.sh"
 :: Push App Data to sdcard
 %shell% "rm -r /sdcard/restore/"
 %shell% "mkdir /sdcard/restore/"
-%push% "..\..\data\tank\post-debloated\restore\" /sdcard/restore/
+%push% "..\..\data\tank\post-debloated\restore" /sdcard/restore/
 
 :: Copy Data from sdcard to system
 %shell% "mkdir /system/restore/"
