@@ -26,6 +26,7 @@ com.amazon.device.permission.DEVICE_DISCOVERY
 com.amazon.device.controllermanager.DEVICE_ONLINE
 android.bluetooth.adapter.action.DISCOVERY_STARTED
 com.amazon.device.controllermanager.DISCOVERY_STOP
+com.amazon.identity.auth.ChallengeException.requiredAuthenticationMethod
 
 com.amazon.kindleautomatictimezone.START_ATZ_ACTION
 

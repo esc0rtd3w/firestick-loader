@@ -1,0 +1,7 @@
+
+act=android.intent.action.VIEW cmp=com.amazon.client.metrics/.MetricsDebugActivity
+
+
+
+
+
