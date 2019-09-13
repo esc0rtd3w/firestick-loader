@@ -7,6 +7,7 @@ set adb="..\..\bin\adb.exe"
 set adbKill="%~dp0bin\adb.exe" kill-server
 set adbStart="%~dp0bin\adb.exe" start-server
 set adbWait=%adb% wait-for-device
+set sleep="..\..\bin\wait.exe"
 
 set install=%adb% install
 set uninstall=%adb% uninstall
@@ -30,6 +31,8 @@ set preferences="..\settings\tank\system\scripts\preferences.sh"
 
 :: Mount System as RW
 %shell% "mount -o rw /system"
+
+%sleep% 3
 
 :: Wipe Data and Cache
 %twrp% wipe data
@@ -82,26 +85,30 @@ set preferences="..\settings\tank\system\scripts\preferences.sh"
 %shell% "rm -r /sdcard/restore/"
 %shell% "mkdir /sdcard/restore/"
 %push% "..\..\data\tank\post-debloated\restore" /sdcard/restore/
+%shell% "mkdir /sdcard/TitaniumBackup/"
+%shell% "cp -r /sdcard/restore/TitaniumBackup /sdcard/"
 
 :: Copy Data from sdcard to system
+%shell% "rm -r /system/restore/"
 %shell% "mkdir /system/restore/"
 %shell% "chmod 0777 /system/restore/"
-%shell% "cp -r /sdcard/restore/ca.dstudio.atvlauncher.pro/ /system/restore/"
-%shell% "cp -r /sdcard/restore/com.adamioan.scriptrunner/ /system/restore/"
-%shell% "cp -r /sdcard/restore/com.fluxii.android.mousetoggleforfiretv/ /system/restore/"
+::%shell% "cp -r /sdcard/restore/ca.dstudio.atvlauncher.pro/ /system/restore/"
+::%shell% "cp -r /sdcard/restore/com.adamioan.scriptrunner/ /system/restore/"
+::%shell% "cp -r /sdcard/restore/com.fluxii.android.mousetoggleforfiretv/ /system/restore/"
+%shell% "cp -r /sdcard/restore/TitaniumBackup/ /system/restore/"
 %shell% "mkdir /system/restore/apk/"
 %shell% "chmod 0777 /system/restore/apk/"
 
 :: Copy App Data back to /data/data/
-%shell% "cp -r /system/restore/ca.dstudio.atvlauncher.pro/ /data/data/"
-%shell% "cp -r /system/restore/com.adamioan.scriptrunner/ /data/data/"
-%shell% "cp -r /system/restore/com.fluxii.android.mousetoggleforfiretv/ /data/data/"
-%shell% "chmod -R 0777 /data/data/ca.dstudio.atvlauncher.pro/"
-%shell% "chmod 0660 /data/data/ca.dstudio.atvlauncher.pro/databases/sections.db"
-%shell% "chmod 0660 /data/data/ca.dstudio.atvlauncher.pro/databases/sections.db-shm"
-%shell% "chmod 0660 /data/data/ca.dstudio.atvlauncher.pro/databases/sections.db-wal"
-%shell% "chmod -R 0777 /data/data/com.adamioan.scriptrunner/"
-%shell% "chmod -R 0777 /data/data/com.fluxii.android.mousetoggleforfiretv/"
+::%shell% "cp -r /system/restore/ca.dstudio.atvlauncher.pro/ /data/data/"
+::%shell% "cp -r /system/restore/com.adamioan.scriptrunner/ /data/data/"
+::%shell% "cp -r /system/restore/com.fluxii.android.mousetoggleforfiretv/ /data/data/"
+::%shell% "chmod -R 0777 /data/data/ca.dstudio.atvlauncher.pro/"
+::%shell% "chmod 0660 /data/data/ca.dstudio.atvlauncher.pro/databases/sections.db"
+::%shell% "chmod 0660 /data/data/ca.dstudio.atvlauncher.pro/databases/sections.db-shm"
+::%shell% "chmod 0660 /data/data/ca.dstudio.atvlauncher.pro/databases/sections.db-wal"
+::%shell% "chmod -R 0777 /data/data/com.adamioan.scriptrunner/"
+::%shell% "chmod -R 0777 /data/data/com.fluxii.android.mousetoggleforfiretv/"
 
 :: Install BusyBox
 %push% "..\..\bin\android\busybox" /data/local/tmp/
@@ -109,9 +116,16 @@ set preferences="..\settings\tank\system\scripts\preferences.sh"
 %shell% "/data/local/tmp/busybox --install"
 
 echo.
-echo Success if not output or error!
+echo Prepared For Reboot!
 echo.
-pause
+echo Once rebooted, restore data with TitaniumBackup!
+echo.
+echo.
+echo Press any key to reboot...
+echo.
+pause>nul
+
+%adb% reboot
 
 
 

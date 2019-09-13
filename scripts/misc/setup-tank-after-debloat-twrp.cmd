@@ -7,12 +7,14 @@ set adb="..\..\bin\adb.exe"
 set adbKill="%~dp0bin\adb.exe" kill-server
 set adbStart="%~dp0bin\adb.exe" start-server
 set adbWait=%adb% wait-for-device
+set sleep="..\..\bin\wait.exe"
 
 set install=%adb% install
 set uninstall=%adb% uninstall
 set push=%adb% push
 set pull=%adb% pull
 set shell=%adb% shell
+set twrp=%shell% twrp
 
 set accessibility="..\settings\tank\system\scripts\accessibility.sh"
 set applications="..\settings\tank\system\scripts\applications.sh"
@@ -25,10 +27,12 @@ set notifications="..\settings\tank\system\scripts\notifications.sh"
 set preferences="..\settings\tank\system\scripts\preferences.sh"
 
 :: Set ADB Enabled
-%shell% settings --user 0 put global adb_enabled 1
+::%shell% settings --user 0 put global adb_enabled 1
 
 :: Mount System as RW
 %shell% "mount -o rw /system"
+
+%sleep% 3
 
 :: Push Settings Scripts to Temp
 %push% %accessibility% /data/local/tmp/
@@ -39,13 +43,14 @@ set preferences="..\settings\tank\system\scripts\preferences.sh"
 %push% %myaccount% /data/local/tmp/
 %push% %network% /data/local/tmp/
 %push% %notifications% /data/local/tmp/
+%push% %preferences% /data/local/tmp/
 
 :: Push Restore Home Script to Temp
-%push% "..\restore-home.sh /data/local/tmp/"
+%push% "..\restore-home.sh" /data/local/tmp/
 
 :: Make and Set Permissions for Settings Scripts Directories
 %shell% "mkdir /system/scripts/"
-%shell% "chmod 0755 /system/scripts/"
+%shell% "chmod 0777 /system/scripts/"
 
 :: Copy Settings Scripts From Temp to System
 %shell% "cp /data/local/tmp/accessibility.sh /system/scripts/accessibility.sh"
@@ -66,38 +71,50 @@ set preferences="..\settings\tank\system\scripts\preferences.sh"
 %shell% "chown root:root /system/scripts/*.sh"
 
 :: Push App Data to sdcard
+%shell% "rm -r /sdcard/restore/"
 %shell% "mkdir /sdcard/restore/"
-%push% "..\..\data\tank\post-debloated\restore\" /sdcard/restore/
+%push% "..\..\data\tank\post-debloated\restore" /sdcard/restore/
+%shell% "mkdir /sdcard/TitaniumBackup/"
+%shell% "cp -r /sdcard/restore/TitaniumBackup /sdcard/"
 
 :: Copy Data from sdcard to system
+%shell% "rm -r /system/restore/"
 %shell% "mkdir /system/restore/"
-%shell% "chmod 0755 /system/restore/"
-%shell% "cp -r /sdcard/restore/ca.dstudio.atvlauncher.pro/ /system/restore/"
-%shell% "cp -r /sdcard/restore/com.adamioan.scriptrunner/ /system/restore/"
-%shell% "cp -r /sdcard/restore/com.fluxii.android.mousetoggleforfiretv/ /system/restore/"
+%shell% "chmod 0777 /system/restore/"
+::%shell% "cp -r /sdcard/restore/ca.dstudio.atvlauncher.pro/ /system/restore/"
+::%shell% "cp -r /sdcard/restore/com.adamioan.scriptrunner/ /system/restore/"
+::%shell% "cp -r /sdcard/restore/com.fluxii.android.mousetoggleforfiretv/ /system/restore/"
+%shell% "cp -r /sdcard/restore/TitaniumBackup/ /system/restore/"
 %shell% "mkdir /system/restore/apk/"
-%shell% "chmod 0755 /system/restore/apk/"
+%shell% "chmod 0777 /system/restore/apk/"
 
 :: Copy App Data back to /data/data/
-%shell% "mkdir /data/"
-%shell% "mkdir /data/data/"
-%shell% "chmod 0755 /data/data/"
-%shell% "cp -r /system/restore/ca.dstudio.atvlauncher.pro/ /data/data/"
-%shell% "cp -r /system/restore/com.adamioan.scriptrunner/ /data/data/"
-%shell% "cp -r /system/restore/com.fluxii.android.mousetoggleforfiretv/ /data/data/"
-%shell% "chmod -R 0755 /data/data/ca.dstudio.atvlauncher.pro/"
-%shell% "chmod 0660 /data/data/ca.dstudio.atvlauncher.pro/databases/sections.db"
-%shell% "chmod 0660 /data/data/ca.dstudio.atvlauncher.pro/databases/sections.db-shm"
-%shell% "chmod 0660 /data/data/ca.dstudio.atvlauncher.pro/databases/sections.db-wal"
-%shell% "chmod -R 0755 /data/data/com.adamioan.scriptrunner/"
-%shell% "chmod -R 0755 /data/data/com.fluxii.android.mousetoggleforfiretv/"
+::%shell% "cp -r /system/restore/ca.dstudio.atvlauncher.pro/ /data/data/"
+::%shell% "cp -r /system/restore/com.adamioan.scriptrunner/ /data/data/"
+::%shell% "cp -r /system/restore/com.fluxii.android.mousetoggleforfiretv/ /data/data/"
+::%shell% "chmod -R 0777 /data/data/ca.dstudio.atvlauncher.pro/"
+::%shell% "chmod 0660 /data/data/ca.dstudio.atvlauncher.pro/databases/sections.db"
+::%shell% "chmod 0660 /data/data/ca.dstudio.atvlauncher.pro/databases/sections.db-shm"
+::%shell% "chmod 0660 /data/data/ca.dstudio.atvlauncher.pro/databases/sections.db-wal"
+::%shell% "chmod -R 0777 /data/data/com.adamioan.scriptrunner/"
+::%shell% "chmod -R 0777 /data/data/com.fluxii.android.mousetoggleforfiretv/"
 
+:: Install BusyBox
+%push% "..\..\bin\android\busybox" /data/local/tmp/
+%shell% "chmod 0777 /data/local/tmp/busybox"
+%shell% "/data/local/tmp/busybox --install"
 
 echo.
-echo Success if not output or error!
+echo Prepared For Reboot!
 echo.
-pause
+echo Once rebooted, restore data with TitaniumBackup!
+echo.
+echo.
+echo Press any key to reboot...
+echo.
+pause>nul
 
+%adb% reboot
 
 
 :end

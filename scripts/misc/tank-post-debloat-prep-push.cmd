@@ -25,7 +25,15 @@ set sdcard=sdcard
 ::set sdcard=external_sd
 ::set sdcard=extSdCard
 
-
+set accessibility="..\settings\tank\system\scripts\accessibility.sh"
+set applications="..\settings\tank\system\scripts\applications.sh"
+set device="..\settings\tank\system\scripts\device.sh"
+set displaysounds="..\settings\tank\system\scripts\display-sounds.sh"
+set help="..\settings\tank\system\scripts\help.sh"
+set myaccount="..\settings\tank\system\scripts\my-account.sh"
+set network="..\settings\tank\system\scripts\network.sh"
+set notifications="..\settings\tank\system\scripts\notifications.sh"
+set preferences="..\settings\tank\system\scripts\preferences.sh"
 
 :: Mount System as RW
 %shell% "su -c mount -o rw /system"
@@ -72,9 +80,10 @@ set sdcard=sdcard
 :: Copy Data from sdcard to system
 %shell% "su -c mkdir /system/restore/"
 %shell% "su -c chmod 0755 /system/restore/"
-%shell% "su -c cp -r /sdcard/restore/ca.dstudio.atvlauncher.pro/ /system/restore/"
-%shell% "su -c cp -r /sdcard/restore/com.adamioan.scriptrunner/ /system/restore/"
-%shell% "su -c cp -r /sdcard/restore/com.fluxii.android.mousetoggleforfiretv/ /system/restore/"
+::%shell% "su -c cp -r /sdcard/restore/ca.dstudio.atvlauncher.pro/ /system/restore/"
+::%shell% "su -c cp -r /sdcard/restore/com.adamioan.scriptrunner/ /system/restore/"
+::%shell% "su -c cp -r /sdcard/restore/com.fluxii.android.mousetoggleforfiretv/ /system/restore/"
+%shell% "su -c cp -r /sdcard/restore/TitaniumBackup/ /system/restore/"
 
 :: Push APKs
 %push% "..\..\apps\system\busybox.apk" /data/local/tmp/

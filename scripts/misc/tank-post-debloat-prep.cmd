@@ -28,12 +28,13 @@ set sdcard=sdcard
 
 %shell% "su -c mkdir /system/restore/"
 %shell% "su -c chmod 0755 /system/restore/"
-%shell% "su -c cp -r /data/data/ca.dstudio.atvlauncher.pro/ /system/restore/"
-%shell% "su -c cp -r /data/data/com.adamioan.scriptrunner/ /system/restore/"
-%shell% "su -c cp -r /data/data/com.fluxii.android.mousetoggleforfiretv/ /system/restore/"
-%shell% "su -c chmod 0755 /system/restore/ca.dstudio.atvlauncher.pro"
-%shell% "su -c chmod 0755 /system/restore/com.adamioan.scriptrunner"
-%shell% "su -c chmod 0755 /system/restore/com.fluxii.android.mousetoggleforfiretv"
+::%shell% "su -c cp -r /data/data/ca.dstudio.atvlauncher.pro/ /system/restore/"
+::%shell% "su -c cp -r /data/data/com.adamioan.scriptrunner/ /system/restore/"
+::%shell% "su -c cp -r /data/data/com.fluxii.android.mousetoggleforfiretv/ /system/restore/"
+%shell% "su -c cp -r /sdcard/restore/TitaniumBackup/ /system/restore/"
+::%shell% "su -c chmod 0755 /system/restore/ca.dstudio.atvlauncher.pro"
+::%shell% "su -c chmod 0755 /system/restore/com.adamioan.scriptrunner"
+::%shell% "su -c chmod 0755 /system/restore/com.fluxii.android.mousetoggleforfiretv"
 
 echo.
 echo.
