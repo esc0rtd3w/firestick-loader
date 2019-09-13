@@ -115,6 +115,10 @@ set preferences="..\settings\tank\system\scripts\preferences.sh"
 %shell% "chmod 0777 /data/local/tmp/busybox"
 %shell% "/data/local/tmp/busybox --install"
 
+:: Install/Reinstall Magisk
+%push% "..\..\rooting\tank\Magisk-v19.3.zip" /data/local/tmp/
+%shell% "twrp install /data/local/tmp/Magisk-v19.3.zip"
+
 echo.
 echo Prepared For Reboot!
 echo.
