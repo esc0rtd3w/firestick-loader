@@ -5,6 +5,7 @@ color 0e
 set adb="..\..\bin\adb.exe"
 set shell=%adb% shell
 set twrp=%shell% twrp
+set sleep="..\..\bin\wait.exe"
 
 set twrpBasePathBackups=/sdcard/TWRP/BACKUPS
 
@@ -35,6 +36,7 @@ echo Backup Path: %backupImagePath%
 echo.
 
 %twrp% remountrw /system
+%sleep% 3
 %twrp% restore %dirlist%
 
 
