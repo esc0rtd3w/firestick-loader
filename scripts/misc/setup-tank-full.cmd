@@ -432,7 +432,8 @@ echo.
 
 %adb% reboot
 %adbWait%
-%sleep% 20
+%sleep% 25
+%adbWait%
 
 :stage3
 :: Enable ADB and Unknown Sources
@@ -459,8 +460,6 @@ set /p unkadb=
 if %unkadb%==1 echo.
 if %unkadb%==1 echo Waiting For ADB Service...
 if %unkadb%==1 echo.
-::if %unkadb%==1 %adb% reboot
-::if %unkadb%==1 %adbWait%
 if %unkadb%==1 %sleep% 10
 if %unkadb%==1 goto stage3
 
