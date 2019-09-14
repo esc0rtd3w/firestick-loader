@@ -102,7 +102,7 @@ cls
 echo Rebooting Back Into Recovery...
 echo.
 %adb% reboot recovery
-%sleep% 3
+%sleep% 25
 
 :stage2
 color 0e
@@ -283,9 +283,17 @@ echo.
 %shell% "rm -r /system/res/sound/*.*"
 
 cls
+echo Installing Magisk for SU Access...
+echo.
+%push% "..\..\rooting\tank\Magisk-v19.3.zip" /data/local/tmp/
+%shell% "twrp install /data/local/tmp/Magisk-v19.3.zip"
+%sleep% 3
+
+cls
 echo Wiping Data and Cache...
 echo.
 %twrp% wipe data
+%sleep% 3
 
 cls
 echo Waiting For Cache Rebuild and ADB Service...
@@ -477,7 +485,7 @@ echo.
 %sleep% 2
 
 cls
-echo Installing Magisk for SU Access...
+echo Re-Installing Magisk for SU Access...
 echo.
 %push% "..\..\rooting\tank\Magisk-v19.3.zip" /data/local/tmp/
 %shell% "twrp install /data/local/tmp/Magisk-v19.3.zip"
