@@ -69,6 +69,10 @@ echo.
 echo.
 echo Waiting For Cache Rebuild and ADB Service...
 echo.
+echo This may take around 3 minutes or more and Remote Find screen will be loaded
+echo.
+echo Do not interact with the device yet!
+echo.
 
 %shell% reboot
 %adbWait%
@@ -205,15 +209,15 @@ echo Fixing Permissions...
 echo.
 %twrp% fixperms /
 
+%sleep% 3
+
 echo.
-echo Prepared For Reboot!
+echo Waiting For ADB Service...
 echo.
-echo Once rebooted, restore data with TitaniumBackup!
+echo This may take around 2 minutes or more and Remote Find screen will be loaded
 echo.
+echo Do not interact with the device yet!
 echo.
-echo Press any key to reboot...
-echo.
-pause>nul
 
 %adb% reboot
 
