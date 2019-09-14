@@ -265,10 +265,10 @@ echo.
 %sleep% 5
 
 cls
-echo Removing Unused Images and Sounds...
+echo Pushing Restore Data to /sdcard/...
 echo.
-%shell% "rm -r /system/res/images/*.*"
-%shell% "rm -r /system/res/sound/*.*"
+%push% "..\..\data\tank\post-debloated\restore" /sdcard/restore/
+%sleep% 2
 
 cls
 echo Copying Custom OOBE App to /system/priv-app/...
@@ -285,6 +285,13 @@ echo.
 %shell% "chown root:root /system/priv-app/com.amazon.tv.oobe/"
 %shell% "chmod 0644 /system/priv-app/com.amazon.tv.oobe/com.amazon.tv.oobe.apk"
 %shell% "chown root:root /system/priv-app/com.amazon.tv.oobe/com.amazon.tv.oobe.apk"
+%sleep% 2
+
+cls
+echo Removing Unused Images and Sounds...
+echo.
+%shell% "rm -r /system/res/images/*.*"
+%shell% "rm -r /system/res/sound/*.*"
 %sleep% 2
 
 cls
@@ -402,11 +409,10 @@ echo.
 %sleep% 2
 
 cls
-echo Pushing App Data to /sdcard...
+echo Setting Up Directories For Restore...
 echo.
 %shell% "rm -r /sdcard/restore/"
 %shell% "mkdir /sdcard/restore/"
-%push% "..\..\data\tank\post-debloated\restore" /sdcard/restore/
 %shell% "rm -r /sdcard/TitaniumBackup/"
 %shell% "mkdir /sdcard/TitaniumBackup/"
 %shell% "cp -r /sdcard/restore/TitaniumBackup /sdcard/"
