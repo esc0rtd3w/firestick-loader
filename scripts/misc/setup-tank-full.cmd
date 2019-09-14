@@ -321,7 +321,7 @@ echo.
 %shell% "rm -r /system/res/images/*.*"
 %shell% "rm -r /system/res/sound/*.*"
 %sleep% 2
-pause
+
 cls
 echo Wiping Data and Cache...
 echo.
