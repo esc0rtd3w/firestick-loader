@@ -120,16 +120,22 @@ echo.
 %push% %notifications% /data/local/tmp/
 %push% %preferences% /data/local/tmp/
 
+%sleep% 2
+
 cls
 echo Pushing Restore Home Script to Temp...
 echo.
 %push% "..\restore-home.sh" /data/local/tmp/
+
+%sleep% 2
 
 cls
 echo Making Directories and Setting Permissions for Settings Scripts...
 echo.
 %shell% "mkdir /system/scripts/"
 %shell% "chmod 0777 /system/scripts/"
+
+%sleep% 2
 
 cls
 echo Copying Settings Scripts From Temp to /system...
@@ -144,16 +150,22 @@ echo.
 %shell% "cp /data/local/tmp/notifications.sh /system/scripts/notifications.sh"
 %shell% "cp /data/local/tmp/preferences.sh /system/scripts/preferences.sh"
 
+%sleep% 2
+
 cls
 echo Copying Restore Home Script From Temp to /system...
 echo.
 %shell% "cp /data/local/tmp/restore-home.sh /system/scripts/restore-home.sh"
+
+%sleep% 2
 
 cls
 echo Setting Permissions...
 echo.
 %shell% "chmod 0777 /system/scripts/*.sh"
 %shell% "chown root:root /system/scripts/*.sh"
+
+%sleep% 2
 
 cls
 echo Pushing App Data to /sdcard...
@@ -163,6 +175,9 @@ echo.
 %push% "..\..\data\tank\post-debloated\restore" /sdcard/restore/
 %shell% "mkdir /sdcard/TitaniumBackup/"
 %shell% "cp -r /sdcard/restore/TitaniumBackup /sdcard/"
+%shell% "mkdir /sdcard/restore/apk/"
+
+%sleep% 2
 
 cls
 echo Copying Data from /sdcard to /system...
@@ -170,12 +185,46 @@ echo.
 %shell% "rm -r /system/restore/"
 %shell% "mkdir /system/restore/"
 %shell% "chmod 0777 /system/restore/"
+%shell% "chown root:root /system/restore/"
 ::%shell% "cp -r /sdcard/restore/ca.dstudio.atvlauncher.pro/ /system/restore/"
 ::%shell% "cp -r /sdcard/restore/com.adamioan.scriptrunner/ /system/restore/"
 ::%shell% "cp -r /sdcard/restore/com.fluxii.android.mousetoggleforfiretv/ /system/restore/"
-%shell% "cp -r /sdcard/restore/TitaniumBackup/ /system/restore/"
+::%shell% "cp -r /sdcard/restore/TitaniumBackup/ /system/restore/"
 %shell% "mkdir /system/restore/apk/"
 %shell% "chmod 0777 /system/restore/apk/"
+%shell% "chown root:root /system/restore/apk/"
+::%shell% "cp /sdcard/restore/apk/system/Launcher.apk /system/restore/apk/system/Launcher.apk"
+::%shell% "cp /sdcard/restore/apk/system/ScriptRunner.apk /system/restore/apk/system/ScriptRunner.apk"
+%shell% "cp -r /sdcard/restore/ /system/"
+
+%sleep% 2
+
+cls
+echo Copying Apps to /system/app/...
+echo.
+%shell% "rm -r /system/app/Launcher/"
+%shell% "mkdir /system/app/Launcher/"
+%shell% "chmod 0775 /system/app/Launcher/"
+%shell% "chown root:root /system/app/Launcher/"
+%shell% "cp /system/restore/apk/system/Launcher.apk /system/app/Launcher/Launcher.apk"
+%shell% "rm -r /system/app/ScriptRunner/"
+%shell% "mkdir /system/app/ScriptRunner/"
+%shell% "chmod 0775 /system/app/ScriptRunner/"
+%shell% "chown root:root /system/app/ScriptRunner/"
+%shell% "cp /system/restore/apk/system/ScriptRunner.apk /system/app/ScriptRunner/ScriptRunner.apk"
+
+%sleep% 2
+
+cls
+echo Setting Permissions For Apps/...
+echo.
+%shell% "chmod 0644 /system/app/Launcher/Launcher.apk"
+%shell% "chown root:root /system/app/Launcher/Launcher.apk"
+
+%shell% "chmod 0644 /system/app/ScriptRunner/ScriptRunner.apk"
+%shell% "chown root:root /system/app/ScriptRunner/ScriptRunner.apk"
+
+%sleep% 2
 
 ::cls
 ::echo Copying App Data back to /data/data/
@@ -190,6 +239,8 @@ echo.
 ::%shell% "chmod -R 0777 /data/data/com.adamioan.scriptrunner/"
 ::%shell% "chmod -R 0777 /data/data/com.fluxii.android.mousetoggleforfiretv/"
 
+::%sleep% 2
+
 cls
 echo Installing BusyBox...
 echo.
@@ -197,13 +248,15 @@ echo.
 %shell% "chmod 0777 /data/local/tmp/busybox"
 %shell% "/data/local/tmp/busybox --install"
 
+%sleep% 2
+
 cls
 echo Installing Magisk for SU Access...
 echo.
 %push% "..\..\rooting\tank\Magisk-v19.3.zip" /data/local/tmp/
 %shell% "twrp install /data/local/tmp/Magisk-v19.3.zip"
 
-%sleep% 5
+%sleep% 2
 
 cls
 echo Fixing Permissions...
@@ -255,7 +308,7 @@ if %unkadb%==1 echo Waiting For ADB Service...
 if %unkadb%==1 echo.
 ::if %unkadb%==1 %adb% reboot
 ::if %unkadb%==1 %adbWait%
-if %unkadb%==1 %sleep% 10
+if %unkadb%==1 %sleep% 20
 if %unkadb%==1 goto stage3
 
 %sleep% 3
@@ -266,7 +319,7 @@ echo Finished!
 echo.
 echo Complete the user setup to configure remote, wifi, and Amazon account
 echo.
-echo Use TitaniumBackup to restore
+echo Once on Launcher, use TitaniumBackup to restore data
 echo Home, Mouse Toggle, Reboot, and SH Script Runner Settings
 echo.
 echo Press any key to exit...
