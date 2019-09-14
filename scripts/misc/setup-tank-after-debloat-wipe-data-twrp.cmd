@@ -201,7 +201,7 @@ echo.
 %sleep% 5
 
 echo.
-echo Fix Permissions...
+echo Fixing Permissions...
 echo.
 %twrp% fixperms /
 
