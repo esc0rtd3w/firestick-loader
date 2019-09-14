@@ -16,6 +16,7 @@ set pull=%adb% pull
 set shell=%adb% shell
 set twrp=%shell% twrp
 
+:start
 set accessibility="..\settings\tank\system\scripts\accessibility.sh"
 set applications="..\settings\tank\system\scripts\applications.sh"
 set device="..\settings\tank\system\scripts\device.sh"
@@ -26,26 +27,84 @@ set network="..\settings\tank\system\scripts\network.sh"
 set notifications="..\settings\tank\system\scripts\notifications.sh"
 set preferences="..\settings\tank\system\scripts\preferences.sh"
 
-:: Set ADB Enabled
-::%shell% settings --user 0 put global adb_enabled 1
+set noway=0
+echo.
+echo WARNING! THIS WILL FACTORY RESET YOUR DEVICE!
+echo.
+echo Press 1 to EXIT or just press ENTER to continue...
+echo.
+set /p noway=
 
-:: Mount System as RW
+if %noway%==1 goto end
+
+:stage1
+set rwcheck=0
+cls
+echo.
+echo Mount System as RW...
+echo.
 %shell% "mount -o rw /system"
+
+echo.
+echo Check For RW Mount Status
+echo.
+echo Press 1 if there is an error, otherwise just press ENTER
+echo.
+set /p rwcheck=
+
+if %rwcheck%==1 echo.
+if %rwcheck%==1 echo Waiting on Reboot...
+if %rwcheck%==1 echo.
+if %rwcheck%==1 %adb% reboot recovery
+if %rwcheck%==1 %sleep% 25
+if %rwcheck%==1 goto stage1
 
 %sleep% 3
 
-:: Wipe Data and Cache
+echo.
+echo Wipe Data and Cache...
+echo.
 %twrp% wipe data
 
-:: Make new /data/data/ directory
-%shell% "mkdir /data/"
-%shell% "mkdir /data/data/"
-%shell% "mkdir /data/local/"
-%shell% "mkdir /data/local/tmp/"
-%shell% "chmod -R 0777 /data/"
-%shell% "chown -R system:system /data/"
+echo.
+echo Waiting For Cache Rebuild and ADB Service...
+echo.
 
-:: Push Settings Scripts to Temp
+%shell% reboot
+%adbWait%
+
+echo.
+echo Rebooting Back To Recovery To Continue...
+echo.
+%shell% reboot recovery
+%sleep% 10
+
+:stage2
+set rwcheck=0
+echo.
+echo Mount System as RW...
+echo.
+%shell% "mount -o rw /system"
+
+echo.
+echo Check For RW Mount Status
+echo.
+echo Press 1 if there is an error, otherwise just press ENTER
+echo.
+set /p rwcheck=
+
+if %rwcheck%==1 echo.
+if %rwcheck%==1 echo Waiting on Reboot...
+if %rwcheck%==1 echo.
+if %rwcheck%==1 %adb% reboot recovery
+if %rwcheck%==1 %sleep% 25
+if %rwcheck%==1 goto stage2
+
+%sleep% 3
+
+echo.
+echo Push Settings Scripts to Temp...
+echo.
 %push% %accessibility% /data/local/tmp/
 %push% %applications% /data/local/tmp/
 %push% %device% /data/local/tmp/
@@ -56,14 +115,20 @@ set preferences="..\settings\tank\system\scripts\preferences.sh"
 %push% %notifications% /data/local/tmp/
 %push% %preferences% /data/local/tmp/
 
-:: Push Restore Home Script to Temp
+echo.
+echo Push Restore Home Script to Temp...
+echo.
 %push% "..\restore-home.sh" /data/local/tmp/
 
-:: Make and Set Permissions for Settings Scripts Directories
+echo.
+echo Make and Set Permissions for Settings Scripts Directories...
+echo.
 %shell% "mkdir /system/scripts/"
 %shell% "chmod 0777 /system/scripts/"
 
-:: Copy Settings Scripts From Temp to System
+echo.
+echo Copy Settings Scripts From Temp to System...
+echo.
 %shell% "cp /data/local/tmp/accessibility.sh /system/scripts/accessibility.sh"
 %shell% "cp /data/local/tmp/applications.sh /system/scripts/applications.sh"
 %shell% "cp /data/local/tmp/device.sh /system/scripts/device.sh"
@@ -74,21 +139,29 @@ set preferences="..\settings\tank\system\scripts\preferences.sh"
 %shell% "cp /data/local/tmp/notifications.sh /system/scripts/notifications.sh"
 %shell% "cp /data/local/tmp/preferences.sh /system/scripts/preferences.sh"
 
-:: Copy Restore Home Script From Temp to System
+echo.
+echo Copy Restore Home Script From Temp to System...
+echo.
 %shell% "cp /data/local/tmp/restore-home.sh /system/scripts/restore-home.sh"
 
-:: Set Permissions
+echo.
+echo Set Permissions...
+echo.
 %shell% "chmod 0777 /system/scripts/*.sh"
 %shell% "chown root:root /system/scripts/*.sh"
 
-:: Push App Data to sdcard
+echo.
+echo Push App Data to sdcard...
+echo.
 %shell% "rm -r /sdcard/restore/"
 %shell% "mkdir /sdcard/restore/"
 %push% "..\..\data\tank\post-debloated\restore" /sdcard/restore/
 %shell% "mkdir /sdcard/TitaniumBackup/"
 %shell% "cp -r /sdcard/restore/TitaniumBackup /sdcard/"
 
-:: Copy Data from sdcard to system
+echo.
+echo Copy Data from sdcard to system...
+echo.
 %shell% "rm -r /system/restore/"
 %shell% "mkdir /system/restore/"
 %shell% "chmod 0777 /system/restore/"
@@ -99,7 +172,9 @@ set preferences="..\settings\tank\system\scripts\preferences.sh"
 %shell% "mkdir /system/restore/apk/"
 %shell% "chmod 0777 /system/restore/apk/"
 
-:: Copy App Data back to /data/data/
+::echo.
+::echo Copy App Data back to /data/data/
+::echo.
 ::%shell% "cp -r /system/restore/ca.dstudio.atvlauncher.pro/ /data/data/"
 ::%shell% "cp -r /system/restore/com.adamioan.scriptrunner/ /data/data/"
 ::%shell% "cp -r /system/restore/com.fluxii.android.mousetoggleforfiretv/ /data/data/"
@@ -110,14 +185,25 @@ set preferences="..\settings\tank\system\scripts\preferences.sh"
 ::%shell% "chmod -R 0777 /data/data/com.adamioan.scriptrunner/"
 ::%shell% "chmod -R 0777 /data/data/com.fluxii.android.mousetoggleforfiretv/"
 
-:: Install BusyBox
+echo.
+echo Install BusyBox...
+echo.
 %push% "..\..\bin\android\busybox" /data/local/tmp/
 %shell% "chmod 0777 /data/local/tmp/busybox"
 %shell% "/data/local/tmp/busybox --install"
 
-:: Install/Reinstall Magisk
+echo.
+echo Install/Reinstall Magisk...
+echo.
 %push% "..\..\rooting\tank\Magisk-v19.3.zip" /data/local/tmp/
 %shell% "twrp install /data/local/tmp/Magisk-v19.3.zip"
+
+%sleep% 5
+
+echo.
+echo Fix Permissions...
+echo.
+%twrp% fixperms /
 
 echo.
 echo Prepared For Reboot!
@@ -131,6 +217,16 @@ pause>nul
 
 %adb% reboot
 
+%adbWait%
+
+:: Enable ADB and Unknown Sources
+echo.
+echo Enabling ADB and Unknown Sources...
+echo.
+%shell% settings --user 0 put global adb_enabled 1
+%shell% settings --user 0 put secure install_non_market_apps 1
+
+%sleep% 5
 
 
 :end
