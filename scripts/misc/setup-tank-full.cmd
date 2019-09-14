@@ -210,6 +210,12 @@ echo.
 %sleep% 5
 
 cls
+echo Removing Unused Images and Sounds...
+echo.
+%shell% "rm -r /system/res/images/*.*"
+%shell% "rm -r /system/res/sound/*.*"
+
+cls
 echo Wiping Data and Cache...
 echo.
 %twrp% wipe data
