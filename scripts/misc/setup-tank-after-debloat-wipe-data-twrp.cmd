@@ -77,7 +77,7 @@ echo.
 echo Rebooting Back To Recovery To Continue...
 echo.
 %shell% reboot recovery
-%sleep% 10
+%sleep% 25
 
 :stage2
 set rwcheck=0
