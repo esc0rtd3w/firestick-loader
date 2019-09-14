@@ -51,16 +51,6 @@ set buildDotProp=/system/build.prop
 
 ::cls
 ::%_color% 0e
-::set appName=FireStarter
-::set apk=
-::echo Installing %appName%...
-::echo.
-::%install% "apps\home\firestopper.apk"
-::%install% "apps\home\firestarter.apk"
-::%push% "apps\home\sdcard\FireStarterBackup.zip" /sdcard/
-
-::cls
-::%_color% 0e
 ::set appName=FirePwn Home
 ::set apk=
 ::echo Installing %appName%...
@@ -100,393 +90,15 @@ md "%temp%\firestick-loader\apps\media\kodi\data\%kodiBuild%"
 
 %rm% "%temp%\firestick-loader\apps\media\kodi"
 
-
-::cls
-::%_color% 0e
-::set appName=XBMC Launcher
-::set apk=
-::echo.
-::echo.
-::echo Installing %appName%...
-::echo.
-::%install% "apps\system\xbmclauncher.apk"
-
-
 cls
 %_color% 0e
-set appName=Aptoid TV
+set appName=TeaTV
 set apk=
 echo.
 echo.
 echo Installing %appName%...
 echo.
-%install% "apps\stores\aptoid-tv.apk"
-
-
-::cls
-::%_color% 0e
-::set appName=F-Droid
-::set apk=
-::echo.
-::echo.
-::echo Installing %appName%...
-::echo.
-::%install% "apps\stores\fdroid.apk"
-
-
-::cls
-::%_color% 0e
-::set appName=SopCast
-::set apk=
-::echo.
-::echo.
-::echo Installing %appName%...
-::echo.
-::%install% "apps\media\sopcast.apk"
-
-
-::cls
-::%_color% 0e
-::set appName=AceStream
-::set apk=
-::echo.
-::echo.
-::echo Installing %appName%...
-::echo.
-::%install% "apps\media\acestream.apk"
-
-
-cls
-%_color% 0e
-set appName=Mobdro
-set apk=
-echo.
-echo.
-echo Installing %appName%...
-echo.
-%install% "apps\media\mobdro.apk"
-
-
-::cls
-::%_color% 0e
-::set appName=Kokotime
-::set apk=
-::echo.
-::echo.
-::echo Installing %appName%...
-::echo.
-::%install% "apps\media\kokotime.apk"
-
-
-::cls
-::%_color% 0e
-::set appName=TubiTV
-::set apk=
-::echo.
-::echo.
-::echo Installing %appName%...
-::echo.
-::%install% "apps\media\tubitv.apk"
-
-
-::cls
-::%_color% 0e
-::set appName=PlutoTV
-::set apk=
-::echo.
-::echo.
-::echo Installing %appName%...
-::echo.
-::%install% "apps\media\plutotv.apk"
-
-
-::cls
-::%_color% 0e
-::set appName=Popcornflix
-::set apk=
-::echo.
-::echo.
-::echo Installing %appName%...
-::echo.
-::%install% "apps\media\popcornflix.apk"
-
-
-::cls
-::%_color% 0e
-::set appName=VidMate HD
-::set apk=
-::echo.
-::echo.
-::echo Installing %appName%...
-::echo.
-::%install% "apps\media\vidmate.apk"
-
-
-cls
-%_color% 0e
-set appName=NetFlix
-set apk=
-echo.
-echo.
-echo Installing %appName%...
-echo.
-%install% "apps\media\netflix.apk"
-
-
-cls
-%_color% 0e
-set appName=Hulu
-set apk=
-echo.
-echo.
-echo Installing %appName%...
-echo.
-%install% "apps\media\hulu.apk"
-
-
-::cls
-::%_color% 0e
-::set appName=Amazon Underground
-::set apk=
-::echo.
-::echo.
-::echo Installing %appName%...
-::echo.
-::%install% "apps\amazon\amazon-underground.apk"
-
-
-::cls
-::%_color% 0e
-::set appName=Amazon App Store
-::set apk=
-::echo.
-::echo.
-::echo Installing %appName%...
-::echo.
-::%install% "apps\amazon\amazon-appstore.apk"
-
-
-::cls
-::%_color% 0e
-::set appName=Amazon Shopping
-::set apk=
-::echo.
-::echo.
-::echo Installing %appName%...
-::echo.
-::%install% "apps\amazon\amazon-shopping.apk"
-
-
-::cls
-::%_color% 0e
-::set appName=Amazon Alexa
-::set apk=
-::echo.
-::echo.
-::echo Installing %appName%...
-::echo.
-::%install% "apps\amazon\amazon-alexa.apk"
-
-
-::cls
-::%_color% 0e
-::set appName=Amazon Drive
-::set apk=
-::echo.
-::echo.
-::echo Installing %appName%...
-::echo.
-::%install% "apps\amazon\amazon-drive.apk"
-
-
-::cls
-::%_color% 0e
-::set appName=Microsoft One Drive
-::set apk=
-::echo.
-::echo.
-::echo Installing %appName%...
-::echo.
-::%install% "apps\storage\one-drive.apk"
-
-
-::cls
-::%_color% 0e
-::set appName=Google Drive
-::set apk=
-::echo.
-::echo.
-::echo Installing %appName%...
-::echo.
-::%install% "apps\storage\google-drive.apk"
-
-
-::cls
-::%_color% 0e
-::set appName=Amazon Prime Now
-::set apk=
-::echo.
-::echo.
-::echo Installing %appName%...
-::echo.
-::%install% "apps\amazon\amazon-prime-now.apk"
-
-
-::cls
-::%_color% 0e
-::set appName=Amazon Music
-::set apk=
-::echo.
-::echo.
-::echo Installing %appName%...
-::echo.
-::%install% "apps\amazon\amazon-music.apk"
-
-
-::cls
-::%_color% 0e
-::set appName=Amazon Video
-::set apk=
-::echo.
-::echo.
-::echo Installing %appName%...
-::echo.
-::%install% "apps\amazon\amazon-video.apk"
-
-
-::cls
-::%_color% 0e
-::set appName=Movian
-::set apk=
-::echo.
-::echo.
-::echo Installing %appName%...
-::echo.
-::%install% "apps\media\movian.apk"
-
-
-::cls
-::%_color% 0e
-::set appName=Oprah Winfrey Network
-::set apk=
-::echo.
-::echo.
-::echo Installing %appName%...
-::echo.
-::%install% "%temp%\firestick-loader\apps\media\own.apk"
-
-
-::cls
-::%_color% 0e
-::set appName=Popcorn Time
-::set apk=
-::echo.
-::echo.
-::echo Installing %appName%...
-::echo.
-::%extractRAR% "%~dp0apps\media\popcorntime-new.apk.split" "%temp%\firestick-loader\apps\media"
-::%sleep% 3
-::%install% "%temp%\firestick-loader\apps\media\popcorntime-new.apk"
-
-
-::cls
-::%_color% 0e
-::set appName=Popcorn Time io Edition
-::set apk=
-::echo.
-::echo.
-::echo Installing %appName%...
-::echo.
-::%install% "apps\media\popcorntimeio.apk"
-
-
-cls
-%_color% 0e
-set appName=Popcorn Time Community Edition
-set apk=
-echo.
-echo.
-echo Installing %appName%...
-echo.
-%install% "apps\media\popcorntimece.apk"
-
-
-cls
-%_color% 0e
-set appName=VLC TV
-set apk=
-echo.
-echo.
-echo Installing %appName%...
-echo.
-%install% "apps\media\vlc-tv-arm.apk"
-
-
-::cls
-::%_color% 0e
-::set appName=Firefox
-::set apk=
-::echo.
-::echo.
-::echo Installing %appName%...
-::echo.
-::%install% "apps\web\firefox.apk"
-
-
-::cls
-::%_color% 0e
-::set appName=Opera Mini
-::set apk=
-::echo.
-::echo.
-::echo Installing %appName%...
-::echo.
-::%install% "apps\web\opera.apk"
-
-
-cls
-%_color% 0e
-set appName=Puffin TV Web Browser
-set apk=
-echo.
-echo.
-echo Installing %appName%...
-echo.
-%install% "apps\web\puffin-tv.apk"
-
-
-::cls
-::%_color% 0e
-::set appName=YouTube -No Play Services-
-::set apk=
-::echo.
-::echo.
-::echo Installing %appName%...
-::echo.
-::%install% "apps\media\youtube.apk"
-
-
-::cls
-::%_color% 0e
-::set appName=NewPipe Youtube Client
-::set apk=
-::echo.
-::echo.
-::echo Installing %appName%...
-::echo.
-::%install% "apps\media\newpipe.apk"
-
-
-cls
-%_color% 0e
-set appName=Youtube
-set apk=
-echo.
-echo.
-echo Installing %appName%...
-echo.
-%install% "apps\media\youtube.apk"
-
+%install% "apps\media\teatv.apk"
 
 cls
 %_color% 0e
@@ -498,17 +110,15 @@ echo Installing %appName%...
 echo.
 %install% "apps\media\showbox.apk"
 
-
 cls
 %_color% 0e
-set appName=TeaTV
+set appName=Cinema HD
 set apk=
 echo.
 echo.
 echo Installing %appName%...
 echo.
-%install% "apps\media\teatv.apk"
-
+%install% "apps\media\cinemahd.apk"
 
 cls
 %_color% 0e
@@ -520,7 +130,6 @@ echo Installing %appName%...
 echo.
 %install% "apps\media\cyberflix.apk"
 
-
 cls
 %_color% 0e
 set appName=Titanium TV
@@ -531,120 +140,85 @@ echo Installing %appName%...
 echo.
 %install% "apps\media\titanium-tv.apk"
 
+cls
+%_color% 0e
+set appName=Popcorn Time Community Edition
+set apk=
+echo.
+echo.
+echo Installing %appName%...
+echo.
+%install% "apps\media\popcorntimece.apk"
 
-::cls
-::%_color% 0e
-::set appName=uSound Ares
-::set apk=
-::echo.
-::echo.
-::echo Installing %appName%...
-::echo.
-::%install% "apps\media\usound.apk"
+cls
+%_color% 0e
+set appName=Mobdro
+set apk=
+echo.
+echo.
+echo Installing %appName%...
+echo.
+%install% "apps\media\mobdro.apk"
 
+cls
+%_color% 0e
+set appName=NetFlix
+set apk=
+echo.
+echo.
+echo Installing %appName%...
+echo.
+%install% "apps\media\netflix.apk"
 
-::cls
-::%_color% 0e
-::set appName=Terminal Emulator
-::set apk=
-::echo.
-::echo.
-::echo Installing %appName%...
-::echo.
-::%install% "apps\system\terminal.apk"
+cls
+%_color% 0e
+set appName=Hulu
+set apk=
+echo.
+echo.
+echo Installing %appName%...
+echo.
+%install% "apps\media\hulu.apk"
 
+cls
+%_color% 0e
+set appName=Youtube
+set apk=
+echo.
+echo.
+echo Installing %appName%...
+echo.
+%install% "apps\media\youtube.apk"
 
-::cls
-::%_color% 0e
-::set appName=Root Explorer
-::set apk=
-::echo.
-::echo.
-::echo Installing %appName%...
-::echo.
-::%install% "apps\system\root-explorer.apk"
+cls
+%_color% 0e
+set appName=VLC TV
+set apk=
+echo.
+echo.
+echo Installing %appName%...
+echo.
+%install% "apps\media\vlc-tv-arm.apk"
 
+cls
+%_color% 0e
+set appName=Aptoid TV
+set apk=
+echo.
+echo.
+echo Installing %appName%...
+echo.
+%install% "apps\stores\aptoid-tv.apk"
 
-::cls
-::%_color% 0e
-::set appName=Explorer
-::set apk=
-::echo.
-::echo.
-::echo Installing %appName%...
-::echo.
-::%install% "apps\system\explorer.apk"
-
-
-::cls
-::%_color% 0e
-::set appName=Root Browser
-::set apk=
-::echo.
-::echo.
-::echo Installing %appName%...
-::echo.
-::%install% "apps\system\root-browser.apk"
-
-
-::cls
-::%_color% 0e
-::set appName=File Explorer
-::set apk=
-::echo.
-::echo.
-::echo Installing %appName%...
-::echo.
-::%install% "apps\system\file-explorer.apk"
-
-
-::cls
-::%_color% 0e
-::set appName=Teamviewer
-::set apk=
-::echo.
-::echo.
-::echo Installing %appName%...
-::echo.
-::%install% "apps\web\teamviewer.apk"
-
-
-::cls
-::%_color% 0e
-::set appName=Diode (Reddit Viewer)
-::set apk=
-::echo.
-::echo.
-::echo Installing %appName%...
-::echo.
-::%install% "apps\web\diode.apk"
-
-
-::cls
-::%_color% 0e
-::set appName=Wallpaper
-::echo.
-::echo.
-::echo Installing %appName%...
-::echo.
-::%push% "wallpaper" "/%sdcard%/wallpaper"
-
-
-::cls
-::%_color% 0e
-::set appName=Custom Boot Animation
-::echo.
-::echo.
-::echo Installing %appName%...
-::echo.
-
-::%shell% "rm /data/local/tmp/bootanimation.zip"
-::%push% "%~dp0bootanimation\stock-blue\bootanimation.zip" /data/local/tmp/bootanimation.zip
-::%push% "%~dp0scripts\replace-bootanimation.sh" /data/local/tmp/
-::%shell% "su -c chmod 755 /data/local/tmp/replace-bootanimation.sh"
-::%shell% "su -c sh /data/local/tmp/replace-bootanimation.sh"
-
-
+cls
+%_color% 0e
+set appName=Puffin TV Web Browser
+set apk=
+echo.
+echo.
+echo Installing %appName%...
+echo.
+%install% "apps\web\puffin-tv.apk"
 
 goto end
 
