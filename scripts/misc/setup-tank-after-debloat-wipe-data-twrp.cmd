@@ -28,6 +28,7 @@ set notifications="..\settings\tank\system\scripts\notifications.sh"
 set preferences="..\settings\tank\system\scripts\preferences.sh"
 
 set noway=0
+cls
 echo.
 echo WARNING! THIS WILL FACTORY RESET YOUR DEVICE!
 echo.
@@ -45,7 +46,7 @@ echo Mount System as RW...
 echo.
 %shell% "mount -o rw /system"
 
-echo.
+cls
 echo Check For RW Mount Status
 echo.
 echo Press 1 if there is an error, otherwise just press ENTER
@@ -61,12 +62,12 @@ if %rwcheck%==1 goto stage1
 
 %sleep% 3
 
-echo.
+cls
 echo Wipe Data and Cache...
 echo.
 %twrp% wipe data
 
-echo.
+cls
 echo Waiting For Cache Rebuild and ADB Service...
 echo.
 echo This may take around 3 minutes or more and Remote Find screen will be loaded
@@ -77,7 +78,7 @@ echo.
 %shell% reboot
 %adbWait%
 
-echo.
+cls
 echo Rebooting Back To Recovery To Continue...
 echo.
 %shell% reboot recovery
@@ -85,12 +86,12 @@ echo.
 
 :stage2
 set rwcheck=0
-echo.
+cls
 echo Mount System as RW...
 echo.
 %shell% "mount -o rw /system"
 
-echo.
+cls
 echo Check For RW Mount Status
 echo.
 echo Press 1 if there is an error, otherwise just press ENTER
@@ -106,7 +107,7 @@ if %rwcheck%==1 goto stage2
 
 %sleep% 3
 
-echo.
+cls
 echo Push Settings Scripts to Temp...
 echo.
 %push% %accessibility% /data/local/tmp/
@@ -119,18 +120,18 @@ echo.
 %push% %notifications% /data/local/tmp/
 %push% %preferences% /data/local/tmp/
 
-echo.
+cls
 echo Push Restore Home Script to Temp...
 echo.
 %push% "..\restore-home.sh" /data/local/tmp/
 
-echo.
+cls
 echo Make and Set Permissions for Settings Scripts Directories...
 echo.
 %shell% "mkdir /system/scripts/"
 %shell% "chmod 0777 /system/scripts/"
 
-echo.
+cls
 echo Copy Settings Scripts From Temp to System...
 echo.
 %shell% "cp /data/local/tmp/accessibility.sh /system/scripts/accessibility.sh"
@@ -143,18 +144,18 @@ echo.
 %shell% "cp /data/local/tmp/notifications.sh /system/scripts/notifications.sh"
 %shell% "cp /data/local/tmp/preferences.sh /system/scripts/preferences.sh"
 
-echo.
+cls
 echo Copy Restore Home Script From Temp to System...
 echo.
 %shell% "cp /data/local/tmp/restore-home.sh /system/scripts/restore-home.sh"
 
-echo.
+cls
 echo Set Permissions...
 echo.
 %shell% "chmod 0777 /system/scripts/*.sh"
 %shell% "chown root:root /system/scripts/*.sh"
 
-echo.
+cls
 echo Push App Data to sdcard...
 echo.
 %shell% "rm -r /sdcard/restore/"
@@ -163,7 +164,7 @@ echo.
 %shell% "mkdir /sdcard/TitaniumBackup/"
 %shell% "cp -r /sdcard/restore/TitaniumBackup /sdcard/"
 
-echo.
+cls
 echo Copy Data from sdcard to system...
 echo.
 %shell% "rm -r /system/restore/"
@@ -176,7 +177,7 @@ echo.
 %shell% "mkdir /system/restore/apk/"
 %shell% "chmod 0777 /system/restore/apk/"
 
-::echo.
+::cls
 ::echo Copy App Data back to /data/data/
 ::echo.
 ::%shell% "cp -r /system/restore/ca.dstudio.atvlauncher.pro/ /data/data/"
@@ -189,14 +190,14 @@ echo.
 ::%shell% "chmod -R 0777 /data/data/com.adamioan.scriptrunner/"
 ::%shell% "chmod -R 0777 /data/data/com.fluxii.android.mousetoggleforfiretv/"
 
-echo.
+cls
 echo Install BusyBox...
 echo.
 %push% "..\..\bin\android\busybox" /data/local/tmp/
 %shell% "chmod 0777 /data/local/tmp/busybox"
 %shell% "/data/local/tmp/busybox --install"
 
-echo.
+cls
 echo Install/Reinstall Magisk...
 echo.
 %push% "..\..\rooting\tank\Magisk-v19.3.zip" /data/local/tmp/
@@ -204,14 +205,14 @@ echo.
 
 %sleep% 5
 
-echo.
+cls
 echo Fixing Permissions...
 echo.
 %twrp% fixperms /
 
 %sleep% 3
 
-echo.
+cls
 echo Waiting For ADB Service...
 echo.
 echo This may take around 2 minutes or more and Remote Find screen will be loaded
@@ -220,17 +221,38 @@ echo Do not interact with the device yet!
 echo.
 
 %adb% reboot
-
 %adbWait%
+%sleep% 10
 
+:stage3
 :: Enable ADB and Unknown Sources
-echo.
+cls
 echo Enabling ADB and Unknown Sources...
 echo.
 %shell% settings --user 0 put global adb_enabled 1
 %shell% settings --user 0 put secure install_non_market_apps 1
 
 %sleep% 5
+
+set unkadb=0
+cls
+echo Check For ADB and Unknown Sources Enable Status
+echo.
+echo Press 1 if there is an error, otherwise just press ENTER
+echo.
+echo NOTE: ADB is already enabled by the system. The Settings app needs this value set
+echo.
+set /p unkadb=
+
+if %unkadb%==1 echo.
+if %unkadb%==1 echo Waiting For ADB Service...
+if %unkadb%==1 echo.
+if %unkadb%==1 %adb% reboot
+if %unkadb%==1 %adbWait%
+if %unkadb%==1 %sleep% 10
+if %unkadb%==1 goto stage3
+
+%sleep% 3
 
 
 :end
