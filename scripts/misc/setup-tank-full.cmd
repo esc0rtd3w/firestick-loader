@@ -43,9 +43,9 @@ color 0e
 set rwcheck=0
 cls
 echo.
-echo Mounting System as RW...
+echo Mounting System as RW for System Install...
 echo.
-%shell% "mount -o rw /system"
+%twrp% remountrw /system
 
 echo.
 echo Check For RW Mount Status
@@ -67,12 +67,17 @@ echo.
 if not exist "%temp%\firestick-loader\downgrade\stick2" md "%temp%\firestick-loader\downgrade\stick2"
 %extractRAR% "..\..\downgrade\stick2\firmware-tank-5.2.6.3.split" "%temp%\firestick-loader\downgrade\stick2"
 
-
 cls
-echo Pushing Update Bin to /sdcard/...
+echo Pushing Downgrade Bin to /sdcard/...
 echo.
 %push% "%temp%\firestick-loader\downgrade\stick2\update-kindle-full_tank-288.6.0.6_user_606753420_5.2.6.3.bin" /sdcard/
 %sleep% 2
+
+cls
+echo Wiping System...
+echo.
+%twrp% wipe /system
+%sleep% 5
 
 cls
 echo Installing Stock FireOS 5.2.6.3...
@@ -97,6 +102,29 @@ echo Rebooting Back Into Recovery...
 echo.
 %adb% reboot recovery
 %sleep% 3
+
+:stage2
+color 0e
+set rwcheck=0
+cls
+echo.
+echo Mounting System as RW...
+echo.
+%shell% "mount -o rw /system"
+
+echo.
+echo Check For RW Mount Status
+echo.
+echo Press 1 if there is an error, otherwise just press ENTER
+echo.
+set /p rwcheck=
+
+if %rwcheck%==1 echo.
+if %rwcheck%==1 echo Waiting on Reboot...
+if %rwcheck%==1 echo.
+if %rwcheck%==1 %adb% reboot recovery
+if %rwcheck%==1 %sleep% 25
+if %rwcheck%==1 goto stage2
 
 cls
 echo Debloating Amazon Apps...
@@ -275,7 +303,7 @@ echo.
 %shell% reboot recovery
 %sleep% 25
 
-:stage2
+:stage3
 set rwcheck=0
 cls
 echo Mounting System as RW...
@@ -294,7 +322,7 @@ if %rwcheck%==1 echo Waiting on Reboot...
 if %rwcheck%==1 echo.
 if %rwcheck%==1 %adb% reboot recovery
 if %rwcheck%==1 %sleep% 25
-if %rwcheck%==1 goto stage2
+if %rwcheck%==1 goto stage3
 
 %sleep% 3
 
@@ -480,7 +508,7 @@ echo.
 %shell% "nothing=nothing"
 %sleep% 5
 
-:stage3
+:stage4
 :: Enable ADB and Unknown Sources
 cls
 echo Enabling ADB and Unknown Sources...
@@ -506,7 +534,7 @@ if %unkadb%==1 echo.
 if %unkadb%==1 echo Waiting For ADB Service...
 if %unkadb%==1 echo.
 if %unkadb%==1 %sleep% 10
-if %unkadb%==1 goto stage3
+if %unkadb%==1 goto stage4
 
 %sleep% 3
 
