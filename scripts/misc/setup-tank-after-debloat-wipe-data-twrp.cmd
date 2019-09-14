@@ -1,6 +1,6 @@
 @echo off
 
-color 0b
+color 0c
 
 set adb="..\..\bin\adb.exe"
 set adbKill="%~dp0bin\adb.exe" kill-server
