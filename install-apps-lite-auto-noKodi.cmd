@@ -78,29 +78,6 @@ set buildDotProp=/system/build.prop
 ::%push% "apps\home\sdcard\FirePwnHomeBackup.zip" /sdcard/
 
 
-cls
-%_color% 0e
-set appName=Kodi
-set apk=
-echo.
-echo.
-echo Installing %appName%...
-echo.
-
-set kodiBuild=default
-
-md "%temp%\firestick-loader\apps\media\kodi\data\%kodiBuild%"
-%extractRAR% "%~dp0apps\media\kodi.apk.split" "%temp%\firestick-loader\apps\media"
-%sleep% 3
-%install% "%temp%\firestick-loader\apps\media\kodi.apk"
-
-%extractRAR% "%~dp0apps\media\kodi\data\%kodiBuild%\kodi-data.split" "%temp%\firestick-loader\apps\media\kodi\data\%kodiBuild%"
-%push% "%temp%\firestick-loader\apps\media\kodi\data\%kodiBuild%\addons" "/%sdcard%/%pathAndroid%/addons"
-%push% "%temp%\firestick-loader\apps\media\kodi\data\%kodiBuild%\userdata" "/%sdcard%/%pathAndroid%/userdata"
-
-%rm% "%temp%\firestick-loader\apps\media\kodi"
-
-
 ::cls
 ::%_color% 0e
 ::set appName=XBMC Launcher
@@ -122,7 +99,7 @@ echo Installing %appName%...
 echo.
 %install% "apps\stores\aptoid-tv.apk"
 
-
+pause
 ::cls
 ::%_color% 0e
 ::set appName=F-Droid
