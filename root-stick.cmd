@@ -23,7 +23,6 @@ set _color="%~dp0bin\cocolor.exe"
 set sleep="%~dp0bin\wait.exe"
 set msgbox="%~dp0bin\msgbox.exe"
 set extractRAR="%~dp0bin\rar.exe" -y x
-set extractRAR="%~dp0bin\rar.exe" -y x
 set teamviewer="%~dp0bin\teamviewer.exe"
 set virtualRouterCMD="%~dp0bin\virtualrouter.exe"
 set virtualRouterGUI="%~dp0bin\virtualrouter-gui.exe"
