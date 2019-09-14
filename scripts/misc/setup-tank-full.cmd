@@ -457,6 +457,12 @@ echo.
 %shell% "chown root:root /system/app/TitaniumBackup/"
 %shell% "cp /system/restore/apk/system/TitaniumBackup.apk /system/app/TitaniumBackup/TitaniumBackup.apk"
 
+%shell% "rm -r /system/app/TitaniumBackupAddon/"
+%shell% "mkdir /system/app/TitaniumBackupAddon/"
+%shell% "chmod 0775 /system/app/TitaniumBackupAddon/"
+%shell% "chown root:root /system/app/TitaniumBackupAddon/"
+%shell% "cp /system/restore/apk/system/TitaniumBackupAddon.apk /system/app/TitaniumBackupAddon/TitaniumBackupAddon.apk"
+
 %sleep% 2
 
 cls
