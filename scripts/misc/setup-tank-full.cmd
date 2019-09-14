@@ -265,24 +265,52 @@ echo.
 %sleep% 5
 
 cls
+echo Setting Up Directories For Restore...
+echo.
+%shell% "rm -r /sdcard/restore/"
+%shell% "mkdir /sdcard/restore/"
+%shell% "rm -r /sdcard/TitaniumBackup/"
+%shell% "mkdir /sdcard/TitaniumBackup/"
+%shell% "cp -r /sdcard/restore/TitaniumBackup /sdcard/"
+%shell% "mkdir /sdcard/restore/apk/"
+%shell% "mkdir /sdcard/restore/apk/system/"
+%sleep% 2
+
+cls
 echo Pushing Restore Data to /sdcard/...
 echo.
 %push% "..\..\data\tank\post-debloated\restore" /sdcard/restore/
 %sleep% 2
 
 cls
-echo Copying Custom OOBE App to /system/priv-app/...
+echo Copying Data from /sdcard to /system...
 echo.
-%shell% "rm -r /system/priv-app/com.amazon.tv.oobe/"
-%shell% "mkdir /system/priv-app/com.amazon.tv.oobe/"
-%shell% "cp /system/restore/apk/system/com.amazon.tv.oobe.apk /system/priv-app/com.amazon.tv.oobe/com.amazon.tv.oobe.apk"
+%shell% "rm -r /system/restore/"
+%shell% "mkdir /system/restore/"
+%shell% "mkdir /system/restore/apk/"
+%shell% "mkdir /system/restore/apk/system/"
+
+%shell% "chmod 0777 /system/restore/"
+%shell% "chown root:root /system/restore/"
+
+%shell% "chmod 0777 /system/restore/apk/"
+%shell% "chown root:root /system/restore/apk/"
+
+%shell% "chmod 0777 /system/restore/apk/system/"
+%shell% "chown root:root /system/restore/apk/system/"
+
+%shell% "cp -r /sdcard/restore/ /system/"
+
 %sleep% 2
 
 cls
-echo Settings Permissions on Custom OOBE...
+echo Settings Permissions and Copying Custom OOBE App to /system/priv-app/...
 echo.
+%shell% "rm -r /system/priv-app/com.amazon.tv.oobe/"
+%shell% "mkdir /system/priv-app/com.amazon.tv.oobe/"
 %shell% "chmod 0775 /system/priv-app/com.amazon.tv.oobe/"
 %shell% "chown root:root /system/priv-app/com.amazon.tv.oobe/"
+%shell% "cp /system/restore/apk/system/com.amazon.tv.oobe.apk /system/priv-app/com.amazon.tv.oobe/com.amazon.tv.oobe.apk"
 %shell% "chmod 0644 /system/priv-app/com.amazon.tv.oobe/com.amazon.tv.oobe.apk"
 %shell% "chown root:root /system/priv-app/com.amazon.tv.oobe/com.amazon.tv.oobe.apk"
 %sleep% 2
@@ -293,7 +321,7 @@ echo.
 %shell% "rm -r /system/res/images/*.*"
 %shell% "rm -r /system/res/sound/*.*"
 %sleep% 2
-
+pause
 cls
 echo Wiping Data and Cache...
 echo.
@@ -405,35 +433,6 @@ echo Setting Permissions...
 echo.
 %shell% "chmod 0777 /system/scripts/*.sh"
 %shell% "chown root:root /system/scripts/*.sh"
-
-%sleep% 2
-
-cls
-echo Setting Up Directories For Restore...
-echo.
-%shell% "rm -r /sdcard/restore/"
-%shell% "mkdir /sdcard/restore/"
-%shell% "rm -r /sdcard/TitaniumBackup/"
-%shell% "mkdir /sdcard/TitaniumBackup/"
-%shell% "cp -r /sdcard/restore/TitaniumBackup /sdcard/"
-%shell% "mkdir /sdcard/restore/apk/"
-
-%sleep% 2
-
-cls
-echo Copying Data from /sdcard to /system...
-echo.
-%shell% "rm -r /system/restore/"
-%shell% "mkdir /system/restore/"
-%shell% "mkdir /system/restore/apk/"
-
-%shell% "chmod 0777 /system/restore/"
-%shell% "chown root:root /system/restore/"
-
-%shell% "chmod 0777 /system/restore/apk/"
-%shell% "chown root:root /system/restore/apk/"
-
-%shell% "cp -r /sdcard/restore/ /system/"
 
 %sleep% 2
 
