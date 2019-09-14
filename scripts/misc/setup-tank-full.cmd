@@ -60,11 +60,11 @@ if %rwcheck%==1 %adb% reboot recovery
 if %rwcheck%==1 %sleep% 25
 if %rwcheck%==1 goto stage1
 
-%sleep% 3
-
 cls
 echo Debloating Amazon Apps...
 echo.
+
+%sleep% 3
 
 :: FireOS 5.05 and Higher
 %shell% "rm -r /system/priv-app/amazon.jackson-19/"
