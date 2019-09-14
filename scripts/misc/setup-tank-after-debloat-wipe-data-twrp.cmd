@@ -42,7 +42,7 @@ color 0e
 set rwcheck=0
 cls
 echo.
-echo Mount System as RW...
+echo Mounting System as RW...
 echo.
 %shell% "mount -o rw /system"
 
@@ -87,7 +87,7 @@ echo.
 :stage2
 set rwcheck=0
 cls
-echo Mount System as RW...
+echo Mounting System as RW...
 echo.
 %shell% "mount -o rw /system"
 
@@ -108,7 +108,7 @@ if %rwcheck%==1 goto stage2
 %sleep% 3
 
 cls
-echo Push Settings Scripts to Temp...
+echo Pushing Settings Scripts to Temp...
 echo.
 %push% %accessibility% /data/local/tmp/
 %push% %applications% /data/local/tmp/
@@ -121,18 +121,18 @@ echo.
 %push% %preferences% /data/local/tmp/
 
 cls
-echo Push Restore Home Script to Temp...
+echo Pushing Restore Home Script to Temp...
 echo.
 %push% "..\restore-home.sh" /data/local/tmp/
 
 cls
-echo Make and Set Permissions for Settings Scripts Directories...
+echo Making Directories and Setting Permissions for Settings Scripts...
 echo.
 %shell% "mkdir /system/scripts/"
 %shell% "chmod 0777 /system/scripts/"
 
 cls
-echo Copy Settings Scripts From Temp to /system...
+echo Copying Settings Scripts From Temp to /system...
 echo.
 %shell% "cp /data/local/tmp/accessibility.sh /system/scripts/accessibility.sh"
 %shell% "cp /data/local/tmp/applications.sh /system/scripts/applications.sh"
@@ -145,18 +145,18 @@ echo.
 %shell% "cp /data/local/tmp/preferences.sh /system/scripts/preferences.sh"
 
 cls
-echo Copy Restore Home Script From Temp to /system...
+echo Copying Restore Home Script From Temp to /system...
 echo.
 %shell% "cp /data/local/tmp/restore-home.sh /system/scripts/restore-home.sh"
 
 cls
-echo Set Permissions...
+echo Setting Permissions...
 echo.
 %shell% "chmod 0777 /system/scripts/*.sh"
 %shell% "chown root:root /system/scripts/*.sh"
 
 cls
-echo Push App Data to /sdcard...
+echo Pushing App Data to /sdcard...
 echo.
 %shell% "rm -r /sdcard/restore/"
 %shell% "mkdir /sdcard/restore/"
@@ -165,7 +165,7 @@ echo.
 %shell% "cp -r /sdcard/restore/TitaniumBackup /sdcard/"
 
 cls
-echo Copy Data from /sdcard to /system...
+echo Copying Data from /sdcard to /system...
 echo.
 %shell% "rm -r /system/restore/"
 %shell% "mkdir /system/restore/"
@@ -178,7 +178,7 @@ echo.
 %shell% "chmod 0777 /system/restore/apk/"
 
 ::cls
-::echo Copy App Data back to /data/data/
+::echo Copying App Data back to /data/data/
 ::echo.
 ::%shell% "cp -r /system/restore/ca.dstudio.atvlauncher.pro/ /data/data/"
 ::%shell% "cp -r /system/restore/com.adamioan.scriptrunner/ /data/data/"
@@ -191,14 +191,14 @@ echo.
 ::%shell% "chmod -R 0777 /data/data/com.fluxii.android.mousetoggleforfiretv/"
 
 cls
-echo Install BusyBox...
+echo Installing BusyBox...
 echo.
 %push% "..\..\bin\android\busybox" /data/local/tmp/
 %shell% "chmod 0777 /data/local/tmp/busybox"
 %shell% "/data/local/tmp/busybox --install"
 
 cls
-echo Install Magisk for SU Access...
+echo Installing Magisk for SU Access...
 echo.
 %push% "..\..\rooting\tank\Magisk-v19.3.zip" /data/local/tmp/
 %shell% "twrp install /data/local/tmp/Magisk-v19.3.zip"
@@ -243,18 +243,18 @@ set unkadb=0
 echo.
 echo Check For ADB and Unknown Sources Enable Status
 echo.
-echo Press 1 if there is an error, otherwise just press ENTER
-echo.
 echo NOTE: ADB is already enabled as a system service
 echo This will also set these values in Amazon Settings app
+echo.
+echo Press 1 if there is an error, otherwise just press ENTER
 echo.
 set /p unkadb=
 
 if %unkadb%==1 echo.
 if %unkadb%==1 echo Waiting For ADB Service...
 if %unkadb%==1 echo.
-if %unkadb%==1 %adb% reboot
-if %unkadb%==1 %adbWait%
+::if %unkadb%==1 %adb% reboot
+::if %unkadb%==1 %adbWait%
 if %unkadb%==1 %sleep% 10
 if %unkadb%==1 goto stage3
 
