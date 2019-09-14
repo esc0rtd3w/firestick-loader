@@ -1,7 +1,6 @@
 @echo off
 
-color 0e
-
+color 0b
 
 set adb="..\..\bin\adb.exe"
 set adbKill="%~dp0bin\adb.exe" kill-server
@@ -39,6 +38,7 @@ set /p noway=
 if %noway%==1 goto end
 
 :stage1
+color 0e
 set rwcheck=0
 cls
 echo.
@@ -46,7 +46,7 @@ echo Mount System as RW...
 echo.
 %shell% "mount -o rw /system"
 
-cls
+echo.
 echo Check For RW Mount Status
 echo.
 echo Press 1 if there is an error, otherwise just press ENTER
@@ -63,7 +63,7 @@ if %rwcheck%==1 goto stage1
 %sleep% 3
 
 cls
-echo Wipe Data and Cache...
+echo Wiping Data and Cache...
 echo.
 %twrp% wipe data
 
@@ -91,7 +91,7 @@ echo Mount System as RW...
 echo.
 %shell% "mount -o rw /system"
 
-cls
+echo.
 echo Check For RW Mount Status
 echo.
 echo Press 1 if there is an error, otherwise just press ENTER
@@ -132,7 +132,7 @@ echo.
 %shell% "chmod 0777 /system/scripts/"
 
 cls
-echo Copy Settings Scripts From Temp to System...
+echo Copy Settings Scripts From Temp to /system...
 echo.
 %shell% "cp /data/local/tmp/accessibility.sh /system/scripts/accessibility.sh"
 %shell% "cp /data/local/tmp/applications.sh /system/scripts/applications.sh"
@@ -145,7 +145,7 @@ echo.
 %shell% "cp /data/local/tmp/preferences.sh /system/scripts/preferences.sh"
 
 cls
-echo Copy Restore Home Script From Temp to System...
+echo Copy Restore Home Script From Temp to /system...
 echo.
 %shell% "cp /data/local/tmp/restore-home.sh /system/scripts/restore-home.sh"
 
@@ -156,7 +156,7 @@ echo.
 %shell% "chown root:root /system/scripts/*.sh"
 
 cls
-echo Push App Data to sdcard...
+echo Push App Data to /sdcard...
 echo.
 %shell% "rm -r /sdcard/restore/"
 %shell% "mkdir /sdcard/restore/"
@@ -165,7 +165,7 @@ echo.
 %shell% "cp -r /sdcard/restore/TitaniumBackup /sdcard/"
 
 cls
-echo Copy Data from sdcard to system...
+echo Copy Data from /sdcard to /system...
 echo.
 %shell% "rm -r /system/restore/"
 %shell% "mkdir /system/restore/"
@@ -198,7 +198,7 @@ echo.
 %shell% "/data/local/tmp/busybox --install"
 
 cls
-echo Install/Reinstall Magisk...
+echo Install Magisk for SU Access...
 echo.
 %push% "..\..\rooting\tank\Magisk-v19.3.zip" /data/local/tmp/
 %shell% "twrp install /data/local/tmp/Magisk-v19.3.zip"
@@ -210,7 +210,11 @@ echo Fixing Permissions...
 echo.
 %twrp% fixperms /
 
-%sleep% 3
+cls
+echo Rebooting...
+echo.
+
+%sleep% 5
 
 cls
 echo Waiting For ADB Service...
@@ -235,12 +239,14 @@ echo.
 %sleep% 5
 
 set unkadb=0
-cls
+
+echo.
 echo Check For ADB and Unknown Sources Enable Status
 echo.
 echo Press 1 if there is an error, otherwise just press ENTER
 echo.
-echo NOTE: ADB is already enabled by the system. The Settings app needs this value set
+echo NOTE: ADB is already enabled as a system service
+echo This will also set these values in Amazon Settings app
 echo.
 set /p unkadb=
 
@@ -253,6 +259,15 @@ if %unkadb%==1 %sleep% 10
 if %unkadb%==1 goto stage3
 
 %sleep% 3
+
+cls
+color 0a
+echo Finished!
+echo.
+echo Use TitaniumBackup to restore
+echo Home, Mouse Toggle, Reboot, and SH Script Runner Settings
+echo.
+pause>nul
 
 
 :end
