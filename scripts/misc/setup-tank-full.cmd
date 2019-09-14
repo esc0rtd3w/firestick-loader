@@ -271,6 +271,23 @@ echo.
 %shell% "rm -r /system/res/sound/*.*"
 
 cls
+echo Copying Custom OOBE App to /system/priv-app/...
+echo.
+%shell% "rm -r /system/priv-app/com.amazon.tv.oobe/"
+%shell% "mkdir /system/priv-app/com.amazon.tv.oobe/"
+%shell% "cp /system/restore/apk/system/com.amazon.tv.oobe.apk /system/priv-app/com.amazon.tv.oobe/com.amazon.tv.oobe.apk"
+%sleep% 2
+
+cls
+echo Settings Permissions on Custom OOBE...
+echo.
+%shell% "chmod 0775 /system/priv-app/com.amazon.tv.oobe/"
+%shell% "chown root:root /system/priv-app/com.amazon.tv.oobe/"
+%shell% "chmod 0644 /system/priv-app/com.amazon.tv.oobe/com.amazon.tv.oobe.apk"
+%shell% "chown root:root /system/priv-app/com.amazon.tv.oobe/com.amazon.tv.oobe.apk"
+%sleep% 2
+
+cls
 echo Wiping Data and Cache...
 echo.
 %twrp% wipe data
@@ -438,17 +455,6 @@ echo.
 %sleep% 2
 
 cls
-echo Copying Custom OOBE App to /system/priv-app/...
-echo.
-%shell% "rm -r /system/priv-app/com.amazon.tv.oobe/"
-%shell% "mkdir /system/priv-app/com.amazon.tv.oobe/"
-%shell% "chmod 0775 /system/priv-app/com.amazon.tv.oobe/"
-%shell% "chown root:root /system/priv-app/com.amazon.tv.oobe/"
-%shell% "cp /system/restore/apk/system/com.amazon.tv.oobe.apk /system/priv-app/com.amazon.tv.oobe/com.amazon.tv.oobe.apk"
-
-%sleep% 2
-
-cls
 echo Setting Permissions For System Apps...
 echo.
 %shell% "chmod 0644 /system/app/Launcher/Launcher.apk"
@@ -456,9 +462,6 @@ echo.
 
 %shell% "chmod 0644 /system/app/ScriptRunner/ScriptRunner.apk"
 %shell% "chown root:root /system/app/ScriptRunner/ScriptRunner.apk"
-
-%shell% "chmod 0644 /system/priv-app/com.amazon.tv.oobe/com.amazon.tv.oobe.apk"
-%shell% "chown root:root /system/priv-app/com.amazon.tv.oobe/com.amazon.tv.oobe.apk"
 
 %sleep% 2
 
