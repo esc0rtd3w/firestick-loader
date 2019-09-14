@@ -70,7 +70,7 @@ echo.
 cls
 echo Waiting For Cache Rebuild and ADB Service...
 echo.
-echo This may take around 3 minutes or more and Remote Find screen will be loaded
+echo This may take up to 5 minutes or more and Remote Find screen will be loaded
 echo.
 echo Do not interact with the device yet!
 echo.
@@ -216,7 +216,7 @@ echo.
 %sleep% 2
 
 cls
-echo Setting Permissions For Apps/...
+echo Setting Permissions For System Apps...
 echo.
 %shell% "chmod 0644 /system/app/Launcher/Launcher.apk"
 %shell% "chown root:root /system/app/Launcher/Launcher.apk"
@@ -264,22 +264,22 @@ echo.
 %twrp% fixperms /
 
 cls
-echo Rebooting...
+echo Preparing For Reboot...
 echo.
 
-%sleep% 5
+%sleep% 8
 
 cls
 echo Waiting For ADB Service...
 echo.
-echo This may take around 2 minutes or more and Remote Find screen will be loaded
+echo This may take up to 5 minutes or more and Remote Find screen will be loaded
 echo.
 echo Do not interact with the device yet!
 echo.
 
 %adb% reboot
 %adbWait%
-%sleep% 10
+%sleep% 20
 
 :stage3
 :: Enable ADB and Unknown Sources
@@ -308,7 +308,7 @@ if %unkadb%==1 echo Waiting For ADB Service...
 if %unkadb%==1 echo.
 ::if %unkadb%==1 %adb% reboot
 ::if %unkadb%==1 %adbWait%
-if %unkadb%==1 %sleep% 20
+if %unkadb%==1 %sleep% 10
 if %unkadb%==1 goto stage3
 
 %sleep% 3
@@ -319,7 +319,7 @@ echo Finished!
 echo.
 echo Complete the user setup to configure remote, wifi, and Amazon account
 echo.
-echo Once on Launcher, use TitaniumBackup to restore data
+echo Once on Launcher, use TitaniumBackup to restore data for
 echo Home, Mouse Toggle, Reboot, and SH Script Runner Settings
 echo.
 echo Press any key to exit...
