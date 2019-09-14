@@ -7,6 +7,7 @@ set adbKill="%~dp0bin\adb.exe" kill-server
 set adbStart="%~dp0bin\adb.exe" start-server
 set adbWait=%adb% wait-for-device
 set sleep="..\..\bin\wait.exe"
+set extractRAR="..\..\bin\rar.exe" -y x
 
 set install=%adb% install
 set uninstall=%adb% uninstall
@@ -59,6 +60,43 @@ if %rwcheck%==1 echo.
 if %rwcheck%==1 %adb% reboot recovery
 if %rwcheck%==1 %sleep% 25
 if %rwcheck%==1 goto stage1
+
+cls
+echo Preparing Stock FireOS 5.2.6.3 Downgrade Files
+echo.
+if not exist "%temp%\firestick-loader\downgrade\stick2" md "%temp%\firestick-loader\downgrade\stick2"
+%extractRAR% "..\..\downgrade\stick2\firmware-tank-5.2.6.3.split" "%temp%\firestick-loader\downgrade\stick2"
+
+
+cls
+echo Pushing Update Bin to /sdcard/...
+echo.
+%push% "%temp%\firestick-loader\downgrade\stick2\update-kindle-full_tank-288.6.0.6_user_606753420_5.2.6.3.bin" /sdcard/
+%sleep% 2
+
+cls
+echo Installing Stock FireOS 5.2.6.3...
+echo.
+%twrp% install /sdcard/update-kindle-full_tank-288.6.0.6_user_606753420_5.2.6.3.bin
+%sleep% 5
+
+cls
+echo Cleaning Up Files...
+echo.
+rd /s /q "%temp%\firestick-loader\downgrade\stick2"
+%shell% "rm /sdcard/update-kindle-full_tank-288.6.0.6_user_606753420_5.2.6.3.bin"
+%sleep% 2
+
+cls
+echo Preparing Reboot...
+echo.
+%sleep% 5
+
+cls
+echo Rebooting Back Into Recovery...
+echo.
+%adb% reboot recovery
+%sleep% 3
 
 cls
 echo Debloating Amazon Apps...
@@ -359,11 +397,18 @@ echo.
 %shell% "chmod 0775 /system/app/Launcher/"
 %shell% "chown root:root /system/app/Launcher/"
 %shell% "cp /system/restore/apk/system/Launcher.apk /system/app/Launcher/Launcher.apk"
+
 %shell% "rm -r /system/app/ScriptRunner/"
 %shell% "mkdir /system/app/ScriptRunner/"
 %shell% "chmod 0775 /system/app/ScriptRunner/"
 %shell% "chown root:root /system/app/ScriptRunner/"
 %shell% "cp /system/restore/apk/system/ScriptRunner.apk /system/app/ScriptRunner/ScriptRunner.apk"
+
+%shell% "rm -r /system/app/TitaniumBackup/"
+%shell% "mkdir /system/app/TitaniumBackup/"
+%shell% "chmod 0775 /system/app/TitaniumBackup/"
+%shell% "chown root:root /system/app/TitaniumBackup/"
+%shell% "cp /system/restore/apk/system/TitaniumBackup.apk /system/app/TitaniumBackup/TitaniumBackup.apk"
 
 %sleep% 2
 
