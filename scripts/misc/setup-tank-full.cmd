@@ -285,6 +285,7 @@ echo.
 cls
 echo Making Directories and Setting Permissions for Settings Scripts...
 echo.
+%shell% "rm -r /system/scripts/"
 %shell% "mkdir /system/scripts/"
 %shell% "chmod 0777 /system/scripts/"
 
@@ -326,8 +327,10 @@ echo.
 %shell% "rm -r /sdcard/restore/"
 %shell% "mkdir /sdcard/restore/"
 %push% "..\..\data\tank\post-debloated\restore" /sdcard/restore/
+%shell% "rm -r /sdcard/TitaniumBackup/"
 %shell% "mkdir /sdcard/TitaniumBackup/"
 %shell% "cp -r /sdcard/restore/TitaniumBackup /sdcard/"
+%shell% "rm -r /sdcard/restore/apk/"
 %shell% "mkdir /sdcard/restore/apk/"
 
 %sleep% 2
@@ -343,6 +346,7 @@ echo.
 ::%shell% "cp -r /sdcard/restore/com.adamioan.scriptrunner/ /system/restore/"
 ::%shell% "cp -r /sdcard/restore/com.fluxii.android.mousetoggleforfiretv/ /system/restore/"
 ::%shell% "cp -r /sdcard/restore/TitaniumBackup/ /system/restore/"
+%shell% "rm -r /system/restore/apk/"
 %shell% "mkdir /system/restore/apk/"
 %shell% "chmod 0777 /system/restore/apk/"
 %shell% "chown root:root /system/restore/apk/"
@@ -433,7 +437,8 @@ echo.
 %adb% reboot
 %adbWait%
 %sleep% 25
-%adbWait%
+%shell% "nothing=nothing"
+%sleep% 5
 
 :stage3
 :: Enable ADB and Unknown Sources
