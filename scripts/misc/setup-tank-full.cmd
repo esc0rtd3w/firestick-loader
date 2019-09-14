@@ -210,12 +210,8 @@ echo.
 %shell% "rm -r /system/priv-app/IvonaTtsOrchestrator/"
 %shell% "rm -r /system/priv-app/TvProvider/"
 
-:: Amazon Enterprise Controls
-%shell% "rm -r /system/app/DeviceControlService/"
-
 :: FireOS 5.2.6.2
 %shell% "rm -r /system/priv-app/com.amazon.alexashopping/"
-%shell% "rm -r /system/priv-app/com.amazon.ftv.glorialist/"
 %shell% "rm -r /system/priv-app/com.amazon.tv.livetv/"
 %shell% "rm -r /system/priv-app/com.amazon.amazonvideo.livingroom/"
 %shell% "rm -r /system/priv-app/com.amazon.kor.demo/"
@@ -258,7 +254,6 @@ echo.
 %shell% "rm -r /system/app/fdrw/"
 %shell% "rm -r /system/app/PicoTts/"
 %shell% "rm -r /system/app/UnifiedSettingsProvider/"
-%shell% "rm -r /system/app/WebCryptoTZService/"
 %shell% "rm -r /system/app/WhiteListedUrlProvider/"
 
 :: Fire Basic Keyboard (Simplified Chinese)
@@ -443,6 +438,17 @@ echo.
 %sleep% 2
 
 cls
+echo Copying Custom OOBE App to /system/priv-app/...
+echo.
+%shell% "rm -r /system/priv-app/com.amazon.tv.oobe/"
+%shell% "mkdir /system/priv-app/com.amazon.tv.oobe/"
+%shell% "chmod 0775 /system/priv-app/com.amazon.tv.oobe/"
+%shell% "chown root:root /system/priv-app/com.amazon.tv.oobe/"
+%shell% "cp /system/restore/apk/system/com.amazon.tv.oobe.apk /system/priv-app/com.amazon.tv.oobe/com.amazon.tv.oobe.apk"
+
+%sleep% 2
+
+cls
 echo Setting Permissions For System Apps...
 echo.
 %shell% "chmod 0644 /system/app/Launcher/Launcher.apk"
@@ -450,6 +456,9 @@ echo.
 
 %shell% "chmod 0644 /system/app/ScriptRunner/ScriptRunner.apk"
 %shell% "chown root:root /system/app/ScriptRunner/ScriptRunner.apk"
+
+%shell% "chmod 0644 /system/priv-app/com.amazon.tv.oobe/com.amazon.tv.oobe.apk"
+%shell% "chown root:root /system/priv-app/com.amazon.tv.oobe/com.amazon.tv.oobe.apk"
 
 %sleep% 2
 
