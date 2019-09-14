@@ -283,7 +283,7 @@ echo.
 %shell% "rm -r /system/res/sound/*.*"
 
 cls
-echo Installing Magisk for SU Access...
+echo Installing Magisk for SU and ADB Access on Stock Rom...
 echo.
 %push% "..\..\rooting\tank\Magisk-v19.3.zip" /data/local/tmp/
 %shell% "twrp install /data/local/tmp/Magisk-v19.3.zip"
