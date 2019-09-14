@@ -264,9 +264,12 @@ cls
 color 0a
 echo Finished!
 echo.
+echo Complete the user setup to configure remote, wifi, and Amazon account
+echo.
 echo Use TitaniumBackup to restore
 echo Home, Mouse Toggle, Reboot, and SH Script Runner Settings
 echo.
+echo Press any key to exit...
 pause>nul
 
 
