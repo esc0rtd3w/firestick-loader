@@ -330,7 +330,6 @@ echo.
 %shell% "rm -r /sdcard/TitaniumBackup/"
 %shell% "mkdir /sdcard/TitaniumBackup/"
 %shell% "cp -r /sdcard/restore/TitaniumBackup /sdcard/"
-%shell% "rm -r /sdcard/restore/apk/"
 %shell% "mkdir /sdcard/restore/apk/"
 
 %sleep% 2
@@ -340,18 +339,14 @@ echo Copying Data from /sdcard to /system...
 echo.
 %shell% "rm -r /system/restore/"
 %shell% "mkdir /system/restore/"
+%shell% "mkdir /system/restore/apk/"
+
 %shell% "chmod 0777 /system/restore/"
 %shell% "chown root:root /system/restore/"
-::%shell% "cp -r /sdcard/restore/ca.dstudio.atvlauncher.pro/ /system/restore/"
-::%shell% "cp -r /sdcard/restore/com.adamioan.scriptrunner/ /system/restore/"
-::%shell% "cp -r /sdcard/restore/com.fluxii.android.mousetoggleforfiretv/ /system/restore/"
-::%shell% "cp -r /sdcard/restore/TitaniumBackup/ /system/restore/"
-%shell% "rm -r /system/restore/apk/"
-%shell% "mkdir /system/restore/apk/"
+
 %shell% "chmod 0777 /system/restore/apk/"
 %shell% "chown root:root /system/restore/apk/"
-::%shell% "cp /sdcard/restore/apk/system/Launcher.apk /system/restore/apk/system/Launcher.apk"
-::%shell% "cp /sdcard/restore/apk/system/ScriptRunner.apk /system/restore/apk/system/ScriptRunner.apk"
+
 %shell% "cp -r /sdcard/restore/ /system/"
 
 %sleep% 2
