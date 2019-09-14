@@ -30,7 +30,8 @@ set preferences="..\settings\tank\system\scripts\preferences.sh"
 set noway=0
 cls
 echo.
-echo WARNING! THIS WILL FACTORY RESET YOUR DEVICE!
+echo WARNING!
+echo THIS WILL COMPLETELY ERASE THE SYSTEM AND DATA ON YOUR DEVICE DURING SETUP!
 echo.
 echo Press 1 to EXIT or just press ENTER to continue...
 echo.
