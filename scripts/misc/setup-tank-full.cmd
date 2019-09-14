@@ -146,8 +146,6 @@ echo.
 %shell% "rm -r /system/priv-app/com.amazon.kindle.devicecontrols/"
 %shell% "rm -r /system/priv-app/com.amazon.kso.blackbird/"
 %shell% "rm -r /system/priv-app/com.amazon.ods.kindleconnect/"
-%shell% "rm -r /system/priv-app/com.amazon.parentalcontrols/"
-%shell% "rm -r /system/priv-app/com.amazon.precog/"
 %shell% "rm -r /system/priv-app/com.amazon.securitysyncclient/"
 %shell% "rm -r /system/priv-app/com.amazon.sharingservice.android.client.proxy.release/"
 %shell% "rm -r /system/priv-app/com.amazon.shoptv.client/"
@@ -155,7 +153,6 @@ echo.
 %shell% "rm -r /system/priv-app/com.amazon.tv.legal.notices/"
 %shell% "rm -r /system/priv-app/com.amazon.tv.parentalcontrols/"
 %shell% "rm -r /system/priv-app/com.amazon.venezia/"
-%shell% "rm -r /system/priv-app/com.amazon.videoads.app/"
 %shell% "rm -r /system/priv-app/com.amazon.visualonawv/"
 %shell% "rm -r /system/priv-app/ContentSupportProvider/"
 %shell% "rm -r /system/priv-app/CrashManager/"
@@ -167,16 +164,13 @@ echo.
 %shell% "rm -r /system/priv-app/DownloadProvider/"
 %shell% "rm -r /system/priv-app/FireApplicationCompatibilityEnforcer/"
 %shell% "rm -r /system/priv-app/FireApplicationCompatibilityEnforcerSDK/"
-%shell% "rm -r /system/priv-app/FireOsMiddlewareDebugApp/"
 %shell% "rm -r /system/priv-app/FireRecessProxy/"
 %shell% "rm -r /system/priv-app/FireTVDefaultMediaReceiver/"
 %shell% "rm -r /system/priv-app/FireTvNotificationService/"
 %shell% "rm -r /system/priv-app/FireTVSystemUI/"
 %shell% "rm -r /system/priv-app/FusedLocation/"
-%shell% "rm -r /system/priv-app/LogManager/"
 %shell% "rm -r /system/priv-app/ManagedProvisioning/"
 %shell% "rm -r /system/priv-app/marketplace_service_receiver/"
-%shell% "rm -r /system/priv-app/shipmode/"
 %shell% "rm -r /system/priv-app/sync-provider_ipc-release/"
 %shell% "rm -r /system/priv-app/sync-service-fireos-release/"
 %shell% "rm -r /system/priv-app/UnifiedShareActivityChooser/"
@@ -188,7 +182,6 @@ echo.
 :: OTA Updates
 %shell% "rm -r /system/priv-app/DeviceSoftwareOTA/"
 %shell% "rm -r /system/priv-app/DeviceSoftwareOTAIdleOverride/"
-%shell% "rm -r /system/priv-app/SystemUpdatesUI/"
 
 :: Help
 %shell% "rm -r /system/priv-app/com.amazon.tv.csapp/"
@@ -200,14 +193,11 @@ echo.
 :: Fitbit Support?
 %shell% "rm -r /system/priv-app/com.amazon.h2clientservice/"
 
-:: FrameworksMetrics
-%shell% "rm -r /system/priv-app/FrameworksMetrics/"
-
 :: Amazon Voice Support
-%shell% "rm -r /system/priv-app/AlexaMediaPlayer/"
+%shell% "rm -r /system/priv-app/com.amazon.vizzini/"
 
 :: VoiceView
-%shell% "rm -r /system/priv-app/Logan/"
+%shell% "rm -r /system/priv-app/logan/"
 
 :: USB Tuner
 ::%shell% "rm -r /system/priv-app/com.amazon.malcolm/"
@@ -260,9 +250,6 @@ echo.
 :: DIAL (Discovery-and-Launch) protocol (allow apps to access via second screen)
 %shell% "rm -r /system/priv-app/DialService/"
 
-:: Fire Basic Keyboard (Simplified Chinese)
-%shell% "rm -r /system/app/PinyinIME/"
-
 :: CustomMediaController
 %shell% "rm -r /system/priv-app/com.amazon.cardinal/"
 
@@ -274,6 +261,12 @@ echo.
 %shell% "rm -r /system/app/WebCryptoTZService/"
 %shell% "rm -r /system/app/WhiteListedUrlProvider/"
 
+:: Fire Basic Keyboard (Simplified Chinese)
+%shell% "rm -r /system/app/PinyinIME/"
+
+:: FrameworksMetrics
+%shell% "rm -r /system/app/FrameworksMetrics/"
+
 %sleep% 5
 
 cls
@@ -283,16 +276,16 @@ echo.
 %shell% "rm -r /system/res/sound/*.*"
 
 cls
+echo Wiping Data and Cache...
+echo.
+%twrp% wipe data
+%sleep% 5
+
+cls
 echo Installing Magisk for SU and ADB Access on Stock Rom...
 echo.
 %push% "..\..\rooting\tank\Magisk-v19.3.zip" /data/local/tmp/
 %shell% "twrp install /data/local/tmp/Magisk-v19.3.zip"
-%sleep% 3
-
-cls
-echo Wiping Data and Cache...
-echo.
-%twrp% wipe data
 %sleep% 3
 
 cls
