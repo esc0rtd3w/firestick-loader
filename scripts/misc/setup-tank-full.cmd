@@ -1,6 +1,6 @@
 @echo off
 
-title Full Setup Script For Tank 5.2.6.3
+title Full Setup Script For Tank
 
 color 0c
 
