@@ -17,7 +17,10 @@ set pull=%adb% pull
 set shell=%adb% shell
 set twrp=%shell% twrp
 
+if not exist "%temp%\firestick-loader" md "%temp%\firestick-loader"
+
 :start
+color 0e
 set accessibility="..\settings\tank\system\scripts\accessibility.sh"
 set applications="..\settings\tank\system\scripts\applications.sh"
 set device="..\settings\tank\system\scripts\device.sh"
@@ -27,6 +30,27 @@ set myaccount="..\settings\tank\system\scripts\my-account.sh"
 set network="..\settings\tank\system\scripts\network.sh"
 set notifications="..\settings\tank\system\scripts\notifications.sh"
 set preferences="..\settings\tank\system\scripts\preferences.sh"
+
+set twrp_available=0
+cls
+echo Looking For TWRP Recovery...
+echo.
+%pull% /twres/twrp "%temp%\firestick-loader"
+%sleep% 2
+if exist "%temp%\firestick-loader\twrp" set twrp_available=1
+if %twrp_available%==1 goto intro
+%cocolor% 0c
+echo.
+echo.
+echo TWRP Not Found! Retrying...
+echo.
+%sleep% 3
+goto start
+
+:intro
+:: Reset TWRP Flags
+if %twrp_available%==1 del /f /q "%temp%\firestick-loader\twrp"
+if %twrp_available%==1 set twrp_available=0
 
 color 0c
 set noway=0
