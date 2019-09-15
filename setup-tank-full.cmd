@@ -588,23 +588,24 @@ echo.
 %sleep% 5
 
 cls
-echo Fixing Permissions...
-echo.
-%twrp% fixperms /
-%sleep% 5
-
-cls
 echo Re-Installing Magisk for SU Access...
 echo.
 %push% "rooting\tank\Magisk-v19.3.zip" /data/local/tmp/
 %twrp% install /data/local/tmp/Magisk-v19.3.zip
-
 %sleep% 2
+
+cls
+echo Fixing Permissions...
+echo.
+%twrp% fixperms /
+::%twrp% fixperms /system/
+::%twrp% fixperms /data/
+%twrp% fixperms /sdcard/
+%sleep% 5
 
 cls
 echo Preparing For Reboot...
 echo.
-
 %sleep% 8
 
 cls
@@ -614,7 +615,6 @@ echo This may take up to 5 minutes or more and Remote Find screen will be loaded
 echo.
 echo Do not interact with the device yet!
 echo.
-
 %adb% reboot
 %adbWait%
 
