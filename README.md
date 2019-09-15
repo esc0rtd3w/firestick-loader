@@ -16,7 +16,7 @@ FREE YOUR FIRESTICK!!!
 
 <br/>
 
-Scripting To Root, Unroot, Downgrade, Load Apps and Tons More Options For The Amazon FireStick and FireStick2
+Scripting To Root, Unroot, Downgrade, Load Apps & Tons More Options For The FireStick (montoya) and FireStick2 (tank)
 
 <br/>
 
