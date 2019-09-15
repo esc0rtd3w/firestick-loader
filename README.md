@@ -22,20 +22,20 @@ Scripting To Root, Unroot, Downgrade, Load Apps and Tons More Options For The Am
 
 <br/>
 
-***Tank Full Setup Script
+### Tank Full Setup Script
 <br/>
 ![Tank 5.2.6.3 Full Setup Script](https://github.com/esc0rtd3w/firestick-loader/blob/master/misc/preview/5.2.6.3/tank/tank-twrp-find.png)
 <br/>
 ![Tank 5.2.6.3 Full Setup Script](https://github.com/esc0rtd3w/firestick-loader/blob/master/misc/preview/5.2.6.3/tank/tank-twrp-setup-text.png)
 <br/>
-Using /setup-tank-full.cmd
+### Using /setup-tank-full.cmd
 <br/>
 ![Tank 5.2.6.3 Full Setup Script](https://github.com/esc0rtd3w/firestick-loader/blob/master/misc/preview/5.2.6.3/tank/tank-debloat-test-stage17-final.png)
 
 
 
 <br/><br/>
-***Most things below are for Montoya, although there is some Tank support in the scripting for some things.
+### Most things below are for Montoya, although there is some Tank support in the scripting for some things.
 <br/>
 <br/>
 
