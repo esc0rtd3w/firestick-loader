@@ -507,17 +507,22 @@ echo.
 %sleep% 2
 
 cls
+echo Wiping Cache and Fixing Permissions...
+echo.
+%twrp% wipe cache
+%sleep% 2
+%twrp% wipe dalvik
+%sleep% 2
+%twrp% fixperms /
+%sleep% 2
+
+cls
 echo Re-Installing Magisk for SU Access...
 echo.
 %push% "..\..\rooting\tank\Magisk-v19.3.zip" /data/local/tmp/
 %shell% "twrp install /data/local/tmp/Magisk-v19.3.zip"
 
 %sleep% 2
-
-cls
-echo Fixing Permissions...
-echo.
-%twrp% fixperms /
 
 cls
 echo Preparing For Reboot...
