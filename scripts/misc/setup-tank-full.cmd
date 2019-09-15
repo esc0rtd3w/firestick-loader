@@ -1,5 +1,7 @@
 @echo off
 
+title Full Setup Script For Tank 5.2.6.3
+
 color 0c
 
 set adb="..\..\bin\adb.exe"
@@ -51,11 +53,13 @@ echo.
 echo - The System, Data, Cache, and Dalvik Cache Will Be Formatted During Setup
 echo.
 echo.
-echo Press 1 to EXIT or just press ENTER to continue...
+echo Press 1 to EXIT, B to create BACKUP, or just press ENTER to continue...
 echo.
 set /p noway=
 
 if %noway%==1 goto end
+if %noway%==b %twrp% backup /system,data,cache,dalvik
+if %noway%==B %twrp% backup /system,data,cache,dalvik
 
 :stage1
 color 0e
