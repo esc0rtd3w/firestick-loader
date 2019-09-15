@@ -271,7 +271,7 @@ echo.
 %shell% "mkdir /sdcard/restore/"
 %shell% "rm -r /sdcard/TitaniumBackup/"
 %shell% "mkdir /sdcard/TitaniumBackup/"
-%shell% "cp -r /sdcard/restore/TitaniumBackup /sdcard/"
+%shell% "cp -r /sdcard/restore/TitaniumBackup/ /sdcard/"
 %shell% "mkdir /sdcard/restore/apk/"
 %shell% "mkdir /sdcard/restore/apk/system/"
 %sleep% 2
