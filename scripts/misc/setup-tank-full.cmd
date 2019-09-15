@@ -59,7 +59,13 @@ set /p noway=
 
 if %noway%==1 goto end
 if %noway%==b %twrp% backup /system,data,cache,dalvik
+if %noway%==b %adb% reboot recovery
+if %noway%==b %sleep% 25
+if %noway%==b goto start
 if %noway%==B %twrp% backup /system,data,cache,dalvik
+if %noway%==B %adb% reboot recovery
+if %noway%==B %sleep% 25
+if %noway%==B goto start
 
 :stage1
 color 0e
