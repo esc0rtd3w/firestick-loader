@@ -3,8 +3,8 @@
 color 0c
 
 set adb="..\..\bin\adb.exe"
-set adbKill="%~dp0bin\adb.exe" kill-server
-set adbStart="%~dp0bin\adb.exe" start-server
+set adbKill=%adb% kill-server
+set adbStart=%adb% start-server
 set adbWait=%adb% wait-for-device
 set sleep="..\..\bin\wait.exe"
 set extractRAR="..\..\bin\rar.exe" -y x
