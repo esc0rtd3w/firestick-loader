@@ -12,13 +12,11 @@ Amazon FireTV Stick Loader
 
 FREE YOUR FIRESTICK!!!
 
-firepwn.com
-
 <br/>
 
 <br/>
 
-Scripting To Root, Unroot, Downgrade, Load Apps and Tons More Options For The Amazon FireStick
+Scripting To Root, Unroot, Downgrade, Load Apps and Tons More Options For The Amazon FireStick and FireStick2
 
 <br/>
 
