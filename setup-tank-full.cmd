@@ -597,10 +597,10 @@ echo.
 cls
 echo Fixing Permissions...
 echo.
-%twrp% fixperms /
+::%twrp% fixperms /
 ::%twrp% fixperms /system/
 ::%twrp% fixperms /data/
-%twrp% fixperms /sdcard/
+::%twrp% fixperms /sdcard/
 %sleep% 5
 
 cls
