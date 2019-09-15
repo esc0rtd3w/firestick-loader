@@ -547,8 +547,8 @@ echo.
 
 :: Check For ADB and if Not Available, Go Back and Wait
 :chkadb
+%sleep% 5
 %shell% "nothing=nothing"
-if %errorlevel%==0 goto stage4
 if %errorlevel%==-1 goto chkadb
 %sleep% 3
 
