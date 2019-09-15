@@ -544,9 +544,13 @@ echo.
 
 %adb% reboot
 %adbWait%
-%sleep% 25
+
+:: Check For ADB and if Not Available, Go Back and Wait
+:chkadb
 %shell% "nothing=nothing"
-%sleep% 5
+if %errorlevel%==0 goto stage4
+if %errorlevel%==-1 goto chkadb
+%sleep% 3
 
 :stage4
 :: Enable ADB and Unknown Sources
