@@ -31,6 +31,11 @@ set network="..\settings\tank\system\scripts\network.sh"
 set notifications="..\settings\tank\system\scripts\notifications.sh"
 set preferences="..\settings\tank\system\scripts\preferences.sh"
 
+:: Set Flags For ADB Service and Unknown Sources
+set adb_success=0
+set unk_sources_success=0
+
+:: TWRP Requirement
 set twrp_available=0
 cls
 echo Looking For TWRP Recovery...
@@ -39,12 +44,19 @@ echo.
 %sleep% 2
 if exist "%temp%\firestick-loader\twrp" set twrp_available=1
 if %twrp_available%==1 goto intro
+if %twrp_available%==0 goto twrpfail
+
+:twrpfail
 %cocolor% 0c
 echo.
 echo.
-echo TWRP Not Found! Retrying...
+echo TWRP Not Found!
+echo.
+echo Trying To Force Boot Into Recovery...
 echo.
 %sleep% 3
+%adb% reboot recovery
+%sleep% 25
 goto start
 
 :intro
@@ -55,9 +67,11 @@ if %twrp_available%==1 set twrp_available=0
 color 0c
 set noway=0
 cls
+%cocolor% 0a
+echo TWRP Found!
 echo.
-echo WARNING!
-echo THIS WILL COMPLETELY ERASE THE SYSTEM AND DATA ON YOUR DEVICE DURING SETUP!
+%cocolor% 0c
+echo WARNING! THIS WILL ERASE THE SYSTEM AND DATA ON YOUR DEVICE DURING SETUP!
 echo.
 %cocolor% 0e
 echo.
@@ -588,7 +602,7 @@ echo.
 %sleep% 8
 
 cls
-echo Waiting For ADB Service...
+echo Waiting For Cache Rebuild and ADB Service...
 echo.
 echo This may take up to 5 minutes or more and Remote Find screen will be loaded
 echo.
@@ -612,12 +626,21 @@ cls
 echo Enabling ADB and Unknown Sources...
 echo.
 %shell% settings --user 0 put global adb_enabled 1
+if %errorlevel%==0 set adb_success=1
 %shell% settings --user 0 put secure install_non_market_apps 1
+if %errorlevel%==0 set unk_sources_success=1
 
-%sleep% 5
+:chk1
+if %adb_success%==1 goto chk2
 
+:chk2
+if %unk_sources_success%==1 goto final
+
+:: If anything fails, go back to check adb status
+goto chkadb
+
+:final
 set unkadb=0
-
 echo.
 echo Check For ADB and Unknown Sources Enable Status
 echo.
