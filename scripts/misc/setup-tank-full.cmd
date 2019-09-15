@@ -8,6 +8,7 @@ set adbStart=%adb% start-server
 set adbWait=%adb% wait-for-device
 set sleep="..\..\bin\wait.exe"
 set extractRAR="..\..\bin\rar.exe" -y x
+set cocolor="..\..\bin\cocolor.exe"
 
 set install=%adb% install
 set uninstall=%adb% uninstall
@@ -33,6 +34,23 @@ echo.
 echo WARNING!
 echo THIS WILL COMPLETELY ERASE THE SYSTEM AND DATA ON YOUR DEVICE DURING SETUP!
 echo.
+%cocolor% 0e
+echo.
+echo The device will have the following done to it:
+echo.
+echo - Downgrade To Stock Amazon FireOS 5.2.6.3
+echo - Amazon Bloat Removed
+echo - Custom OOBE App That Only Requires Remote, Wifi Setup, and Account
+echo - Custom Home Menu and Data Installed To System
+echo - TitaniumBackup Installed To System. Use To Restore All Apps and Data
+echo - SH Script Runner Installed To System. Use For Shortcuts On Home Menu
+echo - Restore Directory and All APKs and TitaniumBackup Files To /system/
+echo - Scripts Directory and All Home Scripts To Launch Amazon Settings To /system/
+echo - Magisk Installed For SuperUser and ADB Service
+echo.
+echo - The System, Data, Cache, and Dalvik Cache Will Be Formatted During Setup
+echo.
+echo.
 echo Press 1 to EXIT or just press ENTER to continue...
 echo.
 set /p noway=
@@ -50,6 +68,7 @@ echo.
 
 echo.
 echo Check For RW Mount Status
+echo.
 echo.
 echo Press 1 if there is an error, otherwise just press ENTER
 echo.
@@ -362,6 +381,7 @@ echo.
 echo.
 echo Check For RW Mount Status
 echo.
+echo.
 echo Press 1 if there is an error, otherwise just press ENTER
 echo.
 set /p rwcheck=
@@ -570,6 +590,7 @@ echo Check For ADB and Unknown Sources Enable Status
 echo.
 echo NOTE: ADB is already enabled as a system service
 echo This will also set these values in Amazon Settings app
+echo.
 echo.
 echo Press 1 if there is an error, otherwise just press ENTER
 echo.
