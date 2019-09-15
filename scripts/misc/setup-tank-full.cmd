@@ -2,8 +2,6 @@
 
 title Full Setup Script For Tank
 
-color 0c
-
 set adb="..\..\bin\adb.exe"
 set adbKill=%adb% kill-server
 set adbStart=%adb% start-server
@@ -30,6 +28,7 @@ set network="..\settings\tank\system\scripts\network.sh"
 set notifications="..\settings\tank\system\scripts\notifications.sh"
 set preferences="..\settings\tank\system\scripts\preferences.sh"
 
+color 0c
 set noway=0
 cls
 echo.
