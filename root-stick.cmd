@@ -108,6 +108,7 @@ set buildDotProp=/system/build.prop
 
 :: Common Amazon Variables
 set fireOsVersion=0.0.0.0
+set fireOsDevice=none
 
 :: Flags
 set bloatAction=disable
@@ -495,10 +496,14 @@ echo.
 
 :: Get FireOS Info
 %shell% "cat /system/build.prop | grep ro.build.version.name>/sdcard/fireos-version.txt"
-
 %pull% /sdcard/fireos-version.txt "%temp%"
 
+:: Get FireOS Info
+%shell% "cat /system/build.prop | grep ro.product.device=>/sdcard/fireos-device.txt"
+%pull% /sdcard/fireos-device.txt "%temp%"
+
 for /f "tokens=3 delims= " %%f in ('type "%temp%\fireos-version.txt"') do set fireOsVersion=%%f
+for /f "tokens=2 delims==" %%f in ('type "%temp%\fireos-device.txt"') do set fireOsDevice=%%f
 
 if %fireOsVersion%==0.0.0.0 (
 set rootable=0
@@ -602,6 +607,7 @@ if %fireOsVersion%==0.0.0.0 (
 )
 
 del /f /s /q "%temp%\fireos-version.txt"
+del /f /s /q "%temp%\fireos-device.txt"
 
 %adbKill%
 
@@ -686,6 +692,10 @@ if %fireOsVersion% gtr 5.2.1.0 (
 )
 
 
+if %fireOsDevice%==tank (
+%msgbox% "The detected device is [%fireOsDevice%] and has version %fireOsVersion% installed.\n\nThis menu is meant for Montoya device, but Tank can use all options except ROM and Downgrade" "FirePwn Loader"
+)
+
 :: Begin Main Menu
 cls
 
@@ -699,7 +709,7 @@ if %rooted%==1 (
 set rootableText=ROOTED
 )
 
-echo *** Device is currently on version %fireOsVersion% and is %rootableText% ***
+echo *** Device is %fireOsDevice% on version %fireOsVersion% and is %rootableText% ***
 echo.
 echo.
 %_color% 0b
@@ -1366,6 +1376,7 @@ goto menu
 
 :doTWRP
 %_color% 0b
+if %fireOsDevice%==tank goto menu
 if not exist "%temp%\firestick-loader\roms" md  "%temp%\firestick-loader\roms"
 if not exist "%temp%\firestick-loader\roms\stick" md  "%temp%\firestick-loader\roms\stick"
 
@@ -1385,6 +1396,7 @@ if %doLaunchTWRPInstaller%==1 %push% "%~dp0recovery\stick\montoya_recovery_v1.zi
 
 :twrpMenu
 %_color% 0b
+if %fireOsDevice%==tank goto menu
 if not exist "%temp%\firestick-loader\roms" md  "%temp%\firestick-loader\roms"
 if not exist "%temp%\firestick-loader\roms\stick" md  "%temp%\firestick-loader\roms\stick"
 
@@ -1444,6 +1456,7 @@ goto trwpRom
 
 
 :trwpRom
+if %fireOsDevice%==tank goto menu
 cls
 echo Copying Pre-Rooted %twrpVersion% Rom To Device....
 echo.
@@ -1460,6 +1473,7 @@ goto twrpGo
 
 
 :twrpGo
+if %fireOsDevice%==tank goto menu
 %sleep% 10
 
 cls
@@ -2499,6 +2513,7 @@ goto menu
 
 
 :downgrade
+if %fireOsDevice%==tank goto menu
 cls
 echo Preparing Downgrade Files....
 echo.
@@ -3874,6 +3889,7 @@ goto menu
 
 
 :fullAuto
+if %fireOsDevice%==tank goto menu
 
 set doFullAutoMode=1
 
