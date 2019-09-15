@@ -29,6 +29,9 @@ Tank Full Setup Script
 Using /setup-tank-full.cmd
 <br/>
 ![Tank 5.2.6.3 Full Setup Script](https://github.com/esc0rtd3w/firestick-loader/blob/master/misc/preview/5.2.6.3/tank/tank-debloat-test-stage17-final.png)
+<br/><br/>
+Loaded Using /install-apps-lite-auto-kodi18.cmd
+![Tank 5.2.6.3 Full Setup Script](https://github.com/esc0rtd3w/firestick-loader/blob/master/misc/preview/5.2.6.3/tank/tank-debloat-test-stage17-final-loaded.png)
 
 
 
