@@ -21,15 +21,15 @@ if not exist "%temp%\firestick-loader" md "%temp%\firestick-loader"
 
 :start
 color 0e
-set accessibility="scripts\misc\settings\tank\system\scripts\accessibility.sh"
-set applications="scripts\misc\settings\tank\system\scripts\applications.sh"
-set device="scripts\misc\settings\tank\system\scripts\device.sh"
-set displaysounds="scripts\misc\settings\tank\system\scripts\display-sounds.sh"
-set help="scripts\misc\settings\tank\system\scripts\help.sh"
-set myaccount="scripts\misc\settings\tank\system\scripts\my-account.sh"
-set network="scripts\misc\settings\tank\system\scripts\network.sh"
-set notifications="scripts\misc\settings\tank\system\scripts\notifications.sh"
-set preferences="scripts\misc\settings\tank\system\scripts\preferences.sh"
+set accessibility="scripts\settings\tank\system\scripts\accessibility.sh"
+set applications="scripts\settings\tank\system\scripts\applications.sh"
+set device="scripts\settings\tank\system\scripts\device.sh"
+set displaysounds="scripts\settings\tank\system\scripts\display-sounds.sh"
+set help="scripts\settings\tank\system\scripts\help.sh"
+set myaccount="scripts\settings\tank\system\scripts\my-account.sh"
+set network="scripts\settings\tank\system\scripts\network.sh"
+set notifications="scripts\settings\tank\system\scripts\notifications.sh"
+set preferences="scripts\settings\tank\system\scripts\preferences.sh"
 
 :: Set Flags For ADB Service and Unknown Sources
 set adb_success=0
