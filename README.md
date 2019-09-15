@@ -35,7 +35,9 @@ Using /setup-tank-full.cmd
 
 
 <br/><br/>
-### Most things below are for Montoya, although there is some Tank support in the scripting for some things.
+### Most things below are for Montoya
+<br/>
+### There is some Tank support in the scripting for a few things.
 <br/>
 <br/>
 
