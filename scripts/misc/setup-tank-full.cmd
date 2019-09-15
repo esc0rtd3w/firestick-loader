@@ -323,17 +323,17 @@ echo.
 %sleep% 2
 
 cls
-echo Wiping Data and Cache...
-echo.
-%twrp% wipe data
-%sleep% 5
-
-cls
 echo Installing Magisk for SU and ADB Access on Stock Rom...
 echo.
 %push% "..\..\rooting\tank\Magisk-v19.3.zip" /data/local/tmp/
 %shell% "twrp install /data/local/tmp/Magisk-v19.3.zip"
 %sleep% 3
+
+cls
+echo Wiping Data and Cache...
+echo.
+%twrp% wipe data
+%sleep% 5
 
 cls
 echo Waiting For Cache Rebuild and ADB Service...
