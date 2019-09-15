@@ -398,7 +398,7 @@ cls
 echo Installing Magisk for SU and ADB Access on Stock Rom...
 echo.
 %push% "rooting\tank\Magisk-v19.3.zip" /data/local/tmp/
-%shell% "twrp install /data/local/tmp/Magisk-v19.3.zip"
+%twrp% install /data/local/tmp/Magisk-v19.3.zip
 %sleep% 3
 
 cls
@@ -597,7 +597,7 @@ cls
 echo Re-Installing Magisk for SU Access...
 echo.
 %push% "rooting\tank\Magisk-v19.3.zip" /data/local/tmp/
-%shell% "twrp install /data/local/tmp/Magisk-v19.3.zip"
+%twrp% install /data/local/tmp/Magisk-v19.3.zip
 
 %sleep% 2
 
@@ -618,8 +618,9 @@ echo.
 %adb% reboot
 %adbWait%
 
-:: Check For ADB and if Not Available, Go Back and Wait
 :chkadb
+echo Checking For ADB Service...
+echo.
 %sleep% 5
 %shell% "nothing=nothing"
 if %errorlevel%==0 goto stage4
@@ -627,7 +628,6 @@ if %errorlevel%==0 goto stage4
 goto chkadb
 
 :stage4
-:: Enable ADB and Unknown Sources
 cls
 echo Enabling ADB and Unknown Sources...
 echo.
@@ -638,6 +638,7 @@ if %errorlevel%==0 set unk_sources_success=1
 
 :chk1
 if %adb_success%==1 goto chk2
+if %adb_success%==0 goto chkadb
 
 :chk2
 if %unk_sources_success%==1 goto final
