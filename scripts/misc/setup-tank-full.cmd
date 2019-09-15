@@ -507,14 +507,18 @@ echo.
 %sleep% 2
 
 cls
-echo Wiping Cache and Fixing Permissions...
+echo Wiping Cache and Dalvik Cache...
 echo.
 %twrp% wipe cache
-%sleep% 2
+%sleep% 5
 %twrp% wipe dalvik
-%sleep% 2
+%sleep% 5
+
+cls
+echo Fixing Permissions...
+echo.
 %twrp% fixperms /
-%sleep% 2
+%sleep% 5
 
 cls
 echo Re-Installing Magisk for SU Access...
