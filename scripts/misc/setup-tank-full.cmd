@@ -474,6 +474,12 @@ echo.
 %shell% "chmod 0644 /system/app/ScriptRunner/ScriptRunner.apk"
 %shell% "chown root:root /system/app/ScriptRunner/ScriptRunner.apk"
 
+%shell% "chmod 0644 /system/app/TitaniumBackup/TitaniumBackup.apk"
+%shell% "chown root:root /system/app/TitaniumBackup/TitaniumBackup.apk"
+
+%shell% "chmod 0644 /system/app/TitaniumBackupAddon/TitaniumBackupAddon.apk"
+%shell% "chown root:root /system/app/TitaniumBackupAddon/TitaniumBackupAddon.apk"
+
 %sleep% 2
 
 ::cls
