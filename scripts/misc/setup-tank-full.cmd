@@ -336,8 +336,6 @@ echo.
 %shell% "rm -r /sdcard/restore/"
 %shell% "mkdir /sdcard/restore/"
 %shell% "rm -r /sdcard/TitaniumBackup/"
-%shell% "mkdir /sdcard/TitaniumBackup/"
-%shell% "cp -r /sdcard/restore/TitaniumBackup/ /sdcard/"
 %shell% "mkdir /sdcard/restore/apk/"
 %shell% "mkdir /sdcard/restore/apk/system/"
 %sleep% 2
@@ -349,7 +347,13 @@ echo.
 %sleep% 2
 
 cls
-echo Copying Data from /sdcard to /system...
+echo Copying TitaniumBackup Data For Restore...
+echo.
+%shell% "cp -r /sdcard/restore/TitaniumBackup/ /sdcard/"
+%sleep% 2
+
+cls
+echo Creating System Restore Directories and Setting Permissions...
 echo.
 %shell% "rm -r /system/restore/"
 %shell% "mkdir /system/restore/"
@@ -365,8 +369,10 @@ echo.
 %shell% "chmod 0777 /system/restore/apk/system/"
 %shell% "chown root:root /system/restore/apk/system/"
 
+cls
+echo Copying Data from /sdcard to /system...
+echo.
 %shell% "cp -r /sdcard/restore/ /system/"
-
 %sleep% 2
 
 cls
