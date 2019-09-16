@@ -597,6 +597,14 @@ echo.
 cls
 echo Fixing Permissions...
 echo.
+:: Source: https://forum.xda-developers.com/showthread.php?t=2222297
+
+%shell% "chown -R media_rw:media_rw /data/media/"
+%shell% "find /data/media/ -type d -exec chmod 775 {} ';'"
+%shell% "find /data/media/ -type f -exec chmod 664 {} ';'"
+
+%shell% "restorecon -FR /data/media/"
+
 ::%twrp% fixperms /
 ::%twrp% fixperms /system/
 ::%twrp% fixperms /data/
