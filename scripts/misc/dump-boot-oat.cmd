@@ -25,7 +25,7 @@ set dd=%shell% "su -c dd
 
 set blockBase=/dev/block/platform/sdhci.1/by-name
 
-set dumpFolder="%temp%\firestick-loader\build-prop"
+set dumpFolder="%temp%\firestick-loader\dump"
 
 set swipeUp=%shell% input swipe 200 900 200 300
 set keyEnter=%shell% input keyevent 66
