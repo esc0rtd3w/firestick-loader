@@ -107,6 +107,16 @@ echo.
 
 cls
 %_color% 0e
+set appName=Popcorn Time Community Edition
+set apk=
+echo.
+echo.
+echo Installing %appName%...
+echo.
+%install% "apps\media\popcorntimece.apk"
+
+cls
+%_color% 0e
 set appName=Cinema HD
 set apk=
 echo.
@@ -137,13 +147,13 @@ echo.
 
 cls
 %_color% 0e
-set appName=Popcorn Time Community Edition
+set appName=Tubi TV
 set apk=
 echo.
 echo.
 echo Installing %appName%...
 echo.
-%install% "apps\media\popcorntimece.apk"
+%install% "apps\media\tubi-tv.apk"
 
 cls
 %_color% 0e
@@ -154,6 +164,16 @@ echo.
 echo Installing %appName%...
 echo.
 %install% "apps\media\mobdro.apk"
+
+cls
+%_color% 0e
+set appName=Popcornflix
+set apk=
+echo.
+echo.
+echo Installing %appName%...
+echo.
+%install% "apps\media\popcornflix.apk"
 
 cls
 %_color% 0e
