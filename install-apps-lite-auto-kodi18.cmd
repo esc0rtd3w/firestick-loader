@@ -183,7 +183,7 @@ echo.
 echo.
 echo Installing %appName%...
 echo.
-%install% "apps\media\amazon\amazon-prime-video.apk"
+%install% "apps\amazon\amazon-prime-video.apk"
 
 cls
 %_color% 0e
