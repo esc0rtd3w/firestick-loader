@@ -217,13 +217,13 @@ echo.
 
 cls
 %_color% 0e
-set appName=Spotify
+set appName=Podcast Addict
 set apk=
 echo.
 echo.
 echo Installing %appName%...
 echo.
-%install% "apps\media\spotify.apk"
+%install% "apps\media\pocast-addict.apk"
 
 cls
 %_color% 0e
