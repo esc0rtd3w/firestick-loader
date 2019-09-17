@@ -177,6 +177,16 @@ echo.
 
 cls
 %_color% 0e
+set appName=Amazon Prime Video
+set apk=
+echo.
+echo.
+echo Installing %appName%...
+echo.
+%install% "apps\media\amazon\amazon-prime-video.apk"
+
+cls
+%_color% 0e
 set appName=Youtube
 set apk=
 echo.
@@ -194,6 +204,26 @@ echo.
 echo Installing %appName%...
 echo.
 %install% "apps\media\vlc-tv-arm.apk"
+
+cls
+%_color% 0e
+set appName=Plex
+set apk=
+echo.
+echo.
+echo Installing %appName%...
+echo.
+%install% "apps\media\plex.apk"
+
+cls
+%_color% 0e
+set appName=Spotify
+set apk=
+echo.
+echo.
+echo Installing %appName%...
+echo.
+%install% "apps\media\spotify.apk"
 
 cls
 %_color% 0e
