@@ -147,6 +147,26 @@ echo.
 
 cls
 %_color% 0e
+set appName=Solex TV
+set apk=
+echo.
+echo.
+echo Installing %appName%...
+echo.
+%install% "apps\media\solex-tv.apk"
+
+cls
+%_color% 0e
+set appName=Bee TV
+set apk=
+echo.
+echo.
+echo Installing %appName%...
+echo.
+%install% "apps\media\bee-tv.apk"
+
+cls
+%_color% 0e
 set appName=Tubi TV
 set apk=
 echo.
