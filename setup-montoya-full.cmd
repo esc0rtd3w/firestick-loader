@@ -530,12 +530,12 @@ echo.
 cls
 echo Waiting For Cache Rebuild and ADB Service...
 echo.
-echo Complete the User Setup
+echo Complete the user setup to configure remote, wifi, and Amazon account
 echo.
+echo Once on Launcher, use TitaniumBackup to restore data for
+echo Home, Mouse Toggle, Reboot, and SH Script Runner Settings
 echo.
-echo When finished, use TitaniumBackup to restore Home Data
-echo.
-echo Turn on ADB and Unknown Sources, under Device
+echo Finally, turn on ADB, under Device, to continue...
 echo.
 %adb% reboot
 %adbwait%
@@ -592,11 +592,6 @@ if %unkadb%==1 goto stage3
 cls
 color 0a
 echo Finished!
-echo.
-echo Complete the user setup to configure remote, wifi, and Amazon account
-echo.
-echo Once on Launcher, use TitaniumBackup to restore data for
-echo Home, Mouse Toggle, Reboot, and SH Script Runner Settings
 echo.
 echo Press any key to exit...
 pause>nul
