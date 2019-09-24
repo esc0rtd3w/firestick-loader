@@ -415,13 +415,13 @@ echo.
 echo Do not interact with the device yet!
 echo.
 
-%shell% reboot
+%adb% reboot
 %adbWait%
 
 cls
 echo Rebooting Back To Recovery To Continue...
 echo.
-%shell% reboot recovery
+%adb% reboot recovery
 %sleep% 25
 
 :stage3
