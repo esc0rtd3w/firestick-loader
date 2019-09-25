@@ -546,14 +546,14 @@ cls
 echo Waiting For 2nd Init To Boot Normally...
 echo.
 %adb% reboot
-%sleep% 42
+%sleep% 45
 
 cls
-%cocolor% 0b
+%cocolor% 0c
 echo NOTICE!
 echo.
-echo Due to a bug, the OOBE may freeze on the 1st attempt to setup account!
-echo Once you setup the Remote and Network, unplug and re-plug the device.
+echo Due to a bug, the OOBE may freeze on the account registration screen!
+echo If this happens, unplug and re-plug the device and try again.
 echo.
 echo.
 %cocolor% 0e
@@ -568,14 +568,9 @@ echo.
 echo Once on Launcher, do the following:
 echo.
 echo 1) Use TitaniumBackup to restore data for Home and SH Script Runner
-echo.
 echo 2) Open ADB Insecure app, set to insecure and run at boot
-echo.
 echo 3) Unplug and replug the device to use new Home shortcuts
-echo.
-echo 4) Use TitaniumBackup to restore data for Mouse Toggle, Reboot, and Autoruns
-echo.
-echo 5) Use the Device shortcut to go to Developer Options
+echo 4) Use the Device shortcut and navigate to Developer Options menu
 echo.
 echo.
 echo Finally, Enable ADB Debugging and the script will automatically continue...
@@ -587,7 +582,13 @@ cls
 echo Rebooting...
 echo.
 %adb% reboot
-%sleep% 42
+%sleep% 15
+
+cls
+%cocolor% 0e
+echo Waiting On Reboot...
+echo.
+%sleep% 45
 %adbwait%
 
 :chkadb
@@ -647,6 +648,8 @@ if %unkadb%==1 goto stage3
 cls
 color 0a
 echo Finished!
+echo.
+echo Use TitaniumBackup to restore data for Mouse Toggle, Reboot, and Autoruns
 echo.
 echo Press any key to exit...
 pause>nul
