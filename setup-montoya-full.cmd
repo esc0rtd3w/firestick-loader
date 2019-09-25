@@ -543,13 +543,15 @@ echo.
 ::%twrp% fixperms /sdcard/
 
 cls
-echo Waiting For 2nd Init To Load Normal Boot...
+echo Waiting For 2nd Init To Boot Normally...
 echo.
 %adb% reboot
 %sleep% 42
 
 cls
 %cocolor% 0b
+echo NOTICE!
+echo.
 echo Due to a bug, the OOBE may freeze on the 1st attempt to setup account!
 echo Once you setup the Remote and Network, unplug and re-plug the device.
 echo.
@@ -557,18 +559,35 @@ echo.
 %cocolor% 0e
 echo Waiting For Cache Rebuild and ADB Service...
 echo.
+echo.
+%cocolor% 0b
 echo Complete the user setup to configure remote, wifi, and Amazon account
-echo.
-echo Once on Launcher, use TitaniumBackup to restore data for
-echo Home, Mouse Toggle, Reboot, ADB Insecure, and SH Script Runner Settings
+%cocolor% 0e
 echo.
 echo.
-echo Use the Device shortcut to go to Developer Options
+echo Once on Launcher, do the following:
 echo.
-echo Finally, Enable ADB Debugging to continue...
+echo 1) Use TitaniumBackup to restore data for Home and SH Script Runner
+echo.
+echo 2) Open ADB Insecure app, set to insecure and run at boot
+echo.
+echo 3) Unplug and replug the device to use new Home shortcuts
+echo.
+echo 4) Use TitaniumBackup to restore data for Mouse Toggle, Reboot, and Autoruns
+echo.
+echo 5) Use the Device shortcut to go to Developer Options
+echo.
+echo.
+echo Finally, Enable ADB Debugging and the script will automatically continue...
 echo.
 %adbwait%
+
+cls
+%cocolor% 0e
+echo Rebooting...
+echo.
 %adb% reboot
+%sleep% 42
 %adbwait%
 
 :chkadb
@@ -617,7 +636,7 @@ if %unkadb%==1 cls
 if %unkadb%==1 echo Waiting For ADB Service...
 if %unkadb%==1 echo.
 if %unkadb%==1 %cocolor% 0b
-if %unkadb%==1 echo OMake sure you open ADB Insecure app and set to run at boot
+if %unkadb%==1 echo Make sure you open ADB Insecure app and set to run at boot
 if %unkadb%==1 echo.
 if %unkadb%==1 %cocolor% 0e
 if %unkadb%==1 %sleep% 10
