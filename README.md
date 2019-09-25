@@ -72,6 +72,10 @@ Loaded Using /install-apps-lite-auto-kodi18.cmd
 ![OTA Update Error](https://github.com/esc0rtd3w/firestick-loader/blob/master/misc/preview/home/settings-5-system-update-error.jpg)
 <br/><br/>
 
+Montoya Full Setup Script
+<br/>
+![Montoya 5.2.6.3 Full Setup Script](https://github.com/esc0rtd3w/firestick-loader/blob/master/misc/preview/5.2.6.3/montoya/montoya-debloat-test-5.2.6.3-final.png)
+
 
 ***Auto Scripting Menus (Windows)***
 <br/><br/>
