@@ -433,6 +433,12 @@ echo.
 cls
 echo Copying Apps to /system/app/...
 echo.
+%shell% "rm -r /system/app/ADBInsecure/"
+%shell% "mkdir /system/app/ADBInsecure/"
+%shell% "chmod 0775 /system/app/ADBInsecure/"
+%shell% "chown root:root /system/app/ADBInsecure/"
+%shell% "cp /system/restore/apk/system/ADBInsecure.apk /system/app/ADBInsecure/ADBInsecure.apk"
+
 %shell% "rm -r /system/app/Launcher/"
 %shell% "mkdir /system/app/Launcher/"
 %shell% "chmod 0775 /system/app/Launcher/"
@@ -462,6 +468,9 @@ echo.
 cls
 echo Setting Permissions For System Apps...
 echo.
+%shell% "chmod 0644 /system/app/ADBInsecure/ADBInsecure.apk"
+%shell% "chown root:root /system/app/ADBInsecure/ADBInsecure.apk"
+
 %shell% "chmod 0644 /system/app/Launcher/Launcher.apk"
 %shell% "chown root:root /system/app/Launcher/Launcher.apk"
 
@@ -533,15 +542,19 @@ echo.
 echo Complete the user setup to configure remote, wifi, and Amazon account
 echo.
 echo Once on Launcher, use TitaniumBackup to restore data for
-echo Home, Mouse Toggle, Reboot, and SH Script Runner Settings
-echo.
-echo Finally, turn on ADB, under Device, to continue...
+echo Home, Mouse Toggle, Reboot, ADB Insecure, and SH Script Runner Settings
 echo.
 %adb% reboot
 %adbwait%
 
 :chkadb
+cls
+%cocolor% 0e
 echo Checking For ADB Service...
+echo.
+%cocolor% 0b
+echo Open ADB Insecure app and set to run at boot
+%cocolor% 0e
 echo.
 %sleep% 5
 %shell% "nothing=nothing"
@@ -570,20 +583,27 @@ goto chkadb
 
 :final
 set unkadb=0
+%cocolor% 0e
+echo Checking For ADB Service...
 echo.
-echo Check For ADB and Unknown Sources Enable Status
+%cocolor% 0b
+echo Open ADB Insecure app and set to run at boot
 echo.
-echo NOTE: ADB is already enabled as a system service
-echo This will also set these values in Amazon Settings app
+%cocolor% 0e
+echo This script will also set these values in Amazon Settings app
 echo.
 echo.
 echo Press 1 if there is an error, otherwise just press ENTER
 echo.
 set /p unkadb=
 
-if %unkadb%==1 echo.
+if %unkadb%==1 cls
 if %unkadb%==1 echo Waiting For ADB Service...
 if %unkadb%==1 echo.
+if %unkadb%==1 %cocolor% 0b
+if %unkadb%==1 echo Open ADB Insecure app and set to run at boot
+if %unkadb%==1 echo.
+if %unkadb%==1 %cocolor% 0e
 if %unkadb%==1 %sleep% 10
 if %unkadb%==1 goto stage3
 
