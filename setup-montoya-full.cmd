@@ -164,7 +164,7 @@ if %rwcheck%==1 cls
 if %rwcheck%==1 echo Waiting on Reboot...
 if %rwcheck%==1 echo.
 if %rwcheck%==1 %adb% reboot
-if %rwcheck%==1 %sleep% 25
+if %rwcheck%==1 %sleep% 20
 
 if %rwcheck%==1 cls
 if %rwcheck%==1 echo A new window should have opened!
@@ -537,6 +537,7 @@ echo.
 cls
 echo Waiting For 2nd Init To Load Normal Boot...
 echo.
+%adb% reboot
 %sleep% 25
 
 cls
