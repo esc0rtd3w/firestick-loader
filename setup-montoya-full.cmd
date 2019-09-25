@@ -49,8 +49,7 @@ if %twrp_available%==0 goto twrpfail
 
 :twrpfail
 %cocolor% 0c
-echo.
-echo.
+cls
 echo TWRP Not Found!
 echo.
 echo Trying To Force Boot Into Recovery...
@@ -534,7 +533,11 @@ echo.
 ::%twrp% fixperms /system/
 ::%twrp% fixperms /data/
 ::%twrp% fixperms /sdcard/
-%sleep% 5
+
+cls
+echo Waiting For 2nd Init To Load Normal Boot...
+echo.
+%sleep% 25
 
 cls
 echo Waiting For Cache Rebuild and ADB Service...
@@ -544,6 +547,11 @@ echo.
 echo Once on Launcher, use TitaniumBackup to restore data for
 echo Home, Mouse Toggle, Reboot, ADB Insecure, and SH Script Runner Settings
 echo.
+echo.
+echo Use the Device shortcut to go to Developer Options
+echo.
+echo Finally, Enable ADB Debugging to continue...
+echo.
 %adb% reboot
 %adbwait%
 
@@ -551,10 +559,6 @@ echo.
 cls
 %cocolor% 0e
 echo Checking For ADB Service...
-echo.
-%cocolor% 0b
-echo Open ADB Insecure app and set to run at boot
-%cocolor% 0e
 echo.
 %sleep% 5
 %shell% "nothing=nothing"
@@ -564,7 +568,9 @@ goto chkadb
 
 :stage3
 cls
-echo Enabling ADB and Unknown Sources...
+echo Checking/Enabling ADB and Unknown Sources...
+echo.
+echo This script will also set these values in Amazon Settings app
 echo.
 %shell% settings --user 0 put global adb_enabled 1
 if %errorlevel%==0 set adb_success=1
@@ -583,14 +589,8 @@ goto chkadb
 
 :final
 set unkadb=0
-%cocolor% 0e
+cls
 echo Checking For ADB Service...
-echo.
-%cocolor% 0b
-echo Open ADB Insecure app and set to run at boot
-echo.
-%cocolor% 0e
-echo This script will also set these values in Amazon Settings app
 echo.
 echo.
 echo Press 1 if there is an error, otherwise just press ENTER
@@ -601,7 +601,7 @@ if %unkadb%==1 cls
 if %unkadb%==1 echo Waiting For ADB Service...
 if %unkadb%==1 echo.
 if %unkadb%==1 %cocolor% 0b
-if %unkadb%==1 echo Open ADB Insecure app and set to run at boot
+if %unkadb%==1 echo OMake sure you open ADB Insecure app and set to run at boot
 if %unkadb%==1 echo.
 if %unkadb%==1 %cocolor% 0e
 if %unkadb%==1 %sleep% 10
