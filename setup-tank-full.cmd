@@ -48,8 +48,7 @@ if %twrp_available%==0 goto twrpfail
 
 :twrpfail
 %cocolor% 0c
-echo.
-echo.
+cls
 echo TWRP Not Found!
 echo.
 echo Trying To Force Boot Into Recovery...
