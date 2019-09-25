@@ -586,7 +586,7 @@ echo.
 
 cls
 %cocolor% 0e
-echo Waiting On Reboot...
+echo Waiting on Reboot...
 echo.
 %sleep% 55
 %adbwait%
