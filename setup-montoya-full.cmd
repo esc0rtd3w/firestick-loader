@@ -172,7 +172,7 @@ if %rwcheck%==1 cls
 if %rwcheck%==1 echo Waiting on Reboot...
 if %rwcheck%==1 echo.
 if %rwcheck%==1 %adb% reboot
-if %rwcheck%==1 %sleep% 20
+if %rwcheck%==1 %sleep% 15
 
 if %rwcheck%==1 cls
 if %rwcheck%==1 echo A new window should have opened!
@@ -182,7 +182,7 @@ if %rwcheck%==1 echo 1) Type "mouse" without quotes and press ENTER
 if %rwcheck%==1 echo.
 if %rwcheck%==1 echo 2) Press the D key [RIGHT] to move TWRP selection to Launch Recovery
 if %rwcheck%==1 echo.
-if %rwcheck%==1 echo echo When TWRP loaded, close mouse window then press N on this screen and ENTER
+if %rwcheck%==1 echo When TWRP loaded, close mouse window then press N on this screen and ENTER
 if %rwcheck%==1 echo.
 if %rwcheck%==1 start /wait cmd /k %shell%
 if %rwcheck%==1 %sleep% 5
