@@ -39,8 +39,10 @@ set unk_sources_success=0
 :: TWRP Requirement
 set twrp_available=0
 cls
+%cocolor% 0e
 echo Looking For TWRP Recovery...
 echo.
+%cocolor% 0c
 %pull% /twres/twrp "%temp%\firestick-loader"
 %sleep% 2
 if exist "%temp%\firestick-loader\twrp" set twrp_available=1
@@ -54,10 +56,16 @@ echo TWRP Not Found!
 echo.
 echo Trying To Force Boot Into Recovery...
 echo.
+echo.
+%cocolor% 0e
+echo A New Window Will Open That You Must Type Into!
+%cocolor% 0c
+echo.
 %sleep% 3
 %adb% reboot
-%sleep% 25
+%sleep% 15
 
+%cocolor% 0e
 cls
 echo A new window should have opened!
 echo.
@@ -538,9 +546,15 @@ cls
 echo Waiting For 2nd Init To Load Normal Boot...
 echo.
 %adb% reboot
-%sleep% 25
+%sleep% 42
 
 cls
+%cocolor% 0b
+echo Due to a bug, the OOBE may freeze on the 1st attempt to setup account!
+echo Once you setup the Remote and Network, unplug and re-plug the device.
+echo.
+echo.
+%cocolor% 0e
 echo Waiting For Cache Rebuild and ADB Service...
 echo.
 echo Complete the user setup to configure remote, wifi, and Amazon account
@@ -553,6 +567,7 @@ echo Use the Device shortcut to go to Developer Options
 echo.
 echo Finally, Enable ADB Debugging to continue...
 echo.
+%adbwait%
 %adb% reboot
 %adbwait%
 
