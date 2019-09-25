@@ -588,7 +588,7 @@ cls
 %cocolor% 0e
 echo Waiting On Reboot...
 echo.
-%sleep% 45
+%sleep% 55
 %adbwait%
 
 :chkadb
