@@ -1442,7 +1442,7 @@ echo.
 
 cls
 %_color% 0e
-set appName=Titanium TV
+set appName=Typhoon TV
 set apk=
 echo Install %appName%?
 echo.
@@ -1460,7 +1460,7 @@ echo.
 echo.
 echo Installing %appName%...
 echo.
-%install% "apps\media\titanium-tv.apk"
+%install% "apps\media\typhoon-tv.apk"
 )
 
 
