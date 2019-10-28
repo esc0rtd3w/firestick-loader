@@ -511,6 +511,32 @@ rm -r /system/priv-app/com.amazon.cardinal/
 # rm -r /system/priv-app/com.amazon.tv.forcedotaupdater/
 rm -r /system/priv-app/TIFObserverService/
 
+# FireOS 5.2.7.2
+# rm -r /system/priv-app/BluetoothKeyMapLib
+# rm -r /system/priv-app/com.amazon.ale
+# rm -r /system/priv-app/com.amazon.appaccesskeyprovider
+# rm -r /system/priv-app/com.amazon.avl.firetv
+# rm -r /system/priv-app/com.amazon.ceviche
+# rm -r /system/priv-app/com.amazon.dpcclient
+# rm -r /system/priv-app/com.amazon.firebat
+# rm -r /system/priv-app/com.amazon.firerestapiframework
+# rm -r /system/priv-app/com.amazon.ftv.glorialist
+# rm -r /system/priv-app/com.amazon.ftv.screensaver
+# rm -r /system/priv-app/com.amazon.ftv.xpicker
+# rm -r /system/priv-app/com.amazon.katoch
+# rm -r /system/priv-app/com.amazon.providers.tv
+# rm -r /system/priv-app/com.amazon.tahoe
+# rm -r /system/priv-app/com.amazon.tv.alexaalerts
+# rm -r /system/priv-app/com.amazon.tv.devicecontrol
+# rm -r /system/priv-app/com.amazon.tv.devicecontrolsettings
+# rm -r /system/priv-app/com.amazon.tv.forcedotaupdater.v2
+# rm -r /system/priv-app/com.amazon.tv.releasenotes
+# rm -r /system/priv-app/com.amazon.tv.routing
+# rm -r /system/priv-app/com.amazon.tv.settings.core
+# rm -r /system/priv-app/com.amazon.tv.settings.v2
+# rm -r /system/priv-app/com.amazon.whisperjoin.middleware.np
+# rm -r /system/priv-app/com.amznfuse.operatorredirection
+
 
 # Other System Apps
 
