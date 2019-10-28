@@ -21,7 +21,7 @@ set push=%adb% push
 set pull=%adb% pull
 set shell=%adb% shell
 
-set dumpFolder="%temp%\firestick-loader\system-apps-dump"
+set dumpFolder="%temp%\firestick-loader\data-apps-dump"
 
 set swipeUp=%shell% input swipe 200 900 200 300
 set keyEnter=%shell% input keyevent 66
