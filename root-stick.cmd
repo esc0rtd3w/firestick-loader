@@ -324,18 +324,18 @@ set tankMyAccount=%amStartMyAccountRoot% com.amazon.tv.settings/com.amazon.tv.se
 
 
 :: ===============Tank Activities 5.2.7.2 START===============
-set tankNotifications=%amStart% com.amazon.tv.notificationcenter/.NotificationCenterActivity
-set tankNetwork=%amStart% com.amazon.tv.settings.v2/.tv.network.NetworkActivity
-set tankDisplaySounds=%amStartDisplaySoundsRoot% com.amazon.tv.settings.v2/.tv.display_sounds.DisplayAndSoundsActivity
-set tankApplications=%amStartApplicationsManageRoot% com.amazon.tv.settings.v2/.tv.applications.ApplicationsActivity
-set tankEquipmentControl=%amStart% com.amazon.tv.devicecontrolsettings/.screens.main_menu.OzOobeSettingsActivity
-set tankControllersBT=%amStart% com.amazon.tv.settings.v2/.tv.controllers_bluetooth_devices.ControllersAndBluetoothActivity
-set tankAlexa=%amStart% com.amazon.vizzini/.setting.AlexaSettingActivity
-set tankPreferences=%amStartPreferencesRoot% com.amazon.tv.settings.v2/.tv.preferences.PreferencesActivity
-set tankDevice=%amStartDeviceRoot% com.amazon.tv.settings.v2/.tv.device.DeviceActivity
-set tankAccessibility=%amStartAccessibilityRoot% com.amazon.tv.settings.v2/.tv.accessibility.AccessibilityActivity
-set tankHelp=%amStartHelpRoot% com.amazon.tv.csapp/.CSAppActivity
-set tankMyAccount=%amStartMyAccountRoot% com.amazon.tv.settings.v2/.tv.my_account.MyAccountActivity
+set tankNotifications5272=%amStart% com.amazon.tv.notificationcenter/.NotificationCenterActivity
+set tankNetwork5272=%amStart% com.amazon.tv.settings.v2/.tv.network.NetworkActivity
+set tankDisplaySounds5272=%amStartDisplaySoundsRoot% com.amazon.tv.settings.v2/.tv.display_sounds.DisplayAndSoundsActivity
+set tankApplications5272=%amStartApplicationsManageRoot% com.amazon.tv.settings.v2/.tv.applications.ApplicationsActivity
+set tankEquipmentControl5272=%amStart% com.amazon.tv.devicecontrolsettings/.screens.main_menu.OzOobeSettingsActivity
+set tankControllersBT5272=%amStart% com.amazon.tv.settings.v2/.tv.controllers_bluetooth_devices.ControllersAndBluetoothActivity
+set tankAlexa5272=%amStart% com.amazon.vizzini/.setting.AlexaSettingActivity
+set tankPreferences5272=%amStartPreferencesRoot% com.amazon.tv.settings.v2/.tv.preferences.PreferencesActivity
+set tankDevice5272=%amStartDeviceRoot% com.amazon.tv.settings.v2/.tv.device.DeviceActivity
+set tankAccessibility5272=%amStartAccessibilityRoot% com.amazon.tv.settings.v2/.tv.accessibility.AccessibilityActivity
+set tankHelp5272=%amStartHelpRoot% com.amazon.tv.csapp/.CSAppActivity
+set tankMyAccount5272=%amStartMyAccountRoot% com.amazon.tv.settings.v2/.tv.my_account.MyAccountActivity
 
 :: Notifications
 :: act com.amazon.tv.action.NOTIFICATION_CENTER
