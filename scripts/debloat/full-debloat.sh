@@ -438,6 +438,12 @@ rm -r /system/app/UnifiedSettingsProvider/
 rm -r /system/app/WebCryptoTZService/
 rm -r /system/app/WhiteListedUrlProvider/
 
+# FireOS 5.2.7.2
+#rm -r /system/app/CredentialStorage/
+#rm -r /system/app/FireOsMiddlewareDebugApp/
+#rm -r /system/app/sync-provider_ipc-tv-release/
+#rm -r /system/app/sync-service-fireos-tv-release/
+
 # VoiceView
 rm -r /system/priv-app/Logan/
 

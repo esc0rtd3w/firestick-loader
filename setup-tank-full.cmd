@@ -331,6 +331,12 @@ echo.
 :: FrameworksMetrics
 %shell% "rm -r /system/app/FrameworksMetrics/"
 
+:: FireOS 5.2.7.2
+:: %shell% "rm -r /system/app/CredentialStorage/"
+:: %shell% "rm -r /system/app/FireOsMiddlewareDebugApp/"
+:: %shell% "rm -r /system/app/sync-provider_ipc-tv-release/"
+:: %shell% "rm -r /system/app/sync-service-fireos-tv-release/"
+
 :: FireOS 5.2.6.7
 :: %shell% "rm -r /system/priv-app/com.amazon.aca/"
 :: %shell% "rm -r /system/priv-app/com.amazon.aria/"
