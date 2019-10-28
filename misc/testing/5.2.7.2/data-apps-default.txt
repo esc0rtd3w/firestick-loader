@@ -1,0 +1,18 @@
+Under /data/app/
+
+com.amazon.aca-1
+com.amazon.alexashopping-1
+com.amazon.amazonvideo.livingroom.firetv-1
+com.amazon.aria-1
+com.amazon.avl.ftv-1
+com.amazon.avod-1
+com.amazon.bueller.music-1
+com.amazon.firebat-1
+com.amazon.ftv.glorialist-1
+com.amazon.katoch-1
+com.amazon.kso.blackbird-1
+com.amazon.shoptv.client-1
+com.amazon.tahoe-1
+com.amazon.tv.launcher-1
+com.amazon.tv.livetv-1
+com.amazon.venezia-1
