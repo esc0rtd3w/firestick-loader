@@ -331,6 +331,46 @@ echo.
 :: FrameworksMetrics
 %shell% "rm -r /system/app/FrameworksMetrics/"
 
+:: FireOS 5.2.6.7
+:: %shell% "rm -r /system/priv-app/com.amazon.aca/"
+:: %shell% "rm -r /system/priv-app/com.amazon.aria/"
+:: %shell% "rm -r /system/priv-app/com.amazon.firehomestarter/"
+:: %shell% "rm -r /system/priv-app/com.amazon.franktvinput/"
+:: %shell% "rm -r /system/priv-app/com.amazon.gloria.graphiq/"
+:: %shell% "rm -r /system/priv-app/com.amazon.hedwig/"
+:: %shell% "rm -r /system/priv-app/com.amazon.naatyam/"
+:: %shell% "rm -r /system/priv-app/com.amazon.tv.legal.notices/"
+:: %shell% "rm -r /system/priv-app/com.amazon.net.smartconnect/"
+:: %shell% "rm -r /system/priv-app/com.amazon.tmm.tutorial/"
+:: %shell% "rm -r /system/priv-app/com.amazon.tv.forcedotaupdater/"
+:: %shell% "rm -r /system/priv-app/TIFObserverService/"
+
+:: FireOS 5.2.7.2
+:: %shell% "rm -r /system/priv-app/BluetoothKeyMapLib"
+:: %shell% "rm -r /system/priv-app/com.amazon.ale"
+:: %shell% "rm -r /system/priv-app/com.amazon.appaccesskeyprovider"
+:: %shell% "rm -r /system/priv-app/com.amazon.avl.firetv"
+:: %shell% "rm -r /system/priv-app/com.amazon.ceviche"
+:: %shell% "rm -r /system/priv-app/com.amazon.dpcclient"
+:: %shell% "rm -r /system/priv-app/com.amazon.firebat"
+:: %shell% "rm -r /system/priv-app/com.amazon.firerestapiframework"
+:: %shell% "rm -r /system/priv-app/com.amazon.ftv.glorialist"
+:: %shell% "rm -r /system/priv-app/com.amazon.ftv.screensaver"
+:: %shell% "rm -r /system/priv-app/com.amazon.ftv.xpicker"
+:: %shell% "rm -r /system/priv-app/com.amazon.katoch"
+:: %shell% "rm -r /system/priv-app/com.amazon.providers.tv"
+:: %shell% "rm -r /system/priv-app/com.amazon.tahoe"
+:: %shell% "rm -r /system/priv-app/com.amazon.tv.alexaalerts"
+:: %shell% "rm -r /system/priv-app/com.amazon.tv.devicecontrol"
+:: %shell% "rm -r /system/priv-app/com.amazon.tv.devicecontrolsettings"
+:: %shell% "rm -r /system/priv-app/com.amazon.tv.forcedotaupdater.v2"
+:: %shell% "rm -r /system/priv-app/com.amazon.tv.releasenotes"
+:: %shell% "rm -r /system/priv-app/com.amazon.tv.routing"
+:: %shell% "rm -r /system/priv-app/com.amazon.tv.settings.core"
+:: %shell% "rm -r /system/priv-app/com.amazon.tv.settings.v2"
+:: %shell% "rm -r /system/priv-app/com.amazon.whisperjoin.middleware.np"
+:: %shell% "rm -r /system/priv-app/com.amznfuse.operatorredirection"
+
 %sleep% 5
 
 cls
