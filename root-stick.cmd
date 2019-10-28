@@ -266,7 +266,7 @@ set launchRootExplorer=%amStart% com.speedsoftware.rootexplorer/.RootExplorer
 set launchBusybox=%amStart% stericson.busybox/.Activity.MainActivity
 set launchTerminal=%amStart% jackpal.androidterm/.Term
 
-:: 5.2.6.3 Tank Settings
+:: ===============5.2.6.3 Tank Settings START===============
 
 :: Actions
 set amStartAccessibility=%shell% am start -a com.amazon.device.settings.action.ACCESSIBILITY -n
@@ -320,6 +320,76 @@ set tankDevice=%amStartDeviceRoot% com.amazon.tv.settings/com.amazon.tv.settings
 set tankAccessibility=%amStartAccessibilityRoot% com.amazon.tv.settings/.tv.accessibility.AccessibilityActivity
 set tankHelp=%amStartHelpRoot% com.amazon.tv.csapp/com.amazon.tv.csapp.CSAppActivity
 set tankMyAccount=%amStartMyAccountRoot% com.amazon.tv.settings/com.amazon.tv.settings.tv.my_account.MyAccountActivity
+:: ===============5.2.6.3 Tank Settings START===============
+
+
+:: ===============Tank Activities 5.2.7.2 START===============
+set tankNotifications=%amStart% com.amazon.tv.notificationcenter/.NotificationCenterActivity
+set tankNetwork=%amStart% com.amazon.tv.settings.v2/.tv.network.NetworkActivity
+set tankDisplaySounds=%amStartDisplaySoundsRoot% com.amazon.tv.settings.v2/.tv.display_sounds.DisplayAndSoundsActivity
+set tankApplications=%amStartApplicationsManageRoot% com.amazon.tv.settings.v2/.tv.applications.ApplicationsActivity
+set tankEquipmentControl=%amStart% com.amazon.tv.devicecontrolsettings/.screens.main_menu.OzOobeSettingsActivity
+set tankControllersBT=%amStart% com.amazon.tv.settings.v2/.tv.controllers_bluetooth_devices.ControllersAndBluetoothActivity
+set tankAlexa=%amStart% com.amazon.vizzini/.setting.AlexaSettingActivity
+set tankPreferences=%amStartPreferencesRoot% com.amazon.tv.settings.v2/.tv.preferences.PreferencesActivity
+set tankDevice=%amStartDeviceRoot% com.amazon.tv.settings.v2/.tv.device.DeviceActivity
+set tankAccessibility=%amStartAccessibilityRoot% com.amazon.tv.settings.v2/.tv.accessibility.AccessibilityActivity
+set tankHelp=%amStartHelpRoot% com.amazon.tv.csapp/.CSAppActivity
+set tankMyAccount=%amStartMyAccountRoot% com.amazon.tv.settings.v2/.tv.my_account.MyAccountActivity
+
+:: Notifications
+:: act com.amazon.tv.action.NOTIFICATION_CENTER
+:: cmp com.amazon.tv.notificationcenter/.NotificationCenterActivity
+
+:: Netowrk
+:: act com.amazon.device.settings.action.ADD_NETWORK
+:: cmp com.amazon.tv.settings.v2/.tv.network.NetworkActivity
+
+:: Display and Sounds
+:: act com.amazon.device.settings.action.DISPLAY_AND_SOUNDS
+:: cmp com.amazon.tv.settings.v2/.tv.display_sounds.DisplayAndSoundsActivity
+
+:: Applications Main
+:: act com.amazon.device.settings.action.APPLICATIONS
+:: cmp com.amazon.tv.settings.v2/.tv.applications.ApplicationsActivity
+
+:: Applications Manager
+:: act com.amazon.device.settings.action.APPLICATIONS
+:: cmp com.amazon.tv.settings.v2/.tv.applications.ApplicationsActivity
+
+:: Equipment Control
+:: act com.amazon.tv.oobe.settings.ACTION.DEVICE_CONTROL
+:: cmp com.amazon.tv.devicecontrolsettings/.screens.main_menu.OzOobeSettingsActivity
+
+:: Bluetooth and Controllers
+:: act com.amazon.device.settings.action.CONTROLLERS
+:: cmp com.amazon.tv.settings.v2/.tv.controllers_bluetooth_devices.ControllersAndBluetoothActivity
+
+:: Alexa
+:: act amazon.intent.action.ALEXA_SETTING
+:: cmp com.amazon.vizzini/.setting.AlexaSettingActivity
+
+:: Preferences
+:: act com.amazon.device.settings.action.PREFERENCES
+:: cmp com.amazon.tv.settings.v2/.tv.preferences.PreferencesActivity
+
+:: My Fire TV (My Device)
+:: act com.amazon.device.settings.action.DEVICE
+:: cmp com.amazon.tv.settings.v2/.tv.device.DeviceActivity
+
+:: Accessibility
+:: act com.amazon.device.settings.action.ACCESSIBILITY
+:: cmp com.amazon.tv.settings.v2/.tv.accessibility.AccessibilityActivity
+
+:: Help
+:: act com.amazon.device.settings.action.HELP
+:: cmp com.amazon.tv.csapp/.CSAppActivity
+
+:: My Account
+:: act com.amazon.device.settings.action.MY_ACCOUNT
+:: cmp com.amazon.tv.settings.v2/.tv.my_account.MyAccountActivity
+
+:: ===============Tank Activities 5.2.7.2 END===============
 
 :: Downgrade Version Options
 set dgVersion=5.0.5
