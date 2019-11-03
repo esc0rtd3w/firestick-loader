@@ -29,7 +29,7 @@ echo.
 
 set /p backupName=
 
-set backupImagePath=%twrpBasePathBackups%/%serial%/%dirlist%
+set backupImagePath=%twrpBasePathBackups%/%serial%/%backupName%
 
 cls
 echo Backup Path: %backupImagePath%
@@ -37,7 +37,7 @@ echo.
 
 %twrp% remountrw /system
 %sleep% 3
-%twrp% restore %dirlist%
+%twrp% restore %backupName%
 
 
 :end
