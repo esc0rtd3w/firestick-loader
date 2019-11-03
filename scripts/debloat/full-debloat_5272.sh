@@ -28,7 +28,6 @@ pm disable com.amazon.device.messaging.sdk.library
 pm disable com.amazon.device.settings
 pm disable com.amazon.device.sync
 pm disable com.amazon.device.sync.sdk.internal
-pm disable com.amazon.devicecontrol
 pm disable com.amazon.kindle.cms
 pm disable com.amazon.kindle.devicecontrols
 pm disable com.amazon.kso.blackbird
@@ -116,7 +115,7 @@ pm disable com.amazon.tmm.tutorial
 pm disable com.amazon.tv.csapp
 
 # Amazon Screensaver
-#pm disable com.amazon.bueller.photos
+pm disable com.amazon.bueller.photos
 
 # Possibe Remote Update??
 pm disable com.amazon.device.bluetoothdfu
@@ -145,9 +144,9 @@ pm disable com.amazon.vizzini
 #pm disable com.amazon.wcast.sink
 
 # Only Disable If Amazon Video and Store Will Not Be Needed as User Installed APKs
-#pm disable com.amazon.avod
-#pm disable com.amazon.shoptv.client
-#pm disable com.amazon.venezia
+pm disable com.amazon.avod
+pm disable com.amazon.shoptv.client
+pm disable com.amazon.venezia
 
 # Home may kill enough by itself (untested)
 #pm disable com.amazon.tv.launcher/.ui.HomeActivity
@@ -345,7 +344,8 @@ pm disable com.amazon.katoch
 pm disable com.amazon.tv.alexaalerts
 
 # Unknown
-# pm disable com.amazon.tv.devicecontrol
+pm disable com.amazon.devicecontrol
+pm disable com.amazon.tv.devicecontrol
 
 # Equipment Control (REMOVAL CAN BREAK AMAZON UI)
 # pm disable com.amazon.tv.devicecontrolsettings
@@ -473,6 +473,9 @@ rm -r /system/priv-app/com.amazon.h2clientservice/
 # FrameworksMetrics
 rm -r /system/priv-app/FrameworksMetrics/
 
+# Voice?
+rm -r /system/priv-app/com.amazon.vizzini/
+
 # Breaks Settings UI
 
 # com.amazon.client.metrics.api 2.0
@@ -506,7 +509,7 @@ rm -r /system/priv-app/ConnectivityDiag/
 # Other Apps That May Be Wanted/Needed For Different People/Operations
 
 # Amazon Screensaver
-#rm -r /system/priv-app/com.amazon.bueller.photos/
+rm -r /system/priv-app/com.amazon.bueller.photos/
 
 # Amazon Remote Android App
 #rm -r /system/priv-app/com.amazon.storm.lightning.services/
@@ -689,7 +692,7 @@ rm -r /system/priv-app/com.amazon.katoch/
 rm -r /system/priv-app/com.amazon.tv.alexaalerts/
 
 # Unknown
-# rm -r /system/priv-app/com.amazon.tv.devicecontrol/
+rm -r /system/priv-app/com.amazon.tv.devicecontrol/
 
 # Equipment Control (REMOVAL CAN BREAK AMAZON UI)
 # rm -r /system/priv-app/com.amazon.tv.devicecontrolsettings/
