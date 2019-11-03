@@ -11,7 +11,7 @@ set shell=%adb% shell
 
 %shell% rm -r /sdcard/TitaniumBackup/
 
-::pause
+pause
 
 :end
 
