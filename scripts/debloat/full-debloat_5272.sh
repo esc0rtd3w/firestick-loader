@@ -241,7 +241,7 @@ pm disable com.amazon.wifilocker
 pm disable com.amazon.ssdpservice
 
 # Settings Notification Center
-pm disable com.amazon.tv.notificationcenter
+#pm disable com.amazon.tv.notificationcenter
 
 # FireOS 5.2.6.3
 # Fire Basic Keyboard (Simplified Chinese)
@@ -598,7 +598,7 @@ rm -r /system/priv-app/LogManager-logd/
 rm -r /system/priv-app/SsdpService/
 
 # Settings Notification Center
-rm -r /system/priv-app/com.amazon.tv.notificationcenter/
+#rm -r /system/priv-app/com.amazon.tv.notificationcenter/
 
 # DIAL (Discovery-and-Launch) protocol (allow apps to access via second screen)
 rm -r /system/priv-app/DialService/
