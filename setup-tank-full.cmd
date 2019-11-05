@@ -392,7 +392,8 @@ echo.
 cls
 echo Pushing Restore Data to /sdcard/...
 echo.
-%push% "data\tank\post-debloated\restore" /sdcard/restore/
+%push% "data\tank\post-debloated\all\restore" /sdcard/restore/
+%push% "data\tank\post-debloated\5263\restore" /sdcard/restore/
 %sleep% 2
 
 cls
@@ -497,6 +498,7 @@ if %rwcheck%==1 goto stage3
 
 %sleep% 3
 
+:: TODO add Controllers script
 cls
 echo Pushing Settings Scripts to Temp...
 echo.
