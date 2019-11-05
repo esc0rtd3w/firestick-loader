@@ -2,6 +2,11 @@
 
 title Full Setup Script For Tank
 
+set debug=0
+set fireOsVersion=0.0.0.0
+set fireOsDevice=none
+set downgrade=0
+
 set adb="%~dp0bin\adb.exe"
 set adbKill=%adb% kill-server
 set adbStart=%adb% start-server
@@ -21,15 +26,6 @@ if not exist "%temp%\firestick-loader" md "%temp%\firestick-loader"
 
 :start
 color 0e
-set accessibility="scripts\settings\tank\system\scripts\accessibility.sh"
-set applications="scripts\settings\tank\system\scripts\applications.sh"
-set device="scripts\settings\tank\system\scripts\device.sh"
-set displaysounds="scripts\settings\tank\system\scripts\display-sounds.sh"
-set help="scripts\settings\tank\system\scripts\help.sh"
-set myaccount="scripts\settings\tank\system\scripts\my-account.sh"
-set network="scripts\settings\tank\system\scripts\network.sh"
-set notifications="scripts\settings\tank\system\scripts\notifications.sh"
-set preferences="scripts\settings\tank\system\scripts\preferences.sh"
 
 :: Set Flags For ADB Service and Unknown Sources
 set adb_success=0
@@ -63,17 +59,85 @@ goto start
 if %twrp_available%==1 del /f /q "%temp%\firestick-loader\twrp"
 if %twrp_available%==1 set twrp_available=0
 
+color 0e
+set rwcheck=0
+cls
+echo.
+echo Mounting System To Check Device Settings...
+echo.
+%shell% "mount -o rw /system"
+
+echo.
+echo.
+echo Press 1 if there is an error, otherwise just press ENTER
+echo.
+set /p rwcheck=
+
+if %rwcheck%==1 echo.
+if %rwcheck%==1 echo Waiting on Reboot...
+if %rwcheck%==1 echo.
+if %rwcheck%==1 %adb% reboot recovery
+if %rwcheck%==1 %sleep% 25
+if %rwcheck%==1 goto intro
+
+:: Get FireOS Info
+%shell% "cat /system/build.prop | grep ro.build.version.name>/sdcard/fireos-version.txt"
+%pull% /sdcard/fireos-version.txt "%temp%"
+
+%shell% "cat /system/build.prop | grep ro.product.device=>/sdcard/fireos-device.txt"
+%pull% /sdcard/fireos-device.txt "%temp%"
+
+for /f "tokens=3 delims= " %%f in ('type "%temp%\fireos-version.txt"') do set fireOsVersion=%%f
+for /f "tokens=2 delims==" %%f in ('type "%temp%\fireos-device.txt"') do set fireOsDevice=%%f
+%sleep% 1
+%shell% "rm /sdcard/fireos-version.txt"
+%shell% "rm /sdcard/fireos-device.txt"
+
+if not %fireOsDevice%==tank goto notank
+
+
+:dgask
 color 0c
 set noway=0
+set dgchoice=n
+
+if %fireOsVersion%==5.2.7.2 (
 cls
 %cocolor% 0a
 echo TWRP Found!
 echo.
-%cocolor% 0c
-echo WARNING! THIS WILL ERASE THE SYSTEM AND DATA ON YOUR DEVICE DURING SETUP!
+%cocolor% 0b
+echo Device: %fireOsDevice% / Firmware Version: %fireOsVersion%
+echo.
 echo.
 %cocolor% 0e
+echo Do you want to downgrade [Y/N]?
 echo.
+echo.
+set /p dgchoice=
+echo.
+
+if %dgchoice%==y set downgrade=1
+if %dgchoice%==y goto is5272
+if %dgchoice%==Y set downgrade=1
+if %dgchoice%==Y goto is5272
+if %dgchoice%==n set downgrade=0
+if %dgchoice%==n goto is5263
+if %dgchoice%==N set downgrade=0
+if %dgchoice%==N goto is5263
+goto dgask
+)
+
+:is5263
+cls
+%cocolor% 0a
+echo TWRP Found!
+echo.
+%cocolor% 0b
+echo Device: %fireOsDevice% / Firmware Version: %fireOsVersion%
+echo.
+echo.
+%cocolor% 0e
 echo The device will have the following done to it:
 echo.
 echo - Downgrade To Stock Amazon FireOS 5.2.6.3
@@ -106,10 +170,97 @@ if %noway%==B %sleep% 25
 if %noway%==B goto start
 if %noway%==S goto stage2
 if %noway%==s goto stage2
+goto stage1
+
+
+:is5272
+cls
+%cocolor% 0a
+echo TWRP Found!
+echo.
+%cocolor% 0b
+echo Device: %fireOsDevice% / Firmware Version: %fireOsVersion%
+echo.
+echo.
+%cocolor% 0e
+echo The device will have the following done to it:
+echo.
+echo - Amazon Bloat Removed
+echo - Custom Home Menu and Data Installed To System
+echo - TitaniumBackup Installed To System. Use To Restore All Apps and Data
+echo - SH Script Runner Installed To System. Use For Shortcuts On Home Menu
+echo - Restore Directory and All APKs and TitaniumBackup Files To /system/
+echo - Scripts Directory and All Home Scripts To Launch Amazon Settings To /system/
+echo - Magisk Installed For SuperUser and ADB Service
+echo.
+echo - The Cache and Dalvik Cache Will Be Formatted During Setup
+echo.
+echo.
+echo Press 1 to EXIT, B to create BACKUP, or just press ENTER to continue...
+echo.
+set /p noway=
+
+if %noway%==1 goto end
+if %noway%==b %twrp% backup /system,data,cache,dalvik
+if %noway%==b %adb% reboot recovery
+if %noway%==b %sleep% 25
+if %noway%==b goto start
+if %noway%==B %twrp% backup /system,data,cache,dalvik
+if %noway%==B %adb% reboot recovery
+if %noway%==B %sleep% 25
+if %noway%==B goto start
+goto stage1
+
+
+:notank
+%cocolor% 0c
+cls
+echo Supports Tank Only!
+echo.
+echo This device is %fireOsDevice% and CANNOT continue!
+echo.
+pause
+goto end
+
 
 :stage1
+if %downgrade%==1 (
+set accessibility="scripts\settings\tank\system\scripts\accessibility.sh"
+set applications="scripts\settings\tank\system\scripts\applications.sh"
+set btcontroller="scripts\settings\tank\system\scripts\btcontroller.sh"
+set device="scripts\settings\tank\system\scripts\device.sh"
+set displaysounds="scripts\settings\tank\system\scripts\display-sounds.sh"
+set help="scripts\settings\tank\system\scripts\help.sh"
+set myaccount="scripts\settings\tank\system\scripts\my-account.sh"
+set network="scripts\settings\tank\system\scripts\network.sh"
+set notifications="scripts\settings\tank\system\scripts\notifications.sh"
+set preferences="scripts\settings\tank\system\scripts\preferences.sh"
+)
+
+if %downgrade%==0 (
+set accessibility="scripts\settings\tank\system\scripts\5272\accessibility.sh"
+set alexa="scripts\settings\tank\system\scripts\5272\alexa.sh"
+set applications="scripts\settings\tank\system\scripts\5272\applications.sh"
+set btcontroller="scripts\settings\tank\system\scripts\5272\btcontroller.sh"
+set device="scripts\settings\tank\system\scripts\5272\device.sh"
+set displaysounds="scripts\settings\tank\system\scripts\5272\display-sounds.sh"
+set equipment="scripts\settings\tank\system\scripts\5272\equipment.sh"
+set help="scripts\settings\tank\system\scripts\5272\help.sh"
+set myaccount="scripts\settings\tank\system\scripts\5272\my-account.sh"
+set network="scripts\settings\tank\system\scripts\5272\network.sh"
+set notifications="scripts\settings\tank\system\scripts\5272\notifications.sh"
+set preferences="scripts\settings\tank\system\scripts\5272\preferences.sh"
+goto stage2
+)
 color 0e
 set rwcheck=0
+
+cls
+echo Forcing Reboot Back To Recovery...
+echo.
+%adb% reboot recovery
+%sleep% 25
+
 cls
 echo.
 echo Mounting System as RW for System Install...
@@ -309,8 +460,11 @@ echo.
 :: Amazon Echo?
 %shell% "rm -r /system/priv-app/SsdpService/"
 
-:: Settings Notification Center
-%shell% "rm -r /system/priv-app/com.amazon.tv.notificationcenter/"
+:: Settings Notification Center (Do Not Remove on 5.2.7.2)
+if %downgrade%==1 %shell% "rm -r /system/priv-app/com.amazon.tv.notificationcenter/"
+
+:: Amazon Photos (Do Not Remove on 5.2.6.3)
+if %downgrade%==0 %shell% "rm -r /system/priv-app/com.amazon.bueller.photos/"
 
 :: DIAL (Discovery-and-Launch) protocol (allow apps to access via second screen)
 %shell% "rm -r /system/priv-app/DialService/"
@@ -331,51 +485,122 @@ echo.
 :: FrameworksMetrics
 %shell% "rm -r /system/app/FrameworksMetrics/"
 
-:: FireOS 5.2.7.2
+:: BuellerDeviceService
+%shell% "rm -r /system/priv-app/AmazonNetworkMonitor/"
+
 :: %shell% "rm -r /system/app/CredentialStorage/"
 :: %shell% "rm -r /system/app/FireOsMiddlewareDebugApp/"
 :: %shell% "rm -r /system/app/sync-provider_ipc-tv-release/"
 :: %shell% "rm -r /system/app/sync-service-fireos-tv-release/"
 
 :: FireOS 5.2.6.7
-:: %shell% "rm -r /system/priv-app/com.amazon.aca/"
-:: %shell% "rm -r /system/priv-app/com.amazon.aria/"
-:: %shell% "rm -r /system/priv-app/com.amazon.firehomestarter/"
-:: %shell% "rm -r /system/priv-app/com.amazon.franktvinput/"
-:: %shell% "rm -r /system/priv-app/com.amazon.gloria.graphiq/"
-:: %shell% "rm -r /system/priv-app/com.amazon.hedwig/"
-:: %shell% "rm -r /system/priv-app/com.amazon.naatyam/"
-:: %shell% "rm -r /system/priv-app/com.amazon.tv.legal.notices/"
-:: %shell% "rm -r /system/priv-app/com.amazon.net.smartconnect/"
-:: %shell% "rm -r /system/priv-app/com.amazon.tmm.tutorial/"
-:: %shell% "rm -r /system/priv-app/com.amazon.tv.forcedotaupdater/"
-:: %shell% "rm -r /system/priv-app/TIFObserverService/"
+:: ACAFireTVAndroidClient
+if %downgrade%==0 %shell% "rm -r /system/priv-app/com.amazon.aca/"
+
+:: Aria AriaRuntime
+if %downgrade%==0 %shell% "rm -r /system/priv-app/com.amazon.aria/"
+
+:: com.amazon.firehomestarter (Unknown)
+if %downgrade%==0 %shell% "rm -r /system/priv-app/com.amazon.firehomestarter/"
+
+:: Fire TV Recast --
+if %downgrade%==0 %shell% "rm -r /system/priv-app/com.amazon.franktvinput/"
+
+:: com.amazon.gloria.graphiq (Unknown)
+if %downgrade%==0 %shell% "rm -r /system/priv-app/com.amazon.gloria.graphiq/"
+
+:: News
+if %downgrade%==0 %shell% "rm -r /system/priv-app/com.amazon.hedwig/"
+
+:: Naatyam (Unknown)
+if %downgrade%==0 %shell% "rm -r /system/priv-app/com.amazon.naatyam/"
+
+:: KFTV Legal Notices
+if %downgrade%==0 %shell% "rm -r /system/priv-app/com.amazon.tv.legal.notices/"
+
+:: SmartConnectService (Unknown)
+:: if %downgrade%==0 %shell% "rm -r /system/priv-app/com.amazon.net.smartconnect/"
+
+:: TMMTutorial
+if %downgrade%==0 %shell% "rm -r /system/priv-app/com.amazon.tmm.tutorial/"
+
+if %downgrade%==0 %shell% "rm -r /system/priv-app/com.amazon.tv.forcedotaupdater/"
+if %downgrade%==0 %shell% "rm -r /system/priv-app/TIFObserverService/"
 
 :: FireOS 5.2.7.2
-:: %shell% "rm -r /system/priv-app/BluetoothKeyMapLib"
-:: %shell% "rm -r /system/priv-app/com.amazon.ale"
-:: %shell% "rm -r /system/priv-app/com.amazon.appaccesskeyprovider"
-:: %shell% "rm -r /system/priv-app/com.amazon.avl.firetv"
-:: %shell% "rm -r /system/priv-app/com.amazon.ceviche"
-:: %shell% "rm -r /system/priv-app/com.amazon.dpcclient"
-:: %shell% "rm -r /system/priv-app/com.amazon.firebat"
-:: %shell% "rm -r /system/priv-app/com.amazon.firerestapiframework"
-:: %shell% "rm -r /system/priv-app/com.amazon.ftv.glorialist"
-:: %shell% "rm -r /system/priv-app/com.amazon.ftv.screensaver"
-:: %shell% "rm -r /system/priv-app/com.amazon.ftv.xpicker"
-:: %shell% "rm -r /system/priv-app/com.amazon.katoch"
-:: %shell% "rm -r /system/priv-app/com.amazon.providers.tv"
-:: %shell% "rm -r /system/priv-app/com.amazon.tahoe"
-:: %shell% "rm -r /system/priv-app/com.amazon.tv.alexaalerts"
-:: %shell% "rm -r /system/priv-app/com.amazon.tv.devicecontrol"
-:: %shell% "rm -r /system/priv-app/com.amazon.tv.devicecontrolsettings"
-:: %shell% "rm -r /system/priv-app/com.amazon.tv.forcedotaupdater.v2"
-:: %shell% "rm -r /system/priv-app/com.amazon.tv.releasenotes"
-:: %shell% "rm -r /system/priv-app/com.amazon.tv.routing"
-:: %shell% "rm -r /system/priv-app/com.amazon.tv.settings.core"
-:: %shell% "rm -r /system/priv-app/com.amazon.tv.settings.v2"
-:: %shell% "rm -r /system/priv-app/com.amazon.whisperjoin.middleware.np"
-:: %shell% "rm -r /system/priv-app/com.amznfuse.operatorredirection"
+:: com.amazon.device.bluetoothkeymaplib (Unknown)
+:: if %downgrade%==0 %shell% "rm -r /system/priv-app/BluetoothKeyMapLib/"
+
+:: ALE (Unknown)
+if %downgrade%==0 %shell% "rm -r /system/priv-app/com.amazon.ale/"
+
+:: My Application 2.0 (WTF! LMAO)
+if %downgrade%==0 %shell% "rm -r /system/priv-app/com.amazon.appaccesskeyprovider/"
+
+:: Alexa Voice Layer
+if %downgrade%==0 %shell% "rm -r /system/priv-app/com.amazon.avl.firetv/"
+
+:: Ceviche (Unknown)
+if %downgrade%==0 %shell% "rm -r /system/priv-app/com.amazon.ceviche/"
+
+:: Unknown
+if %downgrade%==0 %shell% "rm -r /system/priv-app/com.amazon.dpcclient/"
+
+:: Prime Video PVFTV
+if %downgrade%==0 %shell% "rm -r /system/priv-app/com.amazon.firebat/"
+
+:: FireRESTAPIFramework
+if %downgrade%==0 %shell% "rm -r /system/priv-app/com.amazon.firerestapiframework/"
+
+:: Gloria
+if %downgrade%==0 %shell% "rm -r /system/priv-app/com.amazon.ftv.glorialist/"
+
+:: Screensaver (REMOVAL CAN BREAK AMAZON UI)
+:: if %downgrade%==0 %shell% "rm -r /system/priv-app/com.amazon.ftv.screensaver/"
+
+:: com.amazon.ftv.xpicker stub-apk
+if %downgrade%==0 %shell% "rm -r /system/priv-app/com.amazon.ftv.xpicker/"
+
+:: Katoch (Unknown)
+if %downgrade%==0 %shell% "rm -r /system/priv-app/com.amazon.katoch/"
+
+:: if %downgrade%==0 %shell% "rm -r /system/priv-app/com.amazon.providers.tv/"
+
+:: Fire TV Alexa Alerts
+if %downgrade%==0 %shell% "rm -r /system/priv-app/com.amazon.tv.alexaalerts/"
+
+:: Unknown
+if %downgrade%==0 %shell% "rm -r /system/priv-app/com.amazon.tv.devicecontrol/"
+
+:: Equipment Control (REMOVAL CAN BREAK AMAZON UI)
+:: if %downgrade%==0 %shell% "rm -r /system/priv-app/com.amazon.tv.devicecontrolsettings/"
+
+:: Forced App Updater
+if %downgrade%==0 %shell% "rm -r /system/priv-app/com.amazon.tv.forcedotaupdater.v2/"
+
+:: ReleaseNotes
+if %downgrade%==0 %shell% "rm -r /system/priv-app/com.amazon.tv.releasenotes/"
+
+:: FTV Routing
+if %downgrade%==0 %shell% "rm -r /system/priv-app/com.amazon.tv.routing/"
+
+:: Amazon Settings Core (REMOVAL CAN BREAK AMAZON UI)
+:: if %downgrade%==0 %shell% "rm -r /system/priv-app/com.amazon.tv.settings.core/"
+
+:: Amazon Settings v2 (REMOVAL CAN BREAK AMAZON UI)
+:: if %downgrade%==0 %shell% "rm -r /system/priv-app/com.amazon.tv.settings.v2/"
+
+:: Amazon FreeTime
+if %downgrade%==0 %shell% "rm -r /system/priv-app/com.amazon.tahoe/"
+
+:: Whisper Join FFS Middleware
+if %downgrade%==0 %shell% "rm -r /system/priv-app/com.amazon.whisperjoin.middleware.np/"
+
+:: com.amznfuse.operatorredirection (Unknown)
+if %downgrade%==0 %shell% "rm -r /system/priv-app/com.amznfuse.operatorredirection/"
+
+:: com.amazon.sync.provider.ipc
+if %downgrade%==0 %shell% "rm -r /system/priv-app/sync-provider_ipc-tv-release/"
 
 %sleep% 5
 
@@ -393,7 +618,8 @@ cls
 echo Pushing Restore Data to /sdcard/...
 echo.
 %push% "data\tank\post-debloated\all\restore" /sdcard/restore/
-%push% "data\tank\post-debloated\5263\restore" /sdcard/restore/
+if %downgrade%==1 %push% "data\tank\post-debloated\5263\restore" /sdcard/restore/
+if %downgrade%==0 %push% "data\tank\post-debloated\5272\restore" /sdcard/restore/
 %sleep% 2
 
 cls
@@ -428,20 +654,20 @@ echo.
 cls
 echo Settings Permissions and Copying Custom OOBE App to /system/priv-app/...
 echo.
-%shell% "rm -r /system/priv-app/com.amazon.tv.oobe/"
-%shell% "mkdir /system/priv-app/com.amazon.tv.oobe/"
-%shell% "chmod 0775 /system/priv-app/com.amazon.tv.oobe/"
-%shell% "chown root:root /system/priv-app/com.amazon.tv.oobe/"
-%shell% "cp /system/restore/apk/system/com.amazon.tv.oobe.apk /system/priv-app/com.amazon.tv.oobe/com.amazon.tv.oobe.apk"
-%shell% "chmod 0644 /system/priv-app/com.amazon.tv.oobe/com.amazon.tv.oobe.apk"
-%shell% "chown root:root /system/priv-app/com.amazon.tv.oobe/com.amazon.tv.oobe.apk"
+if %downgrade%==1 %shell% "rm -r /system/priv-app/com.amazon.tv.oobe/"
+if %downgrade%==1 %shell% "mkdir /system/priv-app/com.amazon.tv.oobe/"
+if %downgrade%==1 %shell% "chmod 0775 /system/priv-app/com.amazon.tv.oobe/"
+if %downgrade%==1 %shell% "chown root:root /system/priv-app/com.amazon.tv.oobe/"
+if %downgrade%==1 %shell% "cp /system/restore/apk/system/com.amazon.tv.oobe.apk /system/priv-app/com.amazon.tv.oobe/com.amazon.tv.oobe.apk"
+if %downgrade%==1 %shell% "chmod 0644 /system/priv-app/com.amazon.tv.oobe/com.amazon.tv.oobe.apk"
+if %downgrade%==1 %shell% "chown root:root /system/priv-app/com.amazon.tv.oobe/com.amazon.tv.oobe.apk"
 %sleep% 2
 
 cls
 echo Removing Unused Images and Sounds...
 echo.
-%shell% "rm -r /system/res/images/*.*"
-%shell% "rm -r /system/res/sound/*.*"
+if %downgrade%==1 %shell% "rm -r /system/res/images/*.*"
+if %downgrade%==1 %shell% "rm -r /system/res/sound/*.*"
 %sleep% 2
 
 cls
@@ -451,11 +677,22 @@ echo.
 %twrp% install /data/local/tmp/Magisk-v19.3.zip
 %sleep% 3
 
+if %downgrade%==1 (
 cls
 echo Wiping Data and Cache...
 echo.
 %twrp% wipe data
 %sleep% 5
+)
+
+if %downgrade%==0 (
+cls
+echo Wiping Cache and Dalvik Cache...
+echo.
+%twrp% wipe cache
+%twrp% wipe dalvik
+%sleep% 5
+)
 
 cls
 echo Waiting For Cache Rebuild and ADB Service...
@@ -502,8 +739,10 @@ if %rwcheck%==1 goto stage3
 cls
 echo Pushing Settings Scripts to Temp...
 echo.
+if %downgrade%==1 (
 %push% %accessibility% /data/local/tmp/
 %push% %applications% /data/local/tmp/
+%push% %btcontroller% /data/local/tmp/
 %push% %device% /data/local/tmp/
 %push% %displaysounds% /data/local/tmp/
 %push% %help% /data/local/tmp/
@@ -511,7 +750,22 @@ echo.
 %push% %network% /data/local/tmp/
 %push% %notifications% /data/local/tmp/
 %push% %preferences% /data/local/tmp/
+)
 
+if %downgrade%==0 (
+%push% %accessibility% /data/local/tmp/
+%push% %alexa% /data/local/tmp/
+%push% %applications% /data/local/tmp/
+%push% %btcontroller% /data/local/tmp/
+%push% %equipment% /data/local/tmp/
+%push% %device% /data/local/tmp/
+%push% %displaysounds% /data/local/tmp/
+%push% %help% /data/local/tmp/
+%push% %myaccount% /data/local/tmp/
+%push% %network% /data/local/tmp/
+%push% %notifications% /data/local/tmp/
+%push% %preferences% /data/local/tmp/
+)
 %sleep% 2
 
 cls
@@ -533,8 +787,10 @@ echo.
 cls
 echo Copying Settings Scripts From Temp to /system...
 echo.
+if %downgrade%==1 (
 %shell% "cp /data/local/tmp/accessibility.sh /system/scripts/accessibility.sh"
 %shell% "cp /data/local/tmp/applications.sh /system/scripts/applications.sh"
+%shell% "cp /data/local/tmp/btcontroller.sh /system/scripts/btcontroller.sh"
 %shell% "cp /data/local/tmp/device.sh /system/scripts/device.sh"
 %shell% "cp /data/local/tmp/display-sounds.sh /system/scripts/display-sounds.sh"
 %shell% "cp /data/local/tmp/help.sh /system/scripts/help.sh"
@@ -542,7 +798,22 @@ echo.
 %shell% "cp /data/local/tmp/network.sh /system/scripts/network.sh"
 %shell% "cp /data/local/tmp/notifications.sh /system/scripts/notifications.sh"
 %shell% "cp /data/local/tmp/preferences.sh /system/scripts/preferences.sh"
+)
 
+if %downgrade%==0 (
+%shell% "cp /data/local/tmp/accessibility.sh /system/scripts/accessibility.sh"
+%shell% "cp /data/local/tmp/alexa.sh /system/scripts/alexa.sh"
+%shell% "cp /data/local/tmp/applications.sh /system/scripts/applications.sh"
+%shell% "cp /data/local/tmp/btcontroller.sh /system/scripts/btcontroller.sh"
+%shell% "cp /data/local/tmp/device.sh /system/scripts/device.sh"
+%shell% "cp /data/local/tmp/display-sounds.sh /system/scripts/display-sounds.sh"
+%shell% "cp /data/local/tmp/equipment.sh /system/scripts/equipment.sh"
+%shell% "cp /data/local/tmp/help.sh /system/scripts/help.sh"
+%shell% "cp /data/local/tmp/my-account.sh /system/scripts/my-account.sh"
+%shell% "cp /data/local/tmp/network.sh /system/scripts/network.sh"
+%shell% "cp /data/local/tmp/notifications.sh /system/scripts/notifications.sh"
+%shell% "cp /data/local/tmp/preferences.sh /system/scripts/preferences.sh"
+)
 %sleep% 2
 
 cls
@@ -676,6 +947,7 @@ echo Do not interact with the device yet!
 echo.
 %adb% reboot
 %adbWait%
+if %downgrade%==0 goto final
 
 :chkadb
 echo Checking For ADB Service...
