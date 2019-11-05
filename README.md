@@ -21,7 +21,7 @@ Scripting To Root, Unroot, Downgrade, Load Apps & Tons More Options For The Fire
 
 <br/>
 
-Tank Full Setup Script
+Tank Full Setup Script 5.2.6.3
 <br/>
 ![Tank 5.2.6.3 Full Setup Script](https://github.com/esc0rtd3w/firestick-loader/blob/master/misc/preview/5.2.6.3/tank/tank-twrp-find.png)
 <br/>
@@ -33,7 +33,9 @@ Using /setup-tank-full.cmd
 <br/><br/>
 Loaded Using /install-apps-lite-auto-kodi18.cmd
 ![Tank 5.2.6.3 Full Setup Script](https://github.com/esc0rtd3w/firestick-loader/blob/master/misc/preview/5.2.6.3/tank/tank-debloat-test-stage17-final-loaded.png)
-
+<br/><br/>
+Tank Full Setup Script 5.2.7.2
+<br/>
 ![Tank 5.2.7.2 Full Setup Script](https://github.com/esc0rtd3w/firestick-loader/blob/master/misc/preview/5.2.7.2/tank/tank-5.2.7.2-debloated.png)
 
 
