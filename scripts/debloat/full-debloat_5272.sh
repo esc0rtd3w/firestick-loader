@@ -10,7 +10,9 @@ echo "Disabling Amazon Bloat...."
 echo ""
 echo ""
 
-pm disable amazon.jackson19
+# Do Not Remove on 5.2.7.2 (Breaks Display and Applications Settings)
+#pm disable amazon.jackson19
+
 pm disable android.amazon.perm
 pm disable com.amazon.acos.providers.UnifiedSettingsProvider
 pm disable com.amazon.ags.app
@@ -25,7 +27,6 @@ pm disable com.amazon.device.crashmanager
 pm disable com.amazon.device.messaging
 pm disable com.amazon.device.messaging.sdk.internal.library
 pm disable com.amazon.device.messaging.sdk.library
-pm disable com.amazon.device.settings
 pm disable com.amazon.device.sync
 pm disable com.amazon.device.sync.sdk.internal
 pm disable com.amazon.kindle.cms
@@ -40,8 +41,13 @@ pm disable com.amazon.recess
 pm disable com.amazon.securitysyncclient
 pm disable com.amazon.sharingservice.android.client.proxy
 pm disable com.amazon.shpm
+
+# sync-provider_ipc-tv-release
 pm disable com.amazon.sync.provider.ipc
+
+# Content Sync Framework (sync-service-fireos-tv-release)
 pm disable com.amazon.sync.service
+
 pm disable com.amazon.tv.legal.notices
 pm disable com.amazon.tv.parentalcontrols
 pm disable com.amazon.tv.support
@@ -66,7 +72,7 @@ pm disable com.amazon.device.logmanager
 # OTA Related
 pm disable com.amazon.dcp
 pm disable com.amazon.dcp.contracts.framework.library
-pm disable com.amazon.dcp.contracts.library
+#pm disable com.amazon.dcp.contracts.library
 pm disable com.amazon.device.software.ota
 pm disable com.amazon.device.software.ota.override
 pm disable com.amazon.settings.systemupdates
@@ -219,11 +225,13 @@ pm disable com.amazon.advertisingidsettings
 
 # FireOS 5.2.6.2
 pm disable com.amazon.alexashopping
-# pm disable com.amazon.device.settings
 pm disable com.amazon.ftv.glorialist
 pm disable com.amazon.tv.livetv
 pm disable com.amazon.amazonvideo.livingroom
 pm disable com.amazon.kor.demo
+
+# RemoteSettingsAndroid
+#pm disable com.amazon.device.settings
 
 # com.amazon.webview.awvdeploymentservice Developer Build
 pm disable com.amazon.webview.awvdeploymentservice
@@ -344,10 +352,10 @@ pm disable com.amazon.katoch
 pm disable com.amazon.tv.alexaalerts
 
 # Unknown
-pm disable com.amazon.devicecontrol
-pm disable com.amazon.tv.devicecontrol
 
 # Equipment Control (REMOVAL CAN BREAK AMAZON UI)
+# pm disable com.amazon.devicecontrol
+# pm disable com.amazon.tv.devicecontrol
 # pm disable com.amazon.tv.devicecontrolsettings
 
 # Forced App Updater
@@ -374,7 +382,7 @@ pm disable com.amazon.whisperjoin.middleware.np
 # Unknown
 pm disable com.amznfuse.operatorredirection
 
-
+exit
 echo "Deleting Amazon Bloat...."
 echo ""
 echo ""
@@ -383,7 +391,10 @@ mount -o rw,remount /system
 
 # ===============FireOS 5.0.5 Default START===============
 # Tested Removal OK
-rm -r /system/priv-app/amazon.jackson-19/
+
+# Do Not Remove on 5.2.7.2 (Breaks Display and Applications Settings)
+#rm -r /system/priv-app/amazon.jackson-19/
+
 rm -r /system/priv-app/AmazonKKWebViewLib/
 rm -r /system/priv-app/BackupRestoreConfirmation/
 rm -r /system/priv-app/com.amazon.ags.app/
@@ -427,6 +438,10 @@ rm -r /system/priv-app/marketplace_service_receiver/
 rm -r /system/priv-app/shipmode/
 rm -r /system/priv-app/sync-provider_ipc-release/
 rm -r /system/priv-app/sync-service-fireos-release/
+
+# com.amazon.sync.service
+rm -r /system/priv-app/sync-service-fireos-tv-release/
+
 rm -r /system/priv-app/UnifiedShareActivityChooser/
 rm -r /system/priv-app/WallpaperCropper/
 
@@ -469,9 +484,6 @@ rm -r /system/priv-app/com.amazon.device.bluetoothdfu/
 
 # Fitbit Support???
 rm -r /system/priv-app/com.amazon.h2clientservice/
-
-# FrameworksMetrics
-rm -r /system/priv-app/FrameworksMetrics/
 
 # Voice?
 rm -r /system/priv-app/com.amazon.vizzini/
@@ -537,18 +549,17 @@ rm -r /system/priv-app/AlexaMediaPlayer/
 
 # Needed For Amazon Settings UI (Removal Will Break Stock Settings)
 
-# DCP Platform Contracts
+# DCP Platform Contracts (com.amazon.dcp.contracts.library)
 #rm -r /system/priv-app/DeviceSoftwareOTAContracts/
 
-# Amazon Device Settings
+# Amazon Device Settings (com.amazon.device.settings)
 #rm -r /system/priv-app/RemoteSettingsAndroid/
 
 # Amazon Device Settings Internal SDK (breaks Device and Applications Settings Activities)
 #rm -r /system/priv-app/RemoteSettingsInternalSDK/
 
-
 # VoiceView
-rm -r /system/priv-app/Logan/
+rm -r /system/priv-app/logan/
 
 # USB Tuner
 # rm -r /system/priv-app/com.amazon.malcolm/
@@ -691,10 +702,8 @@ rm -r /system/priv-app/com.amazon.katoch/
 # Fire TV Alexa Alerts
 rm -r /system/priv-app/com.amazon.tv.alexaalerts/
 
-# Unknown
-rm -r /system/priv-app/com.amazon.tv.devicecontrol/
-
 # Equipment Control (REMOVAL CAN BREAK AMAZON UI)
+# rm -r /system/priv-app/com.amazon.tv.devicecontrol/
 # rm -r /system/priv-app/com.amazon.tv.devicecontrolsettings/
 
 # Forced App Updater
@@ -720,10 +729,16 @@ rm -r /system/priv-app/com.amazon.whisperjoin.middleware.np/
 
 # com.amznfuse.operatorredirection (Unknown)
 rm -r /system/priv-app/com.amznfuse.operatorredirection/
+
+# com.amazon.sync.provider.ipc
+rm -r /system/priv-app/sync-provider_ipc-tv-release/
 # ===============FireOS 5.2.7.2 END===============
 
 
 # ===============From /system/app/ START===============
+
+#rm -r /system/app/AmazonDeviceMetrics/
+#rm -r /system/app/FireTvResolutionCycler/
 
 # Amazon Enterprise Controls
 rm -r /system/app/DeviceControlService/
@@ -732,6 +747,9 @@ rm -r /system/app/DocumentsUI/
 
 # Factory Data Reset Whitelist Manager
 rm -r /system/app/fdrw/
+
+# FrameworksMetrics
+rm -r /system/app/FrameworksMetrics/
 
 rm -r /system/app/PicoTts/
 rm -r /system/app/UnifiedSettingsProvider/
@@ -745,7 +763,7 @@ rm -r /system/app/com.amazon.alexa.externalmediaplayer.fireos/
 
 #rm -r /system/app/CredentialStorage/
 #rm -r /system/app/FireOsMiddlewareDebugApp/
-#rm -r /system/app/sync-provider_ipc-tv-release/
+
 #rm -r /system/app/sync-service-fireos-tv-release/
 # ===============From /system/app/ END===============
 
@@ -921,7 +939,7 @@ rm -r /data/data/com.amazon.vizzini/
 #rm -r /data/data/MetricsApi/
 
 # VoiceView
-rm -r /data/data/Logan/
+rm -r /data/data/com.amazon.logan-1/
 
 # Amazon WebView Metrics Service
 rm -r /data/data/com.amazon.webview.metrics.service/

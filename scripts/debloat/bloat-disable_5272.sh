@@ -5,7 +5,9 @@ echo "Disabling Amazon Bloat...."
 echo ""
 echo ""
 
-pm disable amazon.jackson19
+# Do Not Remove on 5.2.7.2 (Breaks Display and Applications Settings)
+#pm disable amazon.jackson19
+
 pm disable android.amazon.perm
 pm disable com.amazon.acos.providers.UnifiedSettingsProvider
 pm disable com.amazon.ags.app
@@ -20,7 +22,6 @@ pm disable com.amazon.device.crashmanager
 pm disable com.amazon.device.messaging
 pm disable com.amazon.device.messaging.sdk.internal.library
 pm disable com.amazon.device.messaging.sdk.library
-pm disable com.amazon.device.settings
 pm disable com.amazon.device.sync
 pm disable com.amazon.device.sync.sdk.internal
 pm disable com.amazon.kindle.cms
@@ -35,8 +36,13 @@ pm disable com.amazon.recess
 pm disable com.amazon.securitysyncclient
 pm disable com.amazon.sharingservice.android.client.proxy
 pm disable com.amazon.shpm
+
+# sync-provider_ipc-tv-release
 pm disable com.amazon.sync.provider.ipc
+
+# Content Sync Framework (sync-service-fireos-tv-release)
 pm disable com.amazon.sync.service
+
 pm disable com.amazon.tv.legal.notices
 pm disable com.amazon.tv.parentalcontrols
 pm disable com.amazon.tv.support
@@ -61,7 +67,7 @@ pm disable com.amazon.device.logmanager
 # OTA Related
 pm disable com.amazon.dcp
 pm disable com.amazon.dcp.contracts.framework.library
-pm disable com.amazon.dcp.contracts.library
+#pm disable com.amazon.dcp.contracts.library
 pm disable com.amazon.device.software.ota
 pm disable com.amazon.device.software.ota.override
 pm disable com.amazon.settings.systemupdates
@@ -214,11 +220,13 @@ pm disable com.amazon.advertisingidsettings
 
 # FireOS 5.2.6.2
 pm disable com.amazon.alexashopping
-# pm disable com.amazon.device.settings
 pm disable com.amazon.ftv.glorialist
 pm disable com.amazon.tv.livetv
 pm disable com.amazon.amazonvideo.livingroom
 pm disable com.amazon.kor.demo
+
+# RemoteSettingsAndroid
+#pm disable com.amazon.device.settings
 
 # com.amazon.webview.awvdeploymentservice Developer Build
 pm disable com.amazon.webview.awvdeploymentservice
@@ -236,7 +244,7 @@ pm disable com.amazon.wifilocker
 pm disable com.amazon.ssdpservice
 
 # Settings Notification Center
-pm disable com.amazon.tv.notificationcenter
+#pm disable com.amazon.tv.notificationcenter
 
 # FireOS 5.2.6.3
 # Fire Basic Keyboard (Simplified Chinese)
@@ -339,10 +347,10 @@ pm disable com.amazon.katoch
 pm disable com.amazon.tv.alexaalerts
 
 # Unknown
-pm disable com.amazon.devicecontrol
-pm disable com.amazon.tv.devicecontrol
 
 # Equipment Control (REMOVAL CAN BREAK AMAZON UI)
+# pm disable com.amazon.devicecontrol
+# pm disable com.amazon.tv.devicecontrol
 # pm disable com.amazon.tv.devicecontrolsettings
 
 # Forced App Updater
