@@ -382,8 +382,11 @@ if %downgrade%==1 %shell% "rm -r /system/priv-app/amazon.jackson-19/"
 %shell% "rm -r /system/priv-app/DeviceMessagingAndroidInternalSDK/"
 %shell% "rm -r /system/priv-app/DeviceMessagingAndroidSDK/"
 %shell% "rm -r /system/priv-app/DownloadProvider/"
-%shell% "rm -r /system/priv-app/FireApplicationCompatibilityEnforcer/"
-%shell% "rm -r /system/priv-app/FireApplicationCompatibilityEnforcerSDK/"
+
+:: Needed For Mouse Toggle and Maybe Others Using ADB Confirmation
+if %downgrade%==1 %shell% "rm -r /system/priv-app/FireApplicationCompatibilityEnforcer/"
+if %downgrade%==1 %shell% "rm -r /system/priv-app/FireApplicationCompatibilityEnforcerSDK/"
+
 %shell% "rm -r /system/priv-app/FireRecessProxy/"
 %shell% "rm -r /system/priv-app/FireTVDefaultMediaReceiver/"
 %shell% "rm -r /system/priv-app/FireTvNotificationService/"
@@ -649,10 +652,10 @@ echo.
 %shell% "cp -r /sdcard/restore/ /system/"
 %sleep% 2
 
+if %downgrade%==1 (
 cls
 echo Settings Permissions and Copying Custom OOBE App to /system/priv-app/...
 echo.
-if %downgrade%==1 (
 %shell% "rm -r /system/priv-app/com.amazon.tv.oobe/"
 %shell% "mkdir /system/priv-app/com.amazon.tv.oobe/"
 %shell% "chmod 0775 /system/priv-app/com.amazon.tv.oobe/"
@@ -661,16 +664,13 @@ if %downgrade%==1 (
 %shell% "chmod 0644 /system/priv-app/com.amazon.tv.oobe/com.amazon.tv.oobe.apk"
 %shell% "chown root:root /system/priv-app/com.amazon.tv.oobe/com.amazon.tv.oobe.apk"
 %sleep% 2
-)
 
 cls
 echo Removing Unused Images and Sounds...
 echo.
-if %downgrade%==1 (
 %shell% "rm -r /system/res/images/*.*"
 %shell% "rm -r /system/res/sound/*.*"
 %sleep% 2
-)
 
 cls
 echo Installing Magisk for SU and ADB Access on Stock Rom...
@@ -679,22 +679,11 @@ echo.
 %twrp% install /data/local/tmp/Magisk-v19.3.zip
 %sleep% 3
 
-if %downgrade%==1 (
 cls
 echo Wiping Data and Cache...
 echo.
 %twrp% wipe data
 %sleep% 5
-)
-
-if %downgrade%==0 (
-cls
-echo Wiping Cache and Dalvik Cache...
-echo.
-%twrp% wipe cache
-%twrp% wipe dalvik
-%sleep% 5
-)
 
 cls
 echo Waiting For Cache Rebuild and ADB Service...
@@ -706,6 +695,9 @@ echo.
 
 %adb% reboot
 %adbWait%
+)
+
+if %downgrade%==0 goto skipmnt
 
 cls
 echo Rebooting Back To Recovery To Continue...
@@ -737,6 +729,7 @@ if %rwcheck%==1 goto stage3
 
 %sleep% 3
 
+:skipmnt
 :: TODO add Controllers script
 cls
 echo Pushing Settings Scripts to Temp...
@@ -928,13 +921,18 @@ echo.
 cls
 echo Waiting For Cache Rebuild and ADB Service...
 echo.
-echo This may take up to 5 minutes or more and Remote Find screen will be loaded
+if %downgrade%==1 echo This may take up to 5 minutes or more and Remote Find screen will be loaded
+if %downgrade%==0 echo This may take up to 5 minutes or more
 echo.
 echo Do not interact with the device yet!
 echo.
 %adb% reboot
 %adbWait%
-if %downgrade%==0 goto final
+
+if %downgrade%==0 (
+%sleep% 90
+goto finished
+)
 
 :chkadb
 echo Checking For ADB Service...
@@ -985,11 +983,12 @@ if %unkadb%==1 goto stage4
 
 %sleep% 3
 
+:finished
 cls
 color 0a
 echo Finished!
-echo.
-echo Complete the user setup to configure remote, wifi, and Amazon account
+if %downgrade%==1 echo.
+if %downgrade%==1 echo Complete the user setup to configure remote, wifi, and Amazon account
 echo.
 echo Once on Launcher, use TitaniumBackup to restore data for
 echo Home, Mouse Toggle, Reboot, and SH Script Runner Settings
