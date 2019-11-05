@@ -17,8 +17,11 @@ pm disable android.amazon.perm
 pm disable com.amazon.acos.providers.UnifiedSettingsProvider
 pm disable com.amazon.ags.app
 pm disable com.amazon.android.marketplace
-pm disable com.amazon.application.compatibility.enforcer
-pm disable com.amazon.application.compatibility.enforcer.sdk.library
+
+# Do Not Remove For 5.2.7.2
+# pm disable com.amazon.application.compatibility.enforcer
+# pm disable com.amazon.application.compatibility.enforcer.sdk.library
+
 pm disable com.amazon.awvflingreceiver
 pm disable com.amazon.bueller.music
 pm disable com.amazon.bueller.notification
@@ -424,8 +427,11 @@ rm -r /system/priv-app/DeviceMessagingAndroid/
 rm -r /system/priv-app/DeviceMessagingAndroidInternalSDK/
 rm -r /system/priv-app/DeviceMessagingAndroidSDK/
 rm -r /system/priv-app/DownloadProvider/
-rm -r /system/priv-app/FireApplicationCompatibilityEnforcer/
-rm -r /system/priv-app/FireApplicationCompatibilityEnforcerSDK/
+
+# Do Not Remove For 5.2.7.2
+# rm -r /system/priv-app/FireApplicationCompatibilityEnforcer/
+# rm -r /system/priv-app/FireApplicationCompatibilityEnforcerSDK/
+
 rm -r /system/priv-app/FireOsMiddlewareDebugApp/
 rm -r /system/priv-app/FireRecessProxy/
 rm -r /system/priv-app/FireTVDefaultMediaReceiver/
@@ -569,7 +575,10 @@ rm -r /system/priv-app/logan/
 # ===============FireOS 5.2.1.1 START===============
 rm -r /system/priv-app/AdvertisingIdSettings/
 rm -r /system/priv-app/com.amazon.tv.nimh/
-rm -r /system/priv-app/FireTvSaleService/
+
+# Do Not Remove on 5.2.7.2
+#rm -r /system/priv-app/FireTvSaleService/
+
 rm -r /system/priv-app/IvonaTTS/
 rm -r /system/priv-app/IvonaTtsOrchestrator/
 rm -r /system/priv-app/TvProvider/
@@ -872,8 +881,11 @@ rm -r /data/data/DeviceMessagingAndroidSDK/
 rm -r /data/data/DownloadProvider/
 #rm -r /data/data/DownloadProviderUi/
 #rm -r /data/data/ExternalStorageProvider/
-rm -r /data/data/FireApplicationCompatibilityEnforcer/
-rm -r /data/data/FireApplicationCompatibilityEnforcerSDK/
+
+# Do Not Remove For 5.2.7.2
+# rm -r /data/data/FireApplicationCompatibilityEnforcer/
+# rm -r /data/data/FireApplicationCompatibilityEnforcerSDK/
+
 rm -r /data/data/FireOsMiddlewareDebugApp/
 rm -r /data/data/FireRecessProxy/
 rm -r /data/data/FireTVDefaultMediaReceiver/

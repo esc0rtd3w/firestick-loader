@@ -12,8 +12,11 @@ pm disable android.amazon.perm
 pm disable com.amazon.acos.providers.UnifiedSettingsProvider
 pm disable com.amazon.ags.app
 pm disable com.amazon.android.marketplace
-pm disable com.amazon.application.compatibility.enforcer
-pm disable com.amazon.application.compatibility.enforcer.sdk.library
+
+# Do Not Remove For 5.2.7.2
+# pm disable com.amazon.application.compatibility.enforcer
+# pm disable com.amazon.application.compatibility.enforcer.sdk.library
+
 pm disable com.amazon.awvflingreceiver
 pm disable com.amazon.bueller.music
 pm disable com.amazon.bueller.notification
