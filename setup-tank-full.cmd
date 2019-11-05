@@ -653,21 +653,25 @@ echo.
 cls
 echo Settings Permissions and Copying Custom OOBE App to /system/priv-app/...
 echo.
-if %downgrade%==1 %shell% "rm -r /system/priv-app/com.amazon.tv.oobe/"
-if %downgrade%==1 %shell% "mkdir /system/priv-app/com.amazon.tv.oobe/"
-if %downgrade%==1 %shell% "chmod 0775 /system/priv-app/com.amazon.tv.oobe/"
-if %downgrade%==1 %shell% "chown root:root /system/priv-app/com.amazon.tv.oobe/"
-if %downgrade%==1 %shell% "cp /system/restore/apk/system/com.amazon.tv.oobe.apk /system/priv-app/com.amazon.tv.oobe/com.amazon.tv.oobe.apk"
-if %downgrade%==1 %shell% "chmod 0644 /system/priv-app/com.amazon.tv.oobe/com.amazon.tv.oobe.apk"
-if %downgrade%==1 %shell% "chown root:root /system/priv-app/com.amazon.tv.oobe/com.amazon.tv.oobe.apk"
+if %downgrade%==1 (
+%shell% "rm -r /system/priv-app/com.amazon.tv.oobe/"
+%shell% "mkdir /system/priv-app/com.amazon.tv.oobe/"
+%shell% "chmod 0775 /system/priv-app/com.amazon.tv.oobe/"
+%shell% "chown root:root /system/priv-app/com.amazon.tv.oobe/"
+%shell% "cp /system/restore/apk/system/com.amazon.tv.oobe.apk /system/priv-app/com.amazon.tv.oobe/com.amazon.tv.oobe.apk"
+%shell% "chmod 0644 /system/priv-app/com.amazon.tv.oobe/com.amazon.tv.oobe.apk"
+%shell% "chown root:root /system/priv-app/com.amazon.tv.oobe/com.amazon.tv.oobe.apk"
 %sleep% 2
+)
 
 cls
 echo Removing Unused Images and Sounds...
 echo.
-if %downgrade%==1 %shell% "rm -r /system/res/images/*.*"
-if %downgrade%==1 %shell% "rm -r /system/res/sound/*.*"
+if %downgrade%==1 (
+%shell% "rm -r /system/res/images/*.*"
+%shell% "rm -r /system/res/sound/*.*"
 %sleep% 2
+)
 
 cls
 echo Installing Magisk for SU and ADB Access on Stock Rom...
@@ -875,21 +879,6 @@ echo.
 %shell% "chown root:root /system/app/TitaniumBackupAddon/TitaniumBackupAddon.apk"
 
 %sleep% 2
-
-::cls
-::echo Copying App Data back to /data/data/
-::echo.
-::%shell% "cp -r /system/restore/ca.dstudio.atvlauncher.pro/ /data/data/"
-::%shell% "cp -r /system/restore/com.adamioan.scriptrunner/ /data/data/"
-::%shell% "cp -r /system/restore/com.fluxii.android.mousetoggleforfiretv/ /data/data/"
-::%shell% "chmod -R 0777 /data/data/ca.dstudio.atvlauncher.pro/"
-::%shell% "chmod 0660 /data/data/ca.dstudio.atvlauncher.pro/databases/sections.db"
-::%shell% "chmod 0660 /data/data/ca.dstudio.atvlauncher.pro/databases/sections.db-shm"
-::%shell% "chmod 0660 /data/data/ca.dstudio.atvlauncher.pro/databases/sections.db-wal"
-::%shell% "chmod -R 0777 /data/data/com.adamioan.scriptrunner/"
-::%shell% "chmod -R 0777 /data/data/com.fluxii.android.mousetoggleforfiretv/"
-
-::%sleep% 2
 
 cls
 echo Installing BusyBox...
