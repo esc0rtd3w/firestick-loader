@@ -37,6 +37,10 @@ Loaded Using /install-apps-lite-auto-kodi18.cmd
 Tank Full Setup Script 5.2.7.2
 <br/>
 ![Tank 5.2.7.2 Full Setup Script](https://github.com/esc0rtd3w/firestick-loader/blob/master/misc/preview/5.2.7.2/tank/tank-5.2.7.2-debloated.png)
+<br/><br/>
+Tank Full Setup Script 5.2.7.2 (Loaded)
+<br/>
+![Tank 5.2.7.2 Full Setup Script](https://github.com/esc0rtd3w/firestick-loader/blob/master/misc/preview/5.2.7.2/tank/tank-5.2.7.2-debloated-loaded.png)
 
 
 
