@@ -290,6 +290,16 @@ echo Installing %appName%...
 echo.
 %install% "apps\web\puffin-tv.apk"
 
+cls
+%_color% 0e
+set appName=Amazon Silk Web Browser
+set apk=
+echo.
+echo.
+echo Installing %appName%...
+echo.
+%install% "apps\web\amazon-silk.apk"
+
 goto end
 
 :end
