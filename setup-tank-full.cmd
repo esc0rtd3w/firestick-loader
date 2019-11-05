@@ -249,7 +249,6 @@ set myaccount="scripts\settings\tank\system\scripts\5272\my-account.sh"
 set network="scripts\settings\tank\system\scripts\5272\network.sh"
 set notifications="scripts\settings\tank\system\scripts\5272\notifications.sh"
 set preferences="scripts\settings\tank\system\scripts\5272\preferences.sh"
-goto stage2
 )
 color 0e
 set rwcheck=0
@@ -259,6 +258,8 @@ echo Forcing Reboot Back To Recovery...
 echo.
 %adb% reboot recovery
 %sleep% 25
+
+if %downgrade%==0 goto stage2
 
 cls
 echo.
