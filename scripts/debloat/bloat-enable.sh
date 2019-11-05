@@ -216,7 +216,7 @@ pm enable com.amazon.tz.webcryptotzservice
 
 # FireOS 5.2.6.2
 pm enable com.amazon.alexashopping
-# pm enable com.amazon.device.settings
+pm enable com.amazon.device.settings
 pm enable com.amazon.ftv.glorialist
 pm enable com.amazon.tv.livetv
 pm enable com.amazon.amazonvideo.livingroom
@@ -226,10 +226,10 @@ pm enable com.amazon.kor.demo
 pm enable com.amazon.webview.awvdeploymentservice
 
 # OttSsoLib
-# pm enable com.amazon.tv.ottssolib
+pm enable com.amazon.tv.ottssolib
 
 # OttSsoCompanionApp
-# pm enable com.amazon.tv.ottssocompanionapp
+pm enable com.amazon.tv.ottssocompanionapp
 
 # WiFi Locker
 pm enable com.amazon.wifilocker
@@ -286,12 +286,12 @@ pm enable com.amazon.naatyam
 pm enable com.amazon.tv.legal.notices
 
 # SmartConnectService (Unknown)
-# pm enable com.amazon.net.smartconnect
+pm enable com.amazon.net.smartconnect
 
 # TMMTutorial
 pm enable com.amazon.tmm.tutorial
 
-# pm enable com.amazon.tv.forcedotaupdater
+pm enable com.amazon.tv.forcedotaupdater
 pm enable TIFObserverService
 
 # FireOS 5.2.7.2
@@ -300,7 +300,7 @@ pm enable TIFObserverService
 pm enable com.amazon.alexa.externalmediaplayer.fireos
 
 # BluetoothKeyMapLib (Unknown)
-# pm enable com.amazon.device.bluetoothkeymaplib
+pm enable com.amazon.device.bluetoothkeymaplib
 
 # ALE (Unknown)
 pm enable com.amazon.ale
@@ -327,7 +327,7 @@ pm enable com.amazon.firerestapiframework
 pm enable com.amazon.ftv.glorialist
 
 # Screensaver (REMOVAL CAN BREAK AMAZON UI)
-# pm enable com.amazon.ftv.screensaver
+pm enable com.amazon.ftv.screensaver
 
 # com.amazon.ftv.xpicker stub-apk
 pm enable com.amazon.ftv.xpicker
@@ -335,16 +335,16 @@ pm enable com.amazon.ftv.xpicker
 # Katoch (Unknown)
 pm enable com.amazon.katoch
 
-# pm enable com.amazon.providers.tv
+pm enable com.amazon.providers.tv
 
 # Fire TV Alexa Alerts
 pm enable com.amazon.tv.alexaalerts
 
 # Unknown
-# pm enable com.amazon.tv.devicecontrol
+pm enable com.amazon.tv.devicecontrol
 
 # Equipment Control (REMOVAL CAN BREAK AMAZON UI)
-# pm enable com.amazon.tv.devicecontrolsettings
+pm enable com.amazon.tv.devicecontrolsettings
 
 # Forced App Updater
 pm enable com.amazon.tv.forcedotaupdater.v2
@@ -356,10 +356,10 @@ pm enable com.amazon.tv.releasenotes
 pm enable com.amazon.tv.routing
 
 # Amazon Settings Core (REMOVAL CAN BREAK AMAZON UI)
-# pm enable com.amazon.tv.settings.core
+pm enable com.amazon.tv.settings.core
 
 # Amazon Settings v2 (REMOVAL CAN BREAK AMAZON UI)
-# pm enable com.amazon.tv.settings.v2
+pm enable com.amazon.tv.settings.v2
 
 # Amazon FreeTime
 pm enable com.amazon.tahoe
