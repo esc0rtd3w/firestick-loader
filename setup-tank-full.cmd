@@ -101,7 +101,8 @@ color 0c
 set noway=0
 set dgchoice=n
 
-if %fireOsVersion%==5.2.7.2 (
+if %fireOsVersion%==5.2.6.3 goto is5263
+
 cls
 %cocolor% 0a
 echo TWRP Found!
@@ -111,22 +112,20 @@ echo Device: %fireOsDevice% / Firmware Version: %fireOsVersion%
 echo.
 echo.
 %cocolor% 0e
-echo Do you want to downgrade [Y/N]?
+echo Do you want to downgrade to 5.2.6.3 [Y/N]?
 echo.
 echo.
 set /p dgchoice=
 echo.
 
-if %dgchoice%==y set downgrade=0
-if %dgchoice%==y goto is5263
-if %dgchoice%==Y set downgrade=0
-if %dgchoice%==Y goto is5263
-if %dgchoice%==n set downgrade=1
-if %dgchoice%==n goto is5272
-if %dgchoice%==N set downgrade=1
-if %dgchoice%==N goto is5272
+if %dgchoice%==n set downgrade=0
+if %dgchoice%==N set downgrade=0
+if %dgchoice%==y set downgrade=1
+if %dgchoice%==Y set downgrade=1
+
+if %downgrade%==0 goto is5272
+if %downgrade%==1 goto is5263
 goto dgask
-)
 
 :is5263
 cls
