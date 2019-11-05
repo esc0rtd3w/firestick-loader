@@ -353,7 +353,7 @@ echo.
 %sleep% 3
 
 :: FireOS 5.05 and Higher
-%shell% "rm -r /system/priv-app/amazon.jackson-19/"
+if %downgrade%==1 %shell% "rm -r /system/priv-app/amazon.jackson-19/"
 %shell% "rm -r /system/priv-app/AmazonKKWebViewLib/"
 %shell% "rm -r /system/priv-app/BackupRestoreConfirmation/"
 %shell% "rm -r /system/priv-app/com.amazon.ags.app/"
@@ -372,7 +372,7 @@ echo.
 %shell% "rm -r /system/priv-app/com.amazon.tv.legal.notices/"
 %shell% "rm -r /system/priv-app/com.amazon.tv.parentalcontrols/"
 %shell% "rm -r /system/priv-app/com.amazon.venezia/"
-%shell% "rm -r /system/priv-app/com.amazon.visualonawv/"
+::%shell% "rm -r /system/priv-app/com.amazon.visualonawv/"
 %shell% "rm -r /system/priv-app/ContentSupportProvider/"
 %shell% "rm -r /system/priv-app/CrashManager/"
 %shell% "rm -r /system/priv-app/ConnectivityDiag/"
@@ -568,10 +568,8 @@ if %downgrade%==0 %shell% "rm -r /system/priv-app/com.amazon.katoch/"
 :: Fire TV Alexa Alerts
 if %downgrade%==0 %shell% "rm -r /system/priv-app/com.amazon.tv.alexaalerts/"
 
-:: Unknown
-if %downgrade%==0 %shell% "rm -r /system/priv-app/com.amazon.tv.devicecontrol/"
-
 :: Equipment Control (REMOVAL CAN BREAK AMAZON UI)
+:: if %downgrade%==0 %shell% "rm -r /system/priv-app/com.amazon.tv.devicecontroldevicecontrol/"
 :: if %downgrade%==0 %shell% "rm -r /system/priv-app/com.amazon.tv.devicecontrolsettings/"
 
 :: Forced App Updater
