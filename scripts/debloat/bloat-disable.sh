@@ -5,13 +5,18 @@ echo "Disabling Amazon Bloat...."
 echo ""
 echo ""
 
-pm disable amazon.jackson19
+# Do Not Remove on 5.2.7.2 (Breaks Display and Applications Settings)
+#pm disable amazon.jackson19
+
 pm disable android.amazon.perm
 pm disable com.amazon.acos.providers.UnifiedSettingsProvider
 pm disable com.amazon.ags.app
 pm disable com.amazon.android.marketplace
-pm disable com.amazon.application.compatibility.enforcer
-pm disable com.amazon.application.compatibility.enforcer.sdk.library
+
+# Do Not Remove For 5.2.7.2
+# pm disable com.amazon.application.compatibility.enforcer
+# pm disable com.amazon.application.compatibility.enforcer.sdk.library
+
 pm disable com.amazon.awvflingreceiver
 pm disable com.amazon.bueller.music
 pm disable com.amazon.bueller.notification
@@ -20,16 +25,13 @@ pm disable com.amazon.device.crashmanager
 pm disable com.amazon.device.messaging
 pm disable com.amazon.device.messaging.sdk.internal.library
 pm disable com.amazon.device.messaging.sdk.library
-pm disable com.amazon.device.settings
 pm disable com.amazon.device.sync
 pm disable com.amazon.device.sync.sdk.internal
-pm disable com.amazon.devicecontrol
 pm disable com.amazon.kindle.cms
 pm disable com.amazon.kindle.devicecontrols
 pm disable com.amazon.kso.blackbird
 pm disable com.amazon.ods.kindleconnect
 pm disable com.amazon.parentalcontrols
-pm disable com.amazon.platform.fdrw
 pm disable com.amazon.precog
 pm disable com.amazon.providers
 pm disable com.amazon.providers.contentsupport
@@ -37,8 +39,13 @@ pm disable com.amazon.recess
 pm disable com.amazon.securitysyncclient
 pm disable com.amazon.sharingservice.android.client.proxy
 pm disable com.amazon.shpm
+
+# sync-provider_ipc-tv-release
 pm disable com.amazon.sync.provider.ipc
+
+# Content Sync Framework (sync-service-fireos-tv-release)
 pm disable com.amazon.sync.service
+
 pm disable com.amazon.tv.legal.notices
 pm disable com.amazon.tv.parentalcontrols
 pm disable com.amazon.tv.support
@@ -47,6 +54,9 @@ pm disable com.amazon.videoads.app
 pm disable com.amazon.visualonawv
 pm disable com.amazon.webview
 pm disable com.svox.pico
+
+# Factory Data Reset Whitelist Manager
+pm disable com.amazon.platform.fdrw
 
 # FrameworksMetrics
 pm disable com.amazon.tv.fw.metrics
@@ -60,7 +70,7 @@ pm disable com.amazon.device.logmanager
 # OTA Related
 pm disable com.amazon.dcp
 pm disable com.amazon.dcp.contracts.framework.library
-pm disable com.amazon.dcp.contracts.library
+#pm disable com.amazon.dcp.contracts.library
 pm disable com.amazon.device.software.ota
 pm disable com.amazon.device.software.ota.override
 pm disable com.amazon.settings.systemupdates
@@ -109,7 +119,7 @@ pm disable com.amazon.tmm.tutorial
 pm disable com.amazon.tv.csapp
 
 # Amazon Screensaver
-#pm disable com.amazon.bueller.photos
+pm disable com.amazon.bueller.photos
 
 # Possibe Remote Update??
 pm disable com.amazon.device.bluetoothdfu
@@ -138,9 +148,9 @@ pm disable com.amazon.vizzini
 #pm disable com.amazon.wcast.sink
 
 # Only Disable If Amazon Video and Store Will Not Be Needed as User Installed APKs
-#pm disable com.amazon.avod
-#pm disable com.amazon.shoptv.client
-#pm disable com.amazon.venezia
+pm disable com.amazon.avod
+pm disable com.amazon.shoptv.client
+pm disable com.amazon.venezia
 
 # Home may kill enough by itself (untested)
 #pm disable com.amazon.tv.launcher/.ui.HomeActivity
@@ -213,11 +223,13 @@ pm disable com.amazon.advertisingidsettings
 
 # FireOS 5.2.6.2
 pm disable com.amazon.alexashopping
-# pm disable com.amazon.device.settings
 pm disable com.amazon.ftv.glorialist
 pm disable com.amazon.tv.livetv
 pm disable com.amazon.amazonvideo.livingroom
 pm disable com.amazon.kor.demo
+
+# RemoteSettingsAndroid
+#pm disable com.amazon.device.settings
 
 # com.amazon.webview.awvdeploymentservice Developer Build
 pm disable com.amazon.webview.awvdeploymentservice
@@ -235,7 +247,7 @@ pm disable com.amazon.wifilocker
 pm disable com.amazon.ssdpservice
 
 # Settings Notification Center
-pm disable com.amazon.tv.notificationcenter
+#pm disable com.amazon.tv.notificationcenter
 
 # FireOS 5.2.6.3
 # Fire Basic Keyboard (Simplified Chinese)
@@ -255,3 +267,115 @@ pm disable com.amazon.tifobserver
 
 # Amazon WebView Metrics Service
 pm disable com.amazon.webview.metrics.service
+
+# FireOS 5.2.6.7
+
+# ACAFireTVAndroidClient
+pm disable com.amazon.aca
+
+# Aria AriaRuntime
+pm disable com.amazon.aria
+
+# Unknown)
+pm disable com.amazon.firehomestarter
+
+# Fire TV Recast --
+pm disable com.amazon.franktvinput
+
+# (Unknown)
+pm disable com.amazon.gloria.graphiq
+
+# News
+pm disable com.amazon.hedwig
+
+# Naatyam (Unknown)
+pm disable com.amazon.naatyam
+
+# KFTV Legal Notices
+pm disable com.amazon.tv.legal.notices
+
+# SmartConnectService (Unknown)
+# pm disable com.amazon.net.smartconnect
+
+# TMMTutorial
+pm disable com.amazon.tmm.tutorial
+
+# pm disable com.amazon.tv.forcedotaupdater
+pm disable TIFObserverService
+
+# FireOS 5.2.7.2
+
+# Alexa Media Controller
+pm disable com.amazon.alexa.externalmediaplayer.fireos
+
+# BluetoothKeyMapLib (Unknown)
+# pm disable com.amazon.device.bluetoothkeymaplib
+
+# ALE (Unknown)
+pm disable com.amazon.ale
+
+# My Application 2.0 (WTF! LMAO)
+pm disable com.amazon.appaccesskeyprovider
+
+# Alexa Voice Layer
+pm disable com.amazon.avl.ftv
+
+# Ceviche (Unknown)
+pm disable com.amazon.ceviche
+
+# Unknown
+pm disable com.amazon.dpcclient
+
+# Prime Video PVFTV
+pm disable com.amazon.firebat
+
+# FireRESTAPIFramework
+pm disable com.amazon.firerestapiframework
+
+# Gloria
+pm disable com.amazon.ftv.glorialist
+
+# Screensaver (REMOVAL CAN BREAK AMAZON UI)
+# pm disable com.amazon.ftv.screensaver
+
+# com.amazon.ftv.xpicker stub-apk
+pm disable com.amazon.ftv.xpicker
+
+# Katoch (Unknown)
+pm disable com.amazon.katoch
+
+# pm disable com.amazon.providers.tv
+
+# Fire TV Alexa Alerts
+pm disable com.amazon.tv.alexaalerts
+
+# Unknown
+
+# Equipment Control (REMOVAL CAN BREAK AMAZON UI)
+# pm disable com.amazon.devicecontrol
+# pm disable com.amazon.tv.devicecontrol
+# pm disable com.amazon.tv.devicecontrolsettings
+
+# Forced App Updater
+pm disable com.amazon.tv.forcedotaupdater.v2
+
+# ReleaseNotes
+pm disable com.amazon.tv.releasenotes
+
+# FTV Routing
+pm disable com.amazon.tv.routing
+
+# Amazon Settings Core (REMOVAL CAN BREAK AMAZON UI)
+# pm disable com.amazon.tv.settings.core
+
+# Amazon Settings v2 (REMOVAL CAN BREAK AMAZON UI)
+# pm disable com.amazon.tv.settings.v2
+
+# Amazon FreeTime
+pm disable com.amazon.tahoe
+
+# Whisper Join FFS Middleware
+pm disable com.amazon.whisperjoin.middleware.np
+
+# Unknown
+pm disable com.amznfuse.operatorredirection

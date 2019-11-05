@@ -10,13 +10,18 @@ echo "Disabling Amazon Bloat...."
 echo ""
 echo ""
 
-pm disable amazon.jackson19
+# Do Not Remove on 5.2.7.2 (Breaks Display and Applications Settings)
+#pm disable amazon.jackson19
+
 pm disable android.amazon.perm
 pm disable com.amazon.acos.providers.UnifiedSettingsProvider
 pm disable com.amazon.ags.app
 pm disable com.amazon.android.marketplace
-pm disable com.amazon.application.compatibility.enforcer
-pm disable com.amazon.application.compatibility.enforcer.sdk.library
+
+# Do Not Remove For 5.2.7.2
+# pm disable com.amazon.application.compatibility.enforcer
+# pm disable com.amazon.application.compatibility.enforcer.sdk.library
+
 pm disable com.amazon.awvflingreceiver
 pm disable com.amazon.bueller.music
 pm disable com.amazon.bueller.notification
@@ -25,16 +30,13 @@ pm disable com.amazon.device.crashmanager
 pm disable com.amazon.device.messaging
 pm disable com.amazon.device.messaging.sdk.internal.library
 pm disable com.amazon.device.messaging.sdk.library
-pm disable com.amazon.device.settings
 pm disable com.amazon.device.sync
 pm disable com.amazon.device.sync.sdk.internal
-pm disable com.amazon.devicecontrol
 pm disable com.amazon.kindle.cms
 pm disable com.amazon.kindle.devicecontrols
 pm disable com.amazon.kso.blackbird
 pm disable com.amazon.ods.kindleconnect
 pm disable com.amazon.parentalcontrols
-pm disable com.amazon.platform.fdrw
 pm disable com.amazon.precog
 pm disable com.amazon.providers
 pm disable com.amazon.providers.contentsupport
@@ -42,8 +44,13 @@ pm disable com.amazon.recess
 pm disable com.amazon.securitysyncclient
 pm disable com.amazon.sharingservice.android.client.proxy
 pm disable com.amazon.shpm
+
+# sync-provider_ipc-tv-release
 pm disable com.amazon.sync.provider.ipc
+
+# Content Sync Framework (sync-service-fireos-tv-release)
 pm disable com.amazon.sync.service
+
 pm disable com.amazon.tv.legal.notices
 pm disable com.amazon.tv.parentalcontrols
 pm disable com.amazon.tv.support
@@ -52,6 +59,9 @@ pm disable com.amazon.videoads.app
 pm disable com.amazon.visualonawv
 pm disable com.amazon.webview
 pm disable com.svox.pico
+
+# Factory Data Reset Whitelist Manager
+pm disable com.amazon.platform.fdrw
 
 # FrameworksMetrics
 pm disable com.amazon.tv.fw.metrics
@@ -65,7 +75,7 @@ pm disable com.amazon.device.logmanager
 # OTA Related
 pm disable com.amazon.dcp
 pm disable com.amazon.dcp.contracts.framework.library
-pm disable com.amazon.dcp.contracts.library
+#pm disable com.amazon.dcp.contracts.library
 pm disable com.amazon.device.software.ota
 pm disable com.amazon.device.software.ota.override
 pm disable com.amazon.settings.systemupdates
@@ -114,7 +124,7 @@ pm disable com.amazon.tmm.tutorial
 pm disable com.amazon.tv.csapp
 
 # Amazon Screensaver
-#pm disable com.amazon.bueller.photos
+pm disable com.amazon.bueller.photos
 
 # Possibe Remote Update??
 pm disable com.amazon.device.bluetoothdfu
@@ -143,9 +153,9 @@ pm disable com.amazon.vizzini
 #pm disable com.amazon.wcast.sink
 
 # Only Disable If Amazon Video and Store Will Not Be Needed as User Installed APKs
-#pm disable com.amazon.avod
-#pm disable com.amazon.shoptv.client
-#pm disable com.amazon.venezia
+pm disable com.amazon.avod
+pm disable com.amazon.shoptv.client
+pm disable com.amazon.venezia
 
 # Home may kill enough by itself (untested)
 #pm disable com.amazon.tv.launcher/.ui.HomeActivity
@@ -218,11 +228,13 @@ pm disable com.amazon.advertisingidsettings
 
 # FireOS 5.2.6.2
 pm disable com.amazon.alexashopping
-# pm disable com.amazon.device.settings
 pm disable com.amazon.ftv.glorialist
 pm disable com.amazon.tv.livetv
 pm disable com.amazon.amazonvideo.livingroom
 pm disable com.amazon.kor.demo
+
+# RemoteSettingsAndroid
+#pm disable com.amazon.device.settings
 
 # com.amazon.webview.awvdeploymentservice Developer Build
 pm disable com.amazon.webview.awvdeploymentservice
@@ -240,7 +252,7 @@ pm disable com.amazon.wifilocker
 pm disable com.amazon.ssdpservice
 
 # Settings Notification Center
-pm disable com.amazon.tv.notificationcenter
+#pm disable com.amazon.tv.notificationcenter
 
 # FireOS 5.2.6.3
 # Fire Basic Keyboard (Simplified Chinese)
@@ -261,14 +273,131 @@ pm disable com.amazon.tifobserver
 # Amazon WebView Metrics Service
 pm disable com.amazon.webview.metrics.service
 
+# FireOS 5.2.6.7
+
+# ACAFireTVAndroidClient
+pm disable com.amazon.aca
+
+# Aria AriaRuntime
+pm disable com.amazon.aria
+
+# Unknown)
+pm disable com.amazon.firehomestarter
+
+# Fire TV Recast --
+pm disable com.amazon.franktvinput
+
+# (Unknown)
+pm disable com.amazon.gloria.graphiq
+
+# News
+pm disable com.amazon.hedwig
+
+# Naatyam (Unknown)
+pm disable com.amazon.naatyam
+
+# KFTV Legal Notices
+pm disable com.amazon.tv.legal.notices
+
+# SmartConnectService (Unknown)
+# pm disable com.amazon.net.smartconnect
+
+# TMMTutorial
+pm disable com.amazon.tmm.tutorial
+
+# pm disable com.amazon.tv.forcedotaupdater
+pm disable TIFObserverService
+
+# FireOS 5.2.7.2
+
+# Alexa Media Controller
+pm disable com.amazon.alexa.externalmediaplayer.fireos
+
+# BluetoothKeyMapLib (Unknown)
+# pm disable com.amazon.device.bluetoothkeymaplib
+
+# ALE (Unknown)
+pm disable com.amazon.ale
+
+# My Application 2.0 (WTF! LMAO)
+pm disable com.amazon.appaccesskeyprovider
+
+# Alexa Voice Layer
+pm disable com.amazon.avl.ftv
+
+# Ceviche (Unknown)
+pm disable com.amazon.ceviche
+
+# Unknown
+pm disable com.amazon.dpcclient
+
+# Prime Video PVFTV
+pm disable com.amazon.firebat
+
+# FireRESTAPIFramework
+pm disable com.amazon.firerestapiframework
+
+# Gloria
+pm disable com.amazon.ftv.glorialist
+
+# Screensaver (REMOVAL CAN BREAK AMAZON UI)
+# pm disable com.amazon.ftv.screensaver
+
+# com.amazon.ftv.xpicker stub-apk
+pm disable com.amazon.ftv.xpicker
+
+# Katoch (Unknown)
+pm disable com.amazon.katoch
+
+# pm disable com.amazon.providers.tv
+
+# Fire TV Alexa Alerts
+pm disable com.amazon.tv.alexaalerts
+
+# Unknown
+
+# Equipment Control (REMOVAL CAN BREAK AMAZON UI)
+# pm disable com.amazon.devicecontrol
+# pm disable com.amazon.tv.devicecontrol
+# pm disable com.amazon.tv.devicecontrolsettings
+
+# Forced App Updater
+pm disable com.amazon.tv.forcedotaupdater.v2
+
+# ReleaseNotes
+pm disable com.amazon.tv.releasenotes
+
+# FTV Routing
+pm disable com.amazon.tv.routing
+
+# Amazon Settings Core (REMOVAL CAN BREAK AMAZON UI)
+# pm disable com.amazon.tv.settings.core
+
+# Amazon Settings v2 (REMOVAL CAN BREAK AMAZON UI)
+# pm disable com.amazon.tv.settings.v2
+
+# Amazon FreeTime
+pm disable com.amazon.tahoe
+
+# Whisper Join FFS Middleware
+pm disable com.amazon.whisperjoin.middleware.np
+
+# Unknown
+pm disable com.amznfuse.operatorredirection
+
+exit
 echo "Deleting Amazon Bloat...."
 echo ""
 echo ""
 
 mount -o rw,remount /system
 
+# ===============FireOS 5.0.5 Default START===============
 # Tested Removal OK
-rm -r /system/priv-app/amazon.jackson-19/
+
+# Do Not Remove on 5.2.7.2 (Breaks Display and Applications Settings)
+#rm -r /system/priv-app/amazon.jackson-19/
+
 rm -r /system/priv-app/AmazonKKWebViewLib/
 rm -r /system/priv-app/BackupRestoreConfirmation/
 rm -r /system/priv-app/com.amazon.ags.app/
@@ -298,8 +427,11 @@ rm -r /system/priv-app/DeviceMessagingAndroid/
 rm -r /system/priv-app/DeviceMessagingAndroidInternalSDK/
 rm -r /system/priv-app/DeviceMessagingAndroidSDK/
 rm -r /system/priv-app/DownloadProvider/
-rm -r /system/priv-app/FireApplicationCompatibilityEnforcer/
-rm -r /system/priv-app/FireApplicationCompatibilityEnforcerSDK/
+
+# Do Not Remove For 5.2.7.2
+# rm -r /system/priv-app/FireApplicationCompatibilityEnforcer/
+# rm -r /system/priv-app/FireApplicationCompatibilityEnforcerSDK/
+
 rm -r /system/priv-app/FireOsMiddlewareDebugApp/
 rm -r /system/priv-app/FireRecessProxy/
 rm -r /system/priv-app/FireTVDefaultMediaReceiver/
@@ -312,6 +444,10 @@ rm -r /system/priv-app/marketplace_service_receiver/
 rm -r /system/priv-app/shipmode/
 rm -r /system/priv-app/sync-provider_ipc-release/
 rm -r /system/priv-app/sync-service-fireos-release/
+
+# com.amazon.sync.service
+rm -r /system/priv-app/sync-service-fireos-tv-release/
+
 rm -r /system/priv-app/UnifiedShareActivityChooser/
 rm -r /system/priv-app/WallpaperCropper/
 
@@ -355,8 +491,8 @@ rm -r /system/priv-app/com.amazon.device.bluetoothdfu/
 # Fitbit Support???
 rm -r /system/priv-app/com.amazon.h2clientservice/
 
-# FrameworksMetrics
-rm -r /system/priv-app/FrameworksMetrics/
+# Voice?
+rm -r /system/priv-app/com.amazon.vizzini/
 
 # Breaks Settings UI
 
@@ -365,6 +501,9 @@ rm -r /system/priv-app/FrameworksMetrics/
 
 # com.amazon.client.metrics.api 1.2
 #rm -r /system/priv-app/MetricsApi/
+# ===============FireOS 5.0.5 Default END===============
+
+# ===============FireOS 5.2.1.0 START===============
 
 # Still Needs Testing
 #rm -r /system/priv-app/com.amazon.fireinputdevices/
@@ -388,7 +527,7 @@ rm -r /system/priv-app/ConnectivityDiag/
 # Other Apps That May Be Wanted/Needed For Different People/Operations
 
 # Amazon Screensaver
-#rm -r /system/priv-app/com.amazon.bueller.photos/
+rm -r /system/priv-app/com.amazon.bueller.photos/
 
 # Amazon Remote Android App
 #rm -r /system/priv-app/com.amazon.storm.lightning.services/
@@ -416,49 +555,36 @@ rm -r /system/priv-app/AlexaMediaPlayer/
 
 # Needed For Amazon Settings UI (Removal Will Break Stock Settings)
 
-# DCP Platform Contracts
+# DCP Platform Contracts (com.amazon.dcp.contracts.library)
 #rm -r /system/priv-app/DeviceSoftwareOTAContracts/
 
-# Amazon Device Settings
+# Amazon Device Settings (com.amazon.device.settings)
 #rm -r /system/priv-app/RemoteSettingsAndroid/
 
 # Amazon Device Settings Internal SDK (breaks Device and Applications Settings Activities)
 #rm -r /system/priv-app/RemoteSettingsInternalSDK/
 
-
-# From /system/app/
-
-# Amazon Enterprise Controls
-rm -r /system/app/DeviceControlService/
-
-rm -r /system/app/DocumentsUI/
-rm -r /system/app/fdrw/
-rm -r /system/app/PicoTts/
-rm -r /system/app/UnifiedSettingsProvider/
-rm -r /system/app/WebCryptoTZService/
-rm -r /system/app/WhiteListedUrlProvider/
-
-# FireOS 5.2.7.2
-#rm -r /system/app/CredentialStorage/
-#rm -r /system/app/FireOsMiddlewareDebugApp/
-#rm -r /system/app/sync-provider_ipc-tv-release/
-#rm -r /system/app/sync-service-fireos-tv-release/
-
 # VoiceView
-rm -r /system/priv-app/Logan/
+rm -r /system/priv-app/logan/
 
 # USB Tuner
 # rm -r /system/priv-app/com.amazon.malcolm/
+# ===============FireOS 5.2.1.0 END===============
 
-# FireOS 5.2.1.1
+
+# ===============FireOS 5.2.1.1 START===============
 rm -r /system/priv-app/AdvertisingIdSettings/
 rm -r /system/priv-app/com.amazon.tv.nimh/
-rm -r /system/priv-app/FireTvSaleService/
+
+# Do Not Remove on 5.2.7.2
+#rm -r /system/priv-app/FireTvSaleService/
+
 rm -r /system/priv-app/IvonaTTS/
 rm -r /system/priv-app/IvonaTtsOrchestrator/
 rm -r /system/priv-app/TvProvider/
+# ===============FireOS 5.2.1.1 END===============
 
-# FireOS 5.2.6.2
+# ===============FireOS 5.2.6.2 START===============
 rm -r /system/priv-app/com.amazon.alexashopping/
 #rm -r /system/priv-app/com.amazon.device.settings/
 rm -r /system/priv-app/com.amazon.ftv.glorialist/
@@ -492,7 +618,7 @@ rm -r /system/priv-app/LogManager-logd/
 rm -r /system/priv-app/SsdpService/
 
 # Settings Notification Center
-rm -r /system/priv-app/com.amazon.tv.notificationcenter/
+#rm -r /system/priv-app/com.amazon.tv.notificationcenter/
 
 # DIAL (Discovery-and-Launch) protocol (allow apps to access via second screen)
 rm -r /system/priv-app/DialService/
@@ -502,46 +628,153 @@ rm -r /system/app/PinyinIME/
 
 # CustomMediaController
 rm -r /system/priv-app/com.amazon.cardinal/
+# ===============FireOS 5.2.6.2 END===============
 
-# FireOS 5.2.6.7
-# rm -r /system/priv-app/com.amazon.aca/
-# rm -r /system/priv-app/com.amazon.aria/
-# rm -r /system/priv-app/com.amazon.firehomestarter/
-# rm -r /system/priv-app/com.amazon.franktvinput/
-# rm -r /system/priv-app/com.amazon.gloria.graphiq/
-# rm -r /system/priv-app/com.amazon.hedwig/
-# rm -r /system/priv-app/com.amazon.naatyam/
-# rm -r /system/priv-app/com.amazon.tv.legal.notices/
+
+# ===============FireOS 5.2.6.7 START===============
+
+# ACAFireTVAndroidClient
+rm -r /system/priv-app/com.amazon.aca/
+
+# Aria AriaRuntime
+rm -r /system/priv-app/com.amazon.aria/
+
+# com.amazon.firehomestarter (Unknown)
+rm -r /system/priv-app/com.amazon.firehomestarter/
+
+# Fire TV Recast --
+rm -r /system/priv-app/com.amazon.franktvinput/
+
+# com.amazon.gloria.graphiq (Unknown)
+rm -r /system/priv-app/com.amazon.gloria.graphiq/
+
+# News
+rm -r /system/priv-app/com.amazon.hedwig/
+
+# Naatyam (Unknown)
+rm -r /system/priv-app/com.amazon.naatyam/
+
+# KFTV Legal Notices
+rm -r /system/priv-app/com.amazon.tv.legal.notices/
+
+# SmartConnectService (Unknown)
 # rm -r /system/priv-app/com.amazon.net.smartconnect/
-# rm -r /system/priv-app/com.amazon.tmm.tutorial/
-# rm -r /system/priv-app/com.amazon.tv.forcedotaupdater/
+
+# TMMTutorial
+rm -r /system/priv-app/com.amazon.tmm.tutorial/
+
+rm -r /system/priv-app/com.amazon.tv.forcedotaupdater/
 rm -r /system/priv-app/TIFObserverService/
+# ===============FireOS 5.2.6.7 END===============
+
+
+# ===============FireOS 5.2.7.2 START===============
+
+# com.amazon.device.bluetoothkeymaplib (Unknown)
+# rm -r /system/priv-app/BluetoothKeyMapLib/
+
+# ALE (Unknown)
+rm -r /system/priv-app/com.amazon.ale/
+
+# My Application 2.0 (WTF! LMAO)
+rm -r /system/priv-app/com.amazon.appaccesskeyprovider/
+
+# Alexa Voice Layer
+rm -r /system/priv-app/com.amazon.avl.firetv/
+
+# Ceviche (Unknown)
+rm -r /system/priv-app/com.amazon.ceviche/
+
+# Unknown
+rm -r /system/priv-app/com.amazon.dpcclient/
+
+# Prime Video PVFTV
+rm -r /system/priv-app/com.amazon.firebat/
+
+# FireRESTAPIFramework
+rm -r /system/priv-app/com.amazon.firerestapiframework/
+
+# Gloria
+rm -r /system/priv-app/com.amazon.ftv.glorialist/
+
+# Screensaver (REMOVAL CAN BREAK AMAZON UI)
+# rm -r /system/priv-app/com.amazon.ftv.screensaver/
+
+# com.amazon.ftv.xpicker stub-apk
+rm -r /system/priv-app/com.amazon.ftv.xpicker/
+
+# Katoch (Unknown)
+rm -r /system/priv-app/com.amazon.katoch/
+
+# rm -r /system/priv-app/com.amazon.providers.tv/
+
+# Fire TV Alexa Alerts
+rm -r /system/priv-app/com.amazon.tv.alexaalerts/
+
+# Equipment Control (REMOVAL CAN BREAK AMAZON UI)
+# rm -r /system/priv-app/com.amazon.tv.devicecontrol/
+# rm -r /system/priv-app/com.amazon.tv.devicecontrolsettings/
+
+# Forced App Updater
+rm -r /system/priv-app/com.amazon.tv.forcedotaupdater.v2/
+
+# ReleaseNotes
+rm -r /system/priv-app/com.amazon.tv.releasenotes/
+
+# FTV Routing
+rm -r /system/priv-app/com.amazon.tv.routing/
+
+# Amazon Settings Core (REMOVAL CAN BREAK AMAZON UI)
+# rm -r /system/priv-app/com.amazon.tv.settings.core/
+
+# Amazon Settings v2 (REMOVAL CAN BREAK AMAZON UI)
+# rm -r /system/priv-app/com.amazon.tv.settings.v2/
+
+# Amazon FreeTime
+rm -r /system/priv-app/com.amazon.tahoe/
+
+# Whisper Join FFS Middleware
+rm -r /system/priv-app/com.amazon.whisperjoin.middleware.np/
+
+# com.amznfuse.operatorredirection (Unknown)
+rm -r /system/priv-app/com.amznfuse.operatorredirection/
+
+# com.amazon.sync.provider.ipc
+rm -r /system/priv-app/sync-provider_ipc-tv-release/
+# ===============FireOS 5.2.7.2 END===============
+
+
+# ===============From /system/app/ START===============
+
+#rm -r /system/app/AmazonDeviceMetrics/
+#rm -r /system/app/FireTvResolutionCycler/
+
+# Amazon Enterprise Controls
+rm -r /system/app/DeviceControlService/
+
+rm -r /system/app/DocumentsUI/
+
+# Factory Data Reset Whitelist Manager
+rm -r /system/app/fdrw/
+
+# FrameworksMetrics
+rm -r /system/app/FrameworksMetrics/
+
+rm -r /system/app/PicoTts/
+rm -r /system/app/UnifiedSettingsProvider/
+rm -r /system/app/WebCryptoTZService/
+rm -r /system/app/WhiteListedUrlProvider/
 
 # FireOS 5.2.7.2
-# rm -r /system/priv-app/BluetoothKeyMapLib
-# rm -r /system/priv-app/com.amazon.ale
-# rm -r /system/priv-app/com.amazon.appaccesskeyprovider
-# rm -r /system/priv-app/com.amazon.avl.firetv
-# rm -r /system/priv-app/com.amazon.ceviche
-# rm -r /system/priv-app/com.amazon.dpcclient
-# rm -r /system/priv-app/com.amazon.firebat
-# rm -r /system/priv-app/com.amazon.firerestapiframework
-# rm -r /system/priv-app/com.amazon.ftv.glorialist
-# rm -r /system/priv-app/com.amazon.ftv.screensaver
-# rm -r /system/priv-app/com.amazon.ftv.xpicker
-# rm -r /system/priv-app/com.amazon.katoch
-# rm -r /system/priv-app/com.amazon.providers.tv
-# rm -r /system/priv-app/com.amazon.tahoe
-# rm -r /system/priv-app/com.amazon.tv.alexaalerts
-# rm -r /system/priv-app/com.amazon.tv.devicecontrol
-# rm -r /system/priv-app/com.amazon.tv.devicecontrolsettings
-# rm -r /system/priv-app/com.amazon.tv.forcedotaupdater.v2
-# rm -r /system/priv-app/com.amazon.tv.releasenotes
-# rm -r /system/priv-app/com.amazon.tv.routing
-# rm -r /system/priv-app/com.amazon.tv.settings.core
-# rm -r /system/priv-app/com.amazon.tv.settings.v2
-# rm -r /system/priv-app/com.amazon.whisperjoin.middleware.np
-# rm -r /system/priv-app/com.amznfuse.operatorredirection
+
+# Alexa Media Controller
+rm -r /system/app/com.amazon.alexa.externalmediaplayer.fireos/
+
+#rm -r /system/app/CredentialStorage/
+#rm -r /system/app/FireOsMiddlewareDebugApp/
+
+#rm -r /system/app/sync-service-fireos-tv-release/
+# ===============From /system/app/ END===============
 
 
 # Other System Apps
@@ -648,8 +881,11 @@ rm -r /data/data/DeviceMessagingAndroidSDK/
 rm -r /data/data/DownloadProvider/
 #rm -r /data/data/DownloadProviderUi/
 #rm -r /data/data/ExternalStorageProvider/
-rm -r /data/data/FireApplicationCompatibilityEnforcer/
-rm -r /data/data/FireApplicationCompatibilityEnforcerSDK/
+
+# Do Not Remove For 5.2.7.2
+# rm -r /data/data/FireApplicationCompatibilityEnforcer/
+# rm -r /data/data/FireApplicationCompatibilityEnforcerSDK/
+
 rm -r /data/data/FireOsMiddlewareDebugApp/
 rm -r /data/data/FireRecessProxy/
 rm -r /data/data/FireTVDefaultMediaReceiver/
@@ -715,7 +951,7 @@ rm -r /data/data/com.amazon.vizzini/
 #rm -r /data/data/MetricsApi/
 
 # VoiceView
-rm -r /data/data/Logan/
+rm -r /data/data/com.amazon.logan-1/
 
 # Amazon WebView Metrics Service
 rm -r /data/data/com.amazon.webview.metrics.service/
@@ -791,18 +1027,60 @@ rm -r /data/data/com.amazon.dialservice/
 rm -r /data/data/com.amazon.tv.fw.metrics/
 
 # FireOS 5.2.6.7
-# rm -r /data/data/com.amazon.aca/
-# rm -r /data/data/com.amazon.aria/
-# rm -r /data/data/com.amazon.firehomestarter/
-# rm -r /data/data/com.amazon.franktvinput/
-# rm -r /data/data/com.amazon.gloria.graphiq/
-# rm -r /data/data/com.amazon.hedwig/
-# rm -r /data/data/com.amazon.naatyam/
-# rm -r /data/data/com.amazon.net.smartconnect/
-# rm -r /data/data/com.amazon.tmm.tutorial/
-# rm -r /data/data/com.amazon.tv.forcedotaupdater/
-# rm -r /data/data/TIFObserverService/
 
+# ACAFireTVAndroidClient
+# rm -r /data/data/com.amazon.aca-1/
+
+# Aria AriaRuntime
+rm -r /data/data/com.amazon.aria-1/
+
+# rm -r /data/data/com.amazon.firehomestarter-1/
+# rm -r /data/data/com.amazon.franktvinput-1/
+# rm -r /data/data/com.amazon.gloria.graphiq-1/
+# rm -r /data/data/com.amazon.hedwig-1/
+# rm -r /data/data/com.amazon.naatyam-1/
+# rm -r /data/data/com.amazon.net.smartconnect-1/
+# rm -r /data/data/com.amazon.tmm.tutorial-1/
+# rm -r /data/data/com.amazon.tv.forcedotaupdater-1/
+# rm -r /data/data/TIFObserverService-1/
+
+
+# FireOS 5.2.7.2
+# rm -r /data/data/BluetoothKeyMapLib-1/
+
+# ALE (Unknown)
+rm -r /data/data/com.amazon.ale-1/
+
+# rm -r /data/data/com.amazon.appaccesskeyprovider-1/
+
+# Alexa Voice Layer
+rm -r /data/data/com.amazon.avl.ftv-1/
+
+# Ceviche (Unknown)
+# rm -r /data/data/com.amazon.ceviche-1/
+
+# rm -r /data/data/com.amazon.dpcclient-1/
+# rm -r /data/data/com.amazon.firebat-1/
+# rm -r /data/data/com.amazon.firerestapiframework-1/
+# rm -r /data/data/com.amazon.ftv.glorialist-1/
+# rm -r /data/data/com.amazon.ftv.screensaver-1/
+# rm -r /data/data/com.amazon.ftv.xpicker-1/
+# rm -r /data/data/com.amazon.katoch-1/
+# rm -r /data/data/com.amazon.providers.tv-1/
+# rm -r /data/data/com.amazon.tv.alexaalerts-1/
+# rm -r /data/data/com.amazon.tv.devicecontrol-1/
+# rm -r /data/data/com.amazon.tv.devicecontrolsettings-1/
+# rm -r /data/data/com.amazon.tv.forcedotaupdater.v2-1/
+# rm -r /data/data/com.amazon.tv.releasenotes-1/
+# rm -r /data/data/com.amazon.tv.routing-1/
+
+# Amazon FreeTime
+rm -r /data/data/com.amazon.tahoe-1/
+
+# rm -r /data/data/com.amazon.tv.settings.core-1/
+# rm -r /data/data/com.amazon.tv.settings.v2-1/
+# rm -r /data/data/com.amazon.whisperjoin.middleware.np-1/
+# rm -r /data/data/com.amznfuse.operatorredirection-1/
 
 
 
