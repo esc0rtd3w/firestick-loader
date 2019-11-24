@@ -955,7 +955,8 @@ echo.
 if %downgrade%==1 echo This may take up to 5 minutes or more and Remote Find screen will be loaded
 if %downgrade%==0 echo This may take up to 5 minutes or more
 echo.
-echo Do not interact with the device yet!
+if %downgrade%==1 echo Do not interact with the device yet!
+if %downgrade%==0 echo Please Wait...
 echo.
 %adb% reboot
 %adbWait%
