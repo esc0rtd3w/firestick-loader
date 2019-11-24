@@ -1020,15 +1020,25 @@ if %unkadb%==1 goto stage4
 :finished
 cls
 color 0a
-echo Finished!
+if %downgrade%==1 echo Finished!
+if %downgrade%==0 echo Almost Finished!
 if %downgrade%==1 echo.
 if %downgrade%==1 echo Complete the user setup to configure remote, wifi, and Amazon account
 echo.
 echo Once on Launcher, use TitaniumBackup to restore data for
 echo Home, Mouse Toggle, Reboot, and SH Script Runner Settings
 echo.
-echo Press any key to exit...
+if %downgrade%==1 echo Press any key to exit...
+if %downgrade%==0 echo Press any key to continue...
 pause>nul
+
+if %downgrade%==0 (
+%sleep% 3
+cls
+echo Finished!
+echo.
+pause
+)
 
 
 :end
