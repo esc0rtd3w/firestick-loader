@@ -964,7 +964,7 @@ echo.
 %adbWait%
 
 if %downgrade%==0 (
-%sleep% 90
+%sleep% 100
 goto finished
 )
 
