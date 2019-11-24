@@ -610,6 +610,9 @@ echo Removing any added System Components from Amazon App Updates...
 echo.
 :: Keep the settings one (possibly breaks Mouse Toggle app)
 ::%shell% "rm -r /data/app/com.amazon.tv.settings.v2-1/"
+
+:: Save the screensaver update
+::%shell% "rm -r /data/app/com.amazon.ftv.screensaver-1/"
 if %downgrade%==0 (
 %shell% "rm -r /data/app/com.amazon.aca-1/"
 %shell% "rm -r /data/app/com.amazon.alexashopping-1/"
@@ -621,7 +624,6 @@ if %downgrade%==0 (
 %shell% "rm -r /data/app/com.amazon.cardinal-1/"
 %shell% "rm -r /data/app/com.amazon.firebat-1/"
 %shell% "rm -r /data/app/com.amazon.ftv.glorialist-1/"
-%shell% "rm -r /data/app/com.amazon.ftv.screensaver-1/"
 %shell% "rm -r /data/app/com.amazon.hedwig-1/"
 %shell% "rm -r /data/app/com.amazon.katoch-1/"
 %shell% "rm -r /data/app/com.amazon.kso.blackbird-1/"
