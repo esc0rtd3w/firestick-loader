@@ -1049,7 +1049,7 @@ if %downgrade%==1 echo.
 if %downgrade%==1 echo Complete the user setup to configure remote, wifi, and Amazon account
 echo.
 echo Once on Launcher, use TitaniumBackup to restore data for
-echo Home, Mouse Toggle, Reboot, and SH Script Runner Settings
+echo Home and SH Script Runner Settings
 echo.
 if %downgrade%==1 echo Press any key to exit...
 if %downgrade%==0 echo Press any key to continue...
