@@ -237,6 +237,16 @@ echo.
 
 cls
 %_color% 0e
+set appName=Youtube Kids
+set apk=
+echo.
+echo.
+echo Installing %appName%...
+echo.
+%install% "apps\media\youtube-kids.apk"
+
+cls
+%_color% 0e
 set appName=VLC TV
 set apk=
 echo.
