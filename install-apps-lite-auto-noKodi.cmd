@@ -102,16 +102,6 @@ echo.
 
 cls
 %_color% 0e
-set appName=Show Box
-set apk=
-echo.
-echo.
-echo Installing %appName%...
-echo.
-%install% "apps\media\showbox.apk"
-
-cls
-%_color% 0e
 set appName=Popcorn Time Community Edition
 set apk=
 echo.
@@ -152,16 +142,6 @@ echo.
 
 cls
 %_color% 0e
-set appName=Solex TV
-set apk=
-echo.
-echo.
-echo Installing %appName%...
-echo.
-%install% "apps\media\solex-tv.apk"
-
-cls
-%_color% 0e
 set appName=Bee TV
 set apk=
 echo.
@@ -182,6 +162,16 @@ echo.
 
 cls
 %_color% 0e
+set appName=Pluto TV
+set apk=
+echo.
+echo.
+echo Installing %appName%...
+echo.
+%install% "apps\media\pluto-tv.apk"
+
+cls
+%_color% 0e
 set appName=Mobdro
 set apk=
 echo.
@@ -199,6 +189,16 @@ echo.
 echo Installing %appName%...
 echo.
 %install% "apps\media\popcornflix.apk"
+
+cls
+%_color% 0e
+set appName=Popcornflix Kids
+set apk=
+echo.
+echo.
+echo Installing %appName%...
+echo.
+%install% "apps\media\popcornflix-kids.apk"
 
 cls
 %_color% 0e
