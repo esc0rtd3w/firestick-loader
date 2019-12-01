@@ -1057,6 +1057,8 @@ pause>nul
 
 if %downgrade%==0 (
 %sleep% 3
+%adb% reboot
+%sleep% 10
 cls
 echo Finished!
 echo.
