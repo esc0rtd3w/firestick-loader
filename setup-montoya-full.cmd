@@ -24,6 +24,7 @@ if not exist "%temp%\firestick-loader" md "%temp%\firestick-loader"
 color 0e
 set accessibility="scripts\settings\montoya\system\scripts\accessibility.sh"
 set applications="scripts\settings\montoya\system\scripts\applications.sh"
+set btcontroller="scripts\settings\tank\system\scripts\btcontroller.sh"
 set device="scripts\settings\montoya\system\scripts\device.sh"
 set displaysounds="scripts\settings\montoya\system\scripts\display-sounds.sh"
 set help="scripts\settings\montoya\system\scripts\help.sh"
@@ -381,6 +382,7 @@ echo Pushing Settings Scripts to Temp...
 echo.
 %push% %accessibility% /data/local/tmp/
 %push% %applications% /data/local/tmp/
+%push% %btcontroller% /data/local/tmp/
 %push% %device% /data/local/tmp/
 %push% %displaysounds% /data/local/tmp/
 %push% %help% /data/local/tmp/
@@ -412,6 +414,7 @@ echo Copying Settings Scripts From Temp to /system...
 echo.
 %shell% "cp /data/local/tmp/accessibility.sh /system/scripts/accessibility.sh"
 %shell% "cp /data/local/tmp/applications.sh /system/scripts/applications.sh"
+%shell% "cp /data/local/tmp/btcontroller.sh /system/scripts/btcontroller.sh"
 %shell% "cp /data/local/tmp/device.sh /system/scripts/device.sh"
 %shell% "cp /data/local/tmp/display-sounds.sh /system/scripts/display-sounds.sh"
 %shell% "cp /data/local/tmp/help.sh /system/scripts/help.sh"
