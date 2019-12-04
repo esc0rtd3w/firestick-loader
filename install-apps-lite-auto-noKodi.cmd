@@ -152,6 +152,16 @@ echo.
 
 cls
 %_color% 0e
+set appName=Nova TV
+set apk=
+echo.
+echo.
+echo Installing %appName%...
+echo.
+%install% "apps\media\nova-tv.apk"
+
+cls
+%_color% 0e
 set appName=Tubi TV
 set apk=
 echo.
@@ -179,6 +189,16 @@ echo.
 echo Installing %appName%...
 echo.
 %install% "apps\media\mobdro.apk"
+
+cls
+%_color% 0e
+set appName=USTV
+set apk=
+echo.
+echo.
+echo Installing %appName%...
+echo.
+%install% "apps\media\ustv.apk"
 
 cls
 %_color% 0e
