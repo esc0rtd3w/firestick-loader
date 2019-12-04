@@ -396,6 +396,7 @@ echo.
 cls
 echo Pushing Restore Home Script to Temp...
 echo.
+%push% "scripts\clean-sdcard-lite.sh" /data/local/tmp/
 %push% "scripts\restore-home.sh" /data/local/tmp/
 
 %sleep% 2
@@ -428,6 +429,7 @@ echo.
 cls
 echo Copying Restore Home Script From Temp to /system...
 echo.
+%shell% "cp /data/local/tmp/clean-sdcard-lite.sh /system/scripts/clean-sdcard-lite.sh"
 %shell% "cp /data/local/tmp/restore-home.sh /system/scripts/restore-home.sh"
 
 %sleep% 2
