@@ -14,7 +14,7 @@ set capDevice=/sdcard/cap.png
 set tempHost=%temp%
 set capHost="%temp%\cap.png"
 
-if exist %capHost% rd /s /q %capHost%
+if exist %capHost% "del /f /q %capHost%"
 
 cls
 echo Capturing Device Screen....
