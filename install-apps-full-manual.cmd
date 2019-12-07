@@ -179,6 +179,8 @@ echo Info: XBMC: XBOX Media Center
 echo.
 set /p choice=
 
+if %choice%==2 goto skipKodi
+
 set kodiVersion=17
 cls
 %_color% 0e
