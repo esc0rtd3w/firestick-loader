@@ -98,7 +98,11 @@ echo 3) 18
 echo.
 set /p kodiVersion=
 
-if %kodiVersion% gtr 18 goto kodimain
+if %kodiVersion% gtr 3 goto kodimain
+
+if %kodiVersion%==1 set kodiVersion=16
+if %kodiVersion%==2 set kodiVersion=17
+if %kodiVersion%==3 set kodiVersion=18
 
 md "%temp%\firestick-loader\apps\media\kodi\data\%kodiVersion%\%kodiBuild%"
 %extractRAR% "%~dp0apps\media\kodi\apk\%kodiVersion%\kodi.apk.split" "%temp%\firestick-loader\apps\media"
