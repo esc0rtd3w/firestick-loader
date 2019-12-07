@@ -285,8 +285,8 @@ if %rwcheck%==1 goto stage1
 cls
 echo Preparing Stock FireOS 5.2.6.3 Downgrade Files
 echo.
-if not exist "%temp%\firestick-loader\downgrade\stick2" md "%temp%\firestick-loader\downgrade\stick2"
-%extractRAR% "downgrade\stick2\5.2.7.2\firmware-tank-5.2.6.3.split" "%temp%\firestick-loader\downgrade\stick2"
+if not exist "%temp%\firestick-loader\downgrade\stick2\5.2.6.3" md "%temp%\firestick-loader\downgrade\stick2\5.2.6.3"
+%extractRAR% "downgrade\stick2\5.2.6.3\firmware-tank-5.2.6.3.split" "%temp%\firestick-loader\downgrade\stick2"
 
 cls
 echo Pushing Downgrade Bin to /sdcard/...
