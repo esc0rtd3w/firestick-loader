@@ -165,7 +165,7 @@ if %choice%==1 (
 cls
 set isKodi=0
 %_color% 0e
-set appName=Kodi %kodiVersion%
+set appName=Kodi
 set apk=
 echo Install %appName%?
 echo.

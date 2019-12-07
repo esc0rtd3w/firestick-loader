@@ -70,7 +70,7 @@ set buildDotProp=/system/build.prop
 :kodimain
 cls
 %_color% 0e
-set appName=Kodi %kodiVersion%
+set appName=Kodi
 set apk=
 echo.
 echo.
