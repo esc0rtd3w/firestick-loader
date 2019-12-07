@@ -67,19 +67,7 @@ set buildDotProp=/system/build.prop
 ::%install% "apps\home\FirePwnHomeDebug.apk"
 ::%push% "apps\home\sdcard\FirePwnHomeBackup.zip" /sdcard/
 
-set kodiVersion=17
-cls
-%_color% 0e
-set appName=Kodi
-echo Installing %appName%...
-echo.
-echo Select Version of Kodi and press ENTER:
-echo.
-echo Default: 17
-echo.
-set /p kodiVersion=
-
-
+:kodimain
 cls
 %_color% 0e
 set appName=Kodi %kodiVersion%
@@ -91,31 +79,35 @@ echo.
 
 set kodiBuild=default
 
-md "%temp%\firestick-loader\apps\media\kodi\data\%kodiBuild%"
+set kodiVersion=17
+cls
+%_color% 0e
+set appName=Kodi
+echo Installing %appName%...
+echo.
+echo Select Version of Kodi and press ENTER:
+echo.
+echo Default: 17
+echo.
+echo.
+echo 1) 16
+echo.
+echo 2) 17
+echo.
+echo 3) 18
+echo.
+set /p kodiVersion=
 
-if %kodiVersion%==16 goto kodi16
-if %kodiVersion%==17 goto kodi17
-if %kodiVersion%==18 goto kodi18
+if %kodiVersion% gtr 18 goto kodimain
 
-:kodi16
-%extractRAR% "%~dp0apps\media\kodi\kodi.apk.split" "%temp%\firestick-loader\apps\media"
-goto kdata
-
-:kodi17
-%extractRAR% "%~dp0apps\media\kodi\kodi.apk.split" "%temp%\firestick-loader\apps\media"
-goto kdata
-
-:kodi18
-%extractRAR% "%~dp0apps\media\kodi\kodi.apk.split" "%temp%\firestick-loader\apps\media"
-goto kdata
-
-:kdata
+md "%temp%\firestick-loader\apps\media\kodi\data\%kodiVersion%\%kodiBuild%"
+%extractRAR% "%~dp0apps\media\kodi\apk\%kodiVersion%\kodi.apk.split" "%temp%\firestick-loader\apps\media"
 %sleep% 3
 %install% "%temp%\firestick-loader\apps\media\kodi.apk"
 
-%extractRAR% "%~dp0apps\media\kodi\data\%kodiBuild%\kodi-data.split" "%temp%\firestick-loader\apps\media\kodi\data\%kodiBuild%"
-%push% "%temp%\firestick-loader\apps\media\kodi\data\%kodiBuild%\addons" "/%sdcard%/%pathAndroid%/addons"
-%push% "%temp%\firestick-loader\apps\media\kodi\data\%kodiBuild%\userdata" "/%sdcard%/%pathAndroid%/userdata"
+%extractRAR% "%~dp0apps\media\kodi\data\%kodiVersion%\%kodiBuild%\kodi-data.split" "%temp%\firestick-loader\apps\media\kodi\data\%kodiBuild%"
+%push% "%temp%\firestick-loader\apps\media\kodi\data\%kodiVersion%\%kodiBuild%\addons" "/%sdcard%/%pathAndroid%/addons"
+%push% "%temp%\firestick-loader\apps\media\kodi\data\%kodiVersion%\%kodiBuild%\userdata" "/%sdcard%/%pathAndroid%/userdata"
 
 %rm% "%temp%\firestick-loader\apps\media\kodi"
 

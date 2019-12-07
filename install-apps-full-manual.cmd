@@ -55,6 +55,32 @@ set fsContinue=0
 
 cls
 %_color% 0e
+set appName=ATV Launcher
+set apk=
+echo Install %appName%?
+echo.
+echo 1) Yes   2) No
+echo.
+echo.
+%_color% 0b
+echo Requirements: NONE
+echo.
+echo Info: Home Replacement App
+echo.
+set /p choice=
+
+
+if %choice%==1 (
+		echo.
+		echo.
+		echo Installing %appName%...
+		echo.
+
+		%install% "apps\home\atv-launcher.apk"
+)
+
+cls
+%_color% 0e
 set appName=FirePwn Home
 set apk=
 echo Install %appName%?
@@ -135,20 +161,7 @@ if %choice%==1 (
 )
 
 
-
-set kodiVersion=17
-cls
-%_color% 0e
-set appName=Kodi
-set apk=
-echo Install %appName%?
-echo.
-echo Select Version of Kodi and press ENTER:
-echo.
-echo Default: 17
-echo.
-set /p kodiVersion=
-
+:kodimain
 cls
 set isKodi=0
 %_color% 0e
@@ -166,11 +179,28 @@ echo Info: XBMC: XBOX Media Center
 echo.
 set /p choice=
 
-if %kodiVersion%==16 goto kodi16
-if %kodiVersion%==17 goto kodi17
-if %kodiVersion%==18 goto kodi18
+set kodiVersion=17
+cls
+%_color% 0e
+set appName=Kodi
+set apk=
+echo Install %appName%?
+echo.
+echo Select Version of Kodi and press ENTER:
+echo.
+echo Default: 17
+echo.
+echo.
+echo 1) 16
+echo.
+echo 2) 17
+echo.
+echo 3) 18
+echo.
+set /p kodiVersion=
 
-:kodi16
+if %kodiVersion% gtr 18 goto kodimain
+
 if %choice%==1 (
 	set isKodi=1
 	echo.
@@ -180,51 +210,11 @@ if %choice%==1 (
 
 	md "%temp%\firestick-loader\apps\media\kodi"
 
-	%extractRAR% "%~dp0apps\media\kodi\16\kodi.apk.split" "%temp%\firestick-loader\apps\media"
+	%extractRAR% "%~dp0apps\media\kodi\apk\%kodiVersion%\kodi.apk.split" "%temp%\firestick-loader\apps\media"
 	%sleep% 3
 	%install% "%temp%\firestick-loader\apps\media\kodi.apk"
 
 	%rm% "%temp%\firestick-loader\apps\media\kodi"
-	
-	goto kskip
-)
-
-:kodi17
-if %choice%==1 (
-	set isKodi=1
-	echo.
-	echo.
-	echo Installing %appName%...
-	echo.
-
-	md "%temp%\firestick-loader\apps\media\kodi"
-
-	%extractRAR% "%~dp0apps\media\kodi\17\kodi.apk.split" "%temp%\firestick-loader\apps\media"
-	%sleep% 3
-	%install% "%temp%\firestick-loader\apps\media\kodi.apk"
-
-	%rm% "%temp%\firestick-loader\apps\media\kodi"
-	
-	goto kskip
-)
-
-:kodi18
-if %choice%==1 (
-	set isKodi=1
-	echo.
-	echo.
-	echo Installing %appName%...
-	echo.
-
-	md "%temp%\firestick-loader\apps\media\kodi"
-
-	%extractRAR% "%~dp0apps\media\kodi\18\kodi.apk.split" "%temp%\firestick-loader\apps\media"
-	%sleep% 3
-	%install% "%temp%\firestick-loader\apps\media\kodi.apk"
-
-	%rm% "%temp%\firestick-loader\apps\media\kodi"
-	
-	goto kskip
 )
 
 :kskip
@@ -264,11 +254,11 @@ if %kodiBuildSelect%==2 (
 	echo.
 
 
-	md "%temp%\firestick-loader\apps\media\kodi\data\%kodiBuild%"
+	md "%temp%\firestick-loader\apps\media\kodi\data\%kodiVersion%\%kodiBuild%"
 
-	%extractRAR% "%~dp0apps\media\kodi\data\%kodiBuild%\kodi-data.split" "%temp%\firestick-loader\apps\media\kodi\data\%kodiBuild%"
-	%push% "%temp%\firestick-loader\apps\media\kodi\data\%kodiBuild%\addons" "/%sdcard%/%pathAndroid%/addons"
-	%push% "%temp%\firestick-loader\apps\media\kodi\data\%kodiBuild%\userdata" "/%sdcard%/%pathAndroid%/userdata"
+	%extractRAR% "%~dp0apps\media\kodi\data\%kodiVersion%\%kodiBuild%\kodi-data.split" "%temp%\firestick-loader\apps\media\kodi\data\%kodiBuild%"
+	%push% "%temp%\firestick-loader\apps\media\kodi\data\%kodiVersion%\%kodiBuild%\addons" "/%sdcard%/%pathAndroid%/addons"
+	%push% "%temp%\firestick-loader\apps\media\kodi\data\%kodiVersion%\%kodiBuild%\userdata" "/%sdcard%/%pathAndroid%/userdata"
 
 	%rm% "%temp%\firestick-loader\apps\media\kodi"
 )
@@ -283,11 +273,11 @@ if %kodiBuildSelect%==3 (
 	echo.
 
 
-	md "%temp%\firestick-loader\apps\media\kodi\data\%kodiBuild%"
+	md "%temp%\firestick-loader\apps\media\kodi\data\%kodiVersion%\%kodiBuild%"
 
-	%extractRAR% "%~dp0apps\media\kodi\data\%kodiBuild%\kodi-data.split" "%temp%\firestick-loader\apps\media\kodi\data\%kodiBuild%"
-	%push% "%temp%\firestick-loader\apps\media\kodi\data\%kodiBuild%\addons" "/%sdcard%/%pathAndroid%/addons"
-	%push% "%temp%\firestick-loader\apps\media\kodi\data\%kodiBuild%\userdata" "/%sdcard%/%pathAndroid%/userdata"
+	%extractRAR% "%~dp0apps\media\kodi\data\%kodiVersion%\%kodiBuild%\kodi-data.split" "%temp%\firestick-loader\apps\media\kodi\data\%kodiBuild%"
+	%push% "%temp%\firestick-loader\apps\media\kodi\data\%kodiVersion%\%kodiBuild%\addons" "/%sdcard%/%pathAndroid%/addons"
+	%push% "%temp%\firestick-loader\apps\media\kodi\data\%kodiVersion%\%kodiBuild%\userdata" "/%sdcard%/%pathAndroid%/userdata"
 
 	%rm% "%temp%\firestick-loader\apps\media\kodi"
 )
