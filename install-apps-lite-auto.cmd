@@ -67,10 +67,22 @@ set buildDotProp=/system/build.prop
 ::%install% "apps\home\FirePwnHomeDebug.apk"
 ::%push% "apps\home\sdcard\FirePwnHomeBackup.zip" /sdcard/
 
-
+set kodiVersion=17
 cls
 %_color% 0e
 set appName=Kodi
+echo Installing %appName%...
+echo.
+echo Select Version of Kodi and press ENTER:
+echo.
+echo Default: 17
+echo.
+set /p kodiVersion=
+
+
+cls
+%_color% 0e
+set appName=Kodi %kodiVersion%
 set apk=
 echo.
 echo.
@@ -80,7 +92,24 @@ echo.
 set kodiBuild=default
 
 md "%temp%\firestick-loader\apps\media\kodi\data\%kodiBuild%"
-%extractRAR% "%~dp0apps\media\kodi.apk.split" "%temp%\firestick-loader\apps\media"
+
+if %kodiVersion%==16 goto kodi16
+if %kodiVersion%==17 goto kodi17
+if %kodiVersion%==18 goto kodi18
+
+:kodi16
+%extractRAR% "%~dp0apps\media\kodi\kodi.apk.split" "%temp%\firestick-loader\apps\media"
+goto kdata
+
+:kodi17
+%extractRAR% "%~dp0apps\media\kodi\kodi.apk.split" "%temp%\firestick-loader\apps\media"
+goto kdata
+
+:kodi18
+%extractRAR% "%~dp0apps\media\kodi\kodi.apk.split" "%temp%\firestick-loader\apps\media"
+goto kdata
+
+:kdata
 %sleep% 3
 %install% "%temp%\firestick-loader\apps\media\kodi.apk"
 

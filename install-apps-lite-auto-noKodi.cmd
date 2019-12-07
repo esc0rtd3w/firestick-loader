@@ -49,47 +49,6 @@ set baddieFlagActive=0
 
 set buildDotProp=/system/build.prop
 
-::cls
-::%_color% 0e
-::set appName=FirePwn Home
-::set apk=
-::echo Installing %appName%...
-::echo.
-::%install% "apps\home\FirePwnHome.apk"
-::%push% "apps\home\sdcard\FirePwnHomeBackup.zip" /sdcard/
-
-::cls
-::%_color% 0e
-::set appName=FirePwn Home Debug
-::set apk=
-::echo Installing %appName%...
-::echo.
-::%install% "apps\home\FirePwnHomeDebug.apk"
-::%push% "apps\home\sdcard\FirePwnHomeBackup.zip" /sdcard/
-
-
-::cls
-::%_color% 0e
-::set appName=Kodi
-::set apk=
-::echo.
-::echo.
-::echo Installing %appName%...
-::echo.
-
-::set kodiBuild=default
-
-::md "%temp%\firestick-loader\apps\media\kodi\data\%kodiBuild%"
-::%extractRAR% "%~dp0apps\media\kodi.apk.split" "%temp%\firestick-loader\apps\media"
-::%sleep% 3
-::%install% "%temp%\firestick-loader\apps\media\kodi.apk"
-
-::%extractRAR% "%~dp0apps\media\kodi\data\%kodiBuild%\kodi-data.split" "%temp%\firestick-loader\apps\media\kodi\data\%kodiBuild%"
-::%push% "%temp%\firestick-loader\apps\media\kodi\data\%kodiBuild%\addons" "/%sdcard%/%pathAndroid%/addons"
-::%push% "%temp%\firestick-loader\apps\media\kodi\data\%kodiBuild%\userdata" "/%sdcard%/%pathAndroid%/userdata"
-
-::%rm% "%temp%\firestick-loader\apps\media\kodi"
-
 cls
 %_color% 0e
 set appName=TeaTV

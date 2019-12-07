@@ -135,11 +135,24 @@ if %choice%==1 (
 )
 
 
-	
+
+set kodiVersion=17
+cls
+%_color% 0e
+set appName=Kodi
+set apk=
+echo Install %appName%?
+echo.
+echo Select Version of Kodi and press ENTER:
+echo.
+echo Default: 17
+echo.
+set /p kodiVersion=
+
 cls
 set isKodi=0
 %_color% 0e
-set appName=Kodi
+set appName=Kodi %kodiVersion%
 set apk=
 echo Install %appName%?
 echo.
@@ -152,6 +165,12 @@ echo.
 echo Info: XBMC: XBOX Media Center
 echo.
 set /p choice=
+
+if %kodiVersion%==16 goto kodi16
+if %kodiVersion%==17 goto kodi17
+if %kodiVersion%==18 goto kodi18
+
+:kodi16
 if %choice%==1 (
 	set isKodi=1
 	echo.
@@ -161,14 +180,54 @@ if %choice%==1 (
 
 	md "%temp%\firestick-loader\apps\media\kodi"
 
-	%extractRAR% "%~dp0apps\media\kodi.apk.split" "%temp%\firestick-loader\apps\media"
+	%extractRAR% "%~dp0apps\media\kodi\16\kodi.apk.split" "%temp%\firestick-loader\apps\media"
 	%sleep% 3
 	%install% "%temp%\firestick-loader\apps\media\kodi.apk"
 
 	%rm% "%temp%\firestick-loader\apps\media\kodi"
+	
+	goto kskip
 )
 
+:kodi17
+if %choice%==1 (
+	set isKodi=1
+	echo.
+	echo.
+	echo Installing %appName%...
+	echo.
 
+	md "%temp%\firestick-loader\apps\media\kodi"
+
+	%extractRAR% "%~dp0apps\media\kodi\17\kodi.apk.split" "%temp%\firestick-loader\apps\media"
+	%sleep% 3
+	%install% "%temp%\firestick-loader\apps\media\kodi.apk"
+
+	%rm% "%temp%\firestick-loader\apps\media\kodi"
+	
+	goto kskip
+)
+
+:kodi18
+if %choice%==1 (
+	set isKodi=1
+	echo.
+	echo.
+	echo Installing %appName%...
+	echo.
+
+	md "%temp%\firestick-loader\apps\media\kodi"
+
+	%extractRAR% "%~dp0apps\media\kodi\18\kodi.apk.split" "%temp%\firestick-loader\apps\media"
+	%sleep% 3
+	%install% "%temp%\firestick-loader\apps\media\kodi.apk"
+
+	%rm% "%temp%\firestick-loader\apps\media\kodi"
+	
+	goto kskip
+)
+
+:kskip
 :: Skip Kodi Data if Kodi Is Not Requested To Install
 if %isKodi%==0 goto skipKodi
 cls
