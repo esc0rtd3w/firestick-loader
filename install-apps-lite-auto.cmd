@@ -109,12 +109,12 @@ md "%temp%\firestick-loader\apps\media\kodi\data\%kodiVersion%\%kodiBuild%"
 %sleep% 3
 %install% "%temp%\firestick-loader\apps\media\kodi.apk"
 
-%extractRAR% "%~dp0apps\media\kodi\data\%kodiVersion%\%kodiBuild%\kodi-data.split" "%temp%\firestick-loader\apps\media\kodi\data\%kodiBuild%"
+%extractRAR% "%~dp0apps\media\kodi\data\%kodiVersion%\%kodiBuild%\kodi-data.split" "%temp%\firestick-loader\apps\media\kodi\data\%kodiVersion%\%kodiBuild%"
 %push% "%temp%\firestick-loader\apps\media\kodi\data\%kodiVersion%\%kodiBuild%\addons" "/%sdcard%/%pathAndroid%/addons"
 %push% "%temp%\firestick-loader\apps\media\kodi\data\%kodiVersion%\%kodiBuild%\userdata" "/%sdcard%/%pathAndroid%/userdata"
 
 %rm% "%temp%\firestick-loader\apps\media\kodi"
-
+pause
 cls
 %_color% 0e
 set appName=TeaTV
