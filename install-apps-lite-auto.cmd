@@ -114,7 +114,7 @@ md "%temp%\firestick-loader\apps\media\kodi\data\%kodiVersion%\%kodiBuild%"
 %push% "%temp%\firestick-loader\apps\media\kodi\data\%kodiVersion%\%kodiBuild%\userdata" "/%sdcard%/%pathAndroid%/userdata"
 
 %rm% "%temp%\firestick-loader\apps\media\kodi"
-pause
+
 cls
 %_color% 0e
 set appName=TeaTV
