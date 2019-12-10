@@ -7,6 +7,8 @@ set fireOsVersion=0.0.0.0
 set fireOsDevice=none
 set downgrade=0
 
+set magiskZip=Magisk-v20.1.zip
+
 set adb="%~dp0bin\adb.exe"
 set adbKill=%adb% kill-server
 set adbStart=%adb% start-server
@@ -731,8 +733,8 @@ echo.
 cls
 echo Installing Magisk for SU and ADB Access on Stock Rom...
 echo.
-%push% "rooting\tank\Magisk-v19.3.zip" /data/local/tmp/
-%twrp% install /data/local/tmp/Magisk-v19.3.zip
+%push% "rooting\tank\%magiskZip%" /data/local/tmp/
+%twrp% install /data/local/tmp/%magiskZip%
 %sleep% 3
 
 cls
@@ -950,8 +952,8 @@ echo.
 cls
 echo Re-Installing Magisk for SU Access...
 echo.
-%push% "rooting\tank\Magisk-v19.3.zip" /data/local/tmp/
-%twrp% install /data/local/tmp/Magisk-v19.3.zip
+%push% "rooting\tank\%magiskZip%" /data/local/tmp/
+%twrp% install /data/local/tmp/%magiskZip%
 %sleep% 2
 
 cls

@@ -14,7 +14,7 @@ set push=%adb% push
 set pull=%adb% pull
 set shell=%adb% shell
 
-set name=Magisk-v19.3.zip
+set name=Magisk-v20.1.zip
 set installOnly=0
 
 cls
