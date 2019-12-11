@@ -530,7 +530,6 @@ if %downgrade%==0 %shell% "rm -r /system/priv-app/com.amazon.tv.legal.notices/"
 if %downgrade%==0 %shell% "rm -r /system/priv-app/com.amazon.tmm.tutorial/"
 
 if %downgrade%==0 %shell% "rm -r /system/priv-app/com.amazon.tv.forcedotaupdater/"
-if %downgrade%==0 %shell% "rm -r /system/priv-app/TIFObserverService/"
 
 :: FireOS 5.2.7.2
 :: com.amazon.device.bluetoothkeymaplib (Unknown)
