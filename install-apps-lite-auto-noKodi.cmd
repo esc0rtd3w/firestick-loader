@@ -151,16 +151,6 @@ echo.
 
 cls
 %_color% 0e
-set appName=USTV
-set apk=
-echo.
-echo.
-echo Installing %appName%...
-echo.
-%install% "apps\media\ustv.apk"
-
-cls
-%_color% 0e
 set appName=Popcornflix
 set apk=
 echo.
