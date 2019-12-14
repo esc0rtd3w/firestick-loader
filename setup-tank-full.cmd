@@ -392,7 +392,10 @@ if %downgrade%==1 %shell% "rm -r /system/priv-app/FireApplicationCompatibilityEn
 %shell% "rm -r /system/priv-app/FireRecessProxy/"
 %shell% "rm -r /system/priv-app/FireTVDefaultMediaReceiver/"
 %shell% "rm -r /system/priv-app/FireTvNotificationService/"
-%shell% "rm -r /system/priv-app/FireTVSystemUI/"
+
+:: Do not remove on 5.2.7.2 (Breaks ADB Fingerprint Dialog)
+::%shell% "rm -r /system/priv-app/FireTVSystemUI/"
+
 %shell% "rm -r /system/priv-app/FusedLocation/"
 %shell% "rm -r /system/priv-app/ManagedProvisioning/"
 %shell% "rm -r /system/priv-app/marketplace_service_receiver/"
