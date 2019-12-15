@@ -287,6 +287,16 @@ echo.
 
 cls
 %_color% 0e
+set appName=Twitch
+set apk=
+echo.
+echo.
+echo Installing %appName%...
+echo.
+%install% "apps\media\twitch.apk"
+
+cls
+%_color% 0e
 set appName=VLC TV
 set apk=
 echo.
