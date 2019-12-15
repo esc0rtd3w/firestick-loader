@@ -1057,7 +1057,7 @@ echo.
 echo Once on Launcher, use TitaniumBackup to restore data for
 echo ATV Launcher Home and SH Script Runner Settings
 echo.
-echo Also use TitaniumBackup to restore apps for Busybox and Autoruns
+echo Use TitaniumBackup to restore apps for Mouse Toggle, Busybox and Autoruns
 echo.
 if %downgrade%==1 echo Press any key to exit...
 if %downgrade%==0 echo Press any key to continue...
