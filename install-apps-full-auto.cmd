@@ -307,6 +307,16 @@ echo.
 
 cls
 %_color% 0e
+set appName=MX Player
+set apk=
+echo.
+echo.
+echo Installing %appName%...
+echo.
+%install% "apps\media\mx-player.apk"
+
+cls
+%_color% 0e
 set appName=Plex
 set apk=
 echo.
