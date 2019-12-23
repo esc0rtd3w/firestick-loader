@@ -11,9 +11,9 @@ set push=%adb% push
 
 
 %adb% shell "mkdir /sdcard/TitaniumBackup/"
-%adb% push "..\..\data\tank\post-debloated\restore\TitaniumBackup" /sdcard/TitaniumBackup/
+%adb% push "..\..\data\tank\post-debloated\5272\restore\TitaniumBackup" /sdcard/TitaniumBackup/
 
-::pause
+pause
 
 :end
 
