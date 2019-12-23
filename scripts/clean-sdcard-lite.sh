@@ -3,9 +3,12 @@
 rm  /sdcard/*.png
 rm  /sdcard/*.zip
 
+rm -r /sdcard/ba01c3395a810740b6519db07441
 rm -r /sdcard/CyberFlix
+rm -r /sdcard/dianxin
 rm -r /sdcard/Download
 rm -r /sdcard/Downloader
+rm -r /sdcard/Filelinked
 rm -r /sdcard/Mobdro
 rm -r /sdcard/Movies
 rm -r /sdcard/Music
@@ -17,17 +20,10 @@ rm -r /sdcard/TWRP
 rm -r /sdcard/Typhoon
 rm -r /sdcard/time4popcorn
 
-mkdir /sdcard/CyberFlix
-#mkdir /sdcard/data
 mkdir /sdcard/Download
 mkdir /sdcard/Downloader
-mkdir /sdcard/Mobdro
+mkdir /sdcard/Filelinked
 mkdir /sdcard/Movies
 mkdir /sdcard/Music
-mkdir /sdcard/NovaTV
 mkdir /sdcard/Podcasts
-mkdir /sdcard/restore
-mkdir /sdcard/show_box
 mkdir /sdcard/TWRP
-mkdir /sdcard/Typhoon
-mkdir /sdcard/time4popcorn
