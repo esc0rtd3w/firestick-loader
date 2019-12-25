@@ -124,53 +124,6 @@ set notifications="scripts\settings\tank\system\scripts\5272\notifications.sh"
 set preferences="scripts\settings\tank\system\scripts\5272\preferences.sh"
 
 
-cls
-echo Setting Up Directories For Restore...
-echo.
-%shell% "rm -r /sdcard/restore/"
-%shell% "mkdir /sdcard/restore/"
-%shell% "rm -r /sdcard/TitaniumBackup/"
-%shell% "mkdir /sdcard/restore/apk/"
-%shell% "mkdir /sdcard/restore/apk/system/"
-%sleep% 2
-
-cls
-echo Pushing Restore Data to /sdcard/...
-echo.
-%push% "data\tank\post-debloated\all\restore" /sdcard/restore/
-if %downgrade%==1 %push% "data\tank\post-debloated\5263\restore" /sdcard/restore/
-if %downgrade%==0 %push% "data\tank\post-debloated\5272\restore" /sdcard/restore/
-%sleep% 2
-
-cls
-echo Copying TitaniumBackup Data For Restore...
-echo.
-%shell% "cp -r /sdcard/restore/TitaniumBackup/ /sdcard/"
-%sleep% 2
-
-cls
-echo Creating System Restore Directories and Setting Permissions...
-echo.
-%shell% "rm -r /system/restore/"
-%shell% "mkdir /system/restore/"
-%shell% "mkdir /system/restore/apk/"
-%shell% "mkdir /system/restore/apk/system/"
-
-%shell% "chmod 0777 /system/restore/"
-%shell% "chown root:root /system/restore/"
-
-%shell% "chmod 0777 /system/restore/apk/"
-%shell% "chown root:root /system/restore/apk/"
-
-%shell% "chmod 0777 /system/restore/apk/system/"
-%shell% "chown root:root /system/restore/apk/system/"
-
-cls
-echo Copying Data from /sdcard to /system...
-echo.
-%shell% "cp -r /sdcard/restore/ /system/"
-%sleep% 2
-
 :: TODO add Controllers script
 cls
 echo Pushing Settings Scripts to Temp...
@@ -240,50 +193,21 @@ echo.
 %sleep% 2
 
 cls
-echo Copying Apps to /system/app/...
+echo Fixing Permissions...
 echo.
-%shell% "rm -r /system/app/Launcher/"
-%shell% "mkdir /system/app/Launcher/"
-%shell% "chmod 0775 /system/app/Launcher/"
-%shell% "chown root:root /system/app/Launcher/"
-%shell% "cp /system/restore/apk/system/Launcher.apk /system/app/Launcher/Launcher.apk"
+:: Source: https://forum.xda-developers.com/showthread.php?t=2222297
 
-%shell% "rm -r /system/app/ScriptRunner/"
-%shell% "mkdir /system/app/ScriptRunner/"
-%shell% "chmod 0775 /system/app/ScriptRunner/"
-%shell% "chown root:root /system/app/ScriptRunner/"
-%shell% "cp /system/restore/apk/system/ScriptRunner.apk /system/app/ScriptRunner/ScriptRunner.apk"
+%shell% "chown -R media_rw:media_rw /data/media/"
+%shell% "find /data/media/ -type d -exec chmod 775 {} ';'"
+%shell% "find /data/media/ -type f -exec chmod 664 {} ';'"
 
-%shell% "rm -r /system/app/TitaniumBackup/"
-%shell% "mkdir /system/app/TitaniumBackup/"
-%shell% "chmod 0775 /system/app/TitaniumBackup/"
-%shell% "chown root:root /system/app/TitaniumBackup/"
-%shell% "cp /system/restore/apk/system/TitaniumBackup.apk /system/app/TitaniumBackup/TitaniumBackup.apk"
+%shell% "restorecon -FR /data/media/"
 
-%shell% "rm -r /system/app/TitaniumBackupAddon/"
-%shell% "mkdir /system/app/TitaniumBackupAddon/"
-%shell% "chmod 0775 /system/app/TitaniumBackupAddon/"
-%shell% "chown root:root /system/app/TitaniumBackupAddon/"
-%shell% "cp /system/restore/apk/system/TitaniumBackupAddon.apk /system/app/TitaniumBackupAddon/TitaniumBackupAddon.apk"
-
-%sleep% 2
-
-cls
-echo Setting Permissions For System Apps...
-echo.
-%shell% "chmod 0644 /system/app/Launcher/Launcher.apk"
-%shell% "chown root:root /system/app/Launcher/Launcher.apk"
-
-%shell% "chmod 0644 /system/app/ScriptRunner/ScriptRunner.apk"
-%shell% "chown root:root /system/app/ScriptRunner/ScriptRunner.apk"
-
-%shell% "chmod 0644 /system/app/TitaniumBackup/TitaniumBackup.apk"
-%shell% "chown root:root /system/app/TitaniumBackup/TitaniumBackup.apk"
-
-%shell% "chmod 0644 /system/app/TitaniumBackupAddon/TitaniumBackupAddon.apk"
-%shell% "chown root:root /system/app/TitaniumBackupAddon/TitaniumBackupAddon.apk"
-
-%sleep% 2
+::%twrp% fixperms /
+::%twrp% fixperms /system/
+::%twrp% fixperms /data/
+::%twrp% fixperms /sdcard/
+%sleep% 5
 
 
 
