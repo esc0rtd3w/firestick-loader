@@ -577,7 +577,7 @@ if %downgrade%==0 %shell% "rm -r /system/priv-app/com.amazon.katoch/"
 if %downgrade%==0 %shell% "rm -r /system/priv-app/com.amazon.tv.alexaalerts/"
 
 :: Equipment Control (REMOVAL CAN BREAK AMAZON UI)
-:: if %downgrade%==0 %shell% "rm -r /system/priv-app/com.amazon.tv.devicecontroldevicecontrol/"
+:: if %downgrade%==0 %shell% "rm -r /system/priv-app/com.amazon.tv.devicecontrol/"
 :: if %downgrade%==0 %shell% "rm -r /system/priv-app/com.amazon.tv.devicecontrolsettings/"
 
 :: Forced App Updater
