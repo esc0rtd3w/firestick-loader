@@ -617,6 +617,11 @@ echo.
 
 :: Save the screensaver update
 ::%shell% "rm -r /data/app/com.amazon.ftv.screensaver-1/"
+
+:: Used For Equipment Control
+::%shell% "rm -r /data/app/com.amazon.tv.devicecontrol-1/"
+::%shell% "rm -r /data/app/com.amazon.tv.devicecontrolsettings-1/"
+
 if %downgrade%==0 (
 %shell% "rm -r /data/app/com.amazon.aca-1/"
 %shell% "rm -r /data/app/com.amazon.alexashopping-1/"
@@ -634,8 +639,6 @@ if %downgrade%==0 (
 %shell% "rm -r /data/app/com.amazon.kso.blackbird-1/"
 %shell% "rm -r /data/app/com.amazon.shoptv.client-1/"
 %shell% "rm -r /data/app/com.amazon.tahoe-1/"
-%shell% "rm -r /data/app/com.amazon.tv.devicecontrol-1/"
-%shell% "rm -r /data/app/com.amazon.tv.devicecontrolsettings-1/"
 %shell% "rm -r /data/app/com.amazon.tv.launcher-1/"
 %shell% "rm -r /data/app/com.amazon.tv.livetv-1/"
 %shell% "rm -r /data/app/com.amazon.tv.ottssocompanionapp-1/"
@@ -658,8 +661,6 @@ if %downgrade%==0 (
 %shell% "rm -r /data/app/com.amazon.kso.blackbird-2/"
 %shell% "rm -r /data/app/com.amazon.shoptv.client-2/"
 %shell% "rm -r /data/app/com.amazon.tahoe-2/"
-%shell% "rm -r /data/app/com.amazon.tv.devicecontrol-2/"
-%shell% "rm -r /data/app/com.amazon.tv.devicecontrolsettings-2/"
 %shell% "rm -r /data/app/com.amazon.tv.launcher-2/"
 %shell% "rm -r /data/app/com.amazon.tv.livetv-2/"
 %shell% "rm -r /data/app/com.amazon.tv.ottssocompanionapp-2/"
