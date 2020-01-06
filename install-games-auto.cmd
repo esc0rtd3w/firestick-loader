@@ -44,6 +44,17 @@ echo Installing %appName%...
 echo.
 %install% "apps\games\pacman-256.apk"
 
+
+cls
+%_color% 0e
+set appName=Falling Lightblocks
+set apk=
+echo.
+echo.
+echo Installing %appName%...
+echo.
+%install% "apps\games\falling-lightblocks.apk"
+
 cls
 %_color% 0e
 set appName=Solitaire
@@ -63,17 +74,6 @@ echo.
 echo Installing %appName%...
 echo.
 %install% "apps\games\freecell.apk"
-
-
-cls
-%_color% 0e
-set appName=Balloon Archery
-set apk=
-echo.
-echo.
-echo Installing %appName%...
-echo.
-%install% "apps\games\balloon-archery.apk"
 
 cls
 %_color% 0e
