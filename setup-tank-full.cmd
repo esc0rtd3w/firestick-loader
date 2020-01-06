@@ -374,7 +374,11 @@ if %downgrade%==1 %shell% "rm -r /system/priv-app/amazon.jackson-19/"
 %shell% "rm -r /system/priv-app/com.amazon.tv.aiv.support/"
 %shell% "rm -r /system/priv-app/com.amazon.tv.legal.notices/"
 %shell% "rm -r /system/priv-app/com.amazon.tv.parentalcontrols/"
-%shell% "rm -r /system/priv-app/com.amazon.venezia/"
+
+:: Amazon App Store
+:: Do not remove to preserve app store version apps such as Netflix
+::%shell% "rm -r /system/priv-app/com.amazon.venezia/"
+
 ::%shell% "rm -r /system/priv-app/com.amazon.visualonawv/"
 %shell% "rm -r /system/priv-app/ContentSupportProvider/"
 %shell% "rm -r /system/priv-app/CrashManager/"
@@ -622,8 +626,13 @@ echo.
 ::%shell% "rm -r /data/app/com.amazon.tv.devicecontrol-1/"
 ::%shell% "rm -r /data/app/com.amazon.tv.devicecontrolsettings-1/"
 
+:: Amazon App Store
+:: Do not remove to preserve app store version apps such as Netflix
+::%shell% "rm -r /data/app/com.amazon.venezia-1/"
+
 if %downgrade%==0 (
 %shell% "rm -r /data/app/com.amazon.aca-1/"
+%shell% "rm -r /data/app/com.amazon.ags.app-1/"
 %shell% "rm -r /data/app/com.amazon.alexashopping-1/"
 %shell% "rm -r /data/app/com.amazon.amazonvideo.livingroom.firetv-1/"
 %shell% "rm -r /data/app/com.amazon.appaccesskeyprovider-1/"
@@ -643,9 +652,9 @@ if %downgrade%==0 (
 %shell% "rm -r /data/app/com.amazon.tv.livetv-1/"
 %shell% "rm -r /data/app/com.amazon.tv.ottssocompanionapp-1/"
 %shell% "rm -r /data/app/com.amazon.tv.releasenotes-1/"
-%shell% "rm -r /data/app/com.amazon.venezia-1/"
 
 %shell% "rm -r /data/app/com.amazon.aca-2/"
+%shell% "rm -r /data/app/com.amazon.ags.app-2/"
 %shell% "rm -r /data/app/com.amazon.alexashopping-2/"
 %shell% "rm -r /data/app/com.amazon.amazonvideo.livingroom.firetv-2/"
 %shell% "rm -r /data/app/com.amazon.appaccesskeyprovider-2/"
@@ -665,7 +674,6 @@ if %downgrade%==0 (
 %shell% "rm -r /data/app/com.amazon.tv.livetv-2/"
 %shell% "rm -r /data/app/com.amazon.tv.ottssocompanionapp-2/"
 %shell% "rm -r /data/app/com.amazon.tv.releasenotes-2/"
-%shell% "rm -r /data/app/com.amazon.venezia-2/"
 )
 
 %sleep% 5
