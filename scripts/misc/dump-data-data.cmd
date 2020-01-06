@@ -38,7 +38,7 @@ mkdir %dumpFolder%
 echo.
 echo.
 echo.
-echo Dumping Data (User) Apps...
+echo Dumping Data (User) App Data...
 echo.
 echo.
 
