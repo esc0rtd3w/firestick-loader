@@ -364,7 +364,6 @@ if %downgrade%==1 %shell% "rm -r /system/priv-app/amazon.jackson-19/"
 %shell% "rm -r /system/priv-app/com.amazon.bueller.music/"
 %shell% "rm -r /system/priv-app/com.amazon.device.sync/"
 %shell% "rm -r /system/priv-app/com.amazon.device.sync.sdk.internal/"
-%shell% "rm -r /system/priv-app/com.amazon.kindle.cms-service/"
 %shell% "rm -r /system/priv-app/com.amazon.kindle.devicecontrols/"
 %shell% "rm -r /system/priv-app/com.amazon.kso.blackbird/"
 %shell% "rm -r /system/priv-app/com.amazon.ods.kindleconnect/"
@@ -378,6 +377,9 @@ if %downgrade%==1 %shell% "rm -r /system/priv-app/amazon.jackson-19/"
 :: Amazon App Store
 :: Do not remove to preserve app store version apps such as Netflix
 ::%shell% "rm -r /system/priv-app/com.amazon.venezia/"
+
+:: Used for downloading from Amazon app store
+::%shell% "rm -r /system/priv-app/com.amazon.kindle.cms-service/"
 
 ::%shell% "rm -r /system/priv-app/com.amazon.visualonawv/"
 %shell% "rm -r /system/priv-app/ContentSupportProvider/"
@@ -958,6 +960,8 @@ echo.
 
 cls
 echo Wiping Cache and Dalvik Cache...
+echo.
+echo This May Take Several Minutes!
 echo.
 %twrp% wipe cache
 %sleep% 5
