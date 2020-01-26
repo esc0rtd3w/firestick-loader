@@ -1,0 +1,223 @@
+;======= Kindle Fire WinUsb driver installation. =====================
+
+[Version]
+Signature           = "$Windows NT$"
+Class               = FireDevicesUsbDeviceClass
+ClassGuid           = {6f75a202-3dc3-4dba-97bc-2af2832b5a73}
+Provider            = %ManufacturerName%
+DriverVer           = 10/27/2014,1.4.0000.00000
+CatalogFile.NTx86   = firedeviceswinusbx86.cat
+CatalogFile.NTamd64 = firedeviceswinusba64.cat
+
+;======= Class section =================================================
+[ClassInstall32]
+Addreg = AndroidWinUsbClassReg
+
+
+[AndroidWinUsbClassReg]
+HKR,,,0,%ClassName%
+HKR,,Icon,,-1
+
+;========= Device section ==============================================
+[Manufacturer]
+%ManufacturerName% = Amazon, NTx86, NTamd64
+
+[Amazon.NTx86]
+;Otter
+%CompositeAdbInterface%     = USB_Install, USB\VID_1949&PID_0006&MI_01
+
+;jem
+%CompositeAdbInterface%     = USB_Install, USB\VID_1949&PID_0008&MI_01
+
+;Otter2
+%CompositeAdbInterface%     = USB_Install, USB\VID_1949&PID_000A&MI_01
+
+;tate
+%CompositeAdbInterface%     = USB_Install, USB\VID_1949&PID_0007&MI_01
+
+%CompositeAdbInterface%     = USB_Install, USB\VID_1949&PID_000B&MI_01
+
+;thor
+%CompositeAdbInterface%     = USB_Install, USB\VID_1949&PID_000C&MI_01
+
+;apollo
+%CompositeAdbInterface%     = USB_Install, USB\VID_1949&PID_000D&MI_01
+
+;duke
+%CompositeAdbInterface%     = USB_Install, USB\VID_1949&PID_0800&MI_01
+
+;ariel
+%SingleAdbInterface%        = USB_Install, USB\VID_1949&PID_00F0
+%CompositeAdbInterface%     = USB_Install, USB\VID_1949&PID_00F2&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_1949&PID_00F4&MI_01
+
+;aston
+%SingleAdbInterface%        = USB_Install, USB\VID_1949&PID_0120
+%CompositeAdbInterface%     = USB_Install, USB\VID_1949&PID_0122&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_1949&PID_0124&MI_01
+
+;loki
+%CompositeAdbInterface%     = USB_Install, USB\VID_1949&PID_0012&MI_01
+
+;saturn
+%SingleAdbInterface% = USB_Install, USB\VID_1949&PID_0020
+%CompositeAdbInterface% = USB_Install, USB\VID_1949&PID_0022&MI_01
+
+;thebes
+%SingleAdbInterface% = USB_Install, USB\VID_1949&PID_0200
+%CompositeAdbInterface% = USB_Install, USB\VID_1949&PID_0202&MI_01
+
+;memphis
+%SingleAdbInterface% = USB_Install, USB\VID_1949&PID_0210
+%CompositeAdbInterface% = USB_Install, USB\VID_1949&PID_0212&MI_01
+
+;ford
+%SingleAdbInterface% = USB_Install, USB\VID_1949&PID_0220
+%CompositeAdbInterface% = USB_Install, USB\VID_1949&PID_0222&MI_01
+
+;FireTV 2nd gen
+%SingleBootLoaderInterface% = USB_Install, USB\VID_0BB4&PID_0C01
+%SingleAdbInterface%        = USB_Install, USB\VID_1949&PID_0240
+%CompositeAdbInterface%     = USB_Install, USB\VID_1949&PID_0241&MI_01
+
+;FireTV 1st gen. Qualcomm SURF/FFA
+%SingleAdbInterface% 	    = USB_Install, USB\VID_1949&PID_0401
+%CompositeAdbInterface%     = USB_Install, USB\VID_1949&PID_0401&MI_01
+
+;FireTV Stick 1st gen
+%SingleAdbInterface% 	    = USB_Install, USB\VID_1949&PID_0022
+%CompositeAdbInterface%     = USB_Install, USB\VID_1949&PID_0022&MI_01
+
+; For 64-bit os
+[Amazon.NTamd64]
+;Otter
+%CompositeAdbInterface%     = USB_Install, USB\VID_1949&PID_0006&MI_01
+
+;jem
+%CompositeAdbInterface%     = USB_Install, USB\VID_1949&PID_0008&MI_01
+
+;Otter2
+%CompositeAdbInterface%     = USB_Install, USB\VID_1949&PID_000A&MI_01
+
+;tate
+%CompositeAdbInterface%     = USB_Install, USB\VID_1949&PID_0007&MI_01
+
+%CompositeAdbInterface%     = USB_Install, USB\VID_1949&PID_000B&MI_01
+
+;thor
+%CompositeAdbInterface%     = USB_Install, USB\VID_1949&PID_000C&MI_01
+
+;apollo
+%CompositeAdbInterface%     = USB_Install, USB\VID_1949&PID_000D&MI_01
+
+;duke
+%CompositeAdbInterface%     = USB_Install, USB\VID_1949&PID_0800&MI_01
+
+;ariel
+%SingleAdbInterface%        = USB_Install, USB\VID_1949&PID_00F0
+%CompositeAdbInterface%     = USB_Install, USB\VID_1949&PID_00F2&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_1949&PID_00F4&MI_01
+
+;aston
+%SingleAdbInterface%        = USB_Install, USB\VID_1949&PID_0120
+%CompositeAdbInterface%     = USB_Install, USB\VID_1949&PID_0122&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_1949&PID_0124&MI_01
+
+;loki
+%CompositeAdbInterface%     = USB_Install, USB\VID_1949&PID_0012&MI_01
+
+;saturn
+%SingleAdbInterface% = USB_Install, USB\VID_1949&PID_0020
+%CompositeAdbInterface% = USB_Install, USB\VID_1949&PID_0022&MI_01
+
+;thebes
+%SingleAdbInterface% = USB_Install, USB\VID_1949&PID_0200
+%CompositeAdbInterface% = USB_Install, USB\VID_1949&PID_0202&MI_01
+
+;memphis
+%SingleAdbInterface% = USB_Install, USB\VID_1949&PID_0210
+%CompositeAdbInterface% = USB_Install, USB\VID_1949&PID_0212&MI_01
+
+;ford
+%SingleAdbInterface% = USB_Install, USB\VID_1949&PID_0220
+%CompositeAdbInterface% = USB_Install, USB\VID_1949&PID_0222&MI_01
+
+;FireTV 2nd gen
+%SingleBootLoaderInterface% = USB_Install, USB\VID_0BB4&PID_0C01
+%SingleAdbInterface%        = USB_Install, USB\VID_1949&PID_0240
+%CompositeAdbInterface%     = USB_Install, USB\VID_1949&PID_0241&MI_01
+
+;FireTV 1st gen. Qualcomm SURF/FFA
+%SingleAdbInterface% 	    = USB_Install, USB\VID_1949&PID_0401
+%CompositeAdbInterface%     = USB_Install, USB\VID_1949&PID_0401&MI_01
+
+;FireTV Stick 1st gen
+%SingleAdbInterface% 	    = USB_Install, USB\VID_1949&PID_0022
+%CompositeAdbInterface%     = USB_Install, USB\VID_1949&PID_0022&MI_01
+
+;======================================================================
+[USB_Install]
+Include = winusb.inf
+Needs   = WINUSB.NT
+
+[USB_Install.Services]
+Include     = winusb.inf
+AddService  = WinUSB,0x00000002,WinUSB_ServiceInstall
+
+[WinUSB_ServiceInstall]
+DisplayName     = %WinUSB_SvcDesc%
+ServiceType     = 1
+StartType       = 3
+ErrorControl    = 1
+ServiceBinary   = %12%\WinUSB.sys
+
+[USB_Install.Wdf]
+KmdfService = WINUSB, WinUSB_Install
+
+[WinUSB_Install]
+KmdfLibraryVersion  = 1.9
+
+[USB_Install.HW]
+AddReg  = Dev_AddReg
+
+[Dev_AddReg]
+HKR,,DeviceInterfaceGUIDs,0x10000,"{F72FE0D4-CBCB-407d-8814-9ED673D0DD6B}"
+
+
+[USB_Install.CoInstallers]
+AddReg    = CoInstallers_AddReg
+CopyFiles = CoInstallers_CopyFiles
+
+[CoInstallers_AddReg]
+HKR,,CoInstallers32,0x00010000,"WdfCoInstaller01009.dll,WdfCoInstaller","WinUSBCoInstaller2.dll"
+
+[CoInstallers_CopyFiles]
+WinUSBCoInstaller2.dll
+WdfCoInstaller01009.dll
+
+[DestinationDirs]
+CoInstallers_CopyFiles=11
+
+;============== Source Media Section ================================================
+[SourceDisksNames]
+1 = %DISK_NAME%,,,\i386
+2 = %DISK_NAME%,,,\amd64
+
+[SourceDisksFiles.x86]
+WinUSBCoInstaller2.dll  = 1
+WdfCoInstaller01009.dll = 1
+
+[SourceDisksFiles.amd64]
+WinUSBCoInstaller2.dll  = 2
+WdfCoInstaller01009.dll = 2
+
+
+;======================= Strings ====================================================
+[Strings]
+ManufacturerName            = "Amazon.com"
+CompositeAdbInterface       = "Android Composite ADB Interface"
+SingleAdbInterface          = "Android ADB Interface"
+SingleBootLoaderInterface   = "Android Bootloader Interface"
+WinUSB_SvcDesc              = "Android USB Driver"
+DISK_NAME                   = "Android WinUsb Installation Disk"
+ClassName                   = "Fire Devices"
