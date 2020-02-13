@@ -13,10 +13,8 @@ set push=%adb% push
 
 
 cls
-
-
-%push% "%file%" /sdcard/
-
+%push% "%file%" /sdcard/PICTURES/
+pause
 
 
 

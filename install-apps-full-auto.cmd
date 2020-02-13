@@ -17,6 +17,7 @@ set install=%adb% install
 set uninstall=%adb% uninstall
 set push=%adb% push
 set pull=%adb% pull
+set adbkill=%adb% kill-server
 
 set pathAndroid=Android/data/org.xbmc.kodi/files/.kodi
 set pathIOS=private/var/mobile/Library/Preferences/Kodi
@@ -49,6 +50,9 @@ set baddieFlagActive=0
 
 set buildDotProp=/system/build.prop
 
+%_color% 0e
+%adbkill%
+
 ::cls
 ::%_color% 0e
 ::set appName=FirePwn Home
@@ -66,6 +70,44 @@ set buildDotProp=/system/build.prop
 ::echo.
 ::%install% "apps\home\FirePwnHomeDebug.apk"
 ::%push% "apps\home\sdcard\FirePwnHomeBackup.zip" /sdcard/
+
+
+set atvhome=n
+cls
+echo Install ATV Launcher as Home [User App] [Y/N]?
+echo.
+set /p atvhome=
+if %atvhome%==n goto mtoggle
+if %atvhome%==N goto mtoggle
+
+cls
+%_color% 0e
+set appName=ATV Launcher [as User App] [4K]
+set apk=
+echo Installing %appName%...
+echo.
+%install% "apps\home\atv-launcher.apk"
+
+
+:mtoggle
+set mouset=n
+cls
+echo Install Mouse Toggle [Y/N]?
+echo.
+set /p mouset=
+if %mouset%==n goto kodimain
+if %mouset%==N goto kodimain
+
+cls
+%_color% 0e
+set appName=Mouse Toggle
+set apk=
+echo Installing %appName%...
+echo.
+%install% "apps\utilities\mouse-toggle.apk"
+::%install% "apps\utilities\mouse-toggle2.apk"
+::%install% "apps\utilities\mouse-toggle3.apk"
+
 
 :kodimain
 cls
@@ -137,6 +179,16 @@ echo.
 
 cls
 %_color% 0e
+set appName=Cat Mouse
+set apk=
+echo.
+echo.
+echo Installing %appName%...
+echo.
+%install% "apps\media\cat-mouse.apk"
+
+cls
+%_color% 0e
 set appName=Cinema HD
 set apk=
 echo.
@@ -184,6 +236,16 @@ echo.
 echo Installing %appName%...
 echo.
 %install% "apps\media\nova-tv.apk"
+
+cls
+%_color% 0e
+set appName=Pocket TV
+set apk=
+echo.
+echo.
+echo Installing %appName%...
+echo.
+%install% "apps\media\pocket-tv.apk"
 
 cls
 %_color% 0e
