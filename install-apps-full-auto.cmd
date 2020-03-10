@@ -239,13 +239,23 @@ echo.
 
 cls
 %_color% 0e
-set appName=Pocket TV
+set appName=Terrarium TV
 set apk=
 echo.
 echo.
 echo Installing %appName%...
 echo.
-%install% "apps\media\pocket-tv.apk"
+%install% "apps\media\terrarium-tv.apk"
+
+cls
+%_color% 0e
+set appName=Xumo
+set apk=
+echo.
+echo.
+echo Installing %appName%...
+echo.
+%install% "apps\media\xumo.apk"
 
 cls
 %_color% 0e
@@ -266,6 +276,56 @@ echo.
 echo Installing %appName%...
 echo.
 %install% "apps\media\pluto-tv.apk"
+
+cls
+%_color% 0e
+set appName=Sofa TV
+set apk=
+echo.
+echo.
+echo Installing %appName%...
+echo.
+%install% "apps\media\sofa-tv.apk"
+
+::cls
+::%_color% 0e
+::set appName=Pocket TV
+::set apk=
+::echo.
+::echo.
+::echo Installing %appName%...
+::echo.
+::%install% "apps\media\pocket-tv.apk"
+
+::cls
+::%_color% 0e
+::set appName=FreeFlix TV
+::set apk=
+::echo.
+::echo.
+::echo Installing %appName%...
+::echo.
+::%install% "apps\media\freeflix-tv.apk"
+
+cls
+%_color% 0e
+set appName=FreeFlix HQ
+set apk=
+echo.
+echo.
+echo Installing %appName%...
+echo.
+%install% "apps\media\freeflixhq.apk"
+
+::cls
+::%_color% 0e
+::set appName=Blizz TV
+::set apk=
+::echo.
+::echo.
+::echo Installing %appName%...
+::echo.
+::%install% "apps\media\blizz-tv.apk"
 
 cls
 %_color% 0e
@@ -326,6 +386,16 @@ echo.
 echo Installing %appName%...
 echo.
 %install% "apps\amazon\amazon-prime-video.apk"
+
+cls
+%_color% 0e
+set appName=Smart Youtube TV
+set apk=
+echo.
+echo.
+echo Installing %appName%...
+echo.
+%install% "apps\media\smart-youtube.apk"
 
 cls
 %_color% 0e
