@@ -64,11 +64,15 @@ echo.
 echo.
 %cocolor% 0e
 echo A New Window Will Open That You Must Type Into!
+echo.
+echo If it does not reboot, turn OFF and ON Developer Options Under Device
+echo.
 %cocolor% 0c
 echo.
-%sleep% 3
+%sleep% 5
+%adbWait%
 %adb% reboot
-%sleep% 15
+%sleep% 25
 
 %cocolor% 0e
 cls
