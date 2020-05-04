@@ -379,18 +379,6 @@ echo.
 %sleep% 2
 
 cls
-echo Settings Permissions and Copying Custom OOBE App to /system/priv-app/...
-echo.
-%shell% "rm -r /system/priv-app/com.amazon.tv.oobe/"
-%shell% "mkdir /system/priv-app/com.amazon.tv.oobe/"
-%shell% "chmod 0775 /system/priv-app/com.amazon.tv.oobe/"
-%shell% "chown root:root /system/priv-app/com.amazon.tv.oobe/"
-%shell% "cp /system/restore/apk/system/com.amazon.tv.oobe.apk /system/priv-app/com.amazon.tv.oobe/com.amazon.tv.oobe.apk"
-%shell% "chmod 0644 /system/priv-app/com.amazon.tv.oobe/com.amazon.tv.oobe.apk"
-%shell% "chown root:root /system/priv-app/com.amazon.tv.oobe/com.amazon.tv.oobe.apk"
-%sleep% 2
-
-cls
 echo Pushing Settings Scripts to Temp...
 echo.
 %push% %accessibility% /data/local/tmp/
@@ -535,10 +523,8 @@ echo.
 %sleep% 2
 
 cls
-echo Wiping Data, Cache, and Dalvik Cache...
+echo Wiping Cache, and Dalvik Cache...
 echo.
-%twrp% wipe data
-%sleep% 5
 %twrp% wipe cache
 %sleep% 5
 %twrp% wipe dalvik
