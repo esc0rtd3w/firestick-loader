@@ -71,6 +71,7 @@ echo.
 echo.
 %sleep% 5
 %adbWait%
+if %errorlevel%==1 goto twrpfail
 %adb% reboot
 %sleep% 25
 
