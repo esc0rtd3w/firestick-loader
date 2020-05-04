@@ -32,6 +32,9 @@ if not exist "%temp%\firestick-loader" md "%temp%\firestick-loader"
 :start
 color 0e
 
+:: Kill any adb instances before starting
+%adbKill%
+
 :: Set Flags For ADB Service and Unknown Sources
 set adb_success=0
 set unk_sources_success=0

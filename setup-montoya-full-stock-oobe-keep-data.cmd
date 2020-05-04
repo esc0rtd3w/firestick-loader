@@ -22,6 +22,10 @@ if not exist "%temp%\firestick-loader" md "%temp%\firestick-loader"
 
 :start
 color 0e
+
+:: Kill any adb instances before starting
+%adbKill%
+
 set accessibility="scripts\settings\montoya\system\scripts\accessibility.sh"
 set applications="scripts\settings\montoya\system\scripts\applications.sh"
 set btcontroller="scripts\settings\tank\system\scripts\btcontroller.sh"
