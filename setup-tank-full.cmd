@@ -24,6 +24,9 @@ set pull=%adb% pull
 set shell=%adb% shell
 set twrp=%shell% twrp
 
+:: Used for 5.2.6.3 when no downgrade will be done
+set nodg=0
+
 if not exist "%temp%\firestick-loader" md "%temp%\firestick-loader"
 
 :start
@@ -103,7 +106,11 @@ color 0c
 set noway=0
 set dgchoice=n
 
-if %fireOsVersion%==5.2.6.3 goto is5263
+if %fireOsVersion%==5.2.6.3 (
+	set downgrade=1
+	set nodg=1
+	goto is5263
+)
 
 cls
 %cocolor% 0a
@@ -126,10 +133,52 @@ if %dgchoice%==y set downgrade=1
 if %dgchoice%==Y set downgrade=1
 
 if %downgrade%==0 goto is5272
-if %downgrade%==1 goto is5263
+if %downgrade%==1 goto dg5263
 goto dgask
 
+
 :is5263
+cls
+%cocolor% 0a
+echo TWRP Found!
+echo.
+%cocolor% 0b
+echo Device: %fireOsDevice% / Firmware Version: %fireOsVersion%
+echo.
+echo.
+%cocolor% 0e
+echo The device will have the following done to it:
+echo.
+echo - Amazon Bloat Removed
+echo - Custom OOBE App That Only Requires Remote, Wifi Setup, and Account
+echo - Custom Home Menu and Data Installed To System
+echo - TitaniumBackup Installed To System. Use To Restore All Apps and Data
+echo - SH Script Runner Installed To System. Use For Shortcuts On Home Menu
+echo - Restore Directory and All APKs and TitaniumBackup Files To /system/
+echo - Scripts Directory and All Home Scripts To Launch Amazon Settings To /system/
+echo - Magisk Installed For SuperUser and ADB Service
+echo.
+echo - The System, Data, Cache, and Dalvik Cache Will Be Formatted During Setup
+echo.
+echo.
+echo.
+echo Press 1 to EXIT, B to create BACKUP, or just press ENTER to continue...
+echo.
+set /p noway=
+
+if %noway%==1 goto end
+if %noway%==b %twrp% backup /system,data,cache,dalvik
+if %noway%==b %adb% reboot recovery
+if %noway%==b %sleep% 25
+if %noway%==b goto start
+if %noway%==B %twrp% backup /system,data,cache,dalvik
+if %noway%==B %adb% reboot recovery
+if %noway%==B %sleep% 25
+if %noway%==B goto start
+goto stage1
+
+
+:dg5263
 cls
 %cocolor% 0a
 echo TWRP Found!
@@ -262,6 +311,9 @@ echo.
 %sleep% 25
 
 if %downgrade%==0 goto stage2
+
+:: If version is 5.2.6.3 then do not downgrade
+if %nodg%==1 goto stage2
 
 cls
 echo.
