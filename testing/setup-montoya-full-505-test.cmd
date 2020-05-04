@@ -22,16 +22,14 @@ if not exist "%temp%\firestick-loader" md "%temp%\firestick-loader"
 
 :start
 color 0e
-set accessibility="scripts\settings\montoya\system\scripts\accessibility.sh"
-set applications="scripts\settings\montoya\system\scripts\applications.sh"
-set btcontroller="scripts\settings\tank\system\scripts\btcontroller.sh"
-set device="scripts\settings\montoya\system\scripts\device.sh"
-set displaysounds="scripts\settings\montoya\system\scripts\display-sounds.sh"
-set help="scripts\settings\montoya\system\scripts\help.sh"
-set myaccount="scripts\settings\montoya\system\scripts\my-account.sh"
-set network="scripts\settings\montoya\system\scripts\network.sh"
-set notifications="scripts\settings\montoya\system\scripts\notifications.sh"
-set preferences="scripts\settings\montoya\system\scripts\preferences.sh"
+set applications="scripts\settings\montoya\system\scripts\505\applications.sh"
+set btcontroller="scripts\settings\tank\system\scripts\505\btcontroller.sh"
+set displaysounds="scripts\settings\montoya\system\scripts\505\display-sounds.sh"
+set help="scripts\settings\montoya\system\scripts\505\help.sh"
+set myaccount="scripts\settings\montoya\system\scripts\505\my-account.sh"
+set network="scripts\settings\montoya\system\scripts\505\network.sh"
+set pcon="scripts\settings\montoya\system\scripts\505\parental-controls.sh"
+set system="scripts\settings\montoya\system\scripts\505\system.sh"
 
 :: Set Flags For ADB Service and Unknown Sources
 set adb_success=0
@@ -174,16 +172,14 @@ echo.
 cls
 echo Pushing Settings Scripts to Temp...
 echo.
-%push% %accessibility% /data/local/tmp/
 %push% %applications% /data/local/tmp/
 %push% %btcontroller% /data/local/tmp/
-%push% %device% /data/local/tmp/
 %push% %displaysounds% /data/local/tmp/
 %push% %help% /data/local/tmp/
 %push% %myaccount% /data/local/tmp/
 %push% %network% /data/local/tmp/
-%push% %notifications% /data/local/tmp/
-%push% %preferences% /data/local/tmp/
+%push% %pcon% /data/local/tmp/
+%push% %system% /data/local/tmp/
 
 %sleep% 2
 
@@ -207,16 +203,14 @@ echo.
 cls
 echo Copying Settings Scripts From Temp to /system...
 echo.
-%shell% "cp /data/local/tmp/accessibility.sh /system/scripts/accessibility.sh"
 %shell% "cp /data/local/tmp/applications.sh /system/scripts/applications.sh"
 %shell% "cp /data/local/tmp/btcontroller.sh /system/scripts/btcontroller.sh"
-%shell% "cp /data/local/tmp/device.sh /system/scripts/device.sh"
 %shell% "cp /data/local/tmp/display-sounds.sh /system/scripts/display-sounds.sh"
 %shell% "cp /data/local/tmp/help.sh /system/scripts/help.sh"
 %shell% "cp /data/local/tmp/my-account.sh /system/scripts/my-account.sh"
 %shell% "cp /data/local/tmp/network.sh /system/scripts/network.sh"
-%shell% "cp /data/local/tmp/notifications.sh /system/scripts/notifications.sh"
-%shell% "cp /data/local/tmp/preferences.sh /system/scripts/preferences.sh"
+%shell% "cp /data/local/tmp/parental-controls.sh /system/scripts/parental-controls.sh"
+%shell% "cp /data/local/tmp/system.sh /system/scripts/system.sh"
 
 %sleep% 2
 

@@ -95,8 +95,8 @@ cls
 echo Install Mouse Toggle [Y/N]?
 echo.
 set /p mouset=
-if %mouset%==n goto kodimain
-if %mouset%==N goto kodimain
+if %mouset%==n goto adblockToggle
+if %mouset%==N goto adblockToggle
 
 cls
 %_color% 0e
@@ -107,6 +107,43 @@ echo.
 %install% "apps\utilities\mouse-toggle.apk"
 ::%install% "apps\utilities\mouse-toggle2.apk"
 ::%install% "apps\utilities\mouse-toggle3.apk"
+
+
+:adblockToggle
+set adblock=n
+cls
+echo Install AdGuard [Y/N]?
+echo.
+set /p adblock=
+if %adblock%==n goto adAwayToggle
+if %adblock%==N goto adAwayToggle
+
+cls
+%_color% 0e
+set appName=AdGuard
+set apk=
+echo Installing %appName%...
+echo.
+%install% "apps\utilities\adguard.apk"
+
+
+:adAwayToggle
+set adblock=n
+cls
+echo Install AdAway [ROOT] [Y/N]?
+echo.
+set /p adaway=
+if %adaway%==n goto kodimain
+if %adaway%==N goto kodimain
+
+cls
+%_color% 0e
+set appName=AdAway [ROOT]
+set apk=
+echo Installing %appName%...
+echo.
+%install% "apps\utilities\adaway.apk"
+
 
 
 :kodimain
@@ -249,13 +286,13 @@ echo.
 
 cls
 %_color% 0e
-set appName=Xumo
+set appName=Xumo TV
 set apk=
 echo.
 echo.
 echo Installing %appName%...
 echo.
-%install% "apps\media\xumo.apk"
+%install% "apps\media\xumo-tv.apk"
 
 cls
 %_color% 0e
