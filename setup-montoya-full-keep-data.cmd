@@ -28,7 +28,7 @@ color 0e
 
 set accessibility="scripts\settings\montoya\system\scripts\accessibility.sh"
 set applications="scripts\settings\montoya\system\scripts\applications.sh"
-set btcontroller="scripts\settings\tank\system\scripts\btcontroller.sh"
+set btcontroller="scripts\settings\montoya\system\scripts\btcontroller.sh"
 set device="scripts\settings\montoya\system\scripts\device.sh"
 set displaysounds="scripts\settings\montoya\system\scripts\display-sounds.sh"
 set help="scripts\settings\montoya\system\scripts\help.sh"
