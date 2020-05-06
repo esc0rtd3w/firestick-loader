@@ -206,8 +206,6 @@ echo.
 echo - The System, Data, Cache, and Dalvik Cache Will Be Formatted During Setup
 echo.
 echo.
-echo Press S To Skip Firmware Downgrade
-echo.
 echo Press 1 to EXIT, B to create BACKUP, or just press ENTER to continue...
 echo.
 set /p noway=
@@ -221,8 +219,6 @@ if %noway%==B %twrp% backup /system,data,cache,dalvik
 if %noway%==B %adb% reboot recovery
 if %noway%==B %sleep% 25
 if %noway%==B goto start
-if %noway%==S goto stage2
-if %noway%==s goto stage2
 goto stage1
 
 
