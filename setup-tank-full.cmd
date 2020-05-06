@@ -161,7 +161,7 @@ echo - Restore Directory and All APKs and TitaniumBackup Files To /system/
 echo - Scripts Directory and All Home Scripts To Launch Amazon Settings To /system/
 echo - Magisk Installed For SuperUser and ADB Service
 echo.
-echo - The System, Data, Cache, and Dalvik Cache Will Be Formatted During Setup
+echo - The Cache and Dalvik Cache Will Be Formatted During Setup
 echo.
 echo.
 echo.
