@@ -4,7 +4,7 @@
 
 color 0e
 
-set wait="..\..\wait.exe"
+set wait="..\..\bin\wait.exe"
 
 set adb="..\..\bin\adb.exe"
 
