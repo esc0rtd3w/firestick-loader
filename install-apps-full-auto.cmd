@@ -314,15 +314,15 @@ echo Installing %appName%...
 echo.
 %install% "apps\media\pluto-tv.apk"
 
-cls
-%_color% 0e
-set appName=Sofa TV
-set apk=
-echo.
-echo.
-echo Installing %appName%...
-echo.
-%install% "apps\media\sofa-tv.apk"
+::cls
+::%_color% 0e
+::set appName=Sofa TV
+::set apk=
+::echo.
+::echo.
+::echo Installing %appName%...
+::echo.
+::%install% "apps\media\sofa-tv.apk"
 
 ::cls
 ::%_color% 0e
@@ -384,15 +384,15 @@ echo Installing %appName%...
 echo.
 %install% "apps\media\popcornflix.apk"
 
-cls
-%_color% 0e
-set appName=Popcornflix Kids
-set apk=
-echo.
-echo.
-echo Installing %appName%...
-echo.
-%install% "apps\media\popcornflix-kids.apk"
+::cls
+::%_color% 0e
+::set appName=Popcornflix Kids
+::set apk=
+::echo.
+::echo.
+::echo Installing %appName%...
+::echo.
+::%install% "apps\media\popcornflix-kids.apk"
 
 cls
 %_color% 0e
@@ -434,25 +434,25 @@ echo Installing %appName%...
 echo.
 %install% "apps\media\smart-youtube.apk"
 
-cls
-%_color% 0e
-set appName=Youtube
-set apk=
-echo.
-echo.
-echo Installing %appName%...
-echo.
-%install% "apps\media\youtube.apk"
+::cls
+::%_color% 0e
+::set appName=Youtube
+::set apk=
+::echo.
+::echo.
+::echo Installing %appName%...
+::echo.
+::%install% "apps\media\youtube.apk"
 
-cls
-%_color% 0e
-set appName=Youtube Kids
-set apk=
-echo.
-echo.
-echo Installing %appName%...
-echo.
-%install% "apps\media\youtube-kids.apk"
+::cls
+::%_color% 0e
+::set appName=Youtube Kids
+::set apk=
+::echo.
+::echo.
+::echo Installing %appName%...
+::echo.
+::%install% "apps\media\youtube-kids.apk"
 
 cls
 %_color% 0e
@@ -484,15 +484,15 @@ echo Installing %appName%...
 echo.
 %install% "apps\media\mx-player.apk"
 
-cls
-%_color% 0e
-set appName=Plex
-set apk=
-echo.
-echo.
-echo Installing %appName%...
-echo.
-%install% "apps\media\plex.apk"
+::cls
+::%_color% 0e
+::set appName=Plex
+::set apk=
+::echo.
+::echo.
+::echo Installing %appName%...
+::echo.
+::%install% "apps\media\plex.apk"
 
 cls
 %_color% 0e
@@ -524,15 +524,15 @@ echo Installing %appName%...
 echo.
 %install% "apps\web\puffin-tv.apk"
 
-cls
-%_color% 0e
-set appName=Amazon Silk Web Browser
-set apk=
-echo.
-echo.
-echo Installing %appName%...
-echo.
-%install% "apps\web\amazon-silk.apk"
+::cls
+::%_color% 0e
+::set appName=Amazon Silk Web Browser
+::set apk=
+::echo.
+::echo.
+::echo Installing %appName%...
+::echo.
+::%install% "apps\web\amazon-silk.apk"
 
 cls
 %_color% 0e

@@ -421,6 +421,10 @@ set bootAnimationPink="%~dp0bootanimation\stock-pink\bootanimation.zip"
 set bootAnimationPurple="%~dp0bootanimation\stock-purple\bootanimation.zip"
 set bootAnimationRed="%~dp0bootanimation\stock-red\bootanimation.zip"
 set bootAnimationYellow="%~dp0bootanimation\stock-yellow\bootanimation.zip"
+set bootAnimationLineageOS="%~dp0bootanimation\stock-lineageos\bootanimation.zip"
+
+:: Mantis Stock Boot Animation
+set bootAnimation4k="%~dp0bootanimation\stock-original\4k\bootanimation.zip"
 
 :: Busybox Commands
 ::arp -a -v -i wlan0
@@ -574,6 +578,9 @@ echo.
 
 for /f "tokens=3 delims= " %%f in ('type "%temp%\fireos-version.txt"') do set fireOsVersion=%%f
 for /f "tokens=2 delims==" %%f in ('type "%temp%\fireos-device.txt"') do set fireOsDevice=%%f
+%sleep% 1
+%shell% "rm /sdcard/fireos-version.txt"
+%shell% "rm /sdcard/fireos-device.txt"
 
 if %fireOsVersion%==0.0.0.0 (
 set rootable=0
@@ -1765,15 +1772,9 @@ if %installFireStopperSetting%==1 (
 
 if %installFireStopperSetting%==2 (
 
-	%uninstall% com.firepwn.home.montoya
-
-	%push% "apps\home\sdcard\FirePwnHomeBackup.zip" /sdcard/
-
-	%push% "%~dp0apps\home\FirePwnHome.apk" /data/local/tmp/
-
-	%push% "%~dp0scripts\firepwn-home-as-system.sh" /data/local/tmp/
-	%shell% "su -c chmod 755 /data/local/tmp/firepwn-home-as-system.sh"
-	%shell% "su -c sh /data/local/tmp/firepwn-home-as-system.sh"
+	%push% "%~dp0scripts\atv-home-as-system.sh" /data/local/tmp/
+	%shell% "su -c chmod 755 /data/local/tmp/atv-home-as-system.sh"
+	%shell% "su -c sh /data/local/tmp/atv-home-as-system.sh"
 	
 	set installFireStopperSetting=0
 
@@ -3552,8 +3553,6 @@ echo *** BE SURE TO ALLOW SU PERMISSIONS IF REQUESTED ***
 echo.
 echo.
 
-::%install% "%~dp0apps\system\firestopper.apk"
-
 ::%uninstall% de.belu.firestopper
 %uninstall% com.firepwn.home.montoya
 
@@ -3561,7 +3560,8 @@ echo.
 ::%push% "apps\system\sdcard\FireStarterBackup.zip" /sdcard/
 %push% "apps\home\sdcard\FirePwnHomeBackup.zip" /sdcard/
 
-%push% "%~dp0apps\home\FirePwnHome.apk" /data/local/tmp/
+::%push% "%~dp0apps\home\FirePwnHome.apk" /data/local/tmp/
+%push% "%~dp0apps\home\atv-launcher.apk" /data/local/tmp/Launcher.apk
 
 ::%push% "%~dp0apps\system\firestopper.apk" /data/local/tmp/
 ::%shell% "su -c mkdir /system/app/FireStopper/"
@@ -3569,9 +3569,13 @@ echo.
 ::%shell% "su -c cp /data/local/tmp/firestopper.apk" /system/app/FireStopper/FireStopper.apk"
 ::%shell% "su -c chmoc 0644 /system/app/FireStopper/FireStopper.apk"
 
-%push% "%~dp0scripts\firepwn-home-as-system.sh" /data/local/tmp/
-%shell% "su -c chmod 755 /data/local/tmp/firepwn-home-as-system.sh"
-%shell% "su -c sh /data/local/tmp/firepwn-home-as-system.sh"
+::%push% "%~dp0scripts\firepwn-home-as-system.sh" /data/local/tmp/
+::%shell% "su -c chmod 755 /data/local/tmp/firepwn-home-as-system.sh"
+::%shell% "su -c sh /data/local/tmp/firepwn-home-as-system.sh"
+
+%push% "%~dp0scripts\atv-home-as-system.sh" /data/local/tmp/
+%shell% "su -c chmod 755 /data/local/tmp/atv-home-as-system.sh"
+%shell% "su -c sh /data/local/tmp/atv-home-as-system.sh"
 
 
 %shell% "su -c rm /data/local/tmp/bloat-disable.sh"
@@ -3663,7 +3667,8 @@ echo.
 ::%push% "apps\system\sdcard\FireStarterBackup.zip" /sdcard/
 %push% "apps\home\sdcard\FirePwnHomeBackup.zip" /sdcard/
 
-%push% "%~dp0apps\home\FirePwnHome.apk" /data/local/tmp/
+::%push% "%~dp0apps\home\FirePwnHome.apk" /data/local/tmp/
+%push% "%~dp0apps\home\atv-launcher.apk" /data/local/tmp/Launcher.apk
 
 ::%push% "%~dp0apps\system\firestopper.apk" /data/local/tmp/
 ::%shell% "su -c mkdir /system/app/FireStopper/"
@@ -3671,13 +3676,13 @@ echo.
 ::%shell% "su -c cp /data/local/tmp/firestopper.apk" /system/app/FireStopper/FireStopper.apk"
 ::%shell% "su -c chmoc 0644 /system/app/FireStopper/FireStopper.apk"
 
-%push% "%~dp0scripts\firepwn-home-as-system.sh" /data/local/tmp/
-%shell% "su -c chmod 755 /data/local/tmp/firepwn-home-as-system.sh"
-%shell% "su -c sh /data/local/tmp/firepwn-home-as-system.sh"
+::%push% "%~dp0scripts\firepwn-home-as-system.sh" /data/local/tmp/
+::%shell% "su -c chmod 755 /data/local/tmp/firepwn-home-as-system.sh"
+::%shell% "su -c sh /data/local/tmp/firepwn-home-as-system.sh"
 
-
-
-::%install% "%~dp0apps\system\firestopper.apk"
+%push% "%~dp0scripts\atv-home-as-system.sh" /data/local/tmp/
+%shell% "su -c chmod 755 /data/local/tmp/atv-home-as-system.sh"
+%shell% "su -c sh /data/local/tmp/atv-home-as-system.sh"
 
 
 ::%shell% "su -c rm /data/local/tmp/bloat-remove.sh"
@@ -4088,6 +4093,10 @@ echo 5) Red
 echo.
 echo 6) Yellow
 echo.
+echo 7) 4K Stock
+echo.
+echo 8) LineageOS
+echo.
 echo.
 echo C) Custom Boot Animation
 echo.
@@ -4106,6 +4115,8 @@ if %newBootAnimationChoice%==3 set newBootAnimation=%bootAnimationPink%
 if %newBootAnimationChoice%==4 set newBootAnimation=%bootAnimationPurple%
 if %newBootAnimationChoice%==5 set newBootAnimation=%bootAnimationRed%
 if %newBootAnimationChoice%==6 set newBootAnimation=%bootAnimationYellow%
+if %newBootAnimationChoice%==7 set newBootAnimation=%bootAnimation4k%
+if %newBootAnimationChoice%==8 set newBootAnimation=%bootAnimationLineageOS%
 if %newBootAnimationChoice%==C goto bootanimCustom
 if %newBootAnimationChoice%==c goto bootanimCustom
 if %newBootAnimationChoice%==B goto fixesMenu
