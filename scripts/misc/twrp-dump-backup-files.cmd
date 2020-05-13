@@ -1,5 +1,3 @@
-set file=%1
-
 @echo off
 
 color 0e
