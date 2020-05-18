@@ -72,13 +72,13 @@ set buildDotProp=/system/build.prop
 ::%push% "apps\home\sdcard\FirePwnHomeBackup.zip" /sdcard/
 
 
-set atvhome=n
+set atvhomeInstall=n
 cls
 echo Install ATV Launcher as Home [User App] [Y/N]?
 echo.
-set /p atvhome=
-if %atvhome%==n goto mtoggle
-if %atvhome%==N goto mtoggle
+set /p atvhomeInstall=
+if %atvhomeInstall%==n goto mtoggle
+if %atvhomeInstall%==N goto mtoggle
 
 cls
 %_color% 0e
@@ -90,13 +90,13 @@ echo.
 
 
 :mtoggle
-set mouset=n
+set mouseInstall=n
 cls
 echo Install Mouse Toggle [Y/N]?
 echo.
-set /p mouset=
-if %mouset%==n goto adblockToggle
-if %mouset%==N goto adblockToggle
+set /p mouseInstall=
+if %mouseInstall%==n goto adblockToggle
+if %mouseInstall%==N goto adblockToggle
 
 cls
 %_color% 0e
@@ -110,13 +110,13 @@ echo.
 
 
 :adblockToggle
-set adblock=n
+set adguardInstall=n
 cls
 echo Install AdGuard [Y/N]?
 echo.
-set /p adblock=
-if %adblock%==n goto adAwayToggle
-if %adblock%==N goto adAwayToggle
+set /p adguardInstall=
+if %adguardInstall%==n goto adAwayToggle
+if %adguardInstall%==N goto adAwayToggle
 
 cls
 %_color% 0e
@@ -128,13 +128,13 @@ echo.
 
 
 :adAwayToggle
-set adblock=n
+set adawayInstall=n
 cls
 echo Install AdAway [ROOT] [Y/N]?
 echo.
-set /p adaway=
-if %adaway%==n goto kodimain
-if %adaway%==N goto kodimain
+set /p adawayInstall=
+if %adawayInstall%==n goto kodiMain
+if %adawayInstall%==N goto kodiMain
 
 cls
 %_color% 0e
@@ -146,7 +146,15 @@ echo.
 
 
 
-:kodimain
+:kodiMain
+set kodiInstall=n
+cls
+echo Install Kodi [Y/N]?
+echo.
+set /p kodiInstall=
+if %kodiInstall%==n goto appsMain
+if %kodiInstall%==N goto appsMain
+
 cls
 %_color% 0e
 set appName=Kodi
@@ -194,6 +202,8 @@ md "%temp%\firestick-loader\apps\media\kodi\data\%kodiVersion%\%kodiBuild%"
 
 %rm% "%temp%\firestick-loader\apps\media\kodi"
 
+
+:appsMain
 cls
 %_color% 0e
 set appName=TeaTV
@@ -274,15 +284,15 @@ echo Installing %appName%...
 echo.
 %install% "apps\media\nova-tv.apk"
 
-cls
-%_color% 0e
-set appName=Terrarium TV
-set apk=
-echo.
-echo.
-echo Installing %appName%...
-echo.
-%install% "apps\media\terrarium-tv.apk"
+::cls
+::%_color% 0e
+::set appName=Terrarium TV
+::set apk=
+::echo.
+::echo.
+::echo Installing %appName%...
+::echo.
+::%install% "apps\media\terrarium-tv.apk"
 
 cls
 %_color% 0e
@@ -472,17 +482,18 @@ echo.
 echo.
 echo Installing %appName%...
 echo.
-%install% "apps\media\vlc-tv-arm.apk"
+::%install% "apps\media\vlc-tv-arm.apk"
+%install% "apps\media\vlc.apk"
 
-cls
-%_color% 0e
-set appName=MX Player
-set apk=
-echo.
-echo.
-echo Installing %appName%...
-echo.
-%install% "apps\media\mx-player.apk"
+::cls
+::%_color% 0e
+::set appName=MX Player
+::set apk=
+::echo.
+::echo.
+::echo Installing %appName%...
+::echo.
+::%install% "apps\media\mx-player.apk"
 
 ::cls
 ::%_color% 0e
