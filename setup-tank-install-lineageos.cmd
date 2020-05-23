@@ -153,7 +153,7 @@ cls
 echo Preparing LineageOS and Google Apps Zip Files
 echo.
 if not exist "%temp%\firestick-loader\install\stick2\lineageos" md "%temp%\firestick-loader\install\stick2\lineageos"
-%extractRAR% "install\stick2\5.2.6.3\lineageos-tank.split" "%temp%\firestick-loader\install\stick2"
+%extractRAR% "install\stick2\lineageos\lineageos-tank.split" "%temp%\firestick-loader\install\stick2"
 
 cls
 echo Pushing LineageOS and Google Apps Zip Files to /sdcard/...
@@ -179,7 +179,7 @@ echo.
 cls
 echo Cleaning Up Files...
 echo.
-rd /s /q "%temp%\firestick-loader\downgrade\stick2"
+rd /s /q "%temp%\firestick-loader\install\stick2"
 %shell% "rm /sdcard/lineageos-tank.zip"
 %shell% "rm /sdcard/gapps-tank.zip"
 %sleep% 5
