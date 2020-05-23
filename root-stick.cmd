@@ -309,6 +309,8 @@ set amStartShowHudRoot=%shell% su -c am start -a com.amazon.device.settings.acti
 set amStartVideoSettingsRoot=%shell% su -c am start -a com.amazon.device.settings.action.VIDEO_SETTINGS -n
 
 :: Activities
+
+:: ===============5.2.6.3 Tank Settings START===============
 set tankNotifications=%amStart% com.amazon.tv.notificationcenter/com.amazon.tv.notificationcenter.NotificationCenterActivity
 set tankNetwork=%amStart% com.amazon.tv.settings/com.amazon.tv.settings.tv.network.NetworkActivity
 set tankDisplaySounds=%amStartDisplaySoundsRoot% com.amazon.tv.settings/com.amazon.tv.settings.tv.display_sounds.DisplayAndSoundsActivity
@@ -320,10 +322,7 @@ set tankDevice=%amStartDeviceRoot% com.amazon.tv.settings/com.amazon.tv.settings
 set tankAccessibility=%amStartAccessibilityRoot% com.amazon.tv.settings/.tv.accessibility.AccessibilityActivity
 set tankHelp=%amStartHelpRoot% com.amazon.tv.csapp/com.amazon.tv.csapp.CSAppActivity
 set tankMyAccount=%amStartMyAccountRoot% com.amazon.tv.settings/com.amazon.tv.settings.tv.my_account.MyAccountActivity
-:: ===============5.2.6.3 Tank Settings START===============
 
-
-:: ===============Tank Activities 5.2.7.2 START===============
 set tankNotifications5272=%amStart% com.amazon.tv.notificationcenter/.NotificationCenterActivity
 set tankNetwork5272=%amStart% com.amazon.tv.settings.v2/.tv.network.NetworkActivity
 set tankDisplaySounds5272=%amStartDisplaySoundsRoot% com.amazon.tv.settings.v2/.tv.display_sounds.DisplayAndSoundsActivity
@@ -388,7 +387,20 @@ set tankMyAccount5272=%amStartMyAccountRoot% com.amazon.tv.settings.v2/.tv.my_ac
 :: My Account
 :: act com.amazon.device.settings.action.MY_ACCOUNT
 :: cmp com.amazon.tv.settings.v2/.tv.my_account.MyAccountActivity
+:: ===============Tank Activities 5.2.7.2 END===============
 
+:: ===============5.2.7.1 Mantis Settings START===============
+set mantisNotifications=%amStart% com.amazon.tv.notificationcenter/com.amazon.tv.notificationcenter.NotificationCenterActivity
+set mantisNetwork=%amStart% com.amazon.tv.settings/com.amazon.tv.settings.tv.network.NetworkActivity
+set mantisDisplaySounds=%amStartDisplaySoundsRoot% com.amazon.tv.settings/com.amazon.tv.settings.tv.display_sounds.DisplayAndSoundsActivity
+set mantisApplications=%amStartApplicationsManageRoot% com.amazon.tv.settings/com.amazon.tv.settings.tv.applications.ApplicationsActivity
+set mantisControllersBT=%amStart% com.amazon.tv.settings/.tv.controllers_bluetooth_devices.ControllersAndBluetoothActivity
+set mantisAlexa=%amStart% com.amazon.vizzini/com.amazon.vizzini.setting.AlexaSettingActivity
+set mantisPreferences=%amStartPreferencesRoot% com.amazon.tv.settings/com.amazon.tv.settings.tv.preferences.PreferencesActivity
+set mantisDevice=%amStartDeviceRoot% com.amazon.tv.settings/com.amazon.tv.settings.tv.device.DeviceActivity
+set mantisAccessibility=%amStartAccessibilityRoot% com.amazon.tv.settings/.tv.accessibility.AccessibilityActivity
+set mantisHelp=%amStartHelpRoot% com.amazon.tv.csapp/com.amazon.tv.csapp.CSAppActivity
+set mantisMyAccount=%amStartMyAccountRoot% com.amazon.tv.settings/com.amazon.tv.settings.tv.my_account.MyAccountActivity
 :: ===============Tank Activities 5.2.7.2 END===============
 
 :: Downgrade Version Options
@@ -786,6 +798,13 @@ if %rooted%==1 (
 set rootableText=ROOTED
 )
 
+:: Check for blank device
+if %fireOsDevice%==none (
+	%msgbox% "Your device is not being detected.\n\nPlease confirm you have authorized ADB connection on device and retry!" "FirePwn Loader"
+	goto end
+)
+
+
 echo *** Device is %fireOsDevice% on version %fireOsVersion% and is %rootableText% ***
 echo.
 echo.
@@ -795,43 +814,37 @@ echo.
 echo.
 echo.
 %_color% 0e
-echo Press Y To Use Full Automatic Mode (also use YD to include downgrade)
-%_color% 0e
-echo.
-echo.
-echo Press I to install kingroot (also use IR to install and root)
-echo.
-echo Press R to root (also use R1 to Skip Wait or R2 to Skip Wait/Swipe)
-echo.
-echo Press T to install TWRP and pre-rooted rom (thanks to rbox) (TR copy rom)
-echo.
-::echo Press S to issue an "su" request (also use SA to auto accept request)
-::echo.
-echo Press G to install Google Play Store (WIP) (*root required*)
-echo.
-echo.
-::echo Press P to replace kingroot with SuperSU (Not Working Correctly!)
-::echo.
-%_color% 0e
-echo Press D to downgrade firmware (also use DN for no root method *see tweaks*)
-echo.
+if %fireOsDevice%==montoya (
+	echo Press Y To Use Full Automatic Mode (also use YD to include downgrade)
+	echo.
+	echo Press I to install kingroot (also use IR to install and root)
+	echo.
+	echo Press R to root (also use R1 to Skip Wait or R2 to Skip Wait/Swipe)
+	echo.
+	echo Press T to install TWRP and pre-rooted rom (thanks to rbox) (TR copy rom)
+	echo.
+	echo Press G to install Google Play Store (WIP) (*root required*)
+	echo.
+	echo Press D to downgrade firmware (also use DN for no root method *see tweaks*)
+	echo.
+	echo Press U to unroot (kingroot binary and apk removal)
+	echo.
+	echo.
+)
 echo Press B to install busybox (also use BA to use auto scripting method)
 echo.
 echo Press A to disable Amazon Bloatware (also use AR to remove or ARA w/adblock)
-echo.
-echo Press U to unroot (kingroot binary and apk removal)
-echo.
 echo.
 echo Press C to clear all caches on device (also use CR to reboot after)
 echo.
 echo Press K to clean kodi data (also use KS to clean entire sd card)
 echo.
-echo Press F to factory reset (also use FR for root reset to save config files)
-echo.
+if %fireOsDevice%==montoya echo Press F to factory reset (also use FR for root reset to save config files)
+if %fireOsDevice%==montoya echo.
 echo.
 echo Press W to run fixes, tweaks, and misc options
 echo.
-echo Press Z to directly invoke Amazon Settings menu items (ZT for Tank)
+echo Press Z to directly invoke Amazon Settings menu items (ZT Tank / ZM Mantis)
 echo.
 echo.
 echo Press X to exit (also use XR to reload main menu)
@@ -847,8 +860,6 @@ if %dgchoice%==Ab goto antiBrick
 if %dgchoice%==aB goto antiBrick
 if %dgchoice%==ab goto antiBrick
 
-::if %dgchoice%==G goto gplay
-::if %dgchoice%==g goto gplay
 if %dgchoice%==G %runShellTerminate% "extras-install-play-store.cmd"
 if %dgchoice%==g %runShellTerminate% "extras-install-play-store.cmd"
 
@@ -858,8 +869,6 @@ if %dgchoice%==BA set busyboxScriptInstall=1&&goto busybox
 if %dgchoice%==Ba set busyboxScriptInstall=1&&goto busybox
 if %dgchoice%==bA set busyboxScriptInstall=1&&goto busybox
 if %dgchoice%==ba set busyboxScriptInstall=1&&goto busybox
-::if %dgchoice%==F goto launchFS
-::if %dgchoice%==f goto launchFS
 if %dgchoice%==W goto fixesMenu
 if %dgchoice%==w goto fixesMenu
 if %dgchoice%==U goto unrootKing
@@ -930,10 +939,15 @@ if %dgchoice%==P goto superSU
 if %dgchoice%==p goto superSU
 if %dgchoice%==Z goto invoke
 if %dgchoice%==z goto invoke
+if %dgchoice%==Z goto invoke
 if %dgchoice%==ZT goto invokeTank
 if %dgchoice%==Zt goto invokeTank
 if %dgchoice%==zt goto invokeTank
 if %dgchoice%==zT goto invokeTank
+if %dgchoice%==ZM goto invokeMantis
+if %dgchoice%==Zm goto invokeMantis
+if %dgchoice%==zm goto invokeMantis
+if %dgchoice%==zM goto invokeMantis
 if %dgchoice%==F set factoryReset=1&&goto fReset
 if %dgchoice%==f set factoryReset=1&&goto fReset
 if %dgchoice%==FR set factoryReset=2&&goto fReset
@@ -1090,6 +1104,69 @@ if %ichoice%==X goto end
 if %ichoice%==x goto end
 
 goto invokeTank
+
+:invokeMantis
+
+%_color% 0e
+
+set ichoice=y
+
+cls
+echo Direct Activity Invoker Menu [FireTV Stick 3]
+echo.
+echo.
+if %rootable%==0 %_color% 0c
+if %rootable%==1 %_color% 0a
+echo Device is currently %rootableText%
+%_color% 0e
+echo.
+echo.
+echo Press 1 to Show Settings -- Notifications
+echo Press 2 to Show Settings -- Network
+echo Press 3 to Show Settings -- Display and Sounds
+echo Press 4 to Show Settings -- Applications
+echo Press 5 to Show Settings -- Controllers and Bluetooth
+echo Press 6 to Show Settings -- Alexa
+echo Press 7 to Show Settings -- Preferences
+echo Press 8 to Show Settings -- Device
+echo Press 9 to Show Settings -- Accessibility
+echo Press H to Show Settings -- Help
+echo Press M to Show Settings -- My Account
+echo.
+echo.
+echo Press Z to open advanced direct activies
+echo.
+echo Press B to go back to previous page
+echo.
+echo Press X to exit
+echo.
+echo.
+echo Make a choice and press ENTER....
+echo.
+
+set /p ichoice=
+
+if %ichoice%==1 %mantisNotifications%
+if %ichoice%==2 %mantisNetwork%
+if %ichoice%==3 %mantisDisplaySounds%
+if %ichoice%==4 %mantisApplications%
+if %ichoice%==5 %mantisControllersBT%
+if %ichoice%==6 %mantisAlexa%
+if %ichoice%==7 %mantisPreferences%
+if %ichoice%==8 %mantisDevice%
+if %ichoice%==9 %mantisAccessibility%
+if %ichoice%==h %mantisHelp%
+if %ichoice%==H %mantisHelp%
+if %ichoice%==m %mantisMyAccount%
+if %ichoice%==M %mantisyAccount%
+if %ichoice%==Z goto advInvoke
+if %ichoice%==z goto advInvoke
+if %ichoice%==B goto menu
+if %ichoice%==b goto menu
+if %ichoice%==X goto end
+if %ichoice%==x goto end
+
+goto invokeMantis
 
 
 :advInvoke
@@ -3540,9 +3617,8 @@ goto menu
 
 
 :bloatDisable
-
 cls
-echo Making sure FireStarter is installed as a HOME Menu....
+echo Making sure Custom Launcher is installed as a HOME Menu....
 echo.
 echo.
 echo.
@@ -3553,25 +3629,7 @@ echo *** BE SURE TO ALLOW SU PERMISSIONS IF REQUESTED ***
 echo.
 echo.
 
-::%uninstall% de.belu.firestopper
-%uninstall% com.firepwn.home.montoya
-
-:: FireStopper Config
-::%push% "apps\system\sdcard\FireStarterBackup.zip" /sdcard/
-%push% "apps\home\sdcard\FirePwnHomeBackup.zip" /sdcard/
-
-::%push% "%~dp0apps\home\FirePwnHome.apk" /data/local/tmp/
 %push% "%~dp0apps\home\atv-launcher.apk" /data/local/tmp/Launcher.apk
-
-::%push% "%~dp0apps\system\firestopper.apk" /data/local/tmp/
-::%shell% "su -c mkdir /system/app/FireStopper/"
-::%shell% "su -c chmod 0755 /system/app/FireStopper/"
-::%shell% "su -c cp /data/local/tmp/firestopper.apk" /system/app/FireStopper/FireStopper.apk"
-::%shell% "su -c chmoc 0644 /system/app/FireStopper/FireStopper.apk"
-
-::%push% "%~dp0scripts\firepwn-home-as-system.sh" /data/local/tmp/
-::%shell% "su -c chmod 755 /data/local/tmp/firepwn-home-as-system.sh"
-::%shell% "su -c sh /data/local/tmp/firepwn-home-as-system.sh"
 
 %push% "%~dp0scripts\atv-home-as-system.sh" /data/local/tmp/
 %shell% "su -c chmod 755 /data/local/tmp/atv-home-as-system.sh"
@@ -3647,9 +3705,8 @@ goto menu
 
 
 :removeBloat
-
 cls
-echo Making sure FireStarter is installed as a HOME Menu....
+echo Making sure Custom Launcher is installed as a HOME Menu....
 echo.
 echo.
 echo.
@@ -3660,39 +3717,24 @@ echo *** BE SURE TO ALLOW SU PERMISSIONS IF REQUESTED ***
 echo.
 echo.
 
-::%uninstall% de.belu.firestopper
-%uninstall% com.firepwn.home.montoya
-
-:: FireStopper Config
-::%push% "apps\system\sdcard\FireStarterBackup.zip" /sdcard/
-%push% "apps\home\sdcard\FirePwnHomeBackup.zip" /sdcard/
-
-::%push% "%~dp0apps\home\FirePwnHome.apk" /data/local/tmp/
 %push% "%~dp0apps\home\atv-launcher.apk" /data/local/tmp/Launcher.apk
-
-::%push% "%~dp0apps\system\firestopper.apk" /data/local/tmp/
-::%shell% "su -c mkdir /system/app/FireStopper/"
-::%shell% "su -c chmod 0755 /system/app/FireStopper/"
-::%shell% "su -c cp /data/local/tmp/firestopper.apk" /system/app/FireStopper/FireStopper.apk"
-::%shell% "su -c chmoc 0644 /system/app/FireStopper/FireStopper.apk"
-
-::%push% "%~dp0scripts\firepwn-home-as-system.sh" /data/local/tmp/
-::%shell% "su -c chmod 755 /data/local/tmp/firepwn-home-as-system.sh"
-::%shell% "su -c sh /data/local/tmp/firepwn-home-as-system.sh"
 
 %push% "%~dp0scripts\atv-home-as-system.sh" /data/local/tmp/
 %shell% "su -c chmod 755 /data/local/tmp/atv-home-as-system.sh"
 %shell% "su -c sh /data/local/tmp/atv-home-as-system.sh"
 
+:: Start Bloat Disable
+%shell% "su -c rm /data/local/tmp/bloat-disable.sh"
 
-::%shell% "su -c rm /data/local/tmp/bloat-remove.sh"
+if %fireOsVersion%==montoya %push% "%~dp0scripts\debloat\bloat-disable-montoya.sh" /data/local/tmp/
+if %fireOsVersion%==tank %push% "%~dp0scripts\debloat\bloat-disable-tank.sh" /data/local/tmp/
+if %fireOsVersion%==mantis %push% "%~dp0scripts\debloat\bloat-disable-mantis.sh" /data/local/tmp/
 
-::cls
-::%push% "%~dp0scripts\debloat\bloat-remove.sh" /data/local/tmp/
-::%shell% "su -c chmod 755 /data/local/tmp/bloat-remove.sh"
-::%shell% "su -c sh /data/local/tmp/bloat-remove.sh"
+%shell% "su -c chmod 755 /data/local/tmp/bloat-disable.sh"
+%shell% "su -c sh /data/local/tmp/bloat-disable.sh"
 
-cls
+if %fireOsVersion%==tank goto skipFullAuto
+if %fireOsVersion%==mantis goto skipFullAuto
 
 if %fullAutoMode%==1 (
 	%push% "%~dp0scripts\debloat\bloat-disable.sh" /data/local/tmp/
@@ -3706,6 +3748,7 @@ if %fullAutoModeDG%==1 (
 	%shell% "su -c sh /data/local/tmp/bloat-disable.sh"
 )
 
+:skipFullAuto
 :: Old Adblock Name
 :: hosts.adfree
 if %doBlockAdsWithMenuOption%==1 (
@@ -3721,7 +3764,10 @@ if %doBlockAdsWithMenuOption%==1 (
 if %fullAutoMode%==1 goto clearCaches
 if %fullAutoModeDG%==1 goto clearCaches
 
-%push% "%~dp0scripts\debloat\full-debloat.sh" /data/local/tmp/
+if %fireOsVersion%==montoya %push% "%~dp0scripts\debloat\full-debloat-montoya.sh" /data/local/tmp/
+if %fireOsVersion%==tank %push% "%~dp0scripts\debloat\full-debloat-tank.sh" /data/local/tmp/
+if %fireOsVersion%==mantis %push% "%~dp0scripts\debloat\full-debloat-mantis.sh" /data/local/tmp/
+
 %shell% "su -c chmod 755 /data/local/tmp/full-debloat.sh"
 %shell% "su -c sh /data/local/tmp/full-debloat.sh"
 
