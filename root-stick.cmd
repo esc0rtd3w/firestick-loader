@@ -26,12 +26,12 @@ set extractRAR="%~dp0bin\rar.exe" -y x
 set teamviewer="%~dp0bin\teamviewer.exe"
 set virtualRouterCMD="%~dp0bin\virtualrouter.exe"
 set virtualRouterGUI="%~dp0bin\virtualrouter-gui.exe"
-set kingrootAPK="%~dp0rooting\king\kingroot.apk"
-set kingrootAPKAlt1="%~dp0rooting\king\kingroot-alt1.apk"
-set kingrootAPKAlt2="%~dp0rooting\king\kingroot-alt2.apk"
-set kingrootPC="%~dp0rooting\king\kingroot-pc.exe"
-set kingrootPCAlt1="%~dp0rooting\king\kingroot-alt1.exe"
-set kingrootPCAlt2="%~dp0rooting\king\kingroot-alt2.exe"
+set kingrootAPK="%~dp0rooting\montoya\king\kingroot.apk"
+set kingrootAPKAlt1="%~dp0rooting\montoya\king\kingroot-alt1.apk"
+set kingrootAPKAlt2="%~dp0rooting\montoya\king\kingroot-alt2.apk"
+set kingrootPC="%~dp0rooting\montoya\king\kingroot-pc.exe"
+set kingrootPCAlt1="%~dp0rooting\montoya\king\kingroot-alt1.exe"
+set kingrootPCAlt2="%~dp0rooting\montoya\king\kingroot-alt2.exe"
 
 :: Screencap Paths
 set capDevice=/sdcard/cap.png
@@ -2353,7 +2353,7 @@ goto menu
 :superSU
 
 :: Install SuperSu
-set apk="rooting\king2su\Superuser.apk"
+set apk="rooting\montoya\king2su\Superuser.apk"
 set app=SuperSU
 
 cls
@@ -2367,17 +2367,17 @@ echo *** BE SURE TO ALLOW SU PERMISSIONS WHEN REQUESTED FOR ADB ***
 echo.
 echo.
 
-%push% "%~dp0rooting\king2su\busybox" /data/local/tmp/
-%push% "%~dp0rooting\king2su\su" /data/local/tmp/
-%push% "%~dp0rooting\king2su\superuser.apk" /data/local/tmp/
-%push% "%~dp0rooting\king2su\99-supersu.sh" /data/local/tmp/
-%push% "%~dp0rooting\king2su\99SuperSUDaemon" /data/local/tmp/
-%push% "%~dp0rooting\king2su\chattr" /data/local/tmp/
-%push% "%~dp0rooting\king2su\chattr.arm" /data/local/tmp/
-%push% "%~dp0rooting\king2su\chattr.pie" /data/local/tmp/
-%push% "%~dp0rooting\king2su\install-recovery.sh" /data/local/tmp/
-%push% "%~dp0rooting\king2su\otasurvival.sh" /data/local/tmp/
-%push% "%~dp0rooting\king2su\supolicy" /data/local/tmp/
+%push% "%~dp0rooting\montoya\king2su\busybox" /data/local/tmp/
+%push% "%~dp0rooting\montoya\king2su\su" /data/local/tmp/
+%push% "%~dp0rooting\montoya\king2su\superuser.apk" /data/local/tmp/
+%push% "%~dp0rooting\montoya\king2su\99-supersu.sh" /data/local/tmp/
+%push% "%~dp0rooting\montoya\king2su\99SuperSUDaemon" /data/local/tmp/
+%push% "%~dp0rooting\montoya\king2su\chattr" /data/local/tmp/
+%push% "%~dp0rooting\montoya\king2su\chattr.arm" /data/local/tmp/
+%push% "%~dp0rooting\montoya\king2su\chattr.pie" /data/local/tmp/
+%push% "%~dp0rooting\montoya\king2su\install-recovery.sh" /data/local/tmp/
+%push% "%~dp0rooting\montoya\king2su\otasurvival.sh" /data/local/tmp/
+%push% "%~dp0rooting\montoya\king2su\supolicy" /data/local/tmp/
 
 
 if %superSuReinstall%==0 (
@@ -2437,7 +2437,7 @@ goto menu
 :killTheKing
 
 %shell% "su -c rm /data/local/tmp/killking.sh"
-%push% "%~dp0rooting\king2su\killking.sh" /data/local/tmp/
+%push% "%~dp0rooting\montoya\king2su\killking.sh" /data/local/tmp/
 %shell% "su -c chmod 755 /data/local/tmp/killking.sh"
 %shell% "su -c sh /data/local/tmp/killking.sh"
 
@@ -2449,7 +2449,7 @@ goto %returnTo%
 :OLDsuperSU
 
 :: Install SuperSU
-set apk="rooting\king2su\superuser.apk"
+set apk="rooting\montoya\king2su\superuser.apk"
 set app=SuperSU
 cls
 echo Removing KingRoot and Installing %app%....
@@ -2492,7 +2492,7 @@ echo.
 ::pause
 
 :: Push king2su folder to sdcard
-%push% %~dp0rooting\king2su /%sdcard%/king2su
+%push% %~dp0rooting\montoya\king2su /%sdcard%/king2su
 
 
 %sleep% 2
@@ -3172,7 +3172,7 @@ echo.
 
 ::%shell% "su -c mount -o remount,rw /system"
 
-%push% "%~dp0rooting\king2su\busybox" /data/local/tmp/
+%push% "%~dp0rooting\montoya\king2su\busybox" /data/local/tmp/
 %push% "%~dp0scripts\install-busybox.sh" /data/local/tmp/
 %shell% "su -c chmod 755 /data/local/tmp/install-busybox.sh"
 %shell% "su -c sh /data/local/tmp/install-busybox.sh"
@@ -3209,7 +3209,7 @@ if %busyboxScriptInstall%==1 (
 
 	%sleep% 10
 
-	%push% "%~dp0rooting\king2su\busybox" /data/local/tmp/
+	%push% "%~dp0rooting\montoya\king2su\busybox" /data/local/tmp/
 	%push% "%~dp0scripts\install-busybox.sh" /data/local/tmp/
 	%shell% "su -c chmod 755 /data/local/tmp/install-busybox.sh"
 	%shell% "su -c sh /data/local/tmp/install-busybox.sh"
