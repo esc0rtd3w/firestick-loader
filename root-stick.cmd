@@ -3723,6 +3723,9 @@ echo.
 %shell% "su -c chmod 755 /data/local/tmp/atv-home-as-system.sh"
 %shell% "su -c sh /data/local/tmp/atv-home-as-system.sh"
 
+:: Check for LineageOS
+if %fireOsVersion%==cm_tank goto menu
+
 :: Start Bloat Disable
 %shell% "su -c rm /data/local/tmp/bloat-disable.sh"
 
@@ -3763,6 +3766,9 @@ if %doBlockAdsWithMenuOption%==1 (
 
 if %fullAutoMode%==1 goto clearCaches
 if %fullAutoModeDG%==1 goto clearCaches
+
+:: Check for LineageOS
+if %fireOsVersion%==cm_tank goto menu
 
 if %fireOsVersion%==montoya %push% "%~dp0scripts\debloat\full-debloat-montoya.sh" /data/local/tmp/
 if %fireOsVersion%==tank %push% "%~dp0scripts\debloat\full-debloat-tank.sh" /data/local/tmp/
