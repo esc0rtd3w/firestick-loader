@@ -14,7 +14,7 @@ set dgversion=0.0.0.0
 set ugversion=0.0.0.0
 set noway=0
 
-set magiskZip=Magisk-v20.1.zip
+set magiskZip=Magisk.zip
 
 set adb="%~dp0bin\adb.exe"
 set adbKill=%adb% kill-server
@@ -1036,7 +1036,7 @@ echo.
 cls
 echo Installing Magisk for SU and ADB Access on Stock Rom...
 echo.
-%push% "rooting\tank\%magiskZip%" /data/local/tmp/
+%push% "rooting\%magiskZip%" /data/local/tmp/
 %twrp% install /data/local/tmp/%magiskZip%
 %sleep% 3
 
@@ -1358,7 +1358,7 @@ echo.
 cls
 echo Re-Installing Magisk for SU Access...
 echo.
-%push% "rooting\tank\%magiskZip%" /data/local/tmp/
+%push% "rooting\%magiskZip%" /data/local/tmp/
 %twrp% install /data/local/tmp/%magiskZip%
 %sleep% 2
 

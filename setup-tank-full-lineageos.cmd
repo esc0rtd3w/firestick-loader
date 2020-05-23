@@ -10,7 +10,7 @@ set downgrade=0
 set adult=0
 set adultCheck=0
 
-set magiskZip=Magisk-v20.4.zip
+set magiskZip=Magisk.zip
 
 set adb="%~dp0bin\adb.exe"
 set adbKill=%adb% kill-server
@@ -359,7 +359,7 @@ echo.
 cls
 echo Re-Installing Magisk for SU Access...
 echo.
-%push% "rooting\tank\%magiskZip%" /data/local/tmp/
+%push% "rooting\%magiskZip%" /data/local/tmp/
 %twrp% install /data/local/tmp/%magiskZip%
 %sleep% 2
 

@@ -14,7 +14,7 @@ set push=%adb% push
 set pull=%adb% pull
 set shell=%adb% shell
 
-set name=Magisk-v20.4.zip
+set name=Magisk.zip
 set installOnly=0
 
 cls
@@ -29,7 +29,7 @@ if %installOnly%==1 goto install
 
 :push
 cls
-set src="..\..\rooting\tank\%name%"
+set src="..\..\rooting\%name%"
 
 %push% %src% /sdcard/
 

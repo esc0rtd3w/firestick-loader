@@ -7,7 +7,7 @@ set fireOsVersion=0.0.0.0
 set fireOsDevice=none
 set downgrade=0
 
-set magiskZip=Magisk-v20.1.zip
+set magiskZip=Magisk.zip
 
 set adb="%~dp0bin\adb.exe"
 set adbKill=%adb% kill-server
