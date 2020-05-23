@@ -1,10 +1,15 @@
-### THIS REPO IS QUITE LARGE AT AROUND 8.1GB COMPLETE
+### THIS REPO IS QUITE LARGE AT AROUND 10GB COMPLETE
 <br/>
 
 ### Newest Detected Version: Any
+
 ### Newest Supported Montoya Version: 5.2.6.3 Pre-Rooted
 ### Newest Recommended Montoya Version: 5.0.5 / 5.2.1.1 Pre-Rooted
-### Newest Supported/Recommended Tank Version: 5.2.6.3 or 5.2.7.2 Stock w/Magisk
+
+### Newest Supported Tank Version: 5.2.7.2 Stock w/Magisk
+### Newest Recommended Tank Version: LineageOS 12.1 w/Magisk
+
+### Newest Supported/Recommended Mantis Version: 6.2.7.1 Stock w/Magisk
 
 <br/>
 
