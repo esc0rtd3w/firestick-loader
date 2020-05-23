@@ -23,7 +23,7 @@ set extractZIP="%~dp0bin\unzip.exe" -o
 set teamviewer="%~dp0bin\teamviewer.exe"
 
 
-set kingrootPC="%~dp0rooting\kingroot-pc.exe"
+set kingrootPC="%~dp0rooting\montoya\king\kingroot-pc.exe"
 
 set sleep="%~dp0bin\wait.exe"
 set rm=rmdir /s /q

@@ -70,7 +70,7 @@ pause
 %shell% mkdir /data/local/tmp/com.amazon.tv.settings/
 %shell% mkdir /data/local/tmp/com.amazon.tv.settings/shared_prefs/
 
-%push% "..\..\rooting\kingroot.apk" /data/local/tmp/
+%push% "..\..\rooting\montoya\king\kingroot.apk" /data/local/tmp/
 %push% "..\factory-reset.sh" /data/local/tmp/
 
 %push% "%~dp0config\data\com.kingroot.kinguser\shared_prefs\" /data/local/tmp/com.kingroot.kinguser/shared_prefs/
