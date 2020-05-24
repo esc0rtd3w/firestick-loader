@@ -19,6 +19,7 @@ set adbWait=%adb% wait-for-device
 set sleep="%~dp0bin\wait.exe"
 set extractRAR="%~dp0bin\rar.exe" -y x
 set cocolor="%~dp0bin\cocolor.exe"
+set msgbox="%~dp0bin\msgbox.exe"
 
 set install=%adb% install
 set uninstall=%adb% uninstall
@@ -66,6 +67,9 @@ echo.
 goto start
 
 :intro
+:: Remind user to have already setup his device
+%msgbox% "You must have already completed the initial OOBE setup on device to continue!" "Mantis Full Setup Script"
+
 :: Reset TWRP Flags
 if %twrp_available%==1 del /f /q "%temp%\firestick-loader\twrp"
 if %twrp_available%==1 set twrp_available=0

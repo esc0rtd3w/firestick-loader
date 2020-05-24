@@ -19,6 +19,7 @@ set adbWait=%adb% wait-for-device
 set sleep="%~dp0bin\wait.exe"
 set extractRAR="%~dp0bin\rar.exe" -y x
 set cocolor="%~dp0bin\cocolor.exe"
+set msgbox="%~dp0bin\msgbox.exe"
 
 set install=%adb% install
 set uninstall=%adb% uninstall
@@ -226,6 +227,9 @@ goto stage1
 
 
 :is5272
+:: Remind user to have already setup his device
+%msgbox% "You must have already completed the initial OOBE setup on device to continue!" "Tank Full Setup Script"
+
 cls
 %cocolor% 0a
 echo TWRP Found!
