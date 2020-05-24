@@ -437,7 +437,15 @@ set bootAnimationYellow="%~dp0bootanimation\montoya-tank\stock-yellow\bootanimat
 set bootAnimationLineageOS="%~dp0bootanimation\montoya-tank\stock-lineageos\bootanimation.zip"
 
 :: Mantis
+set bootAnimationMantisBlue="%~dp0bootanimation\mantis\stock-blue\bootanimation.zip"
+set bootAnimationLiteMantisBlue="%~dp0bootanimation\mantis\stock-lite-blue\bootanimation.zip"
+set bootAnimationMantisGreen="%~dp0bootanimation\mantis\stock-green\bootanimation.zip"
 set bootAnimationMantisOriginal="%~dp0bootanimation\mantis\stock-original\bootanimation.zip"
+set bootAnimationMantisPink="%~dp0bootanimation\mantis\stock-pink\bootanimation.zip"
+set bootAnimationMantisPurple="%~dp0bootanimation\mantis\stock-purple\bootanimation.zip"
+set bootAnimationMantisRed="%~dp0bootanimation\mantis\stock-red\bootanimation.zip"
+set bootAnimationMantisYellow="%~dp0bootanimation\mantis\stock-yellow\bootanimation.zip"
+set bootAnimationMantisLineageOS="%~dp0bootanimation\mantis\stock-lineageos\bootanimation.zip"
 
 :: Busybox Commands
 ::arp -a -v -i wlan0
