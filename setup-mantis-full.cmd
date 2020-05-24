@@ -498,7 +498,7 @@ echo.
 %shell% "rm -r /system/priv-app/TvProvider/"
 
 :: FireOS 5.2.6.2
-%shell% "rm -r /system/priv-app/com.amazon.alexashopping/"
+::%shell% "rm -r /system/priv-app/com.amazon.alexashopping/"
 %shell% "rm -r /system/priv-app/com.amazon.tv.livetv/"
 
 :: FireOS 6.2.5.8
@@ -594,7 +594,7 @@ echo.
 %shell% "rm -r /system/priv-app/com.amazon.appaccesskeyprovider/"
 
 :: Alexa Voice Layer
-%shell% "rm -r /system/priv-app/com.amazon.avl.firetv/"
+::%shell% "rm -r /system/priv-app/com.amazon.avl.firetv/"
 
 :: Ceviche (Unknown)
 %shell% "rm -r /system/priv-app/com.amazon.ceviche/"
@@ -623,7 +623,7 @@ echo.
 :: %shell% "rm -r /system/priv-app/com.amazon.providers.tv/"
 
 :: Fire TV Alexa Alerts
-%shell% "rm -r /system/priv-app/com.amazon.tv.alexaalerts/"
+::%shell% "rm -r /system/priv-app/com.amazon.tv.alexaalerts/"
 
 :: Equipment Control (REMOVAL CAN BREAK AMAZON UI)
 ::%shell% "rm -r /system/priv-app/com.amazon.tv.devicecontrol/"
@@ -708,51 +708,49 @@ echo.
 :: Do not remove to preserve app store version apps such as Netflix
 ::%shell% "rm -r /data/app/com.amazon.venezia-1/"
 
-if %downgrade%==0 (
-	%shell% "rm -r /data/app/com.amazon.aca-1/"
-	%shell% "rm -r /data/app/com.amazon.ags.app-1/"
-	%shell% "rm -r /data/app/com.amazon.alexashopping-1/"
-	%shell% "rm -r /data/app/com.amazon.amazonvideo.livingroom.firetv-1/"
-	%shell% "rm -r /data/app/com.amazon.appaccesskeyprovider-1/"
-	%shell% "rm -r /data/app/com.amazon.aria-1/"
-	%shell% "rm -r /data/app/com.amazon.avl.ftv-1/"
-	%shell% "rm -r /data/app/com.amazon.avod-1/"
-	%shell% "rm -r /data/app/com.amazon.bueller.music-1/"
-	%shell% "rm -r /data/app/com.amazon.cardinal-1/"
-	%shell% "rm -r /data/app/com.amazon.firebat-1/"
-	%shell% "rm -r /data/app/com.amazon.ftv.glorialist-1/"
-	%shell% "rm -r /data/app/com.amazon.hedwig-1/"
-	%shell% "rm -r /data/app/com.amazon.katoch-1/"
-	%shell% "rm -r /data/app/com.amazon.kso.blackbird-1/"
-	%shell% "rm -r /data/app/com.amazon.shoptv.client-1/"
-	%shell% "rm -r /data/app/com.amazon.tahoe-1/"
-	%shell% "rm -r /data/app/com.amazon.tv.launcher-1/"
-	%shell% "rm -r /data/app/com.amazon.tv.livetv-1/"
-	%shell% "rm -r /data/app/com.amazon.tv.ottssocompanionapp-1/"
-	%shell% "rm -r /data/app/com.amazon.tv.releasenotes-1/"
+%shell% "rm -r /data/app/com.amazon.aca-1/"
+%shell% "rm -r /data/app/com.amazon.ags.app-1/"
+::%shell% "rm -r /data/app/com.amazon.alexashopping-1/"
+%shell% "rm -r /data/app/com.amazon.amazonvideo.livingroom.firetv-1/"
+%shell% "rm -r /data/app/com.amazon.appaccesskeyprovider-1/"
+%shell% "rm -r /data/app/com.amazon.aria-1/"
+::%shell% "rm -r /data/app/com.amazon.avl.ftv-1/"
+%shell% "rm -r /data/app/com.amazon.avod-1/"
+%shell% "rm -r /data/app/com.amazon.bueller.music-1/"
+%shell% "rm -r /data/app/com.amazon.cardinal-1/"
+%shell% "rm -r /data/app/com.amazon.firebat-1/"
+%shell% "rm -r /data/app/com.amazon.ftv.glorialist-1/"
+%shell% "rm -r /data/app/com.amazon.hedwig-1/"
+%shell% "rm -r /data/app/com.amazon.katoch-1/"
+%shell% "rm -r /data/app/com.amazon.kso.blackbird-1/"
+%shell% "rm -r /data/app/com.amazon.shoptv.client-1/"
+%shell% "rm -r /data/app/com.amazon.tahoe-1/"
+%shell% "rm -r /data/app/com.amazon.tv.launcher-1/"
+%shell% "rm -r /data/app/com.amazon.tv.livetv-1/"
+%shell% "rm -r /data/app/com.amazon.tv.ottssocompanionapp-1/"
+%shell% "rm -r /data/app/com.amazon.tv.releasenotes-1/"
 
-	%shell% "rm -r /data/app/com.amazon.aca-2/"
-	%shell% "rm -r /data/app/com.amazon.ags.app-2/"
-	%shell% "rm -r /data/app/com.amazon.alexashopping-2/"
-	%shell% "rm -r /data/app/com.amazon.amazonvideo.livingroom.firetv-2/"
-	%shell% "rm -r /data/app/com.amazon.appaccesskeyprovider-2/"
-	%shell% "rm -r /data/app/com.amazon.aria-2/"
-	%shell% "rm -r /data/app/com.amazon.avl.ftv-2/"
-	%shell% "rm -r /data/app/com.amazon.avod-2/"
-	%shell% "rm -r /data/app/com.amazon.bueller.music-2/"
-	%shell% "rm -r /data/app/com.amazon.cardinal-2/"
-	%shell% "rm -r /data/app/com.amazon.firebat-2/"
-	%shell% "rm -r /data/app/com.amazon.ftv.glorialist-2/"
-	%shell% "rm -r /data/app/com.amazon.hedwig-2/"
-	%shell% "rm -r /data/app/com.amazon.katoch-2/"
-	%shell% "rm -r /data/app/com.amazon.kso.blackbird-2/"
-	%shell% "rm -r /data/app/com.amazon.shoptv.client-2/"
-	%shell% "rm -r /data/app/com.amazon.tahoe-2/"
-	%shell% "rm -r /data/app/com.amazon.tv.launcher-2/"
-	%shell% "rm -r /data/app/com.amazon.tv.livetv-2/"
-	%shell% "rm -r /data/app/com.amazon.tv.ottssocompanionapp-2/"
-	%shell% "rm -r /data/app/com.amazon.tv.releasenotes-2/"
-)
+%shell% "rm -r /data/app/com.amazon.aca-2/"
+%shell% "rm -r /data/app/com.amazon.ags.app-2/"
+::%shell% "rm -r /data/app/com.amazon.alexashopping-2/"
+%shell% "rm -r /data/app/com.amazon.amazonvideo.livingroom.firetv-2/"
+%shell% "rm -r /data/app/com.amazon.appaccesskeyprovider-2/"
+%shell% "rm -r /data/app/com.amazon.aria-2/"
+::%shell% "rm -r /data/app/com.amazon.avl.ftv-2/"
+%shell% "rm -r /data/app/com.amazon.avod-2/"
+%shell% "rm -r /data/app/com.amazon.bueller.music-2/"
+%shell% "rm -r /data/app/com.amazon.cardinal-2/"
+%shell% "rm -r /data/app/com.amazon.firebat-2/"
+%shell% "rm -r /data/app/com.amazon.ftv.glorialist-2/"
+%shell% "rm -r /data/app/com.amazon.hedwig-2/"
+%shell% "rm -r /data/app/com.amazon.katoch-2/"
+%shell% "rm -r /data/app/com.amazon.kso.blackbird-2/"
+%shell% "rm -r /data/app/com.amazon.shoptv.client-2/"
+%shell% "rm -r /data/app/com.amazon.tahoe-2/"
+%shell% "rm -r /data/app/com.amazon.tv.launcher-2/"
+%shell% "rm -r /data/app/com.amazon.tv.livetv-2/"
+%shell% "rm -r /data/app/com.amazon.tv.ottssocompanionapp-2/"
+%shell% "rm -r /data/app/com.amazon.tv.releasenotes-2/"
 
 %sleep% 5
 
