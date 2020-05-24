@@ -54,7 +54,7 @@ Mantis Full Setup Script 6.2.7.1
 
 
 <br/><br/>
-### Most things below are for Montoya. There is some Tank support in the scripting for a few things.
+### Most things below are for Montoya. There is some Tank and Mantis support in the scripting for a few things.
 <br/>
 <br/>
 
