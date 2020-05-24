@@ -412,6 +412,9 @@ echo.
 
 %sleep% 3
 
+:: 20200524 - More debloating can probably be achieved
+:: In the current state there are no errors in logcat, no CPU spikes, and settings all work
+
 ::%shell% "rm -r /system/priv-app/amazon.jackson-19/"
 %shell% "rm -r /system/priv-app/AmazonKKWebViewLib/"
 %shell% "rm -r /system/priv-app/BackupRestoreConfirmation/"
