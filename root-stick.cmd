@@ -4195,7 +4195,7 @@ if %fireOsDevice%==mantis (
 	if %newBootAnimationChoice%==4 set newBootAnimation=%bootAnimationMantisPurple%
 	if %newBootAnimationChoice%==5 set newBootAnimation=%bootAnimationMantisRed%
 	if %newBootAnimationChoice%==6 set newBootAnimation=%bootAnimationMantisYellow%
-	if %newBootAnimationChoice%==9 set newBootAnimation=%bootAnimationMantisOriginal%
+	if %newBootAnimationChoice%==7 set newBootAnimation=%bootAnimationMantisOriginal%
 	if %newBootAnimationChoice%==8 set newBootAnimation=%bootAnimationMantisLineageOS%
 )
 
