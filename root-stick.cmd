@@ -4136,7 +4136,7 @@ if %newBootCustomChoice%==none goto bootanimCustom
 if %newBootCustomChoice%==B goto bootanimReplace
 if %newBootCustomChoice%==b goto bootanimReplace
 
-set newBootAnimation==%newBootCustomChoice%
+set newBootAnimation=%newBootCustomChoice%
 
 %shell% "rm /data/local/tmp/bootanimation.zip"
 %push% "%newBootAnimation%" /data/local/tmp/
@@ -4183,7 +4183,6 @@ echo.
 set /p newBootAnimationChoice=
 
 if %newBootAnimationChoice%==none goto bootanimReplace
-if %newBootAnimationChoice% gtr 8 goto bootanimReplace
 
 if not %fireOsDevice%==mantis (
 	if %newBootAnimationChoice%==1 set newBootAnimation=%bootAnimationBlue%
@@ -4211,6 +4210,9 @@ if %newBootAnimationChoice%==C goto bootanimCustom
 if %newBootAnimationChoice%==c goto bootanimCustom
 if %newBootAnimationChoice%==B goto fixesMenu
 if %newBootAnimationChoice%==b goto fixesMenu
+
+:: Check for higher numbers after checking letters first
+if %newBootAnimationChoice% gtr 8 goto bootanimReplace
 
 :: Wait for ADB connection before continuing
 %adbWait%
