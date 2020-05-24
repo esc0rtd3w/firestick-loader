@@ -426,17 +426,18 @@ set suType=kingroot
 set forceRecoveryBoot=%shell% "su -c echo 0>/cache/bootmenu_recovery"
 
 :: Setting Default Available Boot Animation Colors
-set bootAnimationBlue="%~dp0bootanimation\stock-blue\bootanimation.zip"
-set bootAnimationGreen="%~dp0bootanimation\stock-green\bootanimation.zip"
-set bootAnimationOriginal="%~dp0bootanimation\stock-original\bootanimation.zip"
-set bootAnimationPink="%~dp0bootanimation\stock-pink\bootanimation.zip"
-set bootAnimationPurple="%~dp0bootanimation\stock-purple\bootanimation.zip"
-set bootAnimationRed="%~dp0bootanimation\stock-red\bootanimation.zip"
-set bootAnimationYellow="%~dp0bootanimation\stock-yellow\bootanimation.zip"
-set bootAnimationLineageOS="%~dp0bootanimation\stock-lineageos\bootanimation.zip"
+:: Montoya / Tank
+set bootAnimationBlue="%~dp0bootanimation\montoya-tank\stock-blue\bootanimation.zip"
+set bootAnimationGreen="%~dp0bootanimation\montoya-tank\stock-green\bootanimation.zip"
+set bootAnimationOriginal="%~dp0bootanimation\montoya-tank\stock-original\bootanimation.zip"
+set bootAnimationPink="%~dp0bootanimation\montoya-tank\stock-pink\bootanimation.zip"
+set bootAnimationPurple="%~dp0bootanimation\montoya-tank\stock-purple\bootanimation.zip"
+set bootAnimationRed="%~dp0bootanimation\montoya-tank\stock-red\bootanimation.zip"
+set bootAnimationYellow="%~dp0bootanimation\montoya-tank\stock-yellow\bootanimation.zip"
+set bootAnimationLineageOS="%~dp0bootanimation\montoya-tank\stock-lineageos\bootanimation.zip"
 
-:: Mantis Stock Boot Animation
-set bootAnimation4k="%~dp0bootanimation\stock-original\4k\bootanimation.zip"
+:: Mantis
+set bootAnimationMantisOriginal="%~dp0bootanimation\mantis\stock-original\bootanimation.zip"
 
 :: Busybox Commands
 ::arp -a -v -i wlan0
@@ -725,64 +726,69 @@ echo.
 
 
 :: Set MessageBox Text To Display
-if %fireOsVersion%==4.2.2 (
-%msgbox% "This device has version %fireOsVersion% installed.\n\n\nThis is a KitKat Build and Precedes FireOS.\n\nThis Build May Be Rootable and Is Still In Testing." "FirePwn Loader"
+if %fireOsDevice%==montoya (
+	if %fireOsVersion%==4.2.2 (
+	%msgbox% "This device has version %fireOsVersion% installed.\n\n\nThis is a KitKat Build and Precedes FireOS.\n\nThis Build May Be Rootable and Is Still In Testing." "FirePwn Loader"
+	)
+
+	if %fireOsVersion%==5.0.0 (
+	%msgbox% "This device has version %fireOsVersion% installed.\n\n\nIt is recommended to ROOT and then update to version 5.0.5" "FirePwn Loader"
+	)
+
+	if %fireOsVersion%==5.0.2.1 (
+	%msgbox% "This device has version %fireOsVersion% installed.\n\n\nIt is recommended to ROOT and then update to version 5.0.5" "FirePwn Loader"
+	)
+
+	if %fireOsVersion%==5.0.2.2 (
+	%msgbox% "This device has version %fireOsVersion% installed.\n\n\nIt is recommended to ROOT and then update to version 5.0.5" "FirePwn Loader"
+	)
+
+	if %fireOsVersion%==5.0.3 (
+	%msgbox% "This device has version %fireOsVersion% installed.\n\n\nIt is recommended to ROOT and then update to version 5.0.5" "FirePwn Loader"
+	)
+
+	if %fireOsVersion%==5.0.3.1 (
+	%msgbox% "This device has version %fireOsVersion% installed.\n\n\nIt is recommended to ROOT and then update to version 5.0.5" "FirePwn Loader"
+	)
+
+	if %fireOsVersion%==5.0.3.2 (
+	%msgbox% "This device has version %fireOsVersion% installed.\n\n\nIt is recommended to ROOT and then update to version 5.0.5" "FirePwn Loader"
+	)
+
+	if %fireOsVersion%==5.0.3.3 (
+	%msgbox% "This device has version %fireOsVersion% installed.\n\n\nIt is recommended to ROOT and then update to version 5.0.5" "FirePwn Loader"
+	)
+
+	if %fireOsVersion%==5.0.4 (
+	%msgbox% "This device has version %fireOsVersion% installed.\n\n\nIt is recommended to ROOT and then update to version 5.0.5" "FirePwn Loader"
+	)
+
+	if %fireOsVersion%==5.0.5 (
+	%msgbox% "This device has version %fireOsVersion% installed.\n\n\nIt is recommended to:\n\n- Root Device\n- Install Busybox\n- Disable and Remove All Amazon Bloat\n- Block Ads Using Modified HOSTS File\n- Replace or Modify Boot Animation *OPTIONAL*\n- Remove Root Access *OPTIONAL*\n\n\n*** THIS IS CURRENTLY THE RECOMMENDED VERSION TO USE ***" "FirePwn Loader"
+	)
+
+	if %fireOsVersion%==5.0.5.1 (
+	%msgbox% "This device has version %fireOsVersion% installed.\nThere will probably be mixed results trying to root this version!\n\nIt is recommended updating to version 5.2.1.0 for rooting.\n\n\nAmazon OTA Updates are incremental.\n\nThe available version under SETTINGS - ABOUT should be 5.2.1.0.\n\n\n*** DO NOT UPDATE IF AVAILABLE VERSION IS 5.2.1.1 OR HIGHER ***" "FirePwn Loader"
+	)
+
+	if %fireOsVersion%==5.2.1.0 (
+	%msgbox% "This device has version %fireOsVersion% installed.\n\n\nIt is recommended to:\n\n- Disable Amazon OTA Updates\n- Root Device\n- Downgrade To Version 5.0.5.\n\n\nThe Update Loop Protection Script and Block OTA Virtual WiFi Hotspot Will Run After This Dialog Is Closed!\n\n\n* IF THE DEVICE UPDATES, IT MAY NOT BE EXPLOITABLE!\n\n*** YOU HAVE BEEN WARNED ***" "FirePwn Loader"
+
+	%runShellNoTerminate% "%pathScripts%\misc\update-protection-loop.cmd"
+	%runShellTerminate% %virtualRouterGUI%
+	)
+
+	if %fireOsVersion% gtr 5.2.1.0 (
+		%msgbox% "This device has version %fireOsVersion% installed.\n\n\n*** THIS VERSION IS CURRENTLY EXPLOITABLE VIA HARDWARE ONLY ***" "FirePwn Loader"
+	)
 )
-
-if %fireOsVersion%==5.0.0 (
-%msgbox% "This device has version %fireOsVersion% installed.\n\n\nIt is recommended to ROOT and then update to version 5.0.5" "FirePwn Loader"
-)
-
-if %fireOsVersion%==5.0.2.1 (
-%msgbox% "This device has version %fireOsVersion% installed.\n\n\nIt is recommended to ROOT and then update to version 5.0.5" "FirePwn Loader"
-)
-
-if %fireOsVersion%==5.0.2.2 (
-%msgbox% "This device has version %fireOsVersion% installed.\n\n\nIt is recommended to ROOT and then update to version 5.0.5" "FirePwn Loader"
-)
-
-if %fireOsVersion%==5.0.3 (
-%msgbox% "This device has version %fireOsVersion% installed.\n\n\nIt is recommended to ROOT and then update to version 5.0.5" "FirePwn Loader"
-)
-
-if %fireOsVersion%==5.0.3.1 (
-%msgbox% "This device has version %fireOsVersion% installed.\n\n\nIt is recommended to ROOT and then update to version 5.0.5" "FirePwn Loader"
-)
-
-if %fireOsVersion%==5.0.3.2 (
-%msgbox% "This device has version %fireOsVersion% installed.\n\n\nIt is recommended to ROOT and then update to version 5.0.5" "FirePwn Loader"
-)
-
-if %fireOsVersion%==5.0.3.3 (
-%msgbox% "This device has version %fireOsVersion% installed.\n\n\nIt is recommended to ROOT and then update to version 5.0.5" "FirePwn Loader"
-)
-
-if %fireOsVersion%==5.0.4 (
-%msgbox% "This device has version %fireOsVersion% installed.\n\n\nIt is recommended to ROOT and then update to version 5.0.5" "FirePwn Loader"
-)
-
-if %fireOsVersion%==5.0.5 (
-%msgbox% "This device has version %fireOsVersion% installed.\n\n\nIt is recommended to:\n\n- Root Device\n- Install Busybox\n- Disable and Remove All Amazon Bloat\n- Block Ads Using Modified HOSTS File\n- Replace or Modify Boot Animation *OPTIONAL*\n- Remove Root Access *OPTIONAL*\n\n\n*** THIS IS CURRENTLY THE RECOMMENDED VERSION TO USE ***" "FirePwn Loader"
-)
-
-if %fireOsVersion%==5.0.5.1 (
-%msgbox% "This device has version %fireOsVersion% installed.\nThere will probably be mixed results trying to root this version!\n\nIt is recommended updating to version 5.2.1.0 for rooting.\n\n\nAmazon OTA Updates are incremental.\n\nThe available version under SETTINGS - ABOUT should be 5.2.1.0.\n\n\n*** DO NOT UPDATE IF AVAILABLE VERSION IS 5.2.1.1 OR HIGHER ***" "FirePwn Loader"
-)
-
-if %fireOsVersion%==5.2.1.0 (
-%msgbox% "This device has version %fireOsVersion% installed.\n\n\nIt is recommended to:\n\n- Disable Amazon OTA Updates\n- Root Device\n- Downgrade To Version 5.0.5.\n\n\nThe Update Loop Protection Script and Block OTA Virtual WiFi Hotspot Will Run After This Dialog Is Closed!\n\n\n* IF THE DEVICE UPDATES, IT MAY NOT BE EXPLOITABLE!\n\n*** YOU HAVE BEEN WARNED ***" "FirePwn Loader"
-
-%runShellNoTerminate% "%pathScripts%\misc\update-protection-loop.cmd"
-%runShellTerminate% %virtualRouterGUI%
-)
-
-if %fireOsVersion% gtr 5.2.1.0 (
-%msgbox% "This device has version %fireOsVersion% installed.\n\n\n*** THIS VERSION IS CURRENTLY EXPLOITABLE VIA HARDWARE ONLY ***" "FirePwn Loader"
-)
-
 
 if %fireOsDevice%==tank (
-%msgbox% "The detected device is [%fireOsDevice%] and has version %fireOsVersion% installed.\n\nThis menu is meant for Montoya device, but Tank can use all options except ROM and Downgrade" "FirePwn Loader"
+%msgbox% "The detected device is [%fireOsDevice%] and has version %fireOsVersion% installed.\n\nThis menu is meant for Montoya device, but Tank can use some options" "FirePwn Loader"
+)
+
+if %fireOsDevice%==mantis (
+%msgbox% "The detected device is [%fireOsDevice%] and has version %fireOsVersion% installed.\n\nThis menu is meant for Montoya device, but Mantis can use some options" "FirePwn Loader"
 )
 
 :: Begin Main Menu
@@ -815,39 +821,39 @@ echo.
 echo.
 %_color% 0e
 if %fireOsDevice%==montoya (
-	echo Press Y To Use Full Automatic Mode (also use YD to include downgrade)
+	echo Press Y To Use Full Automatic Mode [also use YD to include downgrade]
 	echo.
-	echo Press I to install kingroot (also use IR to install and root)
+	echo Press I to install kingroot [also use IR to install and root]
 	echo.
-	echo Press R to root (also use R1 to Skip Wait or R2 to Skip Wait/Swipe)
+	echo Press R to root [also use R1 to Skip Wait or R2 to Skip Wait/Swipe]
 	echo.
-	echo Press T to install TWRP and pre-rooted rom (thanks to rbox) (TR copy rom)
+	echo Press T to install TWRP and pre-rooted rom [thanks to rbox] [TR copy rom]
 	echo.
-	echo Press G to install Google Play Store (WIP) (*root required*)
+	echo Press G to install Google Play Store [WIP] [*root required*]
 	echo.
-	echo Press D to downgrade firmware (also use DN for no root method *see tweaks*)
+	echo Press D to downgrade firmware [also use DN for no root method *see tweaks*]
 	echo.
-	echo Press U to unroot (kingroot binary and apk removal)
+	echo Press U to unroot [kingroot binary and apk removal]
 	echo.
 	echo.
 )
-echo Press B to install busybox (also use BA to use auto scripting method)
+echo Press B to install busybox [also use BA to use auto scripting method]
 echo.
-echo Press A to disable Amazon Bloatware (also use AR to remove or ARA w/adblock)
+echo Press A to disable Amazon Bloatware [also use AR to remove or ARA w/adblock]
 echo.
-echo Press C to clear all caches on device (also use CR to reboot after)
+echo Press C to clear all caches on device [also use CR to reboot after]
 echo.
-echo Press K to clean kodi data (also use KS to clean entire sd card)
+echo Press K to clean kodi data [also use KS to clean entire sd card]
 echo.
-if %fireOsDevice%==montoya echo Press F to factory reset (also use FR for root reset to save config files)
+if %fireOsDevice%==montoya echo Press F to factory reset [also use FR for root reset to save config files]
 if %fireOsDevice%==montoya echo.
 echo.
 echo Press W to run fixes, tweaks, and misc options
 echo.
-echo Press Z to directly invoke Amazon Settings menu items (ZT Tank / ZM Mantis)
+echo Press Z to directly invoke Amazon Settings menu items [ZT Tank / ZM Mantis]
 echo.
 echo.
-echo Press X to exit (also use XR to reload main menu)
+echo Press X to exit [also use XR to reload main menu]
 echo.
 echo.
 echo Make a choice and press ENTER....
@@ -1251,57 +1257,58 @@ echo.
 echo.
 echo.
 %_color% 0b
-echo 1) Block OTA Updates (Installs Custom System APK Using Janus Vulnerability)
+echo 1) Block OTA Updates [Installs Custom System APK Using Janus Vulnerability]
 ::echo 1) Patch Downgrade Process For Use Without Root *ROOT REQUIRED*
 ::echo 1) Fix Connectivity To Android FireTV Remote App
 echo.
-echo 2) Launch Android Event Keymap (Press Keys and Send Text Over ADB)
+::echo 2) Launch Android Event Keymap [Press Keys and Send Text Over ADB]
+echo 2) Launch Android Key Mapper [Press Keys and Send Text Over ADB]
 echo.
 echo.
 %_color% 05
 ::%_color% 09
-::echo 3) Remove Boot Animation (Leaves Stock FIRE Text)
-echo 3) Replace Boot Animation (Replaces Stock Boot Animation)
-echo 4) Restore Boot Animation (Restores Stock Boot Animation)
+::echo 3) Remove Boot Animation [Leaves Stock FIRE Text]
+echo 3) Replace Boot Animation [Replaces Stock Boot Animation]
+echo 4) Restore Boot Animation [Restores Stock Boot Animation]
 ::echo.
-::echo 6) Replace Boot Fallback Images (Replaces Stock FIRE Text)
-::echo 7) Restore Boot Fallback Images (Restores framework-res.apk)
+::echo 6) Replace Boot Fallback Images [Replaces Stock FIRE Text]
+::echo 7) Restore Boot Fallback Images [Restores framework-res.apk]
 echo.
 echo 5) Launch Boot Animation Factory
 echo.
 echo.
 %_color% 0a
-echo P) Patch Amazon APKs (also use P1 for photos, P2 for settings, P*R to restore)
+echo P) Patch Amazon APKs [also use P1 for photos, P2 for settings, P*R to restore]
 echo.
 %_color% 0d
-echo H) Hide Amazon OTA Updates (also use HU to unhide or HA or HUA for all)
+echo H) Hide Amazon OTA Updates [also use HU to unhide or HA or HUA for all]
 echo.
 %_color% 09
-echo S) Take Screenshot (also use SV to use rapid viewer mode)
+echo S) Take Screenshot [also use SV to use rapid viewer mode]
 echo.
 %_color% 01
-echo A) Allow Superuser Permission On Device (AK/King) (AS/SuperSU)
+echo A) Allow Superuser Permission On Device [AK/King] [AS/SuperSU]
 echo.
 %_color% 0c
-echo D) Disable/Block Ads (uses modified /system/etc/HOSTS)
+echo D) Disable/Block Ads [uses modified /system/etc/HOSTS]
 echo.
 %_color% 06
 echo L) Accept Opera Mini License Agreement
 echo.
 %_color% 03
-echo F) FireStopper Launch (also use FI to install or FIS to install as /system/)
+echo F) FireStopper Launch [also use FI to install or FIS to install as /system/]
 echo.
 echo.
 %_color% 02
-::echo T) Terminal Launch (also use TI to install or TIS to install as /system/)
-echo V) Launch Virtual WiFi Hotspot (Blocks Amazon OTA Updates)
+::echo T) Terminal Launch [also use TI to install or TIS to install as /system/]
+echo V) Launch Virtual WiFi Hotspot [Blocks Amazon OTA Updates]
 echo.
 echo.
 %_color% 07
-echo Z) Reset ADB Server (also use ZS to start or ZK to kill server)
+echo Z) Reset ADB Server [also use ZS to start or ZK to kill server]
 echo.
 %_color% 08
-echo R) Reboot Device (also use RR for recovery or RB for bootloader modes)
+echo R) Reboot Device [also use RR for recovery or RB for bootloader modes]
 echo.
 echo.
 echo.
@@ -1319,7 +1326,8 @@ set /p fchoice=
 ::if %fchoice%==1 goto fixRemote
 ::if %fchoice%==1 goto cacheFix
 if %fchoice%==1 goto blockOTA
-if %fchoice%==2 goto eventmap
+::if %fchoice%==2 goto eventmap
+if %fchoice%==2 goto keymapper
 ::if %fchoice%==3 goto bootanimRemove
 if %fchoice%==3 goto bootanimReplace
 if %fchoice%==4 goto bootanimRestore
@@ -1975,6 +1983,13 @@ goto fixesMenu
 :eventmap
 
 %runShellTerminate% "%~dp0eventmap.cmd"
+
+goto fixesMenu
+
+
+:keymapper
+
+%runShellTerminate% "%~dp0bin\AndroidKeyMapper.exe"
 
 goto fixesMenu
 
@@ -4145,7 +4160,7 @@ echo 5) Red
 echo.
 echo 6) Yellow
 echo.
-echo 7) 4K Stock
+echo 7) Original
 echo.
 echo 8) LineageOS
 echo.
@@ -4160,19 +4175,37 @@ echo.
 set /p newBootAnimationChoice=
 
 if %newBootAnimationChoice%==none goto bootanimReplace
+if %newBootAnimationChoice% gtr 8 goto bootanimReplace
 
-if %newBootAnimationChoice%==1 set newBootAnimation=%bootAnimationBlue%
-if %newBootAnimationChoice%==2 set newBootAnimation=%bootAnimationGreen%
-if %newBootAnimationChoice%==3 set newBootAnimation=%bootAnimationPink%
-if %newBootAnimationChoice%==4 set newBootAnimation=%bootAnimationPurple%
-if %newBootAnimationChoice%==5 set newBootAnimation=%bootAnimationRed%
-if %newBootAnimationChoice%==6 set newBootAnimation=%bootAnimationYellow%
-if %newBootAnimationChoice%==7 set newBootAnimation=%bootAnimation4k%
-if %newBootAnimationChoice%==8 set newBootAnimation=%bootAnimationLineageOS%
+if not %fireOsDevice%==mantis (
+	if %newBootAnimationChoice%==1 set newBootAnimation=%bootAnimationBlue%
+	if %newBootAnimationChoice%==2 set newBootAnimation=%bootAnimationGreen%
+	if %newBootAnimationChoice%==3 set newBootAnimation=%bootAnimationPink%
+	if %newBootAnimationChoice%==4 set newBootAnimation=%bootAnimationPurple%
+	if %newBootAnimationChoice%==5 set newBootAnimation=%bootAnimationRed%
+	if %newBootAnimationChoice%==6 set newBootAnimation=%bootAnimationYellow%
+	if %newBootAnimationChoice%==7 set newBootAnimation=%bootAnimationOriginal%
+	if %newBootAnimationChoice%==8 set newBootAnimation=%bootAnimationLineageOS%
+)
+
+if %fireOsDevice%==mantis (
+	if %newBootAnimationChoice%==1 set newBootAnimation=%bootAnimationMantisBlue%
+	if %newBootAnimationChoice%==2 set newBootAnimation=%bootAnimationMantisGreen%
+	if %newBootAnimationChoice%==3 set newBootAnimation=%bootAnimationMantisPink%
+	if %newBootAnimationChoice%==4 set newBootAnimation=%bootAnimationMantisPurple%
+	if %newBootAnimationChoice%==5 set newBootAnimation=%bootAnimationMantisRed%
+	if %newBootAnimationChoice%==6 set newBootAnimation=%bootAnimationMantisYellow%
+	if %newBootAnimationChoice%==9 set newBootAnimation=%bootAnimationMantisOriginal%
+	if %newBootAnimationChoice%==8 set newBootAnimation=%bootAnimationMantisLineageOS%
+)
+
 if %newBootAnimationChoice%==C goto bootanimCustom
 if %newBootAnimationChoice%==c goto bootanimCustom
 if %newBootAnimationChoice%==B goto fixesMenu
 if %newBootAnimationChoice%==b goto fixesMenu
+
+:: Wait for ADB connection before continuing
+%adbWait%
 
 %shell% "rm /data/local/tmp/bootanimation.zip"
 %push% "%newBootAnimation%" /data/local/tmp/
@@ -4186,8 +4219,10 @@ goto testBootAnim
 :bootanimRestore
 
 cls
+%adbWait%
 %shell% "rm /data/local/tmp/bootanimation.zip"
-%push% "%~dp0bootanimation\stock-original\bootanimation.zip" /data/local/tmp/
+if not %fireOsDevice%==mantis %push% %bootAnimationOriginal% /data/local/tmp/
+if %fireOsDevice%==mantis %push% %bootAnimationMantisOriginal% /data/local/tmp/
 %push% "%~dp0scripts\restore-bootanimation.sh" /data/local/tmp/
 %shell% "su -c chmod 755 /data/local/tmp/restore-bootanimation.sh"
 %shell% "su -c sh /data/local/tmp/restore-bootanimation.sh"
@@ -4196,15 +4231,22 @@ goto testBootAnim
 
 
 :bootanimRestoreFBI
+%adbWait%
 
-cls
-%shell% "rm /data/local/tmp/framework-res.apk"
-%push% "%~dp0apps\system\framework-res__%dgVersion%.apk" /data/local/tmp/framework-res.apk
-%push% "%~dp0scripts\restore-boot-fallback-image.sh" /data/local/tmp/
-%shell% "su -c chmod 755 /data/local/tmp/restore-boot-fallback-image.sh"
-%shell% "su -c sh /data/local/tmp/restore-boot-fallback-image.sh"
+if not %fireOsDevice%==mantis (
+	cls
+	%shell% "rm /data/local/tmp/framework-res.apk"
+	%push% "%~dp0apps\system\framework-res__%dgVersion%.apk" /data/local/tmp/framework-res.apk
+	%push% "%~dp0scripts\restore-boot-fallback-image.sh" /data/local/tmp/
+	%shell% "su -c chmod 755 /data/local/tmp/restore-boot-fallback-image.sh"
+	%shell% "su -c sh /data/local/tmp/restore-boot-fallback-image.sh"
+)
 
-::%adb% reboot
+if %fireOsDevice%==mantis (
+	cls
+	echo Do Something Here
+	pause
+)
 
 goto testBootAnim
 
