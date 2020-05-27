@@ -4,6 +4,7 @@ rm  /sdcard/*.png
 rm  /sdcard/*.zip
 
 rm -r /sdcard/ba01c3395a810740b6519db07441231be4f4cbb9
+rm -r /sdcard/CatMouse
 rm -r /sdcard/CyberFlix
 rm -r /sdcard/dianxin
 rm -r /sdcard/Download
