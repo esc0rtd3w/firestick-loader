@@ -598,6 +598,16 @@ echo Installing %appName%...
 echo.
 %install% "apps\games\pacman-256.apk"
 
+cls
+%_color% 0e
+set appName=Flappy Birds Family
+set apk=
+echo.
+echo.
+echo Installing %appName%...
+echo.
+%install% "apps\games\flappy-birds-family-amazon.apk"
+
 
 cls
 %_color% 0e
@@ -619,15 +629,15 @@ echo Installing %appName%...
 echo.
 %install% "apps\games\solitaire.apk"
 
-cls
-%_color% 0e
-set appName=Freecell
-set apk=
-echo.
-echo.
-echo Installing %appName%...
-echo.
-%install% "apps\games\freecell.apk"
+::cls
+::%_color% 0e
+::set appName=Freecell
+::set apk=
+::echo.
+::echo.
+::echo Installing %appName%...
+::echo.
+::%install% "apps\games\freecell.apk"
 
 cls
 %_color% 0e
