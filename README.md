@@ -50,6 +50,12 @@ Tank Full Setup Script 5.2.7.2 (Loaded)
 Mantis Full Setup Script 6.2.7.1
 <br/>
 ![Mantis Full Setup Script 6.2.7.1](https://github.com/esc0rtd3w/firestick-loader/blob/master/misc/preview/6.2.7.1/mantis/setup-full-mantis.png)
+<br/><br/>
+Mantis Full Setup Script 6.2.7.1 Loaded
+<br/>
+![Mantis Full Setup Script 6.2.7.1 Loaded Top](https://github.com/esc0rtd3w/firestick-loader/blob/master/misc/preview/6.2.7.1/mantis/setup-full-mantis-loaded-top.png)
+<br/>
+![Mantis Full Setup Script 6.2.7.1 Loaded Bottom](https://github.com/esc0rtd3w/firestick-loader/blob/master/misc/preview/6.2.7.1/mantis/setup-full-mantis-loaded-bottom.png)
 
 
 
