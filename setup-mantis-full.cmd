@@ -505,7 +505,6 @@ echo.
 %shell% "rm -r /system/priv-app/TvProvider/"
 
 :: FireOS 5.2.6.2
-::%shell% "rm -r /system/priv-app/com.amazon.alexashopping/"
 %shell% "rm -r /system/priv-app/com.amazon.tv.livetv/"
 
 :: FireOS 6.2.5.8
@@ -600,9 +599,6 @@ echo.
 :: My Application 2.0 (WTF! LMAO)
 %shell% "rm -r /system/priv-app/com.amazon.appaccesskeyprovider/"
 
-:: Alexa Voice Layer
-::%shell% "rm -r /system/priv-app/com.amazon.avl.firetv/"
-
 :: Ceviche (Unknown)
 %shell% "rm -r /system/priv-app/com.amazon.ceviche/"
 
@@ -628,9 +624,6 @@ echo.
 %shell% "rm -r /system/priv-app/com.amazon.katoch/"
 
 :: %shell% "rm -r /system/priv-app/com.amazon.providers.tv/"
-
-:: Fire TV Alexa Alerts
-::%shell% "rm -r /system/priv-app/com.amazon.tv.alexaalerts/"
 
 :: Equipment Control (REMOVAL CAN BREAK AMAZON UI)
 ::%shell% "rm -r /system/priv-app/com.amazon.tv.devicecontrol/"
@@ -677,7 +670,6 @@ echo.
 ::%shell% "rm -r /system/priv-app/com.amazon.gloria.smarthome"
 ::%shell% "rm -r /system/priv-app/com.amazon.imdb.tv.android.app"
 ::%shell% "rm -r /system/priv-app/com.amazon.mvpdauth"
-::%shell% "rm -r /system/priv-app/com.amazon.tv.alexanotifications"
 ::%shell% "rm -r /system/priv-app/com.amazon.whasettings"
 ::%shell% "rm -r /system/priv-app/com.amazon.whisperjoin.wss.wifiprovisioner"
 ::%shell% "rm -r /system/priv-app/ConnectivityControllerService"
@@ -695,6 +687,26 @@ echo.
 ::%shell% "rm -r /system/priv-app/StatementService"
 ::%shell% "rm -r /system/priv-app/UXControllerService"
 ::%shell% "rm -r /system/priv-app/UXNotificationService"
+
+:: ------------------------------------------------------------------
+:: Alexa Related
+
+:: Alexa Shopping
+%shell% "rm -r /system/priv-app/com.amazon.alexashopping/"
+
+:: Alexa Voice Layer
+::%shell% "rm -r /system/priv-app/com.amazon.avl.firetv/"
+
+:: Fire TV Alexa Alerts
+::%shell% "rm -r /system/priv-app/com.amazon.tv.alexaalerts/"
+
+:: Alexa Notifications
+::%shell% "rm -r /system/priv-app/com.amazon.tv.alexanotifications"
+
+:: Alexa Updates on User Data
+::%shell% "rm -r /data/app/com.amazon.alexashopping-1/"
+::%shell% "rm -r /data/app/com.amazon.alexashopping-2/"
+:: ------------------------------------------------------------------
 
 %sleep% 5
 
@@ -717,7 +729,6 @@ echo.
 
 %shell% "rm -r /data/app/com.amazon.aca-1/"
 %shell% "rm -r /data/app/com.amazon.ags.app-1/"
-::%shell% "rm -r /data/app/com.amazon.alexashopping-1/"
 %shell% "rm -r /data/app/com.amazon.amazonvideo.livingroom.firetv-1/"
 %shell% "rm -r /data/app/com.amazon.appaccesskeyprovider-1/"
 %shell% "rm -r /data/app/com.amazon.aria-1/"
@@ -739,7 +750,6 @@ echo.
 
 %shell% "rm -r /data/app/com.amazon.aca-2/"
 %shell% "rm -r /data/app/com.amazon.ags.app-2/"
-::%shell% "rm -r /data/app/com.amazon.alexashopping-2/"
 %shell% "rm -r /data/app/com.amazon.amazonvideo.livingroom.firetv-2/"
 %shell% "rm -r /data/app/com.amazon.appaccesskeyprovider-2/"
 %shell% "rm -r /data/app/com.amazon.aria-2/"
