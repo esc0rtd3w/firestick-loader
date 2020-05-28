@@ -284,6 +284,16 @@ echo Installing %appName%...
 echo.
 %install% "apps\media\nova-tv.apk"
 
+cls
+%_color% 0e
+set appName=Titanium TV
+set apk=
+echo.
+echo.
+echo Installing %appName%...
+echo.
+%install% "apps\media\titanium-tv.apk"
+
 ::cls
 ::%_color% 0e
 ::set appName=Terrarium TV
@@ -323,6 +333,16 @@ echo.
 echo Installing %appName%...
 echo.
 %install% "apps\media\pluto-tv.apk"
+
+cls
+%_color% 0e
+set appName=TV Zion
+set apk=
+echo.
+echo.
+echo Installing %appName%...
+echo.
+%install% "apps\media\tv-zion.apk"
 
 ::cls
 ::%_color% 0e
@@ -443,6 +463,26 @@ echo.
 echo Installing %appName%...
 echo.
 %install% "apps\media\smart-youtube.apk"
+
+cls
+%_color% 0e
+set appName=Smart Youtube TV Bridge
+set apk=
+echo.
+echo.
+echo Installing %appName%...
+echo.
+%install% "apps\media\smart-youtube-bridge.apk"
+
+cls
+%_color% 0e
+set appName=Crackle
+set apk=
+echo.
+echo.
+echo Installing %appName%...
+echo.
+%install% "apps\media\crackle.apk"
 
 ::cls
 ::%_color% 0e
