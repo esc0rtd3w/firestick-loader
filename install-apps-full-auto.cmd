@@ -414,16 +414,6 @@ echo Installing %appName%...
 echo.
 %install% "apps\media\popcornflix.apk"
 
-::cls
-::%_color% 0e
-::set appName=Popcornflix Kids
-::set apk=
-::echo.
-::echo.
-::echo Installing %appName%...
-::echo.
-::%install% "apps\media\popcornflix-kids.apk"
-
 cls
 %_color% 0e
 set appName=NetFlix
@@ -476,6 +466,19 @@ echo.
 
 cls
 %_color% 0e
+set appName=Twitch
+set apk=
+echo.
+echo.
+echo Installing %appName%...
+echo.
+md "%temp%\firestick-loader\apps\media\"
+%extractRAR% "%~dp0apps\media\twitch.split" "%temp%\firestick-loader\apps\media"
+%sleep% 3
+%install% "%temp%\firestick-loader\apps\media\twitch.apk"
+
+cls
+%_color% 0e
 set appName=Crackle
 set apk=
 echo.
@@ -493,16 +496,6 @@ echo.
 ::echo Installing %appName%...
 ::echo.
 ::%install% "apps\media\youtube.apk"
-
-::cls
-::%_color% 0e
-::set appName=Youtube Kids
-::set apk=
-::echo.
-::echo.
-::echo Installing %appName%...
-::echo.
-::%install% "apps\media\youtube-kids.apk"
 
 ::cls
 ::%_color% 0e
