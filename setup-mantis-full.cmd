@@ -766,6 +766,14 @@ echo.
 %shell% "rm -r /data/app/com.amazon.tv.ottssocompanionapp-2/"
 %shell% "rm -r /data/app/com.amazon.tv.releasenotes-2/"
 
+:: Files leftover on /sdcard/partition
+::%shell% "rm -r /sdcard/Android/data/com.amazon.avod/"
+::%shell% "rm -r /sdcard/Android/data/com.amazon.bueller.photos/"
+::%shell% "rm -r /sdcard/Android/data/com.amazon.device.rdmapplication/"
+::%shell% "rm -r /sdcard/Android/data/com.amazon.securitysyncclient/"
+%shell% "rm -r /sdcard/Android/data/com.amazon.tv.launcher/"
+::%shell% "rm -r /sdcard/Android/data/com.amazon.venezia/"
+
 %sleep% 5
 
 cls
