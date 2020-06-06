@@ -18,6 +18,13 @@ set shell=%adb% shell
 set key=%shell% input keyevent
 set twrp=%shell% twrp
 
+set wipeCache=0
+set wipeData=0
+set wipeDalvik=0
+set wipeSytem=0
+
+set action=0
+
 if not exist "%temp%\firestick-loader" md "%temp%\firestick-loader"
 
 :start
@@ -26,16 +33,16 @@ color 0e
 :: Kill any adb instances before starting
 %adbKill%
 
-set accessibility="scripts\settings\montoya\system\scripts\accessibility.sh"
-set applications="scripts\settings\montoya\system\scripts\applications.sh"
-set btcontroller="scripts\settings\montoya\system\scripts\btcontroller.sh"
-set device="scripts\settings\montoya\system\scripts\device.sh"
-set displaysounds="scripts\settings\montoya\system\scripts\display-sounds.sh"
-set help="scripts\settings\montoya\system\scripts\help.sh"
-set myaccount="scripts\settings\montoya\system\scripts\my-account.sh"
-set network="scripts\settings\montoya\system\scripts\network.sh"
-set notifications="scripts\settings\montoya\system\scripts\notifications.sh"
-set preferences="scripts\settings\montoya\system\scripts\preferences.sh"
+set accessibility="scripts\settings\montoya\system\scripts\5263\accessibility.sh"
+set applications="scripts\settings\montoya\system\scripts\5263\applications.sh"
+set btcontroller="scripts\settings\montoya\system\scripts\5263\btcontroller.sh"
+set device="scripts\settings\montoya\system\scripts\5263\device.sh"
+set displaysounds="scripts\settings\montoya\system\scripts\5263\display-sounds.sh"
+set help="scripts\settings\montoya\system\scripts\5263\help.sh"
+set myaccount="scripts\settings\montoya\system\scripts\5263\my-account.sh"
+set network="scripts\settings\montoya\system\scripts\5263\network.sh"
+set notifications="scripts\settings\montoya\system\scripts\5263\notifications.sh"
+set preferences="scripts\settings\montoya\system\scripts\5263\preferences.sh"
 
 :: Set Flags For ADB Service and Unknown Sources
 set adb_success=0
@@ -73,7 +80,8 @@ echo.
 %adbWait%
 if %errorlevel%==1 goto twrpfail
 %adb% reboot
-%sleep% 25
+%sleep% 10
+%adbWait%
 
 %cocolor% 0e
 cls
@@ -95,9 +103,23 @@ goto start
 if %twrp_available%==1 del /f /q "%temp%\firestick-loader\twrp"
 if %twrp_available%==1 set twrp_available=0
 
-color 0c
-set noway=0
+%cocolor% 0e
 cls
+echo Do you want to wipe DATA partition [Y/N]?
+echo.
+%cocolor% 0c
+echo THIS WILL ERASE ALL USER DATA!!
+%cocolor% 0e
+echo.
+set /p action=
+if %action%==0 set wipeData=0
+if %action%==Y set wipeData=1
+if %action%==y set wipeData=1
+
+
+:main
+cls
+set noway=0
 %cocolor% 0a
 echo TWRP Found!
 echo.
@@ -112,14 +134,15 @@ echo.
 echo The device will have the following done to it:
 echo.
 echo - Amazon Bloat Removed
-echo - Custom OOBE App That Only Requires Remote, Wifi Setup, and Account
+::echo - Custom OOBE App That Only Requires Remote, Wifi Setup, and Account
 echo - Custom Home Menu and Data Installed To System
 echo - TitaniumBackup Installed To System. Use To Restore All Apps and Data
 echo - SH Script Runner Installed To System. Use For Shortcuts On Home Menu
 echo - Restore Directory and All APKs and TitaniumBackup Files To /system/
 echo - Scripts Directory and All Home Scripts To Launch Amazon Settings To /system/
 echo.
-echo - The Data, Cache, and Dalvik Cache Will Be Formatted During Setup
+if %wipeData%==0 echo - The Cache, and Dalvik Cache Will Be Formatted During Setup
+if %wipeData%==1 echo - The Data, Cache, and Dalvik Cache Will Be Formatted During Setup
 echo.
 echo.
 echo Press 1 to EXIT, B to create BACKUP, or just press ENTER to continue...
@@ -144,23 +167,6 @@ if %noway%==b echo.
 if %noway%==b start /wait cmd /k %shell%
 if %noway%==b %sleep% 5
 if %noway%==b goto start
-if %noway%==B %twrp% backup /system,data,cache,dalvik
-if %noway%==B %adb% reboot
-if %noway%==B %sleep% 25
-
-if %noway%==B cls
-if %noway%==B echo A new window should have opened!
-if %noway%==B echo.
-if %noway%==B echo.
-if %noway%==B echo 1) Type "mouse" without quotes and press ENTER
-if %noway%==B echo.
-if %noway%==B echo 2) Press the D key [RIGHT] to move TWRP selection to Launch Recovery
-if %noway%==B echo.
-if %noway%==B echo When TWRP loaded, close mouse window then press N on this screen and ENTER
-if %noway%==B echo.
-if %noway%==B start /wait cmd /k %shell%
-if %noway%==B %sleep% 5
-if %noway%==B goto start
 
 :stage1
 color 0e
@@ -355,7 +361,8 @@ echo.
 cls
 echo Pushing Restore Data to /sdcard/...
 echo.
-%push% "data\montoya\post-debloated\restore" /sdcard/restore/
+%push% "data\montoya\post-debloated\all\restore" /sdcard/restore/
+%push% "data\montoya\post-debloated\5263\restore" /sdcard/restore/
 %sleep% 2
 
 cls
@@ -385,18 +392,6 @@ cls
 echo Copying Data from /sdcard to /system...
 echo.
 %shell% "cp -r /sdcard/restore/ /system/"
-%sleep% 2
-
-cls
-echo Settings Permissions and Copying Custom OOBE App to /system/priv-app/...
-echo.
-%shell% "rm -r /system/priv-app/com.amazon.tv.oobe/"
-%shell% "mkdir /system/priv-app/com.amazon.tv.oobe/"
-%shell% "chmod 0775 /system/priv-app/com.amazon.tv.oobe/"
-%shell% "chown root:root /system/priv-app/com.amazon.tv.oobe/"
-%shell% "cp /system/restore/apk/system/com.amazon.tv.oobe.apk /system/priv-app/com.amazon.tv.oobe/com.amazon.tv.oobe.apk"
-%shell% "chmod 0644 /system/priv-app/com.amazon.tv.oobe/com.amazon.tv.oobe.apk"
-%shell% "chown root:root /system/priv-app/com.amazon.tv.oobe/com.amazon.tv.oobe.apk"
 %sleep% 2
 
 cls
@@ -544,10 +539,15 @@ echo.
 %sleep% 2
 
 cls
-echo Wiping Data, Cache, and Dalvik Cache...
+if %wipeData%==0 (
+	echo Wiping Cache, and Dalvik Cache...
+)
+if %wipeData%==1 (
+	echo Wiping Data, Cache, and Dalvik Cache...
+	%twrp% wipe data
+	%sleep% 5
+)
 echo.
-%twrp% wipe data
-%sleep% 5
 %twrp% wipe cache
 %sleep% 5
 %twrp% wipe dalvik
@@ -576,13 +576,6 @@ echo.
 %sleep% 45
 
 cls
-%cocolor% 0c
-echo NOTICE!
-echo.
-echo Due to a bug, the OOBE may freeze on the account registration screen!
-echo If this happens, unplug and re-plug the device and try again.
-echo.
-echo.
 %cocolor% 0e
 echo Waiting For Cache Rebuild and ADB Service...
 echo.
@@ -675,6 +668,8 @@ if %unkadb%==1 goto stage3
 cls
 color 0a
 echo Finished!
+echo.
+echo If it gets stuck on Boot Animation For more than 10 minutes, unplug and replug device
 echo.
 echo Use TitaniumBackup to restore data for Mouse Toggle, Reboot, and Autoruns
 echo.
