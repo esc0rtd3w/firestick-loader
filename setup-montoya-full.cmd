@@ -81,7 +81,7 @@ echo.
 if %errorlevel%==1 goto twrpfail
 %adb% reboot
 %sleep% 10
-%adbWait%
+::%adbWait%
 
 %cocolor% 0e
 cls
@@ -169,8 +169,10 @@ if %noway%==b %sleep% 5
 if %noway%==b goto start
 
 :stage1
+
 color 0e
 set rwcheck=0
+
 cls
 echo.
 echo Mounting System as RW...
@@ -204,6 +206,35 @@ if %rwcheck%==1 start /wait cmd /k %shell%
 if %rwcheck%==1 %sleep% 5
 if %rwcheck%==1 goto stage1
 
+:: Get FireOS Info
+%shell% "cat /system/build.prop | grep ro.build.version.name>/sdcard/fireos-version.txt"
+%pull% /sdcard/fireos-version.txt "%temp%"
+
+%shell% "cat /system/build.prop | grep ro.product.device=>/sdcard/fireos-device.txt"
+%pull% /sdcard/fireos-device.txt "%temp%"
+
+for /f "tokens=3 delims= " %%f in ('type "%temp%\fireos-version.txt"') do set fireOsVersion=%%f
+for /f "tokens=2 delims==" %%f in ('type "%temp%\fireos-device.txt"') do set fireOsDevice=%%f
+%sleep% 1
+%shell% "rm /sdcard/fireos-version.txt"
+%shell% "rm /sdcard/fireos-device.txt"
+
+if not %fireOsDevice%==montoya goto nomontoya
+goto stage2
+
+
+:nomontoya
+%cocolor% 0c
+cls
+echo Supports Montoya Only!
+echo.
+echo This device is %fireOsDevice% and CANNOT continue!
+echo.
+pause
+goto end
+
+
+:stage2
 cls
 echo Debloating Amazon Apps...
 echo.
@@ -580,35 +611,7 @@ cls
 echo Waiting For Cache Rebuild and ADB Service...
 echo.
 echo.
-%cocolor% 0b
-echo Complete the user setup to configure remote, wifi, and Amazon account
-%cocolor% 0e
-echo.
-echo.
-echo Once on Launcher, do the following:
-echo.
-echo 1) Use TitaniumBackup to restore data for Home and SH Script Runner
-echo 2) Open ADB Insecure app, set to insecure and run at boot
-echo 3) Unplug and replug the device to use new Home shortcuts
-echo 4) Use the Device shortcut and navigate to Developer Options menu
-echo.
-echo.
-echo Finally, Enable ADB Debugging and the script will automatically continue...
-echo.
-%adbwait%
-
-cls
-%cocolor% 0e
-echo Rebooting...
-echo.
-%adb% reboot
-%sleep% 15
-
-cls
-%cocolor% 0e
-echo Waiting on Reboot...
-echo.
-%sleep% 55
+%sleep% 45
 %adbwait%
 
 :chkadb
@@ -669,7 +672,7 @@ cls
 color 0a
 echo Finished!
 echo.
-echo If it gets stuck on Boot Animation For more than 10 minutes, unplug and replug device
+echo If stuck on Boot Animation for more than 10 minutes, unplug and replug device
 echo.
 echo Use TitaniumBackup to restore data for Mouse Toggle, Reboot, and Autoruns
 echo.
