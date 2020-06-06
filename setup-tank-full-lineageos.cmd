@@ -7,9 +7,6 @@ set fireOsVersion=0.0.0.0
 set fireOsDevice=none
 set downgrade=0
 
-set adult=0
-set adultCheck=0
-
 set magiskZip=Magisk.zip
 
 set adb="%~dp0bin\adb.exe"
@@ -197,20 +194,10 @@ echo.
 %sleep% 2
 
 cls
-echo Use Home Menu With Preset Adult Section [Y/N]?
-echo.
-echo Default is NO
-echo.
-set /p adultCheck=
-if %adultCheck%==y set adult=1
-if %adultCheck%==Y set adult=1
-
-cls
 echo Pushing Restore Data to /sdcard/...
 echo.
 %push% "data\tank\post-debloated\lineageos-all\restore" /sdcard/restore/
-if %adult%==0 %push% "data\tank\post-debloated\lineageos\restore" /sdcard/restore/
-if %adult%==1 %push% "data\tank\post-debloated\lineageos-adult\restore" /sdcard/restore/
+%push% "data\tank\post-debloated\lineageos\restore" /sdcard/restore/
 %sleep% 2
 
 cls

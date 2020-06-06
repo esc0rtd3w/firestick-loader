@@ -7,9 +7,6 @@ set fireOsVersion=0.0.0.0
 set fireOsDevice=none
 set downgrade=0
 
-set adult=0
-set adultCheck=0
-
 set magiskZip=Magisk.zip
 
 set adb="%~dp0bin\adb.exe"
@@ -503,7 +500,6 @@ if %downgrade%==1 %shell% "rm -r /system/priv-app/FireApplicationCompatibilityEn
 %shell% "rm -r /system/priv-app/TvProvider/"
 
 :: FireOS 5.2.6.2
-%shell% "rm -r /system/priv-app/com.amazon.alexashopping/"
 %shell% "rm -r /system/priv-app/com.amazon.tv.livetv/"
 %shell% "rm -r /system/priv-app/com.amazon.amazonvideo.livingroom/"
 %shell% "rm -r /system/priv-app/com.amazon.kor.demo/"
@@ -608,9 +604,6 @@ if %downgrade%==0 %shell% "rm -r /system/priv-app/com.amazon.ale/"
 :: My Application 2.0 (WTF! LMAO)
 if %downgrade%==0 %shell% "rm -r /system/priv-app/com.amazon.appaccesskeyprovider/"
 
-:: Alexa Voice Layer
-if %downgrade%==0 %shell% "rm -r /system/priv-app/com.amazon.avl.firetv/"
-
 :: Ceviche (Unknown)
 if %downgrade%==0 %shell% "rm -r /system/priv-app/com.amazon.ceviche/"
 
@@ -636,9 +629,6 @@ if %downgrade%==0 %shell% "rm -r /system/priv-app/com.amazon.ftv.xpicker/"
 if %downgrade%==0 %shell% "rm -r /system/priv-app/com.amazon.katoch/"
 
 :: if %downgrade%==0 %shell% "rm -r /system/priv-app/com.amazon.providers.tv/"
-
-:: Fire TV Alexa Alerts
-if %downgrade%==0 %shell% "rm -r /system/priv-app/com.amazon.tv.alexaalerts/"
 
 :: Equipment Control (REMOVAL CAN BREAK AMAZON UI)
 :: if %downgrade%==0 %shell% "rm -r /system/priv-app/com.amazon.tv.devicecontrol/"
@@ -671,6 +661,23 @@ if %downgrade%==0 %shell% "rm -r /system/priv-app/com.amznfuse.operatorredirecti
 :: com.amazon.sync.provider.ipc
 if %downgrade%==0 %shell% "rm -r /system/priv-app/sync-provider_ipc-tv-release/"
 
+:: ------------------------------------------------------------------
+:: Alexa Related
+
+:: Alexa Shopping
+%shell% "rm -r /system/priv-app/com.amazon.alexashopping/"
+
+:: Alexa Voice Layer
+::%shell% "rm -r /system/priv-app/com.amazon.avl.firetv/"
+
+:: Fire TV Alexa Alerts
+::%shell% "rm -r /system/priv-app/com.amazon.tv.alexaalerts/"
+
+:: Alexa Updates on User Data
+::%shell% "rm -r /data/app/com.amazon.alexashopping-1/"
+::%shell% "rm -r /data/app/com.amazon.alexashopping-2/"
+:: ------------------------------------------------------------------
+
 %sleep% 5
 
 cls
@@ -693,7 +700,6 @@ echo.
 if %downgrade%==0 (
 %shell% "rm -r /data/app/com.amazon.aca-1/"
 %shell% "rm -r /data/app/com.amazon.ags.app-1/"
-%shell% "rm -r /data/app/com.amazon.alexashopping-1/"
 %shell% "rm -r /data/app/com.amazon.amazonvideo.livingroom.firetv-1/"
 %shell% "rm -r /data/app/com.amazon.appaccesskeyprovider-1/"
 %shell% "rm -r /data/app/com.amazon.aria-1/"
@@ -715,7 +721,6 @@ if %downgrade%==0 (
 
 %shell% "rm -r /data/app/com.amazon.aca-2/"
 %shell% "rm -r /data/app/com.amazon.ags.app-2/"
-%shell% "rm -r /data/app/com.amazon.alexashopping-2/"
 %shell% "rm -r /data/app/com.amazon.amazonvideo.livingroom.firetv-2/"
 %shell% "rm -r /data/app/com.amazon.appaccesskeyprovider-2/"
 %shell% "rm -r /data/app/com.amazon.aria-2/"
@@ -749,23 +754,11 @@ echo.
 %sleep% 2
 
 cls
-echo Use Home Menu With Preset Adult Section [Y/N]?
-echo.
-echo Default is NO
-echo.
-set /p adultCheck=
-if %adultCheck%==y set adult=1
-if %adultCheck%==Y set adult=1
-
-cls
 echo Pushing Restore Data to /sdcard/...
 echo.
 %push% "data\tank\post-debloated\all\restore" /sdcard/restore/
 if %downgrade%==1 %push% "data\tank\post-debloated\5263\restore" /sdcard/restore/
-if %downgrade%==0 (
-	if %adult%==0 %push% "data\tank\post-debloated\5272\restore" /sdcard/restore/
-	if %adult%==1 %push% "data\tank\post-debloated\5272-adult\restore" /sdcard/restore/
-)
+if %downgrade%==0 %push% "data\tank\post-debloated\5272\restore" /sdcard/restore/
 %sleep% 2
 
 cls
