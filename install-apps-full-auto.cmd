@@ -422,7 +422,7 @@ echo.
 echo.
 echo Installing %appName%...
 echo.
-%install% "apps\media\netflix.apk"
+%install% "apps\media\netflix-amazon.apk"
 
 cls
 %_color% 0e
