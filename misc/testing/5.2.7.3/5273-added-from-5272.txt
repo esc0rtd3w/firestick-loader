@@ -1,0 +1,16 @@
+E:\backups\tank\5273\5.2.7.3-system\bin\mdp_server
+E:\backups\tank\5273\5.2.7.3-system\etc\permissions\devicedetailslib.xml
+E:\backups\tank\5273\5.2.7.3-system\framework\com.amazon.device.details.lib.jar
+E:\backups\tank\5273\5.2.7.3-system\priv-app\com.amazon.device.details
+E:\backups\tank\5273\5.2.7.3-system\priv-app\com.amazon.device.details\com.amazon.device.details.apk
+E:\backups\tank\5273\5.2.7.3-system\priv-app\com.amazon.gloria.smarthome
+E:\backups\tank\5273\5.2.7.3-system\priv-app\com.amazon.gloria.smarthome\com.amazon.gloria.smarthome.apk
+E:\backups\tank\5273\5.2.7.3-system\priv-app\com.amazon.imdb.tv.android.app
+E:\backups\tank\5273\5.2.7.3-system\priv-app\com.amazon.imdb.tv.android.app\com.amazon.imdb.tv.android.app.apk
+E:\backups\tank\5273\5.2.7.3-system\priv-app\com.amazon.tv.alexanotifications
+E:\backups\tank\5273\5.2.7.3-system\priv-app\com.amazon.tv.alexanotifications\com.amazon.tv.alexanotifications.apk
+E:\backups\tank\5273\5.2.7.3-system\priv-app\com.amazon.vizzini\lib\arm\libnativesocket_csm_jni.so
+E:\backups\tank\5273\5.2.7.3-system\usr\keylayout\Vendor_0111_Product_1431.kl
+E:\backups\tank\5273\5.2.7.3-system\usr\keylayout\Vendor_045e_Product_02fd.kl
+E:\backups\tank\5273\5.2.7.3-system\usr\keylayout\Vendor_054c_Product_09cc.kl
+E:\backups\tank\5273\5.2.7.3-system\usr\keylayout\Vendor_057e_Product_2009.kl
