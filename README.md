@@ -9,7 +9,7 @@
 ### Newest Supported Tank Version: 5.2.7.2 Stock w/Magisk
 ### Newest Recommended Tank Version: LineageOS 12.1 w/Magisk
 
-### Newest Supported/Recommended Mantis Version: 6.2.7.1 Stock w/Magisk
+### Newest Supported/Recommended Mantis Version: 6.2.7.7 Stock w/Magisk
 
 <br/>
 
