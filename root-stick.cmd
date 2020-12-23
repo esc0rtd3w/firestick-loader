@@ -799,6 +799,10 @@ if %fireOsDevice%==mantis (
 %msgbox% "The detected device is [%fireOsDevice%] and has version %fireOsVersion% installed.\n\nThis menu is meant for Montoya device, but Mantis can use some options" "FirePwn Loader"
 )
 
+if %fireOsDevice%==sheldon (
+%msgbox% "The detected device is [%fireOsDevice%] and has version %fireOsVersion% installed.\n\nThis menu is meant for Montoya device, but Sheldon can use some options" "FirePwn Loader"
+)
+
 :: Begin Main Menu
 cls
 
