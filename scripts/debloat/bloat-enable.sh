@@ -372,3 +372,33 @@ pm enable com.amznfuse.operatorredirection
 
 
 
+
+# ===============FireOS 5.2.7.3 START===============
+# 5.2.7.3 Updated Packages (Update Package Names)
+
+pm enable com.amazon.diode
+pm enable com.amazon.ftvads.deeplinking
+pm enable com.amazon.tv.arc
+pm enable com.amazon.tv.easyupgrade
+pm enable com.amazon.tv.turnstile
+pm enable MinervaApi
+# ===============FireOS 5.2.7.3 END===============
+
+
+
+# ===============FireOS 5.2.7.7 START===============
+# 5.2.7.7 Updated Packages
+
+pm enable com.amazon.alexamediaplayer.runtime.ftv
+pm enable com.amazon.avsyncslider
+pm enable com.amazon.avsyncslider-stub
+pm enable com.amazon.device.blepa
+pm enable com.amazon.device.bluetoothpa
+pm enable com.amazon.prism.android.service
+pm enable com.amazon.tv.alexadestination-stub
+pm enable com.amazon.tv.ffsprovisioneeclient
+
+# 3025N to 3027N Update
+pm enable com.amazon.hedwig
+pm enable com.amazon.tv.alexadestination
+# ===============FireOS 5.2.7.7 END=================

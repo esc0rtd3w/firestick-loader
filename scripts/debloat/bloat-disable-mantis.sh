@@ -379,3 +379,36 @@ pm disable com.amazon.whisperjoin.middleware.np
 
 # Unknown
 pm disable com.amznfuse.operatorredirection
+
+
+
+# ===============FireOS 5.2.7.3 START===============
+# 5.2.7.3 Updated Packages (Update Package Names)
+
+# pm disable com.amazon.diode
+# pm disable com.amazon.ftvads.deeplinking
+# pm disable com.amazon.tv.arc
+# pm disable com.amazon.tv.easyupgrade
+# pm disable com.amazon.tv.turnstile
+# pm disable MinervaApi
+# ===============FireOS 5.2.7.3 END===============
+
+
+
+# ===============FireOS 5.2.7.7 START===============
+# 5.2.7.7 Updated Packages
+
+# pm disable com.amazon.alexamediaplayer.runtime.ftv
+# pm disable com.amazon.avsyncslider
+# pm disable com.amazon.avsyncslider-stub
+# pm disable com.amazon.device.blepa
+# pm disable com.amazon.device.bluetoothpa
+# pm disable com.amazon.prism.android.service
+# pm disable com.amazon.tv.alexadestination-stub
+# pm disable com.amazon.tv.ffsprovisioneeclient
+
+# 3025N to 3027N Update
+# pm disable com.amazon.hedwig
+# pm disable com.amazon.tv.alexadestination
+# ===============FireOS 5.2.7.7 END=================
+

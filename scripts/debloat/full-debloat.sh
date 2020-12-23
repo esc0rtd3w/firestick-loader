@@ -744,6 +744,38 @@ rm -r /system/priv-app/sync-provider_ipc-tv-release/
 # ===============FireOS 5.2.7.2 END===============
 
 
+
+# ===============FireOS 5.2.7.3 START===============
+# 5.2.7.3 Updated Packages
+
+# rm -r /system/priv-app/com.amazon.diode
+# rm -r /system/priv-app/com.amazon.ftvads.deeplinking
+# rm -r /system/priv-app/com.amazon.tv.arc
+# rm -r /system/priv-app/com.amazon.tv.easyupgrade
+# rm -r /system/priv-app/com.amazon.tv.turnstile
+# rm -r /system/priv-app/MinervaApi
+# ===============FireOS 5.2.7.3 END=================
+
+
+
+# ===============FireOS 5.2.7.7 START===============
+# 5.2.7.7 Updated Packages
+
+# rm -r /system/priv-app/com.amazon.alexamediaplayer.runtime.ftv
+# rm -r /system/priv-app/com.amazon.avsyncslider
+# rm -r /system/priv-app/com.amazon.avsyncslider-stub
+# rm -r /system/priv-app/com.amazon.device.blepa
+# rm -r /system/priv-app/com.amazon.device.bluetoothpa
+# rm -r /system/priv-app/com.amazon.prism.android.service
+# rm -r /system/priv-app/com.amazon.tv.alexadestination-stub
+# rm -r /system/priv-app/com.amazon.tv.ffsprovisioneeclient
+
+# 3025N to 3027N Update
+# rm -r /system/priv-app/com.amazon.hedwig
+# rm -r /system/priv-app/com.amazon.tv.alexadestination
+# ===============FireOS 5.2.7.7 END=================
+
+
 # ===============From /system/app/ START===============
 
 #rm -r /system/app/AmazonDeviceMetrics/
@@ -1082,6 +1114,37 @@ rm -r /data/data/com.amazon.tahoe-1/
 # rm -r /data/data/com.amazon.whisperjoin.middleware.np-1/
 # rm -r /data/data/com.amznfuse.operatorredirection-1/
 
+
+
+# ===============FireOS 5.2.7.3 START===============
+# 5.2.7.3 Updated Packages
+
+# rm -r /data/data/com.amazon.diode
+# rm -r /data/data/com.amazon.ftvads.deeplinking
+# rm -r /data/data/com.amazon.tv.arc
+# rm -r /data/data/com.amazon.tv.easyupgrade
+# rm -r /data/data/com.amazon.tv.turnstile
+# rm -r /data/data/MinervaApi
+# ===============FireOS 5.2.7.3 END=================
+
+
+
+# ===============FireOS 5.2.7.7 START===============
+# 5.2.7.7 Updated Packages
+
+# rm -r /data/data/com.amazon.alexamediaplayer.runtime.ftv
+# rm -r /data/data/com.amazon.avsyncslider
+# rm -r /data/data/com.amazon.avsyncslider-stub
+# rm -r /data/data/com.amazon.device.blepa
+# rm -r /data/data/com.amazon.device.bluetoothpa
+# rm -r /data/data/com.amazon.prism.android.service
+# rm -r /data/data/com.amazon.tv.alexadestination-stub
+# rm -r /data/data/com.amazon.tv.ffsprovisioneeclient
+
+# 3025N to 3027N Update
+# rm -r /data/data/com.amazon.hedwig
+# rm -r /data/data/com.amazon.tv.alexadestination
+# ===============FireOS 5.2.7.7 END=================
 
 
 

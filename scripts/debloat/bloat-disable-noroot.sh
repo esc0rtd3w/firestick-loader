@@ -379,3 +379,36 @@ pm disable-user --user 0 com.amazon.whisperjoin.middleware.np
 
 # Unknown
 pm disable-user --user 0 com.amznfuse.operatorredirection
+
+
+# ===============FireOS 5.2.7.3 START===============
+# 5.2.7.3 Updated Packages (Update Package Names)
+
+# pm disable-user --user 0 com.amazon.diode
+# pm disable-user --user 0 com.amazon.ftvads.deeplinking
+# pm disable-user --user 0 com.amazon.tv.arc
+# pm disable-user --user 0 com.amazon.tv.easyupgrade
+# pm disable-user --user 0 com.amazon.tv.turnstile
+# pm disable-user --user 0 MinervaApi
+# ===============FireOS 5.2.7.3 END===============
+
+
+
+# ===============FireOS 5.2.7.7 START===============
+# 5.2.7.7 Updated Packages
+
+# pm disable-user --user 0 com.amazon.alexamediaplayer.runtime.ftv
+# pm disable-user --user 0 com.amazon.avsyncslider
+# pm disable-user --user 0 com.amazon.avsyncslider-stub
+# pm disable-user --user 0 com.amazon.device.blepa
+# pm disable-user --user 0 com.amazon.device.bluetoothpa
+# pm disable-user --user 0 com.amazon.prism.android.service
+# pm disable-user --user 0 com.amazon.tv.alexadestination-stub
+# pm disable-user --user 0 com.amazon.tv.ffsprovisioneeclient
+
+# 3025N to 3027N Update
+# pm disable-user --user 0 com.amazon.hedwig
+# pm disable-user --user 0 com.amazon.tv.alexadestination
+# ===============FireOS 5.2.7.7 END=================
+
+
