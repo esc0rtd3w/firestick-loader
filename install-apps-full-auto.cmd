@@ -334,15 +334,15 @@ echo Installing %appName%...
 echo.
 %install% "apps\media\pluto-tv.apk"
 
-cls
-%_color% 0e
-set appName=TV Zion
-set apk=
-echo.
-echo.
-echo Installing %appName%...
-echo.
-%install% "apps\media\tv-zion.apk"
+::cls
+::%_color% 0e
+::set appName=TV Zion
+::set apk=
+::echo.
+::echo.
+::echo Installing %appName%...
+::echo.
+::%install% "apps\media\tv-zion.apk"
 
 ::cls
 ::%_color% 0e
