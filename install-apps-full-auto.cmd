@@ -244,15 +244,15 @@ echo Installing %appName%...
 echo.
 %install% "apps\media\cinemahd.apk"
 
-cls
-%_color% 0e
-set appName=CyberFlix
-set apk=
-echo.
-echo.
-echo Installing %appName%...
-echo.
-%install% "apps\media\cyberflix.apk"
+::cls
+::%_color% 0e
+::set appName=CyberFlix
+::set apk=
+::echo.
+::echo.
+::echo Installing %appName%...
+::echo.
+::%install% "apps\media\cyberflix.apk"
 
 cls
 %_color% 0e
@@ -284,15 +284,15 @@ echo Installing %appName%...
 echo.
 %install% "apps\media\nova-tv.apk"
 
-cls
-%_color% 0e
-set appName=Titanium TV
-set apk=
-echo.
-echo.
-echo Installing %appName%...
-echo.
-%install% "apps\media\titanium-tv.apk"
+::cls
+::%_color% 0e
+::set appName=Titanium TV
+::set apk=
+::echo.
+::echo.
+::echo Installing %appName%...
+::echo.
+::%install% "apps\media\titanium-tv.apk"
 
 ::cls
 ::%_color% 0e
@@ -473,9 +473,9 @@ echo.
 echo Installing %appName%...
 echo.
 md "%temp%\firestick-loader\apps\media\"
-%extractRAR% "%~dp0apps\media\twitch.split" "%temp%\firestick-loader\apps\media"
+%extractRAR% "%~dp0apps\media\twitch-amazon.split" "%temp%\firestick-loader\apps\media"
 %sleep% 3
-%install% "%temp%\firestick-loader\apps\media\twitch.apk"
+%install% "%temp%\firestick-loader\apps\media\twitch-amazon.apk"
 
 cls
 %_color% 0e
@@ -546,7 +546,7 @@ echo.
 echo.
 echo Installing %appName%...
 echo.
-%install% "apps\media\pocast-addict.apk"
+%install% "apps\media\podcast-addict.apk"
 
 cls
 %_color% 0e
