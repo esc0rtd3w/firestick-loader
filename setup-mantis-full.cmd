@@ -685,6 +685,28 @@ echo.
 ::%shell% "rm -r /system/priv-app/UXControllerService"
 ::%shell% "rm -r /system/priv-app/UXNotificationService"
 
+:: Mantis 5.2.7.3
+::%shell% "rm -r /system/priv-app/com.amazon.diode
+::%shell% "rm -r /system/priv-app/com.amazon.ftvads.deeplinking
+::%shell% "rm -r /system/priv-app/com.amazon.tv.arc
+::%shell% "rm -r /system/priv-app/com.amazon.tv.easyupgrade
+::%shell% "rm -r /system/priv-app/com.amazon.tv.turnstile
+::%shell% "rm -r /system/priv-app/MinervaApi
+
+:: Mantis 5.2.7.7
+::%shell% "rm -r /system/priv-app/com.amazon.alexamediaplayer.runtime.ftv
+::%shell% "rm -r /system/priv-app/com.amazon.avsyncslider
+::%shell% "rm -r /system/priv-app/com.amazon.avsyncslider-stub
+::%shell% "rm -r /system/priv-app/com.amazon.device.blepa
+::%shell% "rm -r /system/priv-app/com.amazon.device.bluetoothpa
+::%shell% "rm -r /system/priv-app/com.amazon.prism.android.service
+::%shell% "rm -r /system/priv-app/com.amazon.tv.alexadestination-stub
+::%shell% "rm -r /system/priv-app/com.amazon.tv.ffsprovisioneeclient
+
+:: 3025N to 3027N Update
+::%shell% "rm -r /system/priv-app/com.amazon.hedwig
+::%shell% "rm -r /system/priv-app/com.amazon.tv.alexadestination
+
 :: ------------------------------------------------------------------
 :: Alexa Related
 
@@ -703,6 +725,10 @@ echo.
 :: Alexa Updates on User Data
 ::%shell% "rm -r /data/app/com.amazon.alexashopping-1/"
 ::%shell% "rm -r /data/app/com.amazon.alexashopping-2/"
+
+:: Dupe Listings From 6.2.7.7
+::%shell% "rm -r /system/priv-app/com.amazon.tv.alexadestination
+::%shell% "rm -r /system/priv-app/com.amazon.tv.alexadestination-stub
 :: ------------------------------------------------------------------
 
 %sleep% 5
