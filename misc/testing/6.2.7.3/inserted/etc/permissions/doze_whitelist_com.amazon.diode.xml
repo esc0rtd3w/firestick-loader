@@ -1,0 +1,11 @@
+<permissions>
+    <!-- Standby puts background apps into a low priority bucket, which will -->
+    <!-- block network access, but AppStandbyController.isAppSpecial in the  -->
+    <!-- Android source gives apps exemption if they're in the whitelist for -->
+    <!-- battery optimization. -->
+
+    <!-- Both the allow-in-power-save and the allow-in-power-save-except-idle-->
+    <!-- lists give Standby exemption, but the former also allows apps to run-->
+    <!-- when the device is idle, which we don't need, so use the latter. -->
+    <allow-in-power-save-except-idle package="com.amazon.diode"/>
+</permissions>

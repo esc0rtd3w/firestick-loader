@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<permissions>
+<library name="com.fireos.sdk.minerva" file="/system/priv-app/MinervaApi/MinervaApi.apk"/>
+<feature name="com.fireos.sdk.minerva" version="3"/>
+</permissions>

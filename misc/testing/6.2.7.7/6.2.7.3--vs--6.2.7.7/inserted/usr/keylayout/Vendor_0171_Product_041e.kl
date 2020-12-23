@@ -1,0 +1,39 @@
+# Copyright 2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+#
+# BLE Penny Remotes KeyLayout File
+#
+# This file is based on Penny remote_specification
+
+key 116   POWER
+key 217   SEARCH
+
+key 96    DPAD_CENTER
+key 103   DPAD_UP
+key 105   DPAD_LEFT
+key 106   DPAD_RIGHT
+key 108   DPAD_DOWN
+
+key 172   HOME
+key 158   BACK
+key 139   MENU
+
+key 113   VOLUME_MUTE
+key 114   VOLUME_DOWN
+key 115   VOLUME_UP
+
+key 168   MEDIA_REWIND
+key 208   MEDIA_FAST_FORWARD
+key 164   MEDIA_PLAY_PAUSE
+
+key 362   LIVE_TV
+
+# App Keys
+key 249   APP_1
+key 250   APP_2
+key 251   APP_3
+key 253   APP_4
+
+key 744   APP_1
+key 745   APP_2
+key 746   APP_3
+key 747   APP_4

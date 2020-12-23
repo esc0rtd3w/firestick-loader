@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<permissions>
+<library name="com.fireos.sdk.prism" file="/system/framework/com.amazon.prism.sdk.jar"/>
+<feature name="com.fireos.sdk.prism" version="7"/>
+</permissions>

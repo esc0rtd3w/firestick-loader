@@ -1,0 +1,9 @@
+on boot
+    start mdnsd_fos
+
+service mdnsd_fos /system/bin/mdnsd_fos
+    class main
+    user mdnsr
+    group inet net_raw
+    socket mdnsd_fos stream 0660 mdnsr inet
+    disabled

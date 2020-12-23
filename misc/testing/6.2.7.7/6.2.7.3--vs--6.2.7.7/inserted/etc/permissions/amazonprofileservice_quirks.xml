@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<permissions>
+    <feature name="com.amazon.feature.amazonprofileservice.getadultvalidatedstate_quirk" />
+</permissions>

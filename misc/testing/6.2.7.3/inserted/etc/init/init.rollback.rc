@@ -1,0 +1,3 @@
+service system_rollback /system/bin/update_verifier rollback
+    oneshot
+    disabled
