@@ -28,6 +28,9 @@ set twrp=%shell% twrp
 :: Used for 6.2.5.8 when no downgrade will be done
 set nodg=0
 
+:: Used for re-using code from older firmware if version matches with no major changes
+set v_match=0
+
 if not exist "%temp%\firestick-loader" md "%temp%\firestick-loader"
 
 :start
@@ -114,9 +117,40 @@ set noway=0
 set dgchoice=n
 
 if %fireOsVersion%==6.2.5.8 (
+	set v_match=0
 	set downgrade=1
 	set nodg=1
 	goto is6258
+)
+
+if %fireOsVersion%==6.2.7.1 (
+	set v_match=0
+)
+
+if %fireOsVersion%==6.2.7.3 (
+	set v_match=1
+	goto is6271
+)
+
+if %fireOsVersion%==6.2.7.7 (
+	set v_match=1
+	goto is6271
+)
+
+
+:: Some crap version matching check
+if %v_match%==1 (
+	cls
+	%cocolor% 0e
+	echo Your firmware version is %fireOsVersion% but will be seen as 6.2.7.1 by this tool.
+	echo.
+	echo This is because I am lazy, but there are no major changes between these versions!
+	echo.
+	echo.
+	echo.
+	echo Press any key to continue...
+	echo.
+	pause>nul
 )
 
 cls
@@ -150,7 +184,7 @@ cls
 echo TWRP Found!
 echo.
 %cocolor% 0b
-echo Device: %fireOsDevice% / Firmware Version: %fireOsVersion%
+echo Device: %fireOsDevice% / Firmware Version: %fireOsVersion% / Version Match Status: %v_match%
 echo.
 echo.
 %cocolor% 0e
@@ -190,7 +224,7 @@ cls
 echo TWRP Found!
 echo.
 %cocolor% 0b
-echo Device: %fireOsDevice% / Firmware Version: %fireOsVersion%
+echo Device: %fireOsDevice% / Firmware Version: %fireOsVersion% / Version Match Status: %v_match%
 echo.
 echo.
 %cocolor% 0e
@@ -230,7 +264,7 @@ cls
 echo TWRP Found!
 echo.
 %cocolor% 0b
-echo Device: %fireOsDevice% / Firmware Version: %fireOsVersion%
+echo Device: %fireOsDevice% / Firmware Version: %fireOsVersion% / Version Match Status: %v_match%
 echo.
 echo.
 %cocolor% 0e
