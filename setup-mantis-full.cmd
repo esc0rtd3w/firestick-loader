@@ -826,6 +826,29 @@ echo.
 %shell% "rm -r /data/app/com.amazon.tv.ottssocompanionapp-2/"
 %shell% "rm -r /data/app/com.amazon.tv.releasenotes-2/"
 
+:: Mantis 6.2.7.7
+%shell% "rm -r /data/app/com.amazon.firebat-1/"
+%shell% "rm -r /data/app/com.amazon.ftv.xpicker-1/"
+%shell% "rm -r /data/app/com.amazon.hedwig-1/"
+%shell% "rm -r /data/app/com.amazon.ods.kindleconnect-1/"
+%shell% "rm -r /data/app/com.amazon.tahoe-1/"
+%shell% "rm -r /data/app/com.amazon.tv.easyupgrade-1/"
+::%shell% "rm -r /data/app/com.amazon.tv.oobe-1/"
+%shell% "rm -r /data/app/com.amazon.tv.parentalcontrols-1/"
+::%shell% "rm -r /data/app/com.amazon.tv.settings.v2-1/"
+%shell% "rm -r /data/app/com.amazon.venezia-1/"
+
+%shell% "rm -r /data/app/com.amazon.firebat-2/"
+%shell% "rm -r /data/app/com.amazon.ftv.xpicker-2/"
+%shell% "rm -r /data/app/com.amazon.hedwig-2/"
+%shell% "rm -r /data/app/com.amazon.ods.kindleconnect-2/"
+%shell% "rm -r /data/app/com.amazon.tahoe-2/"
+%shell% "rm -r /data/app/com.amazon.tv.easyupgrade-2/"
+::%shell% "rm -r /data/app/com.amazon.tv.oobe-2/"
+%shell% "rm -r /data/app/com.amazon.tv.parentalcontrols-2/"
+::%shell% "rm -r /data/app/com.amazon.tv.settings.v2-2/"
+%shell% "rm -r /data/app/com.amazon.venezia-2/"
+
 :: Files leftover on /sdcard/partition
 ::%shell% "rm -r /sdcard/Android/data/com.amazon.avod/"
 ::%shell% "rm -r /sdcard/Android/data/com.amazon.bueller.photos/"
