@@ -133,8 +133,8 @@ cls
 echo Install AdAway [ROOT] [Y/N]?
 echo.
 set /p adawayInstall=
-if %adawayInstall%==n goto kodiMain
-if %adawayInstall%==N goto kodiMain
+if %adawayInstall%==n goto fmToggle
+if %adawayInstall%==N goto fmToggle
 
 cls
 %_color% 0e
@@ -143,6 +143,24 @@ set apk=
 echo Installing %appName%...
 echo.
 %install% "apps\utilities\adaway.apk"
+
+
+:fmToggle
+set fmInstall=n
+cls
+echo Install Root Explorer [ROOT] [Y/N]?
+echo.
+set /p fmInstall=
+if %fmInstall%==n goto kodiMain
+if %fmInstall%==N goto kodiMain
+
+cls
+%_color% 0e
+set appName=Root Explorer [ROOT]
+set apk=
+echo Installing %appName%...
+echo.
+%install% "apps\system\root-explorer.apk"
 
 
 
@@ -316,13 +334,13 @@ echo.
 
 cls
 %_color% 0e
-set appName=Mobdro
+set appName=LiveNET TV
 set apk=
 echo.
 echo.
 echo Installing %appName%...
 echo.
-%install% "apps\media\mobdro.apk"
+%install% "apps\media\live-net-tv.apk"
 
 cls
 %_color% 0e
