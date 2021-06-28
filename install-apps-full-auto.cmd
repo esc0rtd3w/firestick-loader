@@ -162,7 +162,8 @@ echo Installing %appName%...
 echo.
 %install% "apps\system\root-explorer.apk"
 
-
+:: Skipping Kodi Install as of 20210627
+goto appsMain
 
 :kodiMain
 set kodiInstall=n
