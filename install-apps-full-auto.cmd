@@ -234,13 +234,13 @@ echo.
 
 cls
 %_color% 0e
-set appName=Popcorn Time Community Edition
+set appName=Popcorn Time
 set apk=
 echo.
 echo.
 echo Installing %appName%...
 echo.
-%install% "apps\media\popcorntimece.apk"
+%install% "apps\media\popcorntime.apk"
 
 cls
 %_color% 0e
@@ -341,6 +341,16 @@ echo.
 echo Installing %appName%...
 echo.
 %install% "apps\media\live-net-tv.apk"
+
+cls
+%_color% 0e
+set appName=SOPlayer
+set apk=
+echo.
+echo.
+echo Installing %appName%...
+echo.
+%install% "apps\media\so-player.apk"
 
 cls
 %_color% 0e
