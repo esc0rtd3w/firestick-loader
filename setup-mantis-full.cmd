@@ -142,6 +142,11 @@ if %fireOsVersion%==6.2.8.0 (
 	goto is6271
 )
 
+if %fireOsVersion%==6.2.8.1 (
+	set v_match=1
+	goto is6271
+)
+
 
 :: Some crap version matching check
 if %v_match%==1 (
