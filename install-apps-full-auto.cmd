@@ -381,7 +381,7 @@ echo.
 echo.
 echo Installing %appName%...
 echo.
-%install% "apps\media\hulu.apk"
+%install% "apps\media\hulu-amazon.apk"
 
 cls
 %_color% 0e
