@@ -1230,10 +1230,19 @@ if %downgrade%==0 echo Almost Finished!
 if %downgrade%==1 echo.
 if %downgrade%==1 echo Complete the user setup to configure remote, wifi, and Amazon account
 echo.
-echo Once on Launcher, use TitaniumBackup to restore data for
-echo ATV Launcher Home and SH Script Runner Settings
 echo.
-echo Use TitaniumBackup to restore apps for Mouse Toggle, Busybox and Autoruns
+echo Instructions
+echo.
+echo *TB = TitaniumBackup
+echo.
+echo.
+echo Once on Launcher, open SH Script Runner and give permissions
+echo.
+echo Use TB to restore data for ATV Launcher, SH Script Runner
+echo.
+echo Use TB to restore apps AdAway, Mouse Toggle, Busybox, Root Explorer, Autoruns
+echo.
+echo Open and configure AdAway, Mouse Toggle, Busybox, Root Explorer, Autoruns
 echo.
 if %downgrade%==1 echo Press any key to exit...
 if %downgrade%==0 echo Press any key to continue...

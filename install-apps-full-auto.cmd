@@ -235,16 +235,6 @@ echo.
 
 cls
 %_color% 0e
-set appName=Popcorn Time
-set apk=
-echo.
-echo.
-echo Installing %appName%...
-echo.
-%install% "apps\media\popcorntime.apk"
-
-cls
-%_color% 0e
 set appName=Cat Mouse
 set apk=
 echo.
@@ -262,16 +252,6 @@ echo.
 echo Installing %appName%...
 echo.
 %install% "apps\media\cinemahd.apk"
-
-cls
-%_color% 0e
-set appName=Typhoon TV
-set apk=
-echo.
-echo.
-echo Installing %appName%...
-echo.
-%install% "apps\media\typhoon-tv.apk"
 
 cls
 %_color% 0e
@@ -302,6 +282,26 @@ echo.
 echo Installing %appName%...
 echo.
 %install% "apps\media\freeflixhq.apk"
+
+cls
+%_color% 0e
+set appName=Ocean Streamz
+set apk=
+echo.
+echo.
+echo Installing %appName%...
+echo.
+%install% "apps\media\ocean-streamz.apk"
+
+cls
+%_color% 0e
+set appName=Viva TV
+set apk=
+echo.
+echo.
+echo Installing %appName%...
+echo.
+%install% "apps\media\viva-tv.apk"
 
 cls
 %_color% 0e
@@ -345,23 +345,63 @@ echo.
 
 cls
 %_color% 0e
-set appName=SOPlayer
+set appName=MediaBox HD
 set apk=
 echo.
 echo.
 echo Installing %appName%...
 echo.
-%install% "apps\media\so-player.apk"
+%install% "apps\media\mediaboxhd.apk"
 
 cls
 %_color% 0e
-set appName=Popcornflix
+set appName=Crackle
 set apk=
 echo.
 echo.
 echo Installing %appName%...
 echo.
-%install% "apps\media\popcornflix.apk"
+%install% "apps\media\crackle.apk"
+
+cls
+%_color% 0e
+set appName=Cuco TV
+set apk=
+echo.
+echo.
+echo Installing %appName%...
+echo.
+%install% "apps\media\cuco-tv.apk"
+
+cls
+%_color% 0e
+set appName=Film Plus
+set apk=
+echo.
+echo.
+echo Installing %appName%...
+echo.
+%install% "apps\media\film-plus.apk"
+
+::cls
+::%_color% 0e
+::set appName=DOFU Sports
+::set apk=
+::echo.
+::echo.
+::echo Installing %appName%...
+::echo.
+::%install% "apps\media\dofu-sports.apk"
+
+cls
+%_color% 0e
+set appName=Twitch
+set apk=
+echo.
+echo.
+echo Installing %appName%...
+echo.
+%install% "apps\media\twitch-amazon.apk"
 
 cls
 %_color% 0e
@@ -413,28 +453,28 @@ echo Installing %appName%...
 echo.
 %install% "apps\media\smart-youtube-bridge.apk"
 
-cls
-%_color% 0e
-set appName=Twitch
-set apk=
-echo.
-echo.
-echo Installing %appName%...
-echo.
-md "%temp%\firestick-loader\apps\media\"
-%extractRAR% "%~dp0apps\media\twitch-amazon.split" "%temp%\firestick-loader\apps\media"
-%sleep% 3
-%install% "%temp%\firestick-loader\apps\media\twitch-amazon.apk"
+::cls
+::%_color% 0e
+::set appName=Twitch
+::set apk=
+::echo.
+::echo.
+::echo Installing %appName%...
+::echo.
+::md "%temp%\firestick-loader\apps\media\"
+::%extractRAR% "%~dp0apps\media\twitch-amazon.split" "%temp%\firestick-loader\apps\media"
+::%sleep% 3
+::%install% "%temp%\firestick-loader\apps\media\twitch-amazon.apk"
 
 cls
 %_color% 0e
-set appName=Crackle
+set appName=SOPlayer
 set apk=
 echo.
 echo.
 echo Installing %appName%...
 echo.
-%install% "apps\media\crackle.apk"
+%install% "apps\media\so-player.apk"
 
 cls
 %_color% 0e
@@ -446,15 +486,55 @@ echo Installing %appName%...
 echo.
 %install% "apps\media\vlc.apk"
 
+::cls
+::%_color% 0e
+::set appName=Firefox TV Web Browser
+::set apk=
+::echo.
+::echo.
+::echo Installing %appName%...
+::echo.
+::%install% "apps\web\firefox-tv.apk"
+
 cls
 %_color% 0e
-set appName=Podcast Addict
+set appName=Opera Mini Web Browser
 set apk=
 echo.
 echo.
 echo Installing %appName%...
 echo.
-%install% "apps\media\podcast-addict.apk"
+%install% "apps\web\opera-mini.apk"
+
+cls
+%_color% 0e
+set appName=Downloader
+set apk=
+echo.
+echo.
+echo Installing %appName%...
+echo.
+%install% "apps\web\downloader.apk"
+
+cls
+%_color% 0e
+set appName=Wifi FTP Server
+set apk=
+echo.
+echo.
+echo Installing %appName%...
+echo.
+%install% "apps\web\wifi-ftp-server.apk"
+
+cls
+%_color% 0e
+set appName=Aurora Store
+set apk=
+echo.
+echo.
+echo Installing %appName%...
+echo.
+%install% "apps\stores\aurora-store.apk"
 
 cls
 %_color% 0e
@@ -465,16 +545,6 @@ echo.
 echo Installing %appName%...
 echo.
 %install% "apps\stores\aptoid-tv.apk"
-
-cls
-%_color% 0e
-set appName=Firefox TV Web Browser
-set apk=
-echo.
-echo.
-echo Installing %appName%...
-echo.
-%install% "apps\web\firefox-tv.apk"
 
 cls
 %_color% 0e

@@ -14,7 +14,7 @@
 <br/>
 
 FirePwn
-Amazon FireTV Stick Loader
+Amazon FireTV Stick Loader v2022.09.18
 
 FREE YOUR FIRESTICK!!!
 

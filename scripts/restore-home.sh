@@ -16,14 +16,14 @@ cp -r /system/restore/TitaniumBackup/ /sdcard/
 # Install Packages
 cp /system/restore/apk/autostarts.apk /data/local/tmp/
 pm install /data/local/tmp/autostarts.apk
-cp /system/restore/apk/onstart.apk /data/local/tmp/
-pm install /data/local/tmp/onstart.apk
+cp /system/restore/apk/root-explorer.apk /data/local/tmp/
+pm install /data/local/tmp/root-explorer.apk
 cp /system/restore/apk/busybox.apk /data/local/tmp/
 pm install /data/local/tmp/busybox.apk
 cp /system/restore/apk/mouse-toggle.apk /data/local/tmp/
 pm install /data/local/tmp/mouse-toggle.apk
-cp /system/restore/apk/reboot.apk /data/local/tmp/
-pm install /data/local/tmp/reboot.apk
+#cp /system/restore/apk/reboot.apk /data/local/tmp/
+#pm install /data/local/tmp/reboot.apk
 
 # Fix SD Card Permissions
 chown -R media_rw:media_rw /data/media/
