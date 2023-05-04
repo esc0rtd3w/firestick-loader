@@ -1,7 +1,7 @@
 [autorun]
 open=autorun.cmd
 icon=autorun.ico
-label=Firestick Loader by esc0rtd3w
+label=Firestick Loader
 
 shell\MainMenu\command=autorun.cmd
 shell\MainMenu=&Open Main Menu
