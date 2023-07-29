@@ -343,15 +343,15 @@ echo Installing %appName%...
 echo.
 %install% "apps\media\live-net-tv.apk"
 
-cls
-%_color% 0e
-set appName=MediaBox HD
-set apk=
-echo.
-echo.
-echo Installing %appName%...
-echo.
-%install% "apps\media\mediaboxhd.apk"
+::cls
+::%_color% 0e
+::set appName=MediaBox HD
+::set apk=
+::echo.
+::echo.
+::echo Installing %appName%...
+::echo.
+::%install% "apps\media\mediaboxhd.apk"
 
 cls
 %_color% 0e
@@ -363,6 +363,16 @@ echo Installing %appName%...
 echo.
 %install% "apps\media\crackle.apk"
 
+::cls
+::%_color% 0e
+::set appName=Cuco TV
+::set apk=
+::echo.
+::echo.
+::echo Installing %appName%...
+::echo.
+::%install% "apps\media\cuco-tv.apk"
+
 cls
 %_color% 0e
 set appName=Film Plus
@@ -373,25 +383,15 @@ echo Installing %appName%...
 echo.
 %install% "apps\media\film-plus.apk"
 
-cls
-%_color% 0e
-set appName=DOFU Sports
-set apk=
-echo.
-echo.
-echo Installing %appName%...
-echo.
-%install% "apps\media\dofu-sports.apk"
-
-cls
-%_color% 0e
-set appName=Apollo
-set apk=
-echo.
-echo.
-echo Installing %appName%...
-echo.
-%install% "apps\media\apollo-tv.apk"
+::cls
+::%_color% 0e
+::set appName=DOFU Sports
+::set apk=
+::echo.
+::echo.
+::echo Installing %appName%...
+::echo.
+::%install% "apps\media\dofu-sports.apk"
 
 cls
 %_color% 0e
@@ -402,6 +402,19 @@ echo.
 echo Installing %appName%...
 echo.
 %install% "apps\media\twitch-amazon.apk"
+
+::cls
+::%_color% 0e
+::set appName=Twitch
+::set apk=
+::echo.
+::echo.
+::echo Installing %appName%...
+::echo.
+::md "%temp%\firestick-loader\apps\media\"
+::%extractRAR% "%~dp0apps\media\twitch-amazon.split" "%temp%\firestick-loader\apps\media"
+::%sleep% 3
+::%install% "%temp%\firestick-loader\apps\media\twitch-amazon.apk"
 
 cls
 %_color% 0e
@@ -435,23 +448,13 @@ echo.
 
 cls
 %_color% 0e
-set appName=Smart Youtube TV
+set appName=SmartTube
 set apk=
 echo.
 echo.
 echo Installing %appName%...
 echo.
-%install% "apps\media\smart-youtube.apk"
-
-cls
-%_color% 0e
-set appName=Smart Youtube TV Bridge
-set apk=
-echo.
-echo.
-echo Installing %appName%...
-echo.
-%install% "apps\media\smart-youtube-bridge.apk"
+%install% "apps\media\stube.apk"
 
 cls
 %_color% 0e
@@ -472,6 +475,16 @@ echo.
 echo Installing %appName%...
 echo.
 %install% "apps\media\vlc.apk"
+
+::cls
+::%_color% 0e
+::set appName=Firefox TV Web Browser
+::set apk=
+::echo.
+::echo.
+::echo Installing %appName%...
+::echo.
+::%install% "apps\web\firefox-tv.apk"
 
 cls
 %_color% 0e
