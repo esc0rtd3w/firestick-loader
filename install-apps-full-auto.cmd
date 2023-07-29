@@ -429,6 +429,16 @@ echo.
 ::%sleep% 3
 ::%install% "%temp%\firestick-loader\apps\media\twitch-amazon.apk"
 
+::cls
+::%_color% 0e
+::set appName=NetFlix
+::set apk=
+::echo.
+::echo.
+::echo Installing %appName%...
+::echo.
+::%install% "apps\media\netflix-amazon.apk"
+
 cls
 %_color% 0e
 set appName=NetFlix
@@ -437,7 +447,10 @@ echo.
 echo.
 echo Installing %appName%...
 echo.
-%install% "apps\media\netflix-amazon.apk"
+md "%temp%\firestick-loader\apps\media\"
+%extractRAR% "%~dp0apps\media\netflix-amazon.split" "%temp%\firestick-loader\apps\media"
+%sleep% 3
+%install% "%temp%\firestick-loader\apps\media\netflix-amazon.apk"
 
 cls
 %_color% 0e
