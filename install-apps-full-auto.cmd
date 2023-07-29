@@ -355,6 +355,19 @@ echo.
 
 cls
 %_color% 0e
+set appName=MediaBox HD
+set apk=
+echo.
+echo.
+echo Installing %appName%...
+echo.
+md "%temp%\firestick-loader\apps\media\"
+%extractRAR% "%~dp0apps\media\mediaboxhd.split" "%temp%\firestick-loader\apps\media"
+%sleep% 3
+%install% "%temp%\firestick-loader\apps\media\mediaboxhd.apk"
+
+cls
+%_color% 0e
 set appName=Crackle
 set apk=
 echo.
@@ -456,6 +469,16 @@ echo Installing %appName%...
 echo.
 %install% "apps\media\stube.apk"
 
+::cls
+::%_color% 0e
+::set appName=SOPlayer
+::set apk=
+::echo.
+::echo.
+::echo Installing %appName%...
+::echo.
+::%install% "apps\media\so-player.apk"
+
 cls
 %_color% 0e
 set appName=SOPlayer
@@ -464,7 +487,10 @@ echo.
 echo.
 echo Installing %appName%...
 echo.
-%install% "apps\media\so-player.apk"
+md "%temp%\firestick-loader\apps\media\"
+%extractRAR% "%~dp0apps\media\so-player.split" "%temp%\firestick-loader\apps\media"
+%sleep% 3
+%install% "%temp%\firestick-loader\apps\media\so-player.apk"
 
 cls
 %_color% 0e
