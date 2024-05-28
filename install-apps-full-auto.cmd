@@ -493,7 +493,7 @@ echo.
 echo.
 echo Installing %appName%...
 echo.
-%install% "apps\media\smart_youtube.apk"
+%install% "apps\media\smart-youtube.apk"
 %install% "apps\media\smart-youtube-bridge.apk"
 
 ::cls
