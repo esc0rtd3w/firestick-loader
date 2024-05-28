@@ -53,6 +53,8 @@ set buildDotProp=/system/build.prop
 %_color% 0e
 %adbkill%
 
+
+:: Install Apps Default
 ::cls
 ::%_color% 0e
 ::set appName=FirePwn Home
@@ -222,6 +224,7 @@ md "%temp%\firestick-loader\apps\media\kodi\data\%kodiVersion%\%kodiBuild%"
 %rm% "%temp%\firestick-loader\apps\media\kodi"
 
 
+:: Install Apps Main
 :appsMain
 cls
 %_color% 0e
@@ -353,18 +356,18 @@ echo.
 ::echo.
 ::%install% "apps\media\mediaboxhd.apk"
 
-cls
-%_color% 0e
-set appName=MediaBox HD
-set apk=
-echo.
-echo.
-echo Installing %appName%...
-echo.
-md "%temp%\firestick-loader\apps\media\"
-%extractRAR% "%~dp0apps\media\mediaboxhd.split" "%temp%\firestick-loader\apps\media"
-%sleep% 3
-%install% "%temp%\firestick-loader\apps\media\mediaboxhd.apk"
+::cls
+::%_color% 0e
+::set appName=MediaBox HD
+::set apk=
+::echo.
+::echo.
+::echo Installing %appName%...
+::echo.
+::md "%temp%\firestick-loader\apps\media\"
+::%extractRAR% "%~dp0apps\media\mediaboxhd.split" "%temp%\firestick-loader\apps\media"
+::%sleep% 3
+::%install% "%temp%\firestick-loader\apps\media\mediaboxhd.apk"
 
 cls
 %_color% 0e
@@ -472,15 +475,26 @@ echo Installing %appName%...
 echo.
 %install% "apps\amazon\amazon-prime-video.apk"
 
+::cls
+::%_color% 0e
+::set appName=SmartTube
+::set apk=
+::echo.
+::echo.
+::echo Installing %appName%...
+::echo.
+::%install% "apps\media\stube.apk"
+
 cls
 %_color% 0e
-set appName=SmartTube
+set appName=Smart Youtube
 set apk=
 echo.
 echo.
 echo Installing %appName%...
 echo.
-%install% "apps\media\stube.apk"
+%install% "apps\media\smart_youtube.apk"
+%install% "apps\media\smart-youtube-bridge.apk"
 
 ::cls
 ::%_color% 0e
@@ -574,6 +588,16 @@ echo.
 echo Installing %appName%...
 echo.
 %install% "apps\stores\aptoid-tv.apk"
+
+
+:: Install Games
+set installgames=n
+cls
+echo Install Games [Y/N]?
+echo.
+set /p installgames=
+if %installgames%==n goto end
+if %installgames%==N goto end
 
 cls
 %_color% 0e
