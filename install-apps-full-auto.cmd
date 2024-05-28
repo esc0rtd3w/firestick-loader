@@ -346,6 +346,16 @@ echo Installing %appName%...
 echo.
 %install% "apps\media\live-net-tv.apk"
 
+cls
+%_color% 0e
+set appName=TheTVApp
+set apk=
+echo.
+echo.
+echo Installing %appName%...
+echo.
+%install% "apps\media\thetvapp.apk"
+
 ::cls
 ::%_color% 0e
 ::set appName=MediaBox HD
