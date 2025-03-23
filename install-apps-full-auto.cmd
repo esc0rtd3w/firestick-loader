@@ -236,15 +236,15 @@ echo Installing %appName%...
 echo.
 %install% "apps\media\teatv.apk"
 
-cls
-%_color% 0e
-set appName=Cat Mouse
-set apk=
-echo.
-echo.
-echo Installing %appName%...
-echo.
-%install% "apps\media\cat-mouse.apk"
+::cls
+::%_color% 0e
+::set appName=Cat Mouse
+::set apk=
+::echo.
+::echo.
+::echo Installing %appName%...
+::echo.
+::%install% "apps\media\cat-mouse.apk"
 
 cls
 %_color% 0e
@@ -276,15 +276,15 @@ echo Installing %appName%...
 echo.
 %install% "apps\media\nova-tv.apk"
 
-cls
-%_color% 0e
-set appName=FreeFlix HQ
-set apk=
-echo.
-echo.
-echo Installing %appName%...
-echo.
-%install% "apps\media\freeflixhq.apk"
+::cls
+::%_color% 0e
+::set appName=FreeFlix HQ
+::set apk=
+::echo.
+::echo.
+::echo Installing %appName%...
+::echo.
+::%install% "apps\media\freeflixhq.apk"
 
 cls
 %_color% 0e
@@ -485,26 +485,17 @@ echo Installing %appName%...
 echo.
 %install% "apps\amazon\amazon-prime-video.apk"
 
-::cls
-::%_color% 0e
-::set appName=SmartTube
-::set apk=
-::echo.
-::echo.
-::echo Installing %appName%...
-::echo.
-::%install% "apps\media\stube.apk"
-
 cls
 %_color% 0e
-set appName=Smart Youtube
+set appName=SmartTube
 set apk=
 echo.
 echo.
 echo Installing %appName%...
 echo.
-%install% "apps\media\smart-youtube.apk"
-%install% "apps\media\smart-youtube-bridge.apk"
+%install% "apps\media\stube.apk"
+::%install% "apps\media\smart-youtube.apk"
+::%install% "apps\media\smart-youtube-bridge.apk"
 
 ::cls
 ::%_color% 0e
