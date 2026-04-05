@@ -338,13 +338,13 @@ echo.
 
 cls
 %_color% 0e
-set appName=LiveNET TV
+set appName=Redbox
 set apk=
 echo.
 echo.
 echo Installing %appName%...
 echo.
-%install% "apps\media\live-net-tv.apk"
+%install% "apps\media\redbox.apk"
 
 cls
 %_color% 0e
