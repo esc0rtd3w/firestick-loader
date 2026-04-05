@@ -344,7 +344,7 @@ echo.
 echo.
 echo Installing %appName%...
 echo.
-%install% "apps\media\redbox.apk"
+%install% "apps\media\redboxtv.apk"
 
 cls
 %_color% 0e
