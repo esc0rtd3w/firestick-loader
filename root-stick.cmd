@@ -97,7 +97,7 @@ set runShellTerminate=start cmd /c
 set runShellWaitTerminate=start /wait cmd /c
 
 :: Common Scripts
-set checkRoot=call "%~dp0scripts\misc\check-root.cmd"
+set checkRoot=call "%~dp0scripts\windows\check-root.cmd"
 
 :: Android Paths
 set sdcard=sdcard
@@ -1969,7 +1969,7 @@ if %ssViewer%==0 (
 
 if %ssViewer%==1 ( 
 	
-	%runShellTerminate% "%~dp0scripts\misc\screen-viewer.cmd"
+	%runShellTerminate% "%~dp0scripts\windows\screen-viewer.cmd"
 	set ssViewer=0
 	
 )
