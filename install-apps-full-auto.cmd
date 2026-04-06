@@ -336,15 +336,25 @@ echo Installing %appName%...
 echo.
 %install% "apps\media\xumo-tv.apk"
 
+::cls
+::%_color% 0e
+::set appName=Redbox
+::set apk=
+::echo.
+::echo.
+::echo Installing %appName%...
+::echo.
+::%install% "apps\media\redboxtv.apk"
+
 cls
 %_color% 0e
-set appName=Redbox
+set appName=WorldTV
 set apk=
 echo.
 echo.
 echo Installing %appName%...
 echo.
-%install% "apps\media\redboxtv.apk"
+%install% "apps\media\worldtv.apk"
 
 cls
 %_color% 0e
